@@ -1,0 +1,272 @@
+{
+	"sessionSummaries": [
+		{
+			"siteName": "MIPCRF2",
+			"allSessionCount": 1,
+			"afSessionCount": 0,
+			"ipCanSessionCount": 1,
+			"sySessionCount": 0,
+			"sdSessionCount": 0,
+			"gySessionCount": 0,
+			"s9SessionCount": 0,
+			"nasREQSessioncount": 0,
+			"pduSessionCount": 0,
+			"nchfSessionCount": 0,
+			"amSessionCount": 0,
+			"ueSessionCount": 0
+		},
+		{
+			"siteName": "RMPCRF1",
+			"allSessionCount": 1,
+			"afSessionCount": 0,
+			"ipCanSessionCount": 1,
+			"sySessionCount": 0,
+			"sdSessionCount": 0,
+			"gySessionCount": 0,
+			"s9SessionCount": 0,
+			"nasREQSessioncount": 0,
+			"pduSessionCount": 0,
+			"nchfSessionCount": 0,
+			"amSessionCount": 0,
+			"ueSessionCount": 0
+		}
+	],
+	"sessionDTOList": [
+		{
+			"sessionId": "ugw.rmcor.03;945278366;16318464;84908",
+			"diameterPeerId": null,
+			"diameterPeerHost": "ugw.rmcor.03",
+			"expiryTimeOfOutboundMessage": null,
+			"deviceId": "unknown_RMPCRF1-diameterapp-4_20210610002826514_15677",
+			"sessionBindingIdentifier": {
+				"apnId": "apn.linkem.com.aliasrmcor",
+				"ipAddress": "10.80.163.254",
+				"ipv6Prefix": "",
+				"subscriptionIds": [
+					{
+						"data": "222380001226965",
+						"originalNAIData": null,
+						"type": "End User IMSI"
+					}
+				]
+			},
+			"timeOfLastMessage": 1630933834651,
+			"activeFeatures": [
+				{
+					"vendorId": 10415,
+					"featureListId": 1,
+					"featureList": 2,
+					"mBitFlag": false
+				}
+			],
+			"terminating": false,
+			"failedMessageCount": 0,
+			"diameterPeer": {
+				"modifiedBy": null,
+				"modifiedDate": null,
+				"distributionList": [],
+				"smProvState": "NEW",
+				"peerId": null,
+				"active": true,
+				"originHost": null,
+				"primaryAddress": null,
+				"ingressPeerProfileName": null,
+				"egressPeerProfileName": null,
+				"downStreamOverLoadProfileName": null,
+				"peerConnectionProfileName": null,
+				"secondaryAddresses": [],
+				"portNumber": 3868,
+				"protocol": null,
+				"secure": false,
+				"description": null,
+				"locallyInitiated": null,
+				"requestTimeout": null,
+				"numberOfSendAttempts": null,
+				"addrGrpName": null,
+				"sourcePortNumber": null
+			},
+			"apnId": "apn.linkem.com.aliasrmcor",
+			"ipAddress": "10.80.163.254",
+			"ipv6Prefix": null,
+			"subscriptionIds": [
+				{
+					"data": "222380001226965",
+					"originalNAIData": null,
+					"type": "End User IMSI"
+				}
+			],
+			"vendorSpecificAttributes": {},
+			"key": null,
+			"isEmergency": false,
+			"adjustedDefaultEPSBearerQoS": {
+				"defaultBearerQCI": 8,
+				"allocationRetentionPriority": {
+					"priorityLevel": 4,
+					"preEmptionCapability": "Pre-emption Capability Enabled",
+					"preEmptionVulnerability": "Pre-emption Vulnerability Disabled"
+				}
+			},
+			"adjustedMaxBwForAPN": {
+				"upLinkBw": 10000000,
+				"downLinkBw": 100000000,
+				"kbps": false,
+				"condApnAmbr": []
+			},
+			"adjustedSessionData": {
+				"defaultEPSBearerQoS": {
+					"defaultBearerQCI": 8,
+					"allocationRetentionPriority": {
+						"priorityLevel": 4,
+						"preEmptionCapability": "Pre-emption Capability Enabled",
+						"preEmptionVulnerability": "Pre-emption Vulnerability Disabled"
+					}
+				},
+				"maxBwForAPN": {
+					"upLinkBw": 10000000,
+					"downLinkBw": 100000000,
+					"kbps": false,
+					"condApnAmbr": []
+				}
+			},
+			"anTrusted": null,
+			"bearerControlMode": "UE_NW",
+			"bsId": null,
+			"ccRequestNumber": 1,
+			"defaultEPSBearerQoS": {
+				"defaultBearerQCI": 8,
+				"allocationRetentionPriority": {
+					"priorityLevel": 4,
+					"preEmptionCapability": "Pre-emption Capability Enabled",
+					"preEmptionVulnerability": "Pre-emption Vulnerability Disabled"
+				}
+			},
+			"emergency": false,
+			"ipCanType": "TYPE_3GPP_EPS",
+			"ipv4ANGWAddress": "172.28.0.151",
+			"ipv6ANGWAddress": "",
+			"maxBwForAPN": {
+				"upLinkBw": 10000000,
+				"downLinkBw": 100000000,
+				"kbps": false,
+				"condApnAmbr": []
+			},
+			"maximumBandwidth": null,
+			"msTimezone": "8001",
+			"networkRequestSupport": "NETWORK_REQUEST_SUPPORTED",
+			"policyTriggerRegistrations": [
+				"RAT Change",
+				"User Location Change"
+			],
+			"qosInfo": [],
+			"qosNegotiation": "QOS_NEGOTIATION_SUPPORTED",
+			"rai": null,
+			"ratType": "EUTRAN",
+			"ratType3Gpp": null,
+			"sgsnAddress": "172.28.0.151",
+			"sgsnIpv6Address": "",
+			"sgsnMccMnc": "22238",
+			"tcpSourcePort": null,
+			"triggerRegistrations": [
+				"RAT Change",
+				"User Location Change"
+			],
+			"udpSourcePort": null,
+			"ueLocalIpAddress": null,
+			"userLocationInfo": {
+				"geoLocationType": "TAI_AND_ECGI",
+				"userLocationIds": [
+					{
+						"identityType": "ECGI",
+						"data": "22f28300a03b1e"
+					},
+					{
+						"identityType": "TAI",
+						"data": "22f2830bf5"
+					}
+				]
+			},
+			"userLocationInfoTime": null,
+			"ipCanBearers": [],
+			"anChargingAddr": {
+				"addressFamily": "IPV_4",
+				"addressValue": "172.28.0.151"
+			},
+			"qosUpgrade": "QOS_UPGRADE_NOT_SUPPORTED",
+			"reportRegistrations": 0,
+			"anChargingIdValue": "AFAF33E8",
+			"pccRules": [
+				{
+					"activationTime": null,
+					"adjustedQosInfo": null,
+					"afSignallingProtocol": null,
+					"anChargingIdValue": null,
+					"bearerControlModeOperation": "PCRF_INITIATED",
+					"bearerIdentifier": null,
+					"deactivationTime": null,
+					"flowInformations": [],
+					"name": "default",
+					"precedence": null,
+					"qosInfo": null,
+					"requiredAccessInfos": [],
+					"ruleSource": 1,
+					"ruleStatus": "ACTIVE",
+					"ruleType": "PREDEFINED",
+					"qosDecs": null,
+					"adjustedQosDecs": null,
+					"timeToLiveInRollbackCache": 0,
+					"waitingForAfPeer": false,
+					"afChargingIdentifier": null,
+					"applicationServiceProviderIdentity": null,
+					"applications": [],
+					"bearerUsage": null,
+					"flowStatus": null,
+					"meteringMethod": null,
+					"monitoringKey": null,
+					"muteNotification": null,
+					"offline": null,
+					"online": null,
+					"outOfCreditRule": [],
+					"outOfCreditState": "NORMAL",
+					"psToCsSessionContinuity": null,
+					"qosInfoRadius": null,
+					"ratingGroup": null,
+					"redirectInformation": null,
+					"reportingLevel": null,
+					"serviceFlowDetection": null,
+					"serviceFlows": [],
+					"serviceId": null,
+					"sponsorIdentity": null,
+					"tdfApplicationIdentifier": null,
+					"updated": false,
+					"usageMonitoringDataIds": [],
+					"trafficControlIds": [],
+					"conditionDataIds": []
+				}
+			],
+			"condPolInfo": [],
+			"sessionType": "IPCANSESSION",
+			"sySessionId": null,
+			"online": "DISABLE_ONLINE",
+			"offline": "DISABLE_OFFLINE",
+			"revalidationTime": null,
+			"s9Subsession": null,
+			"nextScheduledReauth": null,
+			"lastReauthTime": 0,
+			"nextRuleStatusChangeTime": null,
+			"nasPortId": null,
+			"nasPortType": null,
+			"logicalAccessId": null,
+			"physicalAccessId": null,
+			"delegatedIPv6Prefix": "",
+			"sySession": null,
+			"usageTracking": [],
+			"ruleSetForEDR": null,
+			"praInformation": [],
+			"ipcanRevalidationTime": null,
+			"userEquipmentInfo": {
+				"type": "IMEISV",
+				"value": "33353333343530393236333034373030"
+			}
+		}
+	]
+}
