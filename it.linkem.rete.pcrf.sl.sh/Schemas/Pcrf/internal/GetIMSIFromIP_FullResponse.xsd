@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://it.linkem/rete/pcrf/getImsiByIp/fullResponse/xsd" elementFormDefault="qualified" targetNamespace="http://it.linkem/rete/pcrf/getImsiByIp/fullResponse/xsd">
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://it.linkem/rete/pcrf/getImsiByIp/fullResponse/internal/xsd" elementFormDefault="qualified" targetNamespace="http://it.linkem/rete/pcrf/getImsiByIp/fullResponse/internal/xsd">
   <complexType name="PCRF_GetIMSIFromIP_FullOutputType">
     <sequence>
       <element maxOccurs="unbounded" minOccurs="0" name="sessionSummaries">
