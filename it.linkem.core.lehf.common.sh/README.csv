@@ -1,0 +1,6 @@
+ErrorCode;ErrorMessage;ErrorType;CreateCase;CircuitBreaker;HTTPStatusCode;APIname;BSLProcess
+ERRC000001;[ERROR]  System Exception time out inside getErrorConfiguration process;System;false;false;;;
+ERRC000002;[ERROR]  Business Error inside getErrorConfiguration process;Business;false;false;;;
+ERRC000003;[ERROR]  System exception error in http communication inside getErrorConfiguration process;System;false;false;;;
+ERRC000004;[ERROR]  System Exception  Http Server Exception inside getErrorConfiguration process;System;false;false;;;
+ERRC000005;[ERROR]  Unknow error inside getErrorConfiguration process;Business;false;false;;;
