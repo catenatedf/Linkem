@@ -15,6 +15,7 @@
     xmlns:ns15="http://it.linkem/core/lehf/common/AuditTypes/0100"
     xmlns:ns16="http://it.linkem/core/lehf/common/xsd/loggingwrapper/internal"
     xmlns:ns17="http://tns.tibco.com/bw/palette/internal/activityerror+bw.internal.end"
+    xmlns:ns18="http://it.linkem/core/lehf/InternalInterface_DynamicProperties/0100"
     xmlns:ns2="http://tns.tibco.com/bw/palette/internal/activityerror+bw.restjson.Rest"
     xmlns:ns3="http://www.example.org/PCRF_SimCheck"
     xmlns:ns4="http://tns.tibco.com/bw/activity/sleep/xsd"
@@ -1182,7 +1183,7 @@
                                     <element href="//0/@process/@activity/@activity/@activities.7"/>
                                     <layoutConstraint
                                     height="40" width="40"
-                                    x="199"
+                                    x="116"
                                     xsi:type="notation:Bounds" y="153"/>
                                     </children>
                                     <children type="4002">
@@ -1218,8 +1219,8 @@
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.8"/>
                                     <layoutConstraint
-                                    width="295" x="353"
-                                    xsi:type="notation:Bounds" y="153"/>
+                                    width="295" x="245"
+                                    xsi:type="notation:Bounds" y="146"/>
                                     </children>
                                     <children type="4002">
                                     <children type="4017">
@@ -1257,6 +1258,42 @@
                                     width="295" x="1602"
                                     xsi:type="notation:Bounds" y="153"/>
                                     </children>
+                                    <children type="4002">
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <styles fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.10"/>
+                                    <layoutConstraint
+                                    width="177" x="516"
+                                    xsi:type="notation:Bounds" y="153"/>
+                                    </children>
                                     <styles xsi:type="notation:DrawerStyle"/>
                                     <styles xsi:type="notation:SortingStyle"/>
                                     <styles xsi:type="notation:FilteringStyle"/>
@@ -1269,7 +1306,7 @@
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <styles xsi:type="bwnotation:ResizingStyle"/>
                                     <element href="//0/@process/@activity/@activity"/>
-                                    <layoutConstraint height="649"
+                                    <layoutConstraint height="556"
                                     width="2063" xsi:type="notation:Bounds"/>
                                 </children>
                                 <styles xsi:type="notation:SortingStyle"/>
@@ -1671,7 +1708,7 @@
         </edges>
         <edges
             source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.8"
-            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2" type="4006">
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.10" type="4006">
             <children type="6002">
                 <layoutConstraint xsi:type="notation:Location" y="40"/>
             </children>
@@ -1702,6 +1739,17 @@
             <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
             <element href="//0/@process/@activity/@faultHandlers/@catchAll/@activity/@activity/@links/@children.0"/>
             <bendpoints points="[25, -1, -133, 0]$[115, 0, -43, 1]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.10"
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.9"/>
+            <bendpoints points="[25, 3, -398, -53]$[140, 18, -283, -38]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
     </notation:Diagram>
     <tibex:NamespaceRegistry enabled="true">
@@ -1737,6 +1785,7 @@
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://it.linkem/core/lehf/common/AuditTypes/0100"/>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://it.linkem/core/lehf/common/loggerType/0100"/>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://it.linkem/core/lehf/common/xsd/loggingwrapper/internal"/>
+    <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://it.linkem/core/lehf/InternalInterface_DynamicProperties/0100"/>
     <bpws:variables>
         <bpws:variable element="ns:ProcessContext"
             name="_processContext" sca-bpel:internal="true"/>
@@ -1834,6 +1883,11 @@
             name="_error_ThrowGenericError" sca-bpel:internal="true"/>
         <bpws:variable element="ns15:LogAudit" name="MapGeneric-input" sca-bpel:internal="true"/>
         <bpws:variable element="ns15:LogAudit" name="MapGeneric" sca-bpel:internal="true"/>
+        <bpws:variable
+            element="ns18:InputInterface_BuildDynamicProperties"
+            name="BuildHttpDynamicHeaders-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns18:DynamicProperties"
+            name="BuildHttpDynamicHeaders" sca-bpel:internal="true"/>
     </bpws:variables>
     <bpws:extensions>
         <bpws:extension mustUnderstand="no" namespace="http://www.eclipse.org/gmf/runtime/1.0.2/notation"/>
@@ -1930,8 +1984,10 @@
                 <bpws:link name="ParseGetResponseToLog_End_GetIMSIByIp" tibex:linkType="SUCCESS"/>
                 <bpws:link name="GetLoggerParamsToLog_Start_GetIMSIByIp" tibex:linkType="SUCCESS"/>
                 <bpws:link
-                    name="Log_Start_GetIMSIByIpToRepeatOnErrorRESTCall" tibex:linkType="SUCCESS"/>
+                    name="Log_Start_GetIMSIByIpToBuildDynamicProperties" tibex:linkType="SUCCESS"/>
                 <bpws:link name="Log_End_GetIMSIByIpToEnd" tibex:linkType="SUCCESS"/>
+                <bpws:link
+                    name="BuildDynamicPropertiesToRepeatOnErrorRESTCall" tibex:linkType="SUCCESS"/>
             </bpws:links>
             <bpws:extensionActivity>
                 <tibex:receiveEvent createInstance="yes"
@@ -1976,7 +2032,7 @@
             <bpws:scope name="RepeatOnErrorRESTCall"
                 tibex:group="repeatOnError" tibex:xpdlId="25148565-f233-4858-93d1-8dd2f5ee0abf">
                 <bpws:targets>
-                    <bpws:target linkName="Log_Start_GetIMSIByIpToRepeatOnErrorRESTCall"/>
+                    <bpws:target linkName="BuildDynamicPropertiesToRepeatOnErrorRESTCall"/>
                 </bpws:targets>
                 <bpws:sources>
                     <bpws:source linkName="RepeatOnErrorToEnd"/>
@@ -2130,7 +2186,7 @@
                                     </bpws:sources>
                                     <tibex:inputBindings>
                                     <tibex:inputBinding
-                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns5=&quot;http://tns.tibco.com/bw/activity/sendhttprequest/input+4432accc-5df5-403d-99e2-ea2a529ec5b9+RequestActivityInput&quot; xmlns:tns3=&quot;http://www.example.org/PCRF_SimCheck&quot; xmlns:tns7=&quot;http://it.linkem/rete/pcrf/getImsiByIp/sl/xsd&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;Start&quot;/>&lt;xsl:param name=&quot;RequestUrl&quot;/>&lt;xsl:template name=&quot;Get_IMSI_By_Ip-input&quot; match=&quot;/&quot;>&lt;tns5:RequestActivityInput>&lt;Method>&lt;xsl:value-of select=&quot;&amp;quot;GET&amp;quot;&quot;/>&lt;/Method>&lt;RequestURI>&lt;xsl:value-of select=&quot;$RequestUrl&quot;/>&lt;/RequestURI>&lt;QueryString>&lt;xsl:value-of select=&quot;concat('processParams={&amp;quot;deviceId&amp;quot;:{ &amp;quot;ip&amp;quot;: &amp;quot;{', $Start/tns7:IP, ' }&amp;quot;},&amp;quot;sessionType&amp;quot;:&amp;quot;IPCANSESSION&amp;quot;}')&quot;/>&lt;/QueryString>&lt;/tns5:RequestActivityInput>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns5=&quot;http://tns.tibco.com/bw/activity/sendhttprequest/input+4432accc-5df5-403d-99e2-ea2a529ec5b9+RequestActivityInput&quot; xmlns:tns7=&quot;http://it.linkem/rete/pcrf/getImsiByIp/sl/xsd&quot; xmlns:tns=&quot;http://it.linkem/core/lehf/InternalInterface_DynamicProperties/0100&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;Start&quot;/>&lt;xsl:param name=&quot;RequestUrl&quot;/>&lt;xsl:param name=&quot;BuildHttpDynamicHeaders&quot;/>&lt;xsl:template name=&quot;Get_IMSI_By_Ip-input&quot; match=&quot;/&quot;>&lt;tns5:RequestActivityInput>&lt;Method>&lt;xsl:value-of select=&quot;&amp;quot;GET&amp;quot;&quot;/>&lt;/Method>&lt;RequestURI>&lt;xsl:value-of select=&quot;$RequestUrl&quot;/>&lt;/RequestURI>&lt;QueryString>&lt;xsl:value-of select=&quot;concat('processParams={&amp;quot;deviceId&amp;quot;:{ &amp;quot;ip&amp;quot;: &amp;quot;{', $Start/tns7:IP, ' }&amp;quot;},&amp;quot;sessionType&amp;quot;:&amp;quot;IPCANSESSION&amp;quot;}')&quot;/>&lt;/QueryString>&lt;DynamicHeaders>&lt;xsl:for-each select=&quot;$BuildHttpDynamicHeaders/tns:Property&quot;>&lt;Header>&lt;Name>&lt;xsl:value-of select=&quot;tns:Name&quot;/>&lt;/Name>&lt;Value>&lt;xsl:value-of select=&quot;tns:Value&quot;/>&lt;/Value>&lt;/Header>&lt;/xsl:for-each>&lt;/DynamicHeaders>&lt;/tns5:RequestActivityInput>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                                     </tibex:inputBindings>
                                     <tibex:config>
                                     <bwext:BWActivity
@@ -2266,7 +2322,7 @@
                         <bpws:target linkName="GetLoggerParamsToLog_Start_GetIMSIByIp"/>
                     </bpws:targets>
                     <bpws:sources>
-                        <bpws:source linkName="Log_Start_GetIMSIByIpToRepeatOnErrorRESTCall"/>
+                        <bpws:source linkName="Log_Start_GetIMSIByIpToBuildDynamicProperties"/>
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding coercion=""
@@ -2297,6 +2353,28 @@
                     <tibex:CallProcess
                         moduleRef="it.linkem.core.lehf.common.sh"
                         subProcessName="sharedaudit.LoggingWrapper" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
+                </tibex:extActivity>
+            </bpws:extensionActivity>
+            <bpws:extensionActivity>
+                <tibex:extActivity
+                    inputVariable="BuildHttpDynamicHeaders-input"
+                    name="BuildHttpDynamicHeaders"
+                    outputVariable="BuildHttpDynamicHeaders"
+                    tibex:xpdlId="57b479ce-03e4-45ed-ad1c-0df67062d09b"
+                    type="bw.generalactivities.callprocess" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                    <bpws:targets>
+                        <bpws:target linkName="Log_Start_GetIMSIByIpToBuildDynamicProperties"/>
+                    </bpws:targets>
+                    <bpws:sources>
+                        <bpws:source linkName="BuildDynamicPropertiesToRepeatOnErrorRESTCall"/>
+                    </bpws:sources>
+                    <tibex:inputBindings>
+                        <tibex:inputBinding coercion=""
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://it.linkem/core/lehf/InternalInterface_DynamicProperties/0100&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;GetLoggerParams&quot;/>&lt;xsl:template name=&quot;BuildHttpDynamicHeaders-input&quot; match=&quot;/&quot;>&lt;tns:InputInterface_BuildDynamicProperties>&lt;tns:APPLICATION_NAME>&lt;xsl:value-of select=&quot;$GetLoggerParams/APPLICATION_NAME&quot;/>&lt;/tns:APPLICATION_NAME>&lt;xsl:if test=&quot;$GetLoggerParams/SOURCESYSTEM&quot;>&lt;tns:SOURCESYSTEM>&lt;xsl:value-of select=&quot;$GetLoggerParams/SOURCESYSTEM&quot;/>&lt;/tns:SOURCESYSTEM>&lt;/xsl:if>&lt;tns:STARTTIMESTAMP>&lt;xsl:value-of select=&quot;$GetLoggerParams/STARTTIMESTAMP&quot;/>&lt;/tns:STARTTIMESTAMP>&lt;tns:SEVERITY>&lt;xsl:value-of select=&quot;$GetLoggerParams/SEVERITY&quot;/>&lt;/tns:SEVERITY>&lt;tns:TRACKID>&lt;xsl:value-of select=&quot;$GetLoggerParams/TRACKID&quot;/>&lt;/tns:TRACKID>&lt;tns:BUSINESSKEY>&lt;xsl:value-of select=&quot;$GetLoggerParams/BUSINESSKEY&quot;/>&lt;/tns:BUSINESSKEY>&lt;/tns:InputInterface_BuildDynamicProperties>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                    </tibex:inputBindings>
+                    <tibex:CallProcess
+                        moduleRef="it.linkem.core.lehf.common.sh"
+                        subProcessName="sharedaudit.BuildDynamicProperties" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
                 </tibex:extActivity>
             </bpws:extensionActivity>
         </bpws:flow>

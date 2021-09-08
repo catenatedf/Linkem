@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dynamicscrmconnection="http://ns.tibco.com/bw/palette/dynamicscrmconnection" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_6Lq7MQ8eEeyJ8bDh1u8bcw" name="it.linkem.5g.simcheck.md.DynamicsCRMConnection" type="dynamicscrmconnection:Dynamicscrm">
+  <jndi:configuration xsi:type="dynamicscrmconnection:DynamicsCRMConnection" xmi:id="_6LulkA8eEeyJ8bDh1u8bcw" serverType="On-Premises" authType="NTLM" organizationService="http://crm16.linkem.test/crm16test/XRMServices/2011/Organization.svc" username="simone.frau" password="#!IjqsoQ+CtV5q4/NyDHSB5N+RvSBFuVMBRvwu4A4v6tk=" timeout="1800"/>
+</jndi:namedResource>
