@@ -8,6 +8,7 @@
     xmlns:ns="http://xmlns.example.com/20210906125053PLT"
     xmlns:ns0="http://www.tibco.com/pe/EngineTypes"
     xmlns:ns1="http://it/linkem/5g/SimCheck/xsd"
+    xmlns:ns2="http://it.linkem/core/lehf/common/loggerType/0100"
     xmlns:sca="http://docs.oasis-open.org/ns/opencsa/sca/200912"
     xmlns:sca-bpel="http://docs.oasis-open.org/ns/opencsa/sca-bpel/200801"
     xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"
@@ -435,8 +436,8 @@
                                     <layoutConstraint
                                     height="122"
                                     width="150"
-                                    x="376"
-                                    xsi:type="notation:Bounds" y="47"/>
+                                    x="529"
+                                    xsi:type="notation:Bounds" y="60"/>
                                     </children>
 
                                     <children type="4002">
@@ -489,8 +490,64 @@
                                     <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@activity/@activities.3"/>
 
                                     <layoutConstraint
-                                    x="147"
-                                    xsi:type="notation:Bounds" y="47"/>
+                                    x="291"
+                                    xsi:type="notation:Bounds" y="73"/>
+                                    </children>
+
+                                    <children type="4002 bw.internal.setSharedVariable">
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+
+                                    <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@activity/@activities.4"/>
+
+                                    <layoutConstraint
+                                    height="40"
+                                    width="40"
+                                    x="70"
+                                    xsi:type="notation:Bounds" y="73"/>
                                     </children>
 
                                     <styles xsi:type="notation:DrawerStyle"/>
@@ -920,7 +977,7 @@
         <element href="//0"/>
         <edges
             source="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.0/@children.0/@children.0"
-            target="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.0/@children.1/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.1" type="4006">
+            target="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.0/@children.1/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2" type="4006">
             <children type="6002">
                 <layoutConstraint xsi:type="notation:Location" y="40"/>
             </children>
@@ -940,6 +997,17 @@
             <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@activity/@links/@children.1"/>
             <bendpoints points="[25, 0, -233, 0]$[234, 0, -24, 0]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
+        <edges
+            source="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.0/@children.1/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2"
+            target="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.0/@children.1/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.1" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@activity/@links/@children.2"/>
+            <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
     </notation:Diagram>
     <tibex:NamespaceRegistry enabled="true">
         <tibex:namespaceItem
@@ -948,10 +1016,15 @@
             namespace="http://it/linkem/5g/SimCheck/xsd" prefix="tns1"/>
         <tibex:namespaceItem
             namespace="http://www.tibco.com/bw/xslt/custom-functions" prefix="tib"/>
+        <tibex:namespaceItem
+            namespace="http://www.tibco.com/bw/xpath/bw-custom-functions" prefix="bw"/>
+        <tibex:namespaceItem
+            namespace="http://it.linkem/core/lehf/common/loggerType/0100" prefix="tns2"/>
     </tibex:NamespaceRegistry>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://tns.tibco.com/bw/REST"/>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://xmlns.example.com/simcheck/parameters"/>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://it/linkem/5g/SimCheck/xsd"/>
+    <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://it.linkem/core/lehf/common/loggerType/0100"/>
     <bpws:partnerLinks>
         <bpws:partnerLink myRole="use" name="simcheck"
             partnerLinkType="ns:partnerLinkType" sca-bpel:ignore="false" sca-bpel:service="simcheck"/>
@@ -973,6 +1046,9 @@
         <bpws:variable element="ns0:FaultDetail" name="FaultDetails1" sca-bpel:internal="true"/>
         <bpws:variable messageType="ns:get500FaultMessage"
             name="Reply-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns2:loggerParams"
+            name="SeLogParams-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns2:loggerParams" name="SeLogParams" sca-bpel:internal="true"/>
     </bpws:variables>
     <bpws:extensions>
         <bpws:extension mustUnderstand="no" namespace="http://www.eclipse.org/gmf/runtime/1.0.2/notation"/>
@@ -1042,6 +1118,8 @@
                                 <bpws:link
                                     name="OnMessageStartToSimCheck_bsl" tibex:linkType="SUCCESS"/>
                                 <bpws:link name="SimCheck_bslTogetOut" tibex:linkType="SUCCESS"/>
+                                <bpws:link
+                                    name="SetSharedVariableToSimCheck_bsl" tibex:linkType="SUCCESS"/>
                             </bpws:links>
                             <bpws:empty name="OnMessageStart"
                                 tibex:constructor="onMessageStart" tibex:xpdlId="541d2132-7506-4da0-b3ae-03af01efe0fd">
@@ -1067,7 +1145,7 @@
                             </bpws:reply>
                             <bpws:extensionActivity>
                                 <tibex:extActivity
-                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns2=&quot;http://xmlns.example.com/simcheck/parameters&quot; xmlns:tns1=&quot;http://it/linkem/5g/SimCheck/xsd&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;get&quot;/>&#xa;    &lt;xsl:template name=&quot;SimCheck_bsl-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns1:SimCheckBSL_Input>&#xa;            &lt;tns1:IP>&#xa;                &lt;xsl:value-of select=&quot;$get/parameters/tns2:simcheckGetParameters/tns2:IP&quot;/>&#xa;            &lt;/tns1:IP>&#xa;            &lt;tns1:CodiceSblocco>&#xa;                &lt;xsl:value-of select=&quot;$get/parameters/tns2:simcheckGetParameters/tns2:CodiceSblocco&quot;/>&#xa;            &lt;/tns1:CodiceSblocco>&#xa;            &lt;xsl:if test=&quot;$get/parameters/tns2:simcheckGetParameters/tns2:CodiceFiscale&quot;>&#xa;                &lt;tns1:CodiceFiscale>&#xa;                    &lt;xsl:value-of select=&quot;$get/parameters/tns2:simcheckGetParameters/tns2:CodiceFiscale&quot;/>&#xa;                &lt;/tns1:CodiceFiscale>&#xa;            &lt;/xsl:if>&#xa;            &lt;xsl:if test=&quot;$get/parameters/tns2:simcheckGetParameters/tns2:PIVA&quot;>&#xa;                &lt;tns1:PIVA>&#xa;                    &lt;xsl:value-of select=&quot;$get/parameters/tns2:simcheckGetParameters/tns2:PIVA&quot;/>&#xa;                &lt;/tns1:PIVA>&#xa;            &lt;/xsl:if>&#xa;        &lt;/tns1:SimCheckBSL_Input>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>"
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns3=&quot;http://xmlns.example.com/simcheck/parameters&quot; xmlns:tns1=&quot;http://it/linkem/5g/SimCheck/xsd&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;get&quot;/>&#xa;    &lt;xsl:template name=&quot;SimCheck_bsl-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns1:SimCheckBSL_Input>&#xa;            &lt;tns1:IP>&#xa;                &lt;xsl:value-of select=&quot;$get/parameters/tns3:simcheckGetParameters/tns3:IP&quot;/>&#xa;            &lt;/tns1:IP>&#xa;            &lt;tns1:CodiceSblocco>&#xa;                &lt;xsl:value-of select=&quot;$get/parameters/tns3:simcheckGetParameters/tns3:CodiceSblocco&quot;/>&#xa;            &lt;/tns1:CodiceSblocco>&#xa;            &lt;xsl:if test=&quot;$get/parameters/tns3:simcheckGetParameters/tns3:CodiceFiscale&quot;>&#xa;                &lt;tns1:CodiceFiscale>&#xa;                    &lt;xsl:value-of select=&quot;$get/parameters/tns3:simcheckGetParameters/tns3:CodiceFiscale&quot;/>&#xa;                &lt;/tns1:CodiceFiscale>&#xa;            &lt;/xsl:if>&#xa;            &lt;xsl:if test=&quot;$get/parameters/tns3:simcheckGetParameters/tns3:PIVA&quot;>&#xa;                &lt;tns1:PIVA>&#xa;                    &lt;xsl:value-of select=&quot;$get/parameters/tns3:simcheckGetParameters/tns3:PIVA&quot;/>&#xa;                &lt;/tns1:PIVA>&#xa;            &lt;/xsl:if>&#xa;        &lt;/tns1:SimCheckBSL_Input>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>"
                                     expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"
                                     inputVariable="SimCheck_bsl-input"
                                     name="SimCheck_bsl"
@@ -1075,17 +1153,39 @@
                                     tibex:xpdlId="d314363a-6f0c-4ee2-83bf-9e993def06d2"
                                     type="bw.generalactivities.callprocess" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                                     <bpws:targets>
-                                    <bpws:target linkName="OnMessageStartToSimCheck_bsl"/>
+                                    <bpws:target linkName="SetSharedVariableToSimCheck_bsl"/>
                                     </bpws:targets>
                                     <bpws:sources>
                                     <bpws:source linkName="SimCheck_bslTogetOut"/>
                                     </bpws:sources>
                                     <tibex:inputBindings>
                                     <tibex:inputBinding coercion=""
-                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns2=&quot;http://xmlns.example.com/simcheck/parameters&quot; xmlns:tns1=&quot;http://it/linkem/5g/SimCheck/xsd&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;get.parameters&quot;/>&#xa;    &lt;xsl:template name=&quot;SimCheck_bsl-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns1:SimCheckBSL_Input>&#xa;            &lt;tns1:IP>&#xa;                &lt;xsl:value-of select=&quot;$get.parameters/tns2:IP&quot;/>&#xa;            &lt;/tns1:IP>&#xa;            &lt;tns1:CodiceSblocco>&#xa;                &lt;xsl:value-of select=&quot;$get.parameters/tns2:CodiceSblocco&quot;/>&#xa;            &lt;/tns1:CodiceSblocco>&#xa;            &lt;xsl:if test=&quot;$get.parameters/tns2:CodiceFiscale&quot;>&#xa;                &lt;tns1:CodiceFiscale>&#xa;                    &lt;xsl:value-of select=&quot;$get.parameters/tns2:CodiceFiscale&quot;/>&#xa;                &lt;/tns1:CodiceFiscale>&#xa;            &lt;/xsl:if>&#xa;            &lt;xsl:if test=&quot;$get.parameters/tns2:PIVA&quot;>&#xa;                &lt;tns1:PIVA>&#xa;                    &lt;xsl:value-of select=&quot;$get.parameters/tns2:PIVA&quot;/>&#xa;                &lt;/tns1:PIVA>&#xa;            &lt;/xsl:if>&#xa;        &lt;/tns1:SimCheckBSL_Input>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns3=&quot;http://xmlns.example.com/simcheck/parameters&quot; xmlns:tns1=&quot;http://it/linkem/5g/SimCheck/xsd&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;get.parameters&quot;/>&#xa;    &lt;xsl:template name=&quot;SimCheck_bsl-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns1:SimCheckBSL_Input>&#xa;            &lt;tns1:IP>&#xa;                &lt;xsl:value-of select=&quot;$get.parameters/tns3:IP&quot;/>&#xa;            &lt;/tns1:IP>&#xa;            &lt;tns1:CodiceSblocco>&#xa;                &lt;xsl:value-of select=&quot;$get.parameters/tns3:CodiceSblocco&quot;/>&#xa;            &lt;/tns1:CodiceSblocco>&#xa;            &lt;xsl:if test=&quot;$get.parameters/tns3:CodiceFiscale&quot;>&#xa;                &lt;tns1:CodiceFiscale>&#xa;                    &lt;xsl:value-of select=&quot;$get.parameters/tns3:CodiceFiscale&quot;/>&#xa;                &lt;/tns1:CodiceFiscale>&#xa;            &lt;/xsl:if>&#xa;            &lt;xsl:if test=&quot;$get.parameters/tns3:PIVA&quot;>&#xa;                &lt;tns1:PIVA>&#xa;                    &lt;xsl:value-of select=&quot;$get.parameters/tns3:PIVA&quot;/>&#xa;                &lt;/tns1:PIVA>&#xa;            &lt;/xsl:if>&#xa;        &lt;/tns1:SimCheckBSL_Input>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                                     </tibex:inputBindings>
                                     <tibex:CallProcess
                                     subProcessName="it.linkem.5g.simcheck.bsl.SimCheck_bsl" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
+                                </tibex:extActivity>
+                            </bpws:extensionActivity>
+                            <bpws:extensionActivity>
+                                <tibex:extActivity
+                                    inputVariable="SeLogParams-input"
+                                    name="SeLogParams"
+                                    outputVariable="SeLogParams"
+                                    tibex:xpdlId="902a4b37-3e52-416a-b6e6-2f7e356ba7b9"
+                                    type="bw.internal.setSharedVariable" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                                    <bpws:targets>
+                                    <bpws:target linkName="OnMessageStartToSimCheck_bsl"/>
+                                    </bpws:targets>
+                                    <bpws:sources>
+                                    <bpws:source linkName="SetSharedVariableToSimCheck_bsl"/>
+                                    </bpws:sources>
+                                    <tibex:inputBindings>
+                                    <tibex:inputBinding coercion=""
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns2=&quot;http://it.linkem/core/lehf/common/loggerType/0100&quot; xmlns:bw=&quot;http://www.tibco.com/bw/xpath/bw-custom-functions&quot; xmlns:tib=&quot;http://www.tibco.com/bw/xslt/custom-functions&quot; version=&quot;2.0&quot;>&lt;xsl:template name=&quot;SeLogParams-input&quot; match=&quot;/&quot;>&lt;tns2:loggerParams>&lt;APPLICATION_NAME>&lt;xsl:value-of select=&quot;bw:getModuleProperty(&amp;quot;BW.APPLICATION.NAME&amp;quot;)&quot;/>&lt;/APPLICATION_NAME>&lt;STARTTIMESTAMP>&lt;xsl:value-of select=&quot;current-dateTime()&quot;/>&lt;/STARTTIMESTAMP>&lt;SEVERITY>&lt;xsl:value-of select=&quot;&amp;quot;&amp;quot;&quot;/>&lt;/SEVERITY>&lt;TRACKID>&lt;xsl:value-of select=&quot;tib:uuid()&quot;/>&lt;/TRACKID>&lt;BUSINESSKEY>&lt;xsl:value-of select=&quot;&amp;quot;Sim Check&amp;quot;&quot;/>&lt;/BUSINESSKEY>&lt;PROCESSSTACK>&lt;xsl:value-of select=&quot;&amp;quot;&amp;quot;&quot;/>&lt;/PROCESSSTACK>&lt;/tns2:loggerParams>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                    </tibex:inputBindings>
+                                    <tibex:SetSharedVariable
+                                    inline="true"
+                                    variableName="//it.linkem.core.lehf.common.sh//loggerParams" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
                                 </tibex:extActivity>
                             </bpws:extensionActivity>
                         </bpws:flow>

@@ -9,6 +9,8 @@
     xmlns:ns0="http://it/linkem/5g/SimCheck/xsd"
     xmlns:ns1="http://it/linkem/5g/MDN/SimCheck/xsd"
     xmlns:ns2="http://it/linkem/5g/PCRF/SimCheck/xsd"
+    xmlns:ns3="http://www.example.org/CRM_SimCheck"
+    xmlns:ns4="http://it.linkem/rete/pcrf/getImsiByIp/sl/xsd"
     xmlns:sca="http://docs.oasis-open.org/ns/opencsa/sca/200912"
     xmlns:sca-bpel="http://docs.oasis-open.org/ns/opencsa/sca-bpel/200801"
     xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"
@@ -235,8 +237,8 @@
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.0"/>
-                                    <layoutConstraint x="-1"
-                                    xsi:type="notation:Bounds" y="121"/>
+                                    <layoutConstraint x="51"
+                                    xsi:type="notation:Bounds" y="188"/>
                                     </children>
                                     <children type="4002">
                                     <children type="4017">
@@ -270,10 +272,10 @@
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.1"/>
-                                    <layoutConstraint x="769"
-                                    xsi:type="notation:Bounds" y="121"/>
+                                    <layoutConstraint x="821"
+                                    xsi:type="notation:Bounds" y="188"/>
                                     </children>
-                                    <children type="4002">
+                                    <children type="4002 bw.generalactivities.mapper">
                                     <children type="4017">
                                     <styles
                                     fontName="Segoe UI"
@@ -306,9 +308,9 @@
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.2"/>
                                     <layoutConstraint
-                                    height="106" width="333"
-                                    x="167"
-                                    xsi:type="notation:Bounds" y="34"/>
+                                    height="40" width="240"
+                                    x="545"
+                                    xsi:type="notation:Bounds" y="188"/>
                                     </children>
                                     <children type="4002">
                                     <children type="4017">
@@ -343,11 +345,10 @@
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.3"/>
                                     <layoutConstraint
-                                    height="146" width="264"
-                                    x="214"
-                                    xsi:type="notation:Bounds" y="206"/>
+                                    width="216" x="340"
+                                    xsi:type="notation:Bounds" y="72"/>
                                     </children>
-                                    <children type="4002 bw.generalactivities.mapper">
+                                    <children type="4002">
                                     <children type="4017">
                                     <styles
                                     fontName="Segoe UI"
@@ -379,10 +380,8 @@
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.4"/>
-                                    <layoutConstraint
-                                    height="40" width="240"
-                                    x="493"
-                                    xsi:type="notation:Bounds" y="121"/>
+                                    <layoutConstraint x="386"
+                                    xsi:type="notation:Bounds" y="361"/>
                                     </children>
                                     <styles xsi:type="notation:DrawerStyle"/>
                                     <styles xsi:type="notation:SortingStyle"/>
@@ -396,8 +395,8 @@
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <styles xsi:type="bwnotation:ResizingStyle"/>
                                     <element href="//0/@process/@activity/@activity"/>
-                                    <layoutConstraint height="384"
-                                    width="902" xsi:type="notation:Bounds"/>
+                                    <layoutConstraint height="475"
+                                    width="942" xsi:type="notation:Bounds"/>
                                 </children>
                                 <styles xsi:type="notation:SortingStyle"/>
                                 <styles xsi:type="notation:FilteringStyle"/>
@@ -406,7 +405,7 @@
                             <styles xsi:type="bwnotation:BackgroundStyle"/>
                             <styles xsi:type="bwnotation:ResizingStyle"/>
                             <element href="//0/@process/@activity"/>
-                            <layoutConstraint height="384" width="905" xsi:type="notation:Bounds"/>
+                            <layoutConstraint height="475" width="957" xsi:type="notation:Bounds"/>
                         </children>
                         <styles xsi:type="notation:SortingStyle"/>
                         <styles xsi:type="notation:FilteringStyle"/>
@@ -416,7 +415,7 @@
                     <styles xsi:type="bwnotation:BackgroundStyle"/>
                     <styles xsi:type="bwnotation:ResizingStyle"/>
                     <element href="//0/@process/@activity"/>
-                    <layoutConstraint height="408" width="905" x="1"
+                    <layoutConstraint height="499" width="957" x="1"
                         xsi:type="notation:Bounds" y="1"/>
                 </children>
                 <styles xsi:type="notation:SortingStyle"/>
@@ -425,25 +424,24 @@
             </children>
             <styles fontName="Segoe UI" lineColor="0" xsi:type="notation:ShapeStyle"/>
             <element href="//0/@process"/>
-            <layoutConstraint height="551" width="1260" xsi:type="notation:Bounds"/>
+            <layoutConstraint height="551" width="1299" xsi:type="notation:Bounds"/>
         </children>
         <styles xsi:type="notation:DiagramStyle"/>
         <element href="//0"/>
         <edges
             source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0"
-            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2" type="4006">
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.3" type="4006">
             <children type="6002">
-                <layoutConstraint xsi:type="notation:Location" y="40"/>
+                <layoutConstraint x="33" xsi:type="notation:Location" y="-42"/>
             </children>
             <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
             <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
             <element href="//0/@process/@activity/@activity/@links/@children.0"/>
             <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
-            <targetAnchor id="(0.13821138211382114,0.7066666666666667)" xsi:type="notation:IdentityAnchor"/>
         </edges>
         <edges
             source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0"
-            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.3" type="4006">
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.4" type="4006">
             <children type="6002">
                 <layoutConstraint xsi:type="notation:Location" y="40"/>
             </children>
@@ -454,29 +452,30 @@
         </edges>
         <edges
             source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2"
-            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.4" type="4006">
-            <children type="6002">
-                <layoutConstraint xsi:type="notation:Location" y="40"/>
-            </children>
-            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
-            <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
-            <element href="//0/@process/@activity/@activity/@links/@children.2"/>
-            <bendpoints points="[60, 20, -132, -44]$[168, 56, -24, -8]" xsi:type="notation:RelativeBendpoints"/>
-        </edges>
-        <edges
-            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.4"
             target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.1" type="4006">
             <children type="6002">
                 <layoutConstraint xsi:type="notation:Location" y="40"/>
             </children>
             <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
             <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
-            <element href="//0/@process/@activity/@activity/@links/@children.3"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.2"/>
             <bendpoints points="[25, 0, -119, 0]$[120, 0, -24, 0]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
         <edges
             source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.3"
-            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.4" type="4006">
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.3"/>
+            <bendpoints
+                points="[71, 13, -146, -103]$[216, 13, -1, -103]$[216, 92, -1, -24]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.4"
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2" type="4006">
             <children type="6002">
                 <layoutConstraint xsi:type="notation:Location" y="40"/>
             </children>
@@ -484,7 +483,7 @@
             <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
             <element href="//0/@process/@activity/@activity/@links/@children.4"/>
             <bendpoints
-                points="[25, 0, -270, 93]$[183, 0, -112, 93]$[183, -93, -112, 0]$[212, -93, -83, 0]" xsi:type="notation:RelativeBendpoints"/>
+                points="[25, 0, -193, 173]$[217, 0, -1, 173]$[217, -148, -1, 25]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
     </notation:Diagram>
     <tibex:NamespaceRegistry enabled="true">
@@ -494,10 +493,14 @@
             namespace="http://it/linkem/5g/PCRF/SimCheck/xsd" prefix="tns1"/>
         <tibex:namespaceItem
             namespace="http://it/linkem/5g/MDN/SimCheck/xsd" prefix="tns2"/>
+        <tibex:namespaceItem
+            namespace="http://www.example.org/CRM_SimCheck" prefix="tns3"/>
     </tibex:NamespaceRegistry>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://it/linkem/5g/SimCheck/xsd"/>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://it/linkem/5g/MDN/SimCheck/xsd"/>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://it/linkem/5g/PCRF/SimCheck/xsd"/>
+    <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.example.org/CRM_SimCheck"/>
+    <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://it.linkem/rete/pcrf/getImsiByIp/sl/xsd"/>
     <bpws:variables>
         <bpws:variable element="ns:ProcessContext"
             name="_processContext" sca-bpel:internal="true"/>
@@ -505,18 +508,18 @@
             sca-bpel:internal="true" tibex:parameter="in"/>
         <bpws:variable element="ns0:SimCheckBSL_Output" name="End-input"
             sca-bpel:internal="true" tibex:parameter="out"/>
-        <bpws:variable element="ns1:MDN_GetSimByAccount_Input"
-            name="CRM_GetSimByAccount-input" sca-bpel:internal="true"/>
-        <bpws:variable element="ns1:MDN_GetSimByAccount_Output"
-            name="CRM_GetSimByAccount" sca-bpel:internal="true"/>
-        <bpws:variable element="ns2:PCRF_GetIMSIByIP_Input"
-            name="PCRF_GetIMSIByIP_sl-input" sca-bpel:internal="true"/>
-        <bpws:variable element="ns2:PCRF_GetIMSIByIP_Output"
-            name="PCRF_GetIMSIByIP_sl" sca-bpel:internal="true"/>
         <bpws:variable element="ns0:SimCheckBSL_Output"
             name="CheckIMSIResponse-input" sca-bpel:internal="true"/>
         <bpws:variable element="ns0:SimCheckBSL_Output"
             name="CheckIMSIResponse" sca-bpel:internal="true"/>
+        <bpws:variable element="ns3:GetSimFromAccount_Input"
+            name="CRM_GetSIMFromAccount-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns3:GetSimFromAccount_Output"
+            name="CRM_GetSIMFromAccount" sca-bpel:internal="true"/>
+        <bpws:variable element="ns4:GetIMSIByIP_Input"
+            name="PCRF_GetIMSIByIp-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns4:GetIMSIByIP_Output"
+            name="PCRF_GetIMSIByIp" sca-bpel:internal="true"/>
     </bpws:variables>
     <bpws:extensions>
         <bpws:extension mustUnderstand="no" namespace="http://www.eclipse.org/gmf/runtime/1.0.2/notation"/>
@@ -529,11 +532,13 @@
     <bpws:scope name="scope">
         <bpws:flow name="flow">
             <bpws:links>
-                <bpws:link name="StartToCRM_GetSimByAccount" tibex:linkType="SUCCESS"/>
-                <bpws:link name="StartToPCRF_GetIMSIByIP_sl" tibex:linkType="SUCCESS"/>
-                <bpws:link name="CRM_GetSimByAccountToMapper" tibex:linkType="SUCCESS"/>
+                <bpws:link name="StartToGetSIMFromAccount_CallCRM"
+                    tibex:label="Call_CRM" tibex:linkType="SUCCESS"/>
+                <bpws:link name="StartToPCRF_CallPCRF"
+                    tibex:label="Call_PCRF" tibex:linkType="SUCCESS"/>
                 <bpws:link name="MapperToEnd" tibex:linkType="SUCCESS"/>
-                <bpws:link name="PCRF_GetIMSIByIP_slToMapper" tibex:linkType="SUCCESS"/>
+                <bpws:link name="GetSIMFromAccountToCheckIMSIResponse" tibex:linkType="SUCCESS"/>
+                <bpws:link name="PCRF_GetIMSIByIpToCheckIMSIResponse" tibex:linkType="SUCCESS"/>
             </bpws:links>
             <bpws:extensionActivity>
                 <tibex:receiveEvent createInstance="yes"
@@ -541,8 +546,8 @@
                     tibex:xpdlId="32972122-619a-4839-b640-20c3f0e50d9b"
                     variable="Start" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                     <bpws:sources>
-                        <bpws:source linkName="StartToCRM_GetSimByAccount"/>
-                        <bpws:source linkName="StartToPCRF_GetIMSIByIP_sl"/>
+                        <bpws:source linkName="StartToGetSIMFromAccount_CallCRM"/>
+                        <bpws:source linkName="StartToPCRF_CallPCRF"/>
                     </bpws:sources>
                     <tibex:eventSource>
                         <tibex:StartEvent xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
@@ -577,63 +582,21 @@
                 </tibex:activityExtension>
             </bpws:extensionActivity>
             <bpws:extensionActivity>
-                <tibex:extActivity
-                    inputVariable="CRM_GetSimByAccount-input"
-                    name="CRM_GetSimByAccount"
-                    outputVariable="CRM_GetSimByAccount"
-                    tibex:xpdlId="451b5252-cbed-415c-a576-6dd02590abf1"
-                    type="bw.generalactivities.callprocess" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
-                    <bpws:targets>
-                        <bpws:target linkName="StartToCRM_GetSimByAccount"/>
-                    </bpws:targets>
-                    <bpws:sources>
-                        <bpws:source linkName="CRM_GetSimByAccountToMapper"/>
-                    </bpws:sources>
-                    <tibex:inputBindings>
-                        <tibex:inputBinding coercion=""
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://it/linkem/5g/SimCheck/xsd&quot; xmlns:tns2=&quot;http://it/linkem/5g/MDN/SimCheck/xsd&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;Start&quot;/>&lt;xsl:template name=&quot;CRM_GetSimByAccount-input&quot; match=&quot;/&quot;>&lt;tns2:MDN_GetSimByAccount_Input>&lt;tns2:CodiceSblocco>&lt;xsl:value-of select=&quot;$Start/tns:CodiceSblocco&quot;/>&lt;/tns2:CodiceSblocco>&lt;xsl:if test=&quot;$Start/tns:CodiceFiscale&quot;>&lt;tns2:CodiceFiscale>&lt;xsl:value-of select=&quot;$Start/tns:CodiceFiscale&quot;/>&lt;/tns2:CodiceFiscale>&lt;/xsl:if>&lt;xsl:if test=&quot;$Start/tns:PIVA&quot;>&lt;tns2:PIVA>&lt;xsl:value-of select=&quot;$Start/tns:PIVA&quot;/>&lt;/tns2:PIVA>&lt;/xsl:if>&lt;/tns2:MDN_GetSimByAccount_Input>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
-                    </tibex:inputBindings>
-                    <tibex:CallProcess
-                        subProcessName="it.linkem.5g.simcheck.sl.CRM_GetSimByAccount" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
-                </tibex:extActivity>
-            </bpws:extensionActivity>
-            <bpws:extensionActivity>
-                <tibex:extActivity
-                    inputVariable="PCRF_GetIMSIByIP_sl-input"
-                    name="PCRF_GetIMSIByIP_sl"
-                    outputVariable="PCRF_GetIMSIByIP_sl"
-                    tibex:xpdlId="78999672-c242-4d8b-a4bf-26894d235324"
-                    type="bw.generalactivities.callprocess" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
-                    <bpws:targets>
-                        <bpws:target linkName="StartToPCRF_GetIMSIByIP_sl"/>
-                    </bpws:targets>
-                    <bpws:sources>
-                        <bpws:source linkName="PCRF_GetIMSIByIP_slToMapper"/>
-                    </bpws:sources>
-                    <tibex:inputBindings>
-                        <tibex:inputBinding coercion=""
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://it/linkem/5g/SimCheck/xsd&quot; xmlns:tns1=&quot;http://it/linkem/5g/PCRF/SimCheck/xsd&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;Start&quot;/>&lt;xsl:template name=&quot;PCRF_GetIMSIByIP_sl-input&quot; match=&quot;/&quot;>&lt;tns1:PCRF_GetIMSIByIP_Input>&lt;tns1:IP>&lt;xsl:value-of select=&quot;$Start/tns:IP&quot;/>&lt;/tns1:IP>&lt;/tns1:PCRF_GetIMSIByIP_Input>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
-                    </tibex:inputBindings>
-                    <tibex:CallProcess
-                        subProcessName="it.linkem.5g.simcheck.sl.PCRF_GetIMSIByIP_sl" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
-                </tibex:extActivity>
-            </bpws:extensionActivity>
-            <bpws:extensionActivity>
                 <tibex:activityExtension
                     inputVariable="CheckIMSIResponse-input"
                     name="CheckIMSIResponse"
                     outputVariable="CheckIMSIResponse"
                     tibex:xpdlId="c16891eb-2ec4-4f18-a82a-022382d13fe6" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                     <bpws:targets>
-                        <bpws:target linkName="CRM_GetSimByAccountToMapper"/>
-                        <bpws:target linkName="PCRF_GetIMSIByIP_slToMapper"/>
+                        <bpws:target linkName="GetSIMFromAccountToCheckIMSIResponse"/>
+                        <bpws:target linkName="PCRF_GetIMSIByIpToCheckIMSIResponse"/>
                     </bpws:targets>
                     <bpws:sources>
                         <bpws:source linkName="MapperToEnd"/>
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://it/linkem/5g/SimCheck/xsd&quot; xmlns:tns1=&quot;http://it/linkem/5g/PCRF/SimCheck/xsd&quot; xmlns:tns2=&quot;http://it/linkem/5g/MDN/SimCheck/xsd&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;PCRF_GetIMSIByIP_sl&quot;/>&lt;xsl:param name=&quot;CRM_GetSimByAccount&quot;/>&lt;xsl:template name=&quot;CheckIMSIResponse-input&quot; match=&quot;/&quot;>&lt;tns:SimCheckBSL_Output>&lt;xsl:choose>&lt;xsl:when test=&quot;exists($PCRF_GetIMSIByIP_sl/tns1:IMSI) and $PCRF_GetIMSIByIP_sl/tns1:IMSI=$CRM_GetSimByAccount/tns2:IMSI and exists($CRM_GetSimByAccount/tns2:IMSI)&quot;>&lt;tns:Response>&lt;xsl:value-of select=&quot;'OK'&quot;/>&lt;/tns:Response>&lt;/xsl:when>&lt;xsl:otherwise>&lt;tns:Response>&lt;xsl:value-of select=&quot;'KO'&quot;/>&lt;/tns:Response>&lt;/xsl:otherwise>&lt;/xsl:choose>&lt;/tns:SimCheckBSL_Output>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://it/linkem/5g/SimCheck/xsd&quot; xmlns:tns1=&quot;http://it/linkem/5g/PCRF/SimCheck/xsd&quot; xmlns:tns3=&quot;http://www.example.org/CRM_SimCheck&quot; xmlns:tns2=&quot;http://it.linkem/rete/pcrf/getImsiByIp/sl/xsd&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;CRM_GetSIMFromAccount&quot;/>&lt;xsl:param name=&quot;PCRF_GetIMSIByIp&quot;/>&lt;xsl:template name=&quot;CheckIMSIResponse-input&quot; match=&quot;/&quot;>&lt;tns:SimCheckBSL_Output>&lt;xsl:choose>&lt;xsl:when test=&quot;exists($PCRF_GetIMSIByIp/tns2:IMSI) and $PCRF_GetIMSIByIp/tns2:IMSI= $CRM_GetSIMFromAccount/tns3:IMSI and exists($CRM_GetSIMFromAccount/tns3:IMSI)&quot;>&lt;tns:Response>&lt;xsl:value-of select=&quot;'OK'&quot;/>&lt;/tns:Response>&lt;/xsl:when>&lt;xsl:otherwise>&lt;tns:Response>&lt;xsl:value-of select=&quot;'KO'&quot;/>&lt;/tns:Response>&lt;/xsl:otherwise>&lt;/xsl:choose>&lt;/tns:SimCheckBSL_Output>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:config>
                         <bwext:BWActivity
@@ -653,6 +616,50 @@
                         </bwext:BWActivity>
                     </tibex:config>
                 </tibex:activityExtension>
+            </bpws:extensionActivity>
+            <bpws:extensionActivity>
+                <tibex:extActivity
+                    inputVariable="CRM_GetSIMFromAccount-input"
+                    name="CRM_GetSIMFromAccount"
+                    outputVariable="CRM_GetSIMFromAccount"
+                    tibex:xpdlId="d9de59e8-0171-4c9d-a229-f0735d0329f7"
+                    type="bw.generalactivities.callprocess" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                    <bpws:targets>
+                        <bpws:target linkName="StartToGetSIMFromAccount_CallCRM"/>
+                    </bpws:targets>
+                    <bpws:sources>
+                        <bpws:source linkName="GetSIMFromAccountToCheckIMSIResponse"/>
+                    </bpws:sources>
+                    <tibex:inputBindings>
+                        <tibex:inputBinding coercion=""
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://it/linkem/5g/SimCheck/xsd&quot; xmlns:tns3=&quot;http://www.example.org/CRM_SimCheck&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;Start&quot;/>&lt;xsl:template name=&quot;CRM_GetSIMFromAccount-input&quot; match=&quot;/&quot;>&lt;tns3:GetSimFromAccount_Input>&lt;tns3:CodiceSblocco>&lt;xsl:value-of select=&quot;$Start/tns:CodiceSblocco&quot;/>&lt;/tns3:CodiceSblocco>&lt;xsl:if test=&quot;$Start/tns:CodiceFiscale&quot;>&lt;tns3:CodiceFiscale>&lt;xsl:value-of select=&quot;$Start/tns:CodiceFiscale&quot;/>&lt;/tns3:CodiceFiscale>&lt;/xsl:if>&lt;xsl:if test=&quot;$Start/tns:PIVA&quot;>&lt;tns3:PIVA>&lt;xsl:value-of select=&quot;$Start/tns:PIVA&quot;/>&lt;/tns3:PIVA>&lt;/xsl:if>&lt;/tns3:GetSimFromAccount_Input>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                    </tibex:inputBindings>
+                    <tibex:CallProcess
+                        moduleRef="it.linkem.rete.crm.microsoftDynamics.sl.sh"
+                        subProcessName="it.linkem.rete.crm.microsoftDynamics.sl.GetSIMFromAccount" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
+                </tibex:extActivity>
+            </bpws:extensionActivity>
+            <bpws:extensionActivity>
+                <tibex:extActivity
+                    inputVariable="PCRF_GetIMSIByIp-input"
+                    name="PCRF_GetIMSIByIp"
+                    outputVariable="PCRF_GetIMSIByIp"
+                    tibex:xpdlId="fd774606-c085-45a7-8c88-9a2bfc9d0eff"
+                    type="bw.generalactivities.callprocess" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                    <bpws:targets>
+                        <bpws:target linkName="StartToPCRF_CallPCRF"/>
+                    </bpws:targets>
+                    <bpws:sources>
+                        <bpws:source linkName="PCRF_GetIMSIByIpToCheckIMSIResponse"/>
+                    </bpws:sources>
+                    <tibex:inputBindings>
+                        <tibex:inputBinding coercion=""
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://it/linkem/5g/SimCheck/xsd&quot; xmlns:tns1=&quot;http://it.linkem/rete/pcrf/getImsiByIp/sl/xsd&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;Start&quot;/>&lt;xsl:template name=&quot;PCRF_GetIMSIByIp-input&quot; match=&quot;/&quot;>&lt;tns1:GetIMSIByIP_Input>&lt;tns1:IP>&lt;xsl:value-of select=&quot;$Start/tns:IP&quot;/>&lt;/tns1:IP>&lt;/tns1:GetIMSIByIP_Input>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                    </tibex:inputBindings>
+                    <tibex:CallProcess
+                        moduleRef="it.linkem.rete.pcrf.sl.sh"
+                        subProcessName="it.linkem.rete.pcrf.sl.GetIMSIByIp" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
+                </tibex:extActivity>
             </bpws:extensionActivity>
         </bpws:flow>
     </bpws:scope>
