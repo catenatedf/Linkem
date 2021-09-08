@@ -102,7 +102,7 @@
 		</globalVariable>
 		<globalVariable>
 			<name>/Pcrf/Connection/Http/Host</name>
-			<value>localhost</value>
+			<value>172.28.85.73</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
 			<type>String</type>
@@ -111,7 +111,7 @@
 		</globalVariable>
 		<globalVariable>
 			<name>/Pcrf/Connection/Http/Port</name>
-			<value>8080</value>
+			<value>443</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
 			<type>Integer</type>
@@ -219,7 +219,7 @@
 		</globalVariable>
 		<globalVariable>
 			<name>/Pcrf/Connection/Http/RetryCount</name>
-			<value>0</value>
+			<value>3</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
 			<type>Integer</type>

@@ -16,6 +16,39 @@
     xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"
     xmlns:tibprop="http://ns.tibco.com/bw/property"
     xmlns:tns="http://www.example.org/MapperLogData" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <tibex:VariableDescriptor type="MemorySaving">
+        <task name="End">
+            <endingVariables>
+                <variable>SetLogData</variable>
+                <variable>Start</variable>
+            </endingVariables>
+        </task>
+        <task name="LogDebug">
+            <endingVariables>
+                <variable>LogDebug-input</variable>
+            </endingVariables>
+        </task>
+        <task name="SetLogData">
+            <endingVariables>
+                <variable>SetLogData-input</variable>
+            </endingVariables>
+        </task>
+        <task name="LogInfo">
+            <endingVariables>
+                <variable>LogInfo-input</variable>
+            </endingVariables>
+        </task>
+        <task name="LogWarning">
+            <endingVariables>
+                <variable>LogWarning-input</variable>
+            </endingVariables>
+        </task>
+        <task name="LogError">
+            <endingVariables>
+                <variable>LogError-input</variable>
+            </endingVariables>
+        </task>
+    </tibex:VariableDescriptor>
     <tibex:Types>
         <xs:schema attributeFormDefault="unqualified"
             elementFormDefault="qualified"

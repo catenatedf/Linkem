@@ -8,12 +8,16 @@
     xmlns:ns="http://www.tibco.com/pe/EngineTypes"
     xmlns:ns0="http://it/linkem/5g/SimCheck/xsd"
     xmlns:ns1="http://it/linkem/5g/MDN/SimCheck/xsd"
+    xmlns:ns10="http://tns.tibco.com/bw/palette/internal/activityerror+fd774606-c085-45a7-8c88-9a2bfc9d0eff"
+    xmlns:ns11="http://tns.tibco.com/bw/palette/internal/activityerror+com.tibco.bw.core.design.process.editor.Activity_4002_Throw"
     xmlns:ns2="http://it/linkem/5g/PCRF/SimCheck/xsd"
     xmlns:ns3="http://www.example.org/CRM_SimCheck"
     xmlns:ns4="http://it.linkem/rete/pcrf/getImsiByIp/sl/xsd"
     xmlns:ns5="http://it.linkem/core/lehf/common/loggerType/0100"
     xmlns:ns6="http://it.linkem/core/lehf/common/AuditTypes/0100"
     xmlns:ns7="http://it.linkem/core/lehf/common/xsd/loggingwrapper/internal"
+    xmlns:ns8="http://tns.tibco.com/bw/palette/internal/activityerror+bw.internal.end"
+    xmlns:ns9="http://tns.tibco.com/bw/palette/internal/activityerror+d9de59e8-0171-4c9d-a229-f0735d0329f7"
     xmlns:sca="http://docs.oasis-open.org/ns/opencsa/sca/200912"
     xmlns:sca-bpel="http://docs.oasis-open.org/ns/opencsa/sca-bpel/200801"
     xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"
@@ -178,6 +182,54 @@
                 </complexContent>
             </complexType>
             <element name="DuplicateKeyException" type="tns:DuplicateKeyExceptionType"/>
+        </schema>
+        <schema elementFormDefault="unqualified"
+            targetNamespace="http://tns.tibco.com/bw/palette/internal/activityerror+bw.internal.end"
+            xmlns="http://www.w3.org/2001/XMLSchema"
+            xmlns:Q1="http://it.linkem/core/lehf/common/AuditTypes/0100" xmlns:tns="http://tns.tibco.com/bw/palette/internal/activityerror+bw.internal.end">
+            <import namespace="http://it.linkem/core/lehf/common/AuditTypes/0100"/>
+            <element name="ActivityErrorData" type="tns:ActivityErrorDataType"/>
+            <complexType name="ActivityErrorDataType">
+                <choice>
+                    <element maxOccurs="1" minOccurs="0" ref="Q1:LogAudit"/>
+                </choice>
+            </complexType>
+        </schema>
+        <schema elementFormDefault="unqualified"
+            targetNamespace="http://tns.tibco.com/bw/palette/internal/activityerror+d9de59e8-0171-4c9d-a229-f0735d0329f7"
+            xmlns="http://www.w3.org/2001/XMLSchema"
+            xmlns:Q1="http://it.linkem/core/lehf/common/AuditTypes/0100" xmlns:tns="http://tns.tibco.com/bw/palette/internal/activityerror+d9de59e8-0171-4c9d-a229-f0735d0329f7">
+            <import namespace="http://it.linkem/core/lehf/common/AuditTypes/0100"/>
+            <element name="ActivityErrorData" type="tns:ActivityErrorDataType"/>
+            <complexType name="ActivityErrorDataType">
+                <choice>
+                    <element maxOccurs="1" minOccurs="0" ref="Q1:LogAudit"/>
+                </choice>
+            </complexType>
+        </schema>
+        <schema elementFormDefault="unqualified"
+            targetNamespace="http://tns.tibco.com/bw/palette/internal/activityerror+fd774606-c085-45a7-8c88-9a2bfc9d0eff"
+            xmlns="http://www.w3.org/2001/XMLSchema"
+            xmlns:Q1="http://it.linkem/core/lehf/common/AuditTypes/0100" xmlns:tns="http://tns.tibco.com/bw/palette/internal/activityerror+fd774606-c085-45a7-8c88-9a2bfc9d0eff">
+            <import namespace="http://it.linkem/core/lehf/common/AuditTypes/0100"/>
+            <element name="ActivityErrorData" type="tns:ActivityErrorDataType"/>
+            <complexType name="ActivityErrorDataType">
+                <choice>
+                    <element maxOccurs="1" minOccurs="0" ref="Q1:LogAudit"/>
+                </choice>
+            </complexType>
+        </schema>
+        <schema elementFormDefault="unqualified"
+            targetNamespace="http://tns.tibco.com/bw/palette/internal/activityerror+com.tibco.bw.core.design.process.editor.Activity_4002_Throw"
+            xmlns="http://www.w3.org/2001/XMLSchema"
+            xmlns:Q1="http://it.linkem/core/lehf/common/AuditTypes/0100" xmlns:tns="http://tns.tibco.com/bw/palette/internal/activityerror+com.tibco.bw.core.design.process.editor.Activity_4002_Throw">
+            <import namespace="http://it.linkem/core/lehf/common/AuditTypes/0100"/>
+            <element name="ActivityErrorData" type="tns:ActivityErrorDataType"/>
+            <complexType name="ActivityErrorDataType">
+                <choice>
+                    <element maxOccurs="1" minOccurs="0" ref="Q1:LogAudit"/>
+                </choice>
+            </complexType>
         </schema>
     </tibex:Types>
     <tibex:ProcessInfo callable="true" createdBy="Stefano"
@@ -648,7 +700,7 @@
                                     <element href="//0/@process/@activity/@faultHandlers/@catch.0/@activity/@activity"/>
                                     <layoutConstraint
                                     height="168"
-                                    width="1045" xsi:type="notation:Bounds"/>
+                                    width="1670" xsi:type="notation:Bounds"/>
                                     </children>
                                     <styles xsi:type="notation:SortingStyle"/>
                                     <styles xsi:type="notation:FilteringStyle"/>
@@ -717,7 +769,7 @@
                                     <element href="//0/@process/@activity/@faultHandlers/@catchAll/@activity/@activity/@activities.0"/>
                                     <layoutConstraint
                                     height="40"
-                                    width="40"
+                                    width="150"
                                     x="62"
                                     xsi:type="notation:Bounds" y="53"/>
                                     </children>
@@ -734,7 +786,7 @@
                                     <styles xsi:type="bwnotation:ResizingStyle"/>
                                     <element href="//0/@process/@activity/@faultHandlers/@catchAll/@activity/@activity"/>
                                     <layoutConstraint
-                                    height="169"
+                                    height="171"
                                     width="1670" xsi:type="notation:Bounds"/>
                                     </children>
                                     <styles xsi:type="notation:SortingStyle"/>
@@ -884,7 +936,6 @@
             namespace="http://www.tibco.com/bw/xpath/bw-custom-functions" prefix="bw"/>
     </tibex:NamespaceRegistry>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://it/linkem/5g/SimCheck/xsd"/>
-    <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://it/linkem/5g/MDN/SimCheck/xsd"/>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://it/linkem/5g/PCRF/SimCheck/xsd"/>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.example.org/CRM_SimCheck"/>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://it.linkem/rete/pcrf/getImsiByIp/sl/xsd"/>
@@ -932,22 +983,6 @@
             sca-bpel:property="yes"
             tibex:propertySource="//it.linkem.core.lehf.common.sh///it.linkem.core.lehf.common.sh/Logging/System_Exception" type="xsd:string"/>
         <bpws:variable element="ns6:LogAudit" name="ThrowError-input" sca-bpel:internal="true"/>
-        <bpws:variable name="dynamicsCRMConnection"
-            sca-bpel:hotUpdate="false" sca-bpel:privateProperty="true"
-            sca-bpel:property="yes"
-            sca-bpel:sharedResourceType="{http://ns.tibco.com/bw/palette/dynamicscrmconnection}Dynamicscrm" type="xsd:string">
-            <bpws:from>
-                <bpws:literal>it.linkem.rete.crm.microsoftdynamics.sl.sh.DynamicsCRMConnection</bpws:literal>
-            </bpws:from>
-        </bpws:variable>
-        <bpws:variable name="httpClientResource"
-            sca-bpel:hotUpdate="false" sca-bpel:privateProperty="true"
-            sca-bpel:property="yes"
-            sca-bpel:sharedResourceType="{http://xsd.tns.tibco.com/bw/models/sharedresource/httpclient}HttpClientConfiguration" type="xsd:string">
-            <bpws:from>
-                <bpws:literal>it.linkem.rete.pcrf.sl.sh.PCRFHttpClientResource</bpws:literal>
-            </bpws:from>
-        </bpws:variable>
         <bpws:variable element="ns6:LogAudit"
             name="Log_Start_SimCheck-input" sca-bpel:internal="true"/>
         <bpws:variable element="ns7:LEHF_Output"
@@ -959,6 +994,17 @@
         <bpws:variable element="ns:FaultDetail" name="FaultDetails" sca-bpel:internal="true"/>
         <bpws:variable element="ns6:LogAudit"
             name="ThrowGenericError-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns8:ActivityErrorData" name="_error_End" sca-bpel:internal="true"/>
+        <bpws:variable element="ns9:ActivityErrorData"
+            name="_error_CRM_GetSIMFromAccount" sca-bpel:internal="true"/>
+        <bpws:variable element="ns10:ActivityErrorData"
+            name="_error_PCRF_GetIMSIByIp" sca-bpel:internal="true"/>
+        <bpws:variable element="ns11:ActivityErrorData"
+            name="_error_ThrowCheckIMSI" sca-bpel:internal="true"/>
+        <bpws:variable element="ns11:ActivityErrorData"
+            name="_error_ThrowError" sca-bpel:internal="true"/>
+        <bpws:variable element="ns11:ActivityErrorData"
+            name="_error_ThrowGenericError" sca-bpel:internal="true"/>
     </bpws:variables>
     <bpws:extensions>
         <bpws:extension mustUnderstand="no" namespace="http://www.eclipse.org/gmf/runtime/1.0.2/notation"/>

@@ -2030,7 +2030,7 @@
                 </tibex:activityExtension>
             </bpws:extensionActivity>
             <bpws:scope name="RepeatOnErrorRESTCall"
-                tibex:group="repeatOnError" tibex:xpdlId="25148565-f233-4858-93d1-8dd2f5ee0abf">
+                tibex:group="repeatOnError" tibex:indexToGlobal="false" tibex:xpdlId="25148565-f233-4858-93d1-8dd2f5ee0abf">
                 <bpws:targets>
                     <bpws:target linkName="BuildDynamicPropertiesToRepeatOnErrorRESTCall"/>
                 </bpws:targets>

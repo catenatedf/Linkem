@@ -571,7 +571,7 @@
                         <bpws:source linkName="ReadErrorListToSetErrorSharedVariable"/>
                     </bpws:sources>
                     <tibex:inputBindings>
-                        <tibex:inputBinding
+                        <tibex:inputBinding coercion=""
                             expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://it.linkem/core/lehf/common/xsd/LoadErroConfiguration/input&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;Start&quot;/>&lt;xsl:template name=&quot;ReadErrorList-input&quot; match=&quot;/&quot;>&lt;tns:Input>&lt;tns:InputCSV>&lt;xsl:value-of select=&quot;$Start/tns:InputCSV&quot;/>&lt;/tns:InputCSV>&lt;/tns:Input>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:CallProcess
@@ -591,7 +591,7 @@
                         <bpws:source linkName="SetErrorSharedVariableToEnd"/>
                     </bpws:sources>
                     <tibex:inputBindings>
-                        <tibex:inputBinding
+                        <tibex:inputBinding coercion=""
                             expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns1=&quot;http://it.linkem/core/lehf/common/xsd/ErrorConfiguration/&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;ParseCSVErrorList&quot;/>&lt;xsl:template name=&quot;SetErrorSharedVariable-input&quot; match=&quot;/&quot;>&lt;tns1:ErrorConfigurations>&lt;xsl:copy-of select=&quot;$ParseCSVErrorList/tns1:ErrorConfiguration&quot;/>&lt;/tns1:ErrorConfigurations>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:CallProcess

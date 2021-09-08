@@ -12,6 +12,21 @@
     xmlns:sca-bpel="http://docs.oasis-open.org/ns/opencsa/sca-bpel/200801"
     xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"
     xmlns:tibprop="http://ns.tibco.com/bw/property" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <tibex:VariableDescriptor type="MemorySaving">
+        <task name="MapToSetLoggerParams">
+            <endingVariables>
+                <variable>MapToSetLoggerParams-input</variable>
+                <variable>Start</variable>
+            </endingVariables>
+        </task>
+        <task name="SetLoggerParams">
+            <endingVariables>
+                <variable>SetLoggerParams-input</variable>
+                <variable>SetLoggerParams</variable>
+                <variable>MapToSetLoggerParams</variable>
+            </endingVariables>
+        </task>
+    </tibex:VariableDescriptor>
     <tibex:Types>
         <xs:schema attributeFormDefault="unqualified"
             elementFormDefault="qualified"
@@ -566,7 +581,7 @@
                         <bpws:source linkName="SetLoggerParamsToEnd"/>
                     </bpws:sources>
                     <tibex:inputBindings>
-                        <tibex:inputBinding
+                        <tibex:inputBinding coercion=""
                             expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;MapToSetLoggerParams&quot;/>&lt;xsl:template name=&quot;SetLoggerParams-input&quot; match=&quot;/&quot;>&lt;xsl:copy-of select=&quot;$MapToSetLoggerParams&quot;/>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:SetSharedVariable inline="true"

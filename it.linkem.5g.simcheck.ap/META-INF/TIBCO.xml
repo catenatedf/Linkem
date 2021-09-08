@@ -3,69 +3,6 @@
   <packaging:description></packaging:description>
   <packaging:properties>
     <packaging:property>
-      <packaging:name>//it.linkem.5g.simcheck.md//BW.DEPLOYMENTUNIT.TYPE</packaging:name>
-      <packaging:type>xsd:string</packaging:type>
-      <packaging:visibility>private</packaging:visibility>
-      <packaging:scalable>true</packaging:scalable>
-      <packaging:overrideValue>false</packaging:overrideValue>
-    </packaging:property>
-    <packaging:property>
-      <packaging:name>//it.linkem.5g.simcheck.md//BW.APPNODE.NAME</packaging:name>
-      <packaging:type>xsd:string</packaging:type>
-      <packaging:visibility>private</packaging:visibility>
-      <packaging:scalable>true</packaging:scalable>
-      <packaging:overrideValue>false</packaging:overrideValue>
-    </packaging:property>
-    <packaging:property>
-      <packaging:name>//it.linkem.5g.simcheck.md//BW.DEPLOYMENTUNIT.NAME</packaging:name>
-      <packaging:type>xsd:string</packaging:type>
-      <packaging:visibility>private</packaging:visibility>
-      <packaging:scalable>true</packaging:scalable>
-      <packaging:overrideValue>false</packaging:overrideValue>
-    </packaging:property>
-    <packaging:property>
-      <packaging:name>//it.linkem.5g.simcheck.md//BW.HOST.NAME</packaging:name>
-      <packaging:type>xsd:string</packaging:type>
-      <packaging:visibility>private</packaging:visibility>
-      <packaging:scalable>true</packaging:scalable>
-      <packaging:overrideValue>false</packaging:overrideValue>
-    </packaging:property>
-    <packaging:property>
-      <packaging:name>//it.linkem.5g.simcheck.md//BW.DOMAIN.NAME</packaging:name>
-      <packaging:type>xsd:string</packaging:type>
-      <packaging:visibility>private</packaging:visibility>
-      <packaging:scalable>true</packaging:scalable>
-      <packaging:overrideValue>false</packaging:overrideValue>
-    </packaging:property>
-    <packaging:property>
-      <packaging:name>//it.linkem.5g.simcheck.md//BW.DEPLOYMENTUNIT.VERSION</packaging:name>
-      <packaging:type>xsd:string</packaging:type>
-      <packaging:visibility>private</packaging:visibility>
-      <packaging:scalable>true</packaging:scalable>
-      <packaging:overrideValue>false</packaging:overrideValue>
-    </packaging:property>
-    <packaging:property>
-      <packaging:name>//it.linkem.5g.simcheck.md//BW.APPSPACE.NAME</packaging:name>
-      <packaging:type>xsd:string</packaging:type>
-      <packaging:visibility>private</packaging:visibility>
-      <packaging:scalable>true</packaging:scalable>
-      <packaging:overrideValue>false</packaging:overrideValue>
-    </packaging:property>
-    <packaging:property>
-      <packaging:name>//it.linkem.5g.simcheck.md//BW.MODULE.VERSION</packaging:name>
-      <packaging:type>xsd:string</packaging:type>
-      <packaging:visibility>private</packaging:visibility>
-      <packaging:scalable>true</packaging:scalable>
-      <packaging:overrideValue>false</packaging:overrideValue>
-    </packaging:property>
-    <packaging:property>
-      <packaging:name>//it.linkem.5g.simcheck.md//BW.MODULE.NAME</packaging:name>
-      <packaging:type>xsd:string</packaging:type>
-      <packaging:visibility>private</packaging:visibility>
-      <packaging:scalable>true</packaging:scalable>
-      <packaging:overrideValue>false</packaging:overrideValue>
-    </packaging:property>
-    <packaging:property>
       <packaging:name>//it.linkem.core.lehf.common.sh//BW.DEPLOYMENTUNIT.TYPE</packaging:name>
       <packaging:type>xsd:string</packaging:type>
       <packaging:visibility>private</packaging:visibility>
@@ -611,13 +548,71 @@
       <packaging:scalable>true</packaging:scalable>
       <packaging:overrideValue>false</packaging:overrideValue>
     </packaging:property>
+    <packaging:property>
+      <packaging:name>//it.linkem.5g.simcheck.md//BW.DEPLOYMENTUNIT.TYPE</packaging:name>
+      <packaging:type>xsd:string</packaging:type>
+      <packaging:visibility>private</packaging:visibility>
+      <packaging:scalable>true</packaging:scalable>
+      <packaging:overrideValue>false</packaging:overrideValue>
+    </packaging:property>
+    <packaging:property>
+      <packaging:name>//it.linkem.5g.simcheck.md//BW.APPNODE.NAME</packaging:name>
+      <packaging:type>xsd:string</packaging:type>
+      <packaging:visibility>private</packaging:visibility>
+      <packaging:scalable>true</packaging:scalable>
+      <packaging:overrideValue>false</packaging:overrideValue>
+    </packaging:property>
+    <packaging:property>
+      <packaging:name>//it.linkem.5g.simcheck.md//BW.DEPLOYMENTUNIT.NAME</packaging:name>
+      <packaging:type>xsd:string</packaging:type>
+      <packaging:visibility>private</packaging:visibility>
+      <packaging:scalable>true</packaging:scalable>
+      <packaging:overrideValue>false</packaging:overrideValue>
+    </packaging:property>
+    <packaging:property>
+      <packaging:name>//it.linkem.5g.simcheck.md//BW.HOST.NAME</packaging:name>
+      <packaging:type>xsd:string</packaging:type>
+      <packaging:visibility>private</packaging:visibility>
+      <packaging:scalable>true</packaging:scalable>
+      <packaging:overrideValue>false</packaging:overrideValue>
+    </packaging:property>
+    <packaging:property>
+      <packaging:name>//it.linkem.5g.simcheck.md//BW.DOMAIN.NAME</packaging:name>
+      <packaging:type>xsd:string</packaging:type>
+      <packaging:visibility>private</packaging:visibility>
+      <packaging:scalable>true</packaging:scalable>
+      <packaging:overrideValue>false</packaging:overrideValue>
+    </packaging:property>
+    <packaging:property>
+      <packaging:name>//it.linkem.5g.simcheck.md//BW.DEPLOYMENTUNIT.VERSION</packaging:name>
+      <packaging:type>xsd:string</packaging:type>
+      <packaging:visibility>private</packaging:visibility>
+      <packaging:scalable>true</packaging:scalable>
+      <packaging:overrideValue>false</packaging:overrideValue>
+    </packaging:property>
+    <packaging:property>
+      <packaging:name>//it.linkem.5g.simcheck.md//BW.APPSPACE.NAME</packaging:name>
+      <packaging:type>xsd:string</packaging:type>
+      <packaging:visibility>private</packaging:visibility>
+      <packaging:scalable>true</packaging:scalable>
+      <packaging:overrideValue>false</packaging:overrideValue>
+    </packaging:property>
+    <packaging:property>
+      <packaging:name>//it.linkem.5g.simcheck.md//BW.MODULE.VERSION</packaging:name>
+      <packaging:type>xsd:string</packaging:type>
+      <packaging:visibility>private</packaging:visibility>
+      <packaging:scalable>true</packaging:scalable>
+      <packaging:overrideValue>false</packaging:overrideValue>
+    </packaging:property>
+    <packaging:property>
+      <packaging:name>//it.linkem.5g.simcheck.md//BW.MODULE.NAME</packaging:name>
+      <packaging:type>xsd:string</packaging:type>
+      <packaging:visibility>private</packaging:visibility>
+      <packaging:scalable>true</packaging:scalable>
+      <packaging:overrideValue>false</packaging:overrideValue>
+    </packaging:property>
   </packaging:properties>
   <packaging:modules>
-    <packaging:module>
-      <packaging:symbolicName>it.linkem.5g.simcheck.md</packaging:symbolicName>
-      <packaging:technologyType>osgi-bundle,bw-appmodule</packaging:technologyType>
-      <packaging:technologyVersion>1.0.0.qualifier</packaging:technologyVersion>
-    </packaging:module>
     <packaging:module>
       <packaging:symbolicName>it.linkem.core.lehf.common.sh</packaging:symbolicName>
       <packaging:technologyType>osgi-bundle,bw-sharedmodule</packaging:technologyType>
@@ -631,6 +626,11 @@
     <packaging:module>
       <packaging:symbolicName>it.linkem.rete.pcrf.sl.sh</packaging:symbolicName>
       <packaging:technologyType>osgi-bundle,bw-sharedmodule</packaging:technologyType>
+      <packaging:technologyVersion>1.0.0.qualifier</packaging:technologyVersion>
+    </packaging:module>
+    <packaging:module>
+      <packaging:symbolicName>it.linkem.5g.simcheck.md</packaging:symbolicName>
+      <packaging:technologyType>osgi-bundle,bw-appmodule</packaging:technologyType>
       <packaging:technologyVersion>1.0.0.qualifier</packaging:technologyVersion>
     </packaging:module>
   </packaging:modules>
