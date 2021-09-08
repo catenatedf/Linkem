@@ -1047,8 +1047,8 @@
         <bpws:variable messageType="ns:get500FaultMessage"
             name="Reply-input" sca-bpel:internal="true"/>
         <bpws:variable element="ns2:loggerParams"
-            name="SeLogParams-input" sca-bpel:internal="true"/>
-        <bpws:variable element="ns2:loggerParams" name="SeLogParams" sca-bpel:internal="true"/>
+            name="SeLoggerParams-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns2:loggerParams" name="SeLoggerParams" sca-bpel:internal="true"/>
     </bpws:variables>
     <bpws:extensions>
         <bpws:extension mustUnderstand="no" namespace="http://www.eclipse.org/gmf/runtime/1.0.2/notation"/>
@@ -1168,9 +1168,9 @@
                             </bpws:extensionActivity>
                             <bpws:extensionActivity>
                                 <tibex:extActivity
-                                    inputVariable="SeLogParams-input"
-                                    name="SeLogParams"
-                                    outputVariable="SeLogParams"
+                                    inputVariable="SeLoggerParams-input"
+                                    name="SeLoggerParams"
+                                    outputVariable="SeLoggerParams"
                                     tibex:xpdlId="902a4b37-3e52-416a-b6e6-2f7e356ba7b9"
                                     type="bw.internal.setSharedVariable" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                                     <bpws:targets>
