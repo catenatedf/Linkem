@@ -83,8 +83,8 @@
 			<useLookupValue>false</useLookupValue>
 		</globalVariable>
 		<globalVariable>
-			<name>/Udm/Connection/ResourcePath</name>
-			<value>/services/ServiceManager/getRefData/Session?processParams</value>
+			<name>/it.linkem.rete.udm.sl.sh/UDM/Connections/HTTPClient/URI</name>
+			<value>/ProvisioningGateway/services/SPMLSubscriber10Service</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
 			<type>String</type>
@@ -92,7 +92,25 @@
 			<useLookupValue>false</useLookupValue>
 		</globalVariable>
 		<globalVariable>
-			<name>/Udm/Connection/Http/Host</name>
+			<name>/it.linkem.rete.udm.sl.sh/UDM/Connections/HTTPClient/Method</name>
+			<value>POST</value>
+			<deploymentSettable>false</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<isOverride>false</isOverride>
+			<useLookupValue>false</useLookupValue>
+		</globalVariable>
+		<globalVariable>
+			<name>/it.linkem.rete.udm.sl.sh/UDM/Connections/HTTPClient/ContentType</name>
+			<value>text/xml</value>
+			<deploymentSettable>false</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<isOverride>false</isOverride>
+			<useLookupValue>false</useLookupValue>
+		</globalVariable>
+		<globalVariable>
+			<name>/it.linkem.rete.udm.sl.sh/UDM/Connections/HTTPClient/Common/Host</name>
 			<value>localhost</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
@@ -101,8 +119,8 @@
 			<useLookupValue>false</useLookupValue>
 		</globalVariable>
 		<globalVariable>
-			<name>/Udm/Connection/Http/Port</name>
-			<value>8080</value>
+			<name>/it.linkem.rete.udm.sl.sh/UDM/Connections/HTTPClient/Common/Port</name>
+			<value>8182</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
 			<type>Integer</type>
@@ -110,16 +128,7 @@
 			<useLookupValue>false</useLookupValue>
 		</globalVariable>
 		<globalVariable>
-			<name>/Udm/Connection/Http/Url</name>
-			<value>es</value>
-			<deploymentSettable>false</deploymentSettable>
-			<serviceSettable>false</serviceSettable>
-			<type>String</type>
-			<isOverride>false</isOverride>
-			<useLookupValue>false</useLookupValue>
-		</globalVariable>
-		<globalVariable>
-			<name>/Udm/Connection/Http/DisableConnectionPolling</name>
+			<name>/it.linkem.rete.udm.sl.sh/UDM/Connections/HTTPClient/Common/DisableConnectionPolling</name>
 			<value>false</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
@@ -128,7 +137,7 @@
 			<useLookupValue>false</useLookupValue>
 		</globalVariable>
 		<globalVariable>
-			<name>/Udm/Connection/Http/IdleConnectionTimeout</name>
+			<name>/it.linkem.rete.udm.sl.sh/UDM/Connections/HTTPClient/Common/IdleConnectionTimeout</name>
 			<value>3000</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
@@ -137,7 +146,7 @@
 			<useLookupValue>false</useLookupValue>
 		</globalVariable>
 		<globalVariable>
-			<name>/Udm/Connection/Http/StaleCheck</name>
+			<name>/it.linkem.rete.udm.sl.sh/UDM/Connections/HTTPClient/Common/StaleCheck</name>
 			<value>false</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
@@ -146,7 +155,7 @@
 			<useLookupValue>false</useLookupValue>
 		</globalVariable>
 		<globalVariable>
-			<name>/Udm/Connection/Http/MaximumTotalConnections</name>
+			<name>/it.linkem.rete.udm.sl.sh/UDM/Connections/HTTPClient/Common/MaximumTotalConnections</name>
 			<value>200</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
@@ -155,7 +164,7 @@
 			<useLookupValue>false</useLookupValue>
 		</globalVariable>
 		<globalVariable>
-			<name>/Udm/Connection/Http/MaximumTotConnectionsPerHost</name>
+			<name>/it.linkem.rete.udm.sl.sh/UDM/Connections/HTTPClient/Common/MaximumTotConnectionsPerHost</name>
 			<value>20</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
@@ -164,7 +173,7 @@
 			<useLookupValue>false</useLookupValue>
 		</globalVariable>
 		<globalVariable>
-			<name>/Udm/Connection/Http/SocketTimeout</name>
+			<name>/it.linkem.rete.udm.sl.sh/UDM/Connections/HTTPClient/Common/SocketTimeout</name>
 			<value>0</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
@@ -173,7 +182,7 @@
 			<useLookupValue>false</useLookupValue>
 		</globalVariable>
 		<globalVariable>
-			<name>/Udm/Connection/Http/AcceptRedirect</name>
+			<name>/it.linkem.rete.udm.sl.sh/UDM/Connections/HTTPClient/Common/AcceptRedirect</name>
 			<value>false</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
@@ -182,7 +191,7 @@
 			<useLookupValue>false</useLookupValue>
 		</globalVariable>
 		<globalVariable>
-			<name>/Udm/Connection/Http/UseSingleCookieHeader</name>
+			<name>/it.linkem.rete.udm.sl.sh/UDM/Connections/HTTPClient/Common/UseSingleCookieHeader</name>
 			<value>false</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
@@ -191,7 +200,7 @@
 			<useLookupValue>false</useLookupValue>
 		</globalVariable>
 		<globalVariable>
-			<name>/Udm/Connection/Http/ConnectionTImeout</name>
+			<name>/it.linkem.rete.udm.sl.sh/UDM/Connections/HTTPClient/Common/ConnectionTImeout</name>
 			<value>0</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
@@ -200,7 +209,7 @@
 			<useLookupValue>false</useLookupValue>
 		</globalVariable>
 		<globalVariable>
-			<name>/Udm/Connection/Http/LogRequest</name>
+			<name>/it.linkem.rete.udm.sl.sh/UDM/Connections/HTTPClient/Common/LogRequest</name>
 			<value>false</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
@@ -209,16 +218,7 @@
 			<useLookupValue>false</useLookupValue>
 		</globalVariable>
 		<globalVariable>
-			<name>/Udm/Connection/Http/RetryCount</name>
-			<value>0</value>
-			<deploymentSettable>false</deploymentSettable>
-			<serviceSettable>false</serviceSettable>
-			<type>Integer</type>
-			<isOverride>false</isOverride>
-			<useLookupValue>false</useLookupValue>
-		</globalVariable>
-		<globalVariable>
-			<name>/Udm/Connection/Http/DefaultConfidentiality</name>
+			<name>/it.linkem.rete.udm.sl.sh/UDM/Connections/HTTPClient/Common/DefaultConfidentiality</name>
 			<value>true</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
@@ -227,7 +227,16 @@
 			<useLookupValue>false</useLookupValue>
 		</globalVariable>
 		<globalVariable>
-			<name>/Udm/Connection/Http/Confidentiality</name>
+			<name>/it.linkem.rete.udm.sl.sh/UDM/Connections/HTTPClient/Common/RetryCount</name>
+			<value>0</value>
+			<deploymentSettable>false</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>Integer</type>
+			<isOverride>false</isOverride>
+			<useLookupValue>false</useLookupValue>
+		</globalVariable>
+		<globalVariable>
+			<name>/it.linkem.rete.udm.sl.sh/UDM/Connections/HTTPClient/Common/Confidentiality</name>
 			<value>false</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
@@ -236,7 +245,7 @@
 			<useLookupValue>false</useLookupValue>
 		</globalVariable>
 		<globalVariable>
-			<name>/Udm/Connection/Http/UseNonPreemtiveAuth</name>
+			<name>/it.linkem.rete.udm.sl.sh/UDM/Connections/HTTPClient/Common/UseNonPreemtiveAuth</name>
 			<value>false</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
@@ -245,7 +254,7 @@
 			<useLookupValue>false</useLookupValue>
 		</globalVariable>
 		<globalVariable>
-			<name>/Udm/Connection/Http/ShortRetryManagement/BaseRetryDelay_s</name>
+			<name>/it.linkem.rete.udm.sl.sh/UDM/Connections/HTTPClient/Common/ShortRetryManagement/BaseRetryDelay_s</name>
 			<value>30</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
@@ -254,7 +263,7 @@
 			<useLookupValue>false</useLookupValue>
 		</globalVariable>
 		<globalVariable>
-			<name>/Udm/Connection/Http/ShortRetryManagement/MaxShortRetry</name>
+			<name>/it.linkem.rete.udm.sl.sh/UDM/Connections/HTTPClient/Common/ShortRetryManagement/MaxShortRetry</name>
 			<value>3</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>

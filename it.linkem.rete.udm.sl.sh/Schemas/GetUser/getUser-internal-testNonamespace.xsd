@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created with Liquid Technologies Online Tools 1.0 (https://www.liquid-technologies.com) -->
+<schema xmlns="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified" >
+
+	<element name="searchResponse">
+		<complexType>
+			<sequence>
+				<element name="version" type="string"/>
+				<element name="objects">
+					<complexType>
+						<sequence>
+							<element name="identifier" type="unsignedLong"/>
+							<element name="auc">
+								<complexType>
+									<sequence>
+										<element name="imsi" type="unsignedLong"/>
+										<element name="encKey" type="string"/>
+										<element name="iccId" type="integer"/>
+										<element name="algoId" type="unsignedByte"/>
+										<element name="kdbId" type="unsignedByte"/>
+										<element name="acsub" type="unsignedByte"/>
+										<element name="amf" type="unsignedByte"/>
+										<element name="sqn" type="unsignedShort"/>
+									</sequence>
+								</complexType>
+							</element>
+							<element name="hlr">
+								<complexType>
+									<sequence>
+										<element name="ntype" type="string"/>
+										<element name="imsiActive" type="boolean"/>
+										<element name="mobileSubscriberType" type="string"/>
+										<element name="umtsSubscriber">
+											<complexType>
+												<sequence>
+													<element name="accTypeGSM" type="boolean"/>
+													<element name="accTypeGERAN" type="boolean"/>
+													<element name="accTypeUTRAN" type="boolean"/>
+												</sequence>
+											</complexType>
+										</element>
+										<element name="wllSubscriber" type="boolean"/>
+										<element name="mscat" type="unsignedByte"/>
+										<element name="odboc" type="unsignedByte"/>
+										<element name="odbic" type="unsignedByte"/>
+										<element name="odbr" type="unsignedByte"/>
+										<element name="odboprc" type="unsignedByte"/>
+										<element name="odbssm" type="unsignedByte"/>
+										<element name="clipOverride" type="boolean"/>
+										<element name="colpOverride" type="boolean"/>
+										<element name="nwa" type="unsignedByte"/>
+										<element name="sr" type="unsignedByte"/>
+										<element name="odbsci" type="unsignedByte"/>
+										<element name="obGprs" type="unsignedByte"/>
+										<element name="optimalRouting" type="boolean"/>
+										<element name="ndcLac" type="unsignedByte"/>
+										<element name="sgsnMobData">
+											<complexType>
+												<sequence>
+													<element name="ueSrvccCapability" type="unsignedByte"/>
+												</sequence>
+											</complexType>
+										</element>
+										<element name="imeisv" type="unsignedLong"/>
+										<element name="eps">
+											<complexType>
+												<sequence>
+													<element name="defaultPdnContextId" type="unsignedByte"/>
+													<element name="maxBandwidthUp" type="unsignedInt"/>
+													<element name="maxBandwidthDown" type="unsignedInt"/>
+													<element name="mmeIdentity" type="string"/>
+													<element name="msPurgedEps" type="boolean"/>
+													<element name="vplmnId" type="string"/>
+													<element name="mmeSuppFeatures">
+														<complexType>
+															<sequence>
+																<element name="featuredListId" type="unsignedByte"/>
+																<element name="featuredList" type="integer"/>
+															</sequence>
+														</complexType>
+													</element>
+													<element name="mmeRealm" type="string"/>
+												</sequence>
+											</complexType>
+										</element>
+										<element name="epsPdnContext">
+											<complexType>
+												<sequence>
+													<element name="apn" type="string"/>
+													<element name="contextId" type="unsignedByte"/>
+													<element name="type" type="string"/>
+													<element name="pdnGwDynamicAllocation" type="boolean"/>
+													<element name="maxBandwidthUp" type="unsignedInt"/>
+													<element name="maxBandwidthDown" type="unsignedInt"/>
+													<element name="qos" type="string"/>
+												</sequence>
+											</complexType>
+										</element>
+									</sequence>
+								</complexType>
+							</element>
+						</sequence>
+						<attribute name="type" type="string" use="required"/>
+					</complexType>
+				</element>
+			</sequence>
+			<attribute name="executionTime" type="unsignedByte" use="required"/>
+			<attribute name="result" type="string" use="required"/>
+			<attribute name="requestID" type="string" use="required"/>
+			<attribute name="searchStatus" type="string" use="required"/>
+		</complexType>
+	</element>
+</schema>

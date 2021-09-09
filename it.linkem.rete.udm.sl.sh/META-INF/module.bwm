@@ -9,24 +9,25 @@
   <sca:property xmi:id="_p8EqYA--EeySlY7vVr8Zcw" name="BW.APPSPACE.NAME" type="XMLSchema:string" scalable="true"/>
   <sca:property xmi:id="_p8I70A--EeySlY7vVr8Zcw" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
   <sca:property xmi:id="_p8NNQA--EeySlY7vVr8Zcw" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
-  <sca:property xmi:id="_Q8IE4A_HEeySlY7vVr8Zcw" name="/Udm/Connection/ResourcePath" type="XMLSchema:string" publicAccess="true" scalable="true"/>
-  <sca:property xmi:id="_LCq-MA_HEeySlY7vVr8Zcw" name="/Udm/Connection/Http/Host" type="XMLSchema:string" publicAccess="true" scalable="true"/>
-  <sca:property xmi:id="_MGAqgA_HEeySlY7vVr8Zcw" name="/Udm/Connection/Http/Port" type="XMLSchema:int" publicAccess="true" scalable="true"/>
-  <sca:property xmi:id="_Mnp_AA_HEeySlY7vVr8Zcw" name="/Udm/Connection/Http/Url" type="XMLSchema:string" publicAccess="true" scalable="true"/>
-  <sca:property xmi:id="_NHEe4A_HEeySlY7vVr8Zcw" name="/Udm/Connection/Http/DisableConnectionPolling" type="XMLSchema:boolean" publicAccess="true" scalable="true"/>
-  <sca:property xmi:id="_NTvo8A_HEeySlY7vVr8Zcw" name="/Udm/Connection/Http/IdleConnectionTimeout" type="XMLSchema:int" publicAccess="true" scalable="true"/>
-  <sca:property xmi:id="_NjFsgA_HEeySlY7vVr8Zcw" name="/Udm/Connection/Http/StaleCheck" type="XMLSchema:boolean" publicAccess="true" scalable="true"/>
-  <sca:property xmi:id="_NwRz8A_HEeySlY7vVr8Zcw" name="/Udm/Connection/Http/MaximumTotalConnections" type="XMLSchema:int" publicAccess="true" scalable="true"/>
-  <sca:property xmi:id="_N_c4YA_HEeySlY7vVr8Zcw" name="/Udm/Connection/Http/MaximumTotConnectionsPerHost" type="XMLSchema:int" publicAccess="true" scalable="true"/>
-  <sca:property xmi:id="_OUq6cA_HEeySlY7vVr8Zcw" name="/Udm/Connection/Http/SocketTimeout" type="XMLSchema:int" publicAccess="true" scalable="true"/>
-  <sca:property xmi:id="_OmwI8A_HEeySlY7vVr8Zcw" name="/Udm/Connection/Http/AcceptRedirect" type="XMLSchema:boolean" publicAccess="true" scalable="true"/>
-  <sca:property xmi:id="_O3ZNAA_HEeySlY7vVr8Zcw" name="/Udm/Connection/Http/UseSingleCookieHeader" type="XMLSchema:boolean" publicAccess="true" scalable="true"/>
-  <sca:property xmi:id="_PIPscA_HEeySlY7vVr8Zcw" name="/Udm/Connection/Http/ConnectionTImeout" type="XMLSchema:int" publicAccess="true" scalable="true"/>
-  <sca:property xmi:id="_PYyp4A_HEeySlY7vVr8Zcw" name="/Udm/Connection/Http/LogRequest" type="XMLSchema:boolean" publicAccess="true" scalable="true"/>
-  <sca:property xmi:id="_PocPcA_HEeySlY7vVr8Zcw" name="/Udm/Connection/Http/RetryCount" type="XMLSchema:int" publicAccess="true" scalable="true"/>
-  <sca:property xmi:id="_P2VhgA_HEeySlY7vVr8Zcw" name="/Udm/Connection/Http/DefaultConfidentiality" type="XMLSchema:boolean" publicAccess="true" scalable="true"/>
-  <sca:property xmi:id="_QG9-gA_HEeySlY7vVr8Zcw" name="/Udm/Connection/Http/Confidentiality" type="XMLSchema:boolean" publicAccess="true" scalable="true"/>
-  <sca:property xmi:id="_7M7YEA_HEeySlY7vVr8Zcw" name="/Udm/Connection/Http/UseNonPreemtiveAuth" type="XMLSchema:boolean" scaext:simpleValue="false" publicAccess="true" scalable="true"/>
-  <sca:property xmi:id="_eMZWMA_JEeySlY7vVr8Zcw" name="/Udm/Connection/Http/ShortRetryManagement/BaseRetryDelay_s" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
-  <sca:property xmi:id="_jz7mcA_JEeySlY7vVr8Zcw" name="/Udm/Connection/Http/ShortRetryManagement/MaxShortRetry" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_Bl8oIBFTEeyuS_nZ2YNeNA" name="/it.linkem.rete.udm.sl.sh/UDM/Connections/HTTPClient/URI" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_t9MtoBFXEeyuS_nZ2YNeNA" name="/it.linkem.rete.udm.sl.sh/UDM/Connections/HTTPClient/Method" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_u0bQkBFXEeyuS_nZ2YNeNA" name="/it.linkem.rete.udm.sl.sh/UDM/Connections/HTTPClient/ContentType" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_jw6xwBFVEeyuS_nZ2YNeNA" name="/it.linkem.rete.udm.sl.sh/UDM/Connections/HTTPClient/Common/Host" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_lxpTYBFVEeyuS_nZ2YNeNA" name="/it.linkem.rete.udm.sl.sh/UDM/Connections/HTTPClient/Common/Port" type="XMLSchema:int" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_oPvGcBFVEeyuS_nZ2YNeNA" name="/it.linkem.rete.udm.sl.sh/UDM/Connections/HTTPClient/Common/DisableConnectionPolling" type="XMLSchema:boolean" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_qDSuwBFVEeyuS_nZ2YNeNA" name="/it.linkem.rete.udm.sl.sh/UDM/Connections/HTTPClient/Common/IdleConnectionTimeout" type="XMLSchema:int" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_qmtk4BFVEeyuS_nZ2YNeNA" name="/it.linkem.rete.udm.sl.sh/UDM/Connections/HTTPClient/Common/StaleCheck" type="XMLSchema:boolean" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_r4umYBFVEeyuS_nZ2YNeNA" name="/it.linkem.rete.udm.sl.sh/UDM/Connections/HTTPClient/Common/MaximumTotalConnections" type="XMLSchema:int" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_sgWnEBFVEeyuS_nZ2YNeNA" name="/it.linkem.rete.udm.sl.sh/UDM/Connections/HTTPClient/Common/MaximumTotConnectionsPerHost" type="XMLSchema:int" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_tPLb8BFVEeyuS_nZ2YNeNA" name="/it.linkem.rete.udm.sl.sh/UDM/Connections/HTTPClient/Common/SocketTimeout" type="XMLSchema:int" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_ucrw4BFVEeyuS_nZ2YNeNA" name="/it.linkem.rete.udm.sl.sh/UDM/Connections/HTTPClient/Common/AcceptRedirect" type="XMLSchema:boolean" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_vKsGYBFVEeyuS_nZ2YNeNA" name="/it.linkem.rete.udm.sl.sh/UDM/Connections/HTTPClient/Common/UseSingleCookieHeader" type="XMLSchema:boolean" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_vv5FMBFVEeyuS_nZ2YNeNA" name="/it.linkem.rete.udm.sl.sh/UDM/Connections/HTTPClient/Common/ConnectionTImeout" type="XMLSchema:int" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_wVTfYBFVEeyuS_nZ2YNeNA" name="/it.linkem.rete.udm.sl.sh/UDM/Connections/HTTPClient/Common/LogRequest" type="XMLSchema:boolean" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_w48_ABFVEeyuS_nZ2YNeNA" name="/it.linkem.rete.udm.sl.sh/UDM/Connections/HTTPClient/Common/DefaultConfidentiality" type="XMLSchema:boolean" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_xkhEgBFVEeyuS_nZ2YNeNA" name="/it.linkem.rete.udm.sl.sh/UDM/Connections/HTTPClient/Common/RetryCount" type="XMLSchema:int" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_yPoeEBFVEeyuS_nZ2YNeNA" name="/it.linkem.rete.udm.sl.sh/UDM/Connections/HTTPClient/Common/Confidentiality" type="XMLSchema:boolean" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_y5D1kBFVEeyuS_nZ2YNeNA" name="/it.linkem.rete.udm.sl.sh/UDM/Connections/HTTPClient/Common/UseNonPreemtiveAuth" type="XMLSchema:boolean" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_1weHkBFVEeyuS_nZ2YNeNA" name="/it.linkem.rete.udm.sl.sh/UDM/Connections/HTTPClient/Common/ShortRetryManagement/BaseRetryDelay_s" type="XMLSchema:int" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_2D-5cBFVEeyuS_nZ2YNeNA" name="/it.linkem.rete.udm.sl.sh/UDM/Connections/HTTPClient/Common/ShortRetryManagement/MaxShortRetry" type="XMLSchema:int" publicAccess="true" scalable="true"/>
 </sca:composite>
