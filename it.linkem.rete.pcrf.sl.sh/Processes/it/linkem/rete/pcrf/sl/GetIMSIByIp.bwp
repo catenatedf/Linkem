@@ -16,7 +16,9 @@
     xmlns:ns16="http://it.linkem/core/lehf/common/xsd/loggingwrapper/internal"
     xmlns:ns17="http://tns.tibco.com/bw/palette/internal/activityerror+bw.internal.end"
     xmlns:ns18="http://it.linkem/core/lehf/InternalInterface_DynamicProperties/0100"
+    xmlns:ns19="http://tns.tibco.com/bw/activity/sendhttprequest/input+4bbee4d0-0d27-40f6-b25c-696849131f3d+RequestActivityInput"
     xmlns:ns2="http://tns.tibco.com/bw/palette/internal/activityerror+bw.restjson.Rest"
+    xmlns:ns20="http://tns.tibco.com/bw/activity/sendhttprequest/output+4bbee4d0-0d27-40f6-b25c-696849131f3d+RequestActivityOutput"
     xmlns:ns3="http://www.example.org/PCRF_SimCheck"
     xmlns:ns4="http://tns.tibco.com/bw/activity/sleep/xsd"
     xmlns:ns5="http://schemas.tibco.com/bw/plugins/basic/6.0/Exceptions"
@@ -255,22 +257,6 @@
             <element name="HttpResponseException" type="tns:HttpResponseExceptionType"/>
             <element name="HttpServerException" type="tns:HttpServerExceptionType"/>
         </schema>
-        <schema elementFormDefault="unqualified"
-            targetNamespace="http://tns.tibco.com/bw/palette/internal/activityerror+bw.restjson.Rest"
-            xmlns="http://www.w3.org/2001/XMLSchema"
-            xmlns:Q1="http://schemas.tibco.com/bw/plugins/http/5.0/httpExceptions" xmlns:tns="http://tns.tibco.com/bw/palette/internal/activityerror+bw.restjson.Rest">
-            <import namespace="http://schemas.tibco.com/bw/plugins/http/5.0/httpExceptions"/>
-            <import namespace="http://schemas.tibco.com/bw/plugins/http/5.0/httpExceptions"/>
-            <import namespace="http://schemas.tibco.com/bw/plugins/http/5.0/httpExceptions"/>
-            <element name="ActivityErrorData" type="tns:ActivityErrorDataType"/>
-            <complexType name="ActivityErrorDataType">
-                <choice>
-                    <element maxOccurs="1" minOccurs="0" ref="Q1:HttpCommunicationException"/>
-                    <element maxOccurs="1" minOccurs="0" ref="Q1:HttpClientException"/>
-                    <element maxOccurs="1" minOccurs="0" ref="Q1:HttpServerException"/>
-                </choice>
-            </complexType>
-        </schema>
         <xs:schema attributeFormDefault="unqualified"
             elementFormDefault="qualified"
             targetNamespace="http://tns.tibco.com/bw/activity/sleep/xsd"
@@ -345,140 +331,6 @@
                 </sequence>
             </complexType>
             <element name="mimeEnvelopeElement" type="tns:mimeEnvelopeElementType"/>
-        </schema>
-        <schema elementFormDefault="unqualified"
-            targetNamespace="http://tns.tibco.com/bw/activity/sendhttprequest/input+4432accc-5df5-403d-99e2-ea2a529ec5b9+RequestActivityInput"
-            xmlns="http://www.w3.org/2001/XMLSchema"
-            xmlns:ns0="http://xmlns.tibco.com/encodings/mime" xmlns:tns="http://tns.tibco.com/bw/activity/sendhttprequest/input+4432accc-5df5-403d-99e2-ea2a529ec5b9+RequestActivityInput">
-            <import namespace="http://xmlns.tibco.com/encodings/mime"/>
-            <complexType name="inputHeadersType">
-                <sequence>
-                    <element form="unqualified" minOccurs="0"
-                        name="Accept" type="string"/>
-                    <element form="unqualified" minOccurs="0"
-                        name="Accept-Charset" type="string"/>
-                    <element form="unqualified" minOccurs="0"
-                        name="Accept-Encoding" type="string"/>
-                    <element form="unqualified" minOccurs="0"
-                        name="Content-Type" type="string"/>
-                    <element form="unqualified" minOccurs="0"
-                        name="Cookie" type="string"/>
-                    <element form="unqualified" minOccurs="0"
-                        name="Pragma" type="string"/>
-                </sequence>
-            </complexType>
-            <complexType name="DynamicHeaders">
-                <sequence>
-                    <element form="unqualified" maxOccurs="unbounded"
-                        minOccurs="0" name="Header" type="tns:Header"/>
-                </sequence>
-            </complexType>
-            <complexType name="Header">
-                <sequence>
-                    <element form="unqualified" name="Name" type="string"/>
-                    <element form="unqualified" name="Value" type="string"/>
-                </sequence>
-            </complexType>
-            <complexType name="statusLineType">
-                <sequence>
-                    <element form="unqualified" minOccurs="0"
-                        name="httpVersion" type="string"/>
-                    <element form="unqualified" minOccurs="0"
-                        name="statusCode" type="int"/>
-                    <element form="unqualified" minOccurs="0"
-                        name="reasonPhrase" type="string"/>
-                </sequence>
-            </complexType>
-            <complexType name="RequestActivityInput">
-                <sequence>
-                    <element form="unqualified" maxOccurs="1"
-                        minOccurs="0" name="Host" type="string"/>
-                    <element form="unqualified" maxOccurs="1"
-                        minOccurs="0" name="Port" type="int"/>
-                    <element form="unqualified" minOccurs="0"
-                        name="Method" type="string"/>
-                    <element form="unqualified" minOccurs="0"
-                        name="RequestURI" type="string"/>
-                    <element form="unqualified" minOccurs="0"
-                        name="PostData" type="string"/>
-                    <element form="unqualified" minOccurs="0"
-                        name="QueryString" type="string"/>
-                    <element form="unqualified" minOccurs="0"
-                        name="Timeout" type="int"/>
-                    <element maxOccurs="1" minOccurs="0" name="Headers" type="tns:inputHeadersType"/>
-                    <element form="unqualified" minOccurs="0"
-                        name="DynamicHeaders" type="tns:DynamicHeaders"/>
-                    <element minOccurs="0" ref="ns0:mimeEnvelopeElement"/>
-                </sequence>
-            </complexType>
-            <element name="RequestActivityInput" type="tns:RequestActivityInput"/>
-        </schema>
-        <schema elementFormDefault="unqualified"
-            targetNamespace="http://tns.tibco.com/bw/activity/sendhttprequest/output+4432accc-5df5-403d-99e2-ea2a529ec5b9+RequestActivityOutput"
-            xmlns="http://www.w3.org/2001/XMLSchema"
-            xmlns:ns0="http://xmlns.tibco.com/encodings/mime" xmlns:tns="http://tns.tibco.com/bw/activity/sendhttprequest/output+4432accc-5df5-403d-99e2-ea2a529ec5b9+RequestActivityOutput">
-            <import namespace="http://xmlns.tibco.com/encodings/mime"/>
-            <complexType name="outputHeadersType">
-                <sequence>
-                    <element form="unqualified" minOccurs="0"
-                        name="Allow" type="string"/>
-                    <element form="unqualified" minOccurs="0"
-                        name="Content-Type" type="string"/>
-                    <element form="unqualified" minOccurs="0"
-                        name="Content-Length" type="string"/>
-                    <element form="unqualified" minOccurs="0"
-                        name="Content-Encoding" type="string"/>
-                    <element form="unqualified" minOccurs="0"
-                        name="Date" type="string"/>
-                    <element form="unqualified" minOccurs="0"
-                        name="Location" type="string"/>
-                    <element form="unqualified" maxOccurs="unbounded"
-                        minOccurs="0" name="Set-Cookie" type="string"/>
-                    <element form="unqualified" minOccurs="0"
-                        name="Pragma" type="string"/>
-                </sequence>
-            </complexType>
-            <complexType name="DynamicHeaders">
-                <sequence>
-                    <element form="unqualified" maxOccurs="unbounded"
-                        minOccurs="0" name="Header" type="tns:Header"/>
-                </sequence>
-            </complexType>
-            <complexType name="Header">
-                <sequence>
-                    <element form="unqualified" name="Name" type="string"/>
-                    <element form="unqualified" name="Value" type="string"/>
-                </sequence>
-            </complexType>
-            <complexType name="statusLineType">
-                <sequence>
-                    <element form="unqualified" minOccurs="0"
-                        name="httpVersion" type="string"/>
-                    <element form="unqualified" minOccurs="0"
-                        name="statusCode" type="int"/>
-                    <element form="unqualified" minOccurs="0"
-                        name="reasonPhrase" type="string"/>
-                </sequence>
-            </complexType>
-            <complexType name="RequestActivityOutput">
-                <sequence>
-                    <element form="unqualified" minOccurs="0"
-                        name="Header" type="string"/>
-                    <element form="unqualified" minOccurs="0"
-                        name="statusLine" type="tns:statusLineType"/>
-                    <element form="unqualified" minOccurs="0"
-                        name="binaryContent" type="base64Binary"/>
-                    <element form="unqualified" minOccurs="0"
-                        name="asciiContent" type="string"/>
-                    <element form="unqualified" minOccurs="0"
-                        name="filePath" type="string"/>
-                    <element maxOccurs="1" minOccurs="0" name="Headers" type="tns:outputHeadersType"/>
-                    <element form="unqualified" minOccurs="0"
-                        name="DynamicHeaders" type="tns:DynamicHeaders"/>
-                    <element minOccurs="0" ref="ns0:mimeEnvelopeElement"/>
-                </sequence>
-            </complexType>
-            <element name="RequestActivityOutput" type="tns:RequestActivityOutput"/>
         </schema>
         <schema elementFormDefault="unqualified"
             targetNamespace="http://tns.tibco.com/bw/palette/internal/activityerror+bw.http.sendHTTPRequest"
@@ -582,6 +434,140 @@
                     <element maxOccurs="1" minOccurs="0" ref="Q1:LogAudit"/>
                 </choice>
             </complexType>
+        </schema>
+        <schema elementFormDefault="unqualified"
+            targetNamespace="http://tns.tibco.com/bw/activity/sendhttprequest/input+4bbee4d0-0d27-40f6-b25c-696849131f3d+RequestActivityInput"
+            xmlns="http://www.w3.org/2001/XMLSchema"
+            xmlns:ns0="http://xmlns.tibco.com/encodings/mime" xmlns:tns="http://tns.tibco.com/bw/activity/sendhttprequest/input+4bbee4d0-0d27-40f6-b25c-696849131f3d+RequestActivityInput">
+            <import namespace="http://xmlns.tibco.com/encodings/mime"/>
+            <complexType name="inputHeadersType">
+                <sequence>
+                    <element form="unqualified" minOccurs="0"
+                        name="Accept" type="string"/>
+                    <element form="unqualified" minOccurs="0"
+                        name="Accept-Charset" type="string"/>
+                    <element form="unqualified" minOccurs="0"
+                        name="Accept-Encoding" type="string"/>
+                    <element form="unqualified" minOccurs="0"
+                        name="Content-Type" type="string"/>
+                    <element form="unqualified" minOccurs="0"
+                        name="Cookie" type="string"/>
+                    <element form="unqualified" minOccurs="0"
+                        name="Pragma" type="string"/>
+                </sequence>
+            </complexType>
+            <complexType name="DynamicHeaders">
+                <sequence>
+                    <element form="unqualified" maxOccurs="unbounded"
+                        minOccurs="0" name="Header" type="tns:Header"/>
+                </sequence>
+            </complexType>
+            <complexType name="Header">
+                <sequence>
+                    <element form="unqualified" name="Name" type="string"/>
+                    <element form="unqualified" name="Value" type="string"/>
+                </sequence>
+            </complexType>
+            <complexType name="statusLineType">
+                <sequence>
+                    <element form="unqualified" minOccurs="0"
+                        name="httpVersion" type="string"/>
+                    <element form="unqualified" minOccurs="0"
+                        name="statusCode" type="int"/>
+                    <element form="unqualified" minOccurs="0"
+                        name="reasonPhrase" type="string"/>
+                </sequence>
+            </complexType>
+            <complexType name="RequestActivityInput">
+                <sequence>
+                    <element form="unqualified" maxOccurs="1"
+                        minOccurs="0" name="Host" type="string"/>
+                    <element form="unqualified" maxOccurs="1"
+                        minOccurs="0" name="Port" type="int"/>
+                    <element form="unqualified" minOccurs="0"
+                        name="Method" type="string"/>
+                    <element form="unqualified" minOccurs="0"
+                        name="RequestURI" type="string"/>
+                    <element form="unqualified" minOccurs="0"
+                        name="PostData" type="string"/>
+                    <element form="unqualified" minOccurs="0"
+                        name="QueryString" type="string"/>
+                    <element form="unqualified" minOccurs="0"
+                        name="Timeout" type="int"/>
+                    <element maxOccurs="1" minOccurs="0" name="Headers" type="tns:inputHeadersType"/>
+                    <element form="unqualified" minOccurs="0"
+                        name="DynamicHeaders" type="tns:DynamicHeaders"/>
+                    <element minOccurs="0" ref="ns0:mimeEnvelopeElement"/>
+                </sequence>
+            </complexType>
+            <element name="RequestActivityInput" type="tns:RequestActivityInput"/>
+        </schema>
+        <schema elementFormDefault="unqualified"
+            targetNamespace="http://tns.tibco.com/bw/activity/sendhttprequest/output+4bbee4d0-0d27-40f6-b25c-696849131f3d+RequestActivityOutput"
+            xmlns="http://www.w3.org/2001/XMLSchema"
+            xmlns:ns0="http://xmlns.tibco.com/encodings/mime" xmlns:tns="http://tns.tibco.com/bw/activity/sendhttprequest/output+4bbee4d0-0d27-40f6-b25c-696849131f3d+RequestActivityOutput">
+            <import namespace="http://xmlns.tibco.com/encodings/mime"/>
+            <complexType name="outputHeadersType">
+                <sequence>
+                    <element form="unqualified" minOccurs="0"
+                        name="Allow" type="string"/>
+                    <element form="unqualified" minOccurs="0"
+                        name="Content-Type" type="string"/>
+                    <element form="unqualified" minOccurs="0"
+                        name="Content-Length" type="string"/>
+                    <element form="unqualified" minOccurs="0"
+                        name="Content-Encoding" type="string"/>
+                    <element form="unqualified" minOccurs="0"
+                        name="Date" type="string"/>
+                    <element form="unqualified" minOccurs="0"
+                        name="Location" type="string"/>
+                    <element form="unqualified" maxOccurs="unbounded"
+                        minOccurs="0" name="Set-Cookie" type="string"/>
+                    <element form="unqualified" minOccurs="0"
+                        name="Pragma" type="string"/>
+                </sequence>
+            </complexType>
+            <complexType name="DynamicHeaders">
+                <sequence>
+                    <element form="unqualified" maxOccurs="unbounded"
+                        minOccurs="0" name="Header" type="tns:Header"/>
+                </sequence>
+            </complexType>
+            <complexType name="Header">
+                <sequence>
+                    <element form="unqualified" name="Name" type="string"/>
+                    <element form="unqualified" name="Value" type="string"/>
+                </sequence>
+            </complexType>
+            <complexType name="statusLineType">
+                <sequence>
+                    <element form="unqualified" minOccurs="0"
+                        name="httpVersion" type="string"/>
+                    <element form="unqualified" minOccurs="0"
+                        name="statusCode" type="int"/>
+                    <element form="unqualified" minOccurs="0"
+                        name="reasonPhrase" type="string"/>
+                </sequence>
+            </complexType>
+            <complexType name="RequestActivityOutput">
+                <sequence>
+                    <element form="unqualified" minOccurs="0"
+                        name="Header" type="string"/>
+                    <element form="unqualified" minOccurs="0"
+                        name="statusLine" type="tns:statusLineType"/>
+                    <element form="unqualified" minOccurs="0"
+                        name="binaryContent" type="base64Binary"/>
+                    <element form="unqualified" minOccurs="0"
+                        name="asciiContent" type="string"/>
+                    <element form="unqualified" minOccurs="0"
+                        name="filePath" type="string"/>
+                    <element maxOccurs="1" minOccurs="0" name="Headers" type="tns:outputHeadersType"/>
+                    <element form="unqualified" minOccurs="0"
+                        name="DynamicHeaders" type="tns:DynamicHeaders"/>
+                    <element minOccurs="0" ref="ns0:mimeEnvelopeElement"/>
+                </sequence>
+            </complexType>
+            <element name="RequestActivityOutput" type="tns:RequestActivityOutput"/>
         </schema>
     </tibex:Types>
     <tibex:ProcessInfo callable="true" createdBy="flavi"
@@ -874,8 +860,8 @@
                                     <layoutConstraint
                                     height="40"
                                     width="40"
-                                    x="314"
-                                    xsi:type="notation:Bounds" y="92"/>
+                                    x="323"
+                                    xsi:type="notation:Bounds" y="78"/>
                                     </children>
                                     <styles xsi:type="notation:DrawerStyle"/>
                                     <styles xsi:type="notation:SortingStyle"/>
@@ -1599,7 +1585,7 @@
             <styles fontColor="4227327" fontName="Segoe UI" xsi:type="notation:FontStyle"/>
             <element href="//0/@process/@activity/@activity/@activities.2/@activity/@activity/@activity/@links/@children.0"/>
             <bendpoints
-                points="[-3, 25, -300, 64]$[-3, 51, -300, 90]$[297, 51, 0, 90]$[297, -14, 0, 25]" xsi:type="notation:RelativeBendpoints"/>
+                points="[0, 25, -306, 45]$[0, 68, -306, 88]$[303, 68, -3, 88]$[303, 5, -3, 25]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
         <edges
             source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.0/@children.2"
@@ -1671,17 +1657,7 @@
             <element href="//0/@process/@activity/@activity/@activities.2/@activity/@activity/@activity/@links/@children.3"/>
             <bendpoints
                 points="[25, 0, -153, -75]$[183, 0, 5, -75]$[183, 51, 5, -24]" xsi:type="notation:RelativeBendpoints"/>
-        </edges>
-        <edges
-            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.0/@children.1/@children.0/@children.0/@children.0/@children.2"
-            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.0/@children.3" type="4006">
-            <children type="6002">
-                <layoutConstraint xsi:type="notation:Location" y="40"/>
-            </children>
-            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
-            <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
-            <element href="//0/@process/@activity/@activity/@activities.2/@activity/@activity/@activity/@links/@children.4"/>
-            <bendpoints points="[25, 16, -109, -70]$[122, 78, -12, -8]" xsi:type="notation:RelativeBendpoints"/>
+            <targetAnchor id="(0.4959349593495935,0.13333333333333333)" xsi:type="notation:IdentityAnchor"/>
         </edges>
         <edges
             source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.6"
@@ -1751,6 +1727,17 @@
             <element href="//0/@process/@activity/@activity/@links/@children.9"/>
             <bendpoints points="[25, 3, -398, -53]$[140, 18, -283, -38]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
+        <edges
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.0/@children.1/@children.0/@children.0/@children.0/@children.2"
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.0/@children.3" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@activities.2/@activity/@activity/@activity/@links/@children.4"/>
+            <bendpoints points="[25, 15, -103, -65]$[116, 72, -12, -8]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
     </notation:Diagram>
     <tibex:NamespaceRegistry enabled="true">
         <tibex:namespaceItem
@@ -1779,6 +1766,10 @@
             namespace="http://www.tibco.com/bw/xpath/bw-custom-functions" prefix="bw"/>
         <tibex:namespaceItem
             namespace="http://schemas.tibco.com/bw/plugins/xml/5.0/JSONActivitiesExceptions" prefix="tns10"/>
+        <tibex:namespaceItem
+            namespace="http://tns.tibco.com/bw/activity/sendhttprequest/input+4bbee4d0-0d27-40f6-b25c-696849131f3d+RequestActivityInput" prefix="tns12"/>
+        <tibex:namespaceItem
+            namespace="http://it.linkem/core/lehf/InternalInterface_DynamicProperties/0100" prefix="tns11"/>
     </tibex:NamespaceRegistry>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://it.linkem/rete/pcrf/getImsiByIp/internal/xsd"/>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://it.linkem/rete/pcrf/getImsiByIp/sl/xsd"/>
@@ -1797,8 +1788,6 @@
                 <bpws:literal>it.linkem.rete.pcrf.sl.sh.PCRFHttpClientResource</bpws:literal>
             </bpws:from>
         </bpws:variable>
-        <bpws:variable element="ns2:ActivityErrorData"
-            name="_error_Get_IMSI_By_Ip" sca-bpel:internal="true"/>
         <bpws:variable element="ns:ErrorReport" name="_error" sca-bpel:internal="true"/>
         <bpws:variable name="ResourcePath" sca-bpel:hotUpdate="false"
             sca-bpel:privateProperty="true" sca-bpel:property="yes"
@@ -1830,10 +1819,6 @@
             name="ThrowServer-input" sca-bpel:internal="true"/>
         <bpws:variable element="ns6:ActivityErrorData"
             name="_error_ThrowServer" sca-bpel:internal="true"/>
-        <bpws:variable element="ns7:RequestActivityInput"
-            name="Get_IMSI_By_Ip-input" sca-bpel:internal="true"/>
-        <bpws:variable element="ns8:RequestActivityOutput"
-            name="Get_IMSI_By_Ip" sca-bpel:internal="true"/>
         <bpws:variable element="ns9:ActivityErrorData"
             name="_error_SendHTTPRequest" sca-bpel:internal="true"/>
         <bpws:variable name="RequestUrl" sca-bpel:hotUpdate="false"
@@ -1888,6 +1873,12 @@
             name="BuildHttpDynamicHeaders-input" sca-bpel:internal="true"/>
         <bpws:variable element="ns18:DynamicProperties"
             name="BuildHttpDynamicHeaders" sca-bpel:internal="true"/>
+        <bpws:variable element="ns19:RequestActivityInput"
+            name="Get_IMSI_By_Ip-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns20:RequestActivityOutput"
+            name="Get_IMSI_By_Ip" sca-bpel:internal="true"/>
+        <bpws:variable element="ns9:ActivityErrorData"
+            name="_error_Get_IMSI_By_Ip" sca-bpel:internal="true"/>
     </bpws:variables>
     <bpws:extensions>
         <bpws:extension mustUnderstand="no" namespace="http://www.eclipse.org/gmf/runtime/1.0.2/notation"/>
@@ -2030,7 +2021,7 @@
                 </tibex:activityExtension>
             </bpws:extensionActivity>
             <bpws:scope name="RepeatOnErrorRESTCall"
-                tibex:group="repeatOnError" tibex:indexToGlobal="false" tibex:xpdlId="25148565-f233-4858-93d1-8dd2f5ee0abf">
+                tibex:group="repeatOnError" tibex:xpdlId="25148565-f233-4858-93d1-8dd2f5ee0abf">
                 <bpws:targets>
                     <bpws:target linkName="BuildDynamicPropertiesToRepeatOnErrorRESTCall"/>
                 </bpws:targets>
@@ -2089,16 +2080,16 @@
                         <bpws:flow name="flow1">
                             <bpws:links>
                                 <bpws:link
-                                    name="if_First_CallToGet_IMSI_By_Ip2"
+                                    name="if_First_CallToCopy_1_Get_IMSI_By_Ip"
                                     tibex:label="firstCall" tibex:linkType="SUCCESSWITHCONDITION"/>
                                 <bpws:link
                                     name="GroupStartToif_First_Call" tibex:linkType="SUCCESS"/>
                                 <bpws:link
                                     name="if_First_CallToDelayCallFiles" tibex:linkType="SUCCESSWITHNOCONDITION"/>
                                 <bpws:link
-                                    name="DelayCallFilesToGet_IMSI_By_Ip2" tibex:linkType="SUCCESS"/>
+                                    name="DelayCallFilesToCopy_1_Get_IMSI_By_Ip" tibex:linkType="SUCCESS"/>
                                 <bpws:link
-                                    name="Get_IMSI_By_Ip2ToGroupEnd" tibex:linkType="SUCCESS"/>
+                                    name="Copy_1_Get_IMSI_By_IpToGroupEnd" tibex:linkType="SUCCESS"/>
                             </bpws:links>
                             <bpws:empty name="GroupStart"
                                 tibex:group="groupStart" tibex:xpdlId="9e5ac7bc-3a8b-40bd-ba91-37a7eec1af60">
@@ -2110,7 +2101,7 @@
                                 tibex:group="groupEnd"
                                 tibex:xpdlId="28ba2449-c562-4b88-a35f-8e8831394dc6" validate="no">
                                 <bpws:targets>
-                                    <bpws:target linkName="Get_IMSI_By_Ip2ToGroupEnd"/>
+                                    <bpws:target linkName="Copy_1_Get_IMSI_By_IpToGroupEnd"/>
                                 </bpws:targets>
                                 <bpws:copy>
                                     <bpws:from expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"><![CDATA[true()]]></bpws:from>
@@ -2126,7 +2117,7 @@
                                     <bpws:target linkName="if_First_CallToDelayCallFiles"/>
                                     </bpws:targets>
                                     <bpws:sources>
-                                    <bpws:source linkName="DelayCallFilesToGet_IMSI_By_Ip2"/>
+                                    <bpws:source linkName="DelayCallFilesToCopy_1_Get_IMSI_By_Ip"/>
                                     </bpws:sources>
                                     <tibex:inputBindings>
                                     <tibex:inputBinding
@@ -2154,7 +2145,7 @@
                                     <bpws:target linkName="GroupStartToif_First_Call"/>
                                 </bpws:targets>
                                 <bpws:sources>
-                                    <bpws:source linkName="if_First_CallToGet_IMSI_By_Ip2">
+                                    <bpws:source linkName="if_First_CallToCopy_1_Get_IMSI_By_Ip">
                                     <tibex:DesignExpression>
                                     <tibex:expression
                                     expression="$indexRetryCallPCRF = 1" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"/>
@@ -2176,24 +2167,24 @@
                                     inputVariable="Get_IMSI_By_Ip-input"
                                     name="Get_IMSI_By_Ip"
                                     outputVariable="Get_IMSI_By_Ip"
-                                    tibex:xpdlId="4432accc-5df5-403d-99e2-ea2a529ec5b9" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                                    tibex:xpdlId="4bbee4d0-0d27-40f6-b25c-696849131f3d" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                                     <bpws:targets>
-                                    <bpws:target linkName="DelayCallFilesToGet_IMSI_By_Ip2"/>
-                                    <bpws:target linkName="if_First_CallToGet_IMSI_By_Ip2"/>
+                                    <bpws:target linkName="DelayCallFilesToCopy_1_Get_IMSI_By_Ip"/>
+                                    <bpws:target linkName="if_First_CallToCopy_1_Get_IMSI_By_Ip"/>
                                     </bpws:targets>
                                     <bpws:sources>
-                                    <bpws:source linkName="Get_IMSI_By_Ip2ToGroupEnd"/>
+                                    <bpws:source linkName="Copy_1_Get_IMSI_By_IpToGroupEnd"/>
                                     </bpws:sources>
                                     <tibex:inputBindings>
                                     <tibex:inputBinding
-                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns5=&quot;http://tns.tibco.com/bw/activity/sendhttprequest/input+4432accc-5df5-403d-99e2-ea2a529ec5b9+RequestActivityInput&quot; xmlns:tns7=&quot;http://it.linkem/rete/pcrf/getImsiByIp/sl/xsd&quot; xmlns:tns=&quot;http://it.linkem/core/lehf/InternalInterface_DynamicProperties/0100&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;Start&quot;/>&lt;xsl:param name=&quot;RequestUrl&quot;/>&lt;xsl:param name=&quot;BuildHttpDynamicHeaders&quot;/>&lt;xsl:template name=&quot;Get_IMSI_By_Ip-input&quot; match=&quot;/&quot;>&lt;tns5:RequestActivityInput>&lt;Method>&lt;xsl:value-of select=&quot;&amp;quot;GET&amp;quot;&quot;/>&lt;/Method>&lt;RequestURI>&lt;xsl:value-of select=&quot;$RequestUrl&quot;/>&lt;/RequestURI>&lt;QueryString>&lt;xsl:value-of select=&quot;concat('processParams={&amp;quot;deviceId&amp;quot;:{ &amp;quot;ip&amp;quot;: &amp;quot;{', $Start/tns7:IP, ' }&amp;quot;},&amp;quot;sessionType&amp;quot;:&amp;quot;IPCANSESSION&amp;quot;}')&quot;/>&lt;/QueryString>&lt;DynamicHeaders>&lt;xsl:for-each select=&quot;$BuildHttpDynamicHeaders/tns:Property&quot;>&lt;Header>&lt;Name>&lt;xsl:value-of select=&quot;tns:Name&quot;/>&lt;/Name>&lt;Value>&lt;xsl:value-of select=&quot;tns:Value&quot;/>&lt;/Value>&lt;/Header>&lt;/xsl:for-each>&lt;/DynamicHeaders>&lt;/tns5:RequestActivityInput>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns12=&quot;http://tns.tibco.com/bw/activity/sendhttprequest/input+4bbee4d0-0d27-40f6-b25c-696849131f3d+RequestActivityInput&quot; xmlns:tns7=&quot;http://it.linkem/rete/pcrf/getImsiByIp/sl/xsd&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;RequestUrl&quot;/>&lt;xsl:param name=&quot;Start&quot;/>&lt;xsl:template name=&quot;Copy_1_Get_IMSI_By_Ip-input&quot; match=&quot;/&quot;>&lt;tns12:RequestActivityInput>&lt;Method>&lt;xsl:value-of select=&quot;&amp;quot;GET&amp;quot;&quot;/>&lt;/Method>&lt;RequestURI>&lt;xsl:value-of select=&quot;$RequestUrl&quot;/>&lt;/RequestURI>&lt;QueryString>&lt;xsl:value-of select=&quot;concat('processParams={&amp;quot;deviceId&amp;quot;:{ &amp;quot;ip&amp;quot;: &amp;quot;{', $Start/tns7:IP, ' }&amp;quot;},&amp;quot;sessionType&amp;quot;:&amp;quot;IPCANSESSION&amp;quot;}')&quot;/>&lt;/QueryString>&lt;Headers>&lt;Content-Type>&lt;xsl:value-of select=&quot;&amp;quot;application/json&amp;quot;&quot;/>&lt;/Content-Type>&lt;/Headers>&lt;DynamicHeaders/>&lt;/tns12:RequestActivityInput>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                                     </tibex:inputBindings>
                                     <tibex:config>
                                     <bwext:BWActivity
                                     activityTypeID="bw.http.sendHTTPRequest"
                                     version="6.0.0.20132205"
-                                    xmlns:RequestActivityInput="http://tns.tibco.com/bw/activity/sendhttprequest/input+4432accc-5df5-403d-99e2-ea2a529ec5b9+RequestActivityInput"
-                                    xmlns:RequestActivityOutput="http://tns.tibco.com/bw/activity/sendhttprequest/output+4432accc-5df5-403d-99e2-ea2a529ec5b9+RequestActivityOutput"
+                                    xmlns:RequestActivityInput="http://tns.tibco.com/bw/activity/sendhttprequest/input+4bbee4d0-0d27-40f6-b25c-696849131f3d+RequestActivityInput"
+                                    xmlns:RequestActivityOutput="http://tns.tibco.com/bw/activity/sendhttprequest/output+4bbee4d0-0d27-40f6-b25c-696849131f3d+RequestActivityOutput"
                                     xmlns:activityconfig="http://tns.tibco.com/bw/model/activityconfig"
                                     xmlns:bwext="http://tns.tibco.com/bw/model/core/bwext"
                                     xmlns:http="http://ns.tibco.com/bw/palette/http" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -2370,7 +2361,7 @@
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding coercion=""
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://it.linkem/core/lehf/InternalInterface_DynamicProperties/0100&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;GetLoggerParams&quot;/>&lt;xsl:template name=&quot;BuildHttpDynamicHeaders-input&quot; match=&quot;/&quot;>&lt;tns:InputInterface_BuildDynamicProperties>&lt;tns:APPLICATION_NAME>&lt;xsl:value-of select=&quot;$GetLoggerParams/APPLICATION_NAME&quot;/>&lt;/tns:APPLICATION_NAME>&lt;xsl:if test=&quot;$GetLoggerParams/SOURCESYSTEM&quot;>&lt;tns:SOURCESYSTEM>&lt;xsl:value-of select=&quot;$GetLoggerParams/SOURCESYSTEM&quot;/>&lt;/tns:SOURCESYSTEM>&lt;/xsl:if>&lt;tns:STARTTIMESTAMP>&lt;xsl:value-of select=&quot;$GetLoggerParams/STARTTIMESTAMP&quot;/>&lt;/tns:STARTTIMESTAMP>&lt;tns:SEVERITY>&lt;xsl:value-of select=&quot;$GetLoggerParams/SEVERITY&quot;/>&lt;/tns:SEVERITY>&lt;tns:TRACKID>&lt;xsl:value-of select=&quot;$GetLoggerParams/TRACKID&quot;/>&lt;/tns:TRACKID>&lt;tns:BUSINESSKEY>&lt;xsl:value-of select=&quot;$GetLoggerParams/BUSINESSKEY&quot;/>&lt;/tns:BUSINESSKEY>&lt;/tns:InputInterface_BuildDynamicProperties>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns11=&quot;http://it.linkem/core/lehf/InternalInterface_DynamicProperties/0100&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;GetLoggerParams&quot;/>&#xa;    &lt;xsl:template name=&quot;BuildHttpDynamicHeaders-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns11:InputInterface_BuildDynamicProperties>&#xa;            &lt;tns11:APPLICATION_NAME>&#xa;                &lt;xsl:value-of select=&quot;$GetLoggerParams/APPLICATION_NAME&quot;/>&#xa;            &lt;/tns11:APPLICATION_NAME>&#xa;            &lt;xsl:if test=&quot;$GetLoggerParams/SOURCESYSTEM&quot;>&#xa;                &lt;tns11:SOURCESYSTEM>&#xa;                    &lt;xsl:value-of select=&quot;$GetLoggerParams/SOURCESYSTEM&quot;/>&#xa;                &lt;/tns11:SOURCESYSTEM>&#xa;            &lt;/xsl:if>&#xa;            &lt;tns11:STARTTIMESTAMP>&#xa;                &lt;xsl:value-of select=&quot;$GetLoggerParams/STARTTIMESTAMP&quot;/>&#xa;            &lt;/tns11:STARTTIMESTAMP>&#xa;            &lt;tns11:SEVERITY>&#xa;                &lt;xsl:value-of select=&quot;$GetLoggerParams/SEVERITY&quot;/>&#xa;            &lt;/tns11:SEVERITY>&#xa;            &lt;tns11:TRACKID>&#xa;                &lt;xsl:value-of select=&quot;$GetLoggerParams/TRACKID&quot;/>&#xa;            &lt;/tns11:TRACKID>&#xa;            &lt;tns11:BUSINESSKEY>&#xa;                &lt;xsl:value-of select=&quot;$GetLoggerParams/BUSINESSKEY&quot;/>&#xa;            &lt;/tns11:BUSINESSKEY>&#xa;        &lt;/tns11:InputInterface_BuildDynamicProperties>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:CallProcess
                         moduleRef="it.linkem.core.lehf.common.sh"

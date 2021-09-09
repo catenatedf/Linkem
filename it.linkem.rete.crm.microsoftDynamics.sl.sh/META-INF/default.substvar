@@ -84,7 +84,7 @@
 		</globalVariable>
 		<globalVariable>
 			<name>/Dynamics/Connection/UserName</name>
-			<value>user</value>
+			<value>linkemtest\agic.alessandri</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
 			<type>String</type>
@@ -93,7 +93,7 @@
 		</globalVariable>
 		<globalVariable>
 			<name>/Dynamics/Connection/Password</name>
-			<value>#!BkFU7L3lTermCghWG7WWRQtZmCvlUfkP</value>
+			<value>#!s2zxBT7fH9JhR2sSrwCXX/LS3O4px5A6U615IZxF5aRBJxcbG7lnZQ==</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
 			<type>Password</type>
@@ -102,7 +102,7 @@
 		</globalVariable>
 		<globalVariable>
 			<name>/Dynamics/Connection/OrganizationService</name>
-			<value>org</value>
+			<value>http://crm16.linkem.test/crm16test/XRMServices/2011/Organization.svc</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
 			<type>String</type>

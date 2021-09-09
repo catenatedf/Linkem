@@ -1,0 +1,142 @@
+{
+	"info": {
+		"_postman_id": "b848e8cf-1ea1-42fc-b647-ccd96d1672ac",
+		"name": "IT_LINKEM_5G",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "test_Mockup_Postman",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"input\": \"chisei\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://7cce5fe9-c45c-4afb-befb-f99c122f5a46.mock.pstmn.io",
+					"protocol": "https",
+					"host": [
+						"7cce5fe9-c45c-4afb-befb-f99c122f5a46",
+						"mock",
+						"pstmn",
+						"io"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getImsiByIp",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8084/linkem/getimsibyip",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"linkem",
+						"getimsibyip"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8084/linkem/getimsibyip",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"linkem",
+								"getimsibyip"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "Content-Length",
+							"value": "2137"
+						},
+						{
+							"key": "Server",
+							"value": "Jetty(6.1.26)"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"sessionSummaries\": [\n        {\n            \"siteName\": \"MIPCRF2\",\n            \"allSessionCount\": 1,\n            \"afSessionCount\": 0,\n            \"ipCanSessionCount\": 1,\n            \"sySessionCount\": 0,\n            \"sdSessionCount\": 0,\n            \"gySessionCount\": 0,\n            \"s9SessionCount\": 0,\n            \"nasREQSessioncount\": 0,\n            \"pduSessionCount\": 0,\n            \"nchfSessionCount\": 0,\n            \"amSessionCount\": 0,\n            \"ueSessionCount\": 0\n        },\n        {\n            \"siteName\": \"RMPCRF1\",\n            \"allSessionCount\": 1,\n            \"afSessionCount\": 0,\n            \"ipCanSessionCount\": 1,\n            \"sySessionCount\": 0,\n            \"sdSessionCount\": 0,\n            \"gySessionCount\": 0,\n            \"s9SessionCount\": 0,\n            \"nasREQSessioncount\": 0,\n            \"pduSessionCount\": 0,\n            \"nchfSessionCount\": 0,\n            \"amSessionCount\": 0,\n            \"ueSessionCount\": 0\n        }\n    ],\n    \"sessionDTOList\": [\n        {\n            \"sessionId\": \"ugw.rmcor.03;945278366;16318464;84908\",\n            \"diameterPeerId\": null,\n            \"diameterPeerHost\": \"ugw.rmcor.03\",\n            \"expiryTimeOfOutboundMessage\": null,\n            \"deviceId\": \"unknown_RMPCRF1-diameterapp-4_20210610002826514_15677\",\n            \"sessionBindingIdentifier\": {\n                \"apnId\": \"apn.linkem.com.aliasrmcor\",\n                \"ipAddress\": \"10.80.163.254\",\n                \"ipv6Prefix\": \"\",\n                \"subscriptionIds\": [\n                    {\n                        \"data\": \"222380001477705\",\n                        \"originalNAIData\": null,\n                        \"type\": \"End User IMSI\"\n                    }\n                ]\n            },\n            \"timeOfLastMessage\": 1630933834651,\n            \"activeFeatures\": [\n                {\n                    \"vendorId\": 10415,\n                    \"featureListId\": 1,\n                    \"featureList\": 2,\n                    \"mBitFlag\": false\n                }\n            ],\n            \"terminating\": false,\n            \"failedMessageCount\": 0,\n            \"diameterPeer\": {\n                \"modifiedBy\": null,\n                \"modifiedDate\": null,\n                \"distributionList\": [],\n                \"smProvState\": \"NEW\",\n                \"peerId\": null,\n                \"active\": true,\n                \"originHost\": null,\n                \"primaryAddress\": null,\n                \"ingressPeerProfileName\": null,\n                \"egressPeerProfileName\": null,\n                \"downStreamOverLoadProfileName\": null,\n                \"peerConnectionProfileName\": null,\n                \"secondaryAddresses\": [],\n                \"portNumber\": 3868,\n                \"protocol\": null,\n                \"secure\": false,\n                \"description\": null,\n                \"locallyInitiated\": null,\n                \"requestTimeout\": null,\n                \"numberOfSendAttempts\": null,\n                \"addrGrpName\": null,\n                \"sourcePortNumber\": null\n            },\n            \"apnId\": \"apn.linkem.com.aliasrmcor\",\n            \"ipAddress\": \"10.80.163.254\",\n            \"ipv6Prefix\": null,\n            \"subscriptionIds\": [\n                {\n                    \"data\": \"222380001477705\",\n                    \"originalNAIData\": null,\n                    \"type\": \"End User IMSI\"\n                }\n            ],\n            \"vendorSpecificAttributes\": {},\n            \"key\": null,\n            \"isEmergency\": false,\n            \"adjustedDefaultEPSBearerQoS\": {\n                \"defaultBearerQCI\": 8,\n                \"allocationRetentionPriority\": {\n                    \"priorityLevel\": 4,\n                    \"preEmptionCapability\": \"Pre-emption Capability Enabled\",\n                    \"preEmptionVulnerability\": \"Pre-emption Vulnerability Disabled\"\n                }\n            },\n            \"adjustedMaxBwForAPN\": {\n                \"upLinkBw\": 10000000,\n                \"downLinkBw\": 100000000,\n                \"kbps\": false,\n                \"condApnAmbr\": []\n            },\n            \"adjustedSessionData\": {\n                \"defaultEPSBearerQoS\": {\n                    \"defaultBearerQCI\": 8,\n                    \"allocationRetentionPriority\": {\n                        \"priorityLevel\": 4,\n                        \"preEmptionCapability\": \"Pre-emption Capability Enabled\",\n                        \"preEmptionVulnerability\": \"Pre-emption Vulnerability Disabled\"\n                    }\n                },\n                \"maxBwForAPN\": {\n                    \"upLinkBw\": 10000000,\n                    \"downLinkBw\": 100000000,\n                    \"kbps\": false,\n                    \"condApnAmbr\": []\n                }\n            },\n            \"anTrusted\": null,\n            \"bearerControlMode\": \"UE_NW\",\n            \"bsId\": null,\n            \"ccRequestNumber\": 1,\n            \"defaultEPSBearerQoS\": {\n                \"defaultBearerQCI\": 8,\n                \"allocationRetentionPriority\": {\n                    \"priorityLevel\": 4,\n                    \"preEmptionCapability\": \"Pre-emption Capability Enabled\",\n                    \"preEmptionVulnerability\": \"Pre-emption Vulnerability Disabled\"\n                }\n            },\n            \"emergency\": false,\n            \"ipCanType\": \"TYPE_3GPP_EPS\",\n            \"ipv4ANGWAddress\": \"172.28.0.151\",\n            \"ipv6ANGWAddress\": \"\",\n            \"maxBwForAPN\": {\n                \"upLinkBw\": 10000000,\n                \"downLinkBw\": 100000000,\n                \"kbps\": false,\n                \"condApnAmbr\": []\n            },\n            \"maximumBandwidth\": null,\n            \"msTimezone\": \"8001\",\n            \"networkRequestSupport\": \"NETWORK_REQUEST_SUPPORTED\",\n            \"policyTriggerRegistrations\": [\n                \"RAT Change\",\n                \"User Location Change\"\n            ],\n            \"qosInfo\": [],\n            \"qosNegotiation\": \"QOS_NEGOTIATION_SUPPORTED\",\n            \"rai\": null,\n            \"ratType\": \"EUTRAN\",\n            \"ratType3Gpp\": null,\n            \"sgsnAddress\": \"172.28.0.151\",\n            \"sgsnIpv6Address\": \"\",\n            \"sgsnMccMnc\": \"22238\",\n            \"tcpSourcePort\": null,\n            \"triggerRegistrations\": [\n                \"RAT Change\",\n                \"User Location Change\"\n            ],\n            \"udpSourcePort\": null,\n            \"ueLocalIpAddress\": null,\n            \"userLocationInfo\": {\n                \"geoLocationType\": \"TAI_AND_ECGI\",\n                \"userLocationIds\": [\n                    {\n                        \"identityType\": \"ECGI\",\n                        \"data\": \"22f28300a03b1e\"\n                    },\n                    {\n                        \"identityType\": \"TAI\",\n                        \"data\": \"22f2830bf5\"\n                    }\n                ]\n            },\n            \"userLocationInfoTime\": null,\n            \"ipCanBearers\": [],\n            \"anChargingAddr\": {\n                \"addressFamily\": \"IPV_4\",\n                \"addressValue\": \"172.28.0.151\"\n            },\n            \"qosUpgrade\": \"QOS_UPGRADE_NOT_SUPPORTED\",\n            \"reportRegistrations\": 0,\n            \"anChargingIdValue\": \"AFAF33E8\",\n            \"pccRules\": [\n                {\n                    \"activationTime\": null,\n                    \"adjustedQosInfo\": null,\n                    \"afSignallingProtocol\": null,\n                    \"anChargingIdValue\": null,\n                    \"bearerControlModeOperation\": \"PCRF_INITIATED\",\n                    \"bearerIdentifier\": null,\n                    \"deactivationTime\": null,\n                    \"flowInformations\": [],\n                    \"name\": \"default\",\n                    \"precedence\": null,\n                    \"qosInfo\": null,\n                    \"requiredAccessInfos\": [],\n                    \"ruleSource\": 1,\n                    \"ruleStatus\": \"ACTIVE\",\n                    \"ruleType\": \"PREDEFINED\",\n                    \"qosDecs\": null,\n                    \"adjustedQosDecs\": null,\n                    \"timeToLiveInRollbackCache\": 0,\n                    \"waitingForAfPeer\": false,\n                    \"afChargingIdentifier\": null,\n                    \"applicationServiceProviderIdentity\": null,\n                    \"applications\": [],\n                    \"bearerUsage\": null,\n                    \"flowStatus\": null,\n                    \"meteringMethod\": null,\n                    \"monitoringKey\": null,\n                    \"muteNotification\": null,\n                    \"offline\": null,\n                    \"online\": null,\n                    \"outOfCreditRule\": [],\n                    \"outOfCreditState\": \"NORMAL\",\n                    \"psToCsSessionContinuity\": null,\n                    \"qosInfoRadius\": null,\n                    \"ratingGroup\": null,\n                    \"redirectInformation\": null,\n                    \"reportingLevel\": null,\n                    \"serviceFlowDetection\": null,\n                    \"serviceFlows\": [],\n                    \"serviceId\": null,\n                    \"sponsorIdentity\": null,\n                    \"tdfApplicationIdentifier\": null,\n                    \"updated\": false,\n                    \"usageMonitoringDataIds\": [],\n                    \"trafficControlIds\": [],\n                    \"conditionDataIds\": []\n                }\n            ],\n            \"condPolInfo\": [],\n            \"sessionType\": \"IPCANSESSION\",\n            \"sySessionId\": null,\n            \"online\": \"DISABLE_ONLINE\",\n            \"offline\": \"DISABLE_OFFLINE\",\n            \"revalidationTime\": null,\n            \"s9Subsession\": null,\n            \"nextScheduledReauth\": null,\n            \"lastReauthTime\": 0,\n            \"nextRuleStatusChangeTime\": null,\n            \"nasPortId\": null,\n            \"nasPortType\": null,\n            \"logicalAccessId\": null,\n            \"physicalAccessId\": null,\n            \"delegatedIPv6Prefix\": \"\",\n            \"sySession\": null,\n            \"usageTracking\": [],\n            \"ruleSetForEDR\": null,\n            \"praInformation\": [],\n            \"ipcanRevalidationTime\": null,\n            \"userEquipmentInfo\": {\n                \"type\": \"IMEISV\",\n                \"value\": \"33353333343530393236333034373030\"\n            }\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Call_SimCheck_Local",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://{{localhost}}:8083/simcheck?IP=1234&PIVA=1234&CodiceFiscale=FRASMN84H01H501K&CodiceSblocco=479613",
+					"protocol": "http",
+					"host": [
+						"{{localhost}}"
+					],
+					"port": "8083",
+					"path": [
+						"simcheck"
+					],
+					"query": [
+						{
+							"key": "IP",
+							"value": "1234"
+						},
+						{
+							"key": "PIVA",
+							"value": "1234"
+						},
+						{
+							"key": "CodiceFiscale",
+							"value": "FRASMN84H01H501K"
+						},
+						{
+							"key": "CodiceSblocco",
+							"value": "479613"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

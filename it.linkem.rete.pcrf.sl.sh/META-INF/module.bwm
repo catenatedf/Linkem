@@ -13,7 +13,6 @@
   <sca:property xmi:id="_0kWNoA_fEeySlY7vVr8Zcw" name="/Pcrf/Connection/RequestUrl" type="XMLSchema:string" publicAccess="true" scalable="true"/>
   <sca:property xmi:id="_LCq-MA_HEeySlY7vVr8Zcw" name="/Pcrf/Connection/Http/Host" type="XMLSchema:string" publicAccess="true" scalable="true"/>
   <sca:property xmi:id="_MGAqgA_HEeySlY7vVr8Zcw" name="/Pcrf/Connection/Http/Port" type="XMLSchema:int" publicAccess="true" scalable="true"/>
-  <sca:property xmi:id="_Mnp_AA_HEeySlY7vVr8Zcw" name="/Pcrf/Connection/Http/Url" type="XMLSchema:string" publicAccess="true" scalable="true"/>
   <sca:property xmi:id="_NHEe4A_HEeySlY7vVr8Zcw" name="/Pcrf/Connection/Http/DisableConnectionPolling" type="XMLSchema:boolean" publicAccess="true" scalable="true"/>
   <sca:property xmi:id="_NTvo8A_HEeySlY7vVr8Zcw" name="/Pcrf/Connection/Http/IdleConnectionTimeout" type="XMLSchema:int" publicAccess="true" scalable="true"/>
   <sca:property xmi:id="_NjFsgA_HEeySlY7vVr8Zcw" name="/Pcrf/Connection/Http/StaleCheck" type="XMLSchema:boolean" publicAccess="true" scalable="true"/>

@@ -443,12 +443,13 @@
 		</globalVariable>
 		<globalVariable>
 			<name>//it.linkem.rete.pcrf.sl.sh///Pcrf/Connection/Http/Port</name>
-			<value>443</value>
+			<value>8084</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
 			<type>Integer</type>
-			<isOverride>false</isOverride>
+			<isOverride>true</isOverride>
 			<useLookupValue>false</useLookupValue>
+			<lookupValue>8084</lookupValue>
 		</globalVariable>
 		<globalVariable>
 			<name>//it.linkem.rete.pcrf.sl.sh///Pcrf/Connection/Http/DisableConnectionPolling</name>
@@ -479,12 +480,13 @@
 		</globalVariable>
 		<globalVariable>
 			<name>//it.linkem.rete.pcrf.sl.sh///Pcrf/Connection/RequestUrl</name>
-			<value>/services/ServiceManager/getRefData/Session</value>
+			<value>/linkem/getimsibyip</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
 			<type>String</type>
-			<isOverride>false</isOverride>
+			<isOverride>true</isOverride>
 			<useLookupValue>false</useLookupValue>
+			<lookupValue>/linkem/getimsibyip</lookupValue>
 		</globalVariable>
 		<globalVariable>
 			<name>//it.linkem.rete.pcrf.sl.sh///Pcrf/Connection/Http/LogRequest</name>
@@ -497,12 +499,13 @@
 		</globalVariable>
 		<globalVariable>
 			<name>//it.linkem.rete.pcrf.sl.sh///Pcrf/Connection/Http/DefaultConfidentiality</name>
-			<value>true</value>
+			<value>false</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
 			<type>Boolean</type>
-			<isOverride>false</isOverride>
+			<isOverride>true</isOverride>
 			<useLookupValue>false</useLookupValue>
+			<lookupValue>false</lookupValue>
 		</globalVariable>
 		<globalVariable>
 			<name>//it.linkem.rete.pcrf.sl.sh///Pcrf/Connection/Http/AcceptRedirect</name>
@@ -596,12 +599,13 @@
 		</globalVariable>
 		<globalVariable>
 			<name>//it.linkem.rete.pcrf.sl.sh///Pcrf/Connection/Http/Host</name>
-			<value>172.28.85.73</value>
+			<value>localhost</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
 			<type>String</type>
-			<isOverride>false</isOverride>
+			<isOverride>true</isOverride>
 			<useLookupValue>false</useLookupValue>
+			<lookupValue>localhost</lookupValue>
 		</globalVariable>
 		<globalVariable>
 			<name>//it.linkem.rete.pcrf.sl.sh//BW.APPSPACE.NAME</name>
@@ -647,6 +651,7 @@
 			<type>Boolean</type>
 			<isOverride>false</isOverride>
 			<useLookupValue>false</useLookupValue>
+			<lookupValue>false</lookupValue>
 		</globalVariable>
 		<globalVariable>
 			<name>//it.linkem.rete.pcrf.sl.sh//BW.DEPLOYMENTUNIT.VERSION</name>
