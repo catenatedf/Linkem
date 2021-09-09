@@ -248,91 +248,91 @@
       <packaging:overrideValue>false</packaging:overrideValue>
     </packaging:property>
     <packaging:property>
-      <packaging:name>//it.linkem.rete.crm.microsoftDynamics.sl.sh//BW.DEPLOYMENTUNIT.TYPE</packaging:name>
+      <packaging:name>//it.linkem.crm.microsoftDynamics.sl.sh//BW.DEPLOYMENTUNIT.TYPE</packaging:name>
       <packaging:type>xsd:string</packaging:type>
       <packaging:visibility>private</packaging:visibility>
       <packaging:scalable>true</packaging:scalable>
       <packaging:overrideValue>false</packaging:overrideValue>
     </packaging:property>
     <packaging:property>
-      <packaging:name>//it.linkem.rete.crm.microsoftDynamics.sl.sh//BW.APPNODE.NAME</packaging:name>
+      <packaging:name>//it.linkem.crm.microsoftDynamics.sl.sh//BW.APPNODE.NAME</packaging:name>
       <packaging:type>xsd:string</packaging:type>
       <packaging:visibility>private</packaging:visibility>
       <packaging:scalable>true</packaging:scalable>
       <packaging:overrideValue>false</packaging:overrideValue>
     </packaging:property>
     <packaging:property>
-      <packaging:name>//it.linkem.rete.crm.microsoftDynamics.sl.sh//BW.HOST.NAME</packaging:name>
+      <packaging:name>//it.linkem.crm.microsoftDynamics.sl.sh//BW.HOST.NAME</packaging:name>
       <packaging:type>xsd:string</packaging:type>
       <packaging:visibility>private</packaging:visibility>
       <packaging:scalable>true</packaging:scalable>
       <packaging:overrideValue>false</packaging:overrideValue>
     </packaging:property>
     <packaging:property>
-      <packaging:name>//it.linkem.rete.crm.microsoftDynamics.sl.sh//BW.DOMAIN.NAME</packaging:name>
+      <packaging:name>//it.linkem.crm.microsoftDynamics.sl.sh//BW.DOMAIN.NAME</packaging:name>
       <packaging:type>xsd:string</packaging:type>
       <packaging:visibility>private</packaging:visibility>
       <packaging:scalable>true</packaging:scalable>
       <packaging:overrideValue>false</packaging:overrideValue>
     </packaging:property>
     <packaging:property>
-      <packaging:name>//it.linkem.rete.crm.microsoftDynamics.sl.sh///Dynamics/Connection/OrganizationService</packaging:name>
+      <packaging:name>//it.linkem.crm.microsoftDynamics.sl.sh///Dynamics/Connection/OrganizationService</packaging:name>
       <packaging:type>xsd:string</packaging:type>
       <packaging:visibility>public</packaging:visibility>
       <packaging:scalable>true</packaging:scalable>
       <packaging:overrideValue>false</packaging:overrideValue>
     </packaging:property>
     <packaging:property>
-      <packaging:name>//it.linkem.rete.crm.microsoftDynamics.sl.sh///Dynamics/Connection/Timeout</packaging:name>
+      <packaging:name>//it.linkem.crm.microsoftDynamics.sl.sh///Dynamics/Connection/Timeout</packaging:name>
       <packaging:type>xsd:int</packaging:type>
       <packaging:visibility>public</packaging:visibility>
       <packaging:scalable>true</packaging:scalable>
       <packaging:overrideValue>false</packaging:overrideValue>
     </packaging:property>
     <packaging:property>
-      <packaging:name>//it.linkem.rete.crm.microsoftDynamics.sl.sh//BW.APPSPACE.NAME</packaging:name>
+      <packaging:name>//it.linkem.crm.microsoftDynamics.sl.sh//BW.APPSPACE.NAME</packaging:name>
       <packaging:type>xsd:string</packaging:type>
       <packaging:visibility>private</packaging:visibility>
       <packaging:scalable>true</packaging:scalable>
       <packaging:overrideValue>false</packaging:overrideValue>
     </packaging:property>
     <packaging:property>
-      <packaging:name>//it.linkem.rete.crm.microsoftDynamics.sl.sh//BW.MODULE.VERSION</packaging:name>
+      <packaging:name>//it.linkem.crm.microsoftDynamics.sl.sh//BW.MODULE.VERSION</packaging:name>
       <packaging:type>xsd:string</packaging:type>
       <packaging:visibility>private</packaging:visibility>
       <packaging:scalable>true</packaging:scalable>
       <packaging:overrideValue>false</packaging:overrideValue>
     </packaging:property>
     <packaging:property>
-      <packaging:name>//it.linkem.rete.crm.microsoftDynamics.sl.sh///Dynamics/Connection/UserName</packaging:name>
+      <packaging:name>//it.linkem.crm.microsoftDynamics.sl.sh///Dynamics/Connection/UserName</packaging:name>
       <packaging:type>xsd:string</packaging:type>
       <packaging:visibility>public</packaging:visibility>
       <packaging:scalable>true</packaging:scalable>
       <packaging:overrideValue>false</packaging:overrideValue>
     </packaging:property>
     <packaging:property>
-      <packaging:name>//it.linkem.rete.crm.microsoftDynamics.sl.sh//BW.DEPLOYMENTUNIT.NAME</packaging:name>
+      <packaging:name>//it.linkem.crm.microsoftDynamics.sl.sh//BW.DEPLOYMENTUNIT.NAME</packaging:name>
       <packaging:type>xsd:string</packaging:type>
       <packaging:visibility>private</packaging:visibility>
       <packaging:scalable>true</packaging:scalable>
       <packaging:overrideValue>false</packaging:overrideValue>
     </packaging:property>
     <packaging:property>
-      <packaging:name>//it.linkem.rete.crm.microsoftDynamics.sl.sh//BW.DEPLOYMENTUNIT.VERSION</packaging:name>
+      <packaging:name>//it.linkem.crm.microsoftDynamics.sl.sh//BW.DEPLOYMENTUNIT.VERSION</packaging:name>
       <packaging:type>xsd:string</packaging:type>
       <packaging:visibility>private</packaging:visibility>
       <packaging:scalable>true</packaging:scalable>
       <packaging:overrideValue>false</packaging:overrideValue>
     </packaging:property>
     <packaging:property>
-      <packaging:name>//it.linkem.rete.crm.microsoftDynamics.sl.sh///Dynamics/Connection/Password</packaging:name>
+      <packaging:name>//it.linkem.crm.microsoftDynamics.sl.sh///Dynamics/Connection/Password</packaging:name>
       <packaging:type>ns:password</packaging:type>
       <packaging:visibility>public</packaging:visibility>
       <packaging:scalable>true</packaging:scalable>
       <packaging:overrideValue>false</packaging:overrideValue>
     </packaging:property>
     <packaging:property>
-      <packaging:name>//it.linkem.rete.crm.microsoftDynamics.sl.sh//BW.MODULE.NAME</packaging:name>
+      <packaging:name>//it.linkem.crm.microsoftDynamics.sl.sh//BW.MODULE.NAME</packaging:name>
       <packaging:type>xsd:string</packaging:type>
       <packaging:visibility>private</packaging:visibility>
       <packaging:scalable>true</packaging:scalable>
@@ -507,13 +507,6 @@
       <packaging:overrideValue>false</packaging:overrideValue>
     </packaging:property>
     <packaging:property>
-      <packaging:name>//it.linkem.rete.pcrf.sl.sh///Pcrf/Connection/Http/Url</packaging:name>
-      <packaging:type>xsd:string</packaging:type>
-      <packaging:visibility>public</packaging:visibility>
-      <packaging:scalable>true</packaging:scalable>
-      <packaging:overrideValue>false</packaging:overrideValue>
-    </packaging:property>
-    <packaging:property>
       <packaging:name>//it.linkem.rete.pcrf.sl.sh//BW.DEPLOYMENTUNIT.VERSION</packaging:name>
       <packaging:type>xsd:string</packaging:type>
       <packaging:visibility>private</packaging:visibility>
@@ -619,7 +612,7 @@
       <packaging:technologyVersion>1.1.14.qualifier</packaging:technologyVersion>
     </packaging:module>
     <packaging:module>
-      <packaging:symbolicName>it.linkem.rete.crm.microsoftDynamics.sl.sh</packaging:symbolicName>
+      <packaging:symbolicName>it.linkem.crm.microsoftDynamics.sl.sh</packaging:symbolicName>
       <packaging:technologyType>osgi-bundle,bw-sharedmodule</packaging:technologyType>
       <packaging:technologyVersion>1.0.0.qualifier</packaging:technologyVersion>
     </packaging:module>

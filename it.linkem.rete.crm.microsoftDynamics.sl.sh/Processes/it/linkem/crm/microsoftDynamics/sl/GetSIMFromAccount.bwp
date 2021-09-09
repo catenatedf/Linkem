@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <bpws:process exitOnStandardFault="no"
-    name="it.linkem.rete.crm.microsoftDynamics.sl.GetSIMFromAccount"
+    name="it.linkem.crm.microsoftDynamics.sl.GetSIMFromAccount"
     suppressJoinFailure="yes"
     targetNamespace="http://xmlns.example.com/20210907142733"
     xmlns:bpws="http://docs.oasis-open.org/wsbpel/2.0/process/executable"
@@ -8,6 +8,8 @@
     xmlns:ns="http://www.tibco.com/pe/EngineTypes"
     xmlns:ns0="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrievemultiple+97b73aed-a75b-422e-9abd-79664aac5b5b+input"
     xmlns:ns1="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrievemultiple+97b73aed-a75b-422e-9abd-79664aac5b5b+output"
+    xmlns:ns10="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrievemultiple+523e9cdd-cd59-4df5-be3c-4dc00cb8e50d+input"
+    xmlns:ns11="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrievemultiple+523e9cdd-cd59-4df5-be3c-4dc00cb8e50d+output"
     xmlns:ns2="http://tns.tibco.com/bw/palette/internal/activityerror+bw.dynamicscrm.RetrieveMultipleEntity"
     xmlns:ns3="http://www.example.org/CRM_SimCheck"
     xmlns:ns4="http://it.linkem/core/lehf/common/AuditTypes/0100"
@@ -241,6 +243,50 @@
         <schema
             targetNamespace="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrievemultiple+30f54bac-cc52-44ff-b6e0-1f4bea566861+output"
             xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrievemultiple+30f54bac-cc52-44ff-b6e0-1f4bea566861+output">
+            <complexType name="Entities">
+                <sequence>
+                    <element maxOccurs="unbounded" minOccurs="0"
+                        name="List" type="tns:List"/>
+                </sequence>
+            </complexType>
+            <element name="Entities" type="tns:Entities"/>
+            <complexType name="List">
+                <sequence>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="pagenumber" type="integer"/>
+                    <element maxOccurs="1" minOccurs="0" name="pagesize" type="integer"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="pagingcookie" type="string"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="totalcount" type="integer"/>
+                    <element maxOccurs="unbounded" minOccurs="0"
+                        name="lnk_sim" type="tns:lnk_sim"/>
+                </sequence>
+            </complexType>
+            <complexType name="lnk_sim">
+                <sequence>
+                    <element maxOccurs="1" minOccurs="0" name="lnk_imsi" type="string"/>
+                </sequence>
+            </complexType>
+        </schema>
+        <schema
+            targetNamespace="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrievemultiple+523e9cdd-cd59-4df5-be3c-4dc00cb8e50d+input"
+            xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrievemultiple+523e9cdd-cd59-4df5-be3c-4dc00cb8e50d+input">
+            <complexType name="Entities">
+                <sequence>
+                    <element maxOccurs="1" minOccurs="0" name="lnk_sim" type="tns:lnk_sim"/>
+                </sequence>
+            </complexType>
+            <element name="Entities" type="tns:Entities"/>
+            <complexType name="lnk_sim">
+                <sequence>
+                    <element maxOccurs="1" minOccurs="1" name="FetchXML" type="string"/>
+                </sequence>
+            </complexType>
+        </schema>
+        <schema
+            targetNamespace="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrievemultiple+523e9cdd-cd59-4df5-be3c-4dc00cb8e50d+output"
+            xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrievemultiple+523e9cdd-cd59-4df5-be3c-4dc00cb8e50d+output">
             <complexType name="Entities">
                 <sequence>
                     <element maxOccurs="unbounded" minOccurs="0"
@@ -541,6 +587,43 @@
                                     x="505"
                                     xsi:type="notation:Bounds" y="124"/>
                                     </children>
+                                    <children type="4002 bw.dynamicscrm.RetrieveMultipleEntity">
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <styles fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.6"/>
+                                    <layoutConstraint
+                                    height="40" width="339"
+                                    x="512"
+                                    xsi:type="notation:Bounds" y="232"/>
+                                    </children>
                                     <styles xsi:type="notation:DrawerStyle"/>
                                     <styles xsi:type="notation:SortingStyle"/>
                                     <styles xsi:type="notation:FilteringStyle"/>
@@ -626,8 +709,8 @@
             <children type="6002">
                 <layoutConstraint xsi:type="notation:Location" y="40"/>
             </children>
-            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
-            <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
+            <styles lineColor="4227327" xsi:type="notation:ConnectorStyle"/>
+            <styles fontColor="4227327" fontName="Segoe UI" xsi:type="notation:FontStyle"/>
             <element href="//0/@process/@activity/@activity/@links/@children.3"/>
             <bendpoints points="[63, 25, -188, -73]$[188, 74, -63, -24]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
@@ -642,6 +725,30 @@
             <element href="//0/@process/@activity/@activity/@links/@children.4"/>
             <bendpoints points="[84, -24, -250, 74]$[251, -73, -83, 25]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
+        <edges
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2"
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.6" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="4259584" xsi:type="notation:ConnectorStyle"/>
+            <styles fontColor="4259584" fontName="Segoe UI" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.5"/>
+            <bendpoints
+                points="[0, 25, -281, -83]$[0, 108, -281, 0]$[149, 108, -132, 0]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.6"
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.3" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.6"/>
+            <bendpoints
+                points="[133, 7, -192, 115]$[325, 7, 0, 115]$[325, -83, 0, 25]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
     </notation:Diagram>
     <tibex:NamespaceRegistry enabled="true">
         <tibex:namespaceItem
@@ -654,6 +761,10 @@
             namespace="http://it.linkem/rete/pcrf/getImsiByIp/internal/xsd" prefix="tns8"/>
         <tibex:namespaceItem
             namespace="http://www.tibco.com/bw/xpath/bw-custom-functions" prefix="bw"/>
+        <tibex:namespaceItem
+            namespace="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrievemultiple+523e9cdd-cd59-4df5-be3c-4dc00cb8e50d+input" prefix="tns1"/>
+        <tibex:namespaceItem
+            namespace="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrievemultiple+30f54bac-cc52-44ff-b6e0-1f4bea566861+input" prefix="tns2"/>
     </tibex:NamespaceRegistry>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.example.org/CRM_SimCheck"/>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://it.linkem/core/lehf/common/AuditTypes/0100"/>
@@ -667,7 +778,7 @@
             sca-bpel:property="yes"
             sca-bpel:sharedResourceType="{http://ns.tibco.com/bw/palette/dynamicscrmconnection}Dynamicscrm" type="xsd:string">
             <bpws:from>
-                <bpws:literal>it.linkem.rete.crm.microsoftdynamics.sl.sh.DynamicsCRMConnection</bpws:literal>
+                <bpws:literal>it.linkem.rete.crm.microsoftdynamics.sl.sh.DynamicsCRMSimone</bpws:literal>
             </bpws:from>
         </bpws:variable>
         <bpws:variable element="ns:ErrorReport" name="_error" sca-bpel:internal="true"/>
@@ -700,11 +811,25 @@
             tibex:propertySource="//it.linkem.core.lehf.common.sh///it.linkem.core.lehf.common.sh/Logging/System_Exception" type="xsd:string"/>
         <bpws:variable element="ns7:ActivityErrorData" name="_error_End" sca-bpel:internal="true"/>
         <bpws:variable element="ns8:Entities"
-            name="RetrieveMultipleEntities_2-input" sca-bpel:internal="true"/>
+            name="RetrieveMultipleEntities_NoGrant-input" sca-bpel:internal="true"/>
         <bpws:variable element="ns9:Entities"
-            name="RetrieveMultipleEntities_2" sca-bpel:internal="true"/>
+            name="RetrieveMultipleEntities_NoGrant" sca-bpel:internal="true"/>
         <bpws:variable element="ns2:ActivityErrorData"
-            name="_error_RetrieveMultipleEntities_2" sca-bpel:internal="true"/>
+            name="_error_RetrieveMultipleEntities_NoGrant" sca-bpel:internal="true"/>
+        <bpws:variable element="ns10:Entities"
+            name="RetrieveMultipleEntities_Simone-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns11:Entities"
+            name="RetrieveMultipleEntities_Simone" sca-bpel:internal="true"/>
+        <bpws:variable element="ns2:ActivityErrorData"
+            name="_error_RetrieveMultipleEntities_Simone" sca-bpel:internal="true"/>
+        <bpws:variable name="dynamicsCRMConnectionNoGrant"
+            sca-bpel:hotUpdate="false" sca-bpel:privateProperty="true"
+            sca-bpel:property="yes"
+            sca-bpel:sharedResourceType="{http://ns.tibco.com/bw/palette/dynamicscrmconnection}Dynamicscrm" type="xsd:string">
+            <bpws:from>
+                <bpws:literal>it.linkem.rete.crm.microsoftdynamics.sl.sh.DynamicsCRMConnection</bpws:literal>
+            </bpws:from>
+        </bpws:variable>
     </bpws:variables>
     <bpws:extensions>
         <bpws:extension mustUnderstand="no" namespace="http://www.eclipse.org/gmf/runtime/1.0.2/notation"/>
@@ -722,9 +847,13 @@
                     name="GetLoggerParamsToLog_Start_GetIMSIByAccount" tibex:linkType="SUCCESS"/>
                 <bpws:link name="Log_End_GetIMSIByAccountToEnd" tibex:linkType="SUCCESS"/>
                 <bpws:link
-                    name="Log_Start_GetSIMFromAccountToRetrieveMultipleEntities_2" tibex:linkType="SUCCESS"/>
+                    name="Log_Start_GetSIMFromAccountToRetrieveMultipleEntities_2" tibex:linkType="SUCCESSWITHCONDITION"/>
                 <bpws:link
                     name="RetrieveMultipleEntities_2ToLog_End_GetSIMFromAccount" tibex:linkType="SUCCESS"/>
+                <bpws:link
+                    name="Log_Start_GetSIMFromAccountToRetrieveMultipleEntities_Simone" tibex:linkType="SUCCESSWITHNOCONDITION"/>
+                <bpws:link
+                    name="RetrieveMultipleEntities_SimoneToLog_End_GetSIMFromAccount" tibex:linkType="SUCCESS"/>
             </bpws:links>
             <bpws:extensionActivity>
                 <tibex:receiveEvent createInstance="yes"
@@ -748,7 +877,7 @@
                     </bpws:targets>
                     <tibex:inputBindings>
                         <tibex:inputBinding
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://www.example.org/CRM_SimCheck&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;RetrieveMultipleEntities_2&quot;/>&lt;xsl:template name=&quot;End-input&quot; match=&quot;/&quot;>&lt;tns:GetSimFromAccount_Output>&lt;xsl:if test=&quot;$RetrieveMultipleEntities_2/List[1]/lnk_sim[1]/lnk_imsi&quot;>&lt;tns:IMSI>&lt;xsl:value-of select=&quot;$RetrieveMultipleEntities_2/List[1]/lnk_sim[1]/lnk_imsi&quot;/>&lt;/tns:IMSI>&lt;/xsl:if>&lt;tns:ResponseCode>&lt;xsl:value-of select=&quot;&amp;quot;&amp;quot;&quot;/>&lt;/tns:ResponseCode>&lt;/tns:GetSimFromAccount_Output>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://www.example.org/CRM_SimCheck&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;RetrieveMultipleEntities_Simone&quot;/>&lt;xsl:template name=&quot;End-input&quot; match=&quot;/&quot;>&lt;tns:GetSimFromAccount_Output>&lt;xsl:if test=&quot;$RetrieveMultipleEntities_Simone/List[1]/lnk_sim[1]/lnk_imsi&quot;>&lt;tns:IMSI>&lt;xsl:value-of select=&quot;$RetrieveMultipleEntities_Simone/List[1]/lnk_sim[1]/lnk_imsi&quot;/>&lt;/tns:IMSI>&lt;/xsl:if>&lt;tns:ResponseCode>&lt;xsl:value-of select=&quot;&amp;quot;&amp;quot;&quot;/>&lt;/tns:ResponseCode>&lt;/tns:GetSimFromAccount_Output>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:config>
                         <bwext:BWActivity
@@ -777,7 +906,19 @@
                         <bpws:target linkName="GetLoggerParamsToLog_Start_GetIMSIByAccount"/>
                     </bpws:targets>
                     <bpws:sources>
-                        <bpws:source linkName="Log_Start_GetSIMFromAccountToRetrieveMultipleEntities_2"/>
+                        <bpws:source linkName="Log_Start_GetSIMFromAccountToRetrieveMultipleEntities_2">
+                            <tibex:DesignExpression>
+                                <tibex:expression expression="2=3" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"/>
+                            </tibex:DesignExpression>
+                            <bpws:transitionCondition expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"><![CDATA[2=3]]></bpws:transitionCondition>
+                        </bpws:source>
+                        <bpws:source linkName="Log_Start_GetSIMFromAccountToRetrieveMultipleEntities_Simone">
+                            <tibex:DesignExpression>
+                                <tibex:expression
+                                    expression="##otherwise##" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"/>
+                            </tibex:DesignExpression>
+                            <bpws:transitionCondition expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"><![CDATA[##otherwise##]]></bpws:transitionCondition>
+                        </bpws:source>
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding coercion=""
@@ -797,6 +938,7 @@
                     type="bw.generalactivities.callprocess" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                     <bpws:targets>
                         <bpws:target linkName="RetrieveMultipleEntities_2ToLog_End_GetSIMFromAccount"/>
+                        <bpws:target linkName="RetrieveMultipleEntities_SimoneToLog_End_GetSIMFromAccount"/>
                     </bpws:targets>
                     <bpws:sources>
                         <bpws:source linkName="Log_End_GetIMSIByAccountToEnd"/>
@@ -827,9 +969,9 @@
             </bpws:extensionActivity>
             <bpws:extensionActivity>
                 <tibex:activityExtension
-                    inputVariable="RetrieveMultipleEntities_2-input"
-                    name="RetrieveMultipleEntities_2"
-                    outputVariable="RetrieveMultipleEntities_2"
+                    inputVariable="RetrieveMultipleEntities_NoGrant-input"
+                    name="RetrieveMultipleEntities_NoGrant"
+                    outputVariable="RetrieveMultipleEntities_NoGrant"
                     tibex:xpdlId="30f54bac-cc52-44ff-b6e0-1f4bea566861" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                     <bpws:targets>
                         <bpws:target linkName="Log_Start_GetSIMFromAccountToRetrieveMultipleEntities_2"/>
@@ -839,7 +981,56 @@
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns1=&quot;http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrievemultiple+30f54bac-cc52-44ff-b6e0-1f4bea566861+input&quot; version=&quot;2.0&quot;>&lt;xsl:template name=&quot;RetrieveMultipleEntities-input&quot; match=&quot;/&quot;>&lt;tns1:Entities>&lt;lnk_sim>&lt;FetchXML>&lt;xsl:value-of select=&quot;'&amp;lt;fetch>&amp;#xD;&amp;#xA;  &amp;lt;entity name=&amp;quot;lnk_sim&amp;quot;>&amp;#xD;&amp;#xA;    &amp;lt;attribute name=&amp;quot;lnk_simid&amp;quot; />&amp;#xD;&amp;#xA;    &amp;lt;attribute name=&amp;quot;lnk_imsi&amp;quot; />&amp;#xD;&amp;#xA;    &amp;lt;order attribute=&amp;quot;lnk_imsi&amp;quot; descending=&amp;quot;false&amp;quot; />&amp;#xD;&amp;#xA;    &amp;lt;filter type=&amp;quot;and&amp;quot;>&amp;#xD;&amp;#xA;      &amp;lt;condition attribute=&amp;quot;lnk_stato&amp;quot; operator=&amp;quot;eq&amp;quot; value=&amp;quot;1&amp;quot; />&amp;#xD;&amp;#xA;    &amp;lt;/filter>&amp;#xD;&amp;#xA;    &amp;lt;link-entity name=&amp;quot;lnk_testatadelcontratto&amp;quot; from=&amp;quot;lnk_testatadelcontrattoid&amp;quot; to=&amp;quot;lnk_contrattoid&amp;quot; alias=&amp;quot;ab&amp;quot;>&amp;#xD;&amp;#xA;      &amp;lt;filter type=&amp;quot;and&amp;quot;>&amp;#xD;&amp;#xA;        &amp;lt;condition attribute=&amp;quot;lnk_codicesbloccosms&amp;quot; operator=&amp;quot;eq&amp;quot; value=&amp;quot;479613&amp;quot; />&amp;#xD;&amp;#xA;      &amp;lt;/filter>&amp;#xD;&amp;#xA;      &amp;lt;link-entity name=&amp;quot;account&amp;quot; from=&amp;quot;accountid&amp;quot; to=&amp;quot;lnk_fatturareanoid&amp;quot; alias=&amp;quot;ac&amp;quot;>&amp;#xD;&amp;#xA;        &amp;lt;filter type=&amp;quot;and&amp;quot;>&amp;#xD;&amp;#xA;          &amp;lt;condition attribute=&amp;quot;lnk_codicefiscale&amp;quot; operator=&amp;quot;eq&amp;quot; value=&amp;quot;FRASMN84H01H501K&amp;quot; />&amp;#xD;&amp;#xA;        &amp;lt;/filter>&amp;#xD;&amp;#xA;      &amp;lt;/link-entity>&amp;#xD;&amp;#xA;    &amp;lt;/link-entity>&amp;#xD;&amp;#xA;  &amp;lt;/entity>&amp;#xD;&amp;#xA;&amp;lt;/fetch>'&quot;/>&lt;/FetchXML>&lt;/lnk_sim>&lt;/tns1:Entities>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns2=&quot;http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrievemultiple+30f54bac-cc52-44ff-b6e0-1f4bea566861+input&quot; xmlns:tns=&quot;http://www.example.org/CRM_SimCheck&quot; version=&quot;2.0&quot;>&lt;xsl:template name=&quot;RetrieveMultipleEntities_NoGrant-input&quot; match=&quot;/&quot;>&lt;tns2:Entities>&lt;lnk_sim>&lt;FetchXML>&lt;xsl:value-of select=&quot;'&amp;lt;fetch>&amp;#xD;&amp;#xA;&amp;#x9;&amp;lt;entity name=&amp;quot;lnk_sim&amp;quot;>&amp;#xD;&amp;#xA;&amp;#x9;&amp;#x9;&amp;lt;attribute name=&amp;quot;lnk_simid&amp;quot; />&amp;#xD;&amp;#xA;&amp;#x9;&amp;#x9;&amp;lt;attribute name=&amp;quot;lnk_imsi&amp;quot; />&amp;#xD;&amp;#xA;&amp;#x9;&amp;#x9;&amp;lt;order attribute=&amp;quot;lnk_imsi&amp;quot; descending=&amp;quot;false&amp;quot; />&amp;#xD;&amp;#xA;&amp;#x9;&amp;#x9;&amp;lt;filter type=&amp;quot;and&amp;quot;>&amp;#xD;&amp;#xA;&amp;#x9;&amp;#x9;&amp;#x9;&amp;lt;condition attribute=&amp;quot;lnk_stato&amp;quot; operator=&amp;quot;eq&amp;quot; value=&amp;quot;1&amp;quot; />&amp;#xD;&amp;#xA;&amp;#x9;&amp;#x9;&amp;lt;/filter>&amp;#xD;&amp;#xA;&amp;#x9;&amp;#x9;&amp;lt;link-entity name=&amp;quot;lnk_testatadelcontratto&amp;quot; from=&amp;quot;lnk_testatadelcontrattoid&amp;quot; to=&amp;quot;lnk_contrattoid&amp;quot; alias=&amp;quot;ab&amp;quot;>&amp;#xD;&amp;#xA;&amp;#x9;&amp;#x9;&amp;#x9;&amp;lt;filter type=&amp;quot;and&amp;quot;>&amp;#xD;&amp;#xA;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;lt;condition attribute=&amp;quot;lnk_codicesbloccosms&amp;quot; operator=&amp;quot;eq&amp;quot; value=&amp;quot;479613&amp;quot; />&amp;#xD;&amp;#xA;&amp;#x9;&amp;#x9;&amp;#x9;&amp;lt;/filter>&amp;#xD;&amp;#xA;&amp;#x9;&amp;#x9;&amp;#x9;&amp;lt;link-entity name=&amp;quot;account&amp;quot; from=&amp;quot;accountid&amp;quot; to=&amp;quot;lnk_fatturareanoid&amp;quot; alias=&amp;quot;ac&amp;quot;>&amp;#xD;&amp;#xA;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;lt;filter type=&amp;quot;and&amp;quot;>&amp;#xD;&amp;#xA;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;lt;condition attribute=&amp;quot;lnk_codicefiscale&amp;quot; operator=&amp;quot;eq&amp;quot; value=&amp;quot;FRASMN84H01H501K&amp;quot; />&amp;#xD;&amp;#xA;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;lt;/filter>&amp;#xD;&amp;#xA;&amp;#x9;&amp;#x9;&amp;#x9;&amp;lt;/link-entity>&amp;#xD;&amp;#xA;&amp;#x9;&amp;#x9;&amp;lt;/link-entity>&amp;#xD;&amp;#xA;&amp;#x9;&amp;lt;/entity> &amp;#xD;&amp;#xA;&amp;lt;/fetch>'&quot;/>&lt;/FetchXML>&lt;/lnk_sim>&lt;/tns2:Entities>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                    </tibex:inputBindings>
+                    <tibex:config>
+                        <bwext:BWActivity
+                            activityTypeID="bw.dynamicscrm.RetrieveMultipleEntity"
+                            xmlns:activityconfig="http://tns.tibco.com/bw/model/activityconfig"
+                            xmlns:bwext="http://tns.tibco.com/bw/model/core/bwext"
+                            xmlns:dynamicscrm="http://ns.tibco.com/bw/palette/dynamicscrm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                            <activityConfig>
+                                <properties name="config" xsi:type="activityconfig:EMFProperty">
+                                    <type href="http://ns.tibco.com/bw/palette/dynamicscrm#//RetrieveMultipleEntity"/>
+                                    <value
+                                    dynamicscrmConnection="dynamicsCRMConnectionNoGrant"
+                                    dynamicscrmEntityOption="Sim(lnk_sim)"
+                                    retrieveType="FetchXML" xsi:type="dynamicscrm:RetrieveMultipleEntity">
+                                    <entitymetadatatamap key="lnk_imsi">
+                                    <value CRMType="String"
+                                    EntityLogicalName="lnk_sim"
+                                    asOutput="true"
+                                    changeable="true"
+                                    displayName="IMSI"
+                                    logicName="lnk_imsi"
+                                    requried="None"
+                                    schemaName="lnk_imsi"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="string"/>
+                                    </entitymetadatatamap>
+                                    </value>
+                                </properties>
+                            </activityConfig>
+                        </bwext:BWActivity>
+                    </tibex:config>
+                </tibex:activityExtension>
+            </bpws:extensionActivity>
+            <bpws:extensionActivity>
+                <tibex:activityExtension
+                    inputVariable="RetrieveMultipleEntities_Simone-input"
+                    name="RetrieveMultipleEntities_Simone"
+                    outputVariable="RetrieveMultipleEntities_Simone"
+                    tibex:xpdlId="523e9cdd-cd59-4df5-be3c-4dc00cb8e50d" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                    <bpws:targets>
+                        <bpws:target linkName="Log_Start_GetSIMFromAccountToRetrieveMultipleEntities_Simone"/>
+                    </bpws:targets>
+                    <bpws:sources>
+                        <bpws:source linkName="RetrieveMultipleEntities_SimoneToLog_End_GetSIMFromAccount"/>
+                    </bpws:sources>
+                    <tibex:inputBindings>
+                        <tibex:inputBinding
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns1=&quot;http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrievemultiple+523e9cdd-cd59-4df5-be3c-4dc00cb8e50d+input&quot; xmlns:tns=&quot;http://www.example.org/CRM_SimCheck&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;Start&quot;/>&lt;xsl:template name=&quot;RetrieveMultipleEntities_Simone-input&quot; match=&quot;/&quot;>&lt;tns1:Entities>&lt;lnk_sim>&lt;FetchXML>&lt;xsl:value-of select=&quot;concat('&amp;lt;fetch>&amp;#xD;&amp;#xA;&amp;#x9;&amp;lt;entity name=&amp;quot;lnk_sim&amp;quot;>&amp;#xD;&amp;#xA;&amp;#x9;&amp;#x9;&amp;lt;attribute name=&amp;quot;lnk_simid&amp;quot; />&amp;#xD;&amp;#xA;&amp;#x9;&amp;#x9;&amp;lt;attribute name=&amp;quot;lnk_imsi&amp;quot; />&amp;#xD;&amp;#xA;&amp;#x9;&amp;#x9;&amp;lt;order attribute=&amp;quot;lnk_imsi&amp;quot; descending=&amp;quot;false&amp;quot; />&amp;#xD;&amp;#xA;&amp;#x9;&amp;#x9;&amp;lt;filter type=&amp;quot;and&amp;quot;>&amp;#xD;&amp;#xA;&amp;#x9;&amp;#x9;&amp;#x9;&amp;lt;condition attribute=&amp;quot;lnk_stato&amp;quot; operator=&amp;quot;eq&amp;quot; value=&amp;quot;1&amp;quot; />&amp;#xD;&amp;#xA;&amp;#x9;&amp;#x9;&amp;lt;/filter>&amp;#xD;&amp;#xA;&amp;#x9;&amp;#x9;&amp;lt;link-entity name=&amp;quot;lnk_testatadelcontratto&amp;quot; from=&amp;quot;lnk_testatadelcontrattoid&amp;quot; to=&amp;quot;lnk_contrattoid&amp;quot; alias=&amp;quot;ab&amp;quot;>&amp;#xD;&amp;#xA;&amp;#x9;&amp;#x9;&amp;#x9;&amp;lt;filter type=&amp;quot;and&amp;quot;>&amp;#xD;&amp;#xA;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;lt;condition attribute=&amp;quot;lnk_codicesbloccosms&amp;quot; operator=&amp;quot;eq&amp;quot; value=&amp;quot;',$Start/tns:CodiceSblocco,'&amp;quot; />&amp;#xD;&amp;#xA;&amp;#x9;&amp;#x9;&amp;#x9;&amp;lt;/filter>&amp;#xD;&amp;#xA;&amp;#x9;&amp;#x9;&amp;#x9;&amp;lt;link-entity name=&amp;quot;account&amp;quot; from=&amp;quot;accountid&amp;quot; to=&amp;quot;lnk_fatturareanoid&amp;quot; alias=&amp;quot;ac&amp;quot;>&amp;#xD;&amp;#xA;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;lt;filter type=&amp;quot;and&amp;quot;>&amp;#xD;&amp;#xA;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;lt;condition attribute=&amp;quot;lnk_codicefiscale&amp;quot; operator=&amp;quot;eq&amp;quot; value=&amp;quot;',$Start/tns:CodiceFiscale,'&amp;quot; />&amp;#xD;&amp;#xA;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;lt;/filter>&amp;#xD;&amp;#xA;&amp;#x9;&amp;#x9;&amp;#x9;&amp;lt;/link-entity>&amp;#xD;&amp;#xA;&amp;#x9;&amp;#x9;&amp;lt;/link-entity>&amp;#xD;&amp;#xA;&amp;#x9;&amp;lt;/entity> &amp;#xD;&amp;#xA;&amp;lt;/fetch>')&quot;/>&lt;/FetchXML>&lt;/lnk_sim>&lt;/tns1:Entities>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:config>
                         <bwext:BWActivity

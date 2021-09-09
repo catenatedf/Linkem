@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dynamicscrmconnection="http://ns.tibco.com/bw/palette/dynamicscrmconnection" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_GQmjEA_XEeyaRs5A5U8iow" name="it.linkem.rete.crm.microsoftdynamics.sl.sh.DynamicsCRMConnection" type="dynamicscrmconnection:Dynamicscrm">
-  <jndi:configuration xsi:type="dynamicscrmconnection:DynamicsCRMConnection" xmi:id="_GQo_UA_XEeyaRs5A5U8iow" serverType="Online" authType="OnlineFederation">
+  <jndi:configuration xsi:type="dynamicscrmconnection:DynamicsCRMConnection" xmi:id="_GQo_UA_XEeyaRs5A5U8iow" serverType="On-Premises" authType="NTLM">
     <substitutionBindings xmi:id="_AIVWwA_3EeyO1N6eVW4drw" template="password" propName="/Dynamics/Connection/Password"/>
     <substitutionBindings xmi:id="_BOiw4A_3EeyO1N6eVW4drw" template="username" propName="/Dynamics/Connection/UserName"/>
     <substitutionBindings xmi:id="_CrAH0A_3EeyO1N6eVW4drw" template="organizationService" propName="/Dynamics/Connection/OrganizationService"/>

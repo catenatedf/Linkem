@@ -119,15 +119,6 @@
 			<useLookupValue>false</useLookupValue>
 		</globalVariable>
 		<globalVariable>
-			<name>/Pcrf/Connection/Http/Url</name>
-			<value>es</value>
-			<deploymentSettable>false</deploymentSettable>
-			<serviceSettable>false</serviceSettable>
-			<type>String</type>
-			<isOverride>false</isOverride>
-			<useLookupValue>false</useLookupValue>
-		</globalVariable>
-		<globalVariable>
 			<name>/Pcrf/Connection/Http/DisableConnectionPolling</name>
 			<value>false</value>
 			<deploymentSettable>false</deploymentSettable>
