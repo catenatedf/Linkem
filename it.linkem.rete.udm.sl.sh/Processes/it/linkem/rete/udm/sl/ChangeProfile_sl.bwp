@@ -2167,7 +2167,9 @@
                                     name="GroupStartTocallGetUser_firstrun"
                                     tibex:label="first run" tibex:linkType="SUCCESSWITHCONDITION"/>
                                 <bpws:link name="callGetUserToGroupEnd" tibex:linkType="SUCCESS"/>
-                                <bpws:link name="GroupStartToSleep" tibex:linkType="SUCCESSWITHNOCONDITION"/>
+                                <bpws:link
+                                    name="GroupStartToSleep_retry"
+                                    tibex:label="retry" tibex:linkType="SUCCESSWITHNOCONDITION"/>
                                 <bpws:link name="WaitTocallGetUser" tibex:linkType="SUCCESS"/>
                             </bpws:links>
                             <bpws:empty name="GroupStart"
@@ -2180,7 +2182,7 @@
                                     </tibex:DesignExpression>
                                     <bpws:transitionCondition expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"><![CDATA[$index=1]]></bpws:transitionCondition>
                                     </bpws:source>
-                                    <bpws:source linkName="GroupStartToSleep">
+                                    <bpws:source linkName="GroupStartToSleep_retry">
                                     <tibex:DesignExpression>
                                     <tibex:expression
                                     expression="##otherwise##" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"/>
@@ -2248,7 +2250,7 @@
                                     name="Wait"
                                     tibex:xpdlId="6a8edf67-a273-454a-8c39-05c30b5331c7" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                                     <bpws:targets>
-                                    <bpws:target linkName="GroupStartToSleep"/>
+                                    <bpws:target linkName="GroupStartToSleep_retry"/>
                                     </bpws:targets>
                                     <bpws:sources>
                                     <bpws:source linkName="WaitTocallGetUser"/>
