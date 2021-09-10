@@ -1,0 +1,2 @@
+ErrorCode;ErrorMessage;ErrorType;HTTPStatusCode;APIname;BSLProcess
+ESB.NSDB.000001;System Exception occurred calling SDB-GetUser;System;;GetUser;
