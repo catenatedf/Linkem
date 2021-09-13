@@ -19,6 +19,7 @@ TIBCO-BW-ModuleSharedVariables: META-INF/module.msv
 Provide-Capability: com.tibco.bw.module; name="it.linkem.rete.udm.sl.sh"; version:Version="1.0.0",
  com.tibco.bw.schemas; ns="",
  com.tibco.bw.schemas; ns="http://it.linkem/rete/udb/changeProfile/sl/xsd",
+ com.tibco.bw.schemas; ns="http://it.linkem/rete/udb/changeStatus/sl/xsd",
  com.tibco.bw.schemas; ns="http://it.linkem/rete/udb/getUserByImsi/sl/xsd",
  com.tibco.bw.schemas; ns="http://schemas.xmlsoap.org/soap/envelope/",
  com.tibco.bw.processes; name="it.linkem.rete.udm.sl",
