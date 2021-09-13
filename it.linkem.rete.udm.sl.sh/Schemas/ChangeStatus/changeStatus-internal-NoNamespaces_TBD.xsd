@@ -1,0 +1,6 @@
+<schema xmlns="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified">
+
+
+	<element name="modifyResponse" type="string" />
+	
+</schema>
