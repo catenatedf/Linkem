@@ -1,0 +1,12 @@
+{"records": [
+    {
+        "jsonSchemaLocation": "/it.linkem.5g.contractActivation.md/Service Descriptors/it.linkem.5g.contratactivation.tlp.contractactivation-contractactivation.json",
+        "conversionType": "linked",
+        "xsdSchemaTargetNamespace": "http://www.example.com/namespaces/tns/1631536993420"
+    },
+    {
+        "jsonSchemaLocation": "/it.linkem.5g.contractActivation.md/Service Descriptors/it.linkem.5g.contratactivation.tlp.contractactivation-contractactivation.json",
+        "conversionType": "linked",
+        "xsdSchemaTargetNamespace": "http://www.example.com/namespaces/tns/1631537124402"
+    }
+]}

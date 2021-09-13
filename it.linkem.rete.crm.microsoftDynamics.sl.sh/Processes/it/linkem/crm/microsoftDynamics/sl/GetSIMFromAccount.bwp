@@ -10,6 +10,8 @@
     xmlns:ns1="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrievemultiple+97b73aed-a75b-422e-9abd-79664aac5b5b+output"
     xmlns:ns10="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrievemultiple+523e9cdd-cd59-4df5-be3c-4dc00cb8e50d+input"
     xmlns:ns11="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrievemultiple+523e9cdd-cd59-4df5-be3c-4dc00cb8e50d+output"
+    xmlns:ns12="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrievemultiple+81fe79b6-1303-474d-89fa-a3f312c04ebd+input"
+    xmlns:ns13="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrievemultiple+81fe79b6-1303-474d-89fa-a3f312c04ebd+output"
     xmlns:ns2="http://tns.tibco.com/bw/palette/internal/activityerror+bw.dynamicscrm.RetrieveMultipleEntity"
     xmlns:ns3="http://www.example.org/CRM_SimCheck"
     xmlns:ns4="http://it.linkem/core/lehf/common/AuditTypes/0100"
@@ -426,7 +428,7 @@
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.1"/>
-                                    <layoutConstraint x="1148"
+                                    <layoutConstraint x="1339"
                                     xsi:type="notation:Bounds" y="124"/>
                                     </children>
                                     <children type="4002">
@@ -506,7 +508,7 @@
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.3"/>
                                     <layoutConstraint
-                                    width="295" x="859"
+                                    width="295" x="1040"
                                     xsi:type="notation:Bounds" y="124"/>
                                     </children>
                                     <children type="4002 bw.internal.getSharedVariable">
@@ -709,33 +711,10 @@
             <children type="6002">
                 <layoutConstraint xsi:type="notation:Location" y="40"/>
             </children>
-            <styles lineColor="4227327" xsi:type="notation:ConnectorStyle"/>
-            <styles fontColor="4227327" fontName="Segoe UI" xsi:type="notation:FontStyle"/>
-            <element href="//0/@process/@activity/@activity/@links/@children.3"/>
-            <bendpoints points="[63, 25, -188, -73]$[188, 74, -63, -24]" xsi:type="notation:RelativeBendpoints"/>
-        </edges>
-        <edges
-            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.5"
-            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.3" type="4006">
-            <children type="6002">
-                <layoutConstraint xsi:type="notation:Location" y="40"/>
-            </children>
             <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
             <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
-            <element href="//0/@process/@activity/@activity/@links/@children.4"/>
-            <bendpoints points="[84, -24, -250, 74]$[251, -73, -83, 25]" xsi:type="notation:RelativeBendpoints"/>
-        </edges>
-        <edges
-            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2"
-            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.6" type="4006">
-            <children type="6002">
-                <layoutConstraint xsi:type="notation:Location" y="40"/>
-            </children>
-            <styles lineColor="4259584" xsi:type="notation:ConnectorStyle"/>
-            <styles fontColor="4259584" fontName="Segoe UI" xsi:type="notation:FontStyle"/>
-            <element href="//0/@process/@activity/@activity/@links/@children.5"/>
-            <bendpoints
-                points="[0, 25, -281, -83]$[0, 108, -281, 0]$[149, 108, -132, 0]" xsi:type="notation:RelativeBendpoints"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.3"/>
+            <bendpoints points="[63, 25, -188, -73]$[188, 74, -63, -24]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
         <edges
             source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.6"
@@ -745,9 +724,20 @@
             </children>
             <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
             <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
-            <element href="//0/@process/@activity/@activity/@links/@children.6"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.4"/>
             <bendpoints
                 points="[133, 7, -192, 115]$[325, 7, 0, 115]$[325, -83, 0, 25]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.5"
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.6" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.5"/>
+            <bendpoints points="[7, 25, 0, -83]$[0, 84, -7, -24]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
     </notation:Diagram>
     <tibex:NamespaceRegistry enabled="true">
@@ -847,13 +837,11 @@
                     name="GetLoggerParamsToLog_Start_GetIMSIByAccount" tibex:linkType="SUCCESS"/>
                 <bpws:link name="Log_End_GetIMSIByAccountToEnd" tibex:linkType="SUCCESS"/>
                 <bpws:link
-                    name="Log_Start_GetSIMFromAccountToRetrieveMultipleEntities_2" tibex:linkType="SUCCESSWITHCONDITION"/>
-                <bpws:link
-                    name="RetrieveMultipleEntities_2ToLog_End_GetSIMFromAccount" tibex:linkType="SUCCESS"/>
-                <bpws:link
-                    name="Log_Start_GetSIMFromAccountToRetrieveMultipleEntities_Simone" tibex:linkType="SUCCESSWITHNOCONDITION"/>
+                    name="Log_Start_GetSIMFromAccountToRetrieveMultipleEntities_2" tibex:linkType="SUCCESS"/>
                 <bpws:link
                     name="RetrieveMultipleEntities_SimoneToLog_End_GetSIMFromAccount" tibex:linkType="SUCCESS"/>
+                <bpws:link
+                    name="RetrieveMultipleEntities_NoGrantToRetrieveMultipleEntities_Simone" tibex:linkType="SUCCESS"/>
             </bpws:links>
             <bpws:extensionActivity>
                 <tibex:receiveEvent createInstance="yes"
@@ -907,17 +895,7 @@
                     </bpws:targets>
                     <bpws:sources>
                         <bpws:source linkName="Log_Start_GetSIMFromAccountToRetrieveMultipleEntities_2">
-                            <tibex:DesignExpression>
-                                <tibex:expression expression="2=3" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"/>
-                            </tibex:DesignExpression>
-                            <bpws:transitionCondition expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"><![CDATA[2=3]]></bpws:transitionCondition>
-                        </bpws:source>
-                        <bpws:source linkName="Log_Start_GetSIMFromAccountToRetrieveMultipleEntities_Simone">
-                            <tibex:DesignExpression>
-                                <tibex:expression
-                                    expression="##otherwise##" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"/>
-                            </tibex:DesignExpression>
-                            <bpws:transitionCondition expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"><![CDATA[##otherwise##]]></bpws:transitionCondition>
+                            <tibex:DesignExpression/>
                         </bpws:source>
                     </bpws:sources>
                     <tibex:inputBindings>
@@ -937,7 +915,6 @@
                     tibex:xpdlId="f51cb5e7-0f78-417f-a89f-9c561383b315"
                     type="bw.generalactivities.callprocess" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                     <bpws:targets>
-                        <bpws:target linkName="RetrieveMultipleEntities_2ToLog_End_GetSIMFromAccount"/>
                         <bpws:target linkName="RetrieveMultipleEntities_SimoneToLog_End_GetSIMFromAccount"/>
                     </bpws:targets>
                     <bpws:sources>
@@ -977,7 +954,7 @@
                         <bpws:target linkName="Log_Start_GetSIMFromAccountToRetrieveMultipleEntities_2"/>
                     </bpws:targets>
                     <bpws:sources>
-                        <bpws:source linkName="RetrieveMultipleEntities_2ToLog_End_GetSIMFromAccount"/>
+                        <bpws:source linkName="RetrieveMultipleEntities_NoGrantToRetrieveMultipleEntities_Simone"/>
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding
@@ -1023,7 +1000,7 @@
                     outputVariable="RetrieveMultipleEntities_Simone"
                     tibex:xpdlId="523e9cdd-cd59-4df5-be3c-4dc00cb8e50d" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                     <bpws:targets>
-                        <bpws:target linkName="Log_Start_GetSIMFromAccountToRetrieveMultipleEntities_Simone"/>
+                        <bpws:target linkName="RetrieveMultipleEntities_NoGrantToRetrieveMultipleEntities_Simone"/>
                     </bpws:targets>
                     <bpws:sources>
                         <bpws:source linkName="RetrieveMultipleEntities_SimoneToLog_End_GetSIMFromAccount"/>
