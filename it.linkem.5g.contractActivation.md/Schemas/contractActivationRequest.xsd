@@ -3,8 +3,9 @@
   <xsd:element name="Element">
     <xsd:complexType>
       <xsd:sequence>
-        <xsd:element maxOccurs="1" minOccurs="1" name="guid" type="xsd:string"/>
-        <xsd:element maxOccurs="1" minOccurs="1" name="iccid" type="xsd:string"/>
+        <xsd:element maxOccurs="1" minOccurs="0" name="guid" type="xsd:string"/>
+        <xsd:element maxOccurs="1" minOccurs="0" name="iccid" type="xsd:string"/>
+        <xsd:element maxOccurs="1" minOccurs="0" name="idContratto" type="xsd:string"/>
       </xsd:sequence>
     </xsd:complexType>
   </xsd:element>

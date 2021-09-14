@@ -83,12 +83,14 @@
     },
     "Element" : {
       "type" : "object",
-      "required" : [ "iccid", "guid" ],
       "properties" : {
         "guid" : {
           "type" : "string"
         },
         "iccid" : {
+          "type" : "string"
+        },
+        "idContratto" : {
           "type" : "string"
         }
       }

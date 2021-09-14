@@ -4,8 +4,9 @@
 <element name="ContractActivation_Input">
 		<complexType>
 			<sequence>
-				<element maxOccurs="1" minOccurs="1" name="guid" type="string"/>
-				<element maxOccurs="1" minOccurs="1" name="iccid" type="string"/>
+				<element maxOccurs="1" minOccurs="0" name="guid" type="string"/>
+				<element maxOccurs="1" minOccurs="0" name="idContratto" type="string"/>
+				<element maxOccurs="1" minOccurs="0" name="iccid" type="string"/>
 
 			</sequence>
 		</complexType>
