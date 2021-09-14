@@ -1,6 +1,6 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: It Linkem 5g ContractChange Sl Module
+Bundle-Name: It Linkem 5g ContractChange Bsl Sh Module
 Bundle-SymbolicName: it.linkem.5g.contractChange.bsl.sh
 Bundle-Version: 1.0.0.qualifier
 Bundle-Vendor: TIBCO Software Inc.
