@@ -1,0 +1,149 @@
+{
+  "/Linkem/Consumer_20": {
+    "apn": "apn.linkem.com",
+    "pdnGwDynamicAllocation": "true",
+    "maxBandwidthUp": "10000000",
+    "maxBandwidthDown": "100000000",
+    "QoSProfile": "Consumer"
+  },
+  "/Linkem/S_Consumer_20": {
+    "apn": "static.apn.linkem.com",
+    "pdnGwDynamicAllocation": "true",
+    "maxBandwidthUp": "10000000",
+    "maxBandwidthDown": "100000000",
+    "QoSProfile": "Consumer"
+  },
+  "/Linkem/Consumer_static_ip": {
+    "apn": "static.apn.linkem.com",
+    "pdnGwDynamicAllocation": "true",
+    "maxBandwidthUp": "10000000",
+    "maxBandwidthDown": "100000000",
+    "QoSProfile": "Consumer"
+  },
+  "/Linkem/S_Business_20": {
+    "apn": "tsb.linkem.com",
+    "pdnGwDynamicAllocation": "true",
+    "maxBandwidthUp": "10000000",
+    "maxBandwidthDown": "100000000",
+    "QoSProfile": "Business"
+  },
+  "/Linkem/Public": {
+    "apn": "public.linkem.com",
+    "pdnGwDynamicAllocation": "true",
+    "maxBandwidthUp": "10000000",
+    "maxBandwidthDown": "100000000",
+    "QoSProfile": "Consumer"
+  },
+  "/Linkem/Linkem_Tester": {
+    "apn": "tester.linkem.com",
+    "pdnGwDynamicAllocation": "true",
+    "maxBandwidthUp": "10000000",
+    "maxBandwidthDown": "100000000",
+    "QoSProfile": "Consumer"
+  },
+  "/Linkem/Preprod_20": {
+    "apn": "preprod.linkem.com",
+    "pdnGwDynamicAllocation": "true",
+    "maxBandwidthUp": "10000000",
+    "maxBandwidthDown": "100000000",
+    "QoSProfile": "Consumer"
+  },
+  "/Linkem/Linkem_Internal": {
+    "apn": "internal.linkem.com",
+    "pdnGwDynamicAllocation": "true",
+    "maxBandwidthUp": "10000000",
+    "maxBandwidthDown": "100000000",
+    "QoSProfile": "Consumer"
+  },
+  "/Linkem/Linkem_Partner": {
+    "apn": "partner.linkem.com",
+    "pdnGwDynamicAllocation": "true",
+    "maxBandwidthUp": "10000000",
+    "maxBandwidthDown": "100000000",
+    "QoSProfile": "Consumer"
+  },
+  "/Linkem/Linkem_Supervisor": {
+    "apn": "supervisor.linkem.com",
+    "pdnGwDynamicAllocation": "true",
+    "maxBandwidthUp": "10000000",
+    "maxBandwidthDown": "100000000",
+    "QoSProfile": "Consumer"
+  },
+  "/Linkem/activation": {
+    "apn": "newactivation.linkem.com",
+    "pdnGwDynamicAllocation": "true",
+    "maxBandwidthUp": "10000000",
+    "maxBandwidthDown": "100000000",
+    "QoSProfile": "Redirection"
+  },
+  "/Linkem/defaulting": {
+    "apn": "defaulting.linkem.com",
+    "pdnGwDynamicAllocation": "true",
+    "maxBandwidthUp": "10000000",
+    "maxBandwidthDown": "100000000",
+    "QoSProfile": "Redirection"
+  },
+  "/Linkem/recharge": {
+    "apn": "recharge.linkem.com",
+    "pdnGwDynamicAllocation": "true",
+    "maxBandwidthUp": "10000000",
+    "maxBandwidthDown": "100000000",
+    "QoSProfile": "Redirection"
+  },
+  "/Linkem/test_activation": {
+    "apn": "test.activation.linkem.com",
+    "pdnGwDynamicAllocation": "true",
+    "maxBandwidthUp": "500000",
+    "maxBandwidthDown": "500000",
+    "QoSProfile": "Consumer"
+  },
+  "/Linkem/Fwa_Kena": {
+    "apn": "fwa.kena.it",
+    "pdnGwDynamicAllocation": "true",
+    "maxBandwidthUp": "10000000",
+    "maxBandwidthDown": "100000000",
+    "QoSProfile": "Consumer"
+  },
+  "/Linkem/gointernet": {
+    "apn": "gointernet.it",
+    "pdnGwDynamicAllocation": "true",
+    "maxBandwidthUp": "10000000",
+    "maxBandwidthDown": "100000000",
+    "QoSProfile": "Consumer"
+  },
+  "/Linkem/IREN": {
+    "apn": "iren.it",
+    "pdnGwDynamicAllocation": "true",
+    "maxBandwidthUp": "10000000",
+    "maxBandwidthDown": "100000000",
+    "QoSProfile": "Consumer"
+  },
+  "/Linkem/MANDARIN": {
+    "apn": "mandarin.it",
+    "pdnGwDynamicAllocation": "true",
+    "maxBandwidthUp": "10000000",
+    "maxBandwidthDown": "100000000",
+    "QoSProfile": "Consumer"
+  },
+  "/Linkem/TISCALI": {
+    "apn": "tiscali.it",
+    "pdnGwDynamicAllocation": "true",
+    "maxBandwidthUp": "10000000",
+    "maxBandwidthDown": "100000000",
+    "QoSProfile": "Consumer"
+  },
+  "/Linkem/2BITE": {
+    "apn": "2bite.it",
+    "pdnGwDynamicAllocation": "true",
+    "maxBandwidthUp": "10000000",
+    "maxBandwidthDown": "100000000",
+    "QoSProfile": "Consumer"
+  },
+  "/Linkem/Parking": {
+    "apn": "parking.it",
+    "pdnGwDynamicAllocation": "true",
+    "maxBandwidthUp": "500000",
+    "maxBandwidthDown": "500000",
+    "QoSProfile": "Consumer"
+  }
+}
