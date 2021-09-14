@@ -12,32 +12,10 @@
     xmlns:sca="http://docs.oasis-open.org/ns/opencsa/sca/200912"
     xmlns:sca-bpel="http://docs.oasis-open.org/ns/opencsa/sca-bpel/200801"
     xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"
-    xmlns:tibprop="http://ns.tibco.com/bw/property" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-    <tibex:VariableDescriptor type="MemorySaving">
-        <task name="postOut">
-            <endingVariables>
-                <variable>postOut-input</variable>
-            </endingVariables>
-        </task>
-        <task name="ContractActivation_bsl">
-            <endingVariables>
-                <variable>ContractActivation_bsl-input</variable>
-                <variable>post</variable>
-            </endingVariables>
-        </task>
-        <task name="reply500">
-            <endingVariables>
-                <variable>reply500-input</variable>
-                <variable>FaultDetails</variable>
-            </endingVariables>
-        </task>
-        <task name="ReplyError">
-            <endingVariables>
-                <variable>ReplyError-input</variable>
-                <variable>FaultDetails1</variable>
-            </endingVariables>
-        </task>
-    </tibex:VariableDescriptor>
+    xmlns:tibprop="http://ns.tibco.com/bw/property"
+    xmlns:tns="http://www.example.com/namespaces/tns/1631536993420"
+    xmlns:tns0="http://tns.tibco.com/bw/REST"
+    xmlns:tns1="http://it.linkem/core/lehf/common/AuditTypes/0100" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
     <tibex:Types>
         <xs:schema attributeFormDefault="unqualified"
             elementFormDefault="qualified"
@@ -1042,11 +1020,16 @@
             namespace="http://www.example.com/namespaces/tns/1631537124402" prefix="tns1"/>
         <tibex:namespaceItem
             namespace="http://www.tibco.com/bw/xslt/custom-functions" prefix="tib"/>
+        <tibex:namespaceItem
+            namespace="http://www.example.com/namespaces/tns/1631536993420" prefix="tns2"/>
+        <tibex:namespaceItem
+            namespace="http://www.example.org/ContractActivation_BSL" prefix="tns3"/>
     </tibex:NamespaceRegistry>
-    <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.example.com/namespaces/tns/1631536993420"/>
-    <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.example.com/namespaces/tns/1631537124402"/>
-    <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://tns.tibco.com/bw/REST"/>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.example.org/ContractActivation_BSL"/>
+    <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.example.com/namespaces/tns/1631536993420"/>
+    <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://tns.tibco.com/bw/REST"/>
+    <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.example.com/namespaces/tns/1631537124402"/>
+    <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://it.linkem/core/lehf/common/AuditTypes/0100"/>
     <bpws:partnerLinks>
         <bpws:partnerLink myRole="use" name="contractactivation"
             partnerLinkType="ns:partnerLinkType" sca-bpel:ignore="false" sca-bpel:service="contractactivation"/>
@@ -1061,7 +1044,7 @@
         <bpws:variable element="ns0:FaultDetail" name="FaultDetails" sca-bpel:internal="true"/>
         <bpws:variable messageType="ns:post500FaultMessage"
             name="reply500-input" sca-bpel:internal="true"/>
-        <bpws:variable element="ns1:ContracActivation_Input"
+        <bpws:variable element="ns1:ContractActivation_Input"
             name="ContractActivation_bsl-input" sca-bpel:internal="true"/>
         <bpws:variable name="FaultName1" sca-bpel:internal="true" type="xsd:string"/>
         <bpws:variable element="ns0:FaultDetail" name="FaultDetails1" sca-bpel:internal="true"/>
@@ -1163,10 +1146,11 @@
                                 <bpws:targets>
                                     <bpws:target linkName="ContractActivation_bslTopostOut"/>
                                 </bpws:targets>
+                                <bpws:correlations/>
                             </bpws:reply>
                             <bpws:extensionActivity>
                                 <tibex:extActivity
-                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://www.example.com/namespaces/tns/1631536993420&quot; xmlns:tns1=&quot;http://www.example.org/ContractActivation_BSL&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;post&quot;/>&lt;xsl:template name=&quot;ContractActivation_bsl-input&quot; match=&quot;/&quot;>&lt;tns1:ContracActivation_Input>&lt;tns1:guid>&lt;xsl:value-of select=&quot;$post/item/tns:Element/tns:guid&quot;/>&lt;/tns1:guid>&lt;tns1:iccid>&lt;xsl:value-of select=&quot;$post/item/tns:Element/tns:iccid&quot;/>&lt;/tns1:iccid>&lt;/tns1:ContracActivation_Input>&lt;/xsl:template>&lt;/xsl:stylesheet>"
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns2=&quot;http://www.example.com/namespaces/tns/1631536993420&quot; xmlns:tns3=&quot;http://www.example.org/ContractActivation_BSL&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;post&quot;/>&lt;xsl:template name=&quot;ContractActivation_bsl-input&quot; match=&quot;/&quot;>&lt;tns3:ContractActivation_Input>&lt;tns3:guid>&lt;xsl:value-of select=&quot;$post/item/tns2:Element/tns2:guid&quot;/>&lt;/tns3:guid>&lt;tns3:iccid>&lt;xsl:value-of select=&quot;$post/item/tns2:Element/tns2:iccid&quot;/>&lt;/tns3:iccid>&lt;/tns3:ContractActivation_Input>&lt;/xsl:template>&lt;/xsl:stylesheet>"
                                     expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"
                                     inputVariable="ContractActivation_bsl-input"
                                     name="ContractActivation_bsl"
@@ -1180,7 +1164,7 @@
                                     </bpws:sources>
                                     <tibex:inputBindings>
                                     <tibex:inputBinding coercion=""
-                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://www.example.com/namespaces/tns/1631536993420&quot; xmlns:tns1=&quot;http://www.example.org/ContractActivation_BSL&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;post.item&quot;/>&#xa;    &lt;xsl:template name=&quot;ContractActivation_bsl-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns1:ContracActivation_Input>&#xa;            &lt;tns1:guid>&#xa;                &lt;xsl:value-of select=&quot;$post.item/tns:guid&quot;/>&#xa;            &lt;/tns1:guid>&#xa;            &lt;tns1:iccid>&#xa;                &lt;xsl:value-of select=&quot;$post.item/tns:iccid&quot;/>&#xa;            &lt;/tns1:iccid>&#xa;        &lt;/tns1:ContracActivation_Input>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns2=&quot;http://www.example.com/namespaces/tns/1631536993420&quot; xmlns:tns3=&quot;http://www.example.org/ContractActivation_BSL&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;post.item&quot;/>&#xa;    &lt;xsl:template name=&quot;ContractActivation_bsl-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns3:ContractActivation_Input>&#xa;            &lt;tns3:guid>&#xa;                &lt;xsl:value-of select=&quot;$post.item/tns2:guid&quot;/>&#xa;            &lt;/tns3:guid>&#xa;            &lt;tns3:iccid>&#xa;                &lt;xsl:value-of select=&quot;$post.item/tns2:iccid&quot;/>&#xa;            &lt;/tns3:iccid>&#xa;        &lt;/tns3:ContractActivation_Input>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                                     </tibex:inputBindings>
                                     <tibex:CallProcess
                                     subProcessName="it.linkem.5g.contractactivation.bsl.ContractActivation_bsl" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>

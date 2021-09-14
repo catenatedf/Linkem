@@ -11,14 +11,8 @@
     xmlns:sca="http://docs.oasis-open.org/ns/opencsa/sca/200912"
     xmlns:sca-bpel="http://docs.oasis-open.org/ns/opencsa/sca-bpel/200801"
     xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"
-    xmlns:tibprop="http://ns.tibco.com/bw/property" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-    <tibex:VariableDescriptor type="MemorySaving">
-        <task name="Start">
-            <endingVariables>
-                <variable>Start</variable>
-            </endingVariables>
-        </task>
-    </tibex:VariableDescriptor>
+    xmlns:tibprop="http://ns.tibco.com/bw/property"
+    xmlns:tns="http://it.linkem/core/lehf/common/loggerType/0100" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
     <tibex:Types>
         <xs:schema attributeFormDefault="unqualified"
             elementFormDefault="qualified"
@@ -199,7 +193,7 @@
         productVersion="6.7.0 HF3 V102 2021-08-10" scalable="true"
         singleton="true" stateless="false" type="IT"/>
     <tibex:ProcessInterface context=""
-        input="{http://www.example.org/ContractActivation_BSL}ContracActivation_Input" output="">
+        input="{http://www.example.org/ContractActivation_BSL}ContractActivation_Input" output="">
         <tibex:errorList>
             <tibex:error
                 error="{http://it.linkem/core/lehf/common/AuditTypes/0100}LogAudit" name="LogAudit"/>
@@ -609,11 +603,11 @@
         </edges>
     </notation:Diagram>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.example.org/ContractActivation_BSL"/>
-    <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://it.linkem/core/lehf/common/AuditTypes/0100"/>
+    <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://it.linkem/core/lehf/common/loggerType/0100"/>
     <bpws:variables>
         <bpws:variable element="ns:ProcessContext"
             name="_processContext" sca-bpel:internal="true"/>
-        <bpws:variable element="ns0:ContracActivation_Input"
+        <bpws:variable element="ns0:ContractActivation_Input"
             name="Start" sca-bpel:internal="true" tibex:parameter="in"/>
         <bpws:variable element="ns1:ActivityErrorData" name="_error_End" sca-bpel:internal="true"/>
         <bpws:variable element="ns:ErrorReport" name="_error" sca-bpel:internal="true"/>

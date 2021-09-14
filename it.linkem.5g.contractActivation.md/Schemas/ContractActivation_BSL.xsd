@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/ContractActivation_BSL" xmlns:tns="http://www.example.org/ContractActivation_BSL" elementFormDefault="qualified">
 
-<element name="ContracActivation_Input">
+<element name="ContractActivation_Input">
 		<complexType>
 			<sequence>
 				<element maxOccurs="1" minOccurs="1" name="guid" type="string"/>
@@ -10,7 +10,7 @@
 			</sequence>
 		</complexType>
 	</element>
-	<element name="ContracActivation_Output">
+	<element name="ContractActivation_Output">
 		<complexType>
 			<sequence>
 				<element maxOccurs="1" minOccurs="0" name="Response" type="string"/>				

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.example.org/schema/activationSoap" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="unqualified" targetNamespace="http://www.example.org/schema/activationSoap">
-  <element name="operationRequest">
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.example.org/schema/1631613212043" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="unqualified" targetNamespace="http://www.example.org/schema/1631613212043">
+  <element name="inputRequest">
     <complexType>
       <sequence>
         <element name="iccid" type="string"/>
@@ -8,7 +8,7 @@
             </sequence>
     </complexType>
   </element>
-  <element name="operationResponse">
+  <element name="inputResponse">
     <complexType>
       <sequence>
         <element name="response" type="string"/>

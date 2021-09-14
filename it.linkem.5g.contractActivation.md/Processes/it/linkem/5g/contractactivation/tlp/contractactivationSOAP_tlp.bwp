@@ -2,24 +2,17 @@
 <bpws:process exitOnStandardFault="no"
     name="it.linkem.5g.contractactivation.tlp.contractactivationSOAP_tlp"
     suppressJoinFailure="yes"
-    targetNamespace="http://xmlns.example.com/20210914111630"
+    targetNamespace="http://xmlns.example.com/20210914121501"
     xmlns:bpws="http://docs.oasis-open.org/wsbpel/2.0/process/executable"
     xmlns:info="http://www.tibco.com/bw/process/info"
     xmlns:ns="http://www.tibco.com/pe/EngineTypes"
-    xmlns:ns0="http://xmlns.example.com/20210914111630PLT"
-    xmlns:ns1="http://www.example.org/wsdl/activationSoap"
+    xmlns:ns0="http://xmlns.example.com/20210914121501PLT"
+    xmlns:ns1="http://Linkem.EAI/"
+    xmlns:ns2="http://www.example.org/ContractActivation_BSL"
     xmlns:sca="http://docs.oasis-open.org/ns/opencsa/sca/200912"
     xmlns:sca-bpel="http://docs.oasis-open.org/ns/opencsa/sca-bpel/200801"
     xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"
     xmlns:tibprop="http://ns.tibco.com/bw/property" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-    <tibex:VariableDescriptor type="MemorySaving">
-        <task name="operationOut">
-            <endingVariables>
-                <variable>operationOut-input</variable>
-                <variable>operationIn</variable>
-            </endingVariables>
-        </task>
-    </tibex:VariableDescriptor>
     <tibex:Types>
         <xs:schema attributeFormDefault="unqualified"
             elementFormDefault="qualified"
@@ -182,20 +175,20 @@
             <element name="DuplicateKeyException" type="tns:DuplicateKeyExceptionType"/>
         </schema>
         <wsdl:definitions
-            targetNamespace="http://xmlns.example.com/20210914111630PLT"
+            targetNamespace="http://xmlns.example.com/20210914121501PLT"
             xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype"
-            xmlns:ptyp="http://www.example.org/wsdl/activationSoap"
-            xmlns:tns="http://xmlns.example.com/20210914111630PLT"
+            xmlns:ptyp="http://Linkem.EAI/"
+            xmlns:tns="http://xmlns.example.com/20210914121501PLT"
             xmlns:vprop="http://docs.oasis-open.org/wsbpel/2.0/varprop"
             xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
             <plnk:partnerLinkType name="partnerLinkType">
-                <plnk:role name="use" portType="ptyp:contractactivationSOAP_tlp"/>
+                <plnk:role name="use" portType="ptyp:WebService_Linkem_EAI_INT_PROVISION_ProcessesSoap"/>
             </plnk:partnerLinkType>
-            <wsdl:import namespace="http://www.example.org/wsdl/activationSoap"/>
+            <wsdl:import namespace="http://Linkem.EAI/"/>
         </wsdl:definitions>
     </tibex:Types>
     <tibex:ProcessInfo callable="false" createdBy="flavi"
-        createdOn="Tue Sep 14 11:16:30 CEST 2021" description=""
+        createdOn="Tue Sep 14 12:15:01 CEST 2021" description=""
         extraErrorVars="true" modifiers="public"
         productVersion="6.7.0 HF3 V102 2021-08-10" scalable="true"
         singleton="true" stateless="false" type="IT"/>
@@ -226,75 +219,347 @@
                             <children type="3020">
                                 <children type="4005">
                                     <children type="3007">
-                                    <children type="4002">
+                                    <children type="4010">
+                                    <children type="5002"/>
+                                    <children type="3010">
+                                    <children type="4013">
                                     <children type="4017">
                                     <styles
                                     fontName="Segoe UI"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
+
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles
                                     fontName="Segoe UI"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
+
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles
                                     fontName="Segoe UI"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
+
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles
                                     fontName="Segoe UI"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
+
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
-                                    <styles fontName="Segoe UI"
-                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
                                     <styles
-                                    backgroundColor="16777215"
-                                    gradientEndColor="50431"
-                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.0"/>
-                                    <layoutConstraint x="-9"
-                                    xsi:type="notation:Bounds" y="114"/>
+                                    <layoutConstraint
+                                    height="34"
+                                    width="34" x="9"
+                                    xsi:type="notation:Bounds" y="55"/>
                                     </children>
+                                    <styles xsi:type="notation:SortingStyle"/>
+                                    <styles xsi:type="notation:FilteringStyle"/>
+                                    </children>
+                                    <children type="3011">
+                                    <children type="4011">
+                                    <children type="3012">
                                     <children type="4002">
                                     <children type="4017">
                                     <styles
                                     fontName="Segoe UI"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
+
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles
                                     fontName="Segoe UI"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
+
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles
                                     fontName="Segoe UI"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
+
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles
                                     fontName="Segoe UI"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
+
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
-                                    <styles fontName="Segoe UI"
+                                    <styles
+                                    fontName="Segoe UI"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
                                     <styles
                                     backgroundColor="16777215"
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.1"/>
-                                    <layoutConstraint x="340"
-                                    xsi:type="notation:Bounds" y="114"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@activity/@activities.0"/>
+
+                                    <layoutConstraint
+                                    xsi:type="notation:Bounds" y="40"/>
+                                    </children>
+                                    <styles xsi:type="notation:SortingStyle"/>
+                                    <styles xsi:type="notation:FilteringStyle"/>
+                                    </children>
+                                    <children type="3013">
+                                    <children type="4018">
+                                    <children type="3018">
+
+                                    <children type="4020">
+
+                                    <children type="3020">
+
+                                    <children type="4005">
+
+                                    <children type="3007">
+
+                                    <children type="4002">
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+
+                                    <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@activity/@activities.2"/>
+
+                                    <layoutConstraint
+                                    width="175"
+                                    x="564"
+                                    xsi:type="notation:Bounds" y="48"/>
+                                    </children>
+
+                                    <children type="4002">
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+
+                                    <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@activity/@activities.3"/>
+
+                                    <layoutConstraint
+                                    width="178"
+                                    x="252"
+                                    xsi:type="notation:Bounds" y="48"/>
+                                    </children>
+
+                                    <styles xsi:type="notation:DrawerStyle"/>
+
+                                    <styles xsi:type="notation:SortingStyle"/>
+
+                                    <styles xsi:type="notation:FilteringStyle"/>
+                                    </children>
+
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+
+                                    <styles xsi:type="bwnotation:ResizingStyle"/>
+
+                                    <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@activity"/>
+
+                                    <layoutConstraint
+                                    height="210"
+                                    width="769" xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <styles xsi:type="notation:SortingStyle"/>
+
+                                    <styles xsi:type="notation:FilteringStyle"/>
+                                    </children>
+
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <styles xsi:type="bwnotation:BackgroundStyle"/>
+
+                                    <styles xsi:type="bwnotation:ResizingStyle"/>
+
+                                    <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity"/>
+
+                                    <layoutConstraint
+                                    height="99"
+                                    width="433"
+                                    x="15" xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <styles xsi:type="notation:SortingStyle"/>
+                                    <styles xsi:type="notation:FilteringStyle"/>
+                                    </children>
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <styles xsi:type="bwnotation:BackgroundStyle"/>
+                                    <styles xsi:type="bwnotation:ResizingStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity"/>
+
+                                    <layoutConstraint
+                                    height="123"
+                                    width="473" xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <styles xsi:type="notation:SortingStyle"/>
+                                    <styles xsi:type="notation:FilteringStyle"/>
+                                    </children>
+                                    <children type="3016">
+                                    <children type="4002">
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@activity/@activities.1"/>
+
+                                    <layoutConstraint
+                                    xsi:type="notation:Bounds" y="40"/>
+                                    </children>
+                                    <styles xsi:type="notation:SortingStyle"/>
+                                    <styles xsi:type="notation:FilteringStyle"/>
+                                    </children>
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <styles xsi:type="bwnotation:BackgroundStyle"/>
+                                    <styles xsi:type="bwnotation:ResizingStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.0/@messages.0"/>
+                                    <layoutConstraint
+                                    height="142"
+                                    width="535"
+                                    x="2" xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <styles xsi:type="notation:SortingStyle"/>
+                                    <styles xsi:type="notation:FilteringStyle"/>
+                                    </children>
+                                    <styles fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <styles xsi:type="bwnotation:BackgroundStyle"/>
+                                    <styles xsi:type="bwnotation:ResizingStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.0"/>
+                                    <layoutConstraint
+                                    height="283" width="815" xsi:type="notation:Bounds"/>
                                     </children>
                                     <styles xsi:type="notation:DrawerStyle"/>
                                     <styles xsi:type="notation:SortingStyle"/>
@@ -309,7 +574,7 @@
                                     <styles xsi:type="bwnotation:ResizingStyle"/>
                                     <element href="//0/@process/@activity/@activity"/>
                                     <layoutConstraint height="384"
-                                    width="515" xsi:type="notation:Bounds"/>
+                                    width="903" xsi:type="notation:Bounds"/>
                                 </children>
                                 <styles xsi:type="notation:SortingStyle"/>
                                 <styles xsi:type="notation:FilteringStyle"/>
@@ -318,8 +583,7 @@
                             <styles xsi:type="bwnotation:BackgroundStyle"/>
                             <styles xsi:type="bwnotation:ResizingStyle"/>
                             <element href="//0/@process/@activity"/>
-                            <layoutConstraint height="365" width="444"
-                                x="30" xsi:type="notation:Bounds" y="20"/>
+                            <layoutConstraint height="384" width="567" xsi:type="notation:Bounds"/>
                         </children>
                         <styles xsi:type="notation:SortingStyle"/>
                         <styles xsi:type="notation:FilteringStyle"/>
@@ -329,7 +593,8 @@
                     <styles xsi:type="bwnotation:BackgroundStyle"/>
                     <styles xsi:type="bwnotation:ResizingStyle"/>
                     <element href="//0/@process/@activity"/>
-                    <layoutConstraint height="409" width="519" xsi:type="notation:Bounds"/>
+                    <layoutConstraint height="408" width="567" x="1"
+                        xsi:type="notation:Bounds" y="1"/>
                 </children>
                 <styles xsi:type="notation:SortingStyle"/>
                 <styles xsi:type="notation:FilteringStyle"/>
@@ -337,41 +602,59 @@
             </children>
             <styles fontName="Segoe UI" lineColor="0" xsi:type="notation:ShapeStyle"/>
             <element href="//0/@process"/>
-            <layoutConstraint height="460" width="860" xsi:type="notation:Bounds"/>
+            <layoutConstraint height="460" width="1248" xsi:type="notation:Bounds"/>
         </children>
         <styles xsi:type="notation:DiagramStyle"/>
         <element href="//0"/>
         <edges
-            source="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0"
-            target="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.1" type="4006">
+            source="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.0/@children.0/@children.0"
+            target="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.0/@children.1/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.1" type="4006">
             <children type="6002">
                 <layoutConstraint xsi:type="notation:Location" y="40"/>
             </children>
             <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
             <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
-            <element href="//0/@process/@activity/@activity/@links/@children.0"/>
-            <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
+            <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@activity/@links/@children.0"/>
+            <bendpoints
+                points="[8, 12, -394, -8]$[8, 22, -394, 2]$[105, 22, -297, 2]$[105, 36, -297, 16]$[111, 36, -291, 16]$[111, 20, -291, 0]$[378, 20, -24, 0]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.0/@children.1/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.1"
+            target="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.0/@children.1/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@activity/@links/@children.1"/>
+            <bendpoints points="[25, 0, -258, 0]$[233, 0, -50, 0]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
     </notation:Diagram>
     <tibex:NamespaceRegistry enabled="true">
         <tibex:namespaceItem
-            namespace="http://www.example.org/schema/activationSoap" prefix="tns1"/>
+            namespace="http://Linkem.EAI.INT_PROVISION.Messaging.ContractActivation" prefix="s10"/>
+        <tibex:namespaceItem namespace="http://Linkem.EAI/" prefix="tns"/>
         <tibex:namespaceItem
-            namespace="http://www.example.org/wsdl/activationSoap" prefix="tns"/>
+            namespace="http://www.example.org/ContractActivation_BSL" prefix="tns1"/>
     </tibex:NamespaceRegistry>
-    <bpws:import importType="http://schemas.xmlsoap.org/wsdl/" namespace="http://www.example.org/wsdl/activationSoap"/>
+    <bpws:import importType="http://schemas.xmlsoap.org/wsdl/"
+        location="../../../../../../Service%20Descriptors/Biztalk-WebServices.wsdl" namespace="http://Linkem.EAI/"/>
+    <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.example.org/ContractActivation_BSL"/>
     <bpws:partnerLinks>
-        <bpws:partnerLink myRole="use" name="contractactivationSOAP_tlp"
+        <bpws:partnerLink myRole="use"
+            name="WebService_Linkem_EAI_INT_PROVISION_ProcessesSoap"
             partnerLinkType="ns0:partnerLinkType"
-            sca-bpel:ignore="false" sca-bpel:service="contractactivationSOAP_tlp"/>
+            sca-bpel:ignore="false" sca-bpel:service="WebService_Linkem_EAI_INT_PROVISION_ProcessesSoap"/>
     </bpws:partnerLinks>
     <bpws:variables>
         <bpws:variable element="ns:ProcessContext"
             name="_processContext" sca-bpel:internal="true"/>
-        <bpws:variable messageType="ns1:operationRequest"
-            name="operationIn" sca-bpel:internal="true"/>
-        <bpws:variable messageType="ns1:operationResponse"
-            name="operationOut-input" sca-bpel:internal="true"/>
+        <bpws:variable messageType="ns1:ContractActivationSoapIn"
+            name="ContractActivation" sca-bpel:internal="true"/>
+        <bpws:variable messageType="ns1:ContractActivationSoapOut"
+            name="ContractActivationOut-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns2:ContractActivation_Input"
+            name="ContractActivation_bsl-input" sca-bpel:internal="true"/>
     </bpws:variables>
     <bpws:extensions>
         <bpws:extension mustUnderstand="no" namespace="http://www.eclipse.org/gmf/runtime/1.0.2/notation"/>
@@ -383,33 +666,69 @@
     </bpws:extensions>
     <bpws:scope name="scope">
         <bpws:flow name="flow">
-            <bpws:links>
-                <bpws:link name="operationInTooperationOut" tibex:linkType="SUCCESS"/>
-            </bpws:links>
-            <bpws:receive createInstance="yes" name="operationIn"
-                operation="operation"
-                partnerLink="contractactivationSOAP_tlp"
-                portType="ns1:contractactivationSOAP_tlp"
-                tibex:xpdlId="b4004422-7fd6-4385-ab2c-479b542fe808" variable="operationIn">
-                <bpws:sources>
-                    <bpws:source linkName="operationInTooperationOut"/>
-                </bpws:sources>
-            </bpws:receive>
-            <bpws:reply name="operationOut" operation="operation"
-                partnerLink="contractactivationSOAP_tlp"
-                portType="ns1:contractactivationSOAP_tlp"
-                tibex:xpdlId="b4dc515b-d049-4d20-be21-d92f8c49fdf0" variable="operationOut-input">
-                <tibex:inputBinding expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:tns="http://www.example.org/wsdl/activationSoap" xmlns:tns1="http://www.example.org/schema/activationSoap" version="2.0"&gt;&lt;xsl:param name="operationIn"/&gt;&lt;xsl:template name="operationOut-input" match="/"&gt;&lt;tns:operationResponse&gt;&lt;parameters&gt;&lt;tns1:operationResponse&gt;&lt;response&gt;&lt;xsl:value-of select="$operationIn/parameters/tns1:operationRequest/iccid"/&gt;&lt;/response&gt;&lt;/tns1:operationResponse&gt;&lt;/parameters&gt;&lt;/tns:operationResponse&gt;&lt;/xsl:template&gt;&lt;/xsl:stylesheet&gt;</tibex:inputBinding>
-                <tibex:inputBindings>
-                    <tibex:partBinding
-                        expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://www.example.org/wsdl/activationSoap&quot; xmlns:tns1=&quot;http://www.example.org/schema/activationSoap&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;operationIn.parameters&quot;/>&#xa;    &lt;xsl:template name=&quot;operationOut-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns1:operationResponse>&#xa;            &lt;response>&#xa;                &lt;xsl:value-of select=&quot;$operationIn.parameters/iccid&quot;/>&#xa;            &lt;/response>&#xa;        &lt;/tns1:operationResponse>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
-                </tibex:inputBindings>
-                <bpws:targets>
-                    <bpws:target linkName="operationInTooperationOut"/>
-                </bpws:targets>
-                <bpws:correlations/>
-            </bpws:reply>
+            <bpws:links/>
+            <bpws:pick createInstance="yes" name="pick" tibex:xpdlId="4fe83137-6b8d-4db4-a6fe-6ffb918bc1ec">
+                <bpws:onMessage operation="ContractActivation"
+                    partnerLink="WebService_Linkem_EAI_INT_PROVISION_ProcessesSoap"
+                    portType="ns1:WebService_Linkem_EAI_INT_PROVISION_ProcessesSoap"
+                    tibex:xpdlId="ee14114f-48dc-4f35-8570-f132f0e53563" variable="ContractActivation">
+                    <bpws:scope name="scope1">
+                        <bpws:flow name="flow1">
+                            <bpws:links>
+                                <bpws:link
+                                    name="OnMessageStartToContractActivation_bsl" tibex:linkType="SUCCESS"/>
+                                <bpws:link
+                                    name="ContractActivation_bslToContractActivationOut" tibex:linkType="SUCCESS"/>
+                            </bpws:links>
+                            <bpws:empty name="OnMessageStart"
+                                tibex:constructor="onMessageStart" tibex:xpdlId="4defae4d-04ec-4865-b682-0dc1aee318be">
+                                <bpws:sources>
+                                    <bpws:source linkName="OnMessageStartToContractActivation_bsl"/>
+                                </bpws:sources>
+                            </bpws:empty>
+                            <bpws:empty name="OnMessageEnd"
+                                tibex:constructor="onMessageEnd" tibex:xpdlId="a1211505-a609-467f-9931-e9a0260315e7"/>
+                            <bpws:reply name="ContractActivationOut"
+                                operation="ContractActivation"
+                                partnerLink="WebService_Linkem_EAI_INT_PROVISION_ProcessesSoap"
+                                portType="ns1:WebService_Linkem_EAI_INT_PROVISION_ProcessesSoap"
+                                tibex:xpdlId="405190e0-08f5-45c9-8242-da02596fa502" variable="ContractActivationOut-input">
+                                <tibex:inputBinding expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:tns="http://Linkem.EAI/" xmlns:s10="http://Linkem.EAI.INT_PROVISION.Messaging.ContractActivation" version="2.0"&gt;&lt;xsl:template name="ContractActivationOut-input" match="/"&gt;&lt;tns:ContractActivationSoapOut&gt;&lt;parameters&gt;&lt;tns:ContractActivationResponse&gt;&lt;s10:ContractActivationResponse&gt;&lt;ResultInfo&gt;&lt;idTransaction&gt;&lt;xsl:value-of select="&amp;quot;2&amp;quot;"/&gt;&lt;/idTransaction&gt;&lt;flowCode&gt;&lt;xsl:value-of select="&amp;quot;3&amp;quot;"/&gt;&lt;/flowCode&gt;&lt;/ResultInfo&gt;&lt;/s10:ContractActivationResponse&gt;&lt;/tns:ContractActivationResponse&gt;&lt;/parameters&gt;&lt;/tns:ContractActivationSoapOut&gt;&lt;/xsl:template&gt;&lt;/xsl:stylesheet&gt;</tibex:inputBinding>
+                                <tibex:inputBindings>
+                                    <tibex:partBinding
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://Linkem.EAI/&quot; xmlns:s10=&quot;http://Linkem.EAI.INT_PROVISION.Messaging.ContractActivation&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:template name=&quot;ContractActivationOut-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns:ContractActivationResponse>&#xa;            &lt;s10:ContractActivationResponse>&#xa;                &lt;ResultInfo>&#xa;                    &lt;idTransaction>&#xa;                        &lt;xsl:value-of select=&quot;&amp;quot;2&amp;quot;&quot;/>&#xa;                    &lt;/idTransaction>&#xa;                    &lt;flowCode>&#xa;                        &lt;xsl:value-of select=&quot;&amp;quot;3&amp;quot;&quot;/>&#xa;                    &lt;/flowCode>&#xa;                &lt;/ResultInfo>&#xa;            &lt;/s10:ContractActivationResponse>&#xa;        &lt;/tns:ContractActivationResponse>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                </tibex:inputBindings>
+                                <bpws:targets>
+                                    <bpws:target linkName="ContractActivation_bslToContractActivationOut"/>
+                                </bpws:targets>
+                            </bpws:reply>
+                            <bpws:extensionActivity>
+                                <tibex:extActivity
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:s10=&quot;http://Linkem.EAI.INT_PROVISION.Messaging.ContractActivation&quot; xmlns:tns=&quot;http://Linkem.EAI/&quot; xmlns:tns1=&quot;http://www.example.org/ContractActivation_BSL&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;ContractActivation&quot;/>&lt;xsl:template name=&quot;ContractActivation_bsl-input&quot; match=&quot;/&quot;>&lt;tns1:ContractActivation_Input>&lt;tns1:guid>&lt;xsl:value-of select=&quot;$ContractActivation/parameters/tns:ContractActivation/s10:ContractActivationRequest/TestataDelContrattoId&quot;/>&lt;/tns1:guid>&lt;tns1:iccid>&lt;xsl:value-of select=&quot;$ContractActivation/parameters/tns:ContractActivation/s10:ContractActivationRequest/IccId&quot;/>&lt;/tns1:iccid>&lt;/tns1:ContractActivation_Input>&lt;/xsl:template>&lt;/xsl:stylesheet>"
+                                    expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"
+                                    inputVariable="ContractActivation_bsl-input"
+                                    name="ContractActivation_bsl"
+                                    tibex:xpdlId="70a5442c-a61f-495b-a8bd-a177006c5598"
+                                    type="bw.generalactivities.callprocess" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                                    <bpws:targets>
+                                    <bpws:target linkName="OnMessageStartToContractActivation_bsl"/>
+                                    </bpws:targets>
+                                    <bpws:sources>
+                                    <bpws:source linkName="ContractActivation_bslToContractActivationOut"/>
+                                    </bpws:sources>
+                                    <tibex:inputBindings>
+                                    <tibex:inputBinding coercion=""
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:s10=&quot;http://Linkem.EAI.INT_PROVISION.Messaging.ContractActivation&quot; xmlns:tns=&quot;http://Linkem.EAI/&quot; xmlns:tns1=&quot;http://www.example.org/ContractActivation_BSL&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;ContractActivation.parameters&quot;/>&#xa;    &lt;xsl:template name=&quot;ContractActivation_bsl-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns1:ContractActivation_Input>&#xa;            &lt;tns1:guid>&#xa;                &lt;xsl:value-of select=&quot;$ContractActivation.parameters/s10:ContractActivationRequest/TestataDelContrattoId&quot;/>&#xa;            &lt;/tns1:guid>&#xa;            &lt;tns1:iccid>&#xa;                &lt;xsl:value-of select=&quot;$ContractActivation.parameters/s10:ContractActivationRequest/IccId&quot;/>&#xa;            &lt;/tns1:iccid>&#xa;        &lt;/tns1:ContractActivation_Input>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                    </tibex:inputBindings>
+                                    <tibex:CallProcess
+                                    subProcessName="it.linkem.5g.contractactivation.bsl.ContractActivation_bsl" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
+                                </tibex:extActivity>
+                            </bpws:extensionActivity>
+                        </bpws:flow>
+                    </bpws:scope>
+                </bpws:onMessage>
+            </bpws:pick>
         </bpws:flow>
     </bpws:scope>
 </bpws:process>
