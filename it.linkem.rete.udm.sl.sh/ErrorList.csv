@@ -10,3 +10,7 @@ ESB.NSDB.000006;Error occurred parsing ChangeProfile Response;Business;;ChangePr
 ESB.NSDB.000007;System Exception occurred calling SDB-ChangeStatus;System;500;ChangeStatus;
 ESB.NSDB.000008;Error occurred during TransformXML activity-RemoveNamespacesPrefix in ChangeStatus subprocess;System;;ChangeStatus;
 ESB.NSDB.000009;Error occurred parsing ChangeStatus Response;Business;;ChangeStatus;
+
+ESB.NSDB.000010;System Exception occurred calling SDB-ChangeStatus-Suspended;System;500;ChangeStatus;
+ESB.NSDB.000011;Error occurred during TransformXML activity-RemoveNamespacesPrefix in ChangeStatus-Suspended subprocess;System;;ChangeStatus;
+ESB.NSDB.000012;Error occurred parsing ChangeStatus-Suspended Response;Business;;ChangeStatus;

@@ -1,0 +1,49 @@
+<schema xmlns="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified">
+	<element name="modifyResponse">
+		<complexType>
+			<sequence>
+				<!-- qui dentro -->
+				<element name="version" 	type="string" minOccurs="0"/>
+				<element name="objectclass" type="string" minOccurs="0"/>
+				<element name="identifier">
+					<complexType>
+						<simpleContent>
+							<extension base="long">
+								<attribute type="string" name="alias"/>
+							</extension>
+						</simpleContent>
+					</complexType>
+				</element>
+				<element name="modification">
+					<complexType>
+						<sequence>
+							<element name="valueObject" >
+								<complexType >
+									<sequence >
+										<element name="eps" minOccurs="0" maxOccurs="1">
+											<complexType>
+												<sequence>
+													<element type="string" name="defaultPdnContextId" minOccurs="0" maxOccurs="1"/>
+													<element type="int"  name="maxBandwidthUp"        minOccurs="0" maxOccurs="1"/>
+													<element type="int"  name="maxBandwidthDown"      minOccurs="0" maxOccurs="1"/>
+													<element type="string" name="odbPOAccessEps"      minOccurs="1" maxOccurs="1"/>
+												</sequence>
+											</complexType>
+										</element>
+									</sequence>
+								 <attribute name="type" type="string" use="optional"/>									
+								</complexType>
+							</element>
+						</sequence>
+						<attribute name="name" 		type="string" 	use="optional"/>
+						<attribute name="operation"	type="string" 	use="optional"/>
+						<attribute name="scope"		type="string" 	use="optional"/>
+					</complexType>
+				</element>
+			</sequence>
+			<attribute name="executionTime" type="string"/>
+			<attribute name="requestID" type="string"/>
+			<attribute name="result" type="string"/>
+		</complexType>
+	</element>
+</schema>
