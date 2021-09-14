@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:activationSoap="http://www.example.org/wsdl/activationSoap" xmlns:activationSoap_1="http://www.example.org/schema/activationSoap" xmlns:axis2="http://xsd.tns.tibco.com/bw/models/binding/soap/axis2" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:rest="http://xsd.tns.tibco.com/bw/models/binding/rest" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scact="http://xsd.tns.tibco.com/amf/models/sca/componentType" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_sWPwIBSHEeyvP5r7OtxOUA" targetNamespace="http://tns.tibco.com/bw/composite/it.linkem.5g.contractActivation.md" name="it.linkem.5g.contractActivation.md" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:service xmi:id="_og45ERSQEeyvP5r7OtxOUA" name="contractactivation" promote="Componentcontractactivation/contractactivation">
+    <sca:interface.wsdl xmi:id="_og45FRSQEeyvP5r7OtxOUA" interface="http://xmlns.example.com/20210913144636PLT#wsdl.interface(contractactivation)" scaext:wsdlLocation="../Processes/it/linkem/5g/contratactivation/tlp/contractactivation.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_og6HMBSQEeyvP5r7OtxOUA" name="RestService" path="/contractactivation" docBasePath="http://localhost:7777/it.linkem.5g.contractActivation.md" docResourcePath="contractactivation" basePath="/" connector="it.linkem.5g.contractactivation.md.contractActivationREST_tlp" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/it.linkem.5g.contratactivation.tlp.contractactivation-contractactivation.json">
+      <operation xmi:id="_og6uQBSQEeyvP5r7OtxOUA" operationName="post" nickname="post-contractactivation" httpMethod="POST" notes="postContractactivation" responseStyle="element" requestStyle="element" outputPartName="item">
+        <responseStatus xmi:id="_xvYMcBSREeyvP5r7OtxOUA" statusCode="200" reasonPhrase="OK" dataType="string"/>
+        <responseStatus xmi:id="_yBiTcBSREeyvP5r7OtxOUA" statusCode="201" reasonPhrase="Created" dataType="string"/>
+        <responseStatus xmi:id="_yODFcBSREeyvP5r7OtxOUA" statusCode="202" reasonPhrase="Accepted" dataType="string"/>
+        <responseStatus xmi:id="_ymxHcBSREeyvP5r7OtxOUA" statusCode="401" reasonPhrase="Unauthorized" dataType="string"/>
+        <responseStatus xmi:id="_zeic8BSREeyvP5r7OtxOUA" statusCode="400" reasonPhrase="Bad Request" dataType="string"/>
+        <responseStatus xmi:id="_0RgK8BSREeyvP5r7OtxOUA" statusCode="500" reasonPhrase="Internal Server Error" dataType="string"/>
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <parameters xmi:id="_og78YBSQEeyvP5r7OtxOUA"/>
+      <advancedConfig xmi:id="_og6HMRSQEeyvP5r7OtxOUA" blockingQueueSize="2147483647"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_og6uQRSQEeyvP5r7OtxOUA" bindingName="RestService"/>
+  </sca:service>
+  <sca:service xmi:id="_juwToBU8Eeycs6V4Lkkzdw" name="contractactivationSOAP_tlp" promote="ComponentcontractactivationSOAP_tlp/contractactivationSOAP_tlp">
+    <sca:interface.wsdl xmi:id="_juw6sBU8Eeycs6V4Lkkzdw" interface="http://www.example.org/wsdl/activationSoap#wsdl.interface(contractactivationSOAP_tlp)" scaext:wsdlLocation="../Service%20Descriptors/contractactivationSOAP_tlp.wsdl"/>
+    <scaext:binding xsi:type="axis2:SOAPServiceBinding" xmi:id="_4kGK0BU8Eeycs6V4Lkkzdw" name="SOAPServiceBinding" targetNamespace="http://www.tibco.com/a17d7d15476a411894a72341e1755502/SOAPServiceBinding" portTypeQName="activationSoap:contractactivationSOAP_tlp" transportBindingType="HTTP" attachmentStyle="SwA" modelVersion="1.2.0" portTypeWSDLLocation="platform:/resource/it.linkem.5g.contractActivation.md/Service%20Descriptors/contractactivationSOAP_tlp.wsdl">
+      <bindingType xmi:id="_4kWCcBU8Eeycs6V4Lkkzdw"/>
+      <inboundConfiguration xsi:type="axis2:HttpTransportConfiguration" xmi:id="_PvPbwBU9Eeycs6V4Lkkzdw" endpointURI="/SOAPServiceBinding/contractactivationSOAP_tlp/" httpConnector="it.linkem.5g.contractactivation.md.HTTP_SOAP_ConnectorResource"/>
+      <operationConfiguration xmi:id="_4kaT4BU8Eeycs6V4Lkkzdw" description="" operationName="operation" action="operation" actionNeeded="true">
+        <bindingType xmi:id="_4kaT4RU8Eeycs6V4Lkkzdw"/>
+        <messageConfiguration xmi:id="_4kaT4hU8Eeycs6V4Lkkzdw" messageQName="activationSoap:operationRequest" wsdlLocation="platform:/resource/it.linkem.5g.contractActivation.md/Service%20Descriptors/contractactivationSOAP_tlp.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_4kaT4xU8Eeycs6V4Lkkzdw" partName="parameters" partElementName="activationSoap_1:operationRequest"/>
+        </messageConfiguration>
+        <messageConfiguration xmi:id="_4kaT5BU8Eeycs6V4Lkkzdw" messageQName="activationSoap:operationResponse" messageDirection="OUTPUT" wsdlLocation="platform:/resource/it.linkem.5g.contractActivation.md/Service%20Descriptors/contractactivationSOAP_tlp.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_4kaT5RU8Eeycs6V4Lkkzdw" partName="parameters" partElementName="activationSoap_1:operationResponse"/>
+        </messageConfiguration>
+        <context xmi:id="_4ka68BU8Eeycs6V4Lkkzdw">
+          <inputMapping xmi:id="_4kcJEBU8Eeycs6V4Lkkzdw"/>
+          <outputMapping xmi:id="_4kcJERU8Eeycs6V4Lkkzdw" direction="OUTPUT"/>
+        </context>
+      </operationConfiguration>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_4kcJEhU8Eeycs6V4Lkkzdw" bindingName="SOAPServiceBinding"/>
+  </sca:service>
+  <sca:property xmi:id="_so_F8BSHEeyvP5r7OtxOUA" name="BW.DEPLOYMENTUNIT.TYPE" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_spGasBSHEeyvP5r7OtxOUA" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_spKFEBSHEeyvP5r7OtxOUA" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_spNvcBSHEeyvP5r7OtxOUA" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_spSn8BSHEeyvP5r7OtxOUA" name="BW.DOMAIN.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_spW5YBSHEeyvP5r7OtxOUA" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_spajwBSHEeyvP5r7OtxOUA" name="BW.APPSPACE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_spfcQBSHEeyvP5r7OtxOUA" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_spjtsBSHEeyvP5r7OtxOUA" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:component xmi:id="_og4SABSQEeyvP5r7OtxOUA" name="Componentcontractactivation" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_og4SARSQEeyvP5r7OtxOUA" processName="it.linkem.5g.contractactivation.tlp.contractactivation_tlp"/>
+    <sca:service xmi:id="_og4SAhSQEeyvP5r7OtxOUA" name="contractactivation">
+      <sca:interface.wsdl xmi:id="_og45EBSQEeyvP5r7OtxOUA" interface="http://xmlns.example.com/20210913144636PLT#wsdl.interface(contractactivation)" scaext:wsdlLocation="../Processes/it/linkem/5g/contratactivation/tlp/contractactivation.bwp"/>
+    </sca:service>
+  </sca:component>
+  <sca:component xmi:id="_cm6uQBU8Eeycs6V4Lkkzdw" name="ComponentcontractactivationSOAP_tlp" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_cm6uQRU8Eeycs6V4Lkkzdw" processName="it.linkem.5g.contractactivation.tlp.contractactivationSOAP_tlp"/>
+    <sca:service xmi:id="_juvFgBU8Eeycs6V4Lkkzdw" name="contractactivationSOAP_tlp">
+      <sca:interface.wsdl xmi:id="_juvskBU8Eeycs6V4Lkkzdw" interface="http://www.example.org/wsdl/activationSoap#wsdl.interface(contractactivationSOAP_tlp)" scaext:wsdlLocation="../Service%20Descriptors/contractactivationSOAP_tlp.wsdl"/>
+    </sca:service>
+  </sca:component>
+</sca:composite>

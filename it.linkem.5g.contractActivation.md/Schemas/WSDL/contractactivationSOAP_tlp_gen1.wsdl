@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.tibco.com/a17d7d15476a411894a72341e1755502/SOAPServiceBinding" xmlns:tns0="http://www.example.org/wsdl/activationSoap" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="contractactivationSOAP_tlp" targetNamespace="http://www.tibco.com/a17d7d15476a411894a72341e1755502/SOAPServiceBinding">
+  <wsdl:import location="contractactivationSOAP_tlp.wsdl" namespace="http://www.example.org/wsdl/activationSoap"/>
+  <wsdl:binding name="SOAPServiceBinding" type="tns0:contractactivationSOAP_tlp">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="operation">
+      <wsdl:documentation/>
+      <soap:operation soapAction="operation" style="document"/>
+      <wsdl:input>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="contractactivationSOAP_tlp">
+    <wsdl:port binding="tns:SOAPServiceBinding" name="contractactivationSOAP_tlpSOAP">
+      <soap:address location="http://localhost:8084/SOAPServiceBinding/contractactivationSOAP_tlp/"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
