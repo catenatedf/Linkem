@@ -12,6 +12,10 @@
     xmlns:ns11="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrievemultiple+523e9cdd-cd59-4df5-be3c-4dc00cb8e50d+output"
     xmlns:ns12="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrievemultiple+81fe79b6-1303-474d-89fa-a3f312c04ebd+input"
     xmlns:ns13="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrievemultiple+81fe79b6-1303-474d-89fa-a3f312c04ebd+output"
+    xmlns:ns14="http://it/linkem/5g/MDYN/CRM_GetSIMFromGuid"
+    xmlns:ns15="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrieve+2e5c4a39-4399-4a96-855e-45b81b768b80+input"
+    xmlns:ns16="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrieve+2e5c4a39-4399-4a96-855e-45b81b768b80+output"
+    xmlns:ns17="http://tns.tibco.com/bw/palette/internal/activityerror+bw.dynamicscrm.RetrieveEntity"
     xmlns:ns2="http://tns.tibco.com/bw/palette/internal/activityerror+bw.dynamicscrm.RetrieveMultipleEntity"
     xmlns:ns3="http://www.example.org/CRM_SimCheck"
     xmlns:ns4="http://it.linkem/core/lehf/common/AuditTypes/0100"
@@ -204,18 +208,6 @@
             </complexType>
         </schema>
         <schema elementFormDefault="unqualified"
-            targetNamespace="http://tns.tibco.com/bw/palette/internal/activityerror+bw.dynamicscrm.RetrieveMultipleEntity"
-            xmlns="http://www.w3.org/2001/XMLSchema"
-            xmlns:Q1="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/fault" xmlns:tns="http://tns.tibco.com/bw/palette/internal/activityerror+bw.dynamicscrm.RetrieveMultipleEntity">
-            <import namespace="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/fault"/>
-            <element name="ActivityErrorData" type="tns:ActivityErrorDataType"/>
-            <complexType name="ActivityErrorDataType">
-                <choice>
-                    <element maxOccurs="1" minOccurs="0" ref="Q1:ActivityFaultData"/>
-                </choice>
-            </complexType>
-        </schema>
-        <schema elementFormDefault="unqualified"
             targetNamespace="http://tns.tibco.com/bw/palette/internal/activityerror+bw.internal.end"
             xmlns="http://www.w3.org/2001/XMLSchema"
             xmlns:Q1="http://it.linkem/core/lehf/common/AuditTypes/0100" xmlns:tns="http://tns.tibco.com/bw/palette/internal/activityerror+bw.internal.end">
@@ -228,57 +220,64 @@
             </complexType>
         </schema>
         <schema
-            targetNamespace="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrievemultiple+30f54bac-cc52-44ff-b6e0-1f4bea566861+input"
-            xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrievemultiple+30f54bac-cc52-44ff-b6e0-1f4bea566861+input">
+            targetNamespace="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrieve+2e5c4a39-4399-4a96-855e-45b81b768b80+input"
+            xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrieve+2e5c4a39-4399-4a96-855e-45b81b768b80+input">
             <complexType name="Entities">
                 <sequence>
-                    <element maxOccurs="1" minOccurs="0" name="lnk_sim" type="tns:lnk_sim"/>
+                    <element maxOccurs="unbounded" minOccurs="0"
+                        name="lnk_sim" type="tns:lnk_sim"/>
                 </sequence>
             </complexType>
             <element name="Entities" type="tns:Entities"/>
             <complexType name="lnk_sim">
                 <sequence>
                     <element maxOccurs="1" minOccurs="0"
-                        name="pagenumber" type="integer"/>
-                    <element maxOccurs="1" minOccurs="0" name="pagesize" type="integer"/>
-                    <element maxOccurs="1" minOccurs="0"
-                        name="pagingcookie" type="string"/>
+                        name="lnk_simid" type="string"/>
                 </sequence>
             </complexType>
         </schema>
         <schema
-            targetNamespace="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrievemultiple+30f54bac-cc52-44ff-b6e0-1f4bea566861+output"
-            xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrievemultiple+30f54bac-cc52-44ff-b6e0-1f4bea566861+output">
+            targetNamespace="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrieve+2e5c4a39-4399-4a96-855e-45b81b768b80+output"
+            xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrieve+2e5c4a39-4399-4a96-855e-45b81b768b80+output">
             <complexType name="Entities">
                 <sequence>
-                    <element maxOccurs="unbounded" minOccurs="0"
-                        name="List" type="tns:List"/>
-                </sequence>
-            </complexType>
-            <element name="Entities" type="tns:Entities"/>
-            <complexType name="List">
-                <sequence>
-                    <element maxOccurs="1" minOccurs="0"
-                        name="pagenumber" type="integer"/>
-                    <element maxOccurs="1" minOccurs="0" name="pagesize" type="integer"/>
-                    <element maxOccurs="1" minOccurs="0"
-                        name="pagingcookie" type="string"/>
-                    <element maxOccurs="1" minOccurs="0"
-                        name="totalcount" type="integer"/>
                     <element maxOccurs="unbounded" minOccurs="0"
                         name="lnk_sim" type="tns:lnk_sim"/>
                 </sequence>
             </complexType>
+            <element name="Entities" type="tns:Entities"/>
             <complexType name="lnk_sim">
                 <sequence>
                     <element maxOccurs="1" minOccurs="0"
                         name="createdonbehalfby" type="tns:createdonbehalfby"/>
                     <element maxOccurs="1" minOccurs="0"
+                        name="importsequencenumber" type="integer"/>
+                    <element maxOccurs="1" minOccurs="0"
                         name="lnk_dataassegnazione" type="dateTime"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="createdbyyominame" type="string"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="lnk_datafineassegnazione" type="dateTime"/>
                     <element maxOccurs="1" minOccurs="0"
                         name="lnk_stato" type="integer"/>
                     <element maxOccurs="1" minOccurs="0"
+                        name="organizationidname" type="string"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="modifiedbyname" type="string"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="utcconversiontimezonecode" type="integer"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="statecode" type="integer"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="statecodename" type="string"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="statuscode" type="integer"/>
+                    <element maxOccurs="1" minOccurs="0"
                         name="lnk_contrattoidname" type="string"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="createdby" type="tns:createdby"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="overriddencreatedon" type="dateTime"/>
                     <element maxOccurs="1" minOccurs="0"
                         name="lnk_profilo" type="string"/>
                     <element maxOccurs="1" minOccurs="0"
@@ -288,11 +287,23 @@
                     <element maxOccurs="1" minOccurs="0"
                         name="lnk_iccid" type="string"/>
                     <element maxOccurs="1" minOccurs="0"
+                        name="timezoneruleversionnumber" type="integer"/>
+                    <element maxOccurs="1" minOccurs="0"
                         name="createdonbehalfbyname" type="string"/>
                     <element maxOccurs="1" minOccurs="0"
                         name="modifiedbyyominame" type="string"/>
                     <element maxOccurs="1" minOccurs="0"
+                        name="statuscodename" type="string"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="lnk_statoname" type="string"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="versionnumber" type="long"/>
+                    <element maxOccurs="1" minOccurs="0"
                         name="createdonbehalfbyyominame" type="string"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="createdon" type="dateTime"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="organizationid" type="tns:organizationid"/>
                     <element maxOccurs="1" minOccurs="0"
                         name="modifiedonbehalfbyyominame" type="string"/>
                     <element maxOccurs="1" minOccurs="0"
@@ -301,10 +312,25 @@
                         name="modifiedonbehalfbyname" type="string"/>
                     <element maxOccurs="1" minOccurs="0"
                         name="modifiedonbehalfby" type="tns:modifiedonbehalfby"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="modifiedby" type="tns:modifiedby"/>
                     <element maxOccurs="1" minOccurs="0" name="lnk_imsi" type="string"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="lnk_datacambiostato" type="dateTime"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="ip_importid" type="string"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="createdbyname" type="string"/>
                 </sequence>
             </complexType>
             <complexType name="createdonbehalfby">
+                <sequence>
+                    <element maxOccurs="1" minOccurs="1"
+                        name="entitylogicname" type="string"/>
+                    <element maxOccurs="1" minOccurs="1" name="entityid" type="string"/>
+                </sequence>
+            </complexType>
+            <complexType name="createdby">
                 <sequence>
                     <element maxOccurs="1" minOccurs="1"
                         name="entitylogicname" type="string"/>
@@ -318,12 +344,38 @@
                     <element maxOccurs="1" minOccurs="1" name="entityid" type="string"/>
                 </sequence>
             </complexType>
+            <complexType name="organizationid">
+                <sequence>
+                    <element maxOccurs="1" minOccurs="1"
+                        name="entitylogicname" type="string"/>
+                    <element maxOccurs="1" minOccurs="1" name="entityid" type="string"/>
+                </sequence>
+            </complexType>
             <complexType name="modifiedonbehalfby">
                 <sequence>
                     <element maxOccurs="1" minOccurs="1"
                         name="entitylogicname" type="string"/>
                     <element maxOccurs="1" minOccurs="1" name="entityid" type="string"/>
                 </sequence>
+            </complexType>
+            <complexType name="modifiedby">
+                <sequence>
+                    <element maxOccurs="1" minOccurs="1"
+                        name="entitylogicname" type="string"/>
+                    <element maxOccurs="1" minOccurs="1" name="entityid" type="string"/>
+                </sequence>
+            </complexType>
+        </schema>
+        <schema elementFormDefault="unqualified"
+            targetNamespace="http://tns.tibco.com/bw/palette/internal/activityerror+bw.dynamicscrm.RetrieveEntity"
+            xmlns="http://www.w3.org/2001/XMLSchema"
+            xmlns:Q1="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/fault" xmlns:tns="http://tns.tibco.com/bw/palette/internal/activityerror+bw.dynamicscrm.RetrieveEntity">
+            <import namespace="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/fault"/>
+            <element name="ActivityErrorData" type="tns:ActivityErrorDataType"/>
+            <complexType name="ActivityErrorDataType">
+                <choice>
+                    <element maxOccurs="1" minOccurs="0" ref="Q1:ActivityFaultData"/>
+                </choice>
             </complexType>
         </schema>
     </tibex:Types>
@@ -333,7 +385,7 @@
         productVersion="2.6.1 V57 2021-02-13" scalable="true"
         singleton="true" stateless="false" type="IT"/>
     <tibex:ProcessInterface context=""
-        input="{http://www.example.org/CRM_SimCheck}GetSimFromAccount_Input" output="">
+        input="{http://it/linkem/5g/MDYN/CRM_GetSIMFromGuid}GetSimById_Input" output="{http://it/linkem/5g/MDYN/CRM_GetSIMFromGuid}GetSimById_Output">
         <tibex:errorList>
             <tibex:error
                 error="{http://it.linkem/core/lehf/common/AuditTypes/0100}LogAudit" name="LogAudit"/>
@@ -439,7 +491,7 @@
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.1"/>
-                                    <layoutConstraint x="1339"
+                                    <layoutConstraint x="837"
                                     xsi:type="notation:Bounds" y="124"/>
                                     </children>
                                     <children type="4002">
@@ -479,7 +531,7 @@
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.2"/>
                                     <layoutConstraint
-                                    width="295" x="253"
+                                    width="168" x="253"
                                     xsi:type="notation:Bounds" y="124"/>
                                     </children>
                                     <children type="4002">
@@ -518,8 +570,8 @@
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.3"/>
-                                    <layoutConstraint
-                                    width="295" x="1040"
+                                    <layoutConstraint width="94"
+                                    x="640"
                                     xsi:type="notation:Bounds" y="124"/>
                                     </children>
                                     <children type="4002 bw.internal.getSharedVariable">
@@ -563,7 +615,7 @@
                                     x="99"
                                     xsi:type="notation:Bounds" y="124"/>
                                     </children>
-                                    <children type="4002 bw.dynamicscrm.RetrieveMultipleEntity">
+                                    <children type="4002 bw.dynamicscrm.RetrieveEntity">
                                     <children type="4017">
                                     <styles
                                     fontName="Segoe UI"
@@ -596,8 +648,8 @@
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.5"/>
                                     <layoutConstraint
-                                    height="40" width="339"
-                                    x="580"
+                                    height="40" width="40"
+                                    x="476"
                                     xsi:type="notation:Bounds" y="124"/>
                                     </children>
                                     <styles xsi:type="notation:DrawerStyle"/>
@@ -642,7 +694,7 @@
             </children>
             <styles fontName="Segoe UI" lineColor="0" xsi:type="notation:ShapeStyle"/>
             <element href="//0/@process"/>
-            <layoutConstraint height="460" width="2162" xsi:type="notation:Bounds"/>
+            <layoutConstraint height="460" width="1493" xsi:type="notation:Bounds"/>
         </children>
         <styles xsi:type="notation:DiagramStyle"/>
         <element href="//0"/>
@@ -699,7 +751,7 @@
             <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
             <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
             <element href="//0/@process/@activity/@activity/@links/@children.4"/>
-            <bendpoints points="[7, 25, 0, -83]$[0, 84, -7, -24]" xsi:type="notation:RelativeBendpoints"/>
+            <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
     </notation:Diagram>
     <tibex:NamespaceRegistry enabled="true">
@@ -713,11 +765,17 @@
             namespace="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrievemultiple+523e9cdd-cd59-4df5-be3c-4dc00cb8e50d+input" prefix="tns1"/>
         <tibex:namespaceItem
             namespace="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrievemultiple+30f54bac-cc52-44ff-b6e0-1f4bea566861+input" prefix="tns2"/>
+        <tibex:namespaceItem
+            namespace="http://it/linkem/5g/MDYN/CRM_GetSIMFromGuid" prefix="ns"/>
+        <tibex:namespaceItem
+            namespace="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrieve+2e5c4a39-4399-4a96-855e-45b81b768b80+input" prefix="tns3"/>
+        <tibex:namespaceItem
+            namespace="http://www.tibco.com/bw/xslt/custom-functions" prefix="tib"/>
     </tibex:NamespaceRegistry>
-    <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.example.org/CRM_SimCheck"/>
-    <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://it.linkem/core/lehf/common/AuditTypes/0100"/>
+    <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://it/linkem/5g/MDYN/CRM_GetSIMFromGuid"/>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://it.linkem/core/lehf/common/xsd/loggingwrapper/internal"/>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://it.linkem/core/lehf/common/loggerType/0100"/>
+    <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://it.linkem/core/lehf/common/AuditTypes/0100"/>
     <bpws:variables>
         <bpws:variable element="ns:ProcessContext"
             name="_processContext" sca-bpel:internal="true"/>
@@ -726,23 +784,17 @@
             sca-bpel:property="yes"
             sca-bpel:sharedResourceType="{http://ns.tibco.com/bw/palette/dynamicscrmconnection}Dynamicscrm" type="xsd:string">
             <bpws:from>
-                <bpws:literal>it.linkem.crm.microsoftdynamics.sl.sh.DynamicsCRMSimone</bpws:literal>
+                <bpws:literal>it.linkem.crm.microsoftdynamics.sl.sh.DynamicsCRMConnection</bpws:literal>
             </bpws:from>
         </bpws:variable>
         <bpws:variable element="ns:ErrorReport" name="_error" sca-bpel:internal="true"/>
-        <bpws:variable element="ns3:GetSimFromAccount_Input"
-            name="Start" sca-bpel:internal="true" tibex:parameter="in"/>
+        <bpws:variable element="ns14:GetSimById_Input" name="Start"
+            sca-bpel:internal="true" tibex:parameter="in"/>
         <bpws:variable name="INFO_Severity" sca-bpel:hotUpdate="false"
             sca-bpel:privateProperty="true" sca-bpel:property="yes"
             tibex:propertySource="//it.linkem.core.lehf.common.sh///it.linkem.core.lehf.common.sh/Logging/INFO_SEVERITY" type="xsd:string"/>
-        <bpws:variable element="ns4:LogAudit"
-            name="Log_Start_GetSIMFromGuid-input" sca-bpel:internal="true"/>
-        <bpws:variable element="ns5:LEHF_Output"
-            name="Log_Start_GetSIMFromGuid" sca-bpel:internal="true"/>
-        <bpws:variable element="ns4:LogAudit"
-            name="Log_End_GetSIMFromGuid-input" sca-bpel:internal="true"/>
-        <bpws:variable element="ns5:LEHF_Output"
-            name="Log_End_GetSIMFromGuid" sca-bpel:internal="true"/>
+        <bpws:variable element="ns4:LogAudit" name="LogEnd-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns5:LEHF_Output" name="LogEnd" sca-bpel:internal="true"/>
         <bpws:variable element="ns6:loggerParams" name="GetLoggerParams" sca-bpel:internal="true"/>
         <bpws:variable name="ERROR_Severity" sca-bpel:hotUpdate="false"
             sca-bpel:privateProperty="true" sca-bpel:property="yes"
@@ -756,20 +808,17 @@
             sca-bpel:property="yes"
             tibex:propertySource="//it.linkem.core.lehf.common.sh///it.linkem.core.lehf.common.sh/Logging/System_Exception" type="xsd:string"/>
         <bpws:variable element="ns7:ActivityErrorData" name="_error_End" sca-bpel:internal="true"/>
-        <bpws:variable element="ns8:Entities"
-            name="GetSimEntitiesFromGuid-input" sca-bpel:internal="true"/>
-        <bpws:variable element="ns9:Entities"
-            name="GetSimEntitiesFromGuid" sca-bpel:internal="true"/>
-        <bpws:variable element="ns2:ActivityErrorData"
-            name="_error_GetSimEntitiesFromGuid" sca-bpel:internal="true"/>
-        <bpws:variable name="dynamicsCRMConnectionNoGrant"
-            sca-bpel:hotUpdate="false" sca-bpel:privateProperty="true"
-            sca-bpel:property="yes"
-            sca-bpel:sharedResourceType="{http://ns.tibco.com/bw/palette/dynamicscrmconnection}Dynamicscrm" type="xsd:string">
-            <bpws:from>
-                <bpws:literal>it.linkem.crm.microsoftdynamics.sl.sh.DynamicsCRMConnection</bpws:literal>
-            </bpws:from>
-        </bpws:variable>
+        <bpws:variable element="ns14:GetSimById_Output" name="End-input"
+            sca-bpel:internal="true" tibex:parameter="out"/>
+        <bpws:variable element="ns15:Entities" name="GetSim-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns16:Entities" name="GetSim" sca-bpel:internal="true"/>
+        <bpws:variable element="ns17:ActivityErrorData"
+            name="_error_GetSim" sca-bpel:internal="true"/>
+        <bpws:variable name="DEBUG_Severity" sca-bpel:hotUpdate="false"
+            sca-bpel:privateProperty="true" sca-bpel:property="yes"
+            tibex:propertySource="//it.linkem.core.lehf.common.sh///it.linkem.core.lehf.common.sh/Logging/DEBUG_SEVERITY" type="xsd:string"/>
+        <bpws:variable element="ns4:LogAudit" name="LogStart-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns5:LEHF_Output" name="LogStart" sca-bpel:internal="true"/>
     </bpws:variables>
     <bpws:extensions>
         <bpws:extension mustUnderstand="no" namespace="http://www.eclipse.org/gmf/runtime/1.0.2/notation"/>
@@ -787,9 +836,8 @@
                     name="GetLoggerParamsToLog_Start_GetIMSIByAccount" tibex:linkType="SUCCESS"/>
                 <bpws:link name="Log_End_GetIMSIByAccountToEnd" tibex:linkType="SUCCESS"/>
                 <bpws:link
-                    name="Log_Start_GetSIMFromAccountToRetrieveMultipleEntities_2" tibex:linkType="SUCCESS"/>
-                <bpws:link
-                    name="RetrieveMultipleEntities_NoGrantToLog_End_GetSIMFromGuid" tibex:linkType="SUCCESS"/>
+                    name="Log_Start_GetSIMFromGuidToRetrieveEntity" tibex:linkType="SUCCESS"/>
+                <bpws:link name="RetrieveEntityToLog_End_GetSIMFromGuid" tibex:linkType="SUCCESS"/>
             </bpws:links>
             <bpws:extensionActivity>
                 <tibex:receiveEvent createInstance="yes"
@@ -805,11 +853,16 @@
                 </tibex:receiveEvent>
             </bpws:extensionActivity>
             <bpws:extensionActivity>
-                <tibex:activityExtension name="End"
+                <tibex:activityExtension inputVariable="End-input"
+                    name="End"
                     tibex:xpdlId="6e23e1b3-274a-4f62-8440-46f5bfc15b90" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                     <bpws:targets>
                         <bpws:target linkName="Log_End_GetIMSIByAccountToEnd"/>
                     </bpws:targets>
+                    <tibex:inputBindings>
+                        <tibex:inputBinding
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:ns=&quot;http://it/linkem/5g/MDYN/CRM_GetSIMFromGuid&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;GetSim&quot;/>&lt;xsl:template name=&quot;End-input&quot; match=&quot;/&quot;>&lt;ns:GetSimById_Output>&lt;xsl:for-each select=&quot;$GetSim/lnk_sim&quot;>&lt;ns:Sim>&lt;xsl:copy-of select=&quot;createdonbehalfby&quot;/>&lt;xsl:if test=&quot;lnk_dataassegnazione&quot;>&lt;lnk_dataassegnazione>&lt;xsl:value-of select=&quot;lnk_dataassegnazione&quot;/>&lt;/lnk_dataassegnazione>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_stato&quot;>&lt;lnk_stato>&lt;xsl:value-of select=&quot;lnk_stato&quot;/>&lt;/lnk_stato>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_contrattoidname&quot;>&lt;lnk_contrattoidname>&lt;xsl:value-of select=&quot;lnk_contrattoidname&quot;/>&lt;/lnk_contrattoidname>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_profilo&quot;>&lt;lnk_profilo>&lt;xsl:value-of select=&quot;lnk_profilo&quot;/>&lt;/lnk_profilo>&lt;/xsl:if>&lt;xsl:copy-of select=&quot;lnk_contrattoid&quot;/>&lt;xsl:if test=&quot;lnk_simid&quot;>&lt;lnk_simid>&lt;xsl:value-of select=&quot;lnk_simid&quot;/>&lt;/lnk_simid>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_iccid&quot;>&lt;lnk_iccid>&lt;xsl:value-of select=&quot;lnk_iccid&quot;/>&lt;/lnk_iccid>&lt;/xsl:if>&lt;xsl:if test=&quot;createdonbehalfbyname&quot;>&lt;createdonbehalfbyname>&lt;xsl:value-of select=&quot;createdonbehalfbyname&quot;/>&lt;/createdonbehalfbyname>&lt;/xsl:if>&lt;xsl:if test=&quot;modifiedbyyominame&quot;>&lt;modifiedbyyominame>&lt;xsl:value-of select=&quot;modifiedbyyominame&quot;/>&lt;/modifiedbyyominame>&lt;/xsl:if>&lt;xsl:if test=&quot;createdonbehalfbyyominame&quot;>&lt;createdonbehalfbyyominame>&lt;xsl:value-of select=&quot;createdonbehalfbyyominame&quot;/>&lt;/createdonbehalfbyyominame>&lt;/xsl:if>&lt;xsl:if test=&quot;modifiedonbehalfbyyominame&quot;>&lt;modifiedonbehalfbyyominame>&lt;xsl:value-of select=&quot;modifiedonbehalfbyyominame&quot;/>&lt;/modifiedonbehalfbyyominame>&lt;/xsl:if>&lt;xsl:if test=&quot;modifiedon&quot;>&lt;modifiedon>&lt;xsl:value-of select=&quot;modifiedon&quot;/>&lt;/modifiedon>&lt;/xsl:if>&lt;xsl:if test=&quot;modifiedonbehalfbyname&quot;>&lt;modifiedonbehalfbyname>&lt;xsl:value-of select=&quot;modifiedonbehalfbyname&quot;/>&lt;/modifiedonbehalfbyname>&lt;/xsl:if>&lt;xsl:copy-of select=&quot;modifiedonbehalfby&quot;/>&lt;xsl:if test=&quot;lnk_imsi&quot;>&lt;lnk_imsi>&lt;xsl:value-of select=&quot;lnk_imsi&quot;/>&lt;/lnk_imsi>&lt;/xsl:if>&lt;/ns:Sim>&lt;/xsl:for-each>&lt;/ns:GetSimById_Output>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                    </tibex:inputBindings>
                     <tibex:config>
                         <bwext:BWActivity
                             activityTypeID="bw.internal.end"
@@ -827,23 +880,21 @@
                 </tibex:activityExtension>
             </bpws:extensionActivity>
             <bpws:extensionActivity>
-                <tibex:extActivity
-                    inputVariable="Log_Start_GetSIMFromGuid-input"
-                    name="Log_Start_GetSIMFromGuid"
-                    outputVariable="Log_Start_GetSIMFromGuid"
+                <tibex:extActivity inputVariable="LogStart-input"
+                    name="LogStart" outputVariable="LogStart"
                     tibex:xpdlId="14db39c8-9179-4170-bc25-7337a140afe4"
                     type="bw.generalactivities.callprocess" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                     <bpws:targets>
                         <bpws:target linkName="GetLoggerParamsToLog_Start_GetIMSIByAccount"/>
                     </bpws:targets>
                     <bpws:sources>
-                        <bpws:source linkName="Log_Start_GetSIMFromAccountToRetrieveMultipleEntities_2">
+                        <bpws:source linkName="Log_Start_GetSIMFromGuidToRetrieveEntity">
                             <tibex:DesignExpression/>
                         </bpws:source>
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding coercion=""
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns9=&quot;http://it.linkem/core/lehf/common/AuditTypes/0100&quot; xmlns:bw=&quot;http://www.tibco.com/bw/xpath/bw-custom-functions&quot; xmlns:tib=&quot;http://www.tibco.com/bw/xslt/custom-functions&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;GetLoggerParams&quot;/>&lt;xsl:param name=&quot;INFO_Severity&quot;/>&lt;xsl:param name=&quot;Start&quot;/>&lt;xsl:template name=&quot;Log_Start_GetIMSIByIp-input&quot; match=&quot;/&quot;>&lt;tns9:LogAudit>&lt;auditElement>&lt;APPLICATION_NAME>&lt;xsl:value-of select=&quot;$GetLoggerParams/APPLICATION_NAME&quot;/>&lt;/APPLICATION_NAME>&lt;xsl:if test=&quot;$GetLoggerParams/SOURCESYSTEM&quot;>&lt;SOURCESYSTEM>&lt;xsl:value-of select=&quot;$GetLoggerParams/SOURCESYSTEM&quot;/>&lt;/SOURCESYSTEM>&lt;/xsl:if>&lt;STARTTIMESTAMP>&lt;xsl:value-of select=&quot;current-dateTime()&quot;/>&lt;/STARTTIMESTAMP>&lt;SEVERITY>&lt;xsl:value-of select=&quot;$INFO_Severity&quot;/>&lt;/SEVERITY>&lt;TRACKID>&lt;xsl:value-of select=&quot;$GetLoggerParams/TRACKID&quot;/>&lt;/TRACKID>&lt;BUSINESSKEY>&lt;xsl:value-of select=&quot;$GetLoggerParams/BUSINESSKEY&quot;/>&lt;/BUSINESSKEY>&lt;PROCESSSTACK>&lt;xsl:value-of select=&quot;concat(bw:getModuleProperty(&amp;quot;BW.PROCESS.STACK&amp;quot;),&amp;quot;/&amp;quot;,bw:getModuleProperty(&amp;quot;BW.ACTIVITY.NAME&amp;quot;))&quot;/>&lt;/PROCESSSTACK>&lt;PAYLOAD>&lt;xsl:value-of select=&quot;tib:render-xml($Start, false(),true())&quot;/>&lt;/PAYLOAD>&lt;/auditElement>&lt;/tns9:LogAudit>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns9=&quot;http://it.linkem/core/lehf/common/AuditTypes/0100&quot; xmlns:bw=&quot;http://www.tibco.com/bw/xpath/bw-custom-functions&quot; xmlns:tib=&quot;http://www.tibco.com/bw/xslt/custom-functions&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;GetLoggerParams&quot;/>&lt;xsl:param name=&quot;Start&quot;/>&lt;xsl:template name=&quot;LogStart-input&quot; match=&quot;/&quot;>&lt;tns9:LogAudit>&lt;auditElement>&lt;APPLICATION_NAME>&lt;xsl:value-of select=&quot;$GetLoggerParams/APPLICATION_NAME&quot;/>&lt;/APPLICATION_NAME>&lt;xsl:if test=&quot;$GetLoggerParams/SOURCESYSTEM&quot;>&lt;SOURCESYSTEM>&lt;xsl:value-of select=&quot;$GetLoggerParams/SOURCESYSTEM&quot;/>&lt;/SOURCESYSTEM>&lt;/xsl:if>&lt;STARTTIMESTAMP>&lt;xsl:value-of select=&quot;current-dateTime()&quot;/>&lt;/STARTTIMESTAMP>&lt;SEVERITY>&lt;xsl:value-of select=&quot;$DEBUG_Severity&quot;/>&lt;/SEVERITY>&lt;TRACKID>&lt;xsl:value-of select=&quot;$GetLoggerParams/TRACKID&quot;/>&lt;/TRACKID>&lt;BUSINESSKEY>&lt;xsl:value-of select=&quot;$GetLoggerParams/BUSINESSKEY&quot;/>&lt;/BUSINESSKEY>&lt;PROCESSSTACK>&lt;xsl:value-of select=&quot;concat(bw:getModuleProperty(&amp;quot;BW.PROCESS.STACK&amp;quot;),&amp;quot;/&amp;quot;,bw:getModuleProperty(&amp;quot;BW.ACTIVITY.NAME&amp;quot;))&quot;/>&lt;/PROCESSSTACK>&lt;PAYLOAD>&lt;xsl:value-of select=&quot;tib:render-xml($Start, false(),true())&quot;/>&lt;/PAYLOAD>&lt;/auditElement>&lt;/tns9:LogAudit>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:CallProcess
                         moduleRef="it.linkem.core.lehf.common.sh"
@@ -851,21 +902,19 @@
                 </tibex:extActivity>
             </bpws:extensionActivity>
             <bpws:extensionActivity>
-                <tibex:extActivity
-                    inputVariable="Log_End_GetSIMFromGuid-input"
-                    name="Log_End_GetSIMFromGuid"
-                    outputVariable="Log_End_GetSIMFromGuid"
+                <tibex:extActivity inputVariable="LogEnd-input"
+                    name="LogEnd" outputVariable="LogEnd"
                     tibex:xpdlId="f51cb5e7-0f78-417f-a89f-9c561383b315"
                     type="bw.generalactivities.callprocess" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                     <bpws:targets>
-                        <bpws:target linkName="RetrieveMultipleEntities_NoGrantToLog_End_GetSIMFromGuid"/>
+                        <bpws:target linkName="RetrieveEntityToLog_End_GetSIMFromGuid"/>
                     </bpws:targets>
                     <bpws:sources>
                         <bpws:source linkName="Log_End_GetIMSIByAccountToEnd"/>
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding coercion=""
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns9=&quot;http://it.linkem/core/lehf/common/AuditTypes/0100&quot; xmlns:bw=&quot;http://www.tibco.com/bw/xpath/bw-custom-functions&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;GetLoggerParams&quot;/>&lt;xsl:param name=&quot;INFO_Severity&quot;/>&lt;xsl:template name=&quot;Log_End_GetIMSIByAccount-input&quot; match=&quot;/&quot;>&lt;tns9:LogAudit>&lt;auditElement>&lt;APPLICATION_NAME>&lt;xsl:value-of select=&quot;$GetLoggerParams/APPLICATION_NAME&quot;/>&lt;/APPLICATION_NAME>&lt;xsl:if test=&quot;$GetLoggerParams/SOURCESYSTEM&quot;>&lt;SOURCESYSTEM>&lt;xsl:value-of select=&quot;$GetLoggerParams/SOURCESYSTEM&quot;/>&lt;/SOURCESYSTEM>&lt;/xsl:if>&lt;STARTTIMESTAMP>&lt;xsl:value-of select=&quot;current-dateTime()&quot;/>&lt;/STARTTIMESTAMP>&lt;SEVERITY>&lt;xsl:value-of select=&quot;$INFO_Severity&quot;/>&lt;/SEVERITY>&lt;TRACKID>&lt;xsl:value-of select=&quot;$GetLoggerParams/TRACKID&quot;/>&lt;/TRACKID>&lt;BUSINESSKEY>&lt;xsl:value-of select=&quot;$GetLoggerParams/BUSINESSKEY&quot;/>&lt;/BUSINESSKEY>&lt;PROCESSSTACK>&lt;xsl:value-of select=&quot;concat(bw:getModuleProperty(&amp;quot;BW.PROCESS.STACK&amp;quot;),&amp;quot;/&amp;quot;,bw:getModuleProperty(&amp;quot;BW.ACTIVITY.NAME&amp;quot;))&quot;/>&lt;/PROCESSSTACK>&lt;PAYLOAD>&lt;xsl:value-of select=&quot;&amp;quot;&amp;quot;&quot;/>&lt;/PAYLOAD>&lt;/auditElement>&lt;/tns9:LogAudit>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns9=&quot;http://it.linkem/core/lehf/common/AuditTypes/0100&quot; xmlns:bw=&quot;http://www.tibco.com/bw/xpath/bw-custom-functions&quot; xmlns:tib=&quot;http://www.tibco.com/bw/xslt/custom-functions&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;GetLoggerParams&quot;/>&lt;xsl:param name=&quot;GetSim&quot;/>&lt;xsl:template name=&quot;LogEnd-input&quot; match=&quot;/&quot;>&lt;tns9:LogAudit>&lt;auditElement>&lt;APPLICATION_NAME>&lt;xsl:value-of select=&quot;$GetLoggerParams/APPLICATION_NAME&quot;/>&lt;/APPLICATION_NAME>&lt;xsl:if test=&quot;$GetLoggerParams/SOURCESYSTEM&quot;>&lt;SOURCESYSTEM>&lt;xsl:value-of select=&quot;$GetLoggerParams/SOURCESYSTEM&quot;/>&lt;/SOURCESYSTEM>&lt;/xsl:if>&lt;STARTTIMESTAMP>&lt;xsl:value-of select=&quot;current-dateTime()&quot;/>&lt;/STARTTIMESTAMP>&lt;SEVERITY>&lt;xsl:value-of select=&quot;$DEBUG_Severity&quot;/>&lt;/SEVERITY>&lt;TRACKID>&lt;xsl:value-of select=&quot;$GetLoggerParams/TRACKID&quot;/>&lt;/TRACKID>&lt;BUSINESSKEY>&lt;xsl:value-of select=&quot;$GetLoggerParams/BUSINESSKEY&quot;/>&lt;/BUSINESSKEY>&lt;PROCESSSTACK>&lt;xsl:value-of select=&quot;''&quot;/>&lt;/PROCESSSTACK>&lt;PAYLOAD>&lt;xsl:value-of select=&quot;tib:render-xml($GetSim, false(),true())&quot;/>&lt;/PAYLOAD>&lt;/auditElement>&lt;/tns9:LogAudit>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:CallProcess
                         moduleRef="it.linkem.core.lehf.common.sh"
@@ -888,35 +937,31 @@
                 </tibex:extActivity>
             </bpws:extensionActivity>
             <bpws:extensionActivity>
-                <tibex:activityExtension
-                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; version=&quot;2.0&quot;>&lt;xsl:template name=&quot;GetSimEntitiesFromGuid-input&quot; match=&quot;/&quot;/>&lt;/xsl:stylesheet>"
-                    expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"
-                    inputVariable="GetSimEntitiesFromGuid-input"
-                    name="GetSimEntitiesFromGuid"
-                    outputVariable="GetSimEntitiesFromGuid"
-                    tibex:xpdlId="30f54bac-cc52-44ff-b6e0-1f4bea566861" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                <tibex:activityExtension inputVariable="GetSim-input"
+                    name="GetSim" outputVariable="GetSim"
+                    tibex:xpdlId="2e5c4a39-4399-4a96-855e-45b81b768b80" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                     <bpws:targets>
-                        <bpws:target linkName="Log_Start_GetSIMFromAccountToRetrieveMultipleEntities_2"/>
+                        <bpws:target linkName="Log_Start_GetSIMFromGuidToRetrieveEntity"/>
                     </bpws:targets>
                     <bpws:sources>
-                        <bpws:source linkName="RetrieveMultipleEntities_NoGrantToLog_End_GetSIMFromGuid"/>
+                        <bpws:source linkName="RetrieveEntityToLog_End_GetSIMFromGuid"/>
                     </bpws:sources>
                     <tibex:inputBindings>
-                        <tibex:inputBinding expression="" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                        <tibex:inputBinding
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns3=&quot;http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrieve+2e5c4a39-4399-4a96-855e-45b81b768b80+input&quot; xmlns:ns=&quot;http://it/linkem/5g/MDYN/CRM_GetSIMFromGuid&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;Start&quot;/>&lt;xsl:template name=&quot;GetSim-input&quot; match=&quot;/&quot;>&lt;tns3:Entities>&lt;lnk_sim>&lt;lnk_simid>&lt;xsl:value-of select=&quot;$Start/ns:sim_id&quot;/>&lt;/lnk_simid>&lt;/lnk_sim>&lt;/tns3:Entities>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:config>
                         <bwext:BWActivity
-                            activityTypeID="bw.dynamicscrm.RetrieveMultipleEntity"
+                            activityTypeID="bw.dynamicscrm.RetrieveEntity"
                             xmlns:activityconfig="http://tns.tibco.com/bw/model/activityconfig"
                             xmlns:bwext="http://tns.tibco.com/bw/model/core/bwext"
                             xmlns:dynamicscrm="http://ns.tibco.com/bw/palette/dynamicscrm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                             <activityConfig>
                                 <properties name="config" xsi:type="activityconfig:EMFProperty">
-                                    <type href="http://ns.tibco.com/bw/palette/dynamicscrm#//RetrieveMultipleEntity"/>
+                                    <type href="http://ns.tibco.com/bw/palette/dynamicscrm#//RetrieveEntity"/>
                                     <value
-                                    dynamicscrmConnection="dynamicsCRMConnectionNoGrant"
-                                    dynamicscrmEntityOption="Sim(lnk_sim)"
-                                    retrieveType="Simple" xsi:type="dynamicscrm:RetrieveMultipleEntity">
+                                    dynamicscrmConnection="dynamicsCRMConnection"
+                                    dynamicscrmEntityOption="Sim(lnk_sim)" xsi:type="dynamicscrm:RetrieveEntity">
                                     <entitymetadatatamap key="createdonbehalfby">
                                     <value CRMType="Lookup"
                                     EntityLogicalName="lnk_sim"
@@ -929,6 +974,19 @@
                                     schemaName="CreatedOnBehalfBy"
                                     validForRead="true" xsdType="string"/>
                                     </entitymetadatatamap>
+                                    <entitymetadatatamap key="importsequencenumber">
+                                    <value CRMType="Integer"
+                                    EntityLogicalName="lnk_sim"
+                                    asOutput="true"
+                                    attributeOf="null"
+                                    changeable="true"
+                                    displayName="Import Sequence Number"
+                                    logicName="importsequencenumber"
+                                    requried="None"
+                                    schemaName="ImportSequenceNumber"
+                                    validForCreate="true"
+                                    validForRead="true" xsdType="integer"/>
+                                    </entitymetadatatamap>
                                     <entitymetadatatamap key="lnk_dataassegnazione">
                                     <value CRMType="DateTime"
                                     EntityLogicalName="lnk_sim"
@@ -939,6 +997,32 @@
                                     logicName="lnk_dataassegnazione"
                                     requried="None"
                                     schemaName="lnk_dataassegnazione"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="dateTime"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="createdbyyominame">
+                                    <value CRMType="String"
+                                    EntityLogicalName="lnk_sim"
+                                    asOutput="true"
+                                    attributeOf="createdby"
+                                    changeable="true"
+                                    displayName="null"
+                                    logicName="createdbyyominame"
+                                    requried="SystemRequired"
+                                    schemaName="CreatedByYomiName"
+                                    validForRead="true" xsdType="string"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="lnk_datafineassegnazione">
+                                    <value CRMType="DateTime"
+                                    EntityLogicalName="lnk_sim"
+                                    asOutput="true"
+                                    attributeOf="null"
+                                    changeable="true"
+                                    displayName="Data Fine Assegnazione"
+                                    logicName="lnk_datafineassegnazione"
+                                    requried="None"
+                                    schemaName="lnk_datafineassegnazione"
                                     validForCreate="true"
                                     validForRead="true"
                                     validForUpdate="true" xsdType="dateTime"/>
@@ -957,6 +1041,83 @@
                                     validForRead="true"
                                     validForUpdate="true" xsdType="integer"/>
                                     </entitymetadatatamap>
+                                    <entitymetadatatamap key="organizationidname">
+                                    <value CRMType="String"
+                                    EntityLogicalName="lnk_sim"
+                                    asOutput="true"
+                                    attributeOf="organizationid"
+                                    changeable="true"
+                                    displayName="null"
+                                    logicName="organizationidname"
+                                    requried="SystemRequired"
+                                    schemaName="OrganizationIdName"
+                                    validForRead="true" xsdType="string"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="modifiedbyname">
+                                    <value CRMType="String"
+                                    EntityLogicalName="lnk_sim"
+                                    asOutput="true"
+                                    attributeOf="modifiedby"
+                                    changeable="true"
+                                    displayName="null"
+                                    logicName="modifiedbyname"
+                                    requried="None"
+                                    schemaName="ModifiedByName"
+                                    validForRead="true" xsdType="string"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="utcconversiontimezonecode">
+                                    <value CRMType="Integer"
+                                    EntityLogicalName="lnk_sim"
+                                    asOutput="true"
+                                    attributeOf="null"
+                                    changeable="true"
+                                    displayName="UTC Conversion Time Zone Code"
+                                    logicName="utcconversiontimezonecode"
+                                    requried="None"
+                                    schemaName="UTCConversionTimeZoneCode"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="integer"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="statecode">
+                                    <value CRMType="State"
+                                    EntityLogicalName="lnk_sim"
+                                    asOutput="true"
+                                    attributeOf="null"
+                                    changeable="true"
+                                    displayName="Status"
+                                    logicName="statecode"
+                                    requried="SystemRequired"
+                                    schemaName="statecode"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="integer"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="statecodename">
+                                    <value CRMType="Virtual"
+                                    EntityLogicalName="lnk_sim"
+                                    asOutput="true"
+                                    attributeOf="statecode"
+                                    changeable="true"
+                                    displayName="null"
+                                    logicName="statecodename"
+                                    requried="None"
+                                    schemaName="statecodeName"
+                                    validForRead="true" xsdType="string"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="statuscode">
+                                    <value CRMType="Status"
+                                    EntityLogicalName="lnk_sim"
+                                    asOutput="true"
+                                    attributeOf="null"
+                                    changeable="true"
+                                    displayName="Status Reason"
+                                    logicName="statuscode"
+                                    requried="None"
+                                    schemaName="statuscode"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="integer"/>
+                                    </entitymetadatatamap>
                                     <entitymetadatatamap key="lnk_contrattoidname">
                                     <value CRMType="String"
                                     EntityLogicalName="lnk_sim"
@@ -968,6 +1129,31 @@
                                     requried="None"
                                     schemaName="lnk_contrattoidName"
                                     validForRead="true" xsdType="string"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="createdby">
+                                    <value CRMType="Lookup"
+                                    EntityLogicalName="lnk_sim"
+                                    asOutput="true"
+                                    attributeOf="null"
+                                    changeable="true"
+                                    displayName="Created By"
+                                    logicName="createdby"
+                                    requried="None"
+                                    schemaName="CreatedBy"
+                                    validForRead="true" xsdType="string"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="overriddencreatedon">
+                                    <value CRMType="DateTime"
+                                    EntityLogicalName="lnk_sim"
+                                    asOutput="true"
+                                    attributeOf="null"
+                                    changeable="true"
+                                    displayName="Record Created On"
+                                    logicName="overriddencreatedon"
+                                    requried="None"
+                                    schemaName="OverriddenCreatedOn"
+                                    validForCreate="true"
+                                    validForRead="true" xsdType="dateTime"/>
                                     </entitymetadatatamap>
                                     <entitymetadatatamap key="lnk_profilo">
                                     <value CRMType="String"
@@ -1001,6 +1187,7 @@
                                     <value
                                     CRMType="Uniqueidentifier"
                                     EntityLogicalName="lnk_sim"
+                                    asInput="true"
                                     asOutput="true"
                                     attributeOf="null"
                                     displayName="Sim"
@@ -1024,6 +1211,20 @@
                                     validForCreate="true"
                                     validForRead="true"
                                     validForUpdate="true" xsdType="string"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="timezoneruleversionnumber">
+                                    <value CRMType="Integer"
+                                    EntityLogicalName="lnk_sim"
+                                    asOutput="true"
+                                    attributeOf="null"
+                                    changeable="true"
+                                    displayName="Time Zone Rule Version Number"
+                                    logicName="timezoneruleversionnumber"
+                                    requried="None"
+                                    schemaName="TimeZoneRuleVersionNumber"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="integer"/>
                                     </entitymetadatatamap>
                                     <entitymetadatatamap key="createdonbehalfbyname">
                                     <value CRMType="String"
@@ -1049,6 +1250,42 @@
                                     schemaName="ModifiedByYomiName"
                                     validForRead="true" xsdType="string"/>
                                     </entitymetadatatamap>
+                                    <entitymetadatatamap key="statuscodename">
+                                    <value CRMType="Virtual"
+                                    EntityLogicalName="lnk_sim"
+                                    asOutput="true"
+                                    attributeOf="statuscode"
+                                    changeable="true"
+                                    displayName="null"
+                                    logicName="statuscodename"
+                                    requried="None"
+                                    schemaName="statuscodeName"
+                                    validForRead="true" xsdType="string"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="lnk_statoname">
+                                    <value CRMType="Virtual"
+                                    EntityLogicalName="lnk_sim"
+                                    asOutput="true"
+                                    attributeOf="lnk_stato"
+                                    changeable="true"
+                                    displayName="null"
+                                    logicName="lnk_statoname"
+                                    requried="None"
+                                    schemaName="lnk_statoName"
+                                    validForRead="true" xsdType="string"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="versionnumber">
+                                    <value CRMType="BigInt"
+                                    EntityLogicalName="lnk_sim"
+                                    asOutput="true"
+                                    attributeOf="null"
+                                    changeable="true"
+                                    displayName="null"
+                                    logicName="versionnumber"
+                                    requried="None"
+                                    schemaName="VersionNumber"
+                                    validForRead="true" xsdType="long"/>
+                                    </entitymetadatatamap>
                                     <entitymetadatatamap key="createdonbehalfbyyominame">
                                     <value CRMType="String"
                                     EntityLogicalName="lnk_sim"
@@ -1059,6 +1296,30 @@
                                     logicName="createdonbehalfbyyominame"
                                     requried="SystemRequired"
                                     schemaName="CreatedOnBehalfByYomiName"
+                                    validForRead="true" xsdType="string"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="createdon">
+                                    <value CRMType="DateTime"
+                                    EntityLogicalName="lnk_sim"
+                                    asOutput="true"
+                                    attributeOf="null"
+                                    changeable="true"
+                                    displayName="Created On"
+                                    logicName="createdon"
+                                    requried="None"
+                                    schemaName="CreatedOn"
+                                    validForRead="true" xsdType="dateTime"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="organizationid">
+                                    <value CRMType="Lookup"
+                                    EntityLogicalName="lnk_sim"
+                                    asOutput="true"
+                                    attributeOf="null"
+                                    changeable="true"
+                                    displayName="Organization Id"
+                                    logicName="organizationid"
+                                    requried="None"
+                                    schemaName="OrganizationId"
                                     validForRead="true" xsdType="string"/>
                                     </entitymetadatatamap>
                                     <entitymetadatatamap key="modifiedonbehalfbyyominame">
@@ -1109,6 +1370,18 @@
                                     schemaName="ModifiedOnBehalfBy"
                                     validForRead="true" xsdType="string"/>
                                     </entitymetadatatamap>
+                                    <entitymetadatatamap key="modifiedby">
+                                    <value CRMType="Lookup"
+                                    EntityLogicalName="lnk_sim"
+                                    asOutput="true"
+                                    attributeOf="null"
+                                    changeable="true"
+                                    displayName="Modified By"
+                                    logicName="modifiedby"
+                                    requried="None"
+                                    schemaName="ModifiedBy"
+                                    validForRead="true" xsdType="string"/>
+                                    </entitymetadatatamap>
                                     <entitymetadatatamap key="lnk_imsi">
                                     <value CRMType="String"
                                     EntityLogicalName="lnk_sim"
@@ -1122,6 +1395,46 @@
                                     validForCreate="true"
                                     validForRead="true"
                                     validForUpdate="true" xsdType="string"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="lnk_datacambiostato">
+                                    <value CRMType="DateTime"
+                                    EntityLogicalName="lnk_sim"
+                                    asOutput="true"
+                                    attributeOf="null"
+                                    changeable="true"
+                                    displayName="Data Cambio Stato"
+                                    logicName="lnk_datacambiostato"
+                                    requried="None"
+                                    schemaName="lnk_datacambiostato"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="dateTime"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="ip_importid">
+                                    <value CRMType="String"
+                                    EntityLogicalName="lnk_sim"
+                                    asOutput="true"
+                                    attributeOf="null"
+                                    changeable="true"
+                                    displayName="Import ID"
+                                    logicName="ip_importid"
+                                    requried="None"
+                                    schemaName="ip_importid"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="string"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="createdbyname">
+                                    <value CRMType="String"
+                                    EntityLogicalName="lnk_sim"
+                                    asOutput="true"
+                                    attributeOf="createdby"
+                                    changeable="true"
+                                    displayName="null"
+                                    logicName="createdbyname"
+                                    requried="None"
+                                    schemaName="CreatedByName"
+                                    validForRead="true" xsdType="string"/>
                                     </entitymetadatatamap>
                                     </value>
                                 </properties>

@@ -752,10 +752,10 @@
         <tibex:namespaceItem
             namespace="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrievemultiple+30f54bac-cc52-44ff-b6e0-1f4bea566861+input" prefix="tns2"/>
     </tibex:NamespaceRegistry>
-    <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.example.org/CRM_SimCheck"/>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://it.linkem/core/lehf/common/AuditTypes/0100"/>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://it.linkem/core/lehf/common/xsd/loggingwrapper/internal"/>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://it.linkem/core/lehf/common/loggerType/0100"/>
+    <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.example.org/CRM_SimCheck"/>
     <bpws:variables>
         <bpws:variable element="ns:ProcessContext"
             name="_processContext" sca-bpel:internal="true"/>
