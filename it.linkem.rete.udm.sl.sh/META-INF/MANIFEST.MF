@@ -16,7 +16,9 @@ Require-Capability: com.tibco.bw.model; filter:="(name=bwext)",
  com.tibco.bw.palette; filter:="(name=bw.http)",
  com.tibco.bw.palette; filter:="(name=bw.parse)",
  com.tibco.bw.sharedresource.model; filter:="(name=bw.dataformat)",
- com.tibco.bw.sharedresource.model; filter:="(name=bw.httpclient)"
+ com.tibco.bw.sharedresource.model; filter:="(name=bw.httpclient)",
+ com.tibco.bw.sharedresource.model; filter:="(name=bw.cred)",
+ com.tibco.bw.sharedresource.model; filter:="(name=bw.sslclient)"
 TIBCO-BW-ModuleSharedVariables: META-INF/module.msv
 Provide-Capability: com.tibco.bw.module; name="it.linkem.rete.udm.sl.sh"; version:Version="1.0.0",
  com.tibco.bw.schemas; ns="",
