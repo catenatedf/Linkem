@@ -1,0 +1,1629 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpws:process exitOnStandardFault="no"
+    name="it.linkem.crm.microsoftDynamics.sl.GetSIMByGuidTDC"
+    suppressJoinFailure="yes"
+    targetNamespace="http://xmlns.example.com/20210916162108"
+    xmlns:bpws="http://docs.oasis-open.org/wsbpel/2.0/process/executable"
+    xmlns:info="http://www.tibco.com/bw/process/info"
+    xmlns:ns="http://www.tibco.com/pe/EngineTypes"
+    xmlns:ns0="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrievemultiple+97b73aed-a75b-422e-9abd-79664aac5b5b+input"
+    xmlns:ns1="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrievemultiple+97b73aed-a75b-422e-9abd-79664aac5b5b+output"
+    xmlns:ns10="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrievemultiple+523e9cdd-cd59-4df5-be3c-4dc00cb8e50d+input"
+    xmlns:ns11="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrievemultiple+523e9cdd-cd59-4df5-be3c-4dc00cb8e50d+output"
+    xmlns:ns12="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrievemultiple+81fe79b6-1303-474d-89fa-a3f312c04ebd+input"
+    xmlns:ns13="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrievemultiple+81fe79b6-1303-474d-89fa-a3f312c04ebd+output"
+    xmlns:ns14="http://it/linkem/5g/MDYN/CRM_GetSIMFromGuid"
+    xmlns:ns15="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrieve+2e5c4a39-4399-4a96-855e-45b81b768b80+input"
+    xmlns:ns16="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrieve+2e5c4a39-4399-4a96-855e-45b81b768b80+output"
+    xmlns:ns17="http://tns.tibco.com/bw/palette/internal/activityerror+bw.dynamicscrm.RetrieveEntity"
+    xmlns:ns18="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrievemultiple+e7ad67e2-8605-4919-93bc-8252201c27c8+input"
+    xmlns:ns19="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrievemultiple+e7ad67e2-8605-4919-93bc-8252201c27c8+output"
+    xmlns:ns2="http://tns.tibco.com/bw/palette/internal/activityerror+bw.dynamicscrm.RetrieveMultipleEntity"
+    xmlns:ns20="http://it.linkem/crm/getSIMByGuidTDC/sl/xsd"
+    xmlns:ns3="http://www.example.org/CRM_SimCheck"
+    xmlns:ns4="http://it.linkem/core/lehf/common/AuditTypes/0100"
+    xmlns:ns5="http://it.linkem/core/lehf/common/xsd/loggingwrapper/internal"
+    xmlns:ns6="http://it.linkem/core/lehf/common/loggerType/0100"
+    xmlns:ns7="http://tns.tibco.com/bw/palette/internal/activityerror+bw.internal.end"
+    xmlns:ns8="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrievemultiple+30f54bac-cc52-44ff-b6e0-1f4bea566861+input"
+    xmlns:ns9="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrievemultiple+30f54bac-cc52-44ff-b6e0-1f4bea566861+output"
+    xmlns:sca="http://docs.oasis-open.org/ns/opencsa/sca/200912"
+    xmlns:sca-bpel="http://docs.oasis-open.org/ns/opencsa/sca-bpel/200801"
+    xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"
+    xmlns:tibprop="http://ns.tibco.com/bw/property" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <tibex:Types>
+        <xs:schema attributeFormDefault="unqualified"
+            elementFormDefault="qualified"
+            targetNamespace="http://www.tibco.com/pe/EngineTypes"
+            xmlns:tns="http://www.tibco.com/pe/EngineTypes" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <xs:complexType block="extension restriction"
+                final="extension restriction" name="ErrorReport">
+                <xs:sequence>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" name="StackTrace" type="xs:string"/>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" name="Msg" type="xs:string"/>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" name="FullClass" type="xs:string"/>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" name="Class" type="xs:string"/>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" name="ProcessStack" type="xs:string"/>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" minOccurs="0" name="MsgCode" type="xs:string"/>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" minOccurs="0" name="Data" type="tns:anydata"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType block="extension restriction"
+                final="extension restriction" name="OptionalErrorReport">
+                <xs:sequence>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" minOccurs="0"
+                        name="StackTrace" type="xs:string"/>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" minOccurs="0" name="Msg" type="xs:string"/>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" minOccurs="0"
+                        name="FullClass" type="xs:string"/>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" minOccurs="0" name="Class" type="xs:string"/>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" minOccurs="0"
+                        name="ProcessStack" type="xs:string"/>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" minOccurs="0" name="MsgCode" type="xs:string"/>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" minOccurs="0" name="Data" type="tns:anydata"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType block="extension restriction"
+                final="extension restriction" name="FaultDetail">
+                <xs:sequence>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" name="ActivityName" type="xs:string"/>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" minOccurs="0" name="Data" type="tns:anydata"/>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" name="Msg" type="xs:string"/>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" name="MsgCode" type="xs:string"/>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" name="ProcessStack" type="xs:string"/>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" name="StackTrace" type="xs:string"/>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" name="FullClass" type="xs:string"/>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" name="Class" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType block="extension restriction"
+                final="extension restriction" name="ProcessContext">
+                <xs:sequence>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" name="JobId" type="xs:string"/>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" name="ApplicationName" type="xs:string"/>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" name="EngineName" type="xs:string"/>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" name="ProcessInstanceId" type="xs:string"/>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" minOccurs="0"
+                        name="CustomJobId" type="xs:string"/>
+                    <!--xs:element name="RestartedFromCheckpoint" form="unqualified" block="extension 
+						restriction substitution" type="xs:boolean"/ -->
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" maxOccurs="unbounded"
+                        minOccurs="0" name="TrackingInfo" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType block="extension restriction"
+                final="extension restriction" name="anydata">
+                <xs:sequence>
+                    <xs:any namespace="##any" processContents="lax"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element block="extension restriction substitution"
+                final="extension restriction" name="OptionalErrorReport" type="tns:OptionalErrorReport"/>
+            <xs:element block="extension restriction substitution"
+                final="extension restriction" name="ErrorReport" type="tns:ErrorReport"/>
+            <xs:element block="extension restriction substitution"
+                final="extension restriction" name="FaultDetail" type="tns:FaultDetail"/>
+            <xs:element block="extension restriction substitution"
+                final="extension restriction" name="ProcessContext" type="tns:ProcessContext"/>
+            <xs:element block="extension restriction substitution"
+                final="extension restriction" name="CorrelationValue" type="xs:string"/>
+        </xs:schema>
+        <schema attributeFormDefault="unqualified"
+            elementFormDefault="unqualified"
+            targetNamespace="http://schemas.tibco.com/bw/pe/plugin/5.0/exceptions"
+            version="" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.tibco.com/bw/pe/plugin/5.0/exceptions">
+            <complexType name="ActivityExceptionType">
+                <sequence>
+                    <element name="msg" type="string"/>
+                    <element minOccurs="0" name="msgCode" type="string"/>
+                </sequence>
+            </complexType>
+            <element name="ActivityException" type="tns:ActivityExceptionType"/>
+            <complexType name="ActivityTimedOutExceptionType">
+                <complexContent>
+                    <extension base="tns:ActivityExceptionType"/>
+                </complexContent>
+            </complexType>
+            <element name="ActivityTimedOutException" type="tns:ActivityTimedOutExceptionType"/>
+            <complexType name="DuplicateKeyExceptionType">
+                <complexContent>
+                    <extension base="tns:ActivityExceptionType">
+                        <sequence>
+                            <element name="duplicateKey" type="string"/>
+                            <element minOccurs="0" name="previousJobID" type="string"/>
+                        </sequence>
+                    </extension>
+                </complexContent>
+            </complexType>
+            <element name="DuplicateKeyException" type="tns:DuplicateKeyExceptionType"/>
+        </schema>
+        <schema
+            targetNamespace="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/fault"
+            xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/fault">
+            <complexType name="ActivityFaultData">
+                <sequence>
+                    <element maxOccurs="unbounded" minOccurs="0"
+                        name="DynamicsCRMActivityFaultException" type="tns:DynamicsCRMActivityFaultException"/>
+                </sequence>
+            </complexType>
+            <element name="ActivityFaultData" type="tns:ActivityFaultData"/>
+            <complexType name="DynamicsCRMActivityFaultException">
+                <sequence>
+                    <element maxOccurs="1" minOccurs="0" name="message" type="string"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="messageCode" type="string"/>
+                </sequence>
+            </complexType>
+        </schema>
+        <schema elementFormDefault="unqualified"
+            targetNamespace="http://tns.tibco.com/bw/palette/internal/activityerror+bw.internal.end"
+            xmlns="http://www.w3.org/2001/XMLSchema"
+            xmlns:Q1="http://it.linkem/core/lehf/common/AuditTypes/0100" xmlns:tns="http://tns.tibco.com/bw/palette/internal/activityerror+bw.internal.end">
+            <import namespace="http://it.linkem/core/lehf/common/AuditTypes/0100"/>
+            <element name="ActivityErrorData" type="tns:ActivityErrorDataType"/>
+            <complexType name="ActivityErrorDataType">
+                <choice>
+                    <element maxOccurs="1" minOccurs="0" ref="Q1:LogAudit"/>
+                </choice>
+            </complexType>
+        </schema>
+        <schema
+            targetNamespace="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrievemultiple+e7ad67e2-8605-4919-93bc-8252201c27c8+input"
+            xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrievemultiple+e7ad67e2-8605-4919-93bc-8252201c27c8+input">
+            <complexType name="Entities">
+                <sequence>
+                    <element maxOccurs="1" minOccurs="0" name="lnk_sim" type="tns:lnk_sim"/>
+                </sequence>
+            </complexType>
+            <element name="Entities" type="tns:Entities"/>
+            <complexType name="lnk_sim">
+                <sequence>
+                    <element maxOccurs="1" minOccurs="1" name="FetchXML" type="string"/>
+                </sequence>
+            </complexType>
+        </schema>
+        <schema
+            targetNamespace="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrievemultiple+e7ad67e2-8605-4919-93bc-8252201c27c8+output"
+            xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrievemultiple+e7ad67e2-8605-4919-93bc-8252201c27c8+output">
+            <complexType name="Entities">
+                <sequence>
+                    <element maxOccurs="unbounded" minOccurs="0"
+                        name="List" type="tns:List"/>
+                </sequence>
+            </complexType>
+            <element name="Entities" type="tns:Entities"/>
+            <complexType name="List">
+                <sequence>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="pagenumber" type="integer"/>
+                    <element maxOccurs="1" minOccurs="0" name="pagesize" type="integer"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="pagingcookie" type="string"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="totalcount" type="integer"/>
+                    <element maxOccurs="unbounded" minOccurs="0"
+                        name="lnk_sim" type="tns:lnk_sim"/>
+                </sequence>
+            </complexType>
+            <complexType name="lnk_sim">
+                <sequence>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="createdonbehalfby" type="tns:createdonbehalfby"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="importsequencenumber" type="integer"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="lnk_dataassegnazione" type="dateTime"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="createdbyyominame" type="string"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="lnk_datafineassegnazione" type="dateTime"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="lnk_stato" type="integer"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="organizationidname" type="string"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="modifiedbyname" type="string"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="utcconversiontimezonecode" type="integer"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="statecode" type="integer"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="statecodename" type="string"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="statuscode" type="integer"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="lnk_contrattoidname" type="string"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="createdby" type="tns:createdby"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="overriddencreatedon" type="dateTime"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="lnk_profilo" type="string"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="lnk_contrattoid" type="tns:lnk_contrattoid"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="lnk_simid" type="string"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="lnk_iccid" type="string"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="timezoneruleversionnumber" type="integer"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="createdonbehalfbyname" type="string"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="modifiedbyyominame" type="string"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="statuscodename" type="string"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="lnk_statoname" type="string"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="versionnumber" type="long"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="createdonbehalfbyyominame" type="string"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="createdon" type="dateTime"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="organizationid" type="tns:organizationid"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="modifiedonbehalfbyyominame" type="string"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="modifiedon" type="dateTime"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="modifiedonbehalfbyname" type="string"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="modifiedonbehalfby" type="tns:modifiedonbehalfby"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="modifiedby" type="tns:modifiedby"/>
+                    <element maxOccurs="1" minOccurs="0" name="lnk_imsi" type="string"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="lnk_datacambiostato" type="dateTime"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="ip_importid" type="string"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="createdbyname" type="string"/>
+                </sequence>
+            </complexType>
+            <complexType name="createdonbehalfby">
+                <sequence>
+                    <element maxOccurs="1" minOccurs="1"
+                        name="entitylogicname" type="string"/>
+                    <element maxOccurs="1" minOccurs="1" name="entityid" type="string"/>
+                </sequence>
+            </complexType>
+            <complexType name="createdby">
+                <sequence>
+                    <element maxOccurs="1" minOccurs="1"
+                        name="entitylogicname" type="string"/>
+                    <element maxOccurs="1" minOccurs="1" name="entityid" type="string"/>
+                </sequence>
+            </complexType>
+            <complexType name="lnk_contrattoid">
+                <sequence>
+                    <element maxOccurs="1" minOccurs="1"
+                        name="entitylogicname" type="string"/>
+                    <element maxOccurs="1" minOccurs="1" name="entityid" type="string"/>
+                </sequence>
+            </complexType>
+            <complexType name="organizationid">
+                <sequence>
+                    <element maxOccurs="1" minOccurs="1"
+                        name="entitylogicname" type="string"/>
+                    <element maxOccurs="1" minOccurs="1" name="entityid" type="string"/>
+                </sequence>
+            </complexType>
+            <complexType name="modifiedonbehalfby">
+                <sequence>
+                    <element maxOccurs="1" minOccurs="1"
+                        name="entitylogicname" type="string"/>
+                    <element maxOccurs="1" minOccurs="1" name="entityid" type="string"/>
+                </sequence>
+            </complexType>
+            <complexType name="modifiedby">
+                <sequence>
+                    <element maxOccurs="1" minOccurs="1"
+                        name="entitylogicname" type="string"/>
+                    <element maxOccurs="1" minOccurs="1" name="entityid" type="string"/>
+                </sequence>
+            </complexType>
+        </schema>
+        <schema elementFormDefault="unqualified"
+            targetNamespace="http://tns.tibco.com/bw/palette/internal/activityerror+bw.dynamicscrm.RetrieveMultipleEntity"
+            xmlns="http://www.w3.org/2001/XMLSchema"
+            xmlns:Q1="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/fault" xmlns:tns="http://tns.tibco.com/bw/palette/internal/activityerror+bw.dynamicscrm.RetrieveMultipleEntity">
+            <import namespace="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/fault"/>
+            <element name="ActivityErrorData" type="tns:ActivityErrorDataType"/>
+            <complexType name="ActivityErrorDataType">
+                <choice>
+                    <element maxOccurs="1" minOccurs="0" ref="Q1:ActivityFaultData"/>
+                </choice>
+            </complexType>
+        </schema>
+    </tibex:Types>
+    <tibex:ProcessInfo callable="true" createdBy="flavi"
+        createdOn="Tue Sep 07 14:27:33 CEST 2021" description=""
+        extraErrorVars="true" modifiers="public"
+        productVersion="2.6.1 V57 2021-02-13" scalable="true"
+        singleton="true" stateless="false" type="IT"/>
+    <tibex:ProcessInterface context=""
+        input="{http://it.linkem/crm/getSIMByGuidTDC/sl/xsd}GetSimById_Input" output="{http://it/linkem/5g/MDYN/CRM_GetSIMFromGuid}GetSimById_Output">
+        <tibex:errorList>
+            <tibex:error
+                error="{http://it.linkem/core/lehf/common/AuditTypes/0100}LogAudit" name="LogAudit"/>
+        </tibex:errorList>
+    </tibex:ProcessInterface>
+    <tibex:ProcessTemplateConfigurations/>
+    <notation:Diagram measurementUnit="Pixel" type="BWProcess"
+        xmlns:bwnotation="http://tns.tibco.com/bw/runtime/BWNotation"
+        xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <children type="2001">
+            <children type="5001">
+                <element href="//0/@process"/>
+            </children>
+            <children type="3002">
+                <styles xsi:type="notation:SortingStyle"/>
+                <styles xsi:type="notation:FilteringStyle"/>
+                <element href="//0/@process"/>
+            </children>
+            <children type="3003">
+                <styles xsi:type="notation:SortingStyle"/>
+                <styles xsi:type="notation:FilteringStyle"/>
+                <element href="//0/@process"/>
+            </children>
+            <children type="3004">
+                <children type="4018">
+                    <children type="3018">
+                        <children type="4020">
+                            <children type="3020">
+                                <children type="4005">
+                                    <children type="3007">
+                                    <children type="4002">
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.0"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.0"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.0"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.0"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <styles fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.0"/>
+                                    <layoutConstraint x="-45"
+                                    xsi:type="notation:Bounds" y="124"/>
+                                    </children>
+                                    <children type="4002">
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.1"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.1"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.1"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.1"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <styles fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.1"/>
+                                    <layoutConstraint x="837"
+                                    xsi:type="notation:Bounds" y="124"/>
+                                    </children>
+                                    <children type="4002">
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.2"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.2"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.2"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.2"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <styles fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.2"/>
+                                    <layoutConstraint
+                                    width="168" x="196"
+                                    xsi:type="notation:Bounds" y="124"/>
+                                    </children>
+                                    <children type="4002">
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.3"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.3"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.3"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.3"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <styles fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.3"/>
+                                    <layoutConstraint width="94"
+                                    x="718"
+                                    xsi:type="notation:Bounds" y="124"/>
+                                    </children>
+                                    <children type="4002 bw.internal.getSharedVariable">
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.4"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.4"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.4"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.4"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <styles fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.4"/>
+                                    <layoutConstraint
+                                    height="40" width="40"
+                                    x="99"
+                                    xsi:type="notation:Bounds" y="124"/>
+                                    </children>
+                                    <children type="4002 bw.dynamicscrm.RetrieveMultipleEntity">
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <styles fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.5"/>
+                                    <layoutConstraint
+                                    height="40" width="180"
+                                    x="545"
+                                    xsi:type="notation:Bounds" y="124"/>
+                                    </children>
+                                    <children type="4002 bw.generalactivities.bwassign">
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <styles fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.6"/>
+                                    <layoutConstraint
+                                    height="40" width="40"
+                                    x="310"
+                                    xsi:type="notation:Bounds" y="244"/>
+                                    </children>
+                                    <children type="4002 bw.generalactivities.bwassign">
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <styles fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.7"/>
+                                    <layoutConstraint
+                                    height="40" width="40"
+                                    x="431"
+                                    xsi:type="notation:Bounds" y="124"/>
+                                    </children>
+                                    <styles xsi:type="notation:DrawerStyle"/>
+                                    <styles xsi:type="notation:SortingStyle"/>
+                                    <styles xsi:type="notation:FilteringStyle"/>
+                                    <element href="//0/@process/@activity/@activity"/>
+                                    </children>
+                                    <styles fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <styles backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+                                    <styles xsi:type="bwnotation:ResizingStyle"/>
+                                    <element href="//0/@process/@activity/@activity"/>
+                                    <layoutConstraint height="384"
+                                    width="1148" xsi:type="notation:Bounds"/>
+                                </children>
+                                <styles xsi:type="notation:SortingStyle"/>
+                                <styles xsi:type="notation:FilteringStyle"/>
+                                <element href="//0/@process/@activity"/>
+                            </children>
+                            <styles fontName="Segoe UI" lineColor="0" xsi:type="notation:ShapeStyle"/>
+                            <styles xsi:type="bwnotation:BackgroundStyle"/>
+                            <styles xsi:type="bwnotation:ResizingStyle"/>
+                            <element href="//0/@process/@activity"/>
+                            <layoutConstraint height="384" width="812" xsi:type="notation:Bounds"/>
+                        </children>
+                        <styles xsi:type="notation:SortingStyle"/>
+                        <styles xsi:type="notation:FilteringStyle"/>
+                        <element href="//0/@process/@activity"/>
+                    </children>
+                    <styles fontName="Segoe UI" lineColor="0" xsi:type="notation:ShapeStyle"/>
+                    <styles xsi:type="bwnotation:BackgroundStyle"/>
+                    <styles xsi:type="bwnotation:ResizingStyle"/>
+                    <element href="//0/@process/@activity"/>
+                    <layoutConstraint height="408" width="812" x="1"
+                        xsi:type="notation:Bounds" y="1"/>
+                </children>
+                <styles xsi:type="notation:SortingStyle"/>
+                <styles xsi:type="notation:FilteringStyle"/>
+                <element href="//0/@process"/>
+            </children>
+            <styles fontName="Segoe UI" lineColor="0" xsi:type="notation:ShapeStyle"/>
+            <element href="//0/@process"/>
+            <layoutConstraint height="460" width="1493" xsi:type="notation:Bounds"/>
+        </children>
+        <styles xsi:type="notation:DiagramStyle"/>
+        <element href="//0"/>
+        <edges
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0"
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.4" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.0"/>
+            <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.4"
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.1"/>
+            <bendpoints points="[25, 7, -242, -65]$[214, 58, -53, -14]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.3"
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.1" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.2"/>
+            <bendpoints points="[69, -24, -106, 38]$[151, -53, -24, 9]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2"
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.6" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.3"/>
+            <bendpoints points="[63, 25, -188, -73]$[188, 74, -63, -24]" xsi:type="notation:RelativeBendpoints"/>
+            <targetAnchor id="(0.15447154471544716,0.37333333333333335)" xsi:type="notation:IdentityAnchor"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.5"
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.3" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.4"/>
+            <bendpoints points="[25, -14, -138, 78]$[139, -78, -24, 14]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.6"
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.7" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.5"/>
+            <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.7"
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.5" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.6"/>
+            <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+    </notation:Diagram>
+    <tibex:NamespaceRegistry enabled="true">
+        <tibex:namespaceItem
+            namespace="http://www.example.org/CRM_SimCheck" prefix="tns"/>
+        <tibex:namespaceItem
+            namespace="http://it.linkem/core/lehf/common/AuditTypes/0100" prefix="tns9"/>
+        <tibex:namespaceItem
+            namespace="http://www.tibco.com/bw/xpath/bw-custom-functions" prefix="bw"/>
+        <tibex:namespaceItem
+            namespace="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrievemultiple+523e9cdd-cd59-4df5-be3c-4dc00cb8e50d+input" prefix="tns1"/>
+        <tibex:namespaceItem
+            namespace="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrievemultiple+30f54bac-cc52-44ff-b6e0-1f4bea566861+input" prefix="tns2"/>
+        <tibex:namespaceItem
+            namespace="http://it/linkem/5g/MDYN/CRM_GetSIMFromGuid" prefix="ns"/>
+        <tibex:namespaceItem
+            namespace="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrieve+2e5c4a39-4399-4a96-855e-45b81b768b80+input" prefix="tns3"/>
+        <tibex:namespaceItem
+            namespace="http://www.tibco.com/bw/xslt/custom-functions" prefix="tib"/>
+        <tibex:namespaceItem
+            namespace="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrievemultiple+e7ad67e2-8605-4919-93bc-8252201c27c8+input" prefix="tns4"/>
+    </tibex:NamespaceRegistry>
+    <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://it/linkem/5g/MDYN/CRM_GetSIMFromGuid"/>
+    <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://it.linkem/core/lehf/common/xsd/loggingwrapper/internal"/>
+    <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://it.linkem/core/lehf/common/loggerType/0100"/>
+    <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://it.linkem/core/lehf/common/AuditTypes/0100"/>
+    <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://it.linkem/crm/getSIMByGuidTDC/sl/xsd"/>
+    <bpws:variables>
+        <bpws:variable element="ns:ProcessContext"
+            name="_processContext" sca-bpel:internal="true"/>
+        <bpws:variable name="dynamicsCRMConnection"
+            sca-bpel:hotUpdate="false" sca-bpel:privateProperty="true"
+            sca-bpel:property="yes"
+            sca-bpel:sharedResourceType="{http://ns.tibco.com/bw/palette/dynamicscrmconnection}Dynamicscrm" type="xsd:string">
+            <bpws:from>
+                <bpws:literal>it.linkem.crm.microsoftdynamics.sl.sh.DynamicsCRMConnection</bpws:literal>
+            </bpws:from>
+        </bpws:variable>
+        <bpws:variable element="ns:ErrorReport" name="_error" sca-bpel:internal="true"/>
+        <bpws:variable element="ns20:GetSimById_Input" name="Start"
+            sca-bpel:internal="true" tibex:parameter="in"/>
+        <bpws:variable name="INFO_Severity" sca-bpel:hotUpdate="false"
+            sca-bpel:privateProperty="true" sca-bpel:property="yes"
+            tibex:propertySource="//it.linkem.core.lehf.common.sh///it.linkem.core.lehf.common.sh/Logging/INFO_SEVERITY" type="xsd:string"/>
+        <bpws:variable element="ns4:LogAudit" name="LogEnd-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns5:LEHF_Output" name="LogEnd" sca-bpel:internal="true"/>
+        <bpws:variable element="ns6:loggerParams" name="GetLoggerParams" sca-bpel:internal="true"/>
+        <bpws:variable name="ERROR_Severity" sca-bpel:hotUpdate="false"
+            sca-bpel:privateProperty="true" sca-bpel:property="yes"
+            tibex:propertySource="//it.linkem.core.lehf.common.sh///it.linkem.core.lehf.common.sh/Logging/ERROR_SEVERITY" type="xsd:string"/>
+        <bpws:variable name="Business_Exception"
+            sca-bpel:hotUpdate="false" sca-bpel:privateProperty="true"
+            sca-bpel:property="yes"
+            tibex:propertySource="//it.linkem.core.lehf.common.sh///it.linkem.core.lehf.common.sh/Logging/Business_Exception" type="xsd:string"/>
+        <bpws:variable name="System_Exception"
+            sca-bpel:hotUpdate="false" sca-bpel:privateProperty="true"
+            sca-bpel:property="yes"
+            tibex:propertySource="//it.linkem.core.lehf.common.sh///it.linkem.core.lehf.common.sh/Logging/System_Exception" type="xsd:string"/>
+        <bpws:variable element="ns7:ActivityErrorData" name="_error_End" sca-bpel:internal="true"/>
+        <bpws:variable element="ns14:GetSimById_Output" name="End-input"
+            sca-bpel:internal="true" tibex:parameter="out"/>
+        <bpws:variable name="DEBUG_Severity" sca-bpel:hotUpdate="false"
+            sca-bpel:privateProperty="true" sca-bpel:property="yes"
+            tibex:propertySource="//it.linkem.core.lehf.common.sh///it.linkem.core.lehf.common.sh/Logging/DEBUG_SEVERITY" type="xsd:string"/>
+        <bpws:variable element="ns4:LogAudit" name="LogStart-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns5:LEHF_Output" name="LogStart" sca-bpel:internal="true"/>
+        <bpws:variable element="ns18:Entities"
+            name="GetSIMByGuidTDC-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns19:Entities" name="GetSIMByGuidTDC" sca-bpel:internal="true"/>
+        <bpws:variable element="ns2:ActivityErrorData"
+            name="_error_GetSIMByGuidTDC" sca-bpel:internal="true"/>
+        <bpws:variable name="idContratto" type="xsd:string"/>
+        <bpws:variable name="guid_TDC" type="xsd:string"/>
+    </bpws:variables>
+    <bpws:extensions>
+        <bpws:extension mustUnderstand="no" namespace="http://www.eclipse.org/gmf/runtime/1.0.2/notation"/>
+        <bpws:extension mustUnderstand="no" namespace="http://www.tibco.com/bw/process/info"/>
+        <bpws:extension mustUnderstand="no" namespace="http://docs.oasis-open.org/ns/opencsa/sca-bpel/200801"/>
+        <bpws:extension mustUnderstand="no" namespace="http://docs.oasis-open.org/ns/opencsa/sca/200912"/>
+        <bpws:extension mustUnderstand="no" namespace="http://ns.tibco.com/bw/property"/>
+        <bpws:extension mustUnderstand="no" namespace="http://www.tibco.com/bpel/2007/extensions"/>
+    </bpws:extensions>
+    <bpws:scope name="scope">
+        <bpws:flow name="flow">
+            <bpws:links>
+                <bpws:link name="StartToGetLoggerParams" tibex:linkType="SUCCESS"/>
+                <bpws:link
+                    name="GetLoggerParamsToLog_Start_GetIMSIByAccount" tibex:linkType="SUCCESS"/>
+                <bpws:link name="Log_End_GetIMSIByAccountToEnd" tibex:linkType="SUCCESS"/>
+                <bpws:link name="LogStartToRetrieveMultipleEntities" tibex:linkType="SUCCESS"/>
+                <bpws:link name="RetrieveMultipleEntitiesToLogEnd" tibex:linkType="SUCCESS"/>
+                <bpws:link name="AssignToGetSIMByGuidTDC" tibex:linkType="SUCCESS"/>
+                <bpws:link name="Assign1ToGetSIMByGuidTDC" tibex:linkType="SUCCESS"/>
+            </bpws:links>
+            <bpws:extensionActivity>
+                <tibex:receiveEvent createInstance="yes"
+                    eventTimeout="0" name="Start"
+                    tibex:xpdlId="290e44ae-1218-4582-93ab-3606191d41e9"
+                    variable="Start" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                    <bpws:sources>
+                        <bpws:source linkName="StartToGetLoggerParams"/>
+                    </bpws:sources>
+                    <tibex:eventSource>
+                        <tibex:StartEvent xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
+                    </tibex:eventSource>
+                </tibex:receiveEvent>
+            </bpws:extensionActivity>
+            <bpws:extensionActivity>
+                <tibex:activityExtension inputVariable="End-input"
+                    name="End"
+                    tibex:xpdlId="6e23e1b3-274a-4f62-8440-46f5bfc15b90" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                    <bpws:targets>
+                        <bpws:target linkName="Log_End_GetIMSIByAccountToEnd"/>
+                    </bpws:targets>
+                    <tibex:inputBindings>
+                        <tibex:inputBinding
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:ns=&quot;http://it/linkem/5g/MDYN/CRM_GetSIMFromGuid&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;GetSIMByGuidTDC&quot;/>&lt;xsl:template name=&quot;End-input&quot; match=&quot;/&quot;>&lt;ns:GetSimById_Output>&lt;xsl:for-each select=&quot;$GetSIMByGuidTDC/List/lnk_sim&quot;>&lt;ns:Sim>&lt;xsl:copy-of select=&quot;createdonbehalfby&quot;/>&lt;xsl:if test=&quot;lnk_dataassegnazione&quot;>&lt;lnk_dataassegnazione>&lt;xsl:value-of select=&quot;lnk_dataassegnazione&quot;/>&lt;/lnk_dataassegnazione>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_stato&quot;>&lt;lnk_stato>&lt;xsl:value-of select=&quot;lnk_stato&quot;/>&lt;/lnk_stato>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_contrattoidname&quot;>&lt;lnk_contrattoidname>&lt;xsl:value-of select=&quot;lnk_contrattoidname&quot;/>&lt;/lnk_contrattoidname>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_profilo&quot;>&lt;lnk_profilo>&lt;xsl:value-of select=&quot;lnk_profilo&quot;/>&lt;/lnk_profilo>&lt;/xsl:if>&lt;xsl:copy-of select=&quot;lnk_contrattoid&quot;/>&lt;xsl:if test=&quot;lnk_simid&quot;>&lt;lnk_simid>&lt;xsl:value-of select=&quot;lnk_simid&quot;/>&lt;/lnk_simid>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_iccid&quot;>&lt;lnk_iccid>&lt;xsl:value-of select=&quot;lnk_iccid&quot;/>&lt;/lnk_iccid>&lt;/xsl:if>&lt;xsl:if test=&quot;createdonbehalfbyname&quot;>&lt;createdonbehalfbyname>&lt;xsl:value-of select=&quot;createdonbehalfbyname&quot;/>&lt;/createdonbehalfbyname>&lt;/xsl:if>&lt;xsl:if test=&quot;modifiedbyyominame&quot;>&lt;modifiedbyyominame>&lt;xsl:value-of select=&quot;modifiedbyyominame&quot;/>&lt;/modifiedbyyominame>&lt;/xsl:if>&lt;xsl:if test=&quot;createdonbehalfbyyominame&quot;>&lt;createdonbehalfbyyominame>&lt;xsl:value-of select=&quot;createdonbehalfbyyominame&quot;/>&lt;/createdonbehalfbyyominame>&lt;/xsl:if>&lt;xsl:if test=&quot;modifiedonbehalfbyyominame&quot;>&lt;modifiedonbehalfbyyominame>&lt;xsl:value-of select=&quot;modifiedonbehalfbyyominame&quot;/>&lt;/modifiedonbehalfbyyominame>&lt;/xsl:if>&lt;xsl:if test=&quot;modifiedon&quot;>&lt;modifiedon>&lt;xsl:value-of select=&quot;modifiedon&quot;/>&lt;/modifiedon>&lt;/xsl:if>&lt;xsl:if test=&quot;modifiedonbehalfbyname&quot;>&lt;modifiedonbehalfbyname>&lt;xsl:value-of select=&quot;modifiedonbehalfbyname&quot;/>&lt;/modifiedonbehalfbyname>&lt;/xsl:if>&lt;xsl:copy-of select=&quot;modifiedonbehalfby&quot;/>&lt;xsl:if test=&quot;lnk_imsi&quot;>&lt;lnk_imsi>&lt;xsl:value-of select=&quot;lnk_imsi&quot;/>&lt;/lnk_imsi>&lt;/xsl:if>&lt;/ns:Sim>&lt;/xsl:for-each>&lt;/ns:GetSimById_Output>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                    </tibex:inputBindings>
+                    <tibex:config>
+                        <bwext:BWActivity
+                            activityTypeID="bw.internal.end"
+                            xmlns:activityconfig="http://tns.tibco.com/bw/model/activityconfig"
+                            xmlns:bwext="http://tns.tibco.com/bw/model/core/bwext"
+                            xmlns:internalactivities="http://ns.tibco.com/bw/core/internalactivity" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                            <activityConfig>
+                                <properties name="config" xsi:type="activityconfig:EMFProperty">
+                                    <type href="http://ns.tibco.com/bw/core/internalactivity#//End"/>
+                                    <value xsi:type="internalactivities:End"/>
+                                </properties>
+                            </activityConfig>
+                        </bwext:BWActivity>
+                    </tibex:config>
+                </tibex:activityExtension>
+            </bpws:extensionActivity>
+            <bpws:extensionActivity>
+                <tibex:extActivity inputVariable="LogStart-input"
+                    name="LogStart" outputVariable="LogStart"
+                    tibex:xpdlId="14db39c8-9179-4170-bc25-7337a140afe4"
+                    type="bw.generalactivities.callprocess" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                    <bpws:targets>
+                        <bpws:target linkName="GetLoggerParamsToLog_Start_GetIMSIByAccount"/>
+                    </bpws:targets>
+                    <bpws:sources>
+                        <bpws:source linkName="LogStartToRetrieveMultipleEntities">
+                            <tibex:DesignExpression/>
+                        </bpws:source>
+                    </bpws:sources>
+                    <tibex:inputBindings>
+                        <tibex:inputBinding coercion=""
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns9=&quot;http://it.linkem/core/lehf/common/AuditTypes/0100&quot; xmlns:bw=&quot;http://www.tibco.com/bw/xpath/bw-custom-functions&quot; xmlns:tib=&quot;http://www.tibco.com/bw/xslt/custom-functions&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;GetLoggerParams&quot;/>&lt;xsl:param name=&quot;Start&quot;/>&lt;xsl:template name=&quot;LogStart-input&quot; match=&quot;/&quot;>&lt;tns9:LogAudit>&lt;auditElement>&lt;APPLICATION_NAME>&lt;xsl:value-of select=&quot;$GetLoggerParams/APPLICATION_NAME&quot;/>&lt;/APPLICATION_NAME>&lt;xsl:if test=&quot;$GetLoggerParams/SOURCESYSTEM&quot;>&lt;SOURCESYSTEM>&lt;xsl:value-of select=&quot;$GetLoggerParams/SOURCESYSTEM&quot;/>&lt;/SOURCESYSTEM>&lt;/xsl:if>&lt;STARTTIMESTAMP>&lt;xsl:value-of select=&quot;current-dateTime()&quot;/>&lt;/STARTTIMESTAMP>&lt;SEVERITY>&lt;xsl:value-of select=&quot;$DEBUG_Severity&quot;/>&lt;/SEVERITY>&lt;TRACKID>&lt;xsl:value-of select=&quot;$GetLoggerParams/TRACKID&quot;/>&lt;/TRACKID>&lt;BUSINESSKEY>&lt;xsl:value-of select=&quot;$GetLoggerParams/BUSINESSKEY&quot;/>&lt;/BUSINESSKEY>&lt;PROCESSSTACK>&lt;xsl:value-of select=&quot;concat(bw:getModuleProperty(&amp;quot;BW.PROCESS.STACK&amp;quot;),&amp;quot;/&amp;quot;,bw:getModuleProperty(&amp;quot;BW.ACTIVITY.NAME&amp;quot;))&quot;/>&lt;/PROCESSSTACK>&lt;PAYLOAD>&lt;xsl:value-of select=&quot;tib:render-xml($Start, false(),true())&quot;/>&lt;/PAYLOAD>&lt;/auditElement>&lt;/tns9:LogAudit>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                    </tibex:inputBindings>
+                    <tibex:CallProcess
+                        moduleRef="it.linkem.core.lehf.common.sh"
+                        subProcessName="sharedaudit.LoggingWrapper" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
+                </tibex:extActivity>
+            </bpws:extensionActivity>
+            <bpws:extensionActivity>
+                <tibex:extActivity inputVariable="LogEnd-input"
+                    name="LogEnd" outputVariable="LogEnd"
+                    tibex:xpdlId="f51cb5e7-0f78-417f-a89f-9c561383b315"
+                    type="bw.generalactivities.callprocess" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                    <bpws:targets>
+                        <bpws:target linkName="RetrieveMultipleEntitiesToLogEnd"/>
+                    </bpws:targets>
+                    <bpws:sources>
+                        <bpws:source linkName="Log_End_GetIMSIByAccountToEnd"/>
+                    </bpws:sources>
+                    <tibex:inputBindings>
+                        <tibex:inputBinding coercion=""
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns9=&quot;http://it.linkem/core/lehf/common/AuditTypes/0100&quot; xmlns:tib=&quot;http://www.tibco.com/bw/xslt/custom-functions&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;GetLoggerParams&quot;/>&lt;xsl:param name=&quot;DEBUG_Severity&quot;/>&lt;xsl:param name=&quot;GetSIMByGuidTDC&quot;/>&lt;xsl:template name=&quot;LogEnd-input&quot; match=&quot;/&quot;>&lt;tns9:LogAudit>&lt;auditElement>&lt;APPLICATION_NAME>&lt;xsl:value-of select=&quot;$GetLoggerParams/APPLICATION_NAME&quot;/>&lt;/APPLICATION_NAME>&lt;xsl:if test=&quot;$GetLoggerParams/SOURCESYSTEM&quot;>&lt;SOURCESYSTEM>&lt;xsl:value-of select=&quot;$GetLoggerParams/SOURCESYSTEM&quot;/>&lt;/SOURCESYSTEM>&lt;/xsl:if>&lt;STARTTIMESTAMP>&lt;xsl:value-of select=&quot;current-dateTime()&quot;/>&lt;/STARTTIMESTAMP>&lt;SEVERITY>&lt;xsl:value-of select=&quot;$DEBUG_Severity&quot;/>&lt;/SEVERITY>&lt;TRACKID>&lt;xsl:value-of select=&quot;$GetLoggerParams/TRACKID&quot;/>&lt;/TRACKID>&lt;BUSINESSKEY>&lt;xsl:value-of select=&quot;$GetLoggerParams/BUSINESSKEY&quot;/>&lt;/BUSINESSKEY>&lt;PROCESSSTACK>&lt;xsl:value-of select=&quot;''&quot;/>&lt;/PROCESSSTACK>&lt;PAYLOAD>&lt;xsl:value-of select=&quot;tib:render-xml($GetSIMByGuidTDC, false(),true())&quot;/>&lt;/PAYLOAD>&lt;/auditElement>&lt;/tns9:LogAudit>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                    </tibex:inputBindings>
+                    <tibex:CallProcess
+                        moduleRef="it.linkem.core.lehf.common.sh"
+                        subProcessName="sharedaudit.LoggingWrapper" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
+                </tibex:extActivity>
+            </bpws:extensionActivity>
+            <bpws:extensionActivity>
+                <tibex:extActivity name="GetLoggerParams"
+                    outputVariable="GetLoggerParams"
+                    tibex:xpdlId="ab17649d-546e-4ad4-b7ee-0d38f52d6592"
+                    type="bw.internal.getSharedVariable" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                    <bpws:targets>
+                        <bpws:target linkName="StartToGetLoggerParams"/>
+                    </bpws:targets>
+                    <bpws:sources>
+                        <bpws:source linkName="GetLoggerParamsToLog_Start_GetIMSIByAccount"/>
+                    </bpws:sources>
+                    <tibex:GetSharedVariable inline="true"
+                        variableName="//it.linkem.core.lehf.common.sh//loggerParams" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
+                </tibex:extActivity>
+            </bpws:extensionActivity>
+            <bpws:extensionActivity>
+                <tibex:activityExtension
+                    inputVariable="GetSIMByGuidTDC-input"
+                    name="GetSIMByGuidTDC"
+                    outputVariable="GetSIMByGuidTDC"
+                    tibex:xpdlId="e7ad67e2-8605-4919-93bc-8252201c27c8" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                    <bpws:targets>
+                        <bpws:target linkName="Assign1ToGetSIMByGuidTDC"/>
+                    </bpws:targets>
+                    <bpws:sources>
+                        <bpws:source linkName="RetrieveMultipleEntitiesToLogEnd"/>
+                    </bpws:sources>
+                    <tibex:inputBindings>
+                        <tibex:inputBinding
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns4=&quot;http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrievemultiple+e7ad67e2-8605-4919-93bc-8252201c27c8+input&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;guid_TDC&quot;/>&lt;xsl:param name=&quot;idContratto&quot;/>&lt;xsl:template name=&quot;GetSIMByGuidTDC-input&quot; match=&quot;/&quot;>&lt;tns4:Entities>&lt;lnk_sim>&lt;FetchXML>&lt;xsl:value-of select=&quot;concat('&amp;#xD;&amp;#xA;&amp;lt;fetch version=&amp;quot;1.0&amp;quot; output-format=&amp;quot;xml-platform&amp;quot; mapping=&amp;quot;logical&amp;quot; distinct=&amp;quot;false&amp;quot;>&amp;#xD;&amp;#xA;&amp;#x9;&amp;lt;entity name=&amp;quot;lnk_sim&amp;quot;>&amp;#xD;&amp;#xA;&amp;#x9;&amp;#x9;&amp;lt;attribute name=&amp;quot;lnk_iccid&amp;quot;/>&amp;#xD;&amp;#xA;&amp;#x9;&amp;#x9;&amp;lt;attribute name=&amp;quot;lnk_stato&amp;quot;/>&amp;#xD;&amp;#xA;&amp;#x9;&amp;#x9;&amp;lt;attribute name=&amp;quot;lnk_profilo&amp;quot;/>&amp;#xD;&amp;#xA;&amp;#x9;&amp;#x9;&amp;lt;attribute name=&amp;quot;lnk_datafineassegnazione&amp;quot;/>&amp;#xD;&amp;#xA;&amp;#x9;&amp;#x9;&amp;lt;attribute name=&amp;quot;lnk_datacambiostato&amp;quot;/>&amp;#xD;&amp;#xA;&amp;#x9;&amp;#x9;&amp;lt;attribute name=&amp;quot;lnk_dataassegnazione&amp;quot;/>&amp;#xD;&amp;#xA;&amp;#x9;&amp;#x9;&amp;lt;attribute name=&amp;quot;lnk_simid&amp;quot;/>&amp;#xD;&amp;#xA;&amp;#x9;&amp;#x9;&amp;lt;attribute name=&amp;quot;statuscode&amp;quot;/>&amp;#xD;&amp;#xA;&amp;#x9;&amp;#x9;&amp;lt;attribute name=&amp;quot;statecode&amp;quot;/>&amp;#xD;&amp;#xA;&amp;#x9;&amp;#x9;&amp;lt;attribute name=&amp;quot;overriddencreatedon&amp;quot;/>&amp;#xD;&amp;#xA;&amp;#x9;&amp;#x9;&amp;lt;attribute name=&amp;quot;modifiedon&amp;quot;/>&amp;#xD;&amp;#xA;&amp;#x9;&amp;#x9;&amp;lt;attribute name=&amp;quot;modifiedonbehalfby&amp;quot;/>&amp;#xD;&amp;#xA;&amp;#x9;&amp;#x9;&amp;lt;attribute name=&amp;quot;modifiedby&amp;quot;/>&amp;#xD;&amp;#xA;&amp;#x9;&amp;#x9;&amp;lt;attribute name=&amp;quot;lnk_imsi&amp;quot;/>&amp;#xD;&amp;#xA;&amp;#x9;&amp;#x9;&amp;lt;attribute name=&amp;quot;ip_importid&amp;quot;/>&amp;#xD;&amp;#xA;&amp;#x9;&amp;#x9;&amp;lt;attribute name=&amp;quot;createdon&amp;quot;/>&amp;#xD;&amp;#xA;&amp;#x9;&amp;#x9;&amp;lt;attribute name=&amp;quot;createdonbehalfby&amp;quot;/>&amp;#xD;&amp;#xA;&amp;#x9;&amp;#x9;&amp;lt;attribute name=&amp;quot;createdby&amp;quot;/>&amp;#xD;&amp;#xA;&amp;#x9;&amp;#x9;&amp;lt;attribute name=&amp;quot;lnk_contrattoid&amp;quot;/>&amp;#xD;&amp;#xA;&amp;#x9;&amp;#x9;&amp;lt;order attribute=&amp;quot;lnk_iccid&amp;quot; descending=&amp;quot;false&amp;quot;/>&amp;#xD;&amp;#xA;&amp;#x9;&amp;#x9;&amp;lt;link-entity name=&amp;quot;lnk_testatadelcontratto&amp;quot; from=&amp;quot;lnk_testatadelcontrattoid&amp;quot; to=&amp;quot;lnk_contrattoid&amp;quot; alias=&amp;quot;ae&amp;quot;>&amp;#xD;&amp;#xA;&amp;#x9;&amp;#x9;&amp;#x9;&amp;lt;filter type=&amp;quot;and&amp;quot;>&amp;#xD;&amp;#xA;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;lt;filter type=&amp;quot;or&amp;quot;>&amp;#xD;&amp;#xA;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;lt;condition attribute=&amp;quot;lnk_testatadelcontrattoid&amp;quot; operator=&amp;quot;eq&amp;quot; value=&amp;quot;',$guid_TDC,'&amp;quot;/>&amp;#xD;&amp;#xA;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;lt;condition attribute=&amp;quot;lnk_name&amp;quot; operator=&amp;quot;eq&amp;quot; value=&amp;quot;',$idContratto,'&amp;quot;/>&amp;#xD;&amp;#xA;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;lt;/filter>&amp;#xD;&amp;#xA;&amp;#x9;&amp;#x9;&amp;#x9;&amp;lt;/filter>&amp;#xD;&amp;#xA;&amp;#x9;&amp;#x9;&amp;lt;/link-entity>&amp;#xD;&amp;#xA;&amp;#x9;&amp;lt;/entity>&amp;#xD;&amp;#xA;&amp;lt;/fetch>')&quot;/>&lt;/FetchXML>&lt;/lnk_sim>&lt;/tns4:Entities>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                    </tibex:inputBindings>
+                    <tibex:config>
+                        <bwext:BWActivity
+                            activityTypeID="bw.dynamicscrm.RetrieveMultipleEntity"
+                            xmlns:activityconfig="http://tns.tibco.com/bw/model/activityconfig"
+                            xmlns:bwext="http://tns.tibco.com/bw/model/core/bwext"
+                            xmlns:dynamicscrm="http://ns.tibco.com/bw/palette/dynamicscrm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                            <activityConfig>
+                                <properties name="config" xsi:type="activityconfig:EMFProperty">
+                                    <type href="http://ns.tibco.com/bw/palette/dynamicscrm#//RetrieveMultipleEntity"/>
+                                    <value
+                                    dynamicscrmConnection="dynamicsCRMConnection"
+                                    dynamicscrmEntityOption="Sim(lnk_sim)"
+                                    retrieveType="FetchXML" xsi:type="dynamicscrm:RetrieveMultipleEntity">
+                                    <entitymetadatatamap key="createdonbehalfby">
+                                    <value CRMType="Lookup"
+                                    EntityLogicalName="lnk_sim"
+                                    asOutput="true"
+                                    attributeOf="null"
+                                    changeable="true"
+                                    displayName="Created By (Delegate)"
+                                    logicName="createdonbehalfby"
+                                    requried="None"
+                                    schemaName="CreatedOnBehalfBy"
+                                    validForRead="true" xsdType="string"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="importsequencenumber">
+                                    <value CRMType="Integer"
+                                    EntityLogicalName="lnk_sim"
+                                    asOutput="true"
+                                    attributeOf="null"
+                                    changeable="true"
+                                    displayName="Import Sequence Number"
+                                    logicName="importsequencenumber"
+                                    requried="None"
+                                    schemaName="ImportSequenceNumber"
+                                    validForCreate="true"
+                                    validForRead="true" xsdType="integer"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="lnk_dataassegnazione">
+                                    <value CRMType="DateTime"
+                                    EntityLogicalName="lnk_sim"
+                                    asOutput="true"
+                                    attributeOf="null"
+                                    changeable="true"
+                                    displayName="Data Assegnazione"
+                                    logicName="lnk_dataassegnazione"
+                                    requried="None"
+                                    schemaName="lnk_dataassegnazione"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="dateTime"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="createdbyyominame">
+                                    <value CRMType="String"
+                                    EntityLogicalName="lnk_sim"
+                                    asOutput="true"
+                                    attributeOf="createdby"
+                                    changeable="true"
+                                    displayName="null"
+                                    logicName="createdbyyominame"
+                                    requried="SystemRequired"
+                                    schemaName="CreatedByYomiName"
+                                    validForRead="true" xsdType="string"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="lnk_datafineassegnazione">
+                                    <value CRMType="DateTime"
+                                    EntityLogicalName="lnk_sim"
+                                    asOutput="true"
+                                    attributeOf="null"
+                                    changeable="true"
+                                    displayName="Data Fine Assegnazione"
+                                    logicName="lnk_datafineassegnazione"
+                                    requried="None"
+                                    schemaName="lnk_datafineassegnazione"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="dateTime"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="lnk_stato">
+                                    <value CRMType="Picklist"
+                                    EntityLogicalName="lnk_sim"
+                                    asOutput="true"
+                                    attributeOf="null"
+                                    changeable="true"
+                                    displayName="Stato"
+                                    logicName="lnk_stato"
+                                    requried="None"
+                                    schemaName="lnk_stato"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="integer"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="organizationidname">
+                                    <value CRMType="String"
+                                    EntityLogicalName="lnk_sim"
+                                    asOutput="true"
+                                    attributeOf="organizationid"
+                                    changeable="true"
+                                    displayName="null"
+                                    logicName="organizationidname"
+                                    requried="SystemRequired"
+                                    schemaName="OrganizationIdName"
+                                    validForRead="true" xsdType="string"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="modifiedbyname">
+                                    <value CRMType="String"
+                                    EntityLogicalName="lnk_sim"
+                                    asOutput="true"
+                                    attributeOf="modifiedby"
+                                    changeable="true"
+                                    displayName="null"
+                                    logicName="modifiedbyname"
+                                    requried="None"
+                                    schemaName="ModifiedByName"
+                                    validForRead="true" xsdType="string"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="utcconversiontimezonecode">
+                                    <value CRMType="Integer"
+                                    EntityLogicalName="lnk_sim"
+                                    asOutput="true"
+                                    attributeOf="null"
+                                    changeable="true"
+                                    displayName="UTC Conversion Time Zone Code"
+                                    logicName="utcconversiontimezonecode"
+                                    requried="None"
+                                    schemaName="UTCConversionTimeZoneCode"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="integer"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="statecode">
+                                    <value CRMType="State"
+                                    EntityLogicalName="lnk_sim"
+                                    asOutput="true"
+                                    attributeOf="null"
+                                    changeable="true"
+                                    displayName="Status"
+                                    logicName="statecode"
+                                    requried="SystemRequired"
+                                    schemaName="statecode"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="integer"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="statecodename">
+                                    <value CRMType="Virtual"
+                                    EntityLogicalName="lnk_sim"
+                                    asOutput="true"
+                                    attributeOf="statecode"
+                                    changeable="true"
+                                    displayName="null"
+                                    logicName="statecodename"
+                                    requried="None"
+                                    schemaName="statecodeName"
+                                    validForRead="true" xsdType="string"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="statuscode">
+                                    <value CRMType="Status"
+                                    EntityLogicalName="lnk_sim"
+                                    asOutput="true"
+                                    attributeOf="null"
+                                    changeable="true"
+                                    displayName="Status Reason"
+                                    logicName="statuscode"
+                                    requried="None"
+                                    schemaName="statuscode"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="integer"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="lnk_contrattoidname">
+                                    <value CRMType="String"
+                                    EntityLogicalName="lnk_sim"
+                                    asOutput="true"
+                                    attributeOf="lnk_contrattoid"
+                                    changeable="true"
+                                    displayName="null"
+                                    logicName="lnk_contrattoidname"
+                                    requried="None"
+                                    schemaName="lnk_contrattoidName"
+                                    validForRead="true" xsdType="string"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="createdby">
+                                    <value CRMType="Lookup"
+                                    EntityLogicalName="lnk_sim"
+                                    asOutput="true"
+                                    attributeOf="null"
+                                    changeable="true"
+                                    displayName="Created By"
+                                    logicName="createdby"
+                                    requried="None"
+                                    schemaName="CreatedBy"
+                                    validForRead="true" xsdType="string"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="overriddencreatedon">
+                                    <value CRMType="DateTime"
+                                    EntityLogicalName="lnk_sim"
+                                    asOutput="true"
+                                    attributeOf="null"
+                                    changeable="true"
+                                    displayName="Record Created On"
+                                    logicName="overriddencreatedon"
+                                    requried="None"
+                                    schemaName="OverriddenCreatedOn"
+                                    validForCreate="true"
+                                    validForRead="true" xsdType="dateTime"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="lnk_profilo">
+                                    <value CRMType="String"
+                                    EntityLogicalName="lnk_sim"
+                                    asOutput="true"
+                                    attributeOf="null"
+                                    changeable="true"
+                                    displayName="Profilo"
+                                    logicName="lnk_profilo"
+                                    requried="None"
+                                    schemaName="lnk_profilo"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="string"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="lnk_contrattoid">
+                                    <value CRMType="Lookup"
+                                    EntityLogicalName="lnk_sim"
+                                    asOutput="true"
+                                    attributeOf="null"
+                                    changeable="true"
+                                    displayName="Contratto"
+                                    logicName="lnk_contrattoid"
+                                    requried="None"
+                                    schemaName="lnk_contrattoid"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="string"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="lnk_simid">
+                                    <value
+                                    CRMType="Uniqueidentifier"
+                                    EntityLogicalName="lnk_sim"
+                                    asOutput="true"
+                                    attributeOf="null"
+                                    displayName="Sim"
+                                    logicName="lnk_simid"
+                                    primaryId="true"
+                                    requried="SystemRequired"
+                                    schemaName="lnk_simId"
+                                    validForCreate="true"
+                                    validForRead="true" xsdType="string"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="lnk_iccid">
+                                    <value CRMType="String"
+                                    EntityLogicalName="lnk_sim"
+                                    asOutput="true"
+                                    attributeOf="null"
+                                    changeable="true"
+                                    displayName="Iccid"
+                                    logicName="lnk_iccid"
+                                    requried="ApplicationRequired"
+                                    schemaName="lnk_iccid"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="string"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="timezoneruleversionnumber">
+                                    <value CRMType="Integer"
+                                    EntityLogicalName="lnk_sim"
+                                    asOutput="true"
+                                    attributeOf="null"
+                                    changeable="true"
+                                    displayName="Time Zone Rule Version Number"
+                                    logicName="timezoneruleversionnumber"
+                                    requried="None"
+                                    schemaName="TimeZoneRuleVersionNumber"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="integer"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="createdonbehalfbyname">
+                                    <value CRMType="String"
+                                    EntityLogicalName="lnk_sim"
+                                    asOutput="true"
+                                    attributeOf="createdonbehalfby"
+                                    changeable="true"
+                                    displayName="null"
+                                    logicName="createdonbehalfbyname"
+                                    requried="None"
+                                    schemaName="CreatedOnBehalfByName"
+                                    validForRead="true" xsdType="string"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="modifiedbyyominame">
+                                    <value CRMType="String"
+                                    EntityLogicalName="lnk_sim"
+                                    asOutput="true"
+                                    attributeOf="modifiedby"
+                                    changeable="true"
+                                    displayName="null"
+                                    logicName="modifiedbyyominame"
+                                    requried="SystemRequired"
+                                    schemaName="ModifiedByYomiName"
+                                    validForRead="true" xsdType="string"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="statuscodename">
+                                    <value CRMType="Virtual"
+                                    EntityLogicalName="lnk_sim"
+                                    asOutput="true"
+                                    attributeOf="statuscode"
+                                    changeable="true"
+                                    displayName="null"
+                                    logicName="statuscodename"
+                                    requried="None"
+                                    schemaName="statuscodeName"
+                                    validForRead="true" xsdType="string"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="lnk_statoname">
+                                    <value CRMType="Virtual"
+                                    EntityLogicalName="lnk_sim"
+                                    asOutput="true"
+                                    attributeOf="lnk_stato"
+                                    changeable="true"
+                                    displayName="null"
+                                    logicName="lnk_statoname"
+                                    requried="None"
+                                    schemaName="lnk_statoName"
+                                    validForRead="true" xsdType="string"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="versionnumber">
+                                    <value CRMType="BigInt"
+                                    EntityLogicalName="lnk_sim"
+                                    asOutput="true"
+                                    attributeOf="null"
+                                    changeable="true"
+                                    displayName="null"
+                                    logicName="versionnumber"
+                                    requried="None"
+                                    schemaName="VersionNumber"
+                                    validForRead="true" xsdType="long"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="createdonbehalfbyyominame">
+                                    <value CRMType="String"
+                                    EntityLogicalName="lnk_sim"
+                                    asOutput="true"
+                                    attributeOf="createdonbehalfby"
+                                    changeable="true"
+                                    displayName="null"
+                                    logicName="createdonbehalfbyyominame"
+                                    requried="SystemRequired"
+                                    schemaName="CreatedOnBehalfByYomiName"
+                                    validForRead="true" xsdType="string"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="createdon">
+                                    <value CRMType="DateTime"
+                                    EntityLogicalName="lnk_sim"
+                                    asOutput="true"
+                                    attributeOf="null"
+                                    changeable="true"
+                                    displayName="Created On"
+                                    logicName="createdon"
+                                    requried="None"
+                                    schemaName="CreatedOn"
+                                    validForRead="true" xsdType="dateTime"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="organizationid">
+                                    <value CRMType="Lookup"
+                                    EntityLogicalName="lnk_sim"
+                                    asOutput="true"
+                                    attributeOf="null"
+                                    changeable="true"
+                                    displayName="Organization Id"
+                                    logicName="organizationid"
+                                    requried="None"
+                                    schemaName="OrganizationId"
+                                    validForRead="true" xsdType="string"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="modifiedonbehalfbyyominame">
+                                    <value CRMType="String"
+                                    EntityLogicalName="lnk_sim"
+                                    asOutput="true"
+                                    attributeOf="modifiedonbehalfby"
+                                    changeable="true"
+                                    displayName="null"
+                                    logicName="modifiedonbehalfbyyominame"
+                                    requried="SystemRequired"
+                                    schemaName="ModifiedOnBehalfByYomiName"
+                                    validForRead="true" xsdType="string"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="modifiedon">
+                                    <value CRMType="DateTime"
+                                    EntityLogicalName="lnk_sim"
+                                    asOutput="true"
+                                    attributeOf="null"
+                                    changeable="true"
+                                    displayName="Modified On"
+                                    logicName="modifiedon"
+                                    requried="None"
+                                    schemaName="ModifiedOn"
+                                    validForRead="true" xsdType="dateTime"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="modifiedonbehalfbyname">
+                                    <value CRMType="String"
+                                    EntityLogicalName="lnk_sim"
+                                    asOutput="true"
+                                    attributeOf="modifiedonbehalfby"
+                                    changeable="true"
+                                    displayName="null"
+                                    logicName="modifiedonbehalfbyname"
+                                    requried="None"
+                                    schemaName="ModifiedOnBehalfByName"
+                                    validForRead="true" xsdType="string"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="modifiedonbehalfby">
+                                    <value CRMType="Lookup"
+                                    EntityLogicalName="lnk_sim"
+                                    asOutput="true"
+                                    attributeOf="null"
+                                    changeable="true"
+                                    displayName="Modified By (Delegate)"
+                                    logicName="modifiedonbehalfby"
+                                    requried="None"
+                                    schemaName="ModifiedOnBehalfBy"
+                                    validForRead="true" xsdType="string"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="modifiedby">
+                                    <value CRMType="Lookup"
+                                    EntityLogicalName="lnk_sim"
+                                    asOutput="true"
+                                    attributeOf="null"
+                                    changeable="true"
+                                    displayName="Modified By"
+                                    logicName="modifiedby"
+                                    requried="None"
+                                    schemaName="ModifiedBy"
+                                    validForRead="true" xsdType="string"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="lnk_imsi">
+                                    <value CRMType="String"
+                                    EntityLogicalName="lnk_sim"
+                                    asOutput="true"
+                                    attributeOf="null"
+                                    changeable="true"
+                                    displayName="IMSI"
+                                    logicName="lnk_imsi"
+                                    requried="None"
+                                    schemaName="lnk_imsi"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="string"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="lnk_datacambiostato">
+                                    <value CRMType="DateTime"
+                                    EntityLogicalName="lnk_sim"
+                                    asOutput="true"
+                                    attributeOf="null"
+                                    changeable="true"
+                                    displayName="Data Cambio Stato"
+                                    logicName="lnk_datacambiostato"
+                                    requried="None"
+                                    schemaName="lnk_datacambiostato"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="dateTime"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="ip_importid">
+                                    <value CRMType="String"
+                                    EntityLogicalName="lnk_sim"
+                                    asOutput="true"
+                                    attributeOf="null"
+                                    changeable="true"
+                                    displayName="Import ID"
+                                    logicName="ip_importid"
+                                    requried="None"
+                                    schemaName="ip_importid"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="string"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="createdbyname">
+                                    <value CRMType="String"
+                                    EntityLogicalName="lnk_sim"
+                                    asOutput="true"
+                                    attributeOf="createdby"
+                                    changeable="true"
+                                    displayName="null"
+                                    logicName="createdbyname"
+                                    requried="None"
+                                    schemaName="CreatedByName"
+                                    validForRead="true" xsdType="string"/>
+                                    </entitymetadatatamap>
+                                    </value>
+                                </properties>
+                            </activityConfig>
+                        </bwext:BWActivity>
+                    </tibex:config>
+                </tibex:activityExtension>
+            </bpws:extensionActivity>
+            <bpws:extensionActivity>
+                <tibex:activityExtension inputVariable="guid_TDC"
+                    name="setGuidTDC" outputVariable="guid_TDC"
+                    tibex:xpdlId="2d5342b8-d05c-411e-a8c1-08d03ffaa9ba" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                    <bpws:targets>
+                        <bpws:target linkName="LogStartToRetrieveMultipleEntities"/>
+                    </bpws:targets>
+                    <bpws:sources>
+                        <bpws:source linkName="AssignToGetSIMByGuidTDC"/>
+                    </bpws:sources>
+                    <tibex:inputBindings>
+                        <tibex:inputBinding
+                            expression="$Start/ns20:guid_TDC" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"/>
+                    </tibex:inputBindings>
+                    <tibex:config>
+                        <bwext:BWActivity
+                            activityTypeID="bw.generalactivities.bwassign"
+                            xmlns:activityconfig="http://tns.tibco.com/bw/model/activityconfig"
+                            xmlns:bwext="http://tns.tibco.com/bw/model/core/bwext"
+                            xmlns:generalactivities="http://ns.tibco.com/bw/palette/generalactivities" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                            <activityConfig>
+                                <properties name="config" xsi:type="activityconfig:EMFProperty">
+                                    <type href="http://ns.tibco.com/bw/palette/generalactivities#//BWAssign"/>
+                                    <value processVariable="guid_TDC" xsi:type="generalactivities:BWAssign"/>
+                                </properties>
+                            </activityConfig>
+                        </bwext:BWActivity>
+                    </tibex:config>
+                </tibex:activityExtension>
+            </bpws:extensionActivity>
+            <bpws:extensionActivity>
+                <tibex:activityExtension inputVariable="idContratto"
+                    name="setIdContratto" outputVariable="idContratto"
+                    tibex:xpdlId="91a1a15f-3869-4359-99d9-e7c6a6ac325f" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                    <bpws:targets>
+                        <bpws:target linkName="AssignToGetSIMByGuidTDC"/>
+                    </bpws:targets>
+                    <bpws:sources>
+                        <bpws:source linkName="Assign1ToGetSIMByGuidTDC"/>
+                    </bpws:sources>
+                    <tibex:inputBindings>
+                        <tibex:inputBinding
+                            expression="$Start/ns20:idContratto" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"/>
+                    </tibex:inputBindings>
+                    <tibex:config>
+                        <bwext:BWActivity
+                            activityTypeID="bw.generalactivities.bwassign"
+                            xmlns:activityconfig="http://tns.tibco.com/bw/model/activityconfig"
+                            xmlns:bwext="http://tns.tibco.com/bw/model/core/bwext"
+                            xmlns:generalactivities="http://ns.tibco.com/bw/palette/generalactivities" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                            <activityConfig>
+                                <properties name="config" xsi:type="activityconfig:EMFProperty">
+                                    <type href="http://ns.tibco.com/bw/palette/generalactivities#//BWAssign"/>
+                                    <value processVariable="idContratto" xsi:type="generalactivities:BWAssign"/>
+                                </properties>
+                            </activityConfig>
+                        </bwext:BWActivity>
+                    </tibex:config>
+                </tibex:activityExtension>
+            </bpws:extensionActivity>
+        </bpws:flow>
+    </bpws:scope>
+</bpws:process>

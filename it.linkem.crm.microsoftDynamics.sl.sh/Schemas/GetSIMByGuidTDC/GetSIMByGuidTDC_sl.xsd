@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://it.linkem/crm/getSIMByGuidTDC/sl/xsd"
+	xmlns:tns="http://it.linkem/crm/getSIMByGuidTDC/sl/xsd" xmlns:sim="http://it.linkem/crm/entities/sim/xsd"
+	elementFormDefault="qualified">
+	
+	<import namespace="http://it.linkem/crm/entities/sim/xsd" schemaLocation="../Entities/Sim.xsd"/>
+	<element name="GetSimById_Input">
+		<complexType>
+			<sequence>
+				<element minOccurs="0" maxOccurs="1" name="guid_TDC" type="string"/>
+				<element minOccurs="0" maxOccurs="1" name="idContratto" type="string"/>
+			</sequence>
+		</complexType>
+	</element>
+	<element name="GetSimById_Output">
+		<complexType>
+			<sequence>
+				<element minOccurs="0" maxOccurs="unbounded" name="Sim" type="sim:lnk_sim"/>
+				<element maxOccurs="1" minOccurs="0" name="ResponseCode" type="string"/>
+			</sequence>
+		</complexType>
+	</element>
+</schema>
