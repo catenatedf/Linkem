@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:http="http://xsd.tns.tibco.com/bw/models/sharedresource/httpclient" xmlns:id="http://www.tibco.com/ws/2013/11/identity" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmlns:sca_ext="http://www.tibco.com/ns/sca/201311" xmlns:sslclient="http://xsd.tns.tibco.com/bw/sharedresource/trinity/models/sslclient" xmi:id="_xmz5wA_EEeySlY7vVr8Zcw" name="it.linkem.rete.pcrf.sl.sh.PCRFHttpClientResource" type="http:HttpClientConfiguration">
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:http="http://xsd.tns.tibco.com/bw/models/sharedresource/httpclient" xmlns:id="http://www.tibco.com/ws/2013/11/identity" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmlns:sca_ext="http://www.tibco.com/ns/sca/201311" xmlns:sslclient="http://xsd.tns.tibco.com/bw/sharedresource/trinity/models/sslclient" xmlns:subject="http://xsd.tns.tibco.com/bw/sharedresource/trinity/models/identity/subject" xmi:id="_xmz5wA_EEeySlY7vVr8Zcw" name="it.linkem.rete.pcrf.sl.sh.PCRFHttpClientResource" type="http:HttpClientConfiguration">
   <identitySet xmi:id="_dB-VoBbIEeyywY0qh93qug" appliesTo="namedResource" name="HttpClientIdentitySet" provides="confidentiality">
     <sca_ext:intentMap xmi:id="_dB-VoRbIEeyywY0qh93qug" provides="sca_ext:confidentiality">
       <sca_ext:qualifier xmi:id="_dB-VohbIEeyywY0qh93qug" name="transport">
         <id:IdentityReference xmi:id="_dB_jwBbIEeyywY0qh93qug" URI="it.linkem.rete.pcrf.sl.sh.PCRF_SSLClientResource" type="sslclient:SSLClientConfiguration"/>
+        <id:IdentityReference xmi:id="_pb4qEBbzEeytqoDlaIw1eA" URI="it.linkem.rete.pcrf.sl.sh.PCRF_BA_IdentityProvider" type="subject:SubjectConfiguration"/>
       </sca_ext:qualifier>
     </sca_ext:intentMap>
   </identitySet>

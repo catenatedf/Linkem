@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_phausA--EeySlY7vVr8Zcw" targetNamespace="http://tns.tibco.com/bw/composite/it.linkem.rete.pcrf.sl.sh" name="it.linkem.rete.pcrf.sl.sh" compositeext:version="1.0.0" compositeext:formatVersion="2">
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:property="http://ns.tibco.com/bw/property" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_phausA--EeySlY7vVr8Zcw" targetNamespace="http://tns.tibco.com/bw/composite/it.linkem.rete.pcrf.sl.sh" name="it.linkem.rete.pcrf.sl.sh" compositeext:version="1.0.0" compositeext:formatVersion="2">
   <sca:property xmi:id="_p7MgoA--EeySlY7vVr8Zcw" name="BW.DEPLOYMENTUNIT.TYPE" type="XMLSchema:string" scalable="true"/>
   <sca:property xmi:id="_p7s28A--EeySlY7vVr8Zcw" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
   <sca:property xmi:id="_p7yWgA--EeySlY7vVr8Zcw" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
@@ -29,4 +29,6 @@
   <sca:property xmi:id="_7M7YEA_HEeySlY7vVr8Zcw" name="/Pcrf/Connection/Http/UseNonPreemtiveAuth" type="XMLSchema:boolean" scaext:simpleValue="false" publicAccess="true" scalable="true"/>
   <sca:property xmi:id="_eMZWMA_JEeySlY7vVr8Zcw" name="/Pcrf/Connection/Http/ShortRetryManagement/BaseRetryDelay_s" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
   <sca:property xmi:id="_jz7mcA_JEeySlY7vVr8Zcw" name="/Pcrf/Connection/Http/ShortRetryManagement/MaxShortRetry" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_sQrs8BbzEeytqoDlaIw1eA" name="/Pcrf/Connection/Http/BasicAuthentication/username" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_t9tPcBbzEeytqoDlaIw1eA" name="/Pcrf/Connection/Http/BasicAuthentication/password" type="property:password" scaext:simpleValue="#!AaNcsMXraGqqJkkxCtv9sw==" publicAccess="true" scalable="true"/>
 </sca:composite>
