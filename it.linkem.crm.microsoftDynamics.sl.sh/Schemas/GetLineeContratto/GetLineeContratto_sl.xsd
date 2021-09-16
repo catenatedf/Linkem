@@ -1,25 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<schema xmlns="http://www.w3.org/2001/XMLSchema"
-	xmlns:tns="http://it.linkem/crm/getLineeContratto/sl/xsd"
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://it.linkem/crm/getLineeContratto/sl/xsd"
 	xmlns:ldc="http://it.linkem/crm/entities/LineeContratto/xsd"
 	targetNamespace="http://it.linkem/crm/getLineeContratto/sl/xsd"
 	elementFormDefault="qualified">
 
-<import namespace="http://it.linkem/crm/entities/LineeContratto/xsd" schemaLocation="../Entities/LineeContratto.xsd"  />
+	<import namespace="http://it.linkem/crm/entities/LineeContratto/xsd"
+		schemaLocation="../Entities/LineeContratto.xsd" />
 
-<element name="getLineeContratto_Input">
+	<element name="getLineeContratto_Input">
 		<complexType>
 			<sequence>
-				<element minOccurs="1" maxOccurs="1"  name="guid_TDC" type="string"/>
-				<element minOccurs="0" maxOccurs="1" name="contractId" type="string"/> <!-- corrisponde al campo lnk_name  -->
+				<element minOccurs="1" maxOccurs="1" name="guid_TDC" type="string" />
+				<element minOccurs="0" maxOccurs="1" name="contractId" type="string" /> <!-- corrisponde al campo lnk_name -->
 			</sequence>
 		</complexType>
 	</element>
 	<element name="getLineeContratto_Output">
 		<complexType>
 			<sequence>
-				<element minOccurs="0" maxOccurs="unbounded"  name="LineeDelContratto" type="ldc:lnk_lineedelcontratto"/>
-				<element minOccurs="1" maxOccurs="1"  name="ResponseCode" type="string"/>
+				<element minOccurs="0" maxOccurs="unbounded" name="LineeDelContratto"
+					type="ldc:lnk_lineedelcontratto" />
+				<element minOccurs="1" maxOccurs="1" name="ResponseCode"
+					type="string" />
 			</sequence>
 		</complexType>
 	</element>

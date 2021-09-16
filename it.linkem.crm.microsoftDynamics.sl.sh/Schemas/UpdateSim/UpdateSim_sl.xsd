@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://it.linkem/crm/UpdateSim/sl/xsd"
+	xmlns:tns="http://it.linkem/crm/UpdateSim/sl/xsd" elementFormDefault="qualified"
+	xmlns:usm="http://it.linkem/crm/entities/sim/xsd">
+
+	<import namespace="http://it.linkem/crm/entities/sim/xsd"
+		schemaLocation="../Entities/Sim.xsd" />
+
+
+	<element name="UpdateSim_Input">
+		<complexType>
+			<sequence>
+				<element maxOccurs="1" minOccurs="0" name="lnk_sim_update"
+					type="usm:lnk_sim_update" />
+			</sequence>
+		</complexType>
+	</element>
+	<element name="UpdateSim_Output">
+		<complexType>
+			<sequence>
+				<element minOccurs="0" maxOccurs="1" name="lnk_simid" type="string" />
+				<element minOccurs="1" maxOccurs="1" name="ResponseCode"
+					type="string" />
+			</sequence>
+		</complexType>
+	</element>
+
+</schema>

@@ -52,4 +52,22 @@
 			<element maxOccurs="1" minOccurs="1" name="entityid" type="string"/>
 		</sequence>
 	</complexType>
+	<complexType name="lnk_sim_update">
+		<sequence>
+			<element maxOccurs="1" minOccurs="0" name="lnk_dataassegnazione" nillable="true" type="dateTime"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_datafineassegnazione" nillable="true" type="dateTime"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_stato" nillable="true" type="integer"/>
+			<element maxOccurs="1" minOccurs="0" name="utcconversiontimezonecode" nillable="true" type="integer"/>
+			<element maxOccurs="1" minOccurs="0" name="statecode" nillable="true" type="integer"/>
+			<element maxOccurs="1" minOccurs="0" name="statuscode" nillable="true" type="integer"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_profilo" nillable="true" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_contrattoid" type="tns:lnk_contrattoid"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_simid" nillable="true" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_iccid" nillable="true" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="timezoneruleversionnumber" nillable="true" type="integer"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_imsi" nillable="true" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_datacambiostato" nillable="true" type="dateTime"/>
+			<element maxOccurs="1" minOccurs="0" name="ip_importid" nillable="true" type="string"/>
+		</sequence>
+	</complexType>
 </schema>

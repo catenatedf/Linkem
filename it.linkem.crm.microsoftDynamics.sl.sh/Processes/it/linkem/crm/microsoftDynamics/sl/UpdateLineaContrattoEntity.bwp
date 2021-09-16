@@ -1,0 +1,2441 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpws:process exitOnStandardFault="no"
+    name="it.linkem.crm.microsoftDynamics.sl.UpdateLineaContrattoEntity"
+    suppressJoinFailure="yes"
+    targetNamespace="http://xmlns.example.com/20210916122945"
+    xmlns:bpws="http://docs.oasis-open.org/wsbpel/2.0/process/executable"
+    xmlns:info="http://www.tibco.com/bw/process/info"
+    xmlns:ns="http://www.tibco.com/pe/EngineTypes"
+    xmlns:ns0="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrievemultiple+97b73aed-a75b-422e-9abd-79664aac5b5b+input"
+    xmlns:ns1="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrievemultiple+97b73aed-a75b-422e-9abd-79664aac5b5b+output"
+    xmlns:ns10="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrievemultiple+523e9cdd-cd59-4df5-be3c-4dc00cb8e50d+input"
+    xmlns:ns11="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrievemultiple+523e9cdd-cd59-4df5-be3c-4dc00cb8e50d+output"
+    xmlns:ns12="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrievemultiple+81fe79b6-1303-474d-89fa-a3f312c04ebd+input"
+    xmlns:ns13="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrievemultiple+81fe79b6-1303-474d-89fa-a3f312c04ebd+output"
+    xmlns:ns14="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrieve+66581511-2c4b-4f3f-9616-249f3996025f+input"
+    xmlns:ns15="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrieve+66581511-2c4b-4f3f-9616-249f3996025f+output"
+    xmlns:ns16="http://tns.tibco.com/bw/palette/internal/activityerror+bw.dynamicscrm.RetrieveEntity"
+    xmlns:ns17="http://it.linkem/crm/getContractById/sl/xsd"
+    xmlns:ns18="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrieve+d656c57d-65f6-405c-9e99-302e21f8ced7+input"
+    xmlns:ns19="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrieve+d656c57d-65f6-405c-9e99-302e21f8ced7+output"
+    xmlns:ns2="http://tns.tibco.com/bw/palette/internal/activityerror+bw.dynamicscrm.RetrieveMultipleEntity"
+    xmlns:ns20="http://tns.tibco.com/bw/palette/internal/errorlinkhandler+66581511-2c4b-4f3f-9616-249f3996025f"
+    xmlns:ns21="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrieve+bdea94a4-781a-41f1-826f-85010fdcb68d+input"
+    xmlns:ns22="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrieve+bdea94a4-781a-41f1-826f-85010fdcb68d+output"
+    xmlns:ns23="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrievemultiple+511497e7-d90e-4827-a4f3-512431afbec0+input"
+    xmlns:ns24="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrievemultiple+511497e7-d90e-4827-a4f3-512431afbec0+output"
+    xmlns:ns25="http://it.linkem/crm/getLineeContrattoByGUIDTDC/sl/xsd"
+    xmlns:ns26="http://it.linkem/crm/getLineeContratto/sl/xsd"
+    xmlns:ns27="http://it.linkem/crm/getTestataContrattoByGuidTDC/sl/xsd"
+    xmlns:ns28="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/update+55090a2f-15ec-47dc-bad5-25d6ac533587+input"
+    xmlns:ns29="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/update+55090a2f-15ec-47dc-bad5-25d6ac533587+output"
+    xmlns:ns3="http://www.example.org/CRM_SimCheck"
+    xmlns:ns30="http://tns.tibco.com/bw/palette/internal/activityerror+bw.dynamicscrm.UpdateEntity"
+    xmlns:ns31="http://it.linkem/crm/UpdateLineaContratto/sl/xsd"
+    xmlns:ns4="http://it.linkem/core/lehf/common/AuditTypes/0100"
+    xmlns:ns5="http://it.linkem/core/lehf/common/xsd/loggingwrapper/internal"
+    xmlns:ns6="http://it.linkem/core/lehf/common/loggerType/0100"
+    xmlns:ns7="http://tns.tibco.com/bw/palette/internal/activityerror+bw.internal.end"
+    xmlns:ns8="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrievemultiple+30f54bac-cc52-44ff-b6e0-1f4bea566861+input"
+    xmlns:ns9="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrievemultiple+30f54bac-cc52-44ff-b6e0-1f4bea566861+output"
+    xmlns:sca="http://docs.oasis-open.org/ns/opencsa/sca/200912"
+    xmlns:sca-bpel="http://docs.oasis-open.org/ns/opencsa/sca-bpel/200801"
+    xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"
+    xmlns:tibprop="http://ns.tibco.com/bw/property" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <tibex:Types>
+        <xs:schema attributeFormDefault="unqualified"
+            elementFormDefault="qualified"
+            targetNamespace="http://www.tibco.com/pe/EngineTypes"
+            xmlns:tns="http://www.tibco.com/pe/EngineTypes" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <xs:complexType block="extension restriction"
+                final="extension restriction" name="ErrorReport">
+                <xs:sequence>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" name="StackTrace" type="xs:string"/>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" name="Msg" type="xs:string"/>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" name="FullClass" type="xs:string"/>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" name="Class" type="xs:string"/>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" name="ProcessStack" type="xs:string"/>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" minOccurs="0" name="MsgCode" type="xs:string"/>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" minOccurs="0" name="Data" type="tns:anydata"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType block="extension restriction"
+                final="extension restriction" name="OptionalErrorReport">
+                <xs:sequence>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" minOccurs="0"
+                        name="StackTrace" type="xs:string"/>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" minOccurs="0" name="Msg" type="xs:string"/>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" minOccurs="0"
+                        name="FullClass" type="xs:string"/>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" minOccurs="0" name="Class" type="xs:string"/>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" minOccurs="0"
+                        name="ProcessStack" type="xs:string"/>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" minOccurs="0" name="MsgCode" type="xs:string"/>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" minOccurs="0" name="Data" type="tns:anydata"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType block="extension restriction"
+                final="extension restriction" name="FaultDetail">
+                <xs:sequence>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" name="ActivityName" type="xs:string"/>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" minOccurs="0" name="Data" type="tns:anydata"/>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" name="Msg" type="xs:string"/>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" name="MsgCode" type="xs:string"/>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" name="ProcessStack" type="xs:string"/>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" name="StackTrace" type="xs:string"/>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" name="FullClass" type="xs:string"/>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" name="Class" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType block="extension restriction"
+                final="extension restriction" name="ProcessContext">
+                <xs:sequence>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" name="JobId" type="xs:string"/>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" name="ApplicationName" type="xs:string"/>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" name="EngineName" type="xs:string"/>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" name="ProcessInstanceId" type="xs:string"/>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" minOccurs="0"
+                        name="CustomJobId" type="xs:string"/>
+                    <!--xs:element name="RestartedFromCheckpoint" form="unqualified" block="extension 
+						restriction substitution" type="xs:boolean"/ -->
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" maxOccurs="unbounded"
+                        minOccurs="0" name="TrackingInfo" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType block="extension restriction"
+                final="extension restriction" name="anydata">
+                <xs:sequence>
+                    <xs:any namespace="##any" processContents="lax"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element block="extension restriction substitution"
+                final="extension restriction" name="OptionalErrorReport" type="tns:OptionalErrorReport"/>
+            <xs:element block="extension restriction substitution"
+                final="extension restriction" name="ErrorReport" type="tns:ErrorReport"/>
+            <xs:element block="extension restriction substitution"
+                final="extension restriction" name="FaultDetail" type="tns:FaultDetail"/>
+            <xs:element block="extension restriction substitution"
+                final="extension restriction" name="ProcessContext" type="tns:ProcessContext"/>
+            <xs:element block="extension restriction substitution"
+                final="extension restriction" name="CorrelationValue" type="xs:string"/>
+        </xs:schema>
+        <schema attributeFormDefault="unqualified"
+            elementFormDefault="unqualified"
+            targetNamespace="http://schemas.tibco.com/bw/pe/plugin/5.0/exceptions"
+            version="" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.tibco.com/bw/pe/plugin/5.0/exceptions">
+            <complexType name="ActivityExceptionType">
+                <sequence>
+                    <element name="msg" type="string"/>
+                    <element minOccurs="0" name="msgCode" type="string"/>
+                </sequence>
+            </complexType>
+            <element name="ActivityException" type="tns:ActivityExceptionType"/>
+            <complexType name="ActivityTimedOutExceptionType">
+                <complexContent>
+                    <extension base="tns:ActivityExceptionType"/>
+                </complexContent>
+            </complexType>
+            <element name="ActivityTimedOutException" type="tns:ActivityTimedOutExceptionType"/>
+            <complexType name="DuplicateKeyExceptionType">
+                <complexContent>
+                    <extension base="tns:ActivityExceptionType">
+                        <sequence>
+                            <element name="duplicateKey" type="string"/>
+                            <element minOccurs="0" name="previousJobID" type="string"/>
+                        </sequence>
+                    </extension>
+                </complexContent>
+            </complexType>
+            <element name="DuplicateKeyException" type="tns:DuplicateKeyExceptionType"/>
+        </schema>
+        <schema
+            targetNamespace="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/fault"
+            xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/fault">
+            <complexType name="ActivityFaultData">
+                <sequence>
+                    <element maxOccurs="unbounded" minOccurs="0"
+                        name="DynamicsCRMActivityFaultException" type="tns:DynamicsCRMActivityFaultException"/>
+                </sequence>
+            </complexType>
+            <element name="ActivityFaultData" type="tns:ActivityFaultData"/>
+            <complexType name="DynamicsCRMActivityFaultException">
+                <sequence>
+                    <element maxOccurs="1" minOccurs="0" name="message" type="string"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="messageCode" type="string"/>
+                </sequence>
+            </complexType>
+        </schema>
+        <schema elementFormDefault="unqualified"
+            targetNamespace="http://tns.tibco.com/bw/palette/internal/activityerror+bw.internal.end"
+            xmlns="http://www.w3.org/2001/XMLSchema"
+            xmlns:Q1="http://it.linkem/core/lehf/common/AuditTypes/0100" xmlns:tns="http://tns.tibco.com/bw/palette/internal/activityerror+bw.internal.end">
+            <import namespace="http://it.linkem/core/lehf/common/AuditTypes/0100"/>
+            <element name="ActivityErrorData" type="tns:ActivityErrorDataType"/>
+            <complexType name="ActivityErrorDataType">
+                <choice>
+                    <element maxOccurs="1" minOccurs="0" ref="Q1:LogAudit"/>
+                </choice>
+            </complexType>
+        </schema>
+        <schema
+            targetNamespace="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/update+55090a2f-15ec-47dc-bad5-25d6ac533587+input"
+            xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/update+55090a2f-15ec-47dc-bad5-25d6ac533587+input">
+            <complexType name="Entities">
+                <sequence>
+                    <element maxOccurs="unbounded" minOccurs="0"
+                        name="lnk_lineedelcontratto" type="tns:lnk_lineedelcontratto"/>
+                </sequence>
+            </complexType>
+            <element name="Entities" type="tns:Entities"/>
+            <complexType name="lnk_lineedelcontratto">
+                <sequence>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="lnk_dataconsegna" nillable="true" type="dateTime"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="lnk_accountwififlatutente_2"
+                        nillable="true" type="string"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="lnk_datainiziofatturazione"
+                        nillable="true" type="dateTime"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="lnk_prezzo" nillable="true" type="decimal"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="lnk_utenteadsl" nillable="true" type="string"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="lnk_voipstatus" nillable="true" type="boolean"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="statuscode" nillable="true" type="integer"/>
+                    <element maxOccurs="1" minOccurs="0" name="lnk_name"
+                        nillable="true" type="string"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="lnk_latitudine" nillable="true" type="decimal"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="lnk_datacessazione" nillable="true" type="dateTime"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="timezoneruleversionnumber" nillable="true" type="integer"/>
+                    <element maxOccurs="1" minOccurs="0" name="ownerid" type="tns:ownerid"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="lnk_importofatturainstallatore"
+                        nillable="true" type="decimal"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="lnk_numeroseriale" nillable="true" type="string"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="lnk_copertura_new" nillable="true" type="integer"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="lnk_statopromo" nillable="true" type="integer"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="lnk_voiporderid" nillable="true" type="string"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="lnk_ricaricatapromolancio" nillable="true" type="boolean"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="utcconversiontimezonecode" nillable="true" type="integer"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="lnk_numerolinea" nillable="true" type="integer"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="lnk_statocar" nillable="true" type="integer"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="statecode" nillable="true" type="integer"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="lnk_voipuserpassword" nillable="true" type="string"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="lnk_statocodicelinea" nillable="true" type="integer"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="lnk_ratingstatus" nillable="true" type="boolean"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="lnk_macutente" nillable="true" type="string"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="lnk_indirizzoip" nillable="true" type="string"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="lnk_statohuawei" nillable="true" type="integer"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="dynamics_integrationkey" nillable="true" type="string"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="lnk_segnale_new" nillable="true" type="double"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="lnk_accountwififlatutente" nillable="true" type="string"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="lnk_ipstaticoterritoriale" nillable="true" type="string"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="lnk_utentewimax" nillable="true" type="string"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="lnk_bts_new" nillable="true" type="string"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="lnk_smsinviatodata" nillable="true" type="dateTime"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="lnk_voiplinenumber" nillable="true" type="string"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="lnk_status" nillable="true" type="integer"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="lnk_smsinviato" nillable="true" type="boolean"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="lnk_longitudine" nillable="true" type="decimal"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="lnk_accountwififaltutente_3"
+                        nillable="true" type="string"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="lnk_statosincronizzazione" nillable="true" type="integer"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="lnk_statoprepaidflat" nillable="true" type="integer"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="lnk_indirizzoippubblico" nillable="true" type="string"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="lnk_datacopertura_new" nillable="true" type="dateTime"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="lnk_wimaxstatus" nillable="true" type="integer"/>
+                    <element maxOccurs="1" minOccurs="0" name="lnk_snr"
+                        nillable="true" type="decimal"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="lnk_datainiziopagamenti" nillable="true" type="dateTime"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="lnk_radiusstatus" nillable="true" type="integer"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="lnk_welcomeletterinviata" nillable="true" type="boolean"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="lnk_id_contratto" nillable="true" type="string"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="lnk_voipusername" nillable="true" type="string"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="lnk_macmaster" nillable="true" type="string"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="lnk_datachiamataperattivazione"
+                        nillable="true" type="dateTime"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="lnk_dataricezioneraccomandata"
+                        nillable="true" type="dateTime"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="lnk_accountwififlatpsw_2" nillable="true" type="string"/>
+                    <element maxOccurs="1" minOccurs="0" name="lnk_bts"
+                        nillable="true" type="string"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="lnk_accountwififlatpsw_3" nillable="true" type="string"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="lnk_lineaprincipaleid" type="tns:lnk_lineaprincipaleid"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="lnk_pwdwimax" nillable="true" type="string"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="lnk_nomecalciatore" nillable="true" type="string"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="lnk_tipolinea" nillable="true" type="integer"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="owneridtype" nillable="true" type="string"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="ip_importid" nillable="true" type="string"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="lnk_gateway" nillable="true" type="string"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="lnk_minutiliberialmese" nillable="true" type="integer"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="lnk_dataprossimafattura" nillable="true" type="dateTime"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="lnk_coupon" nillable="true" type="string"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="lnk_consegnarapportiinstallazione"
+                        nillable="true" type="boolean"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="lnk_fatturazioneperiodica" nillable="true" type="boolean"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="lnk_pwdadsl" nillable="true" type="string"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="lnk_macaddresscpe" nillable="true" type="string"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="lnk_datacontratto" nillable="true" type="dateTime"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="lnk_datacopertura" nillable="true" type="dateTime"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="lnk_segnalerssi" nillable="true" type="string"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="lnk_progressivoreclamo" nillable="true" type="integer"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="lnk_coperturadaweb" nillable="true" type="integer"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="lnk_dataattivazione" nillable="true" type="dateTime"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="lnk_datainviocodici" nillable="true" type="dateTime"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="lnk_nomeinstallatore" nillable="true" type="string"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="lnk_accountwififlatpsw" nillable="true" type="string"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="lnk_bonusmgmalportatore" nillable="true" type="boolean"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="lnk_dataultimafatturazione"
+                        nillable="true" type="dateTime"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="lnk_bloccato" nillable="true" type="boolean"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="lnk_netmask" nillable="true" type="string"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="lnk_qualitcinr" nillable="true" type="string"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="lnk_id_contrattoid" type="tns:lnk_id_contrattoid"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="lnk_pianotariffarioid" type="tns:lnk_pianotariffarioid"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="lnk_dataspedizione" nillable="true" type="dateTime"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="transactioncurrencyid" type="tns:transactioncurrencyid"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="lnk_lineedelcontrattoid" nillable="true" type="string"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="lnk_segnale" nillable="true" type="double"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="lnk_logsincronizzazione" nillable="true" type="string"/>
+                    <element maxOccurs="1" minOccurs="0" name="lnk_dns"
+                        nillable="true" type="string"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="lnk_servizioaggiuntivoct" nillable="true" type="boolean"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="lnk_cdrstatus" nillable="true" type="boolean"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="lnk_datafinevalidita" nillable="true" type="dateTime"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="lnk_societainstallatriceid" type="tns:lnk_societainstallatriceid"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="lnk_btstelecom" nillable="true" type="string"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="lnk_accountid" type="tns:lnk_accountid"/>
+                </sequence>
+            </complexType>
+            <complexType name="ownerid">
+                <sequence>
+                    <element maxOccurs="1" minOccurs="1"
+                        name="entitylogicname" nillable="true" type="string"/>
+                    <element maxOccurs="1" minOccurs="1" name="entityid"
+                        nillable="true" type="string"/>
+                </sequence>
+            </complexType>
+            <complexType name="lnk_lineaprincipaleid">
+                <sequence>
+                    <element maxOccurs="1" minOccurs="1"
+                        name="entitylogicname" nillable="true" type="string"/>
+                    <element maxOccurs="1" minOccurs="1" name="entityid"
+                        nillable="true" type="string"/>
+                </sequence>
+            </complexType>
+            <complexType name="lnk_id_contrattoid">
+                <sequence>
+                    <element maxOccurs="1" minOccurs="1"
+                        name="entitylogicname" nillable="true" type="string"/>
+                    <element maxOccurs="1" minOccurs="1" name="entityid"
+                        nillable="true" type="string"/>
+                </sequence>
+            </complexType>
+            <complexType name="lnk_pianotariffarioid">
+                <sequence>
+                    <element maxOccurs="1" minOccurs="1"
+                        name="entitylogicname" nillable="true" type="string"/>
+                    <element maxOccurs="1" minOccurs="1" name="entityid"
+                        nillable="true" type="string"/>
+                </sequence>
+            </complexType>
+            <complexType name="transactioncurrencyid">
+                <sequence>
+                    <element maxOccurs="1" minOccurs="1"
+                        name="entitylogicname" nillable="true" type="string"/>
+                    <element maxOccurs="1" minOccurs="1" name="entityid"
+                        nillable="true" type="string"/>
+                </sequence>
+            </complexType>
+            <complexType name="lnk_societainstallatriceid">
+                <sequence>
+                    <element maxOccurs="1" minOccurs="1"
+                        name="entitylogicname" nillable="true" type="string"/>
+                    <element maxOccurs="1" minOccurs="1" name="entityid"
+                        nillable="true" type="string"/>
+                </sequence>
+            </complexType>
+            <complexType name="lnk_accountid">
+                <sequence>
+                    <element maxOccurs="1" minOccurs="1"
+                        name="entitylogicname" nillable="true" type="string"/>
+                    <element maxOccurs="1" minOccurs="1" name="entityid"
+                        nillable="true" type="string"/>
+                </sequence>
+            </complexType>
+        </schema>
+        <schema
+            targetNamespace="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/update+55090a2f-15ec-47dc-bad5-25d6ac533587+output"
+            xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/update+55090a2f-15ec-47dc-bad5-25d6ac533587+output">
+            <complexType name="Entities">
+                <sequence>
+                    <element maxOccurs="unbounded" minOccurs="0"
+                        name="lnk_lineedelcontratto" type="tns:lnk_lineedelcontratto"/>
+                </sequence>
+            </complexType>
+            <element name="Entities" type="tns:Entities"/>
+            <complexType name="lnk_lineedelcontratto">
+                <sequence>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="lnk_lineedelcontrattoid" type="string"/>
+                </sequence>
+            </complexType>
+        </schema>
+        <schema elementFormDefault="unqualified"
+            targetNamespace="http://tns.tibco.com/bw/palette/internal/activityerror+bw.dynamicscrm.UpdateEntity"
+            xmlns="http://www.w3.org/2001/XMLSchema"
+            xmlns:Q1="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/fault" xmlns:tns="http://tns.tibco.com/bw/palette/internal/activityerror+bw.dynamicscrm.UpdateEntity">
+            <import namespace="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/fault"/>
+            <element name="ActivityErrorData" type="tns:ActivityErrorDataType"/>
+            <complexType name="ActivityErrorDataType">
+                <choice>
+                    <element maxOccurs="1" minOccurs="0" ref="Q1:ActivityFaultData"/>
+                </choice>
+            </complexType>
+        </schema>
+    </tibex:Types>
+    <tibex:ProcessInfo callable="true" createdBy="flavi"
+        createdOn="Tue Sep 07 14:27:33 CEST 2021" description=""
+        extraErrorVars="true" modifiers="public"
+        productVersion="2.6.1 V57 2021-02-13" scalable="true"
+        singleton="true" stateless="false" type="IT"/>
+    <tibex:ProcessInterface context=""
+        input="{http://it.linkem/crm/UpdateLineaContratto/sl/xsd}UpdateLineaContratto_Input" output="">
+        <tibex:errorList>
+            <tibex:error
+                error="{http://it.linkem/core/lehf/common/AuditTypes/0100}LogAudit" name="LogAudit"/>
+        </tibex:errorList>
+    </tibex:ProcessInterface>
+    <tibex:ProcessTemplateConfigurations/>
+    <notation:Diagram measurementUnit="Pixel" type="BWProcess"
+        xmlns:bwnotation="http://tns.tibco.com/bw/runtime/BWNotation"
+        xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <children type="2001">
+            <children type="5001">
+                <element href="//0/@process"/>
+            </children>
+            <children type="3002">
+                <styles xsi:type="notation:SortingStyle"/>
+                <styles xsi:type="notation:FilteringStyle"/>
+                <element href="//0/@process"/>
+            </children>
+            <children type="3003">
+                <styles xsi:type="notation:SortingStyle"/>
+                <styles xsi:type="notation:FilteringStyle"/>
+                <element href="//0/@process"/>
+            </children>
+            <children type="3004">
+                <children type="4018">
+                    <children type="3018">
+                        <children type="4020">
+                            <children type="3020">
+                                <children type="4005">
+                                    <children type="3007">
+                                    <children type="4002">
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.0"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.0"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.0"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.0"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <styles fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.0"/>
+                                    <layoutConstraint x="-45"
+                                    xsi:type="notation:Bounds" y="124"/>
+                                    </children>
+                                    <children type="4002">
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.1"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.1"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.1"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.1"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <styles fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.1"/>
+                                    <layoutConstraint x="781"
+                                    xsi:type="notation:Bounds" y="124"/>
+                                    </children>
+                                    <children type="4002">
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.2"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.2"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.2"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.2"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <styles fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.2"/>
+                                    <layoutConstraint
+                                    width="165" x="236"
+                                    xsi:type="notation:Bounds" y="124"/>
+                                    </children>
+                                    <children type="4002">
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.3"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.3"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.3"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.3"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <styles fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.3"/>
+                                    <layoutConstraint
+                                    width="127" x="615"
+                                    xsi:type="notation:Bounds" y="124"/>
+                                    </children>
+                                    <children type="4002 bw.internal.getSharedVariable">
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.4"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.4"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.4"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.4"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <styles fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.4"/>
+                                    <layoutConstraint
+                                    height="40" width="40"
+                                    x="87"
+                                    xsi:type="notation:Bounds" y="124"/>
+                                    </children>
+                                    <children type="4002 bw.dynamicscrm.UpdateEntity">
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <styles fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.5"/>
+                                    <layoutConstraint
+                                    height="40" width="166"
+                                    x="422"
+                                    xsi:type="notation:Bounds" y="124"/>
+                                    </children>
+                                    <styles xsi:type="notation:DrawerStyle"/>
+                                    <styles xsi:type="notation:SortingStyle"/>
+                                    <styles xsi:type="notation:FilteringStyle"/>
+                                    <element href="//0/@process/@activity/@activity"/>
+                                    </children>
+                                    <styles fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <styles backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+                                    <styles xsi:type="bwnotation:ResizingStyle"/>
+                                    <element href="//0/@process/@activity/@activity"/>
+                                    <layoutConstraint height="384"
+                                    width="1014" xsi:type="notation:Bounds"/>
+                                </children>
+                                <styles xsi:type="notation:SortingStyle"/>
+                                <styles xsi:type="notation:FilteringStyle"/>
+                                <element href="//0/@process/@activity"/>
+                            </children>
+                            <styles fontName="Segoe UI" lineColor="0" xsi:type="notation:ShapeStyle"/>
+                            <styles xsi:type="bwnotation:BackgroundStyle"/>
+                            <styles xsi:type="bwnotation:ResizingStyle"/>
+                            <element href="//0/@process/@activity"/>
+                            <layoutConstraint height="384" width="812" xsi:type="notation:Bounds"/>
+                        </children>
+                        <styles xsi:type="notation:SortingStyle"/>
+                        <styles xsi:type="notation:FilteringStyle"/>
+                        <element href="//0/@process/@activity"/>
+                    </children>
+                    <styles fontName="Segoe UI" lineColor="0" xsi:type="notation:ShapeStyle"/>
+                    <styles xsi:type="bwnotation:BackgroundStyle"/>
+                    <styles xsi:type="bwnotation:ResizingStyle"/>
+                    <element href="//0/@process/@activity"/>
+                    <layoutConstraint height="408" width="812" x="1"
+                        xsi:type="notation:Bounds" y="1"/>
+                </children>
+                <styles xsi:type="notation:SortingStyle"/>
+                <styles xsi:type="notation:FilteringStyle"/>
+                <element href="//0/@process"/>
+            </children>
+            <styles fontName="Segoe UI" lineColor="0" xsi:type="notation:ShapeStyle"/>
+            <element href="//0/@process"/>
+            <layoutConstraint height="460" width="1359" xsi:type="notation:Bounds"/>
+        </children>
+        <styles xsi:type="notation:DiagramStyle"/>
+        <element href="//0"/>
+        <edges
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0"
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.4" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.0"/>
+            <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.4"
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.1"/>
+            <bendpoints points="[25, 7, -242, -65]$[214, 58, -53, -14]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.3"
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.1" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.2"/>
+            <bendpoints points="[69, -24, -106, 38]$[151, -53, -24, 9]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2"
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.5" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.3"/>
+            <bendpoints points="[46, 0, -103, 0]$[125, 0, -24, 0]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.5"
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.3" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.4"/>
+            <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+    </notation:Diagram>
+    <tibex:NamespaceRegistry enabled="true">
+        <tibex:namespaceItem
+            namespace="http://www.example.org/CRM_SimCheck" prefix="tns"/>
+        <tibex:namespaceItem
+            namespace="http://it.linkem/core/lehf/common/AuditTypes/0100" prefix="tns9"/>
+        <tibex:namespaceItem
+            namespace="http://www.tibco.com/bw/xpath/bw-custom-functions" prefix="bw"/>
+        <tibex:namespaceItem
+            namespace="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrievemultiple+523e9cdd-cd59-4df5-be3c-4dc00cb8e50d+input" prefix="tns1"/>
+        <tibex:namespaceItem
+            namespace="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrievemultiple+30f54bac-cc52-44ff-b6e0-1f4bea566861+input" prefix="tns2"/>
+        <tibex:namespaceItem
+            namespace="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrieve+66581511-2c4b-4f3f-9616-249f3996025f+input" prefix="tns3"/>
+        <tibex:namespaceItem
+            namespace="http://www.tibco.com/bw/xslt/custom-functions" prefix="tib"/>
+        <tibex:namespaceItem
+            namespace="http://it.linkem/crm/getContractById/sl/xsd" prefix="tns4"/>
+        <tibex:namespaceItem
+            namespace="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrieve+d656c57d-65f6-405c-9e99-302e21f8ced7+input" prefix="tns5"/>
+        <tibex:namespaceItem
+            namespace="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrievemultiple+511497e7-d90e-4827-a4f3-512431afbec0+input" prefix="tns6"/>
+        <tibex:namespaceItem
+            namespace="http://it.linkem/crm/getLineeContrattoByGUIDTDC/sl/xsd" prefix="tns7"/>
+        <tibex:namespaceItem
+            namespace="http://it.linkem/crm/getTestataContrattoByGuidTDC/sl/xsd" prefix="tns8"/>
+        <tibex:namespaceItem
+            namespace="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/update+55090a2f-15ec-47dc-bad5-25d6ac533587+input" prefix="tns10"/>
+        <tibex:namespaceItem
+            namespace="http://it.linkem/crm/UpdateLineaContratto/sl/xsd" prefix="tns11"/>
+    </tibex:NamespaceRegistry>
+    <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://it.linkem/core/lehf/common/xsd/loggingwrapper/internal"/>
+    <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://it.linkem/core/lehf/common/loggerType/0100"/>
+    <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://it.linkem/crm/getLineeContratto/sl/xsd"/>
+    <bpws:import importType="http://www.w3.org/2001/XMLSchema"
+        location="../../../../../../Schemas/UpdateLineaContratto/UpdateLineaContratto_sl.xsd" namespace="http://it.linkem/crm/UpdateLineaContratto/sl/xsd"/>
+    <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://it.linkem/core/lehf/common/AuditTypes/0100"/>
+    <bpws:variables>
+        <bpws:variable element="ns:ProcessContext"
+            name="_processContext" sca-bpel:internal="true"/>
+        <bpws:variable name="dynamicsCRMConnection"
+            sca-bpel:hotUpdate="false" sca-bpel:privateProperty="true"
+            sca-bpel:property="yes"
+            sca-bpel:sharedResourceType="{http://ns.tibco.com/bw/palette/dynamicscrmconnection}Dynamicscrm" type="xsd:string">
+            <bpws:from>
+                <bpws:literal>it.linkem.crm.microsoftdynamics.sl.sh.DynamicsCRMConnection</bpws:literal>
+            </bpws:from>
+        </bpws:variable>
+        <bpws:variable element="ns:ErrorReport" name="_error" sca-bpel:internal="true"/>
+        <bpws:variable name="INFO_Severity" sca-bpel:hotUpdate="false"
+            sca-bpel:privateProperty="true" sca-bpel:property="yes"
+            tibex:propertySource="//it.linkem.core.lehf.common.sh///it.linkem.core.lehf.common.sh/Logging/INFO_SEVERITY" type="xsd:string"/>
+        <bpws:variable element="ns6:loggerParams" name="GetLoggerParams" sca-bpel:internal="true"/>
+        <bpws:variable name="ERROR_Severity" sca-bpel:hotUpdate="false"
+            sca-bpel:privateProperty="true" sca-bpel:property="yes"
+            tibex:propertySource="//it.linkem.core.lehf.common.sh///it.linkem.core.lehf.common.sh/Logging/ERROR_SEVERITY" type="xsd:string"/>
+        <bpws:variable name="Business_Exception"
+            sca-bpel:hotUpdate="false" sca-bpel:privateProperty="true"
+            sca-bpel:property="yes"
+            tibex:propertySource="//it.linkem.core.lehf.common.sh///it.linkem.core.lehf.common.sh/Logging/Business_Exception" type="xsd:string"/>
+        <bpws:variable name="System_Exception"
+            sca-bpel:hotUpdate="false" sca-bpel:privateProperty="true"
+            sca-bpel:property="yes"
+            tibex:propertySource="//it.linkem.core.lehf.common.sh///it.linkem.core.lehf.common.sh/Logging/System_Exception" type="xsd:string"/>
+        <bpws:variable element="ns7:ActivityErrorData" name="_error_End" sca-bpel:internal="true"/>
+        <bpws:variable name="dynamicsCRMConnectionNoGrant"
+            sca-bpel:hotUpdate="false" sca-bpel:privateProperty="true"
+            sca-bpel:property="yes"
+            sca-bpel:sharedResourceType="{http://ns.tibco.com/bw/palette/dynamicscrmconnection}Dynamicscrm" type="xsd:string">
+            <bpws:from>
+                <bpws:literal>it.linkem.crm.microsoftdynamics.sl.sh.DynamicsCRMConnection</bpws:literal>
+            </bpws:from>
+        </bpws:variable>
+        <bpws:variable name="DEBUG_Severity" sca-bpel:hotUpdate="false"
+            sca-bpel:privateProperty="true" sca-bpel:property="yes"
+            tibex:propertySource="//it.linkem.core.lehf.common.sh///it.linkem.core.lehf.common.sh/Logging/DEBUG_SEVERITY" type="xsd:string"/>
+        <bpws:variable name="lnk_testatadelcontrattoid" type="xsd:string"/>
+        <bpws:variable name="lnk_name" type="xsd:string"/>
+        <bpws:variable element="ns28:Entities"
+            name="UpdateLineaContratto-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns29:Entities"
+            name="UpdateLineaContratto" sca-bpel:internal="true"/>
+        <bpws:variable element="ns30:ActivityErrorData"
+            name="_error_UpdateLineaContratto" sca-bpel:internal="true"/>
+        <bpws:variable element="ns31:UpdateLineaContratto_Input"
+            name="Start" sca-bpel:internal="true" tibex:parameter="in"/>
+        <bpws:variable element="ns4:LogAudit" name="LogStart-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns5:LEHF_Output" name="LogStart" sca-bpel:internal="true"/>
+        <bpws:variable element="ns4:LogAudit" name="LogEnd-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns5:LEHF_Output" name="LogEnd" sca-bpel:internal="true"/>
+    </bpws:variables>
+    <bpws:extensions>
+        <bpws:extension mustUnderstand="no" namespace="http://www.eclipse.org/gmf/runtime/1.0.2/notation"/>
+        <bpws:extension mustUnderstand="no" namespace="http://www.tibco.com/bw/process/info"/>
+        <bpws:extension mustUnderstand="no" namespace="http://docs.oasis-open.org/ns/opencsa/sca-bpel/200801"/>
+        <bpws:extension mustUnderstand="no" namespace="http://docs.oasis-open.org/ns/opencsa/sca/200912"/>
+        <bpws:extension mustUnderstand="no" namespace="http://ns.tibco.com/bw/property"/>
+        <bpws:extension mustUnderstand="no" namespace="http://www.tibco.com/bpel/2007/extensions"/>
+    </bpws:extensions>
+    <bpws:scope name="scope">
+        <bpws:flow name="flow">
+            <bpws:links>
+                <bpws:link name="StartToGetLoggerParams" tibex:linkType="SUCCESS"/>
+                <bpws:link
+                    name="GetLoggerParamsToLog_Start_GetIMSIByAccount" tibex:linkType="SUCCESS"/>
+                <bpws:link name="Log_End_GetIMSIByAccountToEnd" tibex:linkType="SUCCESS"/>
+                <bpws:link name="LogStartToUpdateLineaContratto" tibex:linkType="SUCCESS"/>
+                <bpws:link name="UpdateEntityToLogEnd" tibex:linkType="SUCCESS"/>
+            </bpws:links>
+            <bpws:extensionActivity>
+                <tibex:receiveEvent createInstance="yes"
+                    eventTimeout="0" name="Start"
+                    tibex:xpdlId="290e44ae-1218-4582-93ab-3606191d41e9"
+                    variable="Start" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                    <bpws:sources>
+                        <bpws:source linkName="StartToGetLoggerParams"/>
+                    </bpws:sources>
+                    <tibex:eventSource>
+                        <tibex:StartEvent xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
+                    </tibex:eventSource>
+                </tibex:receiveEvent>
+            </bpws:extensionActivity>
+            <bpws:extensionActivity>
+                <tibex:activityExtension name="End"
+                    tibex:xpdlId="6e23e1b3-274a-4f62-8440-46f5bfc15b90" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                    <bpws:targets>
+                        <bpws:target linkName="Log_End_GetIMSIByAccountToEnd"/>
+                    </bpws:targets>
+                    <tibex:config>
+                        <bwext:BWActivity
+                            activityTypeID="bw.internal.end"
+                            xmlns:activityconfig="http://tns.tibco.com/bw/model/activityconfig"
+                            xmlns:bwext="http://tns.tibco.com/bw/model/core/bwext"
+                            xmlns:internalactivities="http://ns.tibco.com/bw/core/internalactivity" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                            <activityConfig>
+                                <properties name="config" xsi:type="activityconfig:EMFProperty">
+                                    <type href="http://ns.tibco.com/bw/core/internalactivity#//End"/>
+                                    <value xsi:type="internalactivities:End"/>
+                                </properties>
+                            </activityConfig>
+                        </bwext:BWActivity>
+                    </tibex:config>
+                </tibex:activityExtension>
+            </bpws:extensionActivity>
+            <bpws:extensionActivity>
+                <tibex:extActivity inputVariable="LogStart-input"
+                    name="LogStart" outputVariable="LogStart"
+                    tibex:xpdlId="14db39c8-9179-4170-bc25-7337a140afe4"
+                    type="bw.generalactivities.callprocess" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                    <bpws:targets>
+                        <bpws:target linkName="GetLoggerParamsToLog_Start_GetIMSIByAccount"/>
+                    </bpws:targets>
+                    <bpws:sources>
+                        <bpws:source linkName="LogStartToUpdateLineaContratto"/>
+                    </bpws:sources>
+                    <tibex:inputBindings>
+                        <tibex:inputBinding coercion=""
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns9=&quot;http://it.linkem/core/lehf/common/AuditTypes/0100&quot; xmlns:bw=&quot;http://www.tibco.com/bw/xpath/bw-custom-functions&quot; xmlns:tib=&quot;http://www.tibco.com/bw/xslt/custom-functions&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;GetLoggerParams&quot;/>&lt;xsl:param name=&quot;Start&quot;/>&lt;xsl:param name=&quot;DEBUG_Severity&quot;/>&lt;xsl:template name=&quot;LogStart-input&quot; match=&quot;/&quot;>&lt;tns9:LogAudit>&lt;auditElement>&lt;APPLICATION_NAME>&lt;xsl:value-of select=&quot;$GetLoggerParams/APPLICATION_NAME&quot;/>&lt;/APPLICATION_NAME>&lt;xsl:if test=&quot;$GetLoggerParams/SOURCESYSTEM&quot;>&lt;SOURCESYSTEM>&lt;xsl:value-of select=&quot;$GetLoggerParams/SOURCESYSTEM&quot;/>&lt;/SOURCESYSTEM>&lt;/xsl:if>&lt;STARTTIMESTAMP>&lt;xsl:value-of select=&quot;$GetLoggerParams/STARTTIMESTAMP&quot;/>&lt;/STARTTIMESTAMP>&lt;SEVERITY>&lt;xsl:value-of select=&quot;$DEBUG_Severity&quot;/>&lt;/SEVERITY>&lt;TRACKID>&lt;xsl:value-of select=&quot;$GetLoggerParams/TRACKID&quot;/>&lt;/TRACKID>&lt;BUSINESSKEY>&lt;xsl:value-of select=&quot;$GetLoggerParams/BUSINESSKEY&quot;/>&lt;/BUSINESSKEY>&lt;PROCESSSTACK>&lt;xsl:value-of select=&quot;''&quot;/>&lt;/PROCESSSTACK>&lt;PAYLOAD>&lt;xsl:value-of select=&quot;tib:render-xml($Start, false(),true())&quot;/>&lt;/PAYLOAD>&lt;/auditElement>&lt;/tns9:LogAudit>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                    </tibex:inputBindings>
+                    <tibex:CallProcess
+                        moduleRef="it.linkem.core.lehf.common.sh"
+                        subProcessName="sharedaudit.LoggingWrapper" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
+                </tibex:extActivity>
+            </bpws:extensionActivity>
+            <bpws:extensionActivity>
+                <tibex:extActivity inputVariable="LogEnd-input"
+                    name="LogEnd" outputVariable="LogEnd"
+                    tibex:xpdlId="f51cb5e7-0f78-417f-a89f-9c561383b315"
+                    type="bw.generalactivities.callprocess" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                    <bpws:targets>
+                        <bpws:target linkName="UpdateEntityToLogEnd"/>
+                    </bpws:targets>
+                    <bpws:sources>
+                        <bpws:source linkName="Log_End_GetIMSIByAccountToEnd"/>
+                    </bpws:sources>
+                    <tibex:inputBindings>
+                        <tibex:inputBinding coercion=""
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns9=&quot;http://it.linkem/core/lehf/common/AuditTypes/0100&quot; xmlns:tib=&quot;http://www.tibco.com/bw/xslt/custom-functions&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;GetLoggerParams&quot;/>&lt;xsl:param name=&quot;DEBUG_Severity&quot;/>&lt;xsl:param name=&quot;UpdateLineaContratto&quot;/>&lt;xsl:template name=&quot;LogEnd-input&quot; match=&quot;/&quot;>&lt;tns9:LogAudit>&lt;auditElement>&lt;APPLICATION_NAME>&lt;xsl:value-of select=&quot;$GetLoggerParams/APPLICATION_NAME&quot;/>&lt;/APPLICATION_NAME>&lt;xsl:if test=&quot;$GetLoggerParams/SOURCESYSTEM&quot;>&lt;SOURCESYSTEM>&lt;xsl:value-of select=&quot;$GetLoggerParams/SOURCESYSTEM&quot;/>&lt;/SOURCESYSTEM>&lt;/xsl:if>&lt;STARTTIMESTAMP>&lt;xsl:value-of select=&quot;$GetLoggerParams/STARTTIMESTAMP&quot;/>&lt;/STARTTIMESTAMP>&lt;SEVERITY>&lt;xsl:value-of select=&quot;$DEBUG_Severity&quot;/>&lt;/SEVERITY>&lt;TRACKID>&lt;xsl:value-of select=&quot;$GetLoggerParams/TRACKID&quot;/>&lt;/TRACKID>&lt;BUSINESSKEY>&lt;xsl:value-of select=&quot;$GetLoggerParams/BUSINESSKEY&quot;/>&lt;/BUSINESSKEY>&lt;PROCESSSTACK>&lt;xsl:value-of select=&quot;''&quot;/>&lt;/PROCESSSTACK>&lt;PAYLOAD>&lt;xsl:value-of select=&quot;tib:render-xml($UpdateLineaContratto,  false(),true())&quot;/>&lt;/PAYLOAD>&lt;/auditElement>&lt;/tns9:LogAudit>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                    </tibex:inputBindings>
+                    <tibex:CallProcess
+                        moduleRef="it.linkem.core.lehf.common.sh"
+                        subProcessName="sharedaudit.LoggingWrapper" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
+                </tibex:extActivity>
+            </bpws:extensionActivity>
+            <bpws:extensionActivity>
+                <tibex:extActivity name="GetLoggerParams"
+                    outputVariable="GetLoggerParams"
+                    tibex:xpdlId="ab17649d-546e-4ad4-b7ee-0d38f52d6592"
+                    type="bw.internal.getSharedVariable" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                    <bpws:targets>
+                        <bpws:target linkName="StartToGetLoggerParams"/>
+                    </bpws:targets>
+                    <bpws:sources>
+                        <bpws:source linkName="GetLoggerParamsToLog_Start_GetIMSIByAccount"/>
+                    </bpws:sources>
+                    <tibex:GetSharedVariable inline="true"
+                        variableName="//it.linkem.core.lehf.common.sh//loggerParams" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
+                </tibex:extActivity>
+            </bpws:extensionActivity>
+            <bpws:extensionActivity>
+                <tibex:activityExtension
+                    inputVariable="UpdateLineaContratto-input"
+                    name="UpdateLineaContratto"
+                    outputVariable="UpdateLineaContratto"
+                    tibex:xpdlId="55090a2f-15ec-47dc-bad5-25d6ac533587" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                    <bpws:targets>
+                        <bpws:target linkName="LogStartToUpdateLineaContratto"/>
+                    </bpws:targets>
+                    <bpws:sources>
+                        <bpws:source linkName="UpdateEntityToLogEnd"/>
+                    </bpws:sources>
+                    <tibex:inputBindings>
+                        <tibex:inputBinding
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns10=&quot;http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/update+55090a2f-15ec-47dc-bad5-25d6ac533587+input&quot; xmlns:tns11=&quot;http://it.linkem/crm/UpdateLineaContratto/sl/xsd&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;Start&quot;/>&#xa;    &lt;xsl:template name=&quot;UpdateLineaContratto-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns10:Entities>&#xa;            &lt;lnk_lineedelcontratto>&#xa;                &lt;xsl:if test=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_dataconsegna&quot;>&#xa;                    &lt;lnk_dataconsegna>&#xa;                        &lt;xsl:value-of select=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_dataconsegna&quot;/>&#xa;                    &lt;/lnk_dataconsegna>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_accountwififlatutente_2&quot;>&#xa;                    &lt;lnk_accountwififlatutente_2>&#xa;                        &lt;xsl:value-of select=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_accountwififlatutente_2&quot;/>&#xa;                    &lt;/lnk_accountwififlatutente_2>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_datainiziofatturazione&quot;>&#xa;                    &lt;lnk_datainiziofatturazione>&#xa;                        &lt;xsl:value-of select=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_datainiziofatturazione&quot;/>&#xa;                    &lt;/lnk_datainiziofatturazione>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_prezzo&quot;>&#xa;                    &lt;lnk_prezzo>&#xa;                        &lt;xsl:value-of select=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_prezzo&quot;/>&#xa;                    &lt;/lnk_prezzo>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_utenteadsl&quot;>&#xa;                    &lt;lnk_utenteadsl>&#xa;                        &lt;xsl:value-of select=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_utenteadsl&quot;/>&#xa;                    &lt;/lnk_utenteadsl>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_voipstatus&quot;>&#xa;                    &lt;lnk_voipstatus>&#xa;                        &lt;xsl:value-of select=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_voipstatus&quot;/>&#xa;                    &lt;/lnk_voipstatus>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$Start/tns11:lnk_lineedelcontratto/statuscode&quot;>&#xa;                    &lt;statuscode>&#xa;                        &lt;xsl:value-of select=&quot;$Start/tns11:lnk_lineedelcontratto/statuscode&quot;/>&#xa;                    &lt;/statuscode>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_name&quot;>&#xa;                    &lt;lnk_name>&#xa;                        &lt;xsl:value-of select=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_name&quot;/>&#xa;                    &lt;/lnk_name>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_latitudine&quot;>&#xa;                    &lt;lnk_latitudine>&#xa;                        &lt;xsl:value-of select=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_latitudine&quot;/>&#xa;                    &lt;/lnk_latitudine>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_datacessazione&quot;>&#xa;                    &lt;lnk_datacessazione>&#xa;                        &lt;xsl:value-of select=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_datacessazione&quot;/>&#xa;                    &lt;/lnk_datacessazione>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$Start/tns11:lnk_lineedelcontratto/timezoneruleversionnumber&quot;>&#xa;                    &lt;timezoneruleversionnumber>&#xa;                        &lt;xsl:value-of select=&quot;$Start/tns11:lnk_lineedelcontratto/timezoneruleversionnumber&quot;/>&#xa;                    &lt;/timezoneruleversionnumber>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:copy-of select=&quot;$Start/tns11:lnk_lineedelcontratto/ownerid&quot;/>&#xa;                &lt;xsl:if test=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_importofatturainstallatore&quot;>&#xa;                    &lt;lnk_importofatturainstallatore>&#xa;                        &lt;xsl:value-of select=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_importofatturainstallatore&quot;/>&#xa;                    &lt;/lnk_importofatturainstallatore>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_numeroseriale&quot;>&#xa;                    &lt;lnk_numeroseriale>&#xa;                        &lt;xsl:value-of select=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_numeroseriale&quot;/>&#xa;                    &lt;/lnk_numeroseriale>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_copertura_new&quot;>&#xa;                    &lt;lnk_copertura_new>&#xa;                        &lt;xsl:value-of select=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_copertura_new&quot;/>&#xa;                    &lt;/lnk_copertura_new>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_statopromo&quot;>&#xa;                    &lt;lnk_statopromo>&#xa;                        &lt;xsl:value-of select=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_statopromo&quot;/>&#xa;                    &lt;/lnk_statopromo>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_voiporderid&quot;>&#xa;                    &lt;lnk_voiporderid>&#xa;                        &lt;xsl:value-of select=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_voiporderid&quot;/>&#xa;                    &lt;/lnk_voiporderid>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_ricaricatapromolancio&quot;>&#xa;                    &lt;lnk_ricaricatapromolancio>&#xa;                        &lt;xsl:value-of select=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_ricaricatapromolancio&quot;/>&#xa;                    &lt;/lnk_ricaricatapromolancio>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$Start/tns11:lnk_lineedelcontratto/utcconversiontimezonecode&quot;>&#xa;                    &lt;utcconversiontimezonecode>&#xa;                        &lt;xsl:value-of select=&quot;$Start/tns11:lnk_lineedelcontratto/utcconversiontimezonecode&quot;/>&#xa;                    &lt;/utcconversiontimezonecode>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_numerolinea&quot;>&#xa;                    &lt;lnk_numerolinea>&#xa;                        &lt;xsl:value-of select=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_numerolinea&quot;/>&#xa;                    &lt;/lnk_numerolinea>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_statocar&quot;>&#xa;                    &lt;lnk_statocar>&#xa;                        &lt;xsl:value-of select=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_statocar&quot;/>&#xa;                    &lt;/lnk_statocar>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$Start/tns11:lnk_lineedelcontratto/statecode&quot;>&#xa;                    &lt;statecode>&#xa;                        &lt;xsl:value-of select=&quot;$Start/tns11:lnk_lineedelcontratto/statecode&quot;/>&#xa;                    &lt;/statecode>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_voipuserpassword&quot;>&#xa;                    &lt;lnk_voipuserpassword>&#xa;                        &lt;xsl:value-of select=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_voipuserpassword&quot;/>&#xa;                    &lt;/lnk_voipuserpassword>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_statocodicelinea&quot;>&#xa;                    &lt;lnk_statocodicelinea>&#xa;                        &lt;xsl:value-of select=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_statocodicelinea&quot;/>&#xa;                    &lt;/lnk_statocodicelinea>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_ratingstatus&quot;>&#xa;                    &lt;lnk_ratingstatus>&#xa;                        &lt;xsl:value-of select=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_ratingstatus&quot;/>&#xa;                    &lt;/lnk_ratingstatus>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_macutente&quot;>&#xa;                    &lt;lnk_macutente>&#xa;                        &lt;xsl:value-of select=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_macutente&quot;/>&#xa;                    &lt;/lnk_macutente>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_indirizzoip&quot;>&#xa;                    &lt;lnk_indirizzoip>&#xa;                        &lt;xsl:value-of select=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_indirizzoip&quot;/>&#xa;                    &lt;/lnk_indirizzoip>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_statohuawei&quot;>&#xa;                    &lt;lnk_statohuawei>&#xa;                        &lt;xsl:value-of select=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_statohuawei&quot;/>&#xa;                    &lt;/lnk_statohuawei>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$Start/tns11:lnk_lineedelcontratto/dynamics_integrationkey&quot;>&#xa;                    &lt;dynamics_integrationkey>&#xa;                        &lt;xsl:value-of select=&quot;$Start/tns11:lnk_lineedelcontratto/dynamics_integrationkey&quot;/>&#xa;                    &lt;/dynamics_integrationkey>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_segnale_new&quot;>&#xa;                    &lt;lnk_segnale_new>&#xa;                        &lt;xsl:value-of select=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_segnale_new&quot;/>&#xa;                    &lt;/lnk_segnale_new>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_accountwififlatutente&quot;>&#xa;                    &lt;lnk_accountwififlatutente>&#xa;                        &lt;xsl:value-of select=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_accountwififlatutente&quot;/>&#xa;                    &lt;/lnk_accountwififlatutente>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_ipstaticoterritoriale&quot;>&#xa;                    &lt;lnk_ipstaticoterritoriale>&#xa;                        &lt;xsl:value-of select=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_ipstaticoterritoriale&quot;/>&#xa;                    &lt;/lnk_ipstaticoterritoriale>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_utentewimax&quot;>&#xa;                    &lt;lnk_utentewimax>&#xa;                        &lt;xsl:value-of select=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_utentewimax&quot;/>&#xa;                    &lt;/lnk_utentewimax>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_bts_new&quot;>&#xa;                    &lt;lnk_bts_new>&#xa;                        &lt;xsl:value-of select=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_bts_new&quot;/>&#xa;                    &lt;/lnk_bts_new>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_smsinviatodata&quot;>&#xa;                    &lt;lnk_smsinviatodata>&#xa;                        &lt;xsl:value-of select=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_smsinviatodata&quot;/>&#xa;                    &lt;/lnk_smsinviatodata>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_voiplinenumber&quot;>&#xa;                    &lt;lnk_voiplinenumber>&#xa;                        &lt;xsl:value-of select=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_voiplinenumber&quot;/>&#xa;                    &lt;/lnk_voiplinenumber>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_status&quot;>&#xa;                    &lt;lnk_status>&#xa;                        &lt;xsl:value-of select=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_status&quot;/>&#xa;                    &lt;/lnk_status>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_smsinviato&quot;>&#xa;                    &lt;lnk_smsinviato>&#xa;                        &lt;xsl:value-of select=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_smsinviato&quot;/>&#xa;                    &lt;/lnk_smsinviato>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_longitudine&quot;>&#xa;                    &lt;lnk_longitudine>&#xa;                        &lt;xsl:value-of select=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_longitudine&quot;/>&#xa;                    &lt;/lnk_longitudine>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_accountwififaltutente_3&quot;>&#xa;                    &lt;lnk_accountwififaltutente_3>&#xa;                        &lt;xsl:value-of select=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_accountwififaltutente_3&quot;/>&#xa;                    &lt;/lnk_accountwififaltutente_3>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_statosincronizzazione&quot;>&#xa;                    &lt;lnk_statosincronizzazione>&#xa;                        &lt;xsl:value-of select=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_statosincronizzazione&quot;/>&#xa;                    &lt;/lnk_statosincronizzazione>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_statoprepaidflat&quot;>&#xa;                    &lt;lnk_statoprepaidflat>&#xa;                        &lt;xsl:value-of select=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_statoprepaidflat&quot;/>&#xa;                    &lt;/lnk_statoprepaidflat>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_indirizzoippubblico&quot;>&#xa;                    &lt;lnk_indirizzoippubblico>&#xa;                        &lt;xsl:value-of select=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_indirizzoippubblico&quot;/>&#xa;                    &lt;/lnk_indirizzoippubblico>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_datacopertura_new&quot;>&#xa;                    &lt;lnk_datacopertura_new>&#xa;                        &lt;xsl:value-of select=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_datacopertura_new&quot;/>&#xa;                    &lt;/lnk_datacopertura_new>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_wimaxstatus&quot;>&#xa;                    &lt;lnk_wimaxstatus>&#xa;                        &lt;xsl:value-of select=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_wimaxstatus&quot;/>&#xa;                    &lt;/lnk_wimaxstatus>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_snr&quot;>&#xa;                    &lt;lnk_snr>&#xa;                        &lt;xsl:value-of select=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_snr&quot;/>&#xa;                    &lt;/lnk_snr>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_datainiziopagamenti&quot;>&#xa;                    &lt;lnk_datainiziopagamenti>&#xa;                        &lt;xsl:value-of select=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_datainiziopagamenti&quot;/>&#xa;                    &lt;/lnk_datainiziopagamenti>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_radiusstatus&quot;>&#xa;                    &lt;lnk_radiusstatus>&#xa;                        &lt;xsl:value-of select=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_radiusstatus&quot;/>&#xa;                    &lt;/lnk_radiusstatus>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_welcomeletterinviata&quot;>&#xa;                    &lt;lnk_welcomeletterinviata>&#xa;                        &lt;xsl:value-of select=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_welcomeletterinviata&quot;/>&#xa;                    &lt;/lnk_welcomeletterinviata>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_id_contratto&quot;>&#xa;                    &lt;lnk_id_contratto>&#xa;                        &lt;xsl:value-of select=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_id_contratto&quot;/>&#xa;                    &lt;/lnk_id_contratto>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_voipusername&quot;>&#xa;                    &lt;lnk_voipusername>&#xa;                        &lt;xsl:value-of select=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_voipusername&quot;/>&#xa;                    &lt;/lnk_voipusername>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_macmaster&quot;>&#xa;                    &lt;lnk_macmaster>&#xa;                        &lt;xsl:value-of select=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_macmaster&quot;/>&#xa;                    &lt;/lnk_macmaster>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_datachiamataperattivazione&quot;>&#xa;                    &lt;lnk_datachiamataperattivazione>&#xa;                        &lt;xsl:value-of select=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_datachiamataperattivazione&quot;/>&#xa;                    &lt;/lnk_datachiamataperattivazione>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_dataricezioneraccomandata&quot;>&#xa;                    &lt;lnk_dataricezioneraccomandata>&#xa;                        &lt;xsl:value-of select=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_dataricezioneraccomandata&quot;/>&#xa;                    &lt;/lnk_dataricezioneraccomandata>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_accountwififlatpsw_2&quot;>&#xa;                    &lt;lnk_accountwififlatpsw_2>&#xa;                        &lt;xsl:value-of select=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_accountwififlatpsw_2&quot;/>&#xa;                    &lt;/lnk_accountwififlatpsw_2>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_bts&quot;>&#xa;                    &lt;lnk_bts>&#xa;                        &lt;xsl:value-of select=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_bts&quot;/>&#xa;                    &lt;/lnk_bts>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_accountwififlatpsw_3&quot;>&#xa;                    &lt;lnk_accountwififlatpsw_3>&#xa;                        &lt;xsl:value-of select=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_accountwififlatpsw_3&quot;/>&#xa;                    &lt;/lnk_accountwififlatpsw_3>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:copy-of select=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_lineaprincipaleid&quot;/>&#xa;                &lt;xsl:if test=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_pwdwimax&quot;>&#xa;                    &lt;lnk_pwdwimax>&#xa;                        &lt;xsl:value-of select=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_pwdwimax&quot;/>&#xa;                    &lt;/lnk_pwdwimax>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_nomecalciatore&quot;>&#xa;                    &lt;lnk_nomecalciatore>&#xa;                        &lt;xsl:value-of select=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_nomecalciatore&quot;/>&#xa;                    &lt;/lnk_nomecalciatore>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_tipolinea&quot;>&#xa;                    &lt;lnk_tipolinea>&#xa;                        &lt;xsl:value-of select=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_tipolinea&quot;/>&#xa;                    &lt;/lnk_tipolinea>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$Start/tns11:lnk_lineedelcontratto/owneridtype&quot;>&#xa;                    &lt;owneridtype>&#xa;                        &lt;xsl:value-of select=&quot;$Start/tns11:lnk_lineedelcontratto/owneridtype&quot;/>&#xa;                    &lt;/owneridtype>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$Start/tns11:lnk_lineedelcontratto/ip_importid&quot;>&#xa;                    &lt;ip_importid>&#xa;                        &lt;xsl:value-of select=&quot;$Start/tns11:lnk_lineedelcontratto/ip_importid&quot;/>&#xa;                    &lt;/ip_importid>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_gateway&quot;>&#xa;                    &lt;lnk_gateway>&#xa;                        &lt;xsl:value-of select=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_gateway&quot;/>&#xa;                    &lt;/lnk_gateway>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_minutiliberialmese&quot;>&#xa;                    &lt;lnk_minutiliberialmese>&#xa;                        &lt;xsl:value-of select=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_minutiliberialmese&quot;/>&#xa;                    &lt;/lnk_minutiliberialmese>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_dataprossimafattura&quot;>&#xa;                    &lt;lnk_dataprossimafattura>&#xa;                        &lt;xsl:value-of select=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_dataprossimafattura&quot;/>&#xa;                    &lt;/lnk_dataprossimafattura>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_coupon&quot;>&#xa;                    &lt;lnk_coupon>&#xa;                        &lt;xsl:value-of select=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_coupon&quot;/>&#xa;                    &lt;/lnk_coupon>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_consegnarapportiinstallazione&quot;>&#xa;                    &lt;lnk_consegnarapportiinstallazione>&#xa;                        &lt;xsl:value-of select=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_consegnarapportiinstallazione&quot;/>&#xa;                    &lt;/lnk_consegnarapportiinstallazione>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_fatturazioneperiodica&quot;>&#xa;                    &lt;lnk_fatturazioneperiodica>&#xa;                        &lt;xsl:value-of select=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_fatturazioneperiodica&quot;/>&#xa;                    &lt;/lnk_fatturazioneperiodica>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_pwdadsl&quot;>&#xa;                    &lt;lnk_pwdadsl>&#xa;                        &lt;xsl:value-of select=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_pwdadsl&quot;/>&#xa;                    &lt;/lnk_pwdadsl>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_macaddresscpe&quot;>&#xa;                    &lt;lnk_macaddresscpe>&#xa;                        &lt;xsl:value-of select=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_macaddresscpe&quot;/>&#xa;                    &lt;/lnk_macaddresscpe>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_datacontratto&quot;>&#xa;                    &lt;lnk_datacontratto>&#xa;                        &lt;xsl:value-of select=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_datacontratto&quot;/>&#xa;                    &lt;/lnk_datacontratto>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_datacopertura&quot;>&#xa;                    &lt;lnk_datacopertura>&#xa;                        &lt;xsl:value-of select=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_datacopertura&quot;/>&#xa;                    &lt;/lnk_datacopertura>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_segnalerssi&quot;>&#xa;                    &lt;lnk_segnalerssi>&#xa;                        &lt;xsl:value-of select=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_segnalerssi&quot;/>&#xa;                    &lt;/lnk_segnalerssi>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_progressivoreclamo&quot;>&#xa;                    &lt;lnk_progressivoreclamo>&#xa;                        &lt;xsl:value-of select=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_progressivoreclamo&quot;/>&#xa;                    &lt;/lnk_progressivoreclamo>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_coperturadaweb&quot;>&#xa;                    &lt;lnk_coperturadaweb>&#xa;                        &lt;xsl:value-of select=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_coperturadaweb&quot;/>&#xa;                    &lt;/lnk_coperturadaweb>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_dataattivazione&quot;>&#xa;                    &lt;lnk_dataattivazione>&#xa;                        &lt;xsl:value-of select=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_dataattivazione&quot;/>&#xa;                    &lt;/lnk_dataattivazione>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_datainviocodici&quot;>&#xa;                    &lt;lnk_datainviocodici>&#xa;                        &lt;xsl:value-of select=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_datainviocodici&quot;/>&#xa;                    &lt;/lnk_datainviocodici>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_nomeinstallatore&quot;>&#xa;                    &lt;lnk_nomeinstallatore>&#xa;                        &lt;xsl:value-of select=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_nomeinstallatore&quot;/>&#xa;                    &lt;/lnk_nomeinstallatore>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_accountwififlatpsw&quot;>&#xa;                    &lt;lnk_accountwififlatpsw>&#xa;                        &lt;xsl:value-of select=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_accountwififlatpsw&quot;/>&#xa;                    &lt;/lnk_accountwififlatpsw>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_bonusmgmalportatore&quot;>&#xa;                    &lt;lnk_bonusmgmalportatore>&#xa;                        &lt;xsl:value-of select=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_bonusmgmalportatore&quot;/>&#xa;                    &lt;/lnk_bonusmgmalportatore>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_dataultimafatturazione&quot;>&#xa;                    &lt;lnk_dataultimafatturazione>&#xa;                        &lt;xsl:value-of select=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_dataultimafatturazione&quot;/>&#xa;                    &lt;/lnk_dataultimafatturazione>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_bloccato&quot;>&#xa;                    &lt;lnk_bloccato>&#xa;                        &lt;xsl:value-of select=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_bloccato&quot;/>&#xa;                    &lt;/lnk_bloccato>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_netmask&quot;>&#xa;                    &lt;lnk_netmask>&#xa;                        &lt;xsl:value-of select=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_netmask&quot;/>&#xa;                    &lt;/lnk_netmask>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_qualitcinr&quot;>&#xa;                    &lt;lnk_qualitcinr>&#xa;                        &lt;xsl:value-of select=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_qualitcinr&quot;/>&#xa;                    &lt;/lnk_qualitcinr>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:copy-of select=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_id_contrattoid&quot;/>&#xa;                &lt;xsl:copy-of select=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_pianotariffarioid&quot;/>&#xa;                &lt;xsl:if test=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_dataspedizione&quot;>&#xa;                    &lt;lnk_dataspedizione>&#xa;                        &lt;xsl:value-of select=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_dataspedizione&quot;/>&#xa;                    &lt;/lnk_dataspedizione>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:copy-of select=&quot;$Start/tns11:lnk_lineedelcontratto/transactioncurrencyid&quot;/>&#xa;                &lt;xsl:if test=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_lineedelcontrattoid&quot;>&#xa;                    &lt;lnk_lineedelcontrattoid>&#xa;                        &lt;xsl:value-of select=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_lineedelcontrattoid&quot;/>&#xa;                    &lt;/lnk_lineedelcontrattoid>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_segnale&quot;>&#xa;                    &lt;lnk_segnale>&#xa;                        &lt;xsl:value-of select=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_segnale&quot;/>&#xa;                    &lt;/lnk_segnale>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_logsincronizzazione&quot;>&#xa;                    &lt;lnk_logsincronizzazione>&#xa;                        &lt;xsl:value-of select=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_logsincronizzazione&quot;/>&#xa;                    &lt;/lnk_logsincronizzazione>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_dns&quot;>&#xa;                    &lt;lnk_dns>&#xa;                        &lt;xsl:value-of select=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_dns&quot;/>&#xa;                    &lt;/lnk_dns>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_servizioaggiuntivoct&quot;>&#xa;                    &lt;lnk_servizioaggiuntivoct>&#xa;                        &lt;xsl:value-of select=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_servizioaggiuntivoct&quot;/>&#xa;                    &lt;/lnk_servizioaggiuntivoct>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_cdrstatus&quot;>&#xa;                    &lt;lnk_cdrstatus>&#xa;                        &lt;xsl:value-of select=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_cdrstatus&quot;/>&#xa;                    &lt;/lnk_cdrstatus>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_datafinevalidita&quot;>&#xa;                    &lt;lnk_datafinevalidita>&#xa;                        &lt;xsl:value-of select=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_datafinevalidita&quot;/>&#xa;                    &lt;/lnk_datafinevalidita>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:copy-of select=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_societainstallatriceid&quot;/>&#xa;                &lt;xsl:if test=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_btstelecom&quot;>&#xa;                    &lt;lnk_btstelecom>&#xa;                        &lt;xsl:value-of select=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_btstelecom&quot;/>&#xa;                    &lt;/lnk_btstelecom>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:copy-of select=&quot;$Start/tns11:lnk_lineedelcontratto/lnk_accountid&quot;/>&#xa;            &lt;/lnk_lineedelcontratto>&#xa;        &lt;/tns10:Entities>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                    </tibex:inputBindings>
+                    <tibex:config>
+                        <bwext:BWActivity
+                            activityTypeID="bw.dynamicscrm.UpdateEntity"
+                            xmlns:activityconfig="http://tns.tibco.com/bw/model/activityconfig"
+                            xmlns:bwext="http://tns.tibco.com/bw/model/core/bwext"
+                            xmlns:dynamicscrm="http://ns.tibco.com/bw/palette/dynamicscrm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                            <activityConfig>
+                                <properties name="config" xsi:type="activityconfig:EMFProperty">
+                                    <type href="http://ns.tibco.com/bw/palette/dynamicscrm#//UpdateEntity"/>
+                                    <value
+                                    dynamicscrmConnection="dynamicsCRMConnection"
+                                    dynamicscrmEntityOption="Contratto linee(lnk_lineedelcontratto)" xsi:type="dynamicscrm:UpdateEntity">
+                                    <entitymetadatatamap key="lnk_dataconsegna">
+                                    <value CRMType="DateTime"
+                                    EntityLogicalName="lnk_lineedelcontratto"
+                                    asInput="true"
+                                    changeable="true"
+                                    displayName="Data Consegna"
+                                    logicName="lnk_dataconsegna"
+                                    requried="None"
+                                    schemaName="lnk_dataconsegna"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="dateTime"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="lnk_accountwififlatutente_2">
+                                    <value CRMType="String"
+                                    EntityLogicalName="lnk_lineedelcontratto"
+                                    asInput="true"
+                                    changeable="true"
+                                    displayName="Account wifi flat Utente_2"
+                                    logicName="lnk_accountwififlatutente_2"
+                                    requried="None"
+                                    schemaName="lnk_accountwififlatutente_2"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="string"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="lnk_datainiziofatturazione">
+                                    <value CRMType="DateTime"
+                                    EntityLogicalName="lnk_lineedelcontratto"
+                                    asInput="true"
+                                    changeable="true"
+                                    displayName="Data Inizio Fatturazione"
+                                    logicName="lnk_datainiziofatturazione"
+                                    requried="None"
+                                    schemaName="lnk_datainiziofatturazione"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="dateTime"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="lnk_prezzo">
+                                    <value CRMType="Money"
+                                    EntityLogicalName="lnk_lineedelcontratto"
+                                    asInput="true"
+                                    changeable="true"
+                                    displayName="Prezzo IVA esclusa"
+                                    logicName="lnk_prezzo"
+                                    requried="None"
+                                    schemaName="lnk_prezzo"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="decimal"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="lnk_utenteadsl">
+                                    <value CRMType="String"
+                                    EntityLogicalName="lnk_lineedelcontratto"
+                                    asInput="true"
+                                    changeable="true"
+                                    displayName="Utente Adsl"
+                                    logicName="lnk_utenteadsl"
+                                    requried="None"
+                                    schemaName="lnk_utenteadsl"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="string"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="lnk_voipstatus">
+                                    <value CRMType="Boolean"
+                                    EntityLogicalName="lnk_lineedelcontratto"
+                                    asInput="true"
+                                    changeable="true"
+                                    displayName="Voip Status"
+                                    logicName="lnk_voipstatus"
+                                    requried="None"
+                                    schemaName="lnk_voipstatus"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="boolean"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="statuscode">
+                                    <value CRMType="Status"
+                                    EntityLogicalName="lnk_lineedelcontratto"
+                                    asInput="true"
+                                    changeable="true"
+                                    displayName="Motivo stato"
+                                    logicName="statuscode"
+                                    requried="None"
+                                    schemaName="statuscode"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="integer"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="lnk_name">
+                                    <value CRMType="String"
+                                    EntityLogicalName="lnk_lineedelcontratto"
+                                    asInput="true"
+                                    changeable="true"
+                                    displayName="Nome"
+                                    logicName="lnk_name"
+                                    requried="None"
+                                    schemaName="lnk_name"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="string"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="lnk_latitudine">
+                                    <value CRMType="Decimal"
+                                    EntityLogicalName="lnk_lineedelcontratto"
+                                    asInput="true"
+                                    changeable="true"
+                                    displayName="Latitudine"
+                                    logicName="lnk_latitudine"
+                                    requried="None"
+                                    schemaName="lnk_latitudine"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="decimal"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="lnk_datacessazione">
+                                    <value CRMType="DateTime"
+                                    EntityLogicalName="lnk_lineedelcontratto"
+                                    asInput="true"
+                                    changeable="true"
+                                    displayName="Data Cessazione"
+                                    logicName="lnk_datacessazione"
+                                    requried="None"
+                                    schemaName="lnk_datacessazione"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="dateTime"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="timezoneruleversionnumber">
+                                    <value CRMType="Integer"
+                                    EntityLogicalName="lnk_lineedelcontratto"
+                                    asInput="true"
+                                    changeable="true"
+                                    displayName="Numero di versione regola fuso orario"
+                                    logicName="timezoneruleversionnumber"
+                                    requried="None"
+                                    schemaName="TimeZoneRuleVersionNumber"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="integer"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="ownerid">
+                                    <value CRMType="Owner"
+                                    EntityLogicalName="lnk_lineedelcontratto"
+                                    asInput="true"
+                                    changeable="true"
+                                    displayName="Proprietario"
+                                    logicName="ownerid"
+                                    requried="SystemRequired"
+                                    schemaName="OwnerId"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="string"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="lnk_importofatturainstallatore">
+                                    <value CRMType="Decimal"
+                                    EntityLogicalName="lnk_lineedelcontratto"
+                                    asInput="true"
+                                    changeable="true"
+                                    displayName="Importo Fattura Installatore"
+                                    logicName="lnk_importofatturainstallatore"
+                                    requried="None"
+                                    schemaName="lnk_importofatturainstallatore"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="decimal"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="lnk_numeroseriale">
+                                    <value CRMType="String"
+                                    EntityLogicalName="lnk_lineedelcontratto"
+                                    asInput="true"
+                                    changeable="true"
+                                    displayName="Numero Seriale"
+                                    logicName="lnk_numeroseriale"
+                                    requried="None"
+                                    schemaName="lnk_numeroseriale"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="string"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="lnk_copertura_new">
+                                    <value CRMType="Picklist"
+                                    EntityLogicalName="lnk_lineedelcontratto"
+                                    asInput="true"
+                                    changeable="true"
+                                    displayName="Copertura_new"
+                                    logicName="lnk_copertura_new"
+                                    requried="None"
+                                    schemaName="lnk_copertura_new"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="integer"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="lnk_statopromo">
+                                    <value CRMType="Picklist"
+                                    EntityLogicalName="lnk_lineedelcontratto"
+                                    asInput="true"
+                                    changeable="true"
+                                    displayName="Stato Promo"
+                                    logicName="lnk_statopromo"
+                                    requried="None"
+                                    schemaName="lnk_statopromo"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="integer"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="lnk_voiporderid">
+                                    <value CRMType="String"
+                                    EntityLogicalName="lnk_lineedelcontratto"
+                                    asInput="true"
+                                    changeable="true"
+                                    displayName="Voip Order ID"
+                                    logicName="lnk_voiporderid"
+                                    requried="None"
+                                    schemaName="lnk_voiporderid"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="string"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="lnk_ricaricatapromolancio">
+                                    <value CRMType="Boolean"
+                                    EntityLogicalName="lnk_lineedelcontratto"
+                                    asInput="true"
+                                    changeable="true"
+                                    displayName="Ricaricata Promo Lancio"
+                                    logicName="lnk_ricaricatapromolancio"
+                                    requried="None"
+                                    schemaName="lnk_ricaricatapromolancio"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="boolean"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="utcconversiontimezonecode">
+                                    <value CRMType="Integer"
+                                    EntityLogicalName="lnk_lineedelcontratto"
+                                    asInput="true"
+                                    changeable="true"
+                                    displayName="Codice fuso orario conversione UTC"
+                                    logicName="utcconversiontimezonecode"
+                                    requried="None"
+                                    schemaName="UTCConversionTimeZoneCode"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="integer"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="lnk_numerolinea">
+                                    <value CRMType="Integer"
+                                    EntityLogicalName="lnk_lineedelcontratto"
+                                    asInput="true"
+                                    changeable="true"
+                                    displayName="Numero Linea"
+                                    logicName="lnk_numerolinea"
+                                    requried="None"
+                                    schemaName="lnk_numerolinea"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="integer"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="lnk_statocar">
+                                    <value CRMType="Picklist"
+                                    EntityLogicalName="lnk_lineedelcontratto"
+                                    asInput="true"
+                                    changeable="true"
+                                    displayName="Stato CAR"
+                                    logicName="lnk_statocar"
+                                    requried="None"
+                                    schemaName="lnk_statocar"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="integer"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="statecode">
+                                    <value CRMType="State"
+                                    EntityLogicalName="lnk_lineedelcontratto"
+                                    asInput="true"
+                                    changeable="true"
+                                    displayName="Stato"
+                                    logicName="statecode"
+                                    requried="SystemRequired"
+                                    schemaName="statecode"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="integer"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="lnk_voipuserpassword">
+                                    <value CRMType="String"
+                                    EntityLogicalName="lnk_lineedelcontratto"
+                                    asInput="true"
+                                    changeable="true"
+                                    displayName="Voip User Password"
+                                    logicName="lnk_voipuserpassword"
+                                    requried="None"
+                                    schemaName="lnk_voipuserpassword"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="string"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="lnk_statocodicelinea">
+                                    <value CRMType="Picklist"
+                                    EntityLogicalName="lnk_lineedelcontratto"
+                                    asInput="true"
+                                    changeable="true"
+                                    displayName="Stato Codice Linea"
+                                    logicName="lnk_statocodicelinea"
+                                    requried="None"
+                                    schemaName="lnk_statocodicelinea"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="integer"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="lnk_ratingstatus">
+                                    <value CRMType="Boolean"
+                                    EntityLogicalName="lnk_lineedelcontratto"
+                                    asInput="true"
+                                    changeable="true"
+                                    displayName="Rating Status"
+                                    logicName="lnk_ratingstatus"
+                                    requried="None"
+                                    schemaName="lnk_ratingstatus"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="boolean"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="lnk_macutente">
+                                    <value CRMType="String"
+                                    EntityLogicalName="lnk_lineedelcontratto"
+                                    asInput="true"
+                                    changeable="true"
+                                    displayName="MAC utente"
+                                    logicName="lnk_macutente"
+                                    requried="None"
+                                    schemaName="lnk_macutente"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="string"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="lnk_indirizzoip">
+                                    <value CRMType="String"
+                                    EntityLogicalName="lnk_lineedelcontratto"
+                                    asInput="true"
+                                    changeable="true"
+                                    displayName="Indirizzo IP"
+                                    logicName="lnk_indirizzoip"
+                                    requried="None"
+                                    schemaName="lnk_indirizzoip"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="string"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="lnk_statohuawei">
+                                    <value CRMType="Picklist"
+                                    EntityLogicalName="lnk_lineedelcontratto"
+                                    asInput="true"
+                                    changeable="true"
+                                    displayName="Stato Huawei"
+                                    logicName="lnk_statohuawei"
+                                    requried="None"
+                                    schemaName="lnk_statohuawei"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="integer"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="dynamics_integrationkey">
+                                    <value CRMType="String"
+                                    EntityLogicalName="lnk_lineedelcontratto"
+                                    asInput="true"
+                                    changeable="true"
+                                    displayName="Integration Key"
+                                    logicName="dynamics_integrationkey"
+                                    requried="None"
+                                    schemaName="dynamics_integrationkey"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="string"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="lnk_segnale_new">
+                                    <value CRMType="Double"
+                                    EntityLogicalName="lnk_lineedelcontratto"
+                                    asInput="true"
+                                    changeable="true"
+                                    displayName="Segnale_new"
+                                    logicName="lnk_segnale_new"
+                                    requried="None"
+                                    schemaName="lnk_segnale_new"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="double"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="lnk_accountwififlatutente">
+                                    <value CRMType="String"
+                                    EntityLogicalName="lnk_lineedelcontratto"
+                                    asInput="true"
+                                    changeable="true"
+                                    displayName="Account wi-fi flat Utente"
+                                    logicName="lnk_accountwififlatutente"
+                                    requried="None"
+                                    schemaName="lnk_accountwififlatutente"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="string"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="lnk_ipstaticoterritoriale">
+                                    <value CRMType="String"
+                                    EntityLogicalName="lnk_lineedelcontratto"
+                                    asInput="true"
+                                    changeable="true"
+                                    displayName="IP statico territoriale"
+                                    logicName="lnk_ipstaticoterritoriale"
+                                    requried="None"
+                                    schemaName="lnk_ipstaticoterritoriale"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="string"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="lnk_utentewimax">
+                                    <value CRMType="String"
+                                    EntityLogicalName="lnk_lineedelcontratto"
+                                    asInput="true"
+                                    changeable="true"
+                                    displayName="Utente Wimax"
+                                    logicName="lnk_utentewimax"
+                                    requried="None"
+                                    schemaName="lnk_utentewimax"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="string"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="lnk_bts_new">
+                                    <value CRMType="String"
+                                    EntityLogicalName="lnk_lineedelcontratto"
+                                    asInput="true"
+                                    changeable="true"
+                                    displayName="BTS New"
+                                    logicName="lnk_bts_new"
+                                    requried="None"
+                                    schemaName="lnk_bts_new"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="string"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="lnk_smsinviatodata">
+                                    <value CRMType="DateTime"
+                                    EntityLogicalName="lnk_lineedelcontratto"
+                                    asInput="true"
+                                    changeable="true"
+                                    displayName="Data Invio SMS"
+                                    logicName="lnk_smsinviatodata"
+                                    requried="None"
+                                    schemaName="lnk_smsinviatodata"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="dateTime"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="lnk_voiplinenumber">
+                                    <value CRMType="String"
+                                    EntityLogicalName="lnk_lineedelcontratto"
+                                    asInput="true"
+                                    changeable="true"
+                                    displayName="Voip Line Number"
+                                    logicName="lnk_voiplinenumber"
+                                    requried="None"
+                                    schemaName="lnk_voiplinenumber"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="string"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="lnk_status">
+                                    <value CRMType="Picklist"
+                                    EntityLogicalName="lnk_lineedelcontratto"
+                                    asInput="true"
+                                    changeable="true"
+                                    displayName="Status"
+                                    logicName="lnk_status"
+                                    requried="None"
+                                    schemaName="lnk_status"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="integer"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="lnk_smsinviato">
+                                    <value CRMType="Boolean"
+                                    EntityLogicalName="lnk_lineedelcontratto"
+                                    asInput="true"
+                                    changeable="true"
+                                    displayName="SMS Inviato"
+                                    logicName="lnk_smsinviato"
+                                    requried="None"
+                                    schemaName="lnk_smsinviato"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="boolean"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="lnk_longitudine">
+                                    <value CRMType="Decimal"
+                                    EntityLogicalName="lnk_lineedelcontratto"
+                                    asInput="true"
+                                    changeable="true"
+                                    displayName="Longitudine"
+                                    logicName="lnk_longitudine"
+                                    requried="None"
+                                    schemaName="lnk_longitudine"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="decimal"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="lnk_accountwififaltutente_3">
+                                    <value CRMType="String"
+                                    EntityLogicalName="lnk_lineedelcontratto"
+                                    asInput="true"
+                                    changeable="true"
+                                    displayName="Account wifi falt Utente_3"
+                                    logicName="lnk_accountwififaltutente_3"
+                                    requried="None"
+                                    schemaName="lnk_accountwififaltutente_3"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="string"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="lnk_statosincronizzazione">
+                                    <value CRMType="Picklist"
+                                    EntityLogicalName="lnk_lineedelcontratto"
+                                    asInput="true"
+                                    changeable="true"
+                                    displayName="Stato Sincronizzazione"
+                                    logicName="lnk_statosincronizzazione"
+                                    requried="None"
+                                    schemaName="lnk_statosincronizzazione"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="integer"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="lnk_statoprepaidflat">
+                                    <value CRMType="Picklist"
+                                    EntityLogicalName="lnk_lineedelcontratto"
+                                    asInput="true"
+                                    changeable="true"
+                                    displayName="Stato Prepaid Flat"
+                                    logicName="lnk_statoprepaidflat"
+                                    requried="None"
+                                    schemaName="lnk_statoprepaidflat"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="integer"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="lnk_indirizzoippubblico">
+                                    <value CRMType="String"
+                                    EntityLogicalName="lnk_lineedelcontratto"
+                                    asInput="true"
+                                    changeable="true"
+                                    displayName="Indirizzo IP pubblico"
+                                    logicName="lnk_indirizzoippubblico"
+                                    requried="None"
+                                    schemaName="lnk_indirizzoippubblico"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="string"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="lnk_datacopertura_new">
+                                    <value CRMType="DateTime"
+                                    EntityLogicalName="lnk_lineedelcontratto"
+                                    asInput="true"
+                                    changeable="true"
+                                    displayName="Data Copertura_new"
+                                    logicName="lnk_datacopertura_new"
+                                    requried="None"
+                                    schemaName="lnk_datacopertura_new"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="dateTime"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="lnk_wimaxstatus">
+                                    <value CRMType="Picklist"
+                                    EntityLogicalName="lnk_lineedelcontratto"
+                                    asInput="true"
+                                    changeable="true"
+                                    displayName="WIMAX Status"
+                                    logicName="lnk_wimaxstatus"
+                                    requried="None"
+                                    schemaName="lnk_wimaxstatus"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="integer"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="lnk_snr">
+                                    <value CRMType="Decimal"
+                                    EntityLogicalName="lnk_lineedelcontratto"
+                                    asInput="true"
+                                    changeable="true"
+                                    displayName="SNR"
+                                    logicName="lnk_snr"
+                                    requried="None"
+                                    schemaName="lnk_snr"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="decimal"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="lnk_datainiziopagamenti">
+                                    <value CRMType="DateTime"
+                                    EntityLogicalName="lnk_lineedelcontratto"
+                                    asInput="true"
+                                    changeable="true"
+                                    displayName="Data Inizio Pagamenti"
+                                    logicName="lnk_datainiziopagamenti"
+                                    requried="None"
+                                    schemaName="lnk_datainiziopagamenti"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="dateTime"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="lnk_radiusstatus">
+                                    <value CRMType="Picklist"
+                                    EntityLogicalName="lnk_lineedelcontratto"
+                                    asInput="true"
+                                    changeable="true"
+                                    displayName="Radius Status"
+                                    logicName="lnk_radiusstatus"
+                                    requried="None"
+                                    schemaName="lnk_RadiusStatus"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="integer"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="lnk_welcomeletterinviata">
+                                    <value CRMType="Boolean"
+                                    EntityLogicalName="lnk_lineedelcontratto"
+                                    asInput="true"
+                                    changeable="true"
+                                    displayName="Welcome Letter Inviata"
+                                    logicName="lnk_welcomeletterinviata"
+                                    requried="None"
+                                    schemaName="lnk_welcomeletterinviata"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="boolean"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="lnk_id_contratto">
+                                    <value CRMType="String"
+                                    EntityLogicalName="lnk_lineedelcontratto"
+                                    asInput="true"
+                                    changeable="true"
+                                    displayName="Numero Contratto"
+                                    logicName="lnk_id_contratto"
+                                    requried="None"
+                                    schemaName="lnk_id_contratto"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="string"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="lnk_voipusername">
+                                    <value CRMType="String"
+                                    EntityLogicalName="lnk_lineedelcontratto"
+                                    asInput="true"
+                                    changeable="true"
+                                    displayName="Voip User Name"
+                                    logicName="lnk_voipusername"
+                                    requried="None"
+                                    schemaName="lnk_voipusername"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="string"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="lnk_macmaster">
+                                    <value CRMType="String"
+                                    EntityLogicalName="lnk_lineedelcontratto"
+                                    asInput="true"
+                                    changeable="true"
+                                    displayName="MAC Master"
+                                    logicName="lnk_macmaster"
+                                    requried="None"
+                                    schemaName="lnk_macmaster"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="string"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="lnk_datachiamataperattivazione">
+                                    <value CRMType="DateTime"
+                                    EntityLogicalName="lnk_lineedelcontratto"
+                                    asInput="true"
+                                    changeable="true"
+                                    displayName="Data 1° chiamata per Attivazione"
+                                    logicName="lnk_datachiamataperattivazione"
+                                    requried="None"
+                                    schemaName="lnk_datachiamataperattivazione"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="dateTime"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="lnk_dataricezioneraccomandata">
+                                    <value CRMType="DateTime"
+                                    EntityLogicalName="lnk_lineedelcontratto"
+                                    asInput="true"
+                                    changeable="true"
+                                    displayName="Data Ricezione Raccomandata"
+                                    logicName="lnk_dataricezioneraccomandata"
+                                    requried="None"
+                                    schemaName="lnk_dataricezioneraccomandata"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="dateTime"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="lnk_accountwififlatpsw_2">
+                                    <value CRMType="String"
+                                    EntityLogicalName="lnk_lineedelcontratto"
+                                    asInput="true"
+                                    changeable="true"
+                                    displayName="Account wifi flat PSW_2"
+                                    logicName="lnk_accountwififlatpsw_2"
+                                    requried="None"
+                                    schemaName="lnk_accountwififlatpsw_2"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="string"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="lnk_bts">
+                                    <value CRMType="String"
+                                    EntityLogicalName="lnk_lineedelcontratto"
+                                    asInput="true"
+                                    changeable="true"
+                                    displayName="Bts"
+                                    logicName="lnk_bts"
+                                    requried="None"
+                                    schemaName="lnk_bts"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="string"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="lnk_accountwififlatpsw_3">
+                                    <value CRMType="String"
+                                    EntityLogicalName="lnk_lineedelcontratto"
+                                    asInput="true"
+                                    changeable="true"
+                                    displayName="Account wifi flat PSW_3"
+                                    logicName="lnk_accountwififlatpsw_3"
+                                    requried="None"
+                                    schemaName="lnk_accountwififlatpsw_3"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="string"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="lnk_lineaprincipaleid">
+                                    <value CRMType="Lookup"
+                                    EntityLogicalName="lnk_lineedelcontratto"
+                                    asInput="true"
+                                    changeable="true"
+                                    displayName="Linea Principale"
+                                    logicName="lnk_lineaprincipaleid"
+                                    requried="None"
+                                    schemaName="lnk_lineaprincipaleid"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="string"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="lnk_pwdwimax">
+                                    <value CRMType="String"
+                                    EntityLogicalName="lnk_lineedelcontratto"
+                                    asInput="true"
+                                    changeable="true"
+                                    displayName="Pwd Wimax"
+                                    logicName="lnk_pwdwimax"
+                                    requried="None"
+                                    schemaName="lnk_pwdwimax"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="string"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="lnk_nomecalciatore">
+                                    <value CRMType="String"
+                                    EntityLogicalName="lnk_lineedelcontratto"
+                                    asInput="true"
+                                    changeable="true"
+                                    displayName="Nome Calciatore"
+                                    logicName="lnk_nomecalciatore"
+                                    requried="None"
+                                    schemaName="lnk_nomecalciatore"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="string"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="lnk_tipolinea">
+                                    <value CRMType="Picklist"
+                                    EntityLogicalName="lnk_lineedelcontratto"
+                                    asInput="true"
+                                    changeable="true"
+                                    displayName="Tipo Linea"
+                                    logicName="lnk_tipolinea"
+                                    requried="None"
+                                    schemaName="lnk_tipolinea"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="integer"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="owneridtype">
+                                    <value CRMType="EntityName"
+                                    EntityLogicalName="lnk_lineedelcontratto"
+                                    asInput="true"
+                                    attributeOf="ownerid"
+                                    changeable="true"
+                                    displayName="null"
+                                    logicName="owneridtype"
+                                    requried="SystemRequired"
+                                    schemaName="OwnerIdType"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="string"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="ip_importid">
+                                    <value CRMType="String"
+                                    EntityLogicalName="lnk_lineedelcontratto"
+                                    asInput="true"
+                                    changeable="true"
+                                    displayName="Import ID"
+                                    logicName="ip_importid"
+                                    requried="None"
+                                    schemaName="ip_importid"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="string"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="lnk_gateway">
+                                    <value CRMType="String"
+                                    EntityLogicalName="lnk_lineedelcontratto"
+                                    asInput="true"
+                                    changeable="true"
+                                    displayName="Gateway"
+                                    logicName="lnk_gateway"
+                                    requried="None"
+                                    schemaName="lnk_gateway"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="string"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="lnk_minutiliberialmese">
+                                    <value CRMType="Integer"
+                                    EntityLogicalName="lnk_lineedelcontratto"
+                                    asInput="true"
+                                    changeable="true"
+                                    displayName="Minuti Liberi al Mese"
+                                    logicName="lnk_minutiliberialmese"
+                                    requried="None"
+                                    schemaName="lnk_minutiliberialmese"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="integer"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="lnk_dataprossimafattura">
+                                    <value CRMType="DateTime"
+                                    EntityLogicalName="lnk_lineedelcontratto"
+                                    asInput="true"
+                                    changeable="true"
+                                    displayName="Data Prossima Fattura"
+                                    logicName="lnk_dataprossimafattura"
+                                    requried="None"
+                                    schemaName="lnk_dataprossimafattura"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="dateTime"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="lnk_coupon">
+                                    <value CRMType="String"
+                                    EntityLogicalName="lnk_lineedelcontratto"
+                                    asInput="true"
+                                    changeable="true"
+                                    displayName="Coupon"
+                                    logicName="lnk_coupon"
+                                    requried="None"
+                                    schemaName="lnk_coupon"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="string"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="lnk_consegnarapportiinstallazione">
+                                    <value CRMType="Boolean"
+                                    EntityLogicalName="lnk_lineedelcontratto"
+                                    asInput="true"
+                                    changeable="true"
+                                    displayName="Consegna Rapporti Installazione"
+                                    logicName="lnk_consegnarapportiinstallazione"
+                                    requried="None"
+                                    schemaName="lnk_consegnarapportiinstallazione"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="boolean"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="lnk_fatturazioneperiodica">
+                                    <value CRMType="Boolean"
+                                    EntityLogicalName="lnk_lineedelcontratto"
+                                    asInput="true"
+                                    changeable="true"
+                                    displayName="Fatturazione Periodica"
+                                    logicName="lnk_fatturazioneperiodica"
+                                    requried="None"
+                                    schemaName="lnk_fatturazioneperiodica"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="boolean"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="lnk_pwdadsl">
+                                    <value CRMType="String"
+                                    EntityLogicalName="lnk_lineedelcontratto"
+                                    asInput="true"
+                                    changeable="true"
+                                    displayName="Pwd Adsl"
+                                    logicName="lnk_pwdadsl"
+                                    requried="None"
+                                    schemaName="lnk_pwdadsl"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="string"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="lnk_macaddresscpe">
+                                    <value CRMType="String"
+                                    EntityLogicalName="lnk_lineedelcontratto"
+                                    asInput="true"
+                                    changeable="true"
+                                    displayName="MacAddressCPE per consegna diretta"
+                                    logicName="lnk_macaddresscpe"
+                                    requried="None"
+                                    schemaName="lnk_macaddresscpe"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="string"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="lnk_datacontratto">
+                                    <value CRMType="DateTime"
+                                    EntityLogicalName="lnk_lineedelcontratto"
+                                    asInput="true"
+                                    changeable="true"
+                                    displayName="Data Ricezione Documento"
+                                    logicName="lnk_datacontratto"
+                                    requried="None"
+                                    schemaName="lnk_datacontratto"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="dateTime"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="lnk_datacopertura">
+                                    <value CRMType="DateTime"
+                                    EntityLogicalName="lnk_lineedelcontratto"
+                                    asInput="true"
+                                    changeable="true"
+                                    displayName="Data Rilevazione"
+                                    logicName="lnk_datacopertura"
+                                    requried="None"
+                                    schemaName="lnk_datacopertura"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="dateTime"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="lnk_segnalerssi">
+                                    <value CRMType="String"
+                                    EntityLogicalName="lnk_lineedelcontratto"
+                                    asInput="true"
+                                    changeable="true"
+                                    displayName="Segnale/RSSI"
+                                    logicName="lnk_segnalerssi"
+                                    requried="None"
+                                    schemaName="lnk_segnalerssi"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="string"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="lnk_progressivoreclamo">
+                                    <value CRMType="Integer"
+                                    EntityLogicalName="lnk_lineedelcontratto"
+                                    asInput="true"
+                                    changeable="true"
+                                    displayName="Progressivo Reclamo"
+                                    logicName="lnk_progressivoreclamo"
+                                    requried="None"
+                                    schemaName="lnk_progressivoreclamo"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="integer"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="lnk_coperturadaweb">
+                                    <value CRMType="Picklist"
+                                    EntityLogicalName="lnk_lineedelcontratto"
+                                    asInput="true"
+                                    changeable="true"
+                                    displayName="Copertura da Web"
+                                    logicName="lnk_coperturadaweb"
+                                    requried="None"
+                                    schemaName="lnk_coperturadaweb"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="integer"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="lnk_dataattivazione">
+                                    <value CRMType="DateTime"
+                                    EntityLogicalName="lnk_lineedelcontratto"
+                                    asInput="true"
+                                    changeable="true"
+                                    displayName="Data Attivazione"
+                                    logicName="lnk_dataattivazione"
+                                    requried="None"
+                                    schemaName="lnk_dataattivazione"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="dateTime"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="lnk_datainviocodici">
+                                    <value CRMType="DateTime"
+                                    EntityLogicalName="lnk_lineedelcontratto"
+                                    asInput="true"
+                                    changeable="true"
+                                    displayName="Data Invio Codici"
+                                    logicName="lnk_datainviocodici"
+                                    requried="None"
+                                    schemaName="lnk_dataInviocodici"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="dateTime"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="lnk_nomeinstallatore">
+                                    <value CRMType="String"
+                                    EntityLogicalName="lnk_lineedelcontratto"
+                                    asInput="true"
+                                    changeable="true"
+                                    displayName="Nome Installatore"
+                                    logicName="lnk_nomeinstallatore"
+                                    requried="None"
+                                    schemaName="lnk_nomeinstallatore"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="string"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="lnk_accountwififlatpsw">
+                                    <value CRMType="String"
+                                    EntityLogicalName="lnk_lineedelcontratto"
+                                    asInput="true"
+                                    changeable="true"
+                                    displayName="Account wi-fi flat PSW"
+                                    logicName="lnk_accountwififlatpsw"
+                                    requried="None"
+                                    schemaName="lnk_accountwififlatpsw"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="string"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="lnk_bonusmgmalportatore">
+                                    <value CRMType="Boolean"
+                                    EntityLogicalName="lnk_lineedelcontratto"
+                                    asInput="true"
+                                    changeable="true"
+                                    displayName="Bonus MGM al portatore"
+                                    logicName="lnk_bonusmgmalportatore"
+                                    requried="None"
+                                    schemaName="lnk_bonusmgmalportatore"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="boolean"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="lnk_dataultimafatturazione">
+                                    <value CRMType="DateTime"
+                                    EntityLogicalName="lnk_lineedelcontratto"
+                                    asInput="true"
+                                    changeable="true"
+                                    displayName="Data Ultima Fatturazione"
+                                    logicName="lnk_dataultimafatturazione"
+                                    requried="None"
+                                    schemaName="lnk_dataultimafatturazione"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="dateTime"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="lnk_bloccato">
+                                    <value CRMType="Boolean"
+                                    EntityLogicalName="lnk_lineedelcontratto"
+                                    asInput="true"
+                                    changeable="true"
+                                    displayName="Bloccato"
+                                    logicName="lnk_bloccato"
+                                    requried="None"
+                                    schemaName="lnk_bloccato"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="boolean"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="lnk_netmask">
+                                    <value CRMType="String"
+                                    EntityLogicalName="lnk_lineedelcontratto"
+                                    asInput="true"
+                                    changeable="true"
+                                    displayName="Netmask"
+                                    logicName="lnk_netmask"
+                                    requried="None"
+                                    schemaName="lnk_netmask"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="string"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="lnk_qualitcinr">
+                                    <value CRMType="String"
+                                    EntityLogicalName="lnk_lineedelcontratto"
+                                    asInput="true"
+                                    changeable="true"
+                                    displayName="Qualità/CINR"
+                                    logicName="lnk_qualitcinr"
+                                    requried="None"
+                                    schemaName="lnk_qualitcinr"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="string"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="lnk_id_contrattoid">
+                                    <value CRMType="Lookup"
+                                    EntityLogicalName="lnk_lineedelcontratto"
+                                    asInput="true"
+                                    changeable="true"
+                                    displayName="ID Contratto"
+                                    logicName="lnk_id_contrattoid"
+                                    requried="None"
+                                    schemaName="lnk_id_contrattoid"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="string"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="lnk_pianotariffarioid">
+                                    <value CRMType="Lookup"
+                                    EntityLogicalName="lnk_lineedelcontratto"
+                                    asInput="true"
+                                    changeable="true"
+                                    displayName="Piano Tariffario"
+                                    logicName="lnk_pianotariffarioid"
+                                    requried="None"
+                                    schemaName="lnk_pianotariffarioid"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="string"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="lnk_dataspedizione">
+                                    <value CRMType="DateTime"
+                                    EntityLogicalName="lnk_lineedelcontratto"
+                                    asInput="true"
+                                    changeable="true"
+                                    displayName="Data Spedizione"
+                                    logicName="lnk_dataspedizione"
+                                    requried="None"
+                                    schemaName="lnk_dataspedizione"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="dateTime"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="transactioncurrencyid">
+                                    <value CRMType="Lookup"
+                                    EntityLogicalName="lnk_lineedelcontratto"
+                                    asInput="true"
+                                    changeable="true"
+                                    displayName="Valuta"
+                                    logicName="transactioncurrencyid"
+                                    requried="None"
+                                    schemaName="TransactionCurrencyId"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="string"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="lnk_lineedelcontrattoid">
+                                    <value
+                                    CRMType="Uniqueidentifier"
+                                    EntityLogicalName="lnk_lineedelcontratto"
+                                    asInput="true"
+                                    asOutput="true"
+                                    displayName="Contratto linee"
+                                    logicName="lnk_lineedelcontrattoid"
+                                    primaryId="true"
+                                    requried="SystemRequired"
+                                    schemaName="lnk_lineedelcontrattoId"
+                                    validForCreate="true"
+                                    validForRead="true" xsdType="string"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="lnk_segnale">
+                                    <value CRMType="Double"
+                                    EntityLogicalName="lnk_lineedelcontratto"
+                                    asInput="true"
+                                    changeable="true"
+                                    displayName="Segnale"
+                                    logicName="lnk_segnale"
+                                    requried="None"
+                                    schemaName="lnk_segnale"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="double"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="lnk_logsincronizzazione">
+                                    <value CRMType="String"
+                                    EntityLogicalName="lnk_lineedelcontratto"
+                                    asInput="true"
+                                    changeable="true"
+                                    displayName="Log Sincronizzazione"
+                                    logicName="lnk_logsincronizzazione"
+                                    requried="None"
+                                    schemaName="lnk_logsincronizzazione"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="string"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="lnk_dns">
+                                    <value CRMType="String"
+                                    EntityLogicalName="lnk_lineedelcontratto"
+                                    asInput="true"
+                                    changeable="true"
+                                    displayName="DNS"
+                                    logicName="lnk_dns"
+                                    requried="None"
+                                    schemaName="lnk_dns"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="string"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="lnk_servizioaggiuntivoct">
+                                    <value CRMType="Boolean"
+                                    EntityLogicalName="lnk_lineedelcontratto"
+                                    asInput="true"
+                                    changeable="true"
+                                    displayName="Servizio aggiuntivo CT"
+                                    logicName="lnk_servizioaggiuntivoct"
+                                    requried="None"
+                                    schemaName="lnk_servizioaggiuntivoct"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="boolean"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="lnk_cdrstatus">
+                                    <value CRMType="Boolean"
+                                    EntityLogicalName="lnk_lineedelcontratto"
+                                    asInput="true"
+                                    changeable="true"
+                                    displayName="RATING Status"
+                                    logicName="lnk_cdrstatus"
+                                    requried="None"
+                                    schemaName="lnk_cdrstatus"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="boolean"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="lnk_datafinevalidita">
+                                    <value CRMType="DateTime"
+                                    EntityLogicalName="lnk_lineedelcontratto"
+                                    asInput="true"
+                                    changeable="true"
+                                    displayName="Data Fine Validità"
+                                    logicName="lnk_datafinevalidita"
+                                    requried="None"
+                                    schemaName="lnk_datafinevalidita"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="dateTime"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="lnk_societainstallatriceid">
+                                    <value CRMType="Lookup"
+                                    EntityLogicalName="lnk_lineedelcontratto"
+                                    asInput="true"
+                                    changeable="true"
+                                    displayName="Società Installatrice"
+                                    logicName="lnk_societainstallatriceid"
+                                    requried="None"
+                                    schemaName="lnk_societainstallatriceid"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="string"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="lnk_btstelecom">
+                                    <value CRMType="String"
+                                    EntityLogicalName="lnk_lineedelcontratto"
+                                    asInput="true"
+                                    changeable="true"
+                                    displayName="BTS Telecom"
+                                    logicName="lnk_btstelecom"
+                                    requried="None"
+                                    schemaName="lnk_btstelecom"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="string"/>
+                                    </entitymetadatatamap>
+                                    <entitymetadatatamap key="lnk_accountid">
+                                    <value CRMType="Lookup"
+                                    EntityLogicalName="lnk_lineedelcontratto"
+                                    asInput="true"
+                                    changeable="true"
+                                    displayName="Account"
+                                    logicName="lnk_accountid"
+                                    requried="None"
+                                    schemaName="lnk_accountid"
+                                    validForCreate="true"
+                                    validForRead="true"
+                                    validForUpdate="true" xsdType="string"/>
+                                    </entitymetadatatamap>
+                                    </value>
+                                </properties>
+                            </activityConfig>
+                        </bwext:BWActivity>
+                    </tibex:config>
+                </tibex:activityExtension>
+            </bpws:extensionActivity>
+        </bpws:flow>
+    </bpws:scope>
+</bpws:process>

@@ -18,8 +18,8 @@
 	<element name="GetTestataContrattoByGuidTDC_Output">
 		<complexType>
 			<sequence>
-				<element minOccurs="0" maxOccurs="unbounded"  name="TestataDelContratto" type="tdc:lnk_testatadelcontratto"/>
-				<element minOccurs="1" maxOccurs="1"  name="ResponseCode" type="string"/>
+				<element maxOccurs="unbounded" minOccurs="0" name="TestataDelContratto" type="tdc:lnk_testatadelcontratto"/>
+				<element maxOccurs="1" minOccurs="1" name="ResponseCode" type="string"/>
 			</sequence>
 		</complexType>
 	</element>
