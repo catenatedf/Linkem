@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_phausA--EeySlY7vVr8Zcw" targetNamespace="http://tns.tibco.com/bw/composite/it.linkem.rete.udm.sl.sh" name="it.linkem.rete.udm.sl.sh" compositeext:version="1.0.0" compositeext:formatVersion="2">
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmi:id="_phausA--EeySlY7vVr8Zcw" targetNamespace="http://tns.tibco.com/bw/composite/it.linkem.rete.udm.sl.sh" name="it.linkem.rete.udm.sl.sh" compositeext:version="1.0.0" compositeext:formatVersion="2">
   <sca:property xmi:id="_p7MgoA--EeySlY7vVr8Zcw" name="BW.DEPLOYMENTUNIT.TYPE" type="XMLSchema:string" scalable="true"/>
   <sca:property xmi:id="_p7s28A--EeySlY7vVr8Zcw" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
   <sca:property xmi:id="_p7yWgA--EeySlY7vVr8Zcw" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
@@ -30,7 +30,4 @@
   <sca:property xmi:id="_y5D1kBFVEeyuS_nZ2YNeNA" name="/it.linkem.rete.udm.sl.sh/UDM/Connections/HTTPClient/Common/UseNonPreemtiveAuth" type="XMLSchema:boolean" publicAccess="true" scalable="true"/>
   <sca:property xmi:id="_1weHkBFVEeyuS_nZ2YNeNA" name="/it.linkem.rete.udm.sl.sh/UDM/Connections/HTTPClient/Common/ShortRetryManagement/BaseRetryDelay_s" type="XMLSchema:int" publicAccess="true" scalable="true"/>
   <sca:property xmi:id="_2D-5cBFVEeyuS_nZ2YNeNA" name="/it.linkem.rete.udm.sl.sh/UDM/Connections/HTTPClient/Common/ShortRetryManagement/MaxShortRetry" type="XMLSchema:int" publicAccess="true" scalable="true"/>
-  <sca:component xmi:id="_QSSHUBVREeyLfpctjACx0w" name="ComponentProcess" compositeext:version="1.0.0.qualifier">
-    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_QSSHURVREeyLfpctjACx0w" processName="it.linkem.rete.udm.configuration.testProcess"/>
-  </sca:component>
 </sca:composite>

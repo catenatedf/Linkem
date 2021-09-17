@@ -2111,7 +2111,8 @@
                     </tibex:config>
                 </tibex:activityExtension>
             </bpws:extensionActivity>
-            <bpws:scope name="RepeatOnError" tibex:group="repeatOnError" tibex:xpdlId="153380fb-55d9-44cd-8434-cf5a3c8f767a">
+            <bpws:scope name="RepeatOnError" tibex:group="repeatOnError"
+                tibex:indexToGlobal="false" tibex:xpdlId="153380fb-55d9-44cd-8434-cf5a3c8f767a">
                 <bpws:targets>
                     <bpws:target linkName="SetRequestPayloadToRepeatOnError"/>
                 </bpws:targets>
@@ -2222,7 +2223,7 @@
                                     </bpws:sources>
                                     <tibex:inputBindings>
                                     <tibex:inputBinding
-                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns5=&quot;http://tns.tibco.com/bw/activity/sendhttprequest/input+9c7288ad-738e-4d28-a08c-a924553b1cac+RequestActivityInput&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;URI&quot;/>&lt;xsl:param name=&quot;Method&quot;/>&lt;xsl:param name=&quot;ContentType&quot;/>&lt;xsl:param name=&quot;RequestPayload&quot;/>&lt;xsl:template name=&quot;SendHTTPRequest2-input&quot; match=&quot;/&quot;>&lt;tns5:RequestActivityInput>&lt;Method>&lt;xsl:value-of select=&quot;$Method&quot;/>&lt;/Method>&lt;RequestURI>&lt;xsl:value-of select=&quot;$URI&quot;/>&lt;/RequestURI>&lt;PostData>&lt;xsl:value-of select=&quot;$RequestPayload&quot;/>&lt;/PostData>&lt;Headers>&lt;Content-Type>&lt;xsl:value-of select=&quot;$ContentType&quot;/>&lt;/Content-Type>&lt;/Headers>&lt;/tns5:RequestActivityInput>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns5=&quot;http://tns.tibco.com/bw/activity/sendhttprequest/input+9c7288ad-738e-4d28-a08c-a924553b1cac+RequestActivityInput&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;URI&quot;/>&lt;xsl:param name=&quot;Method&quot;/>&lt;xsl:param name=&quot;ContentType&quot;/>&lt;xsl:param name=&quot;RequestPayload&quot;/>&lt;xsl:template name=&quot;callChangeProfile-input&quot; match=&quot;/&quot;>&lt;tns5:RequestActivityInput>&lt;Method>&lt;xsl:value-of select=&quot;$Method&quot;/>&lt;/Method>&lt;RequestURI>&lt;xsl:value-of select=&quot;$URI&quot;/>&lt;/RequestURI>&lt;PostData>&lt;xsl:value-of select=&quot;$RequestPayload&quot;/>&lt;/PostData>&lt;Headers>&lt;Content-Type>&lt;xsl:value-of select=&quot;$ContentType&quot;/>&lt;/Content-Type>&lt;/Headers>&lt;DynamicHeaders>&lt;Header>&lt;Name>&lt;xsl:value-of select=&quot;&amp;quot;SOAPAction&amp;quot;&quot;/>&lt;/Name>&lt;Value>&lt;xsl:value-of select=&quot;&amp;quot;SPMLSubscriber10Service&amp;quot;&quot;/>&lt;/Value>&lt;/Header>&lt;/DynamicHeaders>&lt;/tns5:RequestActivityInput>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                                     </tibex:inputBindings>
                                     <tibex:config>
                                     <bwext:BWActivity

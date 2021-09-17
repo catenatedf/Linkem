@@ -24,10 +24,8 @@ Provide-Capability: com.tibco.bw.module; name="it.linkem.rete.udm.sl.sh"; versio
  com.tibco.bw.schemas; ns="",
  com.tibco.bw.schemas; ns="http://it.linkem/rete/udb/changeProfile/sl/xsd",
  com.tibco.bw.schemas; ns="http://it.linkem/rete/udb/changeStatus/sl/xsd",
- com.tibco.bw.schemas; ns="http://it.linkem/rete/udb/configuration/nokiaProfiles/xsd",
  com.tibco.bw.schemas; ns="http://it.linkem/rete/udb/getUserByImsi/sl/xsd",
  com.tibco.bw.schemas; ns="http://schemas.xmlsoap.org/soap/envelope/",
  com.tibco.bw.processes; name="it.linkem.rete.udm.sl",
- com.tibco.bw.resources; name="it.linkem.rete.udm.sl.sh",
- com.tibco.bw.processes; name="it.linkem.rete.udm.configuration"
+ com.tibco.bw.resources; name="it.linkem.rete.udm.sl.sh"
 TIBCO-BW-Version: 2.6.1 V57 2021-02-13
