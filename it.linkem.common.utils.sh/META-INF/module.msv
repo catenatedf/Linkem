@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<msv:DocumentRoot xmlns:msv="http://tns.tibco.com/bw/model/core/moduleSV">
+  <moduleSharedVariables>
+    <moduleSharedVariable name="MappingRete_CRMConfiguration" type="{http://it.linkem/common/configuration/mapping/rete_crm/xsd}MappingRete_CRMElement" initialValueMode="none"/>
+  </moduleSharedVariables>
+  <import importType="http://www.w3.org/2001/XMLSchema" namespace="http://it.linkem/common/configuration/mapping/rete_crm/xsd" location="../Schemas/MappingRete_CRM.xsd"/>
+</msv:DocumentRoot>
