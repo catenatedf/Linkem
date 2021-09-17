@@ -1,409 +1,260 @@
-<schema targetNamespace="http://it.linkem/crm/entities/LineeContratto/xsd"
-	xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://it.linkem/crm/entities/LineeContratto/xsd">
+<schema targetNamespace="http://it.linkem/crm/entities/LineeContratto/xsd" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://it.linkem/crm/entities/LineeContratto/xsd">
 	<complexType name="Entities">
 		<sequence>
-			<element maxOccurs="unbounded" minOccurs="0" name="List"
-				type="tns:List" />
+			<element maxOccurs="unbounded" minOccurs="0" name="List" type="tns:List"/>
 		</sequence>
 	</complexType>
-	<element name="Entities" type="tns:Entities" />
+	<element name="Entities" type="tns:Entities"/>
 	<complexType name="List">
 		<sequence>
-			<element maxOccurs="1" minOccurs="0" name="pagenumber" type="integer" />
-			<element maxOccurs="1" minOccurs="0" name="pagesize" type="integer" />
-			<element maxOccurs="1" minOccurs="0" name="pagingcookie"
-				type="string" />
-			<element maxOccurs="1" minOccurs="0" name="totalcount" type="integer" />
-			<element maxOccurs="unbounded" minOccurs="0"
-				name="lnk_lineedelcontratto" type="tns:lnk_lineedelcontratto" />
+			<element maxOccurs="1" minOccurs="0" name="pagenumber" type="integer"/>
+			<element maxOccurs="1" minOccurs="0" name="pagesize" type="integer"/>
+			<element maxOccurs="1" minOccurs="0" name="pagingcookie" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="totalcount" type="integer"/>
+			<element maxOccurs="unbounded" minOccurs="0" name="lnk_lineedelcontratto" type="tns:lnk_lineedelcontratto"/>
 		</sequence>
 	</complexType>
 	<complexType name="lnk_lineedelcontratto">
 		<sequence>
-			<element maxOccurs="1" minOccurs="0" name="lnk_dataconsegna"
-				type="dateTime" />
-			<element maxOccurs="1" minOccurs="0"
-				name="lnk_accountwififlatutente_2" type="string" />
-			<element maxOccurs="1" minOccurs="0" name="lnk_datainiziofatturazione"
-				type="dateTime" />
-			<element maxOccurs="1" minOccurs="0" name="lnk_prezzo" type="decimal" />
-			<element maxOccurs="1" minOccurs="0" name="lnk_copertura_newname"
-				type="string" />
-			<element maxOccurs="1" minOccurs="0" name="transactioncurrencyidname"
-				type="string" />
-			<element maxOccurs="1" minOccurs="0" name="lnk_utenteadsl"
-				type="string" />
-			<element maxOccurs="1" minOccurs="0" name="owninguser" type="tns:owninguser" />
-			<element maxOccurs="1" minOccurs="0" name="lnk_accountidyominame"
-				type="string" />
-			<element maxOccurs="1" minOccurs="0" name="lnk_voipstatus"
-				type="boolean" />
-			<element maxOccurs="1" minOccurs="0" name="statuscode" type="integer" />
-			<element maxOccurs="1" minOccurs="0" name="statecodename"
-				type="string" />
-			<element maxOccurs="1" minOccurs="0" name="lnk_name" type="string" />
-			<element maxOccurs="1" minOccurs="0" name="lnk_latitudine"
-				type="decimal" />
-			<element maxOccurs="1" minOccurs="0"
-				name="lnk_welcomeletterinviataname" type="string" />
-			<element maxOccurs="1" minOccurs="0" name="lnk_datacessazione"
-				type="dateTime" />
-			<element maxOccurs="1" minOccurs="0"
-				name="lnk_consegnarapportiinstallazionename" type="string" />
-			<element maxOccurs="1" minOccurs="0" name="timezoneruleversionnumber"
-				type="integer" />
-			<element maxOccurs="1" minOccurs="0" name="createdonbehalfbyname"
-				type="string" />
-			<element maxOccurs="1" minOccurs="0" name="lnk_tipolineaname"
-				type="string" />
-			<element maxOccurs="1" minOccurs="0" name="createdonbehalfbyyominame"
-				type="string" />
-			<element maxOccurs="1" minOccurs="0" name="ownerid" type="tns:ownerid" />
-			<element maxOccurs="1" minOccurs="0" name="lnk_statocodicelineaname"
-				type="string" />
-			<element maxOccurs="1" minOccurs="0"
-				name="lnk_importofatturainstallatore" type="decimal" />
-			<element maxOccurs="1" minOccurs="0" name="lnk_ratingstatusname"
-				type="string" />
-			<element maxOccurs="1" minOccurs="0" name="modifiedon" type="dateTime" />
-			<element maxOccurs="1" minOccurs="0" name="lnk_numeroseriale"
-				type="string" />
-			<element maxOccurs="1" minOccurs="0" name="lnk_copertura_new"
-				type="integer" />
-			<element maxOccurs="1" minOccurs="0" name="owningbusinessunit"
-				type="tns:owningbusinessunit" />
-			<element maxOccurs="1" minOccurs="0" name="lnk_statopromo"
-				type="integer" />
-			<element maxOccurs="1" minOccurs="0" name="lnk_voiporderid"
-				type="string" />
-			<element maxOccurs="1" minOccurs="0" name="lnk_ricaricatapromolancio"
-				type="boolean" />
-			<element maxOccurs="1" minOccurs="0" name="createdbyyominame"
-				type="string" />
-			<element maxOccurs="1" minOccurs="0" name="lnk_prezzo_base"
-				type="decimal" />
-			<element maxOccurs="1" minOccurs="0" name="owneridyominame"
-				type="string" />
-			<element maxOccurs="1" minOccurs="0" name="lnk_voipstatusname"
-				type="string" />
-			<element maxOccurs="1" minOccurs="0" name="utcconversiontimezonecode"
-				type="integer" />
-			<element maxOccurs="1" minOccurs="0" name="lnk_numerolinea"
-				type="integer" />
-			<element maxOccurs="1" minOccurs="0" name="lnk_statocar"
-				type="integer" />
-			<element maxOccurs="1" minOccurs="0" name="statecode" type="integer" />
-			<element maxOccurs="1" minOccurs="0" name="lnk_voipuserpassword"
-				type="string" />
-			<element maxOccurs="1" minOccurs="0" name="lnk_pianotariffarioidname"
-				type="string" />
-			<element maxOccurs="1" minOccurs="0" name="lnk_statocodicelinea"
-				type="integer" />
-			<element maxOccurs="1" minOccurs="0" name="lnk_ratingstatus"
-				type="boolean" />
-			<element maxOccurs="1" minOccurs="0" name="lnk_id_contrattoidname"
-				type="string" />
-			<element maxOccurs="1" minOccurs="0" name="overriddencreatedon"
-				type="dateTime" />
-			<element maxOccurs="1" minOccurs="0" name="lnk_macutente"
-				type="string" />
-			<element maxOccurs="1" minOccurs="0"
-				name="lnk_bonusmgmalportatorename" type="string" />
-			<element maxOccurs="1" minOccurs="0" name="lnk_indirizzoip"
-				type="string" />
-			<element maxOccurs="1" minOccurs="0" name="lnk_statohuawei"
-				type="integer" />
-			<element maxOccurs="1" minOccurs="0" name="dynamics_integrationkey"
-				type="string" />
-			<element maxOccurs="1" minOccurs="0" name="lnk_radiusstatusname"
-				type="string" />
-			<element maxOccurs="1" minOccurs="0" name="lnk_segnale_new"
-				type="double" />
-			<element maxOccurs="1" minOccurs="0"
-				name="lnk_ricaricatapromolancioname" type="string" />
-			<element maxOccurs="1" minOccurs="0" name="lnk_accountwififlatutente"
-				type="string" />
-			<element maxOccurs="1" minOccurs="0" name="lnk_ipstaticoterritoriale"
-				type="string" />
-			<element maxOccurs="1" minOccurs="0" name="lnk_statoprepaidflatname"
-				type="string" />
-			<element maxOccurs="1" minOccurs="0" name="statuscodename"
-				type="string" />
-			<element maxOccurs="1" minOccurs="0" name="lnk_utentewimax"
-				type="string" />
-			<element maxOccurs="1" minOccurs="0" name="modifiedbyyominame"
-				type="string" />
-			<element maxOccurs="1" minOccurs="0" name="lnk_bts_new" type="string" />
-			<element maxOccurs="1" minOccurs="0" name="lnk_smsinviatodata"
-				type="dateTime" />
-			<element maxOccurs="1" minOccurs="0" name="owneridname" type="string" />
-			<element maxOccurs="1" minOccurs="0" name="versionnumber"
-				type="long" />
-			<element maxOccurs="1" minOccurs="0" name="lnk_voiplinenumber"
-				type="string" />
-			<element maxOccurs="1" minOccurs="0" name="createdon" type="dateTime" />
-			<element maxOccurs="1" minOccurs="0" name="lnk_statohuaweiname"
-				type="string" />
-			<element maxOccurs="1" minOccurs="0" name="lnk_status" type="integer" />
-			<element maxOccurs="1" minOccurs="0" name="lnk_smsinviato"
-				type="boolean" />
-			<element maxOccurs="1" minOccurs="0" name="lnk_longitudine"
-				type="decimal" />
-			<element maxOccurs="1" minOccurs="0"
-				name="lnk_accountwififaltutente_3" type="string" />
-			<element maxOccurs="1" minOccurs="0" name="importsequencenumber"
-				type="integer" />
-			<element maxOccurs="1" minOccurs="0" name="lnk_statosincronizzazione"
-				type="integer" />
-			<element maxOccurs="1" minOccurs="0" name="lnk_statoprepaidflat"
-				type="integer" />
-			<element maxOccurs="1" minOccurs="0" name="lnk_indirizzoippubblico"
-				type="string" />
-			<element maxOccurs="1" minOccurs="0" name="lnk_statusname"
-				type="string" />
-			<element maxOccurs="1" minOccurs="0" name="lnk_datacopertura_new"
-				type="dateTime" />
-			<element maxOccurs="1" minOccurs="0" name="lnk_wimaxstatus"
-				type="integer" />
-			<element maxOccurs="1" minOccurs="0" name="lnk_snr" type="decimal" />
-			<element maxOccurs="1" minOccurs="0" name="lnk_datainiziopagamenti"
-				type="dateTime" />
-			<element maxOccurs="1" minOccurs="0" name="lnk_smsinviatoname"
-				type="string" />
-			<element maxOccurs="1" minOccurs="0" name="createdby" type="tns:createdby" />
-			<element maxOccurs="1" minOccurs="0" name="lnk_radiusstatus"
-				type="integer" />
-			<element maxOccurs="1" minOccurs="0" name="owningteam" type="tns:owningteam" />
-			<element maxOccurs="1" minOccurs="0" name="lnk_welcomeletterinviata"
-				type="boolean" />
-			<element maxOccurs="1" minOccurs="0" name="lnk_id_contratto"
-				type="string" />
-			<element maxOccurs="1" minOccurs="0" name="lnk_voipusername"
-				type="string" />
-			<element maxOccurs="1" minOccurs="0" name="lnk_statopromoname"
-				type="string" />
-			<element maxOccurs="1" minOccurs="0" name="lnk_macmaster"
-				type="string" />
-			<element maxOccurs="1" minOccurs="0"
-				name="lnk_datachiamataperattivazione" type="dateTime" />
-			<element maxOccurs="1" minOccurs="0" name="lnk_statocarname"
-				type="string" />
-			<element maxOccurs="1" minOccurs="0"
-				name="lnk_statosincronizzazionename" type="string" />
-			<element maxOccurs="1" minOccurs="0"
-				name="lnk_dataricezioneraccomandata" type="dateTime" />
-			<element maxOccurs="1" minOccurs="0" name="lnk_accountwififlatpsw_2"
-				type="string" />
-			<element maxOccurs="1" minOccurs="0" name="lnk_bts" type="string" />
-			<element maxOccurs="1" minOccurs="0" name="lnk_accountwififlatpsw_3"
-				type="string" />
-			<element maxOccurs="1" minOccurs="0" name="lnk_lineaprincipaleid"
-				type="tns:lnk_lineaprincipaleid" />
-			<element maxOccurs="1" minOccurs="0" name="lnk_pwdwimax"
-				type="string" />
-			<element maxOccurs="1" minOccurs="0" name="lnk_nomecalciatore"
-				type="string" />
-			<element maxOccurs="1" minOccurs="0" name="lnk_lineaprincipaleidname"
-				type="string" />
-			<element maxOccurs="1" minOccurs="0" name="modifiedby" type="tns:modifiedby" />
-			<element maxOccurs="1" minOccurs="0" name="modifiedonbehalfby"
-				type="tns:modifiedonbehalfby" />
-			<element maxOccurs="1" minOccurs="0" name="lnk_tipolinea"
-				type="integer" />
-			<element maxOccurs="1" minOccurs="0" name="owneridtype" type="string" />
-			<element maxOccurs="1" minOccurs="0" name="ip_importid" type="string" />
-			<element maxOccurs="1" minOccurs="0" name="lnk_gateway" type="string" />
-			<element maxOccurs="1" minOccurs="0" name="createdonbehalfby"
-				type="tns:createdonbehalfby" />
-			<element maxOccurs="1" minOccurs="0" name="lnk_minutiliberialmese"
-				type="integer" />
-			<element maxOccurs="1" minOccurs="0" name="lnk_dataprossimafattura"
-				type="dateTime" />
-			<element maxOccurs="1" minOccurs="0" name="lnk_accountidname"
-				type="string" />
-			<element maxOccurs="1" minOccurs="0" name="exchangerate"
-				type="decimal" />
-			<element maxOccurs="1" minOccurs="0" name="lnk_coupon" type="string" />
-			<element maxOccurs="1" minOccurs="0" name="modifiedbyname"
-				type="string" />
-			<element maxOccurs="1" minOccurs="0"
-				name="lnk_consegnarapportiinstallazione" type="boolean" />
-			<element maxOccurs="1" minOccurs="0"
-				name="lnk_fatturazioneperiodicaname" type="string" />
-			<element maxOccurs="1" minOccurs="0" name="lnk_fatturazioneperiodica"
-				type="boolean" />
-			<element maxOccurs="1" minOccurs="0" name="lnk_cdrstatusname"
-				type="string" />
-			<element maxOccurs="1" minOccurs="0" name="lnk_pwdadsl" type="string" />
-			<element maxOccurs="1" minOccurs="0" name="lnk_macaddresscpe"
-				type="string" />
-			<element maxOccurs="1" minOccurs="0" name="lnk_datacontratto"
-				type="dateTime" />
-			<element maxOccurs="1" minOccurs="0" name="lnk_datacopertura"
-				type="dateTime" />
-			<element maxOccurs="1" minOccurs="0" name="lnk_segnalerssi"
-				type="string" />
-			<element maxOccurs="1" minOccurs="0" name="lnk_bloccatoname"
-				type="string" />
-			<element maxOccurs="1" minOccurs="0" name="lnk_progressivoreclamo"
-				type="integer" />
-			<element maxOccurs="1" minOccurs="0" name="lnk_coperturadaweb"
-				type="integer" />
-			<element maxOccurs="1" minOccurs="0" name="lnk_dataattivazione"
-				type="dateTime" />
-			<element maxOccurs="1" minOccurs="0" name="lnk_datainviocodici"
-				type="dateTime" />
-			<element maxOccurs="1" minOccurs="0" name="lnk_nomeinstallatore"
-				type="string" />
-			<element maxOccurs="1" minOccurs="0" name="lnk_accountwififlatpsw"
-				type="string" />
-			<element maxOccurs="1" minOccurs="0" name="lnk_bonusmgmalportatore"
-				type="boolean" />
-			<element maxOccurs="1" minOccurs="0" name="lnk_dataultimafatturazione"
-				type="dateTime" />
-			<element maxOccurs="1" minOccurs="0" name="lnk_bloccato"
-				type="boolean" />
-			<element maxOccurs="1" minOccurs="0" name="lnk_netmask" type="string" />
-			<element maxOccurs="1" minOccurs="0" name="lnk_qualitcinr"
-				type="string" />
-			<element maxOccurs="1" minOccurs="0" name="lnk_id_contrattoid"
-				type="tns:lnk_id_contrattoid" />
-			<element maxOccurs="1" minOccurs="0" name="lnk_pianotariffarioid"
-				type="tns:lnk_pianotariffarioid" />
-			<element maxOccurs="1" minOccurs="0"
-				name="lnk_servizioaggiuntivoctname" type="string" />
-			<element maxOccurs="1" minOccurs="0" name="lnk_coperturadawebname"
-				type="string" />
-			<element maxOccurs="1" minOccurs="0"
-				name="lnk_societainstallatriceidname" type="string" />
-			<element maxOccurs="1" minOccurs="0" name="lnk_dataspedizione"
-				type="dateTime" />
-			<element maxOccurs="1" minOccurs="0" name="transactioncurrencyid"
-				type="tns:transactioncurrencyid" />
-			<element maxOccurs="1" minOccurs="0" name="lnk_lineedelcontrattoid"
-				type="string" />
-			<element maxOccurs="1" minOccurs="0" name="modifiedonbehalfbyyominame"
-				type="string" />
-			<element maxOccurs="1" minOccurs="0" name="lnk_wimaxstatusname"
-				type="string" />
-			<element maxOccurs="1" minOccurs="0" name="lnk_segnale" type="double" />
-			<element maxOccurs="1" minOccurs="0" name="modifiedonbehalfbyname"
-				type="string" />
-			<element maxOccurs="1" minOccurs="0" name="lnk_logsincronizzazione"
-				type="string" />
-			<element maxOccurs="1" minOccurs="0" name="lnk_dns" type="string" />
-			<element maxOccurs="1" minOccurs="0" name="lnk_servizioaggiuntivoct"
-				type="boolean" />
-			<element maxOccurs="1" minOccurs="0" name="lnk_cdrstatus"
-				type="boolean" />
-			<element maxOccurs="1" minOccurs="0" name="lnk_datafinevalidita"
-				type="dateTime" />
-			<element maxOccurs="1" minOccurs="0" name="lnk_societainstallatriceid"
-				type="tns:lnk_societainstallatriceid" />
-			<element maxOccurs="1" minOccurs="0" name="lnk_btstelecom"
-				type="string" />
-			<element maxOccurs="1" minOccurs="0" name="lnk_accountid"
-				type="tns:lnk_accountid" />
-			<element maxOccurs="1" minOccurs="0" name="createdbyname"
-				type="string" />
+			<element maxOccurs="1" minOccurs="0" name="lnk_dataconsegna" type="dateTime"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_accountwififlatutente_2" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_datainiziofatturazione" type="dateTime"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_prezzo" type="decimal"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_copertura_newname" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="transactioncurrencyidname" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_utenteadsl" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="owninguser" type="tns:owninguser"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_accountidyominame" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_voipstatus" type="boolean"/>
+			<element maxOccurs="1" minOccurs="0" name="statuscode" type="integer"/>
+			<element maxOccurs="1" minOccurs="0" name="statecodename" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_name" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_latitudine" type="decimal"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_welcomeletterinviataname" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_datacessazione" type="dateTime"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_consegnarapportiinstallazionename" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="timezoneruleversionnumber" type="integer"/>
+			<element maxOccurs="1" minOccurs="0" name="createdonbehalfbyname" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_tipolineaname" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="createdonbehalfbyyominame" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="ownerid" type="tns:ownerid"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_statocodicelineaname" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_importofatturainstallatore" type="decimal"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_ratingstatusname" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="modifiedon" type="dateTime"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_numeroseriale" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_copertura_new" type="integer"/>
+			<element maxOccurs="1" minOccurs="0" name="owningbusinessunit" type="tns:owningbusinessunit"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_statopromo" type="integer"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_voiporderid" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_ricaricatapromolancio" type="boolean"/>
+			<element maxOccurs="1" minOccurs="0" name="createdbyyominame" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_prezzo_base" type="decimal"/>
+			<element maxOccurs="1" minOccurs="0" name="owneridyominame" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_voipstatusname" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="utcconversiontimezonecode" type="integer"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_numerolinea" type="integer"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_statocar" type="integer"/>
+			<element maxOccurs="1" minOccurs="0" name="statecode" type="integer"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_voipuserpassword" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_pianotariffarioidname" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_statocodicelinea" type="integer"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_ratingstatus" type="boolean"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_id_contrattoidname" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="overriddencreatedon" type="dateTime"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_macutente" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_bonusmgmalportatorename" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_indirizzoip" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_statohuawei" type="integer"/>
+			<element maxOccurs="1" minOccurs="0" name="dynamics_integrationkey" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_radiusstatusname" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_segnale_new" type="double"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_ricaricatapromolancioname" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_accountwififlatutente" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_ipstaticoterritoriale" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_statoprepaidflatname" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="statuscodename" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_utentewimax" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="modifiedbyyominame" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_bts_new" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_smsinviatodata" type="dateTime"/>
+			<element maxOccurs="1" minOccurs="0" name="owneridname" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="versionnumber" type="long"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_voiplinenumber" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="createdon" type="dateTime"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_statohuaweiname" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_status" type="integer"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_smsinviato" type="boolean"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_longitudine" type="decimal"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_accountwififaltutente_3" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="importsequencenumber" type="integer"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_statosincronizzazione" type="integer"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_statoprepaidflat" type="integer"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_indirizzoippubblico" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_statusname" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_datacopertura_new" type="dateTime"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_wimaxstatus" type="integer"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_snr" type="decimal"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_datainiziopagamenti" type="dateTime"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_smsinviatoname" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="createdby" type="tns:createdby"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_radiusstatus" type="integer"/>
+			<element maxOccurs="1" minOccurs="0" name="owningteam" type="tns:owningteam"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_welcomeletterinviata" type="boolean"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_id_contratto" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_voipusername" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_statopromoname" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_macmaster" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_datachiamataperattivazione" type="dateTime"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_statocarname" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_statosincronizzazionename" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_dataricezioneraccomandata" type="dateTime"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_accountwififlatpsw_2" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_bts" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_accountwififlatpsw_3" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_lineaprincipaleid" type="tns:lnk_lineaprincipaleid"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_pwdwimax" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_nomecalciatore" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_lineaprincipaleidname" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="modifiedby" type="tns:modifiedby"/>
+			<element maxOccurs="1" minOccurs="0" name="modifiedonbehalfby" type="tns:modifiedonbehalfby"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_tipolinea" type="integer"/>
+			<element maxOccurs="1" minOccurs="0" name="owneridtype" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="ip_importid" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_gateway" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="createdonbehalfby" type="tns:createdonbehalfby"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_minutiliberialmese" type="integer"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_dataprossimafattura" type="dateTime"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_accountidname" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="exchangerate" type="decimal"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_coupon" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="modifiedbyname" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_consegnarapportiinstallazione" type="boolean"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_fatturazioneperiodicaname" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_fatturazioneperiodica" type="boolean"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_cdrstatusname" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_pwdadsl" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_macaddresscpe" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_datacontratto" type="dateTime"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_datacopertura" type="dateTime"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_segnalerssi" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_bloccatoname" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_progressivoreclamo" type="integer"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_coperturadaweb" type="integer"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_dataattivazione" type="dateTime"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_datainviocodici" type="dateTime"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_nomeinstallatore" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_accountwififlatpsw" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_bonusmgmalportatore" type="boolean"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_dataultimafatturazione" type="dateTime"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_bloccato" type="boolean"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_netmask" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_qualitcinr" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_id_contrattoid" type="tns:lnk_id_contrattoid"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_pianotariffarioid" type="tns:lnk_pianotariffarioid"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_servizioaggiuntivoctname" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_coperturadawebname" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_societainstallatriceidname" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_dataspedizione" type="dateTime"/>
+			<element maxOccurs="1" minOccurs="0" name="transactioncurrencyid" type="tns:transactioncurrencyid"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_lineedelcontrattoid" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="modifiedonbehalfbyyominame" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_wimaxstatusname" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_segnale" type="double"/>
+			<element maxOccurs="1" minOccurs="0" name="modifiedonbehalfbyname" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_logsincronizzazione" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_dns" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_servizioaggiuntivoct" type="boolean"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_cdrstatus" type="boolean"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_datafinevalidita" type="dateTime"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_societainstallatriceid" type="tns:lnk_societainstallatriceid"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_btstelecom" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_accountid" type="tns:lnk_accountid"/>
+			<element maxOccurs="1" minOccurs="0" name="createdbyname" type="string"/>
 		</sequence>
 	</complexType>
 	<complexType name="owninguser">
 		<sequence>
-			<element maxOccurs="1" minOccurs="1" name="entitylogicname"
-				type="string" />
-			<element maxOccurs="1" minOccurs="1" name="entityid" type="string" />
+			<element maxOccurs="1" minOccurs="1" name="entitylogicname" type="string"/>
+			<element maxOccurs="1" minOccurs="1" name="entityid" type="string"/>
 		</sequence>
 	</complexType>
 	<complexType name="ownerid">
 		<sequence>
-			<element maxOccurs="1" minOccurs="1" name="entitylogicname"
-				type="string" />
-			<element maxOccurs="1" minOccurs="1" name="entityid" type="string" />
+			<element maxOccurs="1" minOccurs="1" name="entitylogicname" type="string"/>
+			<element maxOccurs="1" minOccurs="1" name="entityid" type="string"/>
 		</sequence>
 	</complexType>
 	<complexType name="owningbusinessunit">
 		<sequence>
-			<element maxOccurs="1" minOccurs="1" name="entitylogicname"
-				type="string" />
-			<element maxOccurs="1" minOccurs="1" name="entityid" type="string" />
+			<element maxOccurs="1" minOccurs="1" name="entitylogicname" type="string"/>
+			<element maxOccurs="1" minOccurs="1" name="entityid" type="string"/>
 		</sequence>
 	</complexType>
 	<complexType name="createdby">
 		<sequence>
-			<element maxOccurs="1" minOccurs="1" name="entitylogicname"
-				type="string" />
-			<element maxOccurs="1" minOccurs="1" name="entityid" type="string" />
+			<element maxOccurs="1" minOccurs="1" name="entitylogicname" type="string"/>
+			<element maxOccurs="1" minOccurs="1" name="entityid" type="string"/>
 		</sequence>
 	</complexType>
 	<complexType name="owningteam">
 		<sequence>
-			<element maxOccurs="1" minOccurs="1" name="entitylogicname"
-				type="string" />
-			<element maxOccurs="1" minOccurs="1" name="entityid" type="string" />
+			<element maxOccurs="1" minOccurs="1" name="entitylogicname" type="string"/>
+			<element maxOccurs="1" minOccurs="1" name="entityid" type="string"/>
 		</sequence>
 	</complexType>
 	<complexType name="lnk_lineaprincipaleid">
 		<sequence>
-			<element maxOccurs="1" minOccurs="1" name="entitylogicname"
-				type="string" />
-			<element maxOccurs="1" minOccurs="1" name="entityid" type="string" />
+			<element maxOccurs="1" minOccurs="1" name="entitylogicname" type="string"/>
+			<element maxOccurs="1" minOccurs="1" name="entityid" type="string"/>
 		</sequence>
 	</complexType>
 	<complexType name="modifiedby">
 		<sequence>
-			<element maxOccurs="1" minOccurs="1" name="entitylogicname"
-				type="string" />
-			<element maxOccurs="1" minOccurs="1" name="entityid" type="string" />
+			<element maxOccurs="1" minOccurs="1" name="entitylogicname" type="string"/>
+			<element maxOccurs="1" minOccurs="1" name="entityid" type="string"/>
 		</sequence>
 	</complexType>
 	<complexType name="modifiedonbehalfby">
 		<sequence>
-			<element maxOccurs="1" minOccurs="1" name="entitylogicname"
-				type="string" />
-			<element maxOccurs="1" minOccurs="1" name="entityid" type="string" />
+			<element maxOccurs="1" minOccurs="1" name="entitylogicname" type="string"/>
+			<element maxOccurs="1" minOccurs="1" name="entityid" type="string"/>
 		</sequence>
 	</complexType>
 	<complexType name="createdonbehalfby">
 		<sequence>
-			<element maxOccurs="1" minOccurs="1" name="entitylogicname"
-				type="string" />
-			<element maxOccurs="1" minOccurs="1" name="entityid" type="string" />
+			<element maxOccurs="1" minOccurs="1" name="entitylogicname" type="string"/>
+			<element maxOccurs="1" minOccurs="1" name="entityid" type="string"/>
 		</sequence>
 	</complexType>
 	<complexType name="lnk_id_contrattoid">
 		<sequence>
-			<element maxOccurs="1" minOccurs="1" name="entitylogicname"
-				type="string" />
-			<element maxOccurs="1" minOccurs="1" name="entityid" type="string" />
+			<element maxOccurs="1" minOccurs="1" name="entitylogicname" type="string"/>
+			<element maxOccurs="1" minOccurs="1" name="entityid" type="string"/>
 		</sequence>
 	</complexType>
 	<complexType name="lnk_pianotariffarioid">
 		<sequence>
-			<element maxOccurs="1" minOccurs="1" name="entitylogicname"
-				type="string" />
-			<element maxOccurs="1" minOccurs="1" name="entityid" type="string" />
+			<element maxOccurs="1" minOccurs="1" name="entitylogicname" type="string"/>
+			<element maxOccurs="1" minOccurs="1" name="entityid" type="string"/>
 		</sequence>
 	</complexType>
 	<complexType name="transactioncurrencyid">
 		<sequence>
-			<element maxOccurs="1" minOccurs="1" name="entitylogicname"
-				type="string" />
-			<element maxOccurs="1" minOccurs="1" name="entityid" type="string" />
+			<element maxOccurs="1" minOccurs="1" name="entitylogicname" type="string"/>
+			<element maxOccurs="1" minOccurs="1" name="entityid" type="string"/>
 		</sequence>
 	</complexType>
 	<complexType name="lnk_societainstallatriceid">
 		<sequence>
-			<element maxOccurs="1" minOccurs="1" name="entitylogicname"
-				type="string" />
-			<element maxOccurs="1" minOccurs="1" name="entityid" type="string" />
+			<element maxOccurs="1" minOccurs="1" name="entitylogicname" type="string"/>
+			<element maxOccurs="1" minOccurs="1" name="entityid" type="string"/>
 		</sequence>
 	</complexType>
 	<complexType name="lnk_accountid">
 		<sequence>
-			<element maxOccurs="1" minOccurs="1" name="entitylogicname"
-				type="string" />
-			<element maxOccurs="1" minOccurs="1" name="entityid" type="string" />
+			<element maxOccurs="1" minOccurs="1" name="entitylogicname" type="string"/>
+			<element maxOccurs="1" minOccurs="1" name="entityid" type="string"/>
 		</sequence>
 	</complexType>
 </schema>

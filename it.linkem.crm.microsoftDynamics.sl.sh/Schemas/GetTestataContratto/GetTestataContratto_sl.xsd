@@ -1,11 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<schema xmlns="http://www.w3.org/2001/XMLSchema"
-	targetNamespace="http://it.linkem/crm/getTestataContrattoByGuidTDC/sl/xsd"
-	xmlns:tns="http://it.linkem/crm/getTestataContrattoByGuidTDC/sl/xsd"
-	elementFormDefault="qualified"
-	xmlns:tdc="http://it.linkem/crm/entities/TestataDelContratto/xsd">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tdc="http://it.linkem/crm/entities/TestataDelContratto/xsd" xmlns:tns="http://it.linkem/crm/getTestataContrattoByGuidTDC/sl/xsd" elementFormDefault="qualified" targetNamespace="http://it.linkem/crm/getTestataContrattoByGuidTDC/sl/xsd">
 
-<import namespace="http://it.linkem/crm/entities/TestataDelContratto/xsd" schemaLocation="../Entities/ContrattoTestata.xsd"  />
+<import namespace="http://it.linkem/crm/entities/TestataDelContratto/xsd" schemaLocation="../Entities/ContrattoTestata.xsd"/>
 
 
 <element name="GetTestataContrattoByGuidTDC_Input">
