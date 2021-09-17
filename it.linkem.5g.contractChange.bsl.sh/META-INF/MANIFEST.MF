@@ -8,9 +8,7 @@ TIBCO-BW-ConfigProfile: META-INF/default.substvar
 TIBCO-BW-SharedModule: META-INF/module.bwm
 TIBCO-BW-Edition: bwe
 TIBCO-BW-JobSharedVariables: META-INF/module.jsv
-Require-Capability: com.tibco.bw.model; filter:="(name=bwext)"
+Require-Capability: com.tibco.bw.model; filter:="(name=bwext)",com.tibco.bw.module; filter:="(&(name=it.linkem.crm.microsoftDynamics.sl.sh)(version=1.0.0))",com.tibco.bw.module; filter:="(&(name=it.linkem.rete.udm.sl.sh)(version=1.0.0))",com.tibco.bw.module; filter:="(&(name=it.linkem.common.utils.sh)(version=1.0.0))",com.tibco.bw.palette; filter:="(name=bw.generalactivities)"
 TIBCO-BW-ModuleSharedVariables: META-INF/module.msv
-Provide-Capability: com.tibco.bw.module; name="it.linkem.5g.contractChange.bsl.sh"; version:Version="1.0.0",
- com.tibco.bw.schemas; ns="http://it/linkem/5g/ContractChange",
- com.tibco.bw.processes; name="it.linkem.5g.contractChange.bsl"
+Provide-Capability: com.tibco.bw.module; name="it.linkem.5g.contractChange.bsl.sh"; version:Version="1.0.0",com.tibco.bw.schemas; ns="http://it/linkem/5g/ContractChange/bsl/xsd",com.tibco.bw.processes; name="it.linkem.5g.contractChange.bsl"
 TIBCO-BW-Version: 6.7.0 HF3 V102 2021-08-10

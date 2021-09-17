@@ -3,6 +3,7 @@
 	<name>it.linkem.5g.contractChange.bsl.sh</name>
 	<comment></comment>
 	<projects>
+		<project>it.linkem.common.utils.sh</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
