@@ -178,6 +178,9 @@
   <sca:property xmi:id="_spajwBSHEeyvP5r7OtxOUA" name="BW.APPSPACE.NAME" type="XMLSchema:string" scalable="true"/>
   <sca:property xmi:id="_spfcQBSHEeyvP5r7OtxOUA" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
   <sca:property xmi:id="_spjtsBSHEeyvP5r7OtxOUA" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_d4OAQBe8EeyMwIVNrv_anA" name="/it.linkem.5g.contractactivation/Azione_Attivazione" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_GTWAsBe8EeyMwIVNrv_anA" name="/it.linkem.5g.contractactivation/CheckIniziali/statoTDC_Attivazione" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_Upzv8Be8EeyMwIVNrv_anA" name="/it.linkem.5g.contractactivation/CheckIniziali/sottostatoTDC_Attivazione" type="XMLSchema:string" publicAccess="true" scalable="true"/>
   <sca:component xmi:id="_og4SABSQEeyvP5r7OtxOUA" name="Componentcontractactivation" compositeext:version="1.0.0.qualifier">
     <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_og4SARSQEeyvP5r7OtxOUA" processName="it.linkem.5g.contractactivation.tlp.contractactivation_tlp"/>
     <sca:service xmi:id="_og4SAhSQEeyvP5r7OtxOUA" name="contractactivation">
