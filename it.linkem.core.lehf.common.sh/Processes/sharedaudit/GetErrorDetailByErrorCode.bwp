@@ -7,28 +7,14 @@
     xmlns:info="http://www.tibco.com/bw/process/info"
     xmlns:ns="http://www.tibco.com/pe/EngineTypes"
     xmlns:ns0="http://www.example.com/namespaces/tns/1591202093325"
-    xmlns:ns1="http://it.linkem/core/lehf/common/xsd/ErrorConfiguration/"
-    xmlns:ns2="http://it.linkem/core/lehf/common/xsd/parsecsv/ErrorConfiguration"
-    xmlns:ns3="http://it.linkem/core/lehf/common/AuditTypes/0100"
+    xmlns:ns1="http://it.linkem/common/core/lehf/xsd/ErrorConfiguration/"
+    xmlns:ns2="http://it.linkem/common/core/lehf/xsd/parsecsv/ErrorConfiguration"
+    xmlns:ns3="http://it.linkem/common/core/lehf/AuditTypes/xsd"
+    xmlns:ns4="http://it.linkem/common/core/lehf/ErrorConfiguration/xsd"
     xmlns:sca="http://docs.oasis-open.org/ns/opencsa/sca/200912"
     xmlns:sca-bpel="http://docs.oasis-open.org/ns/opencsa/sca-bpel/200801"
     xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"
     xmlns:tibprop="http://ns.tibco.com/bw/property" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-    <tibex:VariableDescriptor type="MemorySaving">
-        <task name="End">
-            <endingVariables>
-                <variable>RetrieveErrorDetails</variable>
-            </endingVariables>
-        </task>
-        <task name="RetrieveErrorDetails">
-            <endingVariables>
-                <variable>RetrieveErrorDetails-input</variable>
-                <variable>Start</variable>
-                <variable>GetErrorConfig</variable>
-                <variable>SystemException</variable>
-            </endingVariables>
-        </task>
-    </tibex:VariableDescriptor>
     <tibex:Types>
         <xs:schema attributeFormDefault="unqualified"
             elementFormDefault="qualified"
@@ -197,7 +183,7 @@
         productVersion="2.5.2 V67 2020-03-05" scalable="true"
         singleton="true" stateless="true" type="IT"/>
     <tibex:ProcessInterface context=""
-        input="{http://it.linkem/core/lehf/common/AuditTypes/0100}LogAudit" output="{http://it.linkem/core/lehf/common/xsd/ErrorConfiguration/}ErrorConfiguration"/>
+        input="{http://it.linkem/common/core/lehf/AuditTypes/xsd}LogAudit" output="{http://it.linkem/common/core/lehf/ErrorConfiguration/xsd}ErrorConfiguration"/>
     <tibex:ProcessTemplateConfigurations/>
     <notation:Diagram measurementUnit="Pixel" type="BWProcess"
         xmlns:bwnotation="http://tns.tibco.com/bw/runtime/BWNotation"
@@ -359,12 +345,12 @@
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.3"/>
                                     <layoutConstraint
-                                    height="40" width="40"
+                                    height="40" width="161"
                                     x="407"
                                     xsi:type="notation:Bounds" y="130"/>
                                     </children>
                                     <children
-                                    description="Error Type and Error Message are set automatically from the error config variable.&#xd;&#xa;If error Code is not present in the error config variable, the error type and messages will be taken from the start.&#xd;&#xa;In case the start does not contains errorType and errorMessage, a standard error message and type is set.&#xd;&#xa;"
+                                    description="Error Type and Error Message are set automatically from the error config variable.&#xd;&#xa;If error Code is not present in the error config variable, the error type and messages will be taken from the start activity.&#xd;&#xa;In case the start does not contains errorType and errorMessage, a standard error message and type is set.&#xd;&#xa;"
                                     fillColor="13369343"
                                     fontName="Segoe UI"
                                     lineColor="6737151"
@@ -380,7 +366,7 @@
                                     <styles xsi:type="notation:LineTypeStyle"/>
                                     <element xsi:nil="true"/>
                                     <layoutConstraint
-                                    height="153" width="395"
+                                    height="210" width="395"
                                     x="365"
                                     xsi:type="notation:Bounds" y="211"/>
                                     </children>
@@ -396,7 +382,7 @@
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <styles xsi:type="bwnotation:ResizingStyle"/>
                                     <element href="//0/@process/@activity/@activity"/>
-                                    <layoutConstraint height="394"
+                                    <layoutConstraint height="431"
                                     width="807" xsi:type="notation:Bounds"/>
                                 </children>
                                 <styles xsi:type="notation:SortingStyle"/>
@@ -406,7 +392,7 @@
                             <styles xsi:type="bwnotation:BackgroundStyle"/>
                             <styles xsi:type="bwnotation:ResizingStyle"/>
                             <element href="//0/@process/@activity"/>
-                            <layoutConstraint height="394" width="810" xsi:type="notation:Bounds"/>
+                            <layoutConstraint height="431" width="810" xsi:type="notation:Bounds"/>
                         </children>
                         <styles xsi:type="notation:SortingStyle"/>
                         <styles xsi:type="notation:FilteringStyle"/>
@@ -416,7 +402,7 @@
                     <styles xsi:type="bwnotation:BackgroundStyle"/>
                     <styles xsi:type="bwnotation:ResizingStyle"/>
                     <element href="//0/@process/@activity"/>
-                    <layoutConstraint height="418" width="810" x="1"
+                    <layoutConstraint height="455" width="810" x="1"
                         xsi:type="notation:Bounds" y="1"/>
                 </children>
                 <styles xsi:type="notation:SortingStyle"/>
@@ -425,7 +411,7 @@
             </children>
             <styles fontName="Segoe UI" lineColor="0" xsi:type="notation:ShapeStyle"/>
             <element href="//0/@process"/>
-            <layoutConstraint height="470" width="1152" xsi:type="notation:Bounds"/>
+            <layoutConstraint height="507" width="1152" xsi:type="notation:Bounds"/>
         </children>
         <styles xsi:type="notation:DiagramStyle"/>
         <element href="//0"/>
@@ -465,26 +451,31 @@
     </notation:Diagram>
     <tibex:NamespaceRegistry enabled="true">
         <tibex:namespaceItem
-            namespace="http://it.linkem/core/lehf/common/xsd/ErrorConfiguration/" prefix="ns"/>
+            namespace="http://it.linkem/common/core/lehf/xsd/ErrorConfiguration/" prefix="ns"/>
         <tibex:namespaceItem
-            namespace="http://it.linkem/core/lehf/common/xsd/parsecsv/ErrorConfiguration" prefix="tns"/>
+            namespace="http://it.linkem/common/core/lehf/xsd/parsecsv/ErrorConfiguration" prefix="tns"/>
         <tibex:namespaceItem
             namespace="http://www.example.com/namespaces/tns/1591202093325" prefix="tns1"/>
+        <tibex:namespaceItem
+            namespace="http://www.w3.org/2001/XMLSchema-instance" prefix="xsi"/>
+        <tibex:namespaceItem
+            namespace="http://it.linkem/common/core/lehf/ErrorConfiguration/xsd" prefix="tns2"/>
     </tibex:NamespaceRegistry>
-    <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://it.linkem/core/lehf/common/xsd/ErrorConfiguration/"/>
-    <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://it.linkem/core/lehf/common/AuditTypes/0100"/>
+    <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://it.linkem/common/core/lehf/xsd/ErrorConfiguration/"/>
+    <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://it.linkem/common/core/lehf/AuditTypes/xsd"/>
+    <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://it.linkem/common/core/lehf/ErrorConfiguration/xsd"/>
     <bpws:variables>
         <bpws:variable element="ns:ProcessContext"
             name="_processContext" sca-bpel:internal="true"/>
         <bpws:variable element="ns3:LogAudit" name="Start"
             sca-bpel:internal="true" tibex:parameter="in"/>
-        <bpws:variable element="ns1:ErrorConfigurations"
+        <bpws:variable element="ns4:ErrorConfigurations"
             name="GetErrorConfig" sca-bpel:internal="true"/>
-        <bpws:variable element="ns1:ErrorConfiguration" name="End-input"
+        <bpws:variable element="ns4:ErrorConfiguration" name="End-input"
             sca-bpel:internal="true" tibex:parameter="out"/>
-        <bpws:variable element="ns1:ErrorConfiguration"
+        <bpws:variable element="ns4:ErrorConfiguration"
             name="RetrieveErrorDetails-input" sca-bpel:internal="true"/>
-        <bpws:variable element="ns1:ErrorConfiguration"
+        <bpws:variable element="ns4:ErrorConfiguration"
             name="RetrieveErrorDetails" sca-bpel:internal="true"/>
         <bpws:variable name="SystemException" sca-bpel:hotUpdate="false"
             sca-bpel:privateProperty="true" sca-bpel:property="yes"
@@ -530,6 +521,8 @@
                         <tibex:inputBinding
                             expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;RetrieveErrorDetails&quot;/>&lt;xsl:template name=&quot;End-input&quot; match=&quot;/&quot;>&lt;xsl:copy-of select=&quot;$RetrieveErrorDetails&quot;/>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
+                    <tibex:inputBinding
+                        expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">&lt;?xml version="1.0" encoding="UTF-8"?&gt; &lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:tns="http://it.linkem/common/core/lehf/ErrorConfiguration/xsd" version="2.0"&gt; &lt;xsl:template name="End-input" match="/"&gt; &lt;tns:ErrorConfiguration/&gt;&lt;/xsl:template&gt; &lt;/xsl:stylesheet&gt;</tibex:inputBinding>
                     <tibex:config>
                         <bwext:BWActivity
                             activityTypeID="bw.internal.end"
@@ -576,21 +569,21 @@
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:ns=&quot;http://it.linkem/core/lehf/common/xsd/ErrorConfiguration/&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;Start&quot;/>&lt;xsl:param name=&quot;GetErrorConfig&quot;/>&lt;xsl:param name=&quot;SystemException&quot;/>&lt;xsl:template name=&quot;RetrieveErrorDetails-input&quot; match=&quot;/&quot;>&lt;xsl:variable name=&quot;inputErrorCode&quot; select=&quot;$Start/auditErrorElement/ERRORCODE&quot;/>&lt;xsl:choose>&lt;xsl:when test=&quot;$GetErrorConfig/ns:ErrorConfiguration[ns:ErrorCode = $inputErrorCode]&quot;>&lt;ns:ErrorConfiguration>&lt;ns:ErrorCode>&lt;xsl:value-of select=&quot;$GetErrorConfig/ns:ErrorConfiguration[ns:ErrorCode = $inputErrorCode]/ns:ErrorCode&quot;/>&lt;/ns:ErrorCode>&lt;ns:ErrorMessage>&lt;xsl:value-of select=&quot;$GetErrorConfig/ns:ErrorConfiguration[ns:ErrorCode = $inputErrorCode]/ns:ErrorMessage&quot;/>&lt;/ns:ErrorMessage>&lt;ns:ErrorType>&lt;xsl:value-of select=&quot;$GetErrorConfig/ns:ErrorConfiguration[ns:ErrorCode = $inputErrorCode]/ns:ErrorType&quot;/>&lt;/ns:ErrorType>&lt;xsl:if test=&quot;$GetErrorConfig/ns:ErrorConfiguration[ns:ErrorCode = $inputErrorCode]/ns:CreateCase&quot;>&lt;ns:CreateCase>&lt;xsl:value-of select=&quot;$GetErrorConfig/ns:ErrorConfiguration[ns:ErrorCode = $inputErrorCode]/ns:CreateCase&quot;/>&lt;/ns:CreateCase>&lt;/xsl:if>&lt;xsl:if test=&quot;$GetErrorConfig/ns:ErrorConfiguration[ns:ErrorCode = $inputErrorCode]/ns:CircuitBreaker&quot;>&lt;ns:CircuitBreaker>&lt;xsl:value-of select=&quot;$GetErrorConfig/ns:ErrorConfiguration[ns:ErrorCode = $inputErrorCode]/ns:CircuitBreaker&quot;/>&lt;/ns:CircuitBreaker>&lt;/xsl:if>&lt;xsl:if test=&quot;$GetErrorConfig/ns:ErrorConfiguration[ns:ErrorCode = $inputErrorCode]/ns:HTTPStatusCode&quot;>&lt;ns:HTTPStatusCode>&lt;xsl:value-of select=&quot;$GetErrorConfig/ns:ErrorConfiguration[ns:ErrorCode = $inputErrorCode]/ns:HTTPStatusCode&quot;/>&lt;/ns:HTTPStatusCode>&lt;/xsl:if>&lt;xsl:if test=&quot;$GetErrorConfig/ns:ErrorConfiguration[ns:ErrorCode = $inputErrorCode]/ns:APIname&quot;>&lt;ns:APIname>&lt;xsl:value-of select=&quot;$GetErrorConfig/ns:ErrorConfiguration[ns:ErrorCode = $inputErrorCode]/ns:APIname&quot;/>&lt;/ns:APIname>&lt;/xsl:if>&lt;xsl:if test=&quot;$GetErrorConfig/ns:ErrorConfiguration[ns:ErrorCode = $inputErrorCode]/ns:BSLProcess&quot;>&lt;ns:BSLProcess>&lt;xsl:value-of select=&quot;$GetErrorConfig/ns:ErrorConfiguration[ns:ErrorCode = $inputErrorCode]/ns:BSLProcess&quot;/>&lt;/ns:BSLProcess>&lt;/xsl:if>&lt;/ns:ErrorConfiguration>&lt;/xsl:when>&lt;xsl:otherwise>&lt;xsl:choose>&lt;xsl:when test=&quot;string-length($Start/auditErrorElement/ERRORMESSAGE)>0 and string-length($Start/auditErrorElement/ERRORTYPE)>0&quot;>&lt;ns:ErrorConfiguration>&lt;ns:ErrorCode>&lt;xsl:value-of select=&quot;$Start/auditErrorElement/ERRORCODE&quot;/>&lt;/ns:ErrorCode>&lt;ns:ErrorMessage>&lt;xsl:value-of select=&quot;$Start/auditErrorElement/ERRORMESSAGE&quot;/>&lt;/ns:ErrorMessage>&lt;ns:ErrorType>&lt;xsl:value-of select=&quot;$Start/auditErrorElement/ERRORTYPE&quot;/>&lt;/ns:ErrorType>&lt;ns:CreateCase>&lt;xsl:value-of select=&quot;false()&quot;/>&lt;/ns:CreateCase>&lt;ns:CircuitBreaker>&lt;xsl:value-of select=&quot;false()&quot;/>&lt;/ns:CircuitBreaker>&lt;xsl:if test=&quot;$Start/auditErrorElement/API&quot;>&lt;ns:APIname>&lt;xsl:value-of select=&quot;$Start/auditErrorElement/API&quot;/>&lt;/ns:APIname>&lt;/xsl:if>&lt;/ns:ErrorConfiguration>&lt;/xsl:when>&lt;xsl:otherwise>&lt;ns:ErrorConfiguration>&lt;ns:ErrorCode>&lt;xsl:value-of select=&quot;$Start/auditErrorElement/ERRORCODE&quot;/>&lt;/ns:ErrorCode>&lt;ns:ErrorMessage>&lt;xsl:value-of select=&quot;&amp;quot;Given Error code not exists. Missing Error Message or Missing Error Type. Please check the payload for details.&amp;quot;&quot;/>&lt;/ns:ErrorMessage>&lt;ns:ErrorType>&lt;xsl:value-of select=&quot;$SystemException&quot;/>&lt;/ns:ErrorType>&lt;ns:CreateCase>&lt;xsl:value-of select=&quot;false()&quot;/>&lt;/ns:CreateCase>&lt;ns:CircuitBreaker>&lt;xsl:value-of select=&quot;false()&quot;/>&lt;/ns:CircuitBreaker>&lt;xsl:if test=&quot;$Start/auditErrorElement/API&quot;>&lt;ns:APIname>&lt;xsl:value-of select=&quot;$Start/auditErrorElement/API&quot;/>&lt;/ns:APIname>&lt;/xsl:if>&lt;/ns:ErrorConfiguration>&lt;/xsl:otherwise>&lt;/xsl:choose>&lt;/xsl:otherwise>&lt;/xsl:choose>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns2=&quot;http://it.linkem/common/core/lehf/ErrorConfiguration/xsd&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;Start&quot;/>&lt;xsl:param name=&quot;GetErrorConfig&quot;/>&lt;xsl:param name=&quot;SystemException&quot;/>&lt;xsl:template name=&quot;RetrieveErrorDetails-input&quot; match=&quot;/&quot;>&lt;xsl:variable name=&quot;inputErrorCode&quot; select=&quot;$Start/auditErrorElement/ERRORCODE&quot;/>&lt;xsl:choose>&lt;xsl:when test=&quot;count($GetErrorConfig/tns2:ErrorConfiguration[./tns2:ErrorCode=$inputErrorCode])>0&quot;>&lt;tns2:ErrorConfiguration>&lt;xsl:variable name=&quot;singleConf&quot; select=&quot;$GetErrorConfig/tns2:ErrorConfiguration[./tns2:ErrorCode=$inputErrorCode][1]&quot;/>&lt;tns2:ErrorCode>&lt;xsl:value-of select=&quot;$singleConf/tns2:ErrorCode&quot;/>&lt;/tns2:ErrorCode>&lt;tns2:ErrorMessage>&lt;xsl:value-of select=&quot;$singleConf/tns2:ErrorMessage&quot;/>&lt;/tns2:ErrorMessage>&lt;tns2:ErrorType>&lt;xsl:value-of select=&quot;$singleConf/tns2:ErrorType&quot;/>&lt;/tns2:ErrorType>&lt;xsl:if test=&quot;$singleConf/tns2:HTTPStatusCode&quot;>&lt;tns2:HTTPStatusCode>&lt;xsl:copy-of select=&quot;$singleConf/tns2:HTTPStatusCode/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$singleConf/tns2:HTTPStatusCode&quot;/>&lt;/tns2:HTTPStatusCode>&lt;/xsl:if>&lt;xsl:if test=&quot;$singleConf/tns2:APIname&quot;>&lt;tns2:APIname>&lt;xsl:value-of select=&quot;$singleConf/tns2:APIname&quot;/>&lt;/tns2:APIname>&lt;/xsl:if>&lt;/tns2:ErrorConfiguration>&lt;/xsl:when>&lt;xsl:otherwise>&lt;xsl:choose>&lt;xsl:when test=&quot;string-length($Start/auditErrorElement/ERRORMESSAGE)>0 and string-length($Start/auditErrorElement/ERRORTYPE)>0&quot;>&lt;tns2:ErrorConfiguration>&lt;tns2:ErrorCode>&lt;xsl:value-of select=&quot;$Start/auditErrorElement/ERRORCODE&quot;/>&lt;/tns2:ErrorCode>&lt;tns2:ErrorMessage>&lt;xsl:value-of select=&quot;$Start/auditErrorElement/ERRORMESSAGE&quot;/>&lt;/tns2:ErrorMessage>&lt;tns2:ErrorType>&lt;xsl:value-of select=&quot;$Start/auditErrorElement/ERRORTYPE&quot;/>&lt;/tns2:ErrorType>&lt;/tns2:ErrorConfiguration>&lt;/xsl:when>&lt;xsl:otherwise>&lt;tns2:ErrorConfiguration>&lt;tns2:ErrorCode>&lt;xsl:value-of select=&quot;$Start/auditErrorElement/ERRORCODE&quot;/>&lt;/tns2:ErrorCode>&lt;tns2:ErrorMessage>&lt;xsl:value-of select=&quot;&amp;quot;Given Error code not exists. Missing Error Message or Missing Error Type. Please check the payload for details.&amp;quot;&quot;/>&lt;/tns2:ErrorMessage>&lt;tns2:ErrorType>&lt;xsl:value-of select=&quot;$SystemException&quot;/>&lt;/tns2:ErrorType>&lt;/tns2:ErrorConfiguration>&lt;/xsl:otherwise>&lt;/xsl:choose>&lt;/xsl:otherwise>&lt;/xsl:choose>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:config>
                         <bwext:BWActivity
                             activityTypeID="bw.generalactivities.mapper"
                             version="6.0.0.001"
-                            xmlns:ErrorConfiguration="http://it.linkem/core/lehf/common/xsd/ErrorConfiguration/"
                             xmlns:activityconfig="http://tns.tibco.com/bw/model/activityconfig"
                             xmlns:bwext="http://tns.tibco.com/bw/model/core/bwext"
-                            xmlns:generalactivities="http://ns.tibco.com/bw/palette/generalactivities" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                            xmlns:generalactivities="http://ns.tibco.com/bw/palette/generalactivities"
+                            xmlns:xsd="http://it.linkem/common/core/lehf/ErrorConfiguration/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                             <activityConfig>
                                 <properties name="config" xsi:type="activityconfig:EMFProperty">
                                     <type href="http://ns.tibco.com/bw/palette/generalactivities#//Mapper"/>
                                     <value
-                                    inputQName="ErrorConfiguration:ErrorConfiguration" xsi:type="generalactivities:Mapper"/>
+                                    inputQName="xsd:ErrorConfiguration" xsi:type="generalactivities:Mapper"/>
                                 </properties>
                             </activityConfig>
                         </bwext:BWActivity>

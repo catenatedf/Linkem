@@ -5,31 +5,13 @@
     xmlns:bpws="http://docs.oasis-open.org/wsbpel/2.0/process/executable"
     xmlns:info="http://www.tibco.com/bw/process/info"
     xmlns:ns="http://www.tibco.com/pe/EngineTypes"
-    xmlns:ns0="http://it.linkem/core/lehf/common/xsd/ErrorConfiguration/"
+    xmlns:ns0="http://it.linkem/common/core/lehf/xsd/ErrorConfiguration/"
     xmlns:ns1="http://www.tibco.com/pe/WriteToLogActivitySchema"
+    xmlns:ns2="http://it.linkem/common/core/lehf/ErrorConfiguration/xsd"
     xmlns:sca="http://docs.oasis-open.org/ns/opencsa/sca/200912"
     xmlns:sca-bpel="http://docs.oasis-open.org/ns/opencsa/sca-bpel/200801"
     xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"
     xmlns:tibprop="http://ns.tibco.com/bw/property" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-    <tibex:VariableDescriptor type="MemorySaving">
-        <task name="SetErrorConfiguration">
-            <endingVariables>
-                <variable>SetErrorConfiguration-input</variable>
-                <variable>SetErrorConfiguration</variable>
-                <variable>Start</variable>
-            </endingVariables>
-        </task>
-        <task name="StartLog">
-            <endingVariables>
-                <variable>StartLog-input</variable>
-            </endingVariables>
-        </task>
-        <task name="EndLog">
-            <endingVariables>
-                <variable>EndLog-input</variable>
-            </endingVariables>
-        </task>
-    </tibex:VariableDescriptor>
     <tibex:Types>
         <xs:schema attributeFormDefault="unqualified"
             elementFormDefault="qualified"
@@ -215,7 +197,7 @@
         productVersion="2.5.2 V67 2020-03-05" scalable="true"
         singleton="true" stateless="true" type="IT"/>
     <tibex:ProcessInterface context=""
-        input="{http://it.linkem/core/lehf/common/xsd/ErrorConfiguration/}ErrorConfigurations" output=""/>
+        input="{http://it.linkem/common/core/lehf/ErrorConfiguration/xsd}ErrorConfigurations" output=""/>
     <tibex:ProcessTemplateConfigurations/>
     <notation:Diagram measurementUnit="Pixel" type="BWProcess"
         xmlns:bwnotation="http://tns.tibco.com/bw/runtime/BWNotation"
@@ -356,7 +338,7 @@
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.2"/>
                                     <layoutConstraint
-                                    height="40" width="40"
+                                    height="40" width="165"
                                     x="312"
                                     xsi:type="notation:Bounds" y="183"/>
                                     </children>
@@ -535,19 +517,19 @@
     </notation:Diagram>
     <tibex:NamespaceRegistry enabled="true">
         <tibex:namespaceItem
-            namespace="http://it.linkem/core/lehf/common/xsd/ErrorConfiguration/" prefix="tns"/>
+            namespace="http://it.linkem/common/core/lehf/xsd/ErrorConfiguration/" prefix="tns"/>
     </tibex:NamespaceRegistry>
-    <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://it.linkem/core/lehf/common/xsd/ErrorConfiguration/"/>
+    <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://it.linkem/common/core/lehf/ErrorConfiguration/xsd"/>
     <bpws:variables>
         <bpws:variable element="ns:ProcessContext"
             name="_processContext" sca-bpel:internal="true"/>
-        <bpws:variable element="ns0:ErrorConfigurations"
+        <bpws:variable element="ns2:ErrorConfigurations"
             name="SetErrorConfiguration-input" sca-bpel:internal="true"/>
-        <bpws:variable element="ns0:ErrorConfigurations"
+        <bpws:variable element="ns2:ErrorConfigurations"
             name="SetErrorConfiguration" sca-bpel:internal="true"/>
         <bpws:variable element="ns1:ActivityInput" name="StartLog-input" sca-bpel:internal="true"/>
         <bpws:variable element="ns1:ActivityInput" name="EndLog-input" sca-bpel:internal="true"/>
-        <bpws:variable element="ns0:ErrorConfigurations" name="Start"
+        <bpws:variable element="ns2:ErrorConfigurations" name="Start"
             sca-bpel:internal="true" tibex:parameter="in"/>
     </bpws:variables>
     <bpws:extensions>
@@ -606,6 +588,7 @@
                     inputVariable="SetErrorConfiguration-input"
                     name="SetErrorConfiguration"
                     outputVariable="SetErrorConfiguration"
+                    tibex:copyOf="Start"
                     tibex:xpdlId="134c3e6e-0745-4892-a7e4-3bc63c3709a8"
                     type="bw.internal.setSharedVariable" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                     <bpws:targets>
@@ -616,7 +599,7 @@
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding coercion=""
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://it.linkem/core/lehf/common/xsd/ErrorConfiguration/&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;Start&quot;/>&lt;xsl:template name=&quot;SetErrorConfiguration-input&quot; match=&quot;/&quot;>&lt;tns:ErrorConfigurations>&lt;xsl:copy-of select=&quot;$Start/tns:ErrorConfiguration&quot;/>&lt;/tns:ErrorConfigurations>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://it.linkem/common/core/lehf/xsd/ErrorConfiguration/&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;Start&quot;/>&lt;xsl:template name=&quot;SetErrorConfiguration-input&quot; match=&quot;/&quot;>&lt;xsl:copy-of select=&quot;$Start&quot;/>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:SetSharedVariable variableName="ErrorItems" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
                 </tibex:extActivity>
@@ -633,7 +616,7 @@
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns2=&quot;http://www.tibco.com/pe/WriteToLogActivitySchema&quot; xmlns:tib=&quot;http://www.tibco.com/bw/xslt/custom-functions&quot; xmlns:tns1=&quot;http://it.linkem/core/lehf/common/xsd/ErrorConfiguration/&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;Start&quot;/>&lt;xsl:template name=&quot;Log-input&quot; match=&quot;/&quot;>&lt;tns2:ActivityInput>&lt;message>&lt;xsl:value-of select=&quot;tib:render-xml($Start, false(),true())&quot;/>&lt;/message>&lt;/tns2:ActivityInput>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns2=&quot;http://www.tibco.com/pe/WriteToLogActivitySchema&quot; xmlns:tib=&quot;http://www.tibco.com/bw/xslt/custom-functions&quot; xmlns:tns1=&quot;http://it.linkem/common/core/lehf/xsd/ErrorConfiguration/&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;Start&quot;/>&lt;xsl:template name=&quot;Log-input&quot; match=&quot;/&quot;>&lt;tns2:ActivityInput>&lt;message>&lt;xsl:value-of select=&quot;tib:render-xml($Start, false(),true())&quot;/>&lt;/message>&lt;/tns2:ActivityInput>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:config>
                         <bwext:BWActivity

@@ -9,8 +9,9 @@
     xmlns:ns1="http://tns.tibco.com/bw/activity/parse/xsd/+4a34842c-ce71-47d4-a545-fa9e7ba034bb+output"
     xmlns:ns2="http://tns.tibco.com/bw/palette/internal/activityerror+bw.parse.parsedata"
     xmlns:ns3="http://www.example.com/namespaces/tns/1532675649195"
-    xmlns:ns4="http://it.linkem/core/lehf/common/xsd/ErrorConfiguration/"
-    xmlns:ns5="http://it.linkem/core/lehf/common/xsd/LoadErroConfiguration/input"
+    xmlns:ns4="http://it.linkem/common/core/lehf/xsd/ErrorConfiguration/"
+    xmlns:ns5="http://it.linkem/common/core/lehf/xsd/LoadErroConfiguration/input"
+    xmlns:ns6="http://it.linkem/common/core/lehf/ErrorConfiguration/xsd"
     xmlns:sca="http://docs.oasis-open.org/ns/opencsa/sca/200912"
     xmlns:sca-bpel="http://docs.oasis-open.org/ns/opencsa/sca-bpel/200801"
     xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"
@@ -215,9 +216,9 @@
         <schema
             targetNamespace="http://tns.tibco.com/bw/activity/parse/xsd/+4a34842c-ce71-47d4-a545-fa9e7ba034bb+output"
             xmlns="http://www.w3.org/2001/XMLSchema"
-            xmlns:Q1="http://it.linkem/core/lehf/common/xsd/ErrorConfiguration/" xmlns:tns="http://tns.tibco.com/bw/activity/parse/xsd/+4a34842c-ce71-47d4-a545-fa9e7ba034bb+output">
-            <import namespace="http://it.linkem/core/lehf/common/xsd/ErrorConfiguration/"/>
-            <import namespace="http://it.linkem/core/lehf/common/xsd/ErrorConfiguration/"/>
+            xmlns:Q1="http://it.linkem/common/core/lehf/ErrorConfiguration/xsd" xmlns:tns="http://tns.tibco.com/bw/activity/parse/xsd/+4a34842c-ce71-47d4-a545-fa9e7ba034bb+output">
+            <import namespace="http://it.linkem/common/core/lehf/ErrorConfiguration/xsd"/>
+            <import namespace="http://it.linkem/common/core/lehf/ErrorConfiguration/xsd"/>
             <complexType name="Output">
                 <sequence>
                     <element maxOccurs="1" minOccurs="1" name="Rows" type="tns:Rows"/>
@@ -251,7 +252,7 @@
         productVersion="2.5.2 V67 2020-03-05" scalable="true"
         singleton="true" stateless="true" type="IT"/>
     <tibex:ProcessInterface context=""
-        input="{http://it.linkem/core/lehf/common/xsd/LoadErroConfiguration/input}Input" output="{http://it.linkem/core/lehf/common/xsd/ErrorConfiguration/}ErrorConfigurations"/>
+        input="{http://it.linkem/common/core/lehf/ErrorConfiguration/xsd}InputCSVstring" output="{http://it.linkem/common/core/lehf/ErrorConfiguration/xsd}ErrorConfigurations"/>
     <tibex:ProcessTemplateConfigurations/>
     <notation:Diagram measurementUnit="Pixel" type="BWProcess"
         xmlns:bwnotation="http://tns.tibco.com/bw/runtime/BWNotation"
@@ -393,7 +394,7 @@
                                     <element href="//0/@process/@activity/@activity/@activities.2"/>
                                     <layoutConstraint
                                     height="40" width="40"
-                                    x="167"
+                                    x="185"
                                     xsi:type="notation:Bounds" y="116"/>
                                     </children>
                                     <children
@@ -532,14 +533,15 @@
         <tibex:namespaceItem
             namespace="http://www.w3.org/2001/XMLSchema" prefix="xsd"/>
         <tibex:namespaceItem
-            namespace="http://it.linkem/core/lehf/common/xsd/ErrorConfiguration/" prefix="tns2"/>
+            namespace="http://it.linkem/common/core/lehf/xsd/ErrorConfiguration/" prefix="tns2"/>
         <tibex:namespaceItem
-            namespace="http://it.linkem/core/lehf/common/xsd/parsecsv/ErrorConfiguration" prefix="ns"/>
+            namespace="http://it.linkem/common/core/lehf/xsd/parsecsv/ErrorConfiguration" prefix="ns"/>
         <tibex:namespaceItem
-            namespace="http://it.linkem/core/lehf/common/xsd/LoadErroConfiguration/input" prefix="tns3"/>
+            namespace="http://it.linkem/common/core/lehf/xsd/LoadErroConfiguration/input" prefix="tns3"/>
+        <tibex:namespaceItem
+            namespace="http://it.linkem/common/core/lehf/ErrorConfiguration/xsd" prefix="tns4"/>
     </tibex:NamespaceRegistry>
-    <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://it.linkem/core/lehf/common/xsd/ErrorConfiguration/"/>
-    <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://it.linkem/core/lehf/common/xsd/LoadErroConfiguration/input"/>
+    <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://it.linkem/common/core/lehf/ErrorConfiguration/xsd"/>
     <bpws:variables>
         <bpws:variable element="ns:ProcessContext"
             name="_processContext" sca-bpel:internal="true"/>
@@ -556,9 +558,9 @@
         <bpws:variable element="ns2:ActivityErrorData"
             name="_error_ParseCSVstring" sca-bpel:internal="true"/>
         <bpws:variable element="ns:ErrorReport" name="_error" sca-bpel:internal="true"/>
-        <bpws:variable element="ns4:ErrorConfigurations"
+        <bpws:variable element="ns6:ErrorConfigurations"
             name="End-input" sca-bpel:internal="true" tibex:parameter="out"/>
-        <bpws:variable element="ns5:Input" name="Start"
+        <bpws:variable element="ns6:InputCSVstring" name="Start"
             sca-bpel:internal="true" tibex:parameter="in"/>
     </bpws:variables>
     <bpws:extensions>
@@ -597,8 +599,10 @@
                     </bpws:targets>
                     <tibex:inputBindings>
                         <tibex:inputBinding
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns2=&quot;http://it.linkem/core/lehf/common/xsd/ErrorConfiguration/&quot; xmlns:ns=&quot;http://it.linkem/core/lehf/common/xsd/parsecsv/ErrorConfiguration&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;ParseCSVstring&quot;/>&lt;xsl:template name=&quot;End-input&quot; match=&quot;/&quot;>&lt;tns2:ErrorConfigurations>&lt;xsl:copy-of select=&quot;$ParseCSVstring/Rows/tns2:ErrorConfiguration&quot;/>&lt;/tns2:ErrorConfigurations>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns4=&quot;http://it.linkem/common/core/lehf/ErrorConfiguration/xsd&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;ParseCSVstring&quot;/>&lt;xsl:template name=&quot;End-input&quot; match=&quot;/&quot;>&lt;tns4:ErrorConfigurations>&lt;xsl:copy-of select=&quot;$ParseCSVstring/Rows/tns4:ErrorConfiguration&quot;/>&lt;/tns4:ErrorConfigurations>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
+                    <tibex:inputBinding
+                        expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">&lt;?xml version="1.0" encoding="UTF-8"?&gt; &lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:tns="http://it.linkem/common/core/lehf/ErrorConfiguration/xsd" version="2.0"&gt; &lt;xsl:template name="End-input" match="/"&gt; &lt;tns:ErrorConfigurations/&gt;&lt;/xsl:template&gt; &lt;/xsl:stylesheet&gt;</tibex:inputBinding>
                     <tibex:config>
                         <bwext:BWActivity
                             activityTypeID="bw.internal.end"
@@ -629,7 +633,7 @@
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://tns.tibco.com/bw/activity/parse/xsd/+4a34842c-ce71-47d4-a545-fa9e7ba034bb+input&quot; xmlns:tns3=&quot;http://it.linkem/core/lehf/common/xsd/LoadErroConfiguration/input&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;Start&quot;/>&lt;xsl:template name=&quot;ParseCSVstring-input&quot; match=&quot;/&quot;>&lt;tns:Input>&lt;text>&lt;xsl:value-of select=&quot;substring-after($Start/tns3:InputCSV , 'BSLProcess&amp;#xD;&amp;#xA;' )&quot;/>&lt;/text>&lt;noOfRecords>&lt;xsl:value-of select=&quot;-1&quot;/>&lt;/noOfRecords>&lt;/tns:Input>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://tns.tibco.com/bw/activity/parse/xsd/+4a34842c-ce71-47d4-a545-fa9e7ba034bb+input&quot; xmlns:tns4=&quot;http://it.linkem/common/core/lehf/ErrorConfiguration/xsd&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;Start&quot;/>&#xa;    &lt;xsl:template name=&quot;ParseCSVstring-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns:Input>&#xa;            &lt;text>&#xa;                &lt;xsl:value-of select=&quot;substring-after($Start/tns4:InputCSV , 'BSLProcess&amp;#xD;&amp;#xA;' )&quot;/>&#xa;            &lt;/text>&#xa;            &lt;noOfRecords>&#xa;                &lt;xsl:value-of select=&quot;-1&quot;/>&#xa;            &lt;/noOfRecords>&#xa;        &lt;/tns:Input>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:config>
                         <bwext:BWActivity

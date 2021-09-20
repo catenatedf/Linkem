@@ -10,45 +10,12 @@
     xmlns:ns2="http://www.tibco.com/pe/WriteToLogActivitySchema"
     xmlns:ns3="http://www.example.org/Elemento2"
     xmlns:ns4="http://it.txg.b2c.logging.sh/cmf/AuditTypes"
-    xmlns:ns5="http://it.linkem/core/lehf/common/AuditTypes/0100"
+    xmlns:ns5="http://it.linkem/common/core/lehf/AuditTypes/xsd"
     xmlns:sca="http://docs.oasis-open.org/ns/opencsa/sca/200912"
     xmlns:sca-bpel="http://docs.oasis-open.org/ns/opencsa/sca-bpel/200801"
     xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"
     xmlns:tibprop="http://ns.tibco.com/bw/property"
     xmlns:tns="http://www.example.org/MapperLogData" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-    <tibex:VariableDescriptor type="MemorySaving">
-        <task name="End">
-            <endingVariables>
-                <variable>SetLogData</variable>
-                <variable>Start</variable>
-            </endingVariables>
-        </task>
-        <task name="LogDebug">
-            <endingVariables>
-                <variable>LogDebug-input</variable>
-            </endingVariables>
-        </task>
-        <task name="SetLogData">
-            <endingVariables>
-                <variable>SetLogData-input</variable>
-            </endingVariables>
-        </task>
-        <task name="LogInfo">
-            <endingVariables>
-                <variable>LogInfo-input</variable>
-            </endingVariables>
-        </task>
-        <task name="LogWarning">
-            <endingVariables>
-                <variable>LogWarning-input</variable>
-            </endingVariables>
-        </task>
-        <task name="LogError">
-            <endingVariables>
-                <variable>LogError-input</variable>
-            </endingVariables>
-        </task>
-    </tibex:VariableDescriptor>
     <tibex:Types>
         <xs:schema attributeFormDefault="unqualified"
             elementFormDefault="qualified"
@@ -236,7 +203,7 @@
         productVersion="6.4.2 V32 2017-11-05" scalable="true"
         singleton="true" stateless="true" type="IT"/>
     <tibex:ProcessInterface context=""
-        input="{http://it.linkem/core/lehf/common/AuditTypes/0100}LogAudit" output=""/>
+        input="{http://it.linkem/common/core/lehf/AuditTypes/xsd}LogAudit" output=""/>
     <tibex:ProcessTemplateConfigurations/>
     <notation:Diagram measurementUnit="Pixel" type="BWProcess"
         xmlns:bwnotation="http://tns.tibco.com/bw/runtime/BWNotation"
@@ -727,7 +694,7 @@
         <tibex:namespaceItem
             namespace="http://www.example.org/MapperLogData" prefix="tns3"/>
     </tibex:NamespaceRegistry>
-    <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://it.linkem/core/lehf/common/AuditTypes/0100"/>
+    <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://it.linkem/common/core/lehf/AuditTypes/xsd"/>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.example.org/MapperLogData"/>
     <bpws:variables>
         <bpws:variable element="ns:ProcessContext"
