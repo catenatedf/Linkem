@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: SharedAudit Module
 Bundle-SymbolicName: it.linkem.common.core.lehf.sh
-Bundle-Version: 1.1.14.qualifier
+Bundle-Version: 1.0.0.qualifier
 Bundle-Vendor: TIBCO Software Inc.
 TIBCO-BW-ConfigProfile: META-INF/default.substvar
 TIBCO-BW-SharedModule: META-INF/module.bwm
@@ -17,11 +17,11 @@ Require-Capability: com.tibco.bw.model; filter:="(name=bwext)",
  com.tibco.bw.sharedresource.model; filter:="(name=bw.dataformat)",
  com.tibco.bw.sharedresource.model; filter:="(name=bw.httpclient)"
 TIBCO-BW-ModuleSharedVariables: META-INF/module.msv
-Provide-Capability: com.tibco.bw.module; name="it.linkem.common.core.lehf.sh"; version:Version="1.1.14",
+Provide-Capability: com.tibco.bw.module; name="it.linkem.common.core.lehf.sh"; version:Version="1.0.0",
  com.tibco.bw.schemas; ns="http://it.linkem/common/core/lehf/AuditTypes/xsd",
  com.tibco.bw.schemas; ns="http://it.linkem/common/core/lehf/ErrorConfiguration/xsd",
- com.tibco.bw.schemas; ns="http://it.linkem/core/lehf/InternalInterface_DynamicProperties/0100",
- com.tibco.bw.schemas; ns="http://www.example.org/MapperLogData",
- com.tibco.bw.processes; name="sharedaudit",
- com.tibco.bw.resources; name="sharedaudit"
+ com.tibco.bw.schemas; ns="http://it.linkem/common/core/lehf/InternalInterface_DynamicProperties/xsd",
+ com.tibco.bw.schemas; ns="http://it.linkem/common/core/lehf/MapLogData/xsd",
+ com.tibco.bw.processes; name="it.linkem.common.core.lehf.sh",
+ com.tibco.bw.resources; name="DataFormat"
 TIBCO-BW-Version: 6.4.2 V32 2017-11-05

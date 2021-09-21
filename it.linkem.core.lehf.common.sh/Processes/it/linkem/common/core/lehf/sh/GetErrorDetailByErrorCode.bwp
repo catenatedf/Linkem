@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <bpws:process exitOnStandardFault="no"
-    name="sharedaudit.SetLoggerParams_ByDynamicProperties"
+    name="it.linkem.common.core.lehf.sh.GetErrorDetailByErrorCode"
     suppressJoinFailure="yes"
-    targetNamespace="http://xmlns.example.com/20200723131157"
+    targetNamespace="http://xmlns.example.com/20200603183411"
     xmlns:bpws="http://docs.oasis-open.org/wsbpel/2.0/process/executable"
     xmlns:info="http://www.tibco.com/bw/process/info"
     xmlns:ns="http://www.tibco.com/pe/EngineTypes"
-    xmlns:ns0="http://it.linkem/core/lehf/InternalInterface_DynamicProperties/0100"
-    xmlns:ns1="http://it.linkem/common/core/lehf/loggerType/0100"
+    xmlns:ns0="http://www.example.com/namespaces/tns/1591202093325"
+    xmlns:ns1="http://it.linkem/common/core/lehf/xsd/ErrorConfiguration/"
+    xmlns:ns2="http://it.linkem/common/core/lehf/xsd/parsecsv/ErrorConfiguration"
+    xmlns:ns3="http://it.linkem/common/core/lehf/AuditTypes/xsd"
+    xmlns:ns4="http://it.linkem/common/core/lehf/ErrorConfiguration/xsd"
     xmlns:sca="http://docs.oasis-open.org/ns/opencsa/sca/200912"
     xmlns:sca-bpel="http://docs.oasis-open.org/ns/opencsa/sca-bpel/200801"
     xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"
@@ -174,30 +177,26 @@
             <element name="DuplicateKeyException" type="tns:DuplicateKeyExceptionType"/>
         </schema>
     </tibex:Types>
-    <tibex:ProcessInfo callable="true" createdBy="Dario"
-        createdOn="Thu Jul 23 13:11:57 CEST 2020" description=""
+    <tibex:ProcessInfo callable="true" createdBy="Stefano"
+        createdOn="Wed Jun 03 18:34:11 CEST 2020" description=""
         extraErrorVars="true" modifiers="public"
-        productVersion="2.5.3 V26 2020-05-15" scalable="true"
+        productVersion="2.5.2 V67 2020-03-05" scalable="true"
         singleton="true" stateless="true" type="IT"/>
     <tibex:ProcessInterface context=""
-        input="{http://it.linkem/core/lehf/InternalInterface_DynamicProperties/0100}InputInterface_SetLoggerParams_ByDynamicProperties" output=""/>
+        input="{http://it.linkem/common/core/lehf/AuditTypes/xsd}auditErrorElement" output="{http://it.linkem/common/core/lehf/ErrorConfiguration/xsd}ErrorConfiguration"/>
     <tibex:ProcessTemplateConfigurations/>
     <notation:Diagram measurementUnit="Pixel" type="BWProcess"
         xmlns:bwnotation="http://tns.tibco.com/bw/runtime/BWNotation"
         xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         <children type="2001">
-            <children type="5001">
-                <element href="//0/@process"/>
-            </children>
+            <children type="5001"/>
             <children type="3002">
                 <styles xsi:type="notation:SortingStyle"/>
                 <styles xsi:type="notation:FilteringStyle"/>
-                <element href="//0/@process"/>
             </children>
             <children type="3003">
                 <styles xsi:type="notation:SortingStyle"/>
                 <styles xsi:type="notation:FilteringStyle"/>
-                <element href="//0/@process"/>
             </children>
             <children type="3004">
                 <children type="4018">
@@ -211,28 +210,24 @@
                                     <styles
                                     fontName="Segoe UI"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.0"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles
                                     fontName="Segoe UI"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.0"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles
                                     fontName="Segoe UI"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.0"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles
                                     fontName="Segoe UI"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.0"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <styles fontName="Segoe UI"
@@ -242,36 +237,32 @@
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.0"/>
-                                    <layoutConstraint x="17"
-                                    xsi:type="notation:Bounds" y="88"/>
+                                    <layoutConstraint x="4"
+                                    xsi:type="notation:Bounds" y="130"/>
                                     </children>
                                     <children type="4002">
                                     <children type="4017">
                                     <styles
                                     fontName="Segoe UI"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.1"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles
                                     fontName="Segoe UI"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.1"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles
                                     fontName="Segoe UI"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.1"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles
                                     fontName="Segoe UI"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.1"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <styles fontName="Segoe UI"
@@ -281,10 +272,10 @@
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.1"/>
-                                    <layoutConstraint x="533"
-                                    xsi:type="notation:Bounds" y="88"/>
+                                    <layoutConstraint x="674"
+                                    xsi:type="notation:Bounds" y="130"/>
                                     </children>
-                                    <children type="4002">
+                                    <children type="4002 bw.internal.getSharedVariable">
                                     <children type="4017">
                                     <styles
                                     fontName="Segoe UI"
@@ -317,10 +308,11 @@
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.2"/>
                                     <layoutConstraint
-                                    width="180" x="159"
-                                    xsi:type="notation:Bounds" y="88"/>
+                                    height="40" width="40"
+                                    x="199"
+                                    xsi:type="notation:Bounds" y="130"/>
                                     </children>
-                                    <children type="4002">
+                                    <children type="4002 bw.generalactivities.mapper">
                                     <children type="4017">
                                     <styles
                                     fontName="Segoe UI"
@@ -352,8 +344,31 @@
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.3"/>
-                                    <layoutConstraint x="353"
-                                    xsi:type="notation:Bounds" y="88"/>
+                                    <layoutConstraint
+                                    height="40" width="161"
+                                    x="407"
+                                    xsi:type="notation:Bounds" y="130"/>
+                                    </children>
+                                    <children
+                                    description="Error Type and Error Message are set automatically from the error config variable.&#xd;&#xa;If error Code is not present in the error config variable, the error type and messages will be taken from the start activity.&#xd;&#xa;In case the start does not contains errorType and errorMessage, a standard error message and type is set.&#xd;&#xa;"
+                                    fillColor="13369343"
+                                    fontName="Segoe UI"
+                                    lineColor="6737151"
+                                    lineWidth="1"
+                                    transparency="0" type="Note" xsi:type="notation:Shape">
+                                    <children type="DiagramName" xsi:type="notation:BasicDecorationNode">
+                                    <element xsi:nil="true"/>
+                                    </children>
+                                    <children type="Description" xsi:type="notation:BasicDecorationNode">
+                                    <element xsi:nil="true"/>
+                                    </children>
+                                    <styles xsi:type="notation:TextStyle"/>
+                                    <styles xsi:type="notation:LineTypeStyle"/>
+                                    <element xsi:nil="true"/>
+                                    <layoutConstraint
+                                    height="210" width="395"
+                                    x="365"
+                                    xsi:type="notation:Bounds" y="211"/>
                                     </children>
                                     <styles xsi:type="notation:DrawerStyle"/>
                                     <styles xsi:type="notation:SortingStyle"/>
@@ -367,18 +382,17 @@
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <styles xsi:type="bwnotation:ResizingStyle"/>
                                     <element href="//0/@process/@activity/@activity"/>
-                                    <layoutConstraint height="252"
-                                    width="666" xsi:type="notation:Bounds"/>
+                                    <layoutConstraint height="431"
+                                    width="807" xsi:type="notation:Bounds"/>
                                 </children>
                                 <styles xsi:type="notation:SortingStyle"/>
                                 <styles xsi:type="notation:FilteringStyle"/>
-                                <element href="//0/@process/@activity"/>
                             </children>
                             <styles fontName="Segoe UI" lineColor="0" xsi:type="notation:ShapeStyle"/>
                             <styles xsi:type="bwnotation:BackgroundStyle"/>
                             <styles xsi:type="bwnotation:ResizingStyle"/>
                             <element href="//0/@process/@activity"/>
-                            <layoutConstraint height="384" width="669" xsi:type="notation:Bounds"/>
+                            <layoutConstraint height="431" width="810" xsi:type="notation:Bounds"/>
                         </children>
                         <styles xsi:type="notation:SortingStyle"/>
                         <styles xsi:type="notation:FilteringStyle"/>
@@ -388,7 +402,7 @@
                     <styles xsi:type="bwnotation:BackgroundStyle"/>
                     <styles xsi:type="bwnotation:ResizingStyle"/>
                     <element href="//0/@process/@activity"/>
-                    <layoutConstraint height="408" width="669" x="1"
+                    <layoutConstraint height="455" width="810" x="1"
                         xsi:type="notation:Bounds" y="1"/>
                 </children>
                 <styles xsi:type="notation:SortingStyle"/>
@@ -397,7 +411,7 @@
             </children>
             <styles fontName="Segoe UI" lineColor="0" xsi:type="notation:ShapeStyle"/>
             <element href="//0/@process"/>
-            <layoutConstraint height="328" width="1011" xsi:type="notation:Bounds"/>
+            <layoutConstraint height="542" width="1152" xsi:type="notation:Bounds"/>
         </children>
         <styles xsi:type="notation:DiagramStyle"/>
         <element href="//0"/>
@@ -426,43 +440,45 @@
         <edges
             source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.3"
             target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.1" type="4006">
-            <children type="6002">
+            <children type="6002" visible="false">
                 <layoutConstraint xsi:type="notation:Location" y="40"/>
             </children>
             <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
             <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
             <element href="//0/@process/@activity/@activity/@links/@children.2"/>
-            <bendpoints points="[25, 0, -83, 0]$[84, 0, -24, 0]" xsi:type="notation:RelativeBendpoints"/>
+            <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
     </notation:Diagram>
     <tibex:NamespaceRegistry enabled="true">
         <tibex:namespaceItem
-            namespace="http://it.linkem/common/core/lehf/loggerType/0100" prefix="tns"/>
+            namespace="http://it.linkem/common/core/lehf/xsd/ErrorConfiguration/" prefix="ns"/>
         <tibex:namespaceItem
-            namespace="http://it.linkem/core/lehf/InternalInterface_DynamicProperties/0100" prefix="tns1"/>
+            namespace="http://it.linkem/common/core/lehf/xsd/parsecsv/ErrorConfiguration" prefix="tns"/>
         <tibex:namespaceItem
-            namespace="http://www.tibco.com/bw/xpath/bw-custom-functions" prefix="bw"/>
+            namespace="http://www.example.com/namespaces/tns/1591202093325" prefix="tns1"/>
         <tibex:namespaceItem
-            namespace="http://www.tibco.com/bw/xslt/custom-functions" prefix="tib"/>
+            namespace="http://www.w3.org/2001/XMLSchema-instance" prefix="xsi"/>
         <tibex:namespaceItem
-            namespace="http://www.w3.org/2001/XMLSchema" prefix="xsd"/>
-        <tibex:namespaceItem
-            namespace="http://www.tibco.com/pe/WriteToLogActivitySchema" prefix="tns2"/>
+            namespace="http://it.linkem/common/core/lehf/ErrorConfiguration/xsd" prefix="tns2"/>
     </tibex:NamespaceRegistry>
-    <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://it.linkem/core/lehf/InternalInterface_DynamicProperties/0100"/>
+    <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://it.linkem/common/core/lehf/ErrorConfiguration/xsd"/>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://it.linkem/common/core/lehf/AuditTypes/xsd"/>
     <bpws:variables>
         <bpws:variable element="ns:ProcessContext"
             name="_processContext" sca-bpel:internal="true"/>
-        <bpws:variable
-            element="ns0:InputInterface_SetLoggerParams_ByDynamicProperties"
-            name="Start" sca-bpel:internal="true" tibex:parameter="in"/>
-        <bpws:variable element="ns1:loggerParams"
-            name="MapToSetLoggerParams-input" sca-bpel:internal="true"/>
-        <bpws:variable element="ns1:loggerParams"
-            name="MapToSetLoggerParams" sca-bpel:internal="true"/>
-        <bpws:variable name="SetLoggerParams-input" sca-bpel:internal="true"/>
-        <bpws:variable name="SetLoggerParams" sca-bpel:internal="true"/>
+        <bpws:variable element="ns3:auditErrorElement" name="Start"
+            sca-bpel:internal="true" tibex:parameter="in"/>
+        <bpws:variable element="ns4:ErrorConfigurations"
+            name="GetErrorConfig" sca-bpel:internal="true"/>
+        <bpws:variable element="ns4:ErrorConfiguration" name="End-input"
+            sca-bpel:internal="true" tibex:parameter="out"/>
+        <bpws:variable element="ns4:ErrorConfiguration"
+            name="RetrieveErrorDetails-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns4:ErrorConfiguration"
+            name="RetrieveErrorDetails" sca-bpel:internal="true"/>
+        <bpws:variable name="SystemException" sca-bpel:hotUpdate="false"
+            sca-bpel:privateProperty="true" sca-bpel:property="yes"
+            tibex:propertySource="/it.linkem.common.core.lehf.sh/Logging/System_Exception" type="xsd:string"/>
     </bpws:variables>
     <bpws:extensions>
         <bpws:extension mustUnderstand="no" namespace="http://www.eclipse.org/gmf/runtime/1.0.2/notation"/>
@@ -475,18 +491,18 @@
     <bpws:scope name="scope">
         <bpws:flow name="flow">
             <bpws:links>
-                <bpws:link name="StartToMapper" tibex:linkType="SUCCESS"/>
-                <bpws:link
-                    name="MapToSetLoggerParamsToSetSharedVariable" tibex:linkType="SUCCESS"/>
-                <bpws:link name="SetLoggerParamsToEnd" tibex:linkType="SUCCESS"/>
+                <bpws:link name="StartToEnd" tibex:linkType="SUCCESS"/>
+                <bpws:link name="GetSharedVariableToEnd" tibex:linkType="SUCCESS"/>
+                <bpws:link name="RetriveErrorDetailsToEnd"
+                    tibex:label="success" tibex:linkType="SUCCESS"/>
             </bpws:links>
             <bpws:extensionActivity>
                 <tibex:receiveEvent createInstance="yes"
                     eventTimeout="0" name="Start"
-                    tibex:xpdlId="d66c57b2-bd17-4764-ad5f-57cbc7dbd54c"
+                    tibex:xpdlId="08e51b9e-0d92-4bf3-8b55-e71c7d0856b5"
                     variable="Start" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                     <bpws:sources>
-                        <bpws:source linkName="StartToMapper"/>
+                        <bpws:source linkName="StartToEnd"/>
                     </bpws:sources>
                     <tibex:eventSource>
                         <tibex:StartEvent xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
@@ -494,11 +510,16 @@
                 </tibex:receiveEvent>
             </bpws:extensionActivity>
             <bpws:extensionActivity>
-                <tibex:activityExtension name="End"
-                    tibex:xpdlId="870a27e8-e771-4014-99ce-ea76bce75da8" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                <tibex:activityExtension inputVariable="End-input"
+                    name="End" tibex:copyOf="RetrieveErrorDetails"
+                    tibex:xpdlId="f2af4de7-b771-4348-8dc9-453634342ae1" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                     <bpws:targets>
-                        <bpws:target linkName="SetLoggerParamsToEnd"/>
+                        <bpws:target linkName="RetriveErrorDetailsToEnd"/>
                     </bpws:targets>
+                    <tibex:inputBindings>
+                        <tibex:inputBinding
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;RetrieveErrorDetails&quot;/>&lt;xsl:template name=&quot;End-input&quot; match=&quot;/&quot;>&lt;xsl:copy-of select=&quot;$RetrieveErrorDetails&quot;/>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                    </tibex:inputBindings>
                     <tibex:config>
                         <bwext:BWActivity
                             activityTypeID="bw.internal.end"
@@ -516,20 +537,36 @@
                 </tibex:activityExtension>
             </bpws:extensionActivity>
             <bpws:extensionActivity>
-                <tibex:activityExtension
-                    inputVariable="MapToSetLoggerParams-input"
-                    name="MapToSetLoggerParams"
-                    outputVariable="MapToSetLoggerParams"
-                    tibex:xpdlId="29b64c4c-0cb2-40ab-960b-f84470848716" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                <tibex:extActivity name="GetErrorConfig"
+                    outputVariable="GetErrorConfig"
+                    tibex:xpdlId="359fbd2d-875a-46d1-b567-b645341302c3"
+                    type="bw.internal.getSharedVariable" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                     <bpws:targets>
-                        <bpws:target linkName="StartToMapper"/>
+                        <bpws:target linkName="StartToEnd"/>
                     </bpws:targets>
                     <bpws:sources>
-                        <bpws:source linkName="MapToSetLoggerParamsToSetSharedVariable"/>
+                        <bpws:source linkName="GetSharedVariableToEnd"/>
+                    </bpws:sources>
+                    <tibex:GetSharedVariable variableName="ErrorItems" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
+                </tibex:extActivity>
+            </bpws:extensionActivity>
+            <bpws:extensionActivity>
+                <tibex:activityExtension
+                    inputVariable="RetrieveErrorDetails-input"
+                    name="RetrieveErrorDetails"
+                    outputVariable="RetrieveErrorDetails"
+                    tibex:xpdlId="473c3faa-7a73-4129-86d6-e61cc2913a69" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                    <bpws:targets>
+                        <bpws:target linkName="GetSharedVariableToEnd"/>
+                    </bpws:targets>
+                    <bpws:sources>
+                        <bpws:source linkName="RetriveErrorDetailsToEnd">
+                            <tibex:DesignExpression/>
+                        </bpws:source>
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://it.linkem/common/core/lehf/loggerType/0100&quot; xmlns:tns1=&quot;http://it.linkem/core/lehf/InternalInterface_DynamicProperties/0100&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:bw=&quot;http://www.tibco.com/bw/xpath/bw-custom-functions&quot; xmlns:tib=&quot;http://www.tibco.com/bw/xslt/custom-functions&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;Start&quot;/>&#xa;    &lt;xsl:template name=&quot;MapToSetLoggerParams-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns:loggerParams>&#xa;            &lt;xsl:choose>&#xa;                &lt;xsl:when test=&quot;exists($Start/tns1:LoggerParamsToOverride/tns1:APPLICATION_NAME)&quot;>&#xa;                    &lt;APPLICATION_NAME>&#xa;                        &lt;xsl:value-of select=&quot;$Start/tns1:LoggerParamsToOverride/tns1:APPLICATION_NAME&quot;/>&#xa;                    &lt;/APPLICATION_NAME>&#xa;                &lt;/xsl:when>&#xa;                &lt;xsl:when test=&quot;(exists($Start/tns1:DynamicProperties/tns1:Property[tns1:Name=&amp;quot;APPLICATION_NAME&amp;quot;]/tns1:Value)) and (not(exists($Start/tns1:LoggerParamsToOverride/tns1:APPLICATION_NAME)))&quot;>&#xa;                    &lt;APPLICATION_NAME>&#xa;                        &lt;xsl:value-of select=&quot;$Start/tns1:DynamicProperties/tns1:Property[tns1:Name=&amp;quot;APPLICATION_NAME&amp;quot;]/tns1:Value&quot;/>&#xa;                    &lt;/APPLICATION_NAME>&#xa;                &lt;/xsl:when>&#xa;                &lt;xsl:otherwise>&#xa;                    &lt;APPLICATION_NAME>&#xa;                        &lt;xsl:value-of select=&quot;bw:getModuleProperty(&amp;quot;BW.APPLICATION.NAME&amp;quot;)&quot;/>&#xa;                    &lt;/APPLICATION_NAME>&#xa;                &lt;/xsl:otherwise>&#xa;            &lt;/xsl:choose>&#xa;            &lt;xsl:choose>&#xa;                &lt;xsl:when test=&quot;exists($Start/tns1:LoggerParamsToOverride/tns1:SOURCESYSTEM)&quot;>&#xa;                    &lt;xsl:if test=&quot;$Start/tns1:LoggerParamsToOverride/tns1:SOURCESYSTEM&quot;>&#xa;                        &lt;SOURCESYSTEM>&#xa;                            &lt;xsl:value-of select=&quot;$Start/tns1:LoggerParamsToOverride/tns1:SOURCESYSTEM&quot;/>&#xa;                        &lt;/SOURCESYSTEM>&#xa;                    &lt;/xsl:if>&#xa;                &lt;/xsl:when>&#xa;                &lt;xsl:when test=&quot;(exists($Start/tns1:DynamicProperties/tns1:Property[tns1:Name=&amp;quot;SOURCESYSTEM&amp;quot;]/tns1:Value)) and (not(exists($Start/tns1:LoggerParamsToOverride/tns1:SOURCESYSTEM)))&quot;>&#xa;                    &lt;xsl:if test=&quot;$Start/tns1:DynamicProperties/tns1:Property[tns1:Name=&amp;quot;SOURCESYSTEM&amp;quot;]/tns1:Value&quot;>&#xa;                        &lt;SOURCESYSTEM>&#xa;                            &lt;xsl:value-of select=&quot;$Start/tns1:DynamicProperties/tns1:Property[tns1:Name=&amp;quot;SOURCESYSTEM&amp;quot;]/tns1:Value&quot;/>&#xa;                        &lt;/SOURCESYSTEM>&#xa;                    &lt;/xsl:if>&#xa;                &lt;/xsl:when>&#xa;                &lt;xsl:otherwise>&#xa;                    &lt;SOURCESYSTEM>&#xa;                        &lt;xsl:value-of select=&quot;&amp;quot;&amp;quot;&quot;/>&#xa;                    &lt;/SOURCESYSTEM>&#xa;                &lt;/xsl:otherwise>&#xa;            &lt;/xsl:choose>&#xa;            &lt;xsl:choose>&#xa;                &lt;xsl:when test=&quot;exists($Start/tns1:LoggerParamsToOverride/tns1:STARTTIMESTAMP)&quot;>&#xa;                    &lt;STARTTIMESTAMP>&#xa;                        &lt;xsl:value-of select=&quot;$Start/tns1:LoggerParamsToOverride/tns1:STARTTIMESTAMP&quot;/>&#xa;                    &lt;/STARTTIMESTAMP>&#xa;                &lt;/xsl:when>&#xa;                &lt;xsl:when test=&quot;(exists($Start/tns1:DynamicProperties/tns1:Property[tns1:Name=&amp;quot;STARTTIMESTAMP&amp;quot;]/tns1:Value)) and (not(exists($Start/tns1:LoggerParamsToOverride/tns1:STARTTIMESTAMP)))&quot;>&#xa;                    &lt;STARTTIMESTAMP>&#xa;                        &lt;xsl:value-of select=&quot;xsd:dateTime($Start/tns1:DynamicProperties/tns1:Property[tns1:Name=&amp;quot;STARTTIMESTAMP&amp;quot;]/tns1:Value)&quot;/>&#xa;                    &lt;/STARTTIMESTAMP>&#xa;                &lt;/xsl:when>&#xa;                &lt;xsl:otherwise>&#xa;                    &lt;STARTTIMESTAMP>&#xa;                        &lt;xsl:value-of select=&quot;current-dateTime()&quot;/>&#xa;                    &lt;/STARTTIMESTAMP>&#xa;                &lt;/xsl:otherwise>&#xa;            &lt;/xsl:choose>&#xa;            &lt;xsl:choose>&#xa;                &lt;xsl:when test=&quot;exists($Start/tns1:LoggerParamsToOverride/tns1:SEVERITY)&quot;>&#xa;                    &lt;SEVERITY>&#xa;                        &lt;xsl:value-of select=&quot;$Start/tns1:LoggerParamsToOverride/tns1:SEVERITY&quot;/>&#xa;                    &lt;/SEVERITY>&#xa;                &lt;/xsl:when>&#xa;                &lt;xsl:when test=&quot;(exists($Start/tns1:DynamicProperties/tns1:Property[tns1:Name=&amp;quot;SEVERITY&amp;quot;]/tns1:Value)) and (not(exists($Start/tns1:LoggerParamsToOverride/tns1:SEVERITY)))&quot;>&#xa;                    &lt;SEVERITY>&#xa;                        &lt;xsl:value-of select=&quot;$Start/tns1:DynamicProperties/tns1:Property[tns1:Name=&amp;quot;SEVERITY&amp;quot;]/tns1:Value&quot;/>&#xa;                    &lt;/SEVERITY>&#xa;                &lt;/xsl:when>&#xa;                &lt;xsl:otherwise>&#xa;                    &lt;SEVERITY>&#xa;                        &lt;xsl:value-of select=&quot;&amp;quot;&amp;quot;&quot;/>&#xa;                    &lt;/SEVERITY>&#xa;                &lt;/xsl:otherwise>&#xa;            &lt;/xsl:choose>&#xa;            &lt;xsl:choose>&#xa;                &lt;xsl:when test=&quot;exists($Start/tns1:LoggerParamsToOverride/tns1:TRACKID)&quot;>&#xa;                    &lt;TRACKID>&#xa;                        &lt;xsl:value-of select=&quot;$Start/tns1:LoggerParamsToOverride/tns1:TRACKID&quot;/>&#xa;                    &lt;/TRACKID>&#xa;                &lt;/xsl:when>&#xa;                &lt;xsl:when test=&quot;exists(($Start/tns1:DynamicProperties/tns1:Property[tns1:Name=&amp;quot;TRACKID&amp;quot;]/tns1:Value)) and (not(exists($Start/tns1:LoggerParamsToOverride/tns1:TRACKID)))&quot;>&#xa;                    &lt;TRACKID>&#xa;                        &lt;xsl:value-of select=&quot;$Start/tns1:DynamicProperties/tns1:Property[tns1:Name=&amp;quot;TRACKID&amp;quot;]/tns1:Value&quot;/>&#xa;                    &lt;/TRACKID>&#xa;                &lt;/xsl:when>&#xa;                &lt;xsl:otherwise>&#xa;                    &lt;TRACKID>&#xa;                        &lt;xsl:value-of select=&quot;tib:uuid()&quot;/>&#xa;                    &lt;/TRACKID>&#xa;                &lt;/xsl:otherwise>&#xa;            &lt;/xsl:choose>&#xa;            &lt;xsl:choose>&#xa;                &lt;xsl:when test=&quot;exists($Start/tns1:LoggerParamsToOverride/tns1:BUSINESSKEY)&quot;>&#xa;                    &lt;BUSINESSKEY>&#xa;                        &lt;xsl:value-of select=&quot;$Start/tns1:LoggerParamsToOverride/tns1:BUSINESSKEY&quot;/>&#xa;                    &lt;/BUSINESSKEY>&#xa;                &lt;/xsl:when>&#xa;                &lt;xsl:when test=&quot;(exists($Start/tns1:DynamicProperties/tns1:Property[tns1:Name=&amp;quot;BUSINESSKEY&amp;quot;]/tns1:Value)) and (not(exists($Start/tns1:LoggerParamsToOverride/tns1:BUSINESSKEY)))&quot;>&#xa;                    &lt;BUSINESSKEY>&#xa;                        &lt;xsl:value-of select=&quot;$Start/tns1:DynamicProperties/tns1:Property[tns1:Name=&amp;quot;BUSINESSKEY&amp;quot;]/tns1:Value&quot;/>&#xa;                    &lt;/BUSINESSKEY>&#xa;                &lt;/xsl:when>&#xa;                &lt;xsl:otherwise>&#xa;                    &lt;BUSINESSKEY>&#xa;                        &lt;xsl:value-of select=&quot;&amp;quot;&amp;quot;&quot;/>&#xa;                    &lt;/BUSINESSKEY>&#xa;                &lt;/xsl:otherwise>&#xa;            &lt;/xsl:choose>&#xa;            &lt;xsl:choose>&#xa;                &lt;xsl:when test=&quot;exists($Start/tns1:LoggerParamsToOverride/tns1:PROCESSSTACK)&quot;>&#xa;                    &lt;PROCESSSTACK>&#xa;                        &lt;xsl:value-of select=&quot;$Start/tns1:LoggerParamsToOverride/tns1:PROCESSSTACK&quot;/>&#xa;                    &lt;/PROCESSSTACK>&#xa;                &lt;/xsl:when>&#xa;                &lt;xsl:when test=&quot;(exists($Start/tns1:DynamicProperties/tns1:Property[tns1:Name=&amp;quot;PROCESSSTACK&amp;quot;]/tns1:Value)) and (not(exists($Start/tns1:LoggerParamsToOverride/tns1:PROCESSSTACK)))&quot;>&#xa;                    &lt;PROCESSSTACK>&#xa;                        &lt;xsl:value-of select=&quot;$Start/tns1:DynamicProperties/tns1:Property[tns1:Name=&amp;quot;PROCESSSTACK&amp;quot;]/tns1:Value&quot;/>&#xa;                    &lt;/PROCESSSTACK>&#xa;                &lt;/xsl:when>&#xa;                &lt;xsl:otherwise>&#xa;                    &lt;PROCESSSTACK>&#xa;                        &lt;xsl:value-of select=&quot;&amp;quot;&amp;quot;&quot;/>&#xa;                    &lt;/PROCESSSTACK>&#xa;                &lt;/xsl:otherwise>&#xa;            &lt;/xsl:choose>&#xa;            &lt;xsl:choose>&#xa;                &lt;xsl:when test=&quot;exists($Start/tns1:LoggerParamsToOverride/tns1:PAYLOAD)&quot;>&#xa;                    &lt;xsl:if test=&quot;$Start/tns1:LoggerParamsToOverride/tns1:PAYLOAD&quot;>&#xa;                        &lt;PAYLOAD>&#xa;                            &lt;xsl:value-of select=&quot;$Start/tns1:LoggerParamsToOverride/tns1:PAYLOAD&quot;/>&#xa;                        &lt;/PAYLOAD>&#xa;                    &lt;/xsl:if>&#xa;                &lt;/xsl:when>&#xa;                &lt;xsl:when test=&quot;(exists($Start/tns1:DynamicProperties/tns1:Property[tns1:Name=&amp;quot;PAYLOAD&amp;quot;]/tns1:Value)) and (not(exists($Start/tns1:LoggerParamsToOverride/tns1:PAYLOAD)))&quot;>&#xa;                    &lt;xsl:if test=&quot;$Start/tns1:DynamicProperties/tns1:Property[tns1:Name=&amp;quot;PAYLOAD&amp;quot;]/tns1:Value&quot;>&#xa;                        &lt;PAYLOAD>&#xa;                            &lt;xsl:value-of select=&quot;$Start/tns1:DynamicProperties/tns1:Property[tns1:Name=&amp;quot;PAYLOAD&amp;quot;]/tns1:Value&quot;/>&#xa;                        &lt;/PAYLOAD>&#xa;                    &lt;/xsl:if>&#xa;                &lt;/xsl:when>&#xa;                &lt;xsl:otherwise>&#xa;                    &lt;PAYLOAD>&#xa;                        &lt;xsl:value-of select=&quot;&amp;quot;&amp;quot;&quot;/>&#xa;                    &lt;/PAYLOAD>&#xa;                &lt;/xsl:otherwise>&#xa;            &lt;/xsl:choose>&#xa;        &lt;/tns:loggerParams>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns2=&quot;http://it.linkem/common/core/lehf/ErrorConfiguration/xsd&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;Start&quot;/>&#xa;    &lt;xsl:param name=&quot;GetErrorConfig&quot;/>&#xa;    &lt;xsl:param name=&quot;SystemException&quot;/>&#xa;    &lt;xsl:template name=&quot;RetrieveErrorDetails-input&quot; match=&quot;/&quot;>&#xa;        &lt;xsl:variable name=&quot;inputErrorCode&quot; select=&quot;$Start/ERRORCODE&quot;/>&#xa;        &lt;xsl:choose>&#xa;            &lt;xsl:when test=&quot;count($GetErrorConfig/tns2:ErrorConfiguration[./tns2:ErrorCode=$inputErrorCode])>0&quot;>&#xa;                &lt;tns2:ErrorConfiguration>&#xa;                    &lt;xsl:variable name=&quot;singleConf&quot; select=&quot;$GetErrorConfig/tns2:ErrorConfiguration[./tns2:ErrorCode=$inputErrorCode][1]&quot;/>&#xa;                    &lt;tns2:ErrorCode>&#xa;                        &lt;xsl:value-of select=&quot;$singleConf/tns2:ErrorCode&quot;/>&#xa;                    &lt;/tns2:ErrorCode>&#xa;                    &lt;tns2:ErrorMessage>&#xa;                        &lt;xsl:value-of select=&quot;$singleConf/tns2:ErrorMessage&quot;/>&#xa;                    &lt;/tns2:ErrorMessage>&#xa;                    &lt;tns2:ErrorType>&#xa;                        &lt;xsl:value-of select=&quot;$singleConf/tns2:ErrorType&quot;/>&#xa;                    &lt;/tns2:ErrorType>&#xa;                    &lt;xsl:if test=&quot;$singleConf/tns2:HTTPStatusCode&quot;>&#xa;                        &lt;tns2:HTTPStatusCode>&#xa;                            &lt;xsl:copy-of select=&quot;$singleConf/tns2:HTTPStatusCode/@xsi:nil&quot;/>&#xa;                            &lt;xsl:value-of select=&quot;$singleConf/tns2:HTTPStatusCode&quot;/>&#xa;                        &lt;/tns2:HTTPStatusCode>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;$singleConf/tns2:APIname&quot;>&#xa;                        &lt;tns2:APIname>&#xa;                            &lt;xsl:value-of select=&quot;$singleConf/tns2:APIname&quot;/>&#xa;                        &lt;/tns2:APIname>&#xa;                    &lt;/xsl:if>&#xa;                &lt;/tns2:ErrorConfiguration>&#xa;            &lt;/xsl:when>&#xa;            &lt;xsl:otherwise>&#xa;                &lt;xsl:choose>&#xa;                    &lt;xsl:when test=&quot;string-length($Start/ERRORMESSAGE)>0 and string-length($Start/ERRORTYPE)>0&quot;>&#xa;                        &lt;tns2:ErrorConfiguration>&#xa;                            &lt;tns2:ErrorCode>&#xa;                                &lt;xsl:value-of select=&quot;$Start/ERRORCODE&quot;/>&#xa;                            &lt;/tns2:ErrorCode>&#xa;                            &lt;tns2:ErrorMessage>&#xa;                                &lt;xsl:value-of select=&quot;$Start/ERRORMESSAGE&quot;/>&#xa;                            &lt;/tns2:ErrorMessage>&#xa;                            &lt;tns2:ErrorType>&#xa;                                &lt;xsl:value-of select=&quot;$Start/ERRORTYPE&quot;/>&#xa;                            &lt;/tns2:ErrorType>&#xa;                        &lt;/tns2:ErrorConfiguration>&#xa;                    &lt;/xsl:when>&#xa;                    &lt;xsl:otherwise>&#xa;                        &lt;tns2:ErrorConfiguration>&#xa;                            &lt;tns2:ErrorCode>&#xa;                                &lt;xsl:value-of select=&quot;$Start/ERRORCODE&quot;/>&#xa;                            &lt;/tns2:ErrorCode>&#xa;                            &lt;tns2:ErrorMessage>&#xa;                                &lt;xsl:value-of select=&quot;&amp;quot;Given Error code not exists. Missing Error Message or Missing Error Type. Please check the payload for details.&amp;quot;&quot;/>&#xa;                            &lt;/tns2:ErrorMessage>&#xa;                            &lt;tns2:ErrorType>&#xa;                                &lt;xsl:value-of select=&quot;$SystemException&quot;/>&#xa;                            &lt;/tns2:ErrorType>&#xa;                        &lt;/tns2:ErrorConfiguration>&#xa;                    &lt;/xsl:otherwise>&#xa;                &lt;/xsl:choose>&#xa;            &lt;/xsl:otherwise>&#xa;        &lt;/xsl:choose>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:config>
                         <bwext:BWActivity
@@ -538,38 +575,17 @@
                             xmlns:activityconfig="http://tns.tibco.com/bw/model/activityconfig"
                             xmlns:bwext="http://tns.tibco.com/bw/model/core/bwext"
                             xmlns:generalactivities="http://ns.tibco.com/bw/palette/generalactivities"
-                            xmlns:loggerType_0100="http://it.linkem/common/core/lehf/loggerType/0100" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                            xmlns:xsd="http://it.linkem/common/core/lehf/ErrorConfiguration/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                             <activityConfig>
                                 <properties name="config" xsi:type="activityconfig:EMFProperty">
                                     <type href="http://ns.tibco.com/bw/palette/generalactivities#//Mapper"/>
                                     <value
-                                    inputQName="loggerType_0100:loggerParams" xsi:type="generalactivities:Mapper"/>
+                                    inputQName="xsd:ErrorConfiguration" xsi:type="generalactivities:Mapper"/>
                                 </properties>
                             </activityConfig>
                         </bwext:BWActivity>
                     </tibex:config>
                 </tibex:activityExtension>
-            </bpws:extensionActivity>
-            <bpws:extensionActivity>
-                <tibex:extActivity inputVariable="SetLoggerParams-input"
-                    name="SetLoggerParams"
-                    outputVariable="SetLoggerParams"
-                    tibex:copyOf="MapToSetLoggerParams"
-                    tibex:xpdlId="6cdc57a5-c49c-4607-be6b-d761de299369"
-                    type="bw.internal.setSharedVariable" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
-                    <bpws:targets>
-                        <bpws:target linkName="MapToSetLoggerParamsToSetSharedVariable"/>
-                    </bpws:targets>
-                    <bpws:sources>
-                        <bpws:source linkName="SetLoggerParamsToEnd"/>
-                    </bpws:sources>
-                    <tibex:inputBindings>
-                        <tibex:inputBinding coercion=""
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;MapToSetLoggerParams&quot;/>&lt;xsl:template name=&quot;SetLoggerParams-input&quot; match=&quot;/&quot;>&lt;xsl:copy-of select=&quot;$MapToSetLoggerParams&quot;/>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
-                    </tibex:inputBindings>
-                    <tibex:SetSharedVariable inline="true"
-                        variableName="loggerParams" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
-                </tibex:extActivity>
             </bpws:extensionActivity>
         </bpws:flow>
     </bpws:scope>

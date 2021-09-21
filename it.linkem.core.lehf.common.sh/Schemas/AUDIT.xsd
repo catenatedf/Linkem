@@ -2,7 +2,13 @@
 <xsd:schema 
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
 	xmlns:tns="http://it.linkem/common/core/lehf/AuditTypes/xsd"
-	targetNamespace="http://it.linkem/common/core/lehf/AuditTypes/xsd">
+	xmlns:err="http://it.linkem/common/core/lehf/ErrorConfiguration/xsd"
+	targetNamespace="http://it.linkem/common/core/lehf/AuditTypes/xsd"
+	>
+
+<xsd:import  namespace="http://it.linkem/common/core/lehf/ErrorConfiguration/xsd" schemaLocation="./ErrorConfigurations.xsd" />
+
+
 
 <!--  [A] Log Context -->
 
@@ -21,7 +27,6 @@
 	<xsd:complexType name="auditType">
 		<xsd:sequence>
 			<xsd:element maxOccurs="1" minOccurs="1" name="SEVERITY" type="xsd:string"/><!--{INFO, DEBUG, WARN, ERROR} -->
-			<xsd:element maxOccurs="1" minOccurs="1" name="TRACKINGID" type="xsd:string"/><!-- id tecnico (es, tib:uuid) -->
 			<xsd:element maxOccurs="unbounded" minOccurs="0" name="BUSINESSKEY" type="tns:businessKeyType"/><!-- id di business (es. concat interfacename+DocumentNumber -->
 			<xsd:element maxOccurs="1" minOccurs="1" name="PROCESSSTACK" type="xsd:string"/>
 			<xsd:element maxOccurs="1" minOccurs="1" name="LOGMESSAGE" type="xsd:string"/><!-- [2000] ? -->
@@ -60,7 +65,7 @@
 		<xsd:complexType>
 			<xsd:sequence>
 				<xsd:element minOccurs="1" maxOccurs="1" name="auditElement" type="tns:auditType"/> <!-- [B] -->
-				<xsd:element minOccurs="0" maxOccurs="1" name="auditErrorElement" type="tns:auditErrorType"/> <!-- [C] -->
+				<xsd:element minOccurs="0" maxOccurs="1" ref="tns:auditErrorElement"/> <!-- [C] -->
 			</xsd:sequence> 
 		</xsd:complexType>
 	</xsd:element>
@@ -70,11 +75,24 @@
 		<xsd:complexType>
 			<xsd:sequence>
 				<xsd:element ref="tns:LogAudit"/>
-				<xsd:element name="ErrorConfiguration"/>
+				<xsd:element ref="err:ErrorConfiguration" minOccurs="0" maxOccurs="1" />
+			</xsd:sequence> 
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="LogContextElement"  type="tns:logContextType" />
+	<xsd:element name="auditErrorElement" type="tns:auditErrorType"/> <!-- [C] -->
+
+	<xsd:element name="LogWriterInput">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="tns:LogContextElement" minOccurs="1"/>			
+				<xsd:element ref="tns:LogAudit" 						 minOccurs="1"/>
 
 			</xsd:sequence> 
 		</xsd:complexType>
 	</xsd:element>
+
 
 
 

@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <bpws:process exitOnStandardFault="no"
-    name="sharedaudit.BuildDynamicProperties" suppressJoinFailure="yes"
-    targetNamespace="http://xmlns.example.com/20200723122520"
+    name="it.linkem.common.core.lehf.sh.SetLogContext_ByDynamicProperties"
+    suppressJoinFailure="yes"
+    targetNamespace="http://xmlns.example.com/20200723131157"
     xmlns:bpws="http://docs.oasis-open.org/wsbpel/2.0/process/executable"
     xmlns:info="http://www.tibco.com/bw/process/info"
     xmlns:ns="http://www.tibco.com/pe/EngineTypes"
-    xmlns:ns0="http://it.linkem/common/core/lehf/loggerType/0100"
-    xmlns:ns1="http://it.linkem/common/core/lehf/AuditTypes/xsd"
-    xmlns:ns2="http://it.linkem/core/lehf/InternalInterface_DynamicProperties/0100"
+    xmlns:ns0="http://it.linkem/common/core/lehf/InternalInterface_DynamicProperties/0100"
+    xmlns:ns1="http://it.linkem/common/core/lehf/loggerType/0100"
+    xmlns:ns2="http://it.linkem/common/core/lehf/AuditTypes/xsd"
+    xmlns:ns3="http://it.linkem/common/core/lehf/InternalInterface_DynamicProperties/xsd"
     xmlns:sca="http://docs.oasis-open.org/ns/opencsa/sca/200912"
     xmlns:sca-bpel="http://docs.oasis-open.org/ns/opencsa/sca-bpel/200801"
     xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"
@@ -175,25 +177,29 @@
         </schema>
     </tibex:Types>
     <tibex:ProcessInfo callable="true" createdBy="Dario"
-        createdOn="Thu Jul 23 12:25:20 CEST 2020" description=""
+        createdOn="Thu Jul 23 13:11:57 CEST 2020" description=""
         extraErrorVars="true" modifiers="public"
         productVersion="2.5.3 V26 2020-05-15" scalable="true"
         singleton="true" stateless="true" type="IT"/>
     <tibex:ProcessInterface context=""
-        input="{http://it.linkem/core/lehf/InternalInterface_DynamicProperties/0100}InputInterface_BuildDynamicProperties" output="{http://it.linkem/core/lehf/InternalInterface_DynamicProperties/0100}DynamicProperties"/>
+        input="{http://it.linkem/common/core/lehf/InternalInterface_DynamicProperties/xsd}InputInterface_SetLogContext_ByDynamicProperties" output=""/>
     <tibex:ProcessTemplateConfigurations/>
     <notation:Diagram measurementUnit="Pixel" type="BWProcess"
         xmlns:bwnotation="http://tns.tibco.com/bw/runtime/BWNotation"
         xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         <children type="2001">
-            <children type="5001"/>
+            <children type="5001">
+                <element href="//0/@process"/>
+            </children>
             <children type="3002">
                 <styles xsi:type="notation:SortingStyle"/>
                 <styles xsi:type="notation:FilteringStyle"/>
+                <element href="//0/@process"/>
             </children>
             <children type="3003">
                 <styles xsi:type="notation:SortingStyle"/>
                 <styles xsi:type="notation:FilteringStyle"/>
+                <element href="//0/@process"/>
             </children>
             <children type="3004">
                 <children type="4018">
@@ -207,24 +213,28 @@
                                     <styles
                                     fontName="Segoe UI"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.0"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles
                                     fontName="Segoe UI"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.0"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles
                                     fontName="Segoe UI"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.0"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles
                                     fontName="Segoe UI"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.0"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <styles fontName="Segoe UI"
@@ -234,7 +244,7 @@
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.0"/>
-                                    <layoutConstraint x="4"
+                                    <layoutConstraint x="17"
                                     xsi:type="notation:Bounds" y="88"/>
                                     </children>
                                     <children type="4002">
@@ -242,24 +252,28 @@
                                     <styles
                                     fontName="Segoe UI"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.1"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles
                                     fontName="Segoe UI"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.1"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles
                                     fontName="Segoe UI"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.1"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles
                                     fontName="Segoe UI"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.1"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <styles fontName="Segoe UI"
@@ -269,7 +283,7 @@
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.1"/>
-                                    <layoutConstraint x="412"
+                                    <layoutConstraint x="533"
                                     xsi:type="notation:Bounds" y="88"/>
                                     </children>
                                     <children type="4002">
@@ -277,24 +291,28 @@
                                     <styles
                                     fontName="Segoe UI"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.2"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles
                                     fontName="Segoe UI"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.2"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles
                                     fontName="Segoe UI"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.2"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles
                                     fontName="Segoe UI"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.2"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <styles fontName="Segoe UI"
@@ -305,7 +323,46 @@
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.2"/>
                                     <layoutConstraint
-                                    width="183" x="191"
+                                    width="180" x="159"
+                                    xsi:type="notation:Bounds" y="88"/>
+                                    </children>
+                                    <children type="4002">
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.3"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.3"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.3"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.3"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <styles fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.3"/>
+                                    <layoutConstraint x="386"
                                     xsi:type="notation:Bounds" y="88"/>
                                     </children>
                                     <styles xsi:type="notation:DrawerStyle"/>
@@ -320,17 +377,18 @@
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <styles xsi:type="bwnotation:ResizingStyle"/>
                                     <element href="//0/@process/@activity/@activity"/>
-                                    <layoutConstraint height="220"
-                                    width="545" xsi:type="notation:Bounds"/>
+                                    <layoutConstraint height="252"
+                                    width="666" xsi:type="notation:Bounds"/>
                                 </children>
                                 <styles xsi:type="notation:SortingStyle"/>
                                 <styles xsi:type="notation:FilteringStyle"/>
+                                <element href="//0/@process/@activity"/>
                             </children>
                             <styles fontName="Segoe UI" lineColor="0" xsi:type="notation:ShapeStyle"/>
                             <styles xsi:type="bwnotation:BackgroundStyle"/>
                             <styles xsi:type="bwnotation:ResizingStyle"/>
                             <element href="//0/@process/@activity"/>
-                            <layoutConstraint height="384" width="548" xsi:type="notation:Bounds"/>
+                            <layoutConstraint height="384" width="669" xsi:type="notation:Bounds"/>
                         </children>
                         <styles xsi:type="notation:SortingStyle"/>
                         <styles xsi:type="notation:FilteringStyle"/>
@@ -340,7 +398,7 @@
                     <styles xsi:type="bwnotation:BackgroundStyle"/>
                     <styles xsi:type="bwnotation:ResizingStyle"/>
                     <element href="//0/@process/@activity"/>
-                    <layoutConstraint height="408" width="548" x="1"
+                    <layoutConstraint height="408" width="669" x="1"
                         xsi:type="notation:Bounds" y="1"/>
                 </children>
                 <styles xsi:type="notation:SortingStyle"/>
@@ -349,7 +407,7 @@
             </children>
             <styles fontName="Segoe UI" lineColor="0" xsi:type="notation:ShapeStyle"/>
             <element href="//0/@process"/>
-            <layoutConstraint height="296" width="890" xsi:type="notation:Bounds"/>
+            <layoutConstraint height="328" width="1011" xsi:type="notation:Bounds"/>
         </children>
         <styles xsi:type="notation:DiagramStyle"/>
         <element href="//0"/>
@@ -366,38 +424,61 @@
         </edges>
         <edges
             source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2"
-            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.1" type="4006">
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.3" type="4006">
             <children type="6002">
                 <layoutConstraint xsi:type="notation:Location" y="40"/>
             </children>
             <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
             <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
             <element href="//0/@process/@activity/@activity/@links/@children.1"/>
-            <bendpoints points="[25, 0, -119, 0]$[120, 0, -24, 0]" xsi:type="notation:RelativeBendpoints"/>
+            <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.3"
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.1" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.2"/>
+            <bendpoints points="[25, 0, -83, 0]$[84, 0, -24, 0]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
     </notation:Diagram>
     <tibex:NamespaceRegistry enabled="true">
         <tibex:namespaceItem
-            namespace="http://it.linkem/common/core/lehf/AuditTypes/xsd" prefix="tns"/>
+            namespace="http://it.linkem/common/core/lehf/loggerType/0100" prefix="tns"/>
         <tibex:namespaceItem
-            namespace="http://it.linkem/core/lehf/InternalInterface_BuildDynamicProperties/0100" prefix="tns1"/>
+            namespace="http://it.linkem/common/core/lehf/InternalInterface_DynamicProperties/0100" prefix="tns1"/>
         <tibex:namespaceItem
-            namespace="http://it.linkem/core/lehf/InternalInterface_DynamicProperties/0100" prefix="tns2"/>
+            namespace="http://www.tibco.com/bw/xpath/bw-custom-functions" prefix="bw"/>
+        <tibex:namespaceItem
+            namespace="http://www.tibco.com/bw/xslt/custom-functions" prefix="tib"/>
+        <tibex:namespaceItem
+            namespace="http://www.w3.org/2001/XMLSchema" prefix="xsd"/>
+        <tibex:namespaceItem
+            namespace="http://www.tibco.com/pe/WriteToLogActivitySchema" prefix="tns2"/>
+        <tibex:namespaceItem
+            namespace="http://it.linkem/common/core/lehf/InternalInterface_DynamicProperties/xsd" prefix="tns3"/>
+        <tibex:namespaceItem
+            namespace="http://it.linkem/common/core/lehf/AuditTypes/xsd" prefix="tns4"/>
     </tibex:NamespaceRegistry>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://it.linkem/common/core/lehf/AuditTypes/xsd"/>
-    <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://it.linkem/core/lehf/InternalInterface_DynamicProperties/0100"/>
+    <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://it.linkem/common/core/lehf/InternalInterface_DynamicProperties/xsd"/>
     <bpws:variables>
         <bpws:variable element="ns:ProcessContext"
             name="_processContext" sca-bpel:internal="true"/>
-        <bpws:variable element="ns2:DynamicProperties"
-            name="MapToBuildDynamicProperties-input" sca-bpel:internal="true"/>
-        <bpws:variable element="ns2:DynamicProperties"
-            name="MapToBuildDynamicProperties" sca-bpel:internal="true"/>
         <bpws:variable
-            element="ns2:InputInterface_BuildDynamicProperties"
+            element="ns3:InputInterface_SetLogContext_ByDynamicProperties"
             name="Start" sca-bpel:internal="true" tibex:parameter="in"/>
-        <bpws:variable element="ns2:DynamicProperties" name="End-input"
-            sca-bpel:internal="true" tibex:parameter="out"/>
+        <bpws:variable element="ns2:LogContextElement"
+            name="MapToSetLogContext-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns2:LogContextElement"
+            name="MapToSetLogContext" sca-bpel:internal="true"/>
+        <bpws:variable element="ns2:LogContextElement"
+            name="SetLogContext-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns2:LogContextElement"
+            name="SetLogContext" sca-bpel:internal="true"/>
     </bpws:variables>
     <bpws:extensions>
         <bpws:extension mustUnderstand="no" namespace="http://www.eclipse.org/gmf/runtime/1.0.2/notation"/>
@@ -410,16 +491,18 @@
     <bpws:scope name="scope">
         <bpws:flow name="flow">
             <bpws:links>
-                <bpws:link name="StartToMapToBuildDynamicProperties" tibex:linkType="SUCCESS"/>
-                <bpws:link name="MapperToEnd" tibex:linkType="SUCCESS"/>
+                <bpws:link name="StartToMapper" tibex:linkType="SUCCESS"/>
+                <bpws:link
+                    name="MapToSetLoggerParamsToSetSharedVariable" tibex:linkType="SUCCESS"/>
+                <bpws:link name="SetLoggerParamsToEnd" tibex:linkType="SUCCESS"/>
             </bpws:links>
             <bpws:extensionActivity>
                 <tibex:receiveEvent createInstance="yes"
                     eventTimeout="0" name="Start"
-                    tibex:xpdlId="86de0c61-e2ff-4a6c-8080-e03fe4081291"
+                    tibex:xpdlId="d66c57b2-bd17-4764-ad5f-57cbc7dbd54c"
                     variable="Start" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                     <bpws:sources>
-                        <bpws:source linkName="StartToMapToBuildDynamicProperties"/>
+                        <bpws:source linkName="StartToMapper"/>
                     </bpws:sources>
                     <tibex:eventSource>
                         <tibex:StartEvent xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
@@ -427,17 +510,11 @@
                 </tibex:receiveEvent>
             </bpws:extensionActivity>
             <bpws:extensionActivity>
-                <tibex:activityExtension inputVariable="End-input"
-                    name="End"
-                    tibex:copyOf="MapToBuildDynamicProperties"
-                    tibex:xpdlId="8cb0a147-c416-4f07-b93f-b84a0b5442ac" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                <tibex:activityExtension name="End"
+                    tibex:xpdlId="870a27e8-e771-4014-99ce-ea76bce75da8" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                     <bpws:targets>
-                        <bpws:target linkName="MapperToEnd"/>
+                        <bpws:target linkName="SetLoggerParamsToEnd"/>
                     </bpws:targets>
-                    <tibex:inputBindings>
-                        <tibex:inputBinding
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns1=&quot;http://it.linkem/core/lehf/InternalInterface_DynamicProperties/0100&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;MapToBuildDynamicProperties&quot;/>&lt;xsl:template name=&quot;End-input&quot; match=&quot;/&quot;>&lt;xsl:copy-of select=&quot;$MapToBuildDynamicProperties&quot;/>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
-                    </tibex:inputBindings>
                     <tibex:config>
                         <bwext:BWActivity
                             activityTypeID="bw.internal.end"
@@ -456,25 +533,25 @@
             </bpws:extensionActivity>
             <bpws:extensionActivity>
                 <tibex:activityExtension
-                    inputVariable="MapToBuildDynamicProperties-input"
-                    name="MapToBuildDynamicProperties"
-                    outputVariable="MapToBuildDynamicProperties"
-                    tibex:xpdlId="17e9b009-f5f2-4be7-8405-c384a3d96685" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                    inputVariable="MapToSetLogContext-input"
+                    name="MapToSetLogContext"
+                    outputVariable="MapToSetLogContext"
+                    tibex:xpdlId="29b64c4c-0cb2-40ab-960b-f84470848716" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                     <bpws:targets>
-                        <bpws:target linkName="StartToMapToBuildDynamicProperties"/>
+                        <bpws:target linkName="StartToMapper"/>
                     </bpws:targets>
                     <bpws:sources>
-                        <bpws:source linkName="MapperToEnd"/>
+                        <bpws:source linkName="MapToSetLoggerParamsToSetSharedVariable"/>
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns2=&quot;http://it.linkem/core/lehf/InternalInterface_DynamicProperties/0100&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;Start&quot;/>&#xa;    &lt;xsl:template name=&quot;MapToBuildDynamicProperties-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns2:DynamicProperties>&#xa;            &lt;xsl:choose>&#xa;                &lt;xsl:when test=&quot;$Start/tns2:APPLICATION_NAME&quot;>&#xa;                    &lt;tns2:Property>&#xa;                        &lt;tns2:Name>&#xa;                            &lt;xsl:value-of select=&quot;substring-after(name($Start/tns2:APPLICATION_NAME),&amp;quot;:&amp;quot;)&quot;/>&#xa;                        &lt;/tns2:Name>&#xa;                        &lt;tns2:Value>&#xa;                            &lt;xsl:value-of select=&quot;$Start/tns2:APPLICATION_NAME&quot;/>&#xa;                        &lt;/tns2:Value>&#xa;                    &lt;/tns2:Property>&#xa;                &lt;/xsl:when>&#xa;            &lt;/xsl:choose>&#xa;            &lt;xsl:choose>&#xa;                &lt;xsl:when test=&quot;$Start/tns2:SOURCESYSTEM&quot;>&#xa;                    &lt;tns2:Property>&#xa;                        &lt;tns2:Name>&#xa;                            &lt;xsl:value-of select=&quot;substring-after(name($Start/tns2:SOURCESYSTEM),&amp;quot;:&amp;quot;)&quot;/>&#xa;                        &lt;/tns2:Name>&#xa;                        &lt;tns2:Value>&#xa;                            &lt;xsl:value-of select=&quot;$Start/tns2:SOURCESYSTEM&quot;/>&#xa;                        &lt;/tns2:Value>&#xa;                    &lt;/tns2:Property>&#xa;                &lt;/xsl:when>&#xa;            &lt;/xsl:choose>&#xa;            &lt;xsl:choose>&#xa;                &lt;xsl:when test=&quot;$Start/tns2:STARTTIMESTAMP&quot;>&#xa;                    &lt;tns2:Property>&#xa;                        &lt;tns2:Name>&#xa;                            &lt;xsl:value-of select=&quot;substring-after(name($Start/tns2:STARTTIMESTAMP),&amp;quot;:&amp;quot;)&quot;/>&#xa;                        &lt;/tns2:Name>&#xa;                        &lt;tns2:Value>&#xa;                            &lt;xsl:value-of select=&quot;$Start/tns2:STARTTIMESTAMP&quot;/>&#xa;                        &lt;/tns2:Value>&#xa;                    &lt;/tns2:Property>&#xa;                &lt;/xsl:when>&#xa;            &lt;/xsl:choose>&#xa;            &lt;xsl:choose>&#xa;                &lt;xsl:when test=&quot;$Start/tns2:SEVERITY&quot;>&#xa;                    &lt;tns2:Property>&#xa;                        &lt;tns2:Name>&#xa;                            &lt;xsl:value-of select=&quot;substring-after(name($Start/tns2:SEVERITY),&amp;quot;:&amp;quot;)&quot;/>&#xa;                        &lt;/tns2:Name>&#xa;                        &lt;tns2:Value>&#xa;                            &lt;xsl:value-of select=&quot;$Start/tns2:SEVERITY&quot;/>&#xa;                        &lt;/tns2:Value>&#xa;                    &lt;/tns2:Property>&#xa;                &lt;/xsl:when>&#xa;            &lt;/xsl:choose>&#xa;            &lt;xsl:choose>&#xa;                &lt;xsl:when test=&quot;$Start/tns2:TRACKID&quot;>&#xa;                    &lt;tns2:Property>&#xa;                        &lt;tns2:Name>&#xa;                            &lt;xsl:value-of select=&quot;substring-after(name($Start/tns2:TRACKID),&amp;quot;:&amp;quot;)&quot;/>&#xa;                        &lt;/tns2:Name>&#xa;                        &lt;tns2:Value>&#xa;                            &lt;xsl:value-of select=&quot;$Start/tns2:TRACKID&quot;/>&#xa;                        &lt;/tns2:Value>&#xa;                    &lt;/tns2:Property>&#xa;                &lt;/xsl:when>&#xa;            &lt;/xsl:choose>&#xa;            &lt;xsl:choose>&#xa;                &lt;xsl:when test=&quot;$Start/tns2:BUSINESSKEY&quot;>&#xa;                    &lt;tns2:Property>&#xa;                        &lt;tns2:Name>&#xa;                            &lt;xsl:value-of select=&quot;substring-after(name($Start/tns2:BUSINESSKEY),&amp;quot;:&amp;quot;)&quot;/>&#xa;                        &lt;/tns2:Name>&#xa;                        &lt;tns2:Value>&#xa;                            &lt;xsl:value-of select=&quot;$Start/tns2:BUSINESSKEY&quot;/>&#xa;                        &lt;/tns2:Value>&#xa;                    &lt;/tns2:Property>&#xa;                &lt;/xsl:when>&#xa;            &lt;/xsl:choose>&#xa;            &lt;xsl:choose>&#xa;                &lt;xsl:when test=&quot;$Start/tns2:PROCESSSTACK&quot;>&#xa;                    &lt;tns2:Property>&#xa;                        &lt;tns2:Name>&#xa;                            &lt;xsl:value-of select=&quot;substring-after(name($Start/tns2:PROCESSSTACK),&amp;quot;:&amp;quot;)&quot;/>&#xa;                        &lt;/tns2:Name>&#xa;                        &lt;tns2:Value>&#xa;                            &lt;xsl:value-of select=&quot;$Start/tns2:PROCESSSTACK&quot;/>&#xa;                        &lt;/tns2:Value>&#xa;                    &lt;/tns2:Property>&#xa;                &lt;/xsl:when>&#xa;            &lt;/xsl:choose>&#xa;            &lt;xsl:choose>&#xa;                &lt;xsl:when test=&quot;$Start/tns2:PAYLOAD&quot;>&#xa;                    &lt;tns2:Property>&#xa;                        &lt;tns2:Name>&#xa;                            &lt;xsl:value-of select=&quot;substring-after(name($Start/tns2:PAYLOAD),&amp;quot;:&amp;quot;)&quot;/>&#xa;                        &lt;/tns2:Name>&#xa;                        &lt;tns2:Value>&#xa;                            &lt;xsl:value-of select=&quot;$Start/tns2:PAYLOAD&quot;/>&#xa;                        &lt;/tns2:Value>&#xa;                    &lt;/tns2:Property>&#xa;                &lt;/xsl:when>&#xa;            &lt;/xsl:choose>&#xa;        &lt;/tns2:DynamicProperties>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:tns4=&quot;http://it.linkem/common/core/lehf/AuditTypes/xsd&quot; xmlns:tns3=&quot;http://it.linkem/common/core/lehf/InternalInterface_DynamicProperties/xsd&quot; xmlns:tib=&quot;http://www.tibco.com/bw/xslt/custom-functions&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;Start&quot;/>&lt;xsl:template name=&quot;MapToSetLoggerParams-input&quot; match=&quot;/&quot;>&lt;tns4:LogContextElement>&lt;APPLICATION_NAME>&lt;xsl:value-of select=&quot;$Start/tns3:DynamicProperties/tns3:Property[./tns3:Name=&amp;quot;APPLICATION_NAME&amp;quot;]/tns3:Value&quot;/>&lt;/APPLICATION_NAME>&lt;xsl:if test=&quot;$Start/tns3:DynamicProperties/tns3:Property[tns3:Name=&amp;quot;SOURCESYSTEM&amp;quot;]/tns3:Value&quot;>&lt;SOURCESYSTEM>&lt;xsl:value-of select=&quot;$Start/tns3:DynamicProperties/tns3:Property[tns3:Name=&amp;quot;SOURCESYSTEM&amp;quot;]/tns3:Value&quot;/>&lt;/SOURCESYSTEM>&lt;/xsl:if>&lt;STARTTIMESTAMP>&lt;xsl:value-of select=&quot;xsd:dateTime($Start/tns3:DynamicProperties/tns3:Property[tns3:Name=&amp;quot;STARTTIMESTAMP&amp;quot;]/tns3:Value)&quot;/>&lt;/STARTTIMESTAMP>&lt;TRACKINGID>&lt;xsl:value-of select=&quot;$Start/tns3:DynamicProperties/tns3:Property[tns3:Name=&amp;quot;TRACKINGID&amp;quot;]/tns3:Value&quot;/>&lt;/TRACKINGID>&lt;xsl:for-each select=&quot;$Start/tns3:DynamicProperties/tns3:Property[tib:substring-after-last(./tns3:Name,&amp;quot;_&amp;quot;)=&amp;quot;BK&amp;quot;]&quot;>&lt;BUSINESSKEY>&lt;name>&lt;xsl:value-of select=&quot;tns3:Name&quot;/>&lt;/name>&lt;value>&lt;xsl:value-of select=&quot;tns3:Value&quot;/>&lt;/value>&lt;/BUSINESSKEY>&lt;/xsl:for-each>&lt;/tns4:LogContextElement>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:config>
                         <bwext:BWActivity
                             activityTypeID="bw.generalactivities.mapper"
                             version="6.0.0.001"
-                            xmlns:InternalInterface_DynamicProperties_0100="http://it.linkem/core/lehf/InternalInterface_DynamicProperties/0100"
+                            xmlns:AuditTypes_0100="http://it.linkem/common/core/lehf/AuditTypes/xsd"
                             xmlns:activityconfig="http://tns.tibco.com/bw/model/activityconfig"
                             xmlns:bwext="http://tns.tibco.com/bw/model/core/bwext"
                             xmlns:generalactivities="http://ns.tibco.com/bw/palette/generalactivities" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -482,12 +559,32 @@
                                 <properties name="config" xsi:type="activityconfig:EMFProperty">
                                     <type href="http://ns.tibco.com/bw/palette/generalactivities#//Mapper"/>
                                     <value
-                                    inputQName="InternalInterface_DynamicProperties_0100:DynamicProperties" xsi:type="generalactivities:Mapper"/>
+                                    inputQName="AuditTypes_0100:LogContextElement" xsi:type="generalactivities:Mapper"/>
                                 </properties>
                             </activityConfig>
                         </bwext:BWActivity>
                     </tibex:config>
                 </tibex:activityExtension>
+            </bpws:extensionActivity>
+            <bpws:extensionActivity>
+                <tibex:extActivity inputVariable="SetLogContext-input"
+                    name="SetLogContext" outputVariable="SetLogContext"
+                    tibex:copyOf="MapToSetLogContext"
+                    tibex:xpdlId="6cdc57a5-c49c-4607-be6b-d761de299369"
+                    type="bw.internal.setSharedVariable" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                    <bpws:targets>
+                        <bpws:target linkName="MapToSetLoggerParamsToSetSharedVariable"/>
+                    </bpws:targets>
+                    <bpws:sources>
+                        <bpws:source linkName="SetLoggerParamsToEnd"/>
+                    </bpws:sources>
+                    <tibex:inputBindings>
+                        <tibex:inputBinding coercion=""
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;MapToSetLogContext&quot;/>&#xa;    &lt;xsl:template name=&quot;SetLoggerParams-input&quot; match=&quot;/&quot;>&#xa;        &lt;xsl:copy-of select=&quot;$MapToSetLogContext&quot;/>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                    </tibex:inputBindings>
+                    <tibex:SetSharedVariable inline="true"
+                        variableName="LogContext" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
+                </tibex:extActivity>
             </bpws:extensionActivity>
         </bpws:flow>
     </bpws:scope>

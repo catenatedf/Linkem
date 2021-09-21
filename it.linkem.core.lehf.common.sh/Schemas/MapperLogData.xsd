@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/MapperLogData"
-	xmlns:tns="http://www.example.org/MapperLogData" elementFormDefault="qualified">
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://it.linkem/common/core/lehf/MapLogData/xsd"
+	xmlns:tns="http://it.linkem/common/core/lehf/MapLogData/xsd" elementFormDefault="qualified">
+
+
+
 
 	<element name="DATA">
 		<complexType>

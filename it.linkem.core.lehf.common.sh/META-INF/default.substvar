@@ -83,52 +83,7 @@
 			<useLookupValue>false</useLookupValue>
 		</globalVariable>
 		<globalVariable>
-			<name>/it.linkem.core.lehf.common.sh/ErrorHandler/LEHF_Flogo/hostname</name>
-			<value>eu-west-1.integration.cloud.tibcoapps.com</value>
-			<deploymentSettable>false</deploymentSettable>
-			<serviceSettable>false</serviceSettable>
-			<type>String</type>
-			<isOverride>false</isOverride>
-			<useLookupValue>false</useLookupValue>
-		</globalVariable>
-		<globalVariable>
-			<name>/it.linkem.core.lehf.common.sh/ErrorHandler/LEHF_Flogo/resourcePath</name>
-			<value>4mzjc2ttbt3w4ttcetbm3vfnt3umafxd/core/lehf/exception/v1</value>
-			<deploymentSettable>false</deploymentSettable>
-			<serviceSettable>false</serviceSettable>
-			<type>String</type>
-			<isOverride>false</isOverride>
-			<useLookupValue>false</useLookupValue>
-		</globalVariable>
-		<globalVariable>
-			<name>/it.linkem.core.lehf.common.sh/ErrorHandler/LEHF_Flogo/methodType</name>
-			<value>POST</value>
-			<deploymentSettable>false</deploymentSettable>
-			<serviceSettable>false</serviceSettable>
-			<type>String</type>
-			<isOverride>false</isOverride>
-			<useLookupValue>false</useLookupValue>
-		</globalVariable>
-		<globalVariable>
-			<name>/it.linkem.core.lehf.common.sh/ErrorHandler/LEHF_Flogo/defaultConfidentiality</name>
-			<value>true</value>
-			<deploymentSettable>false</deploymentSettable>
-			<serviceSettable>false</serviceSettable>
-			<type>Boolean</type>
-			<isOverride>false</isOverride>
-			<useLookupValue>false</useLookupValue>
-		</globalVariable>
-		<globalVariable>
-			<name>/it.linkem.core.lehf.common.sh/ErrorHandler/LEHF_Flogo/port</name>
-			<value>443</value>
-			<deploymentSettable>false</deploymentSettable>
-			<serviceSettable>false</serviceSettable>
-			<type>Integer</type>
-			<isOverride>false</isOverride>
-			<useLookupValue>false</useLookupValue>
-		</globalVariable>
-		<globalVariable>
-			<name>/it.linkem.core.lehf.common.sh/Logging/Business_Exception</name>
+			<name>/it.linkem.common.core.lehf.sh/Logging/Business_Exception</name>
 			<value>Business</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
@@ -137,7 +92,7 @@
 			<useLookupValue>false</useLookupValue>
 		</globalVariable>
 		<globalVariable>
-			<name>/it.linkem.core.lehf.common.sh/Logging/System_Exception</name>
+			<name>/it.linkem.common.core.lehf.sh/Logging/System_Exception</name>
 			<value>System</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
@@ -146,7 +101,7 @@
 			<useLookupValue>false</useLookupValue>
 		</globalVariable>
 		<globalVariable>
-			<name>/it.linkem.core.lehf.common.sh/Logging/START_STATE</name>
+			<name>/it.linkem.common.core.lehf.sh/Logging/START_STATE</name>
 			<value>START</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
@@ -155,7 +110,7 @@
 			<useLookupValue>false</useLookupValue>
 		</globalVariable>
 		<globalVariable>
-			<name>/it.linkem.core.lehf.common.sh/Logging/END_STATE</name>
+			<name>/it.linkem.common.core.lehf.sh/Logging/END_STATE</name>
 			<value>END</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
@@ -164,7 +119,7 @@
 			<useLookupValue>false</useLookupValue>
 		</globalVariable>
 		<globalVariable>
-			<name>/it.linkem.core.lehf.common.sh/Logging/ERROR_STATE</name>
+			<name>/it.linkem.common.core.lehf.sh/Logging/ERROR_STATE</name>
 			<value>ERROR</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
@@ -173,7 +128,7 @@
 			<useLookupValue>false</useLookupValue>
 		</globalVariable>
 		<globalVariable>
-			<name>/it.linkem.core.lehf.common.sh/Logging/INFO_SEVERITY</name>
+			<name>/it.linkem.common.core.lehf.sh/Logging/INFO_SEVERITY</name>
 			<value>INFO</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
@@ -182,7 +137,7 @@
 			<useLookupValue>false</useLookupValue>
 		</globalVariable>
 		<globalVariable>
-			<name>/it.linkem.core.lehf.common.sh/Logging/DEBUG_SEVERITY</name>
+			<name>/it.linkem.common.core.lehf.sh/Logging/DEBUG_SEVERITY</name>
 			<value>DEBUG</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
@@ -191,7 +146,16 @@
 			<useLookupValue>false</useLookupValue>
 		</globalVariable>
 		<globalVariable>
-			<name>/it.linkem.core.lehf.common.sh/Logging/ERROR_SEVERITY</name>
+			<name>/it.linkem.common.core.lehf.sh/Logging/WARNING_SEVERITY</name>
+			<value>WARNING</value>
+			<deploymentSettable>false</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<isOverride>false</isOverride>
+			<useLookupValue>false</useLookupValue>
+		</globalVariable>
+		<globalVariable>
+			<name>/it.linkem.common.core.lehf.sh/Logging/ERROR_SEVERITY</name>
 			<value>ERROR</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
@@ -200,8 +164,8 @@
 			<useLookupValue>false</useLookupValue>
 		</globalVariable>
 		<globalVariable>
-			<name>/it.linkem.core.lehf.common.sh/Logging/BUSINESS_UNIT</name>
-			<value>BPM</value>
+			<name>/it.linkem.common.core.lehf.sh/Logging/PROJECT</name>
+			<value>LINKEM</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
 			<type>String</type>
@@ -209,106 +173,7 @@
 			<useLookupValue>false</useLookupValue>
 		</globalVariable>
 		<globalVariable>
-			<name>/it.linkem.core.lehf.common.sh/Logging/PROJECT</name>
-			<value>TXGROUP</value>
-			<deploymentSettable>false</deploymentSettable>
-			<serviceSettable>false</serviceSettable>
-			<type>String</type>
-			<isOverride>false</isOverride>
-			<useLookupValue>false</useLookupValue>
-		</globalVariable>
-		<globalVariable>
-			<name>/it.linkem.core.lehf.common.sh/Logging/LOGGER_NAME</name>
-			<deploymentSettable>false</deploymentSettable>
-			<serviceSettable>false</serviceSettable>
-			<type>String</type>
-			<isOverride>false</isOverride>
-			<useLookupValue>false</useLookupValue>
-		</globalVariable>
-		<globalVariable>
-			<name>/it.linkem.core.lehf.common.sh/LoadErrorConfiguration/HTTP/Client/getErrorConfiguration/URI</name>
-			<value>z4lm36za4c6zngis7vb6ahrrdc5cttlh/dev/common/configuration/error/v1</value>
-			<deploymentSettable>false</deploymentSettable>
-			<serviceSettable>false</serviceSettable>
-			<type>String</type>
-			<isOverride>false</isOverride>
-			<useLookupValue>false</useLookupValue>
-		</globalVariable>
-		<globalVariable>
-			<name>/it.linkem.core.lehf.common.sh/LoadErrorConfiguration/HTTP/Client/getErrorConfiguration/projectName</name>
-			<value>projectName</value>
-			<deploymentSettable>false</deploymentSettable>
-			<serviceSettable>false</serviceSettable>
-			<type>String</type>
-			<isOverride>false</isOverride>
-			<useLookupValue>false</useLookupValue>
-		</globalVariable>
-		<globalVariable>
-			<name>/it.linkem.core.lehf.common.sh/LoadErrorConfiguration/HTTP/Client/getErrorConfiguration/ApplicationName</name>
-			<value>applicationName</value>
-			<deploymentSettable>false</deploymentSettable>
-			<serviceSettable>false</serviceSettable>
-			<type>String</type>
-			<isOverride>false</isOverride>
-			<useLookupValue>false</useLookupValue>
-		</globalVariable>
-		<globalVariable>
-			<name>/it.linkem.core.lehf.common.sh/LoadErrorConfiguration/HTTP/Client/getErrorConfiguration/hostname</name>
-			<value>eu-west-1.integration.cloud.tibcoapps.com</value>
-			<deploymentSettable>false</deploymentSettable>
-			<serviceSettable>false</serviceSettable>
-			<type>String</type>
-			<isOverride>false</isOverride>
-			<useLookupValue>false</useLookupValue>
-		</globalVariable>
-		<globalVariable>
-			<name>/it.linkem.core.lehf.common.sh/LoadErrorConfiguration/HTTP/Client/getErrorConfiguration/methodType</name>
-			<value>GET</value>
-			<deploymentSettable>false</deploymentSettable>
-			<serviceSettable>false</serviceSettable>
-			<type>String</type>
-			<isOverride>false</isOverride>
-			<useLookupValue>false</useLookupValue>
-		</globalVariable>
-		<globalVariable>
-			<name>/it.linkem.core.lehf.common.sh/LoadErrorConfiguration/HTTP/Client/getErrorConfiguration/port</name>
-			<value>443</value>
-			<deploymentSettable>false</deploymentSettable>
-			<serviceSettable>false</serviceSettable>
-			<type>Integer</type>
-			<isOverride>false</isOverride>
-			<useLookupValue>false</useLookupValue>
-		</globalVariable>
-		<globalVariable>
-			<name>/it.linkem.core.lehf.common.sh/LoadErrorConfiguration/HTTP/Client/getErrorConfiguration/defaultConfidentiality</name>
-			<value>true</value>
-			<deploymentSettable>false</deploymentSettable>
-			<serviceSettable>false</serviceSettable>
-			<type>Boolean</type>
-			<isOverride>false</isOverride>
-			<useLookupValue>false</useLookupValue>
-		</globalVariable>
-		<globalVariable>
-			<name>/it.linkem.core.lehf.common.sh/RetryManagement/baseRetryDelay_s</name>
-			<value>1</value>
-			<deploymentSettable>false</deploymentSettable>
-			<serviceSettable>false</serviceSettable>
-			<type>Integer</type>
-			<isOverride>false</isOverride>
-			<useLookupValue>false</useLookupValue>
-		</globalVariable>
-		<globalVariable>
-			<name>/it.linkem.core.lehf.common.sh/RetryManagement/maxRetry</name>
-			<value>2</value>
-			<deploymentSettable>false</deploymentSettable>
-			<serviceSettable>false</serviceSettable>
-			<type>Integer</type>
-			<isOverride>false</isOverride>
-			<useLookupValue>false</useLookupValue>
-		</globalVariable>
-		<globalVariable>
-			<name>/it.linkem.core.lehf.common.sh/RetryManagement/statusCodesToSkip</name>
-			<value>400;401</value>
+			<name>/it.linkem.common.core.lehf.sh/Logging/LOGGER_NAME</name>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
 			<type>String</type>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmlns:xsd="http://it.linkem/common/core/lehf/ErrorConfiguration/xsd" xmi:id="_HAcZARq2EeynObKsvD-eCQ" name="DataFormat.ErrorConfig" type="dataformat:DataFormat">
+  <imports xmi:id="_JPhfsBq2EeynObKsvD-eCQ" importType="http://www.w3.org/2001/XMLSchema" namespace="http://it.linkem/common/core/lehf/ErrorConfiguration/xsd"/>
+  <jndi:configuration xsi:type="dataformat:DataFormat" xmi:id="_HAcZAhq2EeynObKsvD-eCQ" formatType="Delimiter separated" colSeparator=";" colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="Carriage Return/Line Feed (windows)" fillCharacter="Space" schemaElementQName="xsd:ErrorConfiguration" fieldOffsetsStr="ErrorCode(0,0)&#xA;ErrorMessage(0,0)&#xA;ErrorType(0,0)&#xA;HTTPStatusCode(0,0)&#xA;APIname(0,0)">
+    <fieldOffsets xmi:id="_JQvnsBq2EeynObKsvD-eCQ" name="ErrorCode"/>
+    <fieldOffsets xmi:id="_JQvnsRq2EeynObKsvD-eCQ" name="ErrorMessage"/>
+    <fieldOffsets xmi:id="_JQvnshq2EeynObKsvD-eCQ" name="ErrorType"/>
+    <fieldOffsets xmi:id="_JQvnsxq2EeynObKsvD-eCQ" name="HTTPStatusCode"/>
+    <fieldOffsets xmi:id="_JQvntBq2EeynObKsvD-eCQ" name="APIname"/>
+  </jndi:configuration>
+</jndi:namedResource>

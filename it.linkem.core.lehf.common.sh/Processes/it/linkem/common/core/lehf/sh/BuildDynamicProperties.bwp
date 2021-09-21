@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <bpws:process exitOnStandardFault="no"
-    name="sharedaudit.GetErrorDetailByErrorCode"
+    name="it.linkem.common.core.lehf.sh.BuildDynamicProperties"
     suppressJoinFailure="yes"
-    targetNamespace="http://xmlns.example.com/20200603183411"
+    targetNamespace="http://xmlns.example.com/20200723122520"
     xmlns:bpws="http://docs.oasis-open.org/wsbpel/2.0/process/executable"
     xmlns:info="http://www.tibco.com/bw/process/info"
     xmlns:ns="http://www.tibco.com/pe/EngineTypes"
-    xmlns:ns0="http://www.example.com/namespaces/tns/1591202093325"
-    xmlns:ns1="http://it.linkem/common/core/lehf/xsd/ErrorConfiguration/"
-    xmlns:ns2="http://it.linkem/common/core/lehf/xsd/parsecsv/ErrorConfiguration"
-    xmlns:ns3="http://it.linkem/common/core/lehf/AuditTypes/xsd"
-    xmlns:ns4="http://it.linkem/common/core/lehf/ErrorConfiguration/xsd"
+    xmlns:ns0="http://it.linkem/common/core/lehf/loggerType/0100"
+    xmlns:ns1="http://it.linkem/common/core/lehf/AuditTypes/xsd"
+    xmlns:ns2="http://it.linkem/common/core/lehf/InternalInterface_DynamicProperties/0100"
+    xmlns:ns3="http://it.linkem/common/core/lehf/InternalInterface_DynamicProperties/xsd"
     xmlns:sca="http://docs.oasis-open.org/ns/opencsa/sca/200912"
     xmlns:sca-bpel="http://docs.oasis-open.org/ns/opencsa/sca-bpel/200801"
     xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"
@@ -177,13 +176,13 @@
             <element name="DuplicateKeyException" type="tns:DuplicateKeyExceptionType"/>
         </schema>
     </tibex:Types>
-    <tibex:ProcessInfo callable="true" createdBy="Stefano"
-        createdOn="Wed Jun 03 18:34:11 CEST 2020" description=""
+    <tibex:ProcessInfo callable="true" createdBy="Dario"
+        createdOn="Thu Jul 23 12:25:20 CEST 2020" description=""
         extraErrorVars="true" modifiers="public"
-        productVersion="2.5.2 V67 2020-03-05" scalable="true"
+        productVersion="2.5.3 V26 2020-05-15" scalable="true"
         singleton="true" stateless="true" type="IT"/>
     <tibex:ProcessInterface context=""
-        input="{http://it.linkem/common/core/lehf/AuditTypes/xsd}LogAudit" output="{http://it.linkem/common/core/lehf/ErrorConfiguration/xsd}ErrorConfiguration"/>
+        input="{http://it.linkem/common/core/lehf/InternalInterface_DynamicProperties/xsd}InputInterface_BuildDynamicProperties" output="{http://it.linkem/common/core/lehf/InternalInterface_DynamicProperties/xsd}DynamicProperties"/>
     <tibex:ProcessTemplateConfigurations/>
     <notation:Diagram measurementUnit="Pixel" type="BWProcess"
         xmlns:bwnotation="http://tns.tibco.com/bw/runtime/BWNotation"
@@ -238,7 +237,7 @@
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.0"/>
                                     <layoutConstraint x="4"
-                                    xsi:type="notation:Bounds" y="130"/>
+                                    xsi:type="notation:Bounds" y="88"/>
                                     </children>
                                     <children type="4002">
                                     <children type="4017">
@@ -272,10 +271,10 @@
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.1"/>
-                                    <layoutConstraint x="674"
-                                    xsi:type="notation:Bounds" y="130"/>
+                                    <layoutConstraint x="412"
+                                    xsi:type="notation:Bounds" y="88"/>
                                     </children>
-                                    <children type="4002 bw.internal.getSharedVariable">
+                                    <children type="4002">
                                     <children type="4017">
                                     <styles
                                     fontName="Segoe UI"
@@ -308,67 +307,8 @@
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.2"/>
                                     <layoutConstraint
-                                    height="40" width="40"
-                                    x="199"
-                                    xsi:type="notation:Bounds" y="130"/>
-                                    </children>
-                                    <children type="4002 bw.generalactivities.mapper">
-                                    <children type="4017">
-                                    <styles
-                                    fontName="Segoe UI"
-                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <layoutConstraint xsi:type="notation:Bounds"/>
-                                    </children>
-                                    <children type="4017">
-                                    <styles
-                                    fontName="Segoe UI"
-                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <layoutConstraint xsi:type="notation:Bounds"/>
-                                    </children>
-                                    <children type="4017">
-                                    <styles
-                                    fontName="Segoe UI"
-                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <layoutConstraint xsi:type="notation:Bounds"/>
-                                    </children>
-                                    <children type="4017">
-                                    <styles
-                                    fontName="Segoe UI"
-                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <layoutConstraint xsi:type="notation:Bounds"/>
-                                    </children>
-                                    <styles fontName="Segoe UI"
-                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <styles
-                                    backgroundColor="16777215"
-                                    gradientEndColor="50431"
-                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.3"/>
-                                    <layoutConstraint
-                                    height="40" width="161"
-                                    x="407"
-                                    xsi:type="notation:Bounds" y="130"/>
-                                    </children>
-                                    <children
-                                    description="Error Type and Error Message are set automatically from the error config variable.&#xd;&#xa;If error Code is not present in the error config variable, the error type and messages will be taken from the start activity.&#xd;&#xa;In case the start does not contains errorType and errorMessage, a standard error message and type is set.&#xd;&#xa;"
-                                    fillColor="13369343"
-                                    fontName="Segoe UI"
-                                    lineColor="6737151"
-                                    lineWidth="1"
-                                    transparency="0" type="Note" xsi:type="notation:Shape">
-                                    <children type="DiagramName" xsi:type="notation:BasicDecorationNode">
-                                    <element xsi:nil="true"/>
-                                    </children>
-                                    <children type="Description" xsi:type="notation:BasicDecorationNode">
-                                    <element xsi:nil="true"/>
-                                    </children>
-                                    <styles xsi:type="notation:TextStyle"/>
-                                    <styles xsi:type="notation:LineTypeStyle"/>
-                                    <element xsi:nil="true"/>
-                                    <layoutConstraint
-                                    height="210" width="395"
-                                    x="365"
-                                    xsi:type="notation:Bounds" y="211"/>
+                                    width="183" x="191"
+                                    xsi:type="notation:Bounds" y="88"/>
                                     </children>
                                     <styles xsi:type="notation:DrawerStyle"/>
                                     <styles xsi:type="notation:SortingStyle"/>
@@ -382,8 +322,8 @@
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <styles xsi:type="bwnotation:ResizingStyle"/>
                                     <element href="//0/@process/@activity/@activity"/>
-                                    <layoutConstraint height="431"
-                                    width="807" xsi:type="notation:Bounds"/>
+                                    <layoutConstraint height="220"
+                                    width="545" xsi:type="notation:Bounds"/>
                                 </children>
                                 <styles xsi:type="notation:SortingStyle"/>
                                 <styles xsi:type="notation:FilteringStyle"/>
@@ -392,7 +332,7 @@
                             <styles xsi:type="bwnotation:BackgroundStyle"/>
                             <styles xsi:type="bwnotation:ResizingStyle"/>
                             <element href="//0/@process/@activity"/>
-                            <layoutConstraint height="431" width="810" xsi:type="notation:Bounds"/>
+                            <layoutConstraint height="384" width="548" xsi:type="notation:Bounds"/>
                         </children>
                         <styles xsi:type="notation:SortingStyle"/>
                         <styles xsi:type="notation:FilteringStyle"/>
@@ -402,7 +342,7 @@
                     <styles xsi:type="bwnotation:BackgroundStyle"/>
                     <styles xsi:type="bwnotation:ResizingStyle"/>
                     <element href="//0/@process/@activity"/>
-                    <layoutConstraint height="455" width="810" x="1"
+                    <layoutConstraint height="408" width="548" x="1"
                         xsi:type="notation:Bounds" y="1"/>
                 </children>
                 <styles xsi:type="notation:SortingStyle"/>
@@ -411,7 +351,7 @@
             </children>
             <styles fontName="Segoe UI" lineColor="0" xsi:type="notation:ShapeStyle"/>
             <element href="//0/@process"/>
-            <layoutConstraint height="507" width="1152" xsi:type="notation:Bounds"/>
+            <layoutConstraint height="296" width="890" xsi:type="notation:Bounds"/>
         </children>
         <styles xsi:type="notation:DiagramStyle"/>
         <element href="//0"/>
@@ -428,58 +368,39 @@
         </edges>
         <edges
             source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2"
-            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.3" type="4006">
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.1" type="4006">
             <children type="6002">
                 <layoutConstraint xsi:type="notation:Location" y="40"/>
             </children>
             <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
             <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
             <element href="//0/@process/@activity/@activity/@links/@children.1"/>
-            <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
-        </edges>
-        <edges
-            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.3"
-            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.1" type="4006">
-            <children type="6002" visible="false">
-                <layoutConstraint xsi:type="notation:Location" y="40"/>
-            </children>
-            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
-            <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
-            <element href="//0/@process/@activity/@activity/@links/@children.2"/>
-            <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
+            <bendpoints points="[25, 0, -119, 0]$[120, 0, -24, 0]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
     </notation:Diagram>
     <tibex:NamespaceRegistry enabled="true">
         <tibex:namespaceItem
-            namespace="http://it.linkem/common/core/lehf/xsd/ErrorConfiguration/" prefix="ns"/>
+            namespace="http://it.linkem/common/core/lehf/AuditTypes/xsd" prefix="tns"/>
         <tibex:namespaceItem
-            namespace="http://it.linkem/common/core/lehf/xsd/parsecsv/ErrorConfiguration" prefix="tns"/>
+            namespace="http://it.linkem/common/core/lehf/InternalInterface_BuildDynamicProperties/0100" prefix="tns1"/>
         <tibex:namespaceItem
-            namespace="http://www.example.com/namespaces/tns/1591202093325" prefix="tns1"/>
+            namespace="http://it.linkem/common/core/lehf/InternalInterface_DynamicProperties/0100" prefix="tns2"/>
         <tibex:namespaceItem
-            namespace="http://www.w3.org/2001/XMLSchema-instance" prefix="xsi"/>
-        <tibex:namespaceItem
-            namespace="http://it.linkem/common/core/lehf/ErrorConfiguration/xsd" prefix="tns2"/>
+            namespace="http://it.linkem/common/core/lehf/InternalInterface_DynamicProperties/xsd" prefix="tns3"/>
     </tibex:NamespaceRegistry>
-    <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://it.linkem/common/core/lehf/xsd/ErrorConfiguration/"/>
-    <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://it.linkem/common/core/lehf/AuditTypes/xsd"/>
-    <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://it.linkem/common/core/lehf/ErrorConfiguration/xsd"/>
+    <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://it.linkem/common/core/lehf/InternalInterface_DynamicProperties/xsd"/>
     <bpws:variables>
         <bpws:variable element="ns:ProcessContext"
             name="_processContext" sca-bpel:internal="true"/>
-        <bpws:variable element="ns3:LogAudit" name="Start"
-            sca-bpel:internal="true" tibex:parameter="in"/>
-        <bpws:variable element="ns4:ErrorConfigurations"
-            name="GetErrorConfig" sca-bpel:internal="true"/>
-        <bpws:variable element="ns4:ErrorConfiguration" name="End-input"
+        <bpws:variable element="ns3:DynamicProperties"
+            name="MapToBuildDynamicProperties-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns3:DynamicProperties"
+            name="MapToBuildDynamicProperties" sca-bpel:internal="true"/>
+        <bpws:variable
+            element="ns3:InputInterface_BuildDynamicProperties"
+            name="Start" sca-bpel:internal="true" tibex:parameter="in"/>
+        <bpws:variable element="ns3:DynamicProperties" name="End-input"
             sca-bpel:internal="true" tibex:parameter="out"/>
-        <bpws:variable element="ns4:ErrorConfiguration"
-            name="RetrieveErrorDetails-input" sca-bpel:internal="true"/>
-        <bpws:variable element="ns4:ErrorConfiguration"
-            name="RetrieveErrorDetails" sca-bpel:internal="true"/>
-        <bpws:variable name="SystemException" sca-bpel:hotUpdate="false"
-            sca-bpel:privateProperty="true" sca-bpel:property="yes"
-            tibex:propertySource="/it.linkem.core.lehf.common.sh/Logging/System_Exception" type="xsd:string"/>
     </bpws:variables>
     <bpws:extensions>
         <bpws:extension mustUnderstand="no" namespace="http://www.eclipse.org/gmf/runtime/1.0.2/notation"/>
@@ -492,18 +413,16 @@
     <bpws:scope name="scope">
         <bpws:flow name="flow">
             <bpws:links>
-                <bpws:link name="StartToEnd" tibex:linkType="SUCCESS"/>
-                <bpws:link name="GetSharedVariableToEnd" tibex:linkType="SUCCESS"/>
-                <bpws:link name="RetriveErrorDetailsToEnd"
-                    tibex:label="success" tibex:linkType="SUCCESS"/>
+                <bpws:link name="StartToMapToBuildDynamicProperties" tibex:linkType="SUCCESS"/>
+                <bpws:link name="MapperToEnd" tibex:linkType="SUCCESS"/>
             </bpws:links>
             <bpws:extensionActivity>
                 <tibex:receiveEvent createInstance="yes"
                     eventTimeout="0" name="Start"
-                    tibex:xpdlId="08e51b9e-0d92-4bf3-8b55-e71c7d0856b5"
+                    tibex:xpdlId="86de0c61-e2ff-4a6c-8080-e03fe4081291"
                     variable="Start" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                     <bpws:sources>
-                        <bpws:source linkName="StartToEnd"/>
+                        <bpws:source linkName="StartToMapToBuildDynamicProperties"/>
                     </bpws:sources>
                     <tibex:eventSource>
                         <tibex:StartEvent xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
@@ -512,17 +431,16 @@
             </bpws:extensionActivity>
             <bpws:extensionActivity>
                 <tibex:activityExtension inputVariable="End-input"
-                    name="End" tibex:copyOf="RetrieveErrorDetails"
-                    tibex:xpdlId="f2af4de7-b771-4348-8dc9-453634342ae1" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                    name="End"
+                    tibex:copyOf="MapToBuildDynamicProperties"
+                    tibex:xpdlId="8cb0a147-c416-4f07-b93f-b84a0b5442ac" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                     <bpws:targets>
-                        <bpws:target linkName="RetriveErrorDetailsToEnd"/>
+                        <bpws:target linkName="MapperToEnd"/>
                     </bpws:targets>
                     <tibex:inputBindings>
                         <tibex:inputBinding
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;RetrieveErrorDetails&quot;/>&lt;xsl:template name=&quot;End-input&quot; match=&quot;/&quot;>&lt;xsl:copy-of select=&quot;$RetrieveErrorDetails&quot;/>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;MapToBuildDynamicProperties&quot;/>&lt;xsl:template name=&quot;End-input&quot; match=&quot;/&quot;>&lt;xsl:copy-of select=&quot;$MapToBuildDynamicProperties&quot;/>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
-                    <tibex:inputBinding
-                        expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">&lt;?xml version="1.0" encoding="UTF-8"?&gt; &lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:tns="http://it.linkem/common/core/lehf/ErrorConfiguration/xsd" version="2.0"&gt; &lt;xsl:template name="End-input" match="/"&gt; &lt;tns:ErrorConfiguration/&gt;&lt;/xsl:template&gt; &lt;/xsl:stylesheet&gt;</tibex:inputBinding>
                     <tibex:config>
                         <bwext:BWActivity
                             activityTypeID="bw.internal.end"
@@ -540,36 +458,20 @@
                 </tibex:activityExtension>
             </bpws:extensionActivity>
             <bpws:extensionActivity>
-                <tibex:extActivity name="GetErrorConfig"
-                    outputVariable="GetErrorConfig"
-                    tibex:xpdlId="359fbd2d-875a-46d1-b567-b645341302c3"
-                    type="bw.internal.getSharedVariable" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
-                    <bpws:targets>
-                        <bpws:target linkName="StartToEnd"/>
-                    </bpws:targets>
-                    <bpws:sources>
-                        <bpws:source linkName="GetSharedVariableToEnd"/>
-                    </bpws:sources>
-                    <tibex:GetSharedVariable variableName="ErrorItems" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
-                </tibex:extActivity>
-            </bpws:extensionActivity>
-            <bpws:extensionActivity>
                 <tibex:activityExtension
-                    inputVariable="RetrieveErrorDetails-input"
-                    name="RetrieveErrorDetails"
-                    outputVariable="RetrieveErrorDetails"
-                    tibex:xpdlId="473c3faa-7a73-4129-86d6-e61cc2913a69" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                    inputVariable="MapToBuildDynamicProperties-input"
+                    name="MapToBuildDynamicProperties"
+                    outputVariable="MapToBuildDynamicProperties"
+                    tibex:xpdlId="17e9b009-f5f2-4be7-8405-c384a3d96685" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                     <bpws:targets>
-                        <bpws:target linkName="GetSharedVariableToEnd"/>
+                        <bpws:target linkName="StartToMapToBuildDynamicProperties"/>
                     </bpws:targets>
                     <bpws:sources>
-                        <bpws:source linkName="RetriveErrorDetailsToEnd">
-                            <tibex:DesignExpression/>
-                        </bpws:source>
+                        <bpws:source linkName="MapperToEnd"/>
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns2=&quot;http://it.linkem/common/core/lehf/ErrorConfiguration/xsd&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;Start&quot;/>&lt;xsl:param name=&quot;GetErrorConfig&quot;/>&lt;xsl:param name=&quot;SystemException&quot;/>&lt;xsl:template name=&quot;RetrieveErrorDetails-input&quot; match=&quot;/&quot;>&lt;xsl:variable name=&quot;inputErrorCode&quot; select=&quot;$Start/auditErrorElement/ERRORCODE&quot;/>&lt;xsl:choose>&lt;xsl:when test=&quot;count($GetErrorConfig/tns2:ErrorConfiguration[./tns2:ErrorCode=$inputErrorCode])>0&quot;>&lt;tns2:ErrorConfiguration>&lt;xsl:variable name=&quot;singleConf&quot; select=&quot;$GetErrorConfig/tns2:ErrorConfiguration[./tns2:ErrorCode=$inputErrorCode][1]&quot;/>&lt;tns2:ErrorCode>&lt;xsl:value-of select=&quot;$singleConf/tns2:ErrorCode&quot;/>&lt;/tns2:ErrorCode>&lt;tns2:ErrorMessage>&lt;xsl:value-of select=&quot;$singleConf/tns2:ErrorMessage&quot;/>&lt;/tns2:ErrorMessage>&lt;tns2:ErrorType>&lt;xsl:value-of select=&quot;$singleConf/tns2:ErrorType&quot;/>&lt;/tns2:ErrorType>&lt;xsl:if test=&quot;$singleConf/tns2:HTTPStatusCode&quot;>&lt;tns2:HTTPStatusCode>&lt;xsl:copy-of select=&quot;$singleConf/tns2:HTTPStatusCode/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$singleConf/tns2:HTTPStatusCode&quot;/>&lt;/tns2:HTTPStatusCode>&lt;/xsl:if>&lt;xsl:if test=&quot;$singleConf/tns2:APIname&quot;>&lt;tns2:APIname>&lt;xsl:value-of select=&quot;$singleConf/tns2:APIname&quot;/>&lt;/tns2:APIname>&lt;/xsl:if>&lt;/tns2:ErrorConfiguration>&lt;/xsl:when>&lt;xsl:otherwise>&lt;xsl:choose>&lt;xsl:when test=&quot;string-length($Start/auditErrorElement/ERRORMESSAGE)>0 and string-length($Start/auditErrorElement/ERRORTYPE)>0&quot;>&lt;tns2:ErrorConfiguration>&lt;tns2:ErrorCode>&lt;xsl:value-of select=&quot;$Start/auditErrorElement/ERRORCODE&quot;/>&lt;/tns2:ErrorCode>&lt;tns2:ErrorMessage>&lt;xsl:value-of select=&quot;$Start/auditErrorElement/ERRORMESSAGE&quot;/>&lt;/tns2:ErrorMessage>&lt;tns2:ErrorType>&lt;xsl:value-of select=&quot;$Start/auditErrorElement/ERRORTYPE&quot;/>&lt;/tns2:ErrorType>&lt;/tns2:ErrorConfiguration>&lt;/xsl:when>&lt;xsl:otherwise>&lt;tns2:ErrorConfiguration>&lt;tns2:ErrorCode>&lt;xsl:value-of select=&quot;$Start/auditErrorElement/ERRORCODE&quot;/>&lt;/tns2:ErrorCode>&lt;tns2:ErrorMessage>&lt;xsl:value-of select=&quot;&amp;quot;Given Error code not exists. Missing Error Message or Missing Error Type. Please check the payload for details.&amp;quot;&quot;/>&lt;/tns2:ErrorMessage>&lt;tns2:ErrorType>&lt;xsl:value-of select=&quot;$SystemException&quot;/>&lt;/tns2:ErrorType>&lt;/tns2:ErrorConfiguration>&lt;/xsl:otherwise>&lt;/xsl:choose>&lt;/xsl:otherwise>&lt;/xsl:choose>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://it.linkem/common/core/lehf/AuditTypes/xsd&quot; xmlns:tns3=&quot;http://it.linkem/common/core/lehf/InternalInterface_DynamicProperties/xsd&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;Start&quot;/>&lt;xsl:template name=&quot;MapToBuildDynamicProperties-input&quot; match=&quot;/&quot;>&lt;tns3:DynamicProperties>&lt;tns3:Property>&lt;tns3:Name>&lt;xsl:value-of select=&quot;local-name($Start/tns:LogContextElement/APPLICATION_NAME)&quot;/>&lt;/tns3:Name>&lt;tns3:Value>&lt;xsl:value-of select=&quot;$Start/tns:LogContextElement/APPLICATION_NAME&quot;/>&lt;/tns3:Value>&lt;/tns3:Property>&lt;tns3:Property>&lt;tns3:Name>&lt;xsl:value-of select=&quot;local-name($Start/tns:LogContextElement/SOURCESYSTEM)&quot;/>&lt;/tns3:Name>&lt;tns3:Value>&lt;xsl:value-of select=&quot;$Start/tns:LogContextElement/SOURCESYSTEM&quot;/>&lt;/tns3:Value>&lt;/tns3:Property>&lt;tns3:Property>&lt;tns3:Name>&lt;xsl:value-of select=&quot;local-name($Start/tns:LogContextElement/STARTTIMESTAMP)&quot;/>&lt;/tns3:Name>&lt;tns3:Value>&lt;xsl:value-of select=&quot;$Start/tns:LogContextElement/STARTTIMESTAMP&quot;/>&lt;/tns3:Value>&lt;/tns3:Property>&lt;tns3:Property>&lt;tns3:Name>&lt;xsl:value-of select=&quot;local-name($Start/tns:LogContextElement/TRACKINGID)&quot;/>&lt;/tns3:Name>&lt;tns3:Value>&lt;xsl:value-of select=&quot;$Start/tns:LogContextElement/TRACKINGID&quot;/>&lt;/tns3:Value>&lt;/tns3:Property>&lt;xsl:for-each select=&quot;$Start/tns:LogContextElement/BUSINESSKEY&quot;>&lt;tns3:Property>&lt;tns3:Name>&lt;xsl:value-of select=&quot;concat(local-name(name),&amp;quot;_BK&amp;quot;)&quot;/>&lt;/tns3:Name>&lt;tns3:Value>&lt;xsl:value-of select=&quot;value&quot;/>&lt;/tns3:Value>&lt;/tns3:Property>&lt;/xsl:for-each>&lt;/tns3:DynamicProperties>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:config>
                         <bwext:BWActivity
@@ -578,12 +480,12 @@
                             xmlns:activityconfig="http://tns.tibco.com/bw/model/activityconfig"
                             xmlns:bwext="http://tns.tibco.com/bw/model/core/bwext"
                             xmlns:generalactivities="http://ns.tibco.com/bw/palette/generalactivities"
-                            xmlns:xsd="http://it.linkem/common/core/lehf/ErrorConfiguration/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                            xmlns:xsd="http://it.linkem/common/core/lehf/InternalInterface_DynamicProperties/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                             <activityConfig>
                                 <properties name="config" xsi:type="activityconfig:EMFProperty">
                                     <type href="http://ns.tibco.com/bw/palette/generalactivities#//Mapper"/>
                                     <value
-                                    inputQName="xsd:ErrorConfiguration" xsi:type="generalactivities:Mapper"/>
+                                    inputQName="xsd:DynamicProperties" xsi:type="generalactivities:Mapper"/>
                                 </properties>
                             </activityConfig>
                         </bwext:BWActivity>
