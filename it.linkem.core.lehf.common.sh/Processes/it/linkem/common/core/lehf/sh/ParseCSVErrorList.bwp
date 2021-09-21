@@ -185,6 +185,8 @@
                 <sequence>
                     <element maxOccurs="1" minOccurs="1" name="text" type="string"/>
                     <element maxOccurs="1" minOccurs="1"
+                        name="startRecord" type="integer"/>
+                    <element maxOccurs="1" minOccurs="1"
                         name="noOfRecords" type="integer"/>
                     <element maxOccurs="1" minOccurs="0"
                         name="SkipHeaderCharacters" type="integer"/>
@@ -354,8 +356,8 @@
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.1"/>
-                                    <layoutConstraint x="417"
-                                    xsi:type="notation:Bounds" y="116"/>
+                                    <layoutConstraint x="544"
+                                    xsi:type="notation:Bounds" y="115"/>
                                     </children>
                                     <children type="4002 bw.parse.parsedata">
                                     <children type="4017">
@@ -395,7 +397,7 @@
                                     <element href="//0/@process/@activity/@activity/@activities.2"/>
                                     <layoutConstraint
                                     height="40" width="40"
-                                    x="185"
+                                    x="370"
                                     xsi:type="notation:Bounds" y="116"/>
                                     </children>
                                     <children
@@ -449,7 +451,7 @@
                                     <styles xsi:type="bwnotation:ResizingStyle"/>
                                     <element href="//0/@process/@activity/@activity"/>
                                     <layoutConstraint height="384"
-                                    width="550" xsi:type="notation:Bounds"/>
+                                    width="677" xsi:type="notation:Bounds"/>
                                 </children>
                                 <styles xsi:type="notation:SortingStyle"/>
                                 <styles xsi:type="notation:FilteringStyle"/>
@@ -459,7 +461,7 @@
                             <styles xsi:type="bwnotation:BackgroundStyle"/>
                             <styles xsi:type="bwnotation:ResizingStyle"/>
                             <element href="//0/@process/@activity"/>
-                            <layoutConstraint height="384" width="553" xsi:type="notation:Bounds"/>
+                            <layoutConstraint height="384" width="680" xsi:type="notation:Bounds"/>
                         </children>
                         <styles xsi:type="notation:SortingStyle"/>
                         <styles xsi:type="notation:FilteringStyle"/>
@@ -469,7 +471,7 @@
                     <styles xsi:type="bwnotation:BackgroundStyle"/>
                     <styles xsi:type="bwnotation:ResizingStyle"/>
                     <element href="//0/@process/@activity"/>
-                    <layoutConstraint height="408" width="553" x="1"
+                    <layoutConstraint height="408" width="680" x="1"
                         xsi:type="notation:Bounds" y="1"/>
                 </children>
                 <styles xsi:type="notation:SortingStyle"/>
@@ -478,7 +480,7 @@
             </children>
             <styles fontName="Segoe UI" lineColor="0" xsi:type="notation:ShapeStyle"/>
             <element href="//0/@process"/>
-            <layoutConstraint height="460" width="895" xsi:type="notation:Bounds"/>
+            <layoutConstraint height="460" width="1022" xsi:type="notation:Bounds"/>
         </children>
         <styles xsi:type="notation:DiagramStyle"/>
         <element href="//0"/>
@@ -632,7 +634,7 @@
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://tns.tibco.com/bw/activity/parse/xsd/+4a34842c-ce71-47d4-a545-fa9e7ba034bb+input&quot; xmlns:tns4=&quot;http://it.linkem/common/core/lehf/ErrorConfiguration/xsd&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;Start&quot;/>&#xa;    &lt;xsl:template name=&quot;ParseCSVstring-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns:Input>&#xa;            &lt;text>&#xa;                &lt;xsl:value-of select=&quot;substring-after($Start/tns4:InputCSV , 'BSLProcess&amp;#xD;&amp;#xA;' )&quot;/>&#xa;            &lt;/text>&#xa;            &lt;noOfRecords>&#xa;                &lt;xsl:value-of select=&quot;-1&quot;/>&#xa;            &lt;/noOfRecords>&#xa;        &lt;/tns:Input>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://tns.tibco.com/bw/activity/parse/xsd/+4a34842c-ce71-47d4-a545-fa9e7ba034bb+input&quot; xmlns:tns4=&quot;http://it.linkem/common/core/lehf/ErrorConfiguration/xsd&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;Start&quot;/>&lt;xsl:template name=&quot;ParseCSVstring-input&quot; match=&quot;/&quot;>&lt;tns:Input>&lt;text>&lt;xsl:value-of select=&quot;$Start/tns4:InputCSV&quot;/>&lt;/text>&lt;startRecord>&lt;xsl:value-of select=&quot;2&quot;/>&lt;/startRecord>&lt;noOfRecords>&lt;xsl:value-of select=&quot;-1&quot;/>&lt;/noOfRecords>&lt;/tns:Input>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:config>
                         <bwext:BWActivity
@@ -646,7 +648,8 @@
                                     <value
                                     dataFormat="dataFormatResource"
                                     encoding="ASCII"
-                                    inputType="String" xsi:type="parse:ParseData"/>
+                                    inputType="String"
+                                    manuallySpecifiedStartRecord="true" xsi:type="parse:ParseData"/>
                                 </properties>
                             </activityConfig>
                         </bwext:BWActivity>

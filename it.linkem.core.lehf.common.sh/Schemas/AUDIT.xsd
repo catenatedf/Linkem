@@ -93,12 +93,16 @@
 		</xsd:complexType>
 	</xsd:element>
 
+	<xsd:complexType name="updateLogContextInterfaceType">
+		<xsd:sequence>
+			<xsd:element maxOccurs="1" minOccurs="0" name="APPLICATION_NAME" type="xsd:string"/>
+			<xsd:element maxOccurs="1" minOccurs="0" name="SOURCESYSTEM" type="xsd:string"/>
+			<xsd:element maxOccurs="1" minOccurs="0" name="STARTTIMESTAMP" type="xsd:dateTime"/>
+			<xsd:element maxOccurs="1" minOccurs="0" name="TRACKINGID" type="xsd:string"/><!-- id tecnico (es, tib:uuid) -->
+			<xsd:element maxOccurs="unbounded" minOccurs="0" name="BUSINESSKEY" type="tns:businessKeyType"/><!-- business id's-->
+		</xsd:sequence>
+	</xsd:complexType>
 
-
-
-<!-- logger parameters
-
-	<element name="loggerParams" type="ns1:auditElementType"/>
- -->
+	<xsd:element name="updateLogContextInterface"  type="tns:updateLogContextInterfaceType" />
 
 </xsd:schema>

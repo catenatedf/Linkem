@@ -20,4 +20,6 @@
   <sca:property xmi:id="_4njOYOkPEemJ7d3WPjVHsg" name="/it.linkem.common.core.lehf.sh/Logging/ERROR_SEVERITY" type="XMLSchema:string" publicAccess="true" scalable="true"/>
   <sca:property xmi:id="_40EncOkPEemJ7d3WPjVHsg" name="/it.linkem.common.core.lehf.sh/Logging/PROJECT" type="XMLSchema:string" publicAccess="true" scalable="true"/>
   <sca:property xmi:id="_5BszwOkPEemJ7d3WPjVHsg" name="/it.linkem.common.core.lehf.sh/Logging/LOGGER_NAME" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_IsE2wBrqEeynObKsvD-eCQ" name="/it.linkem.common.core.lehf.sh/DynamicLogContext/BusinessKeyNameToken" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_Nf5LEBrqEeynObKsvD-eCQ" name="/it.linkem.common.core.lehf.sh/DynamicLogContext/BusinessKeyNameTokenSeparator" type="XMLSchema:string" publicAccess="true" scalable="true"/>
 </sca:composite>
