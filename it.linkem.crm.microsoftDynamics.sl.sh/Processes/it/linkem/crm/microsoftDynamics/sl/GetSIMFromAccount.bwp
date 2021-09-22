@@ -14,9 +14,8 @@
     xmlns:ns13="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrievemultiple+81fe79b6-1303-474d-89fa-a3f312c04ebd+output"
     xmlns:ns2="http://tns.tibco.com/bw/palette/internal/activityerror+bw.dynamicscrm.RetrieveMultipleEntity"
     xmlns:ns3="http://www.example.org/CRM_SimCheck"
-    xmlns:ns4="http://it.linkem/core/lehf/common/AuditTypes/0100"
-    xmlns:ns5="http://it.linkem/core/lehf/common/xsd/loggingwrapper/internal"
-    xmlns:ns6="http://it.linkem/core/lehf/common/loggerType/0100"
+    xmlns:ns4="http://it.linkem/common/core/lehf/AuditTypes/xsd"
+
     xmlns:ns7="http://tns.tibco.com/bw/palette/internal/activityerror+bw.internal.end"
     xmlns:ns8="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrievemultiple+30f54bac-cc52-44ff-b6e0-1f4bea566861+input"
     xmlns:ns9="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrievemultiple+30f54bac-cc52-44ff-b6e0-1f4bea566861+output"
@@ -219,8 +218,8 @@
         <schema elementFormDefault="unqualified"
             targetNamespace="http://tns.tibco.com/bw/palette/internal/activityerror+bw.internal.end"
             xmlns="http://www.w3.org/2001/XMLSchema"
-            xmlns:Q1="http://it.linkem/core/lehf/common/AuditTypes/0100" xmlns:tns="http://tns.tibco.com/bw/palette/internal/activityerror+bw.internal.end">
-            <import namespace="http://it.linkem/core/lehf/common/AuditTypes/0100"/>
+            xmlns:Q1="http://it.linkem/common/core/lehf/AuditTypes/xsd" xmlns:tns="http://tns.tibco.com/bw/palette/internal/activityerror+bw.internal.end">
+            <import namespace="http://it.linkem/common/core/lehf/AuditTypes/xsd"/>
             <element name="ActivityErrorData" type="tns:ActivityErrorDataType"/>
             <complexType name="ActivityErrorDataType">
                 <choice>
@@ -326,7 +325,7 @@
         input="{http://www.example.org/CRM_SimCheck}GetSimFromAccount_Input" output="{http://www.example.org/CRM_SimCheck}GetSimFromAccount_Output">
         <tibex:errorList>
             <tibex:error
-                error="{http://it.linkem/core/lehf/common/AuditTypes/0100}LogAudit" name="LogAudit"/>
+                error="{http://it.linkem/common/core/lehf/AuditTypes/xsd}LogAudit" name="LogAudit"/>
         </tibex:errorList>
     </tibex:ProcessInterface>
     <tibex:ProcessTemplateConfigurations/>
@@ -432,113 +431,33 @@
                                     <layoutConstraint x="1339"
                                     xsi:type="notation:Bounds" y="124"/>
                                     </children>
-                                    <children type="4002">
-                                    <children type="4017">
-                                    <styles
-                                    fontName="Segoe UI"
-                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.2"/>
-                                    <layoutConstraint xsi:type="notation:Bounds"/>
-                                    </children>
-                                    <children type="4017">
-                                    <styles
-                                    fontName="Segoe UI"
-                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.2"/>
-                                    <layoutConstraint xsi:type="notation:Bounds"/>
-                                    </children>
-                                    <children type="4017">
-                                    <styles
-                                    fontName="Segoe UI"
-                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.2"/>
-                                    <layoutConstraint xsi:type="notation:Bounds"/>
-                                    </children>
-                                    <children type="4017">
-                                    <styles
-                                    fontName="Segoe UI"
-                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.2"/>
-                                    <layoutConstraint xsi:type="notation:Bounds"/>
-                                    </children>
-                                    <styles fontName="Segoe UI"
-                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <styles
-                                    backgroundColor="16777215"
-                                    gradientEndColor="50431"
-                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.2"/>
-                                    <layoutConstraint
-                                    width="295" x="253"
-                                    xsi:type="notation:Bounds" y="124"/>
-                                    </children>
-                                    <children type="4002">
-                                    <children type="4017">
-                                    <styles
-                                    fontName="Segoe UI"
-                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.3"/>
-                                    <layoutConstraint xsi:type="notation:Bounds"/>
-                                    </children>
-                                    <children type="4017">
-                                    <styles
-                                    fontName="Segoe UI"
-                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.3"/>
-                                    <layoutConstraint xsi:type="notation:Bounds"/>
-                                    </children>
-                                    <children type="4017">
-                                    <styles
-                                    fontName="Segoe UI"
-                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.3"/>
-                                    <layoutConstraint xsi:type="notation:Bounds"/>
-                                    </children>
-                                    <children type="4017">
-                                    <styles
-                                    fontName="Segoe UI"
-                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.3"/>
-                                    <layoutConstraint xsi:type="notation:Bounds"/>
-                                    </children>
-                                    <styles fontName="Segoe UI"
-                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <styles
-                                    backgroundColor="16777215"
-                                    gradientEndColor="50431"
-                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.3"/>
-                                    <layoutConstraint
-                                    width="295" x="1040"
-                                    xsi:type="notation:Bounds" y="124"/>
-                                    </children>
                                     <children type="4002 bw.internal.getSharedVariable">
                                     <children type="4017">
                                     <styles
                                     fontName="Segoe UI"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.4"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.2"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles
                                     fontName="Segoe UI"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.4"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.2"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles
                                     fontName="Segoe UI"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.4"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.2"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles
                                     fontName="Segoe UI"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.4"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.2"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <styles fontName="Segoe UI"
@@ -547,7 +466,7 @@
                                     backgroundColor="16777215"
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.4"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.2"/>
                                     <layoutConstraint
                                     height="40" width="40"
                                     x="99"
@@ -584,7 +503,7 @@
                                     backgroundColor="16777215"
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.5"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.3"/>
                                     <layoutConstraint
                                     height="40" width="339"
                                     x="505"
@@ -621,7 +540,7 @@
                                     backgroundColor="16777215"
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.6"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.4"/>
                                     <layoutConstraint
                                     height="40" width="339"
                                     x="512"
@@ -675,7 +594,7 @@
         <element href="//0"/>
         <edges
             source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0"
-            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.4" type="4006">
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2" type="4006">
             <children type="6002">
                 <layoutConstraint xsi:type="notation:Location" y="40"/>
             </children>
@@ -685,8 +604,8 @@
             <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
         <edges
-            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.4"
-            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2" type="4006">
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2"
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.3" type="4006">
             <children type="6002">
                 <layoutConstraint xsi:type="notation:Location" y="40"/>
             </children>
@@ -696,7 +615,7 @@
             <bendpoints points="[25, 7, -242, -65]$[214, 58, -53, -14]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
         <edges
-            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.3"
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.4"
             target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.1" type="4006">
             <children type="6002">
                 <layoutConstraint xsi:type="notation:Location" y="40"/>
@@ -704,40 +623,18 @@
             <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
             <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
             <element href="//0/@process/@activity/@activity/@links/@children.2"/>
-            <bendpoints points="[69, -24, -106, 38]$[151, -53, -24, 9]" xsi:type="notation:RelativeBendpoints"/>
+            <bendpoints
+                points="[133, 7, -192, 115]$[325, 7, 0, 115]$[325, -83, 0, 25]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
         <edges
-            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2"
-            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.5" type="4006">
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.3"
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.4" type="4006">
             <children type="6002">
                 <layoutConstraint xsi:type="notation:Location" y="40"/>
             </children>
             <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
             <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
             <element href="//0/@process/@activity/@activity/@links/@children.3"/>
-            <bendpoints points="[63, 25, -188, -73]$[188, 74, -63, -24]" xsi:type="notation:RelativeBendpoints"/>
-        </edges>
-        <edges
-            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.6"
-            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.3" type="4006">
-            <children type="6002">
-                <layoutConstraint xsi:type="notation:Location" y="40"/>
-            </children>
-            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
-            <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
-            <element href="//0/@process/@activity/@activity/@links/@children.4"/>
-            <bendpoints
-                points="[133, 7, -192, 115]$[325, 7, 0, 115]$[325, -83, 0, 25]" xsi:type="notation:RelativeBendpoints"/>
-        </edges>
-        <edges
-            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.5"
-            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.6" type="4006">
-            <children type="6002">
-                <layoutConstraint xsi:type="notation:Location" y="40"/>
-            </children>
-            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
-            <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
-            <element href="//0/@process/@activity/@activity/@links/@children.5"/>
             <bendpoints points="[7, 25, 0, -83]$[0, 84, -7, -24]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
     </notation:Diagram>
@@ -745,7 +642,7 @@
         <tibex:namespaceItem
             namespace="http://www.example.org/CRM_SimCheck" prefix="tns"/>
         <tibex:namespaceItem
-            namespace="http://it.linkem/core/lehf/common/AuditTypes/0100" prefix="tns9"/>
+            namespace="http://it.linkem/common/core/lehf/AuditTypes/xsd" prefix="tns9"/>
         <tibex:namespaceItem
             namespace="http://www.tibco.com/bw/xpath/bw-custom-functions" prefix="bw"/>
         <tibex:namespaceItem
@@ -753,9 +650,8 @@
         <tibex:namespaceItem
             namespace="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrievemultiple+30f54bac-cc52-44ff-b6e0-1f4bea566861+input" prefix="tns2"/>
     </tibex:NamespaceRegistry>
-    <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://it.linkem/core/lehf/common/AuditTypes/0100"/>
-    <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://it.linkem/core/lehf/common/xsd/loggingwrapper/internal"/>
-    <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://it.linkem/core/lehf/common/loggerType/0100"/>
+    <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://it.linkem/common/core/lehf/AuditTypes/xsd"/>
+
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.example.org/CRM_SimCheck"/>
     <bpws:variables>
         <bpws:variable element="ns:ProcessContext"
@@ -776,14 +672,6 @@
         <bpws:variable name="INFO_Severity" sca-bpel:hotUpdate="false"
             sca-bpel:privateProperty="true" sca-bpel:property="yes"
             tibex:propertySource="//it.linkem.core.lehf.common.sh///it.linkem.core.lehf.common.sh/Logging/INFO_SEVERITY" type="xsd:string"/>
-        <bpws:variable element="ns4:LogAudit"
-            name="Log_Start_GetSIMFromAccount-input" sca-bpel:internal="true"/>
-        <bpws:variable element="ns5:LEHF_Output"
-            name="Log_Start_GetSIMFromAccount" sca-bpel:internal="true"/>
-        <bpws:variable element="ns4:LogAudit"
-            name="Log_End_GetSIMFromAccount-input" sca-bpel:internal="true"/>
-        <bpws:variable element="ns5:LEHF_Output"
-            name="Log_End_GetSIMFromAccount" sca-bpel:internal="true"/>
         <bpws:variable element="ns6:loggerParams" name="GetLoggerParams" sca-bpel:internal="true"/>
         <bpws:variable name="ERROR_Severity" sca-bpel:hotUpdate="false"
             sca-bpel:privateProperty="true" sca-bpel:property="yes"
@@ -831,12 +719,8 @@
             <bpws:links>
                 <bpws:link name="StartToGetLoggerParams" tibex:linkType="SUCCESS"/>
                 <bpws:link
-                    name="GetLoggerParamsToLog_Start_GetIMSIByAccount" tibex:linkType="SUCCESS"/>
-                <bpws:link name="Log_End_GetIMSIByAccountToEnd" tibex:linkType="SUCCESS"/>
-                <bpws:link
-                    name="Log_Start_GetSIMFromAccountToRetrieveMultipleEntities_2" tibex:linkType="SUCCESS"/>
-                <bpws:link
-                    name="RetrieveMultipleEntities_SimoneToLog_End_GetSIMFromAccount" tibex:linkType="SUCCESS"/>
+                    name="GetLoggerParamsToRetrieveMultipleEntities_NoGrant" tibex:linkType="SUCCESS"/>
+                <bpws:link name="RetrieveMultipleEntities_SimoneToEnd" tibex:linkType="SUCCESS"/>
                 <bpws:link
                     name="RetrieveMultipleEntities_NoGrantToRetrieveMultipleEntities_Simone" tibex:linkType="SUCCESS"/>
             </bpws:links>
@@ -858,7 +742,7 @@
                     name="End"
                     tibex:xpdlId="6e23e1b3-274a-4f62-8440-46f5bfc15b90" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                     <bpws:targets>
-                        <bpws:target linkName="Log_End_GetIMSIByAccountToEnd"/>
+                        <bpws:target linkName="RetrieveMultipleEntities_SimoneToEnd"/>
                     </bpws:targets>
                     <tibex:inputBindings>
                         <tibex:inputBinding
@@ -881,52 +765,6 @@
                 </tibex:activityExtension>
             </bpws:extensionActivity>
             <bpws:extensionActivity>
-                <tibex:extActivity
-                    inputVariable="Log_Start_GetSIMFromAccount-input"
-                    name="Log_Start_GetSIMFromAccount"
-                    outputVariable="Log_Start_GetSIMFromAccount"
-                    tibex:xpdlId="14db39c8-9179-4170-bc25-7337a140afe4"
-                    type="bw.generalactivities.callprocess" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
-                    <bpws:targets>
-                        <bpws:target linkName="GetLoggerParamsToLog_Start_GetIMSIByAccount"/>
-                    </bpws:targets>
-                    <bpws:sources>
-                        <bpws:source linkName="Log_Start_GetSIMFromAccountToRetrieveMultipleEntities_2">
-                            <tibex:DesignExpression/>
-                        </bpws:source>
-                    </bpws:sources>
-                    <tibex:inputBindings>
-                        <tibex:inputBinding coercion=""
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns9=&quot;http://it.linkem/core/lehf/common/AuditTypes/0100&quot; xmlns:bw=&quot;http://www.tibco.com/bw/xpath/bw-custom-functions&quot; xmlns:tib=&quot;http://www.tibco.com/bw/xslt/custom-functions&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;GetLoggerParams&quot;/>&lt;xsl:param name=&quot;INFO_Severity&quot;/>&lt;xsl:param name=&quot;Start&quot;/>&lt;xsl:template name=&quot;Log_Start_GetIMSIByIp-input&quot; match=&quot;/&quot;>&lt;tns9:LogAudit>&lt;auditElement>&lt;APPLICATION_NAME>&lt;xsl:value-of select=&quot;$GetLoggerParams/APPLICATION_NAME&quot;/>&lt;/APPLICATION_NAME>&lt;xsl:if test=&quot;$GetLoggerParams/SOURCESYSTEM&quot;>&lt;SOURCESYSTEM>&lt;xsl:value-of select=&quot;$GetLoggerParams/SOURCESYSTEM&quot;/>&lt;/SOURCESYSTEM>&lt;/xsl:if>&lt;STARTTIMESTAMP>&lt;xsl:value-of select=&quot;current-dateTime()&quot;/>&lt;/STARTTIMESTAMP>&lt;SEVERITY>&lt;xsl:value-of select=&quot;$INFO_Severity&quot;/>&lt;/SEVERITY>&lt;TRACKID>&lt;xsl:value-of select=&quot;$GetLoggerParams/TRACKID&quot;/>&lt;/TRACKID>&lt;BUSINESSKEY>&lt;xsl:value-of select=&quot;$GetLoggerParams/BUSINESSKEY&quot;/>&lt;/BUSINESSKEY>&lt;PROCESSSTACK>&lt;xsl:value-of select=&quot;concat(bw:getModuleProperty(&amp;quot;BW.PROCESS.STACK&amp;quot;),&amp;quot;/&amp;quot;,bw:getModuleProperty(&amp;quot;BW.ACTIVITY.NAME&amp;quot;))&quot;/>&lt;/PROCESSSTACK>&lt;PAYLOAD>&lt;xsl:value-of select=&quot;tib:render-xml($Start, false(),true())&quot;/>&lt;/PAYLOAD>&lt;/auditElement>&lt;/tns9:LogAudit>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
-                    </tibex:inputBindings>
-                    <tibex:CallProcess
-                        moduleRef="it.linkem.core.lehf.common.sh"
-                        subProcessName="sharedaudit.LoggingWrapper" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
-                </tibex:extActivity>
-            </bpws:extensionActivity>
-            <bpws:extensionActivity>
-                <tibex:extActivity
-                    inputVariable="Log_End_GetSIMFromAccount-input"
-                    name="Log_End_GetSIMFromAccount"
-                    outputVariable="Log_End_GetSIMFromAccount"
-                    tibex:xpdlId="f51cb5e7-0f78-417f-a89f-9c561383b315"
-                    type="bw.generalactivities.callprocess" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
-                    <bpws:targets>
-                        <bpws:target linkName="RetrieveMultipleEntities_SimoneToLog_End_GetSIMFromAccount"/>
-                    </bpws:targets>
-                    <bpws:sources>
-                        <bpws:source linkName="Log_End_GetIMSIByAccountToEnd"/>
-                    </bpws:sources>
-                    <tibex:inputBindings>
-                        <tibex:inputBinding coercion=""
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns9=&quot;http://it.linkem/core/lehf/common/AuditTypes/0100&quot; xmlns:bw=&quot;http://www.tibco.com/bw/xpath/bw-custom-functions&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;GetLoggerParams&quot;/>&lt;xsl:param name=&quot;INFO_Severity&quot;/>&lt;xsl:template name=&quot;Log_End_GetIMSIByAccount-input&quot; match=&quot;/&quot;>&lt;tns9:LogAudit>&lt;auditElement>&lt;APPLICATION_NAME>&lt;xsl:value-of select=&quot;$GetLoggerParams/APPLICATION_NAME&quot;/>&lt;/APPLICATION_NAME>&lt;xsl:if test=&quot;$GetLoggerParams/SOURCESYSTEM&quot;>&lt;SOURCESYSTEM>&lt;xsl:value-of select=&quot;$GetLoggerParams/SOURCESYSTEM&quot;/>&lt;/SOURCESYSTEM>&lt;/xsl:if>&lt;STARTTIMESTAMP>&lt;xsl:value-of select=&quot;current-dateTime()&quot;/>&lt;/STARTTIMESTAMP>&lt;SEVERITY>&lt;xsl:value-of select=&quot;$INFO_Severity&quot;/>&lt;/SEVERITY>&lt;TRACKID>&lt;xsl:value-of select=&quot;$GetLoggerParams/TRACKID&quot;/>&lt;/TRACKID>&lt;BUSINESSKEY>&lt;xsl:value-of select=&quot;$GetLoggerParams/BUSINESSKEY&quot;/>&lt;/BUSINESSKEY>&lt;PROCESSSTACK>&lt;xsl:value-of select=&quot;concat(bw:getModuleProperty(&amp;quot;BW.PROCESS.STACK&amp;quot;),&amp;quot;/&amp;quot;,bw:getModuleProperty(&amp;quot;BW.ACTIVITY.NAME&amp;quot;))&quot;/>&lt;/PROCESSSTACK>&lt;PAYLOAD>&lt;xsl:value-of select=&quot;&amp;quot;&amp;quot;&quot;/>&lt;/PAYLOAD>&lt;/auditElement>&lt;/tns9:LogAudit>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
-                    </tibex:inputBindings>
-                    <tibex:CallProcess
-                        moduleRef="it.linkem.core.lehf.common.sh"
-                        subProcessName="sharedaudit.LoggingWrapper" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
-                </tibex:extActivity>
-            </bpws:extensionActivity>
-            <bpws:extensionActivity>
                 <tibex:extActivity name="GetLoggerParams"
                     outputVariable="GetLoggerParams"
                     tibex:xpdlId="ab17649d-546e-4ad4-b7ee-0d38f52d6592"
@@ -935,7 +773,7 @@
                         <bpws:target linkName="StartToGetLoggerParams"/>
                     </bpws:targets>
                     <bpws:sources>
-                        <bpws:source linkName="GetLoggerParamsToLog_Start_GetIMSIByAccount"/>
+                        <bpws:source linkName="GetLoggerParamsToRetrieveMultipleEntities_NoGrant"/>
                     </bpws:sources>
                     <tibex:GetSharedVariable inline="true"
                         variableName="//it.linkem.core.lehf.common.sh//loggerParams" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
@@ -948,7 +786,7 @@
                     outputVariable="RetrieveMultipleEntities_NoGrant"
                     tibex:xpdlId="30f54bac-cc52-44ff-b6e0-1f4bea566861" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                     <bpws:targets>
-                        <bpws:target linkName="Log_Start_GetSIMFromAccountToRetrieveMultipleEntities_2"/>
+                        <bpws:target linkName="GetLoggerParamsToRetrieveMultipleEntities_NoGrant"/>
                     </bpws:targets>
                     <bpws:sources>
                         <bpws:source linkName="RetrieveMultipleEntities_NoGrantToRetrieveMultipleEntities_Simone"/>
@@ -1000,7 +838,7 @@
                         <bpws:target linkName="RetrieveMultipleEntities_NoGrantToRetrieveMultipleEntities_Simone"/>
                     </bpws:targets>
                     <bpws:sources>
-                        <bpws:source linkName="RetrieveMultipleEntities_SimoneToLog_End_GetSIMFromAccount"/>
+                        <bpws:source linkName="RetrieveMultipleEntities_SimoneToEnd"/>
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding
