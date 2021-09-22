@@ -3,7 +3,7 @@
 	<name>it.linkem.rete.pcrf.sl.sh</name>
 	<comment></comment>
 	<projects>
-		<project>it.linkem.core.lehf.common.sh</project>
+		<project>it.linkem.common.core.lehf.sh</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
