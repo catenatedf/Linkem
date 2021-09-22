@@ -14,8 +14,8 @@
     xmlns:ns3="http://www.example.org/CRM_SimCheck"
     xmlns:ns4="http://it.linkem/rete/pcrf/getImsiByIp/sl/xsd"
     xmlns:ns5="http://it.linkem/common/core/lehf/AuditTypes/xsd"
-    xmlns:ns6="http://it.linkem/core/lehf/common/AuditTypes/0100"
-    xmlns:ns7="http://it.linkem/core/lehf/common/xsd/loggingwrapper/internal"
+    xmlns:ns6="http://it.linkem/common/core/lehf/AuditTypes/xsd"
+
     xmlns:ns8="http://tns.tibco.com/bw/palette/internal/activityerror+bw.internal.end"
     xmlns:ns9="http://tns.tibco.com/bw/palette/internal/activityerror+d9de59e8-0171-4c9d-a229-f0735d0329f7"
     xmlns:sca="http://docs.oasis-open.org/ns/opencsa/sca/200912"
@@ -186,7 +186,7 @@
         <schema elementFormDefault="unqualified"
             targetNamespace="http://tns.tibco.com/bw/palette/internal/activityerror+bw.internal.end"
             xmlns="http://www.w3.org/2001/XMLSchema"
-            xmlns:Q1="http://it.linkem/core/lehf/common/AuditTypes/0100" xmlns:tns="http://tns.tibco.com/bw/palette/internal/activityerror+bw.internal.end">
+            xmlns:Q1="http://it.linkem/common/core/lehf/AuditTypes/xsd" xmlns:tns="http://tns.tibco.com/bw/palette/internal/activityerror+bw.internal.end">
             <element name="ActivityErrorData" type="tns:ActivityErrorDataType"/>
             <complexType name="ActivityErrorDataType">
                 <choice>
@@ -197,7 +197,7 @@
         <schema elementFormDefault="unqualified"
             targetNamespace="http://tns.tibco.com/bw/palette/internal/activityerror+d9de59e8-0171-4c9d-a229-f0735d0329f7"
             xmlns="http://www.w3.org/2001/XMLSchema"
-            xmlns:Q1="http://it.linkem/core/lehf/common/AuditTypes/0100" xmlns:tns="http://tns.tibco.com/bw/palette/internal/activityerror+d9de59e8-0171-4c9d-a229-f0735d0329f7">
+            xmlns:Q1="http://it.linkem/common/core/lehf/AuditTypes/xsd" xmlns:tns="http://tns.tibco.com/bw/palette/internal/activityerror+d9de59e8-0171-4c9d-a229-f0735d0329f7">
             <element name="ActivityErrorData" type="tns:ActivityErrorDataType"/>
             <complexType name="ActivityErrorDataType">
                 <choice>
@@ -208,7 +208,7 @@
         <schema elementFormDefault="unqualified"
             targetNamespace="http://tns.tibco.com/bw/palette/internal/activityerror+fd774606-c085-45a7-8c88-9a2bfc9d0eff"
             xmlns="http://www.w3.org/2001/XMLSchema"
-            xmlns:Q1="http://it.linkem/core/lehf/common/AuditTypes/0100" xmlns:tns="http://tns.tibco.com/bw/palette/internal/activityerror+fd774606-c085-45a7-8c88-9a2bfc9d0eff">
+            xmlns:Q1="http://it.linkem/common/core/lehf/AuditTypes/xsd" xmlns:tns="http://tns.tibco.com/bw/palette/internal/activityerror+fd774606-c085-45a7-8c88-9a2bfc9d0eff">
             <element name="ActivityErrorData" type="tns:ActivityErrorDataType"/>
             <complexType name="ActivityErrorDataType">
                 <choice>
@@ -226,7 +226,7 @@
         input="{http://it/linkem/5g/SimCheck/xsd}SimCheckBSL_Input" output="{http://it/linkem/5g/SimCheck/xsd}SimCheckBSL_Output">
         <tibex:errorList>
             <tibex:error
-                error="{http://it.linkem/core/lehf/common/AuditTypes/0100}LogAudit" name="LogAudit"/>
+                error="{http://it.linkem/common/core/lehf/AuditTypes/xsd}LogAudit" name="LogAudit"/>
         </tibex:errorList>
     </tibex:ProcessInterface>
     <tibex:ProcessTemplateConfigurations/>
@@ -528,7 +528,7 @@
         <tibex:namespaceItem
             namespace="http://www.example.org/CRM_SimCheck" prefix="tns3"/>
         <tibex:namespaceItem
-            namespace="http://it.linkem/core/lehf/common/AuditTypes/0100" prefix="tns4"/>
+            namespace="http://it.linkem/common/core/lehf/AuditTypes/xsd" prefix="tns4"/>
         <tibex:namespaceItem
             namespace="http://www.tibco.com/bw/xslt/custom-functions" prefix="tib"/>
         <tibex:namespaceItem

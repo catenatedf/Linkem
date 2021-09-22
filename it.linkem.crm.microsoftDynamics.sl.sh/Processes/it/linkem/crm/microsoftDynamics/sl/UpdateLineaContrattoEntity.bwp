@@ -33,8 +33,7 @@
     xmlns:ns30="http://tns.tibco.com/bw/palette/internal/activityerror+bw.dynamicscrm.UpdateEntity"
     xmlns:ns31="http://it.linkem/crm/UpdateLineaContratto/sl/xsd"
     xmlns:ns4="http://it.linkem/common/core/lehf/AuditTypes/xsd"
-    xmlns:ns5="http://it.linkem/core/lehf/common/xsd/loggingwrapper/internal"
-    xmlns:ns6="http://it.linkem/core/lehf/common/loggerType/0100"
+
     xmlns:ns7="http://tns.tibco.com/bw/palette/internal/activityerror+bw.internal.end"
     xmlns:ns8="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrievemultiple+30f54bac-cc52-44ff-b6e0-1f4bea566861+input"
     xmlns:ns9="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrievemultiple+30f54bac-cc52-44ff-b6e0-1f4bea566861+output"
@@ -843,8 +842,7 @@
         <tibex:namespaceItem
             namespace="http://it.linkem/crm/UpdateLineaContratto/sl/xsd" prefix="tns11"/>
     </tibex:NamespaceRegistry>
-    <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://it.linkem/core/lehf/common/xsd/loggingwrapper/internal"/>
-    <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://it.linkem/core/lehf/common/loggerType/0100"/>
+
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://it.linkem/crm/getLineeContratto/sl/xsd"/>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema"
         location="../../../../../../Schemas/UpdateLineaContratto/UpdateLineaContratto_sl.xsd" namespace="http://it.linkem/crm/UpdateLineaContratto/sl/xsd"/>

@@ -10,8 +10,8 @@
     xmlns:ns1="http://it/linkem/5g/SimCheck/xsd"
     xmlns:ns2="http://it.linkem/common/core/lehf/AuditTypes/xsd"
     xmlns:ns3="http://tns.tibco.com/bw/palette/internal/activityerror+d314363a-6f0c-4ee2-83bf-9e993def06d2"
-    xmlns:ns4="http://it.linkem/core/lehf/common/AuditTypes/0100"
-    xmlns:ns5="http://it.linkem/core/lehf/common/xsd/loggingwrapper/internal"
+    xmlns:ns4="http://it.linkem/common/core/lehf/AuditTypes/xsd"
+
     xmlns:sca="http://docs.oasis-open.org/ns/opencsa/sca/200912"
     xmlns:sca-bpel="http://docs.oasis-open.org/ns/opencsa/sca-bpel/200801"
     xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"
@@ -180,7 +180,7 @@
         <schema elementFormDefault="unqualified"
             targetNamespace="http://tns.tibco.com/bw/palette/internal/activityerror+d314363a-6f0c-4ee2-83bf-9e993def06d2"
             xmlns="http://www.w3.org/2001/XMLSchema"
-            xmlns:Q1="http://it.linkem/core/lehf/common/AuditTypes/0100" xmlns:tns="http://tns.tibco.com/bw/palette/internal/activityerror+d314363a-6f0c-4ee2-83bf-9e993def06d2">
+            xmlns:Q1="http://it.linkem/common/core/lehf/AuditTypes/xsd" xmlns:tns="http://tns.tibco.com/bw/palette/internal/activityerror+d314363a-6f0c-4ee2-83bf-9e993def06d2">
             <element name="ActivityErrorData" type="tns:ActivityErrorDataType"/>
             <complexType name="ActivityErrorDataType">
                 <choice>
