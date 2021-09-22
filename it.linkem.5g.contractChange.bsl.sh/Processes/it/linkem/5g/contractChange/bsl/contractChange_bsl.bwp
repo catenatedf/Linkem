@@ -9,6 +9,11 @@
     xmlns:ns0="http://it/linkem/5g/ContractChange"
     xmlns:ns1="http://it/linkem/5g/ContractChange/bsl/xsd"
     xmlns:ns10="http://www.tibco.com/pe/WriteToLogActivitySchema"
+    xmlns:ns11="http://tns.tibco.com/bw/palette/internal/activityerror+3428f9ba-6189-4291-840e-de7ab9784bf2"
+    xmlns:ns12="http://tns.tibco.com/bw/palette/internal/activityerror+a82952f1-b91f-437b-96ca-d38ac2aa0683"
+    xmlns:ns13="http://tns.tibco.com/bw/palette/internal/activityerror+4fcdf1ef-ab2e-4e5e-8a1e-e108cffc7a9e"
+    xmlns:ns14="http://tns.tibco.com/bw/palette/internal/activityerror+324742b1-a452-470d-a102-5015103ab08d"
+    xmlns:ns15="http://tns.tibco.com/bw/palette/internal/activityerror+39a266dc-6f14-4904-950a-229731792384"
     xmlns:ns2="http://it.linkem/crm/getSIMByGuidTDC/sl/xsd"
     xmlns:ns3="http://it/linkem/5g/MDYN/CRM_GetSIMFromGuid"
     xmlns:ns4="http://it.linkem/rete/udb/getUserByImsi/sl/xsd"
@@ -181,6 +186,61 @@
                 </complexContent>
             </complexType>
             <element name="DuplicateKeyException" type="tns:DuplicateKeyExceptionType"/>
+        </schema>
+        <schema elementFormDefault="unqualified"
+            targetNamespace="http://tns.tibco.com/bw/palette/internal/activityerror+3428f9ba-6189-4291-840e-de7ab9784bf2"
+            xmlns="http://www.w3.org/2001/XMLSchema"
+            xmlns:Q1="http://it.linkem/common/core/lehf/AuditTypes/xsd" xmlns:tns="http://tns.tibco.com/bw/palette/internal/activityerror+3428f9ba-6189-4291-840e-de7ab9784bf2">
+            <element name="ActivityErrorData" type="tns:ActivityErrorDataType"/>
+            <complexType name="ActivityErrorDataType">
+                <choice>
+                    <element maxOccurs="1" minOccurs="0" ref="Q1:LogAudit"/>
+                </choice>
+            </complexType>
+        </schema>
+        <schema elementFormDefault="unqualified"
+            targetNamespace="http://tns.tibco.com/bw/palette/internal/activityerror+a82952f1-b91f-437b-96ca-d38ac2aa0683"
+            xmlns="http://www.w3.org/2001/XMLSchema"
+            xmlns:Q1="http://it.linkem/common/core/lehf/AuditTypes/xsd" xmlns:tns="http://tns.tibco.com/bw/palette/internal/activityerror+a82952f1-b91f-437b-96ca-d38ac2aa0683">
+            <element name="ActivityErrorData" type="tns:ActivityErrorDataType"/>
+            <complexType name="ActivityErrorDataType">
+                <choice>
+                    <element maxOccurs="1" minOccurs="0" ref="Q1:LogAudit"/>
+                </choice>
+            </complexType>
+        </schema>
+        <schema elementFormDefault="unqualified"
+            targetNamespace="http://tns.tibco.com/bw/palette/internal/activityerror+4fcdf1ef-ab2e-4e5e-8a1e-e108cffc7a9e"
+            xmlns="http://www.w3.org/2001/XMLSchema"
+            xmlns:Q1="http://it.linkem/common/core/lehf/AuditTypes/xsd" xmlns:tns="http://tns.tibco.com/bw/palette/internal/activityerror+4fcdf1ef-ab2e-4e5e-8a1e-e108cffc7a9e">
+            <element name="ActivityErrorData" type="tns:ActivityErrorDataType"/>
+            <complexType name="ActivityErrorDataType">
+                <choice>
+                    <element maxOccurs="1" minOccurs="0" ref="Q1:LogAudit"/>
+                </choice>
+            </complexType>
+        </schema>
+        <schema elementFormDefault="unqualified"
+            targetNamespace="http://tns.tibco.com/bw/palette/internal/activityerror+324742b1-a452-470d-a102-5015103ab08d"
+            xmlns="http://www.w3.org/2001/XMLSchema"
+            xmlns:Q1="http://it.linkem/common/core/lehf/AuditTypes/xsd" xmlns:tns="http://tns.tibco.com/bw/palette/internal/activityerror+324742b1-a452-470d-a102-5015103ab08d">
+            <element name="ActivityErrorData" type="tns:ActivityErrorDataType"/>
+            <complexType name="ActivityErrorDataType">
+                <choice>
+                    <element maxOccurs="1" minOccurs="0" ref="Q1:LogAudit"/>
+                </choice>
+            </complexType>
+        </schema>
+        <schema elementFormDefault="unqualified"
+            targetNamespace="http://tns.tibco.com/bw/palette/internal/activityerror+39a266dc-6f14-4904-950a-229731792384"
+            xmlns="http://www.w3.org/2001/XMLSchema"
+            xmlns:Q1="http://it.linkem/common/core/lehf/AuditTypes/xsd" xmlns:tns="http://tns.tibco.com/bw/palette/internal/activityerror+39a266dc-6f14-4904-950a-229731792384">
+            <element name="ActivityErrorData" type="tns:ActivityErrorDataType"/>
+            <complexType name="ActivityErrorDataType">
+                <choice>
+                    <element maxOccurs="1" minOccurs="0" ref="Q1:LogAudit"/>
+                </choice>
+            </complexType>
         </schema>
     </tibex:Types>
     <tibex:ProcessInfo callable="true" createdBy="flavi"
@@ -1047,6 +1107,17 @@
                 <bpws:literal>ATTIVA</bpws:literal>
             </bpws:from>
         </bpws:variable>
+        <bpws:variable element="ns11:ActivityErrorData"
+            name="_error_GetSIMByGuidTDC" sca-bpel:internal="true"/>
+        <bpws:variable element="ns:ErrorReport" name="_error" sca-bpel:internal="true"/>
+        <bpws:variable element="ns12:ActivityErrorData"
+            name="_error_ChangeProfile_sl" sca-bpel:internal="true"/>
+        <bpws:variable element="ns13:ActivityErrorData"
+            name="_error_ChangeStatus_SimSuspended_sl" sca-bpel:internal="true"/>
+        <bpws:variable element="ns14:ActivityErrorData"
+            name="_error_GetUserByImsi_sl" sca-bpel:internal="true"/>
+        <bpws:variable element="ns15:ActivityErrorData"
+            name="_error_UpdateSimStatus" sca-bpel:internal="true"/>
     </bpws:variables>
     <bpws:extensions>
         <bpws:extension mustUnderstand="no" namespace="http://www.eclipse.org/gmf/runtime/1.0.2/notation"/>
