@@ -7,8 +7,6 @@ Bundle-Vendor: TIBCO Software Inc.
 TIBCO-BW-ModuleSharedVariables: META-INF/module.msv
 Require-Capability: com.tibco.bw.model; filter:="(name=bwext)",
  com.tibco.bw.module; filter:="(&(name=it.linkem.crm.microsoftDynamics.sl.sh)(version=1.0.0))",
- com.tibco.bw.module; filter:="(&(name=it.linkem.rete.udm.sl.sh)(version=1.0.0))",
- com.tibco.bw.module; filter:="(&(name=it.linkem.common.utils.sh)(version=1.0.0))",
  com.tibco.bw.module; filter:="(&(name=it.linkem.5g.contractChange.bsl.sh)(version=1.0.0))",
  com.tibco.bw.module; filter:="(&(name=it.linkem.common.core.lehf.sh)(version=1.0.0))",
  com.tibco.bw.palette; filter:="(name=bw.generalactivities)",
