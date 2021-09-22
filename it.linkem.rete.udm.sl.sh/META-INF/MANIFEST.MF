@@ -9,7 +9,6 @@ TIBCO-BW-SharedModule: META-INF/module.bwm
 TIBCO-BW-Edition: bwe
 TIBCO-BW-JobSharedVariables: META-INF/module.jsv
 Require-Capability: com.tibco.bw.model; filter:="(name=bwext)",
- com.tibco.bw.module; filter:="(&(name=it.linkem.core.lehf.common.sh)(version=1.1.14))",
  com.tibco.bw.palette; filter:="(name=bw.generalactivities)",
  com.tibco.bw.palette; filter:="(name=bw.file)",
  com.tibco.bw.palette; filter:="(name=bw.xml)",
