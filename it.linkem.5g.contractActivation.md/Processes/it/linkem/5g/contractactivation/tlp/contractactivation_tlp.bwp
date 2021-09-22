@@ -15,7 +15,7 @@
     xmlns:tibprop="http://ns.tibco.com/bw/property"
     xmlns:tns="http://www.example.com/namespaces/tns/1631536993420"
     xmlns:tns0="http://tns.tibco.com/bw/REST"
-    xmlns:tns1="http://it.linkem/core/lehf/common/AuditTypes/0100" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema">
     <tibex:Types>
         <xs:schema attributeFormDefault="unqualified"
             elementFormDefault="qualified"
@@ -177,18 +177,7 @@
             </complexType>
             <element name="DuplicateKeyException" type="tns:DuplicateKeyExceptionType"/>
         </schema>
-        <schema elementFormDefault="unqualified"
-            targetNamespace="http://tns.tibco.com/bw/palette/internal/activityerror+4f7399c7-09a5-4db1-8846-ac1cbd0348b5"
-            xmlns="http://www.w3.org/2001/XMLSchema"
-            xmlns:Q1="http://it.linkem/core/lehf/common/AuditTypes/0100" xmlns:tns="http://tns.tibco.com/bw/palette/internal/activityerror+4f7399c7-09a5-4db1-8846-ac1cbd0348b5">
-            <import namespace="http://it.linkem/core/lehf/common/AuditTypes/0100"/>
-            <element name="ActivityErrorData" type="tns:ActivityErrorDataType"/>
-            <complexType name="ActivityErrorDataType">
-                <choice>
-                    <element maxOccurs="1" minOccurs="0" ref="Q1:LogAudit"/>
-                </choice>
-            </complexType>
-        </schema>
+       
         <wsdl:definitions
             targetNamespace="http://xmlns.example.com/20210913144636PLT"
             xmlns:extns="http://www.example.com/namespaces/tns/1631536993420"
@@ -1029,7 +1018,6 @@
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.example.com/namespaces/tns/1631536993420"/>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://tns.tibco.com/bw/REST"/>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.example.com/namespaces/tns/1631537124402"/>
-    <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://it.linkem/core/lehf/common/AuditTypes/0100"/>
     <bpws:partnerLinks>
         <bpws:partnerLink myRole="use" name="contractactivation"
             partnerLinkType="ns:partnerLinkType" sca-bpel:ignore="false" sca-bpel:service="contractactivation"/>
