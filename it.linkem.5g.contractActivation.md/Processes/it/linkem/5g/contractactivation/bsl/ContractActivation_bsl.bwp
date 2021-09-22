@@ -8,11 +8,15 @@
     xmlns:ns="http://www.tibco.com/pe/EngineTypes"
     xmlns:ns0="http://www.example.org/ContractActivation_BSL"
     xmlns:ns1="http://tns.tibco.com/bw/palette/internal/activityerror+bw.internal.end"
+    xmlns:ns10="http://tns.tibco.com/bw/palette/internal/activityerror+31fa840b-f5f6-4977-a85a-c4bb6686b00f"
     xmlns:ns2="http://it.linkem/crm/getTestataContrattoByGuidTDC/sl/xsd"
     xmlns:ns3="http://it/linkem/5g/ContractChange/bsl/xsd"
     xmlns:ns4="http://it.linkem/crm/UpdateTestataContratto/sl/xsd"
     xmlns:ns5="http://it.linkem/crm/UpdateLineaContratto/sl/xsd"
     xmlns:ns6="http://it.linkem/crm/getLineeContratto/sl/xsd"
+    xmlns:ns7="http://tns.tibco.com/bw/palette/internal/activityerror+3f59edd8-8c0c-41db-8bbf-be33c72cdabc"
+    xmlns:ns8="http://tns.tibco.com/bw/palette/internal/activityerror+3d53c089-0061-439e-bf78-9133b25dfb1d"
+    xmlns:ns9="http://tns.tibco.com/bw/palette/internal/activityerror+350ebe90-26b7-44b5-80ba-0328b6511073"
     xmlns:sca="http://docs.oasis-open.org/ns/opencsa/sca/200912"
     xmlns:sca-bpel="http://docs.oasis-open.org/ns/opencsa/sca-bpel/200801"
     xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"
@@ -178,7 +182,50 @@
             </complexType>
             <element name="DuplicateKeyException" type="tns:DuplicateKeyExceptionType"/>
         </schema>
-       
+        <schema elementFormDefault="unqualified"
+            targetNamespace="http://tns.tibco.com/bw/palette/internal/activityerror+3f59edd8-8c0c-41db-8bbf-be33c72cdabc"
+            xmlns="http://www.w3.org/2001/XMLSchema"
+            xmlns:Q1="http://it.linkem/core/lehf/common/AuditTypes/0100" xmlns:tns="http://tns.tibco.com/bw/palette/internal/activityerror+3f59edd8-8c0c-41db-8bbf-be33c72cdabc">
+            <element name="ActivityErrorData" type="tns:ActivityErrorDataType"/>
+            <complexType name="ActivityErrorDataType">
+                <choice>
+                    <element maxOccurs="1" minOccurs="0" ref="Q1:LogAudit"/>
+                </choice>
+            </complexType>
+        </schema>
+        <schema elementFormDefault="unqualified"
+            targetNamespace="http://tns.tibco.com/bw/palette/internal/activityerror+3d53c089-0061-439e-bf78-9133b25dfb1d"
+            xmlns="http://www.w3.org/2001/XMLSchema"
+            xmlns:Q1="http://it.linkem/core/lehf/common/AuditTypes/0100" xmlns:tns="http://tns.tibco.com/bw/palette/internal/activityerror+3d53c089-0061-439e-bf78-9133b25dfb1d">
+            <element name="ActivityErrorData" type="tns:ActivityErrorDataType"/>
+            <complexType name="ActivityErrorDataType">
+                <choice>
+                    <element maxOccurs="1" minOccurs="0" ref="Q1:LogAudit"/>
+                </choice>
+            </complexType>
+        </schema>
+        <schema elementFormDefault="unqualified"
+            targetNamespace="http://tns.tibco.com/bw/palette/internal/activityerror+350ebe90-26b7-44b5-80ba-0328b6511073"
+            xmlns="http://www.w3.org/2001/XMLSchema"
+            xmlns:Q1="http://it.linkem/core/lehf/common/AuditTypes/0100" xmlns:tns="http://tns.tibco.com/bw/palette/internal/activityerror+350ebe90-26b7-44b5-80ba-0328b6511073">
+            <element name="ActivityErrorData" type="tns:ActivityErrorDataType"/>
+            <complexType name="ActivityErrorDataType">
+                <choice>
+                    <element maxOccurs="1" minOccurs="0" ref="Q1:LogAudit"/>
+                </choice>
+            </complexType>
+        </schema>
+        <schema elementFormDefault="unqualified"
+            targetNamespace="http://tns.tibco.com/bw/palette/internal/activityerror+31fa840b-f5f6-4977-a85a-c4bb6686b00f"
+            xmlns="http://www.w3.org/2001/XMLSchema"
+            xmlns:Q1="http://it.linkem/core/lehf/common/AuditTypes/0100" xmlns:tns="http://tns.tibco.com/bw/palette/internal/activityerror+31fa840b-f5f6-4977-a85a-c4bb6686b00f">
+            <element name="ActivityErrorData" type="tns:ActivityErrorDataType"/>
+            <complexType name="ActivityErrorDataType">
+                <choice>
+                    <element maxOccurs="1" minOccurs="0" ref="Q1:LogAudit"/>
+                </choice>
+            </complexType>
+        </schema>
     </tibex:Types>
     <tibex:ProcessInfo callable="true" createdBy="flavi"
         createdOn="Mon Sep 13 14:47:57 CEST 2021" description=""
@@ -186,7 +233,12 @@
         productVersion="6.7.0 HF3 V102 2021-08-10" scalable="true"
         singleton="true" stateless="false" type="IT"/>
     <tibex:ProcessInterface context=""
-        input="{http://www.example.org/ContractActivation_BSL}ContractActivation_Input" output=""/>
+        input="{http://www.example.org/ContractActivation_BSL}ContractActivation_Input" output="">
+        <tibex:errorList>
+            <tibex:error
+                error="{http://it.linkem/common/core/lehf/AuditTypes/xsd}LogAudit" name="LogAudit"/>
+        </tibex:errorList>
+    </tibex:ProcessInterface>
     <tibex:ProcessTemplateConfigurations/>
     <notation:Diagram measurementUnit="Pixel" type="BWProcess"
         xmlns:bwnotation="http://tns.tibco.com/bw/runtime/BWNotation"
@@ -384,7 +436,7 @@
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.4"/>
                                     <layoutConstraint
-                                    width="218" x="630"
+                                    width="218" x="668"
                                     xsi:type="notation:Bounds" y="199"/>
                                     </children>
                                     <children type="4002">
@@ -660,8 +712,8 @@
                                     <element href="//0/@process/@activity/@activity/@activities.7"/>
                                     <layoutConstraint
                                     height="190" width="316"
-                                    x="1443"
-                                    xsi:type="notation:Bounds" y="143"/>
+                                    x="1480"
+                                    xsi:type="notation:Bounds" y="136"/>
                                     </children>
                                     <styles xsi:type="notation:DrawerStyle"/>
                                     <styles xsi:type="notation:SortingStyle"/>
@@ -855,6 +907,7 @@
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.example.org/ContractActivation_BSL"/>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema"
         location="../../../../../../../it.linkem.crm.microsoftDynamics.sl.sh/Schemas/UpdateLineaContratto/UpdateLineaContratto_sl.xsd" namespace="http://it.linkem/crm/UpdateLineaContratto/sl/xsd"/>
+    <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://it.linkem/common/core/lehf/AuditTypes/xsd"/>
     <bpws:variables>
         <bpws:variable element="ns:ProcessContext"
             name="_processContext" sca-bpel:internal="true"/>
@@ -888,6 +941,14 @@
             name="GetLineeContrattoByGuidTDC-input" sca-bpel:internal="true"/>
         <bpws:variable element="ns6:getLineeContratto_Output"
             name="GetLineeContrattoByGuidTDC" sca-bpel:internal="true"/>
+        <bpws:variable element="ns7:ActivityErrorData"
+            name="_error_GetTestataByGuidTDC" sca-bpel:internal="true"/>
+        <bpws:variable element="ns8:ActivityErrorData"
+            name="_error_UpdateTestataContratto" sca-bpel:internal="true"/>
+        <bpws:variable element="ns9:ActivityErrorData"
+            name="_error_GetLineeContrattoByGuidTDC" sca-bpel:internal="true"/>
+        <bpws:variable element="ns10:ActivityErrorData"
+            name="_error_UpdateLineaContrattoEntity" sca-bpel:internal="true"/>
     </bpws:variables>
     <bpws:extensions>
         <bpws:extension mustUnderstand="no" namespace="http://www.eclipse.org/gmf/runtime/1.0.2/notation"/>
@@ -1058,7 +1119,8 @@
                         subProcessName="it.linkem.crm.microsoftDynamics.sl.GetLineeContrattoByGuidTDC" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
                 </tibex:extActivity>
             </bpws:extensionActivity>
-            <bpws:scope name="ForEach" tibex:group="foreach" tibex:xpdlId="5919abbf-0750-4be2-9f3c-9511de172c47">
+            <bpws:scope name="ForEach" tibex:group="foreach"
+                tibex:indexToGlobal="false" tibex:xpdlId="5919abbf-0750-4be2-9f3c-9511de172c47">
                 <bpws:targets>
                     <bpws:target linkName="GetLineeContrattoByGuidTDCToForEach"/>
                 </bpws:targets>
