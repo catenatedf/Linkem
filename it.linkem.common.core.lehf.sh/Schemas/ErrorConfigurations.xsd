@@ -57,6 +57,15 @@
 	</xsd:element>
 
 
+	<xsd:element name="LoadErrorConfiguration_Input">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element maxOccurs="1" minOccurs="1" name="errorListFullFilepath" type="xsd:string" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+
 
 
 

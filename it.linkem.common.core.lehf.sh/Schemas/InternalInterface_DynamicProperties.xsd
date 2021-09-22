@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<schema xmlns="http://www.w3.org/2001/XMLSchema" 
-xmlns:tns="http://it.linkem/common/core/lehf/InternalInterface_DynamicProperties/xsd" 
-elementFormDefault="qualified" 
-targetNamespace="http://it.linkem/common/core/lehf/InternalInterface_DynamicProperties/xsd"
-xmlns:lga="http://it.linkem/common/core/lehf/AuditTypes/xsd">
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:lga="http://it.linkem/common/core/lehf/AuditTypes/xsd" xmlns:tns="http://it.linkem/common/core/lehf/InternalInterface_DynamicProperties/xsd" elementFormDefault="qualified" targetNamespace="http://it.linkem/common/core/lehf/InternalInterface_DynamicProperties/xsd">
 
 
-<import namespace="http://it.linkem/common/core/lehf/AuditTypes/xsd" schemaLocation="./AUDIT.xsd" />
+<import namespace="http://it.linkem/common/core/lehf/AuditTypes/xsd" schemaLocation="LogAudit.xsd"/>
 
 
 	<element name="DynamicProperties" type="tns:DynamicPropertiesType"/>
@@ -14,7 +10,7 @@ xmlns:lga="http://it.linkem/common/core/lehf/AuditTypes/xsd">
 	<element name="InputInterface_SetLogContext_ByDynamicProperties" type="tns:InputInterface_SetLogContext_ByDynamicPropertiesType"/>
 	<complexType name="InputInterface_SetLogContext_ByDynamicPropertiesType">
 		<sequence>
-			<element ref="tns:DynamicProperties" minOccurs="0"/>
+			<element minOccurs="0" ref="tns:DynamicProperties"/>
 
 		</sequence>
 	</complexType>
