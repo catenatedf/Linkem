@@ -1,0 +1,21 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: It Linkem 5g ContractChange Md Module
+Bundle-SymbolicName: it.linkem.5g.contractChange.md
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: TIBCO Software Inc.
+TIBCO-BW-ModuleSharedVariables: META-INF/module.msv
+Require-Capability: com.tibco.bw.model; filter:="(name=bwext)",
+ com.tibco.bw.module; filter:="(&(name=it.linkem.common.utils.sh)(version=1.0.0))",
+ com.tibco.bw.module; filter:="(&(name=it.linkem.5g.contractChange.bsl.sh)(version=1.0.0))",
+ com.tibco.bw.module; filter:="(&(name=it.linkem.crm.microsoftDynamics.sl.sh)(version=1.0.0))",
+ com.tibco.bw.module; filter:="(&(name=it.linkem.rete.udm.sl.sh)(version=1.0.0))",
+ com.tibco.bw.module; filter:="(&(name=it.linkem.common.core.lehf.sh)(version=1.0.0))",
+ com.tibco.bw.palette; filter:="(name=bw.generalactivities)",
+ com.tibco.bw.sharedresource.model; filter:="(name=bw.httpconnector)",
+ com.tibco.bw.binding.model; filter:="(name=bw.rest)"
+TIBCO-BW-Edition: bwe
+TIBCO-BW-ConfigProfile: META-INF/default.substvar
+TIBCO-BW-ApplicationModule: META-INF/module.bwm
+TIBCO-BW-JobSharedVariables: META-INF/module.jsv
+TIBCO-BW-Version: 6.7.0 HF3 V102 2021-08-10

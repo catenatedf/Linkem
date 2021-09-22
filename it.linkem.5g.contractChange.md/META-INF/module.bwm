@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:rest="http://xsd.tns.tibco.com/bw/models/binding/rest" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scact="http://xsd.tns.tibco.com/amf/models/sca/componentType" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_7HWrYBelEeyMwIVNrv_anA" targetNamespace="http://tns.tibco.com/bw/composite/it.linkem.5g.contractChange.md" name="it.linkem.5g.contractChange.md" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:service xmi:id="_icKDUBetEeyMwIVNrv_anA" name="contract-change" promote="Componentcontract-change/contract-change">
+    <sca:interface.wsdl xmi:id="_icO70BetEeyMwIVNrv_anA" interface="http://xmlns.example.com/20210917135104PLT#wsdl.interface(contract-change)" scaext:wsdlLocation="../Processes/it/linkem/5g/contractchange/tlp/contract-change.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_iccXMBetEeyMwIVNrv_anA" name="RestService" path="/contract-change" docBasePath="http://localhost:7777/it.linkem.5g.contractChange.md" docResourcePath="contract-change" basePath="/" connector="it.linkem.5g.contractchange.md.contract-change" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/it.linkem.5g.contractchange.tlp.contract-change-contract-change.json">
+      <operation xmi:id="_ich2wBetEeyMwIVNrv_anA" operationName="post" nickname="post-contract-change" httpMethod="POST" notes="postContract-change" responseStyle="element" requestStyle="element" outputPartName="item">
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <parameters xmi:id="_icnWUBetEeyMwIVNrv_anA"/>
+      <advancedConfig xmi:id="_iccXMRetEeyMwIVNrv_anA" blockingQueueSize="2147483647"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_ich2wRetEeyMwIVNrv_anA" bindingName="RestService"/>
+  </sca:service>
+  <sca:property xmi:id="_7QG-wBelEeyMwIVNrv_anA" name="BW.DEPLOYMENTUNIT.TYPE" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_7QKCEBelEeyMwIVNrv_anA" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_7QL3QBelEeyMwIVNrv_anA" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_7QMeUBelEeyMwIVNrv_anA" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_7QNscBelEeyMwIVNrv_anA" name="BW.DOMAIN.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_7QPhoBelEeyMwIVNrv_anA" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_7QQvwBelEeyMwIVNrv_anA" name="BW.APPSPACE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_7QRW0BelEeyMwIVNrv_anA" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_7QSk8BelEeyMwIVNrv_anA" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:component xmi:id="_7LDfoBelEeyMwIVNrv_anA" name="ComponentProcess" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_7LDfoRelEeyMwIVNrv_anA" processName="it.linkem.5g.contractchange.onStartup.LoadMappingConfiguration"/>
+  </sca:component>
+  <sca:component xmi:id="_icD8sBetEeyMwIVNrv_anA" name="Componentcontract-change" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_icD8sRetEeyMwIVNrv_anA" processName="it.linkem.5g.contractchange.tlp.contract-change"/>
+    <sca:service xmi:id="_icHAABetEeyMwIVNrv_anA" name="contract-change">
+      <sca:interface.wsdl xmi:id="_icHnEBetEeyMwIVNrv_anA" interface="http://xmlns.example.com/20210917135104PLT#wsdl.interface(contract-change)" scaext:wsdlLocation="../Processes/it/linkem/5g/contractchange/tlp/contract-change.bwp"/>
+    </sca:service>
+  </sca:component>
+</sca:composite>
