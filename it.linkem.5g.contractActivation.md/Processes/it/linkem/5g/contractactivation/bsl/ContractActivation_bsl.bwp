@@ -21,6 +21,42 @@
     xmlns:sca-bpel="http://docs.oasis-open.org/ns/opencsa/sca-bpel/200801"
     xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"
     xmlns:tibprop="http://ns.tibco.com/bw/property" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <tibex:VariableDescriptor type="MemorySaving">
+        <task name="GetTestataByGuidTDC">
+            <endingVariables>
+                <variable>GetTestataByGuidTDC-input</variable>
+            </endingVariables>
+        </task>
+        <task name="contractChange_bsl">
+            <endingVariables>
+                <variable>contractChange_bsl-input</variable>
+                <variable>Azione_Attivazione</variable>
+            </endingVariables>
+        </task>
+        <task name="UpdateTestataContratto">
+            <endingVariables>
+                <variable>UpdateTestataContratto-input</variable>
+                <variable>UpdateTestataContratto</variable>
+                <variable>GetTestataByGuidTDC</variable>
+            </endingVariables>
+        </task>
+        <task name="GetLineeContrattoByGuidTDC">
+            <endingVariables>
+                <variable>GetLineeContrattoByGuidTDC-input</variable>
+                <variable>Start</variable>
+            </endingVariables>
+        </task>
+        <task name="ForEach">
+            <endingVariables>
+                <variable>GetLineeContrattoByGuidTDC</variable>
+            </endingVariables>
+        </task>
+        <task name="UpdateLineaContrattoEntity">
+            <endingVariables>
+                <variable>UpdateLineaContrattoEntity-input</variable>
+            </endingVariables>
+        </task>
+    </tibex:VariableDescriptor>
     <tibex:Types>
         <xs:schema attributeFormDefault="unqualified"
             elementFormDefault="qualified"
@@ -432,7 +468,7 @@
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.4"/>
                                     <layoutConstraint
-                                    width="176" x="877"
+                                    width="176" x="899"
                                     xsi:type="notation:Bounds" y="199"/>
                                     </children>
                                     <children type="4002">
@@ -752,7 +788,7 @@
                                     xsi:type="notation:Bounds" y="200"/>
                                     </children>
                                     <children
-                                    description="check input mapping"
+                                    description="check input mapping    dataAttivazione , dataInizioFatturazione, dataUltimoCambioStato,  stato , sottoStato (numeri) .   "
                                     fillColor="13369343"
                                     fontName="Segoe UI"
                                     lineColor="6737151"
@@ -1020,6 +1056,14 @@
             name="_error_GetLineeContrattoByGuidTDC" sca-bpel:internal="true"/>
         <bpws:variable element="ns10:ActivityErrorData"
             name="_error_UpdateLineaContrattoEntity" sca-bpel:internal="true"/>
+        <bpws:variable name="FixedParams_statocorrenteid"
+            sca-bpel:hotUpdate="false" sca-bpel:privateProperty="true"
+            sca-bpel:property="yes"
+            tibex:propertySource="/it.linkem.5g.contractactivation/CRM/Attivazione/FixedParameters/lnk_statocorrenteId" type="xsd:string"/>
+        <bpws:variable name="FixedParams_sottostatoid"
+            sca-bpel:hotUpdate="false" sca-bpel:privateProperty="true"
+            sca-bpel:property="yes"
+            tibex:propertySource="/it.linkem.5g.contractactivation/CRM/Attivazione/FixedParameters/lnk_sottostatoid" type="xsd:string"/>
     </bpws:variables>
     <bpws:extensions>
         <bpws:extension mustUnderstand="no" namespace="http://www.eclipse.org/gmf/runtime/1.0.2/notation"/>
@@ -1139,7 +1183,7 @@
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding coercion=""
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns5=&quot;http://it.linkem/crm/UpdateTestataContratto/sl/xsd&quot; xmlns:tns1=&quot;http://it.linkem/crm/getTestataContrattoByGuidTDC/sl/xsd&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;GetTestataByGuidTDC&quot;/>&lt;xsl:template name=&quot;UpdateTestataContratto-input&quot; match=&quot;/&quot;>&lt;tns5:UpdateTestataContratto_Input>&lt;xsl:variable name=&quot;testataContratto&quot; select=&quot;$GetTestataByGuidTDC/tns1:TestataDelContratto[1]&quot;/>&lt;tns5:lnk_testatadelcontratto>&lt;xsl:if test=&quot;$testataContratto/lnk_testatadelcontrattoid&quot;>&lt;lnk_testatadelcontrattoid>&lt;xsl:value-of select=&quot;$testataContratto/lnk_testatadelcontrattoid&quot;/>&lt;/lnk_testatadelcontrattoid>&lt;/xsl:if>&lt;lnk_status>&lt;xsl:value-of select=&quot;1&quot;/>&lt;/lnk_status>&lt;lnk_dataattivazione>&lt;xsl:value-of select=&quot;current-dateTime()&quot;/>&lt;/lnk_dataattivazione>&lt;lnk_datainiziofatturazione>&lt;xsl:value-of select=&quot;current-dateTime()&quot;/>&lt;/lnk_datainiziofatturazione>&lt;modifiedon>&lt;xsl:value-of select=&quot;current-dateTime()&quot;/>&lt;/modifiedon>&lt;/tns5:lnk_testatadelcontratto>&lt;/tns5:UpdateTestataContratto_Input>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns5=&quot;http://it.linkem/crm/UpdateTestataContratto/sl/xsd&quot; xmlns:tns1=&quot;http://it.linkem/crm/getTestataContrattoByGuidTDC/sl/xsd&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;GetTestataByGuidTDC&quot;/>&lt;xsl:template name=&quot;UpdateTestataContratto-input&quot; match=&quot;/&quot;>&lt;tns5:UpdateTestataContratto_Input>&lt;xsl:variable name=&quot;testataContratto&quot; select=&quot;$GetTestataByGuidTDC/tns1:TestataDelContratto[1]&quot;/>&lt;tns5:lnk_testatadelcontratto>&lt;xsl:if test=&quot;$testataContratto/lnk_testatadelcontrattoid&quot;>&lt;lnk_testatadelcontrattoid>&lt;xsl:value-of select=&quot;$testataContratto/lnk_testatadelcontrattoid&quot;/>&lt;/lnk_testatadelcontrattoid>&lt;/xsl:if>&lt;lnk_dataattivazione>&lt;xsl:value-of select=&quot;current-dateTime()&quot;/>&lt;/lnk_dataattivazione>&lt;lnk_datainiziofatturazione>&lt;xsl:value-of select=&quot;current-dateTime()&quot;/>&lt;/lnk_datainiziofatturazione>&lt;lnk_dataultimocambiostato>&lt;xsl:value-of select=&quot;current-dateTime()&quot;/>&lt;/lnk_dataultimocambiostato>&lt;/tns5:lnk_testatadelcontratto>&lt;/tns5:UpdateTestataContratto_Input>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:CallProcess
                         moduleRef="it.linkem.crm.microsoftDynamics.sl.sh"
@@ -1220,7 +1264,7 @@
                                     <tibex:inputBindings>
                                     <tibex:inputBinding
                                     coercion=""
-                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns4=&quot;http://it.linkem/crm/UpdateLineaContratto/sl/xsd&quot; xmlns:tns3=&quot;http://it.linkem/crm/getLineeContratto/sl/xsd&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;index&quot;/>&lt;xsl:param name=&quot;GetLineeContrattoByGuidTDC&quot;/>&lt;xsl:template name=&quot;UpdateLineaContrattoEntity-input&quot; match=&quot;/&quot;>&lt;tns4:UpdateLineaContratto_Input>&lt;tns4:lnk_lineedelcontratto>&lt;lnk_datainiziofatturazione>&lt;xsl:value-of select=&quot;current-dateTime()&quot;/>&lt;/lnk_datainiziofatturazione>&lt;modifiedon>&lt;xsl:value-of select=&quot;current-dateTime()&quot;/>&lt;/modifiedon>&lt;lnk_status>&lt;xsl:value-of select=&quot;1&quot;/>&lt;/lnk_status>&lt;lnk_dataattivazione>&lt;xsl:value-of select=&quot;current-dateTime()&quot;/>&lt;/lnk_dataattivazione>&lt;xsl:if test=&quot;$GetLineeContrattoByGuidTDC/tns3:LineeDelContratto[$index]/lnk_lineedelcontrattoid&quot;>&lt;lnk_lineedelcontrattoid>&lt;xsl:value-of select=&quot;$GetLineeContrattoByGuidTDC/tns3:LineeDelContratto[$index]/lnk_lineedelcontrattoid&quot;/>&lt;/lnk_lineedelcontrattoid>&lt;/xsl:if>&lt;/tns4:lnk_lineedelcontratto>&lt;/tns4:UpdateLineaContratto_Input>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns4=&quot;http://it.linkem/crm/UpdateLineaContratto/sl/xsd&quot; xmlns:tns3=&quot;http://it.linkem/crm/getLineeContratto/sl/xsd&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;index&quot;/>&lt;xsl:param name=&quot;GetLineeContrattoByGuidTDC&quot;/>&lt;xsl:template name=&quot;UpdateLineaContrattoEntity-input&quot; match=&quot;/&quot;>&lt;tns4:UpdateLineaContratto_Input>&lt;tns4:lnk_lineedelcontratto>&lt;lnk_datainiziofatturazione>&lt;xsl:value-of select=&quot;current-dateTime()&quot;/>&lt;/lnk_datainiziofatturazione>&lt;xsl:if test=&quot;$GetLineeContrattoByGuidTDC/tns3:LineeDelContratto[$index]/lnk_lineedelcontrattoid&quot;>&lt;lnk_lineedelcontrattoid>&lt;xsl:value-of select=&quot;$GetLineeContrattoByGuidTDC/tns3:LineeDelContratto[$index]/lnk_lineedelcontrattoid&quot;/>&lt;/lnk_lineedelcontrattoid>&lt;/xsl:if>&lt;/tns4:lnk_lineedelcontratto>&lt;/tns4:UpdateLineaContratto_Input>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                                     </tibex:inputBindings>
                                     <tibex:CallProcess
                                     moduleRef="it.linkem.crm.microsoftDynamics.sl.sh"

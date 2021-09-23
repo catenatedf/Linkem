@@ -398,12 +398,7 @@
         productVersion="2.6.1 V57 2021-02-13" scalable="true"
         singleton="true" stateless="false" type="IT"/>
     <tibex:ProcessInterface context=""
-        input="{http://it.linkem/crm/getSIMByGuidTDC/sl/xsd}GetSimById_Input" output="{http://it/linkem/5g/MDYN/CRM_GetSIMFromGuid}GetSimById_Output">
-        <tibex:errorList>
-            <tibex:error
-                error="{http://it.linkem/common/core/lehf/AuditTypes/xsd}LogAudit" name="LogAudit"/>
-        </tibex:errorList>
-    </tibex:ProcessInterface>
+        input="{http://it.linkem/crm/getSIMByGuidTDC/sl/xsd}GetSimById_Input" output="{http://it/linkem/5g/MDYN/CRM_GetSIMFromGuid}GetSimById_Output"/>
     <tibex:ProcessTemplateConfigurations/>
     <notation:Diagram measurementUnit="Pixel" type="BWProcess"
         xmlns:bwnotation="http://tns.tibco.com/bw/runtime/BWNotation"

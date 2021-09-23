@@ -14,7 +14,12 @@
     xmlns:ns13="http://tns.tibco.com/bw/palette/internal/activityerror+4fcdf1ef-ab2e-4e5e-8a1e-e108cffc7a9e"
     xmlns:ns14="http://tns.tibco.com/bw/palette/internal/activityerror+324742b1-a452-470d-a102-5015103ab08d"
     xmlns:ns15="http://tns.tibco.com/bw/palette/internal/activityerror+39a266dc-6f14-4904-950a-229731792384"
+    xmlns:ns16="http://tns.tibco.com/bw/palette/internal/errorlinkhandler+324742b1-a452-470d-a102-5015103ab08d"
+    xmlns:ns17="http://tns.tibco.com/bw/palette/internal/errorlinkhandler+39a266dc-6f14-4904-950a-229731792384"
+    xmlns:ns18="http://tns.tibco.com/bw/palette/internal/errorlinkhandler+3428f9ba-6189-4291-840e-de7ab9784bf2"
+    xmlns:ns19="http://tns.tibco.com/bw/palette/internal/errorlinkhandler+a82952f1-b91f-437b-96ca-d38ac2aa0683"
     xmlns:ns2="http://it.linkem/crm/getSIMByGuidTDC/sl/xsd"
+    xmlns:ns20="http://tns.tibco.com/bw/palette/internal/errorlinkhandler+4fcdf1ef-ab2e-4e5e-8a1e-e108cffc7a9e"
     xmlns:ns3="http://it/linkem/5g/MDYN/CRM_GetSIMFromGuid"
     xmlns:ns4="http://it.linkem/rete/udb/getUserByImsi/sl/xsd"
     xmlns:ns5="http://it.linkem/rete/udb/changeProfile/sl/xsd"
@@ -811,7 +816,7 @@
                                     <styles xsi:type="bwnotation:ResizingStyle"/>
                                     <element href="//0/@process/@activity/@activity"/>
                                     <layoutConstraint height="539"
-                                    width="2462" xsi:type="notation:Bounds"/>
+                                    width="2218" xsi:type="notation:Bounds"/>
                                 </children>
                                 <styles xsi:type="notation:SortingStyle"/>
                                 <styles xsi:type="notation:FilteringStyle"/>

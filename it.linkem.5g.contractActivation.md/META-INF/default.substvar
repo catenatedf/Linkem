@@ -109,5 +109,23 @@
 			<isOverride>false</isOverride>
 			<useLookupValue>false</useLookupValue>
 		</globalVariable>
+		<globalVariable>
+			<name>/it.linkem.5g.contractactivation/CRM/Attivazione/FixedParameters/lnk_statocorrenteId</name>
+			<value>5670A7BC-6B40-E111-919D-001E0BD6005A</value>
+			<deploymentSettable>false</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<isOverride>false</isOverride>
+			<useLookupValue>false</useLookupValue>
+		</globalVariable>
+		<globalVariable>
+			<name>/it.linkem.5g.contractactivation/CRM/Attivazione/FixedParameters/lnk_sottostatoid</name>
+			<value>114F0D6C-6D40-E111-919D-001E0BD6005A</value>
+			<deploymentSettable>false</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<isOverride>false</isOverride>
+			<useLookupValue>false</useLookupValue>
+		</globalVariable>
 	</globalVariables>
 </repository>

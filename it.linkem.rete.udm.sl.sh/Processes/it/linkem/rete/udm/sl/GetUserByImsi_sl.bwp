@@ -658,12 +658,7 @@
         productVersion="6.7.0 V34 2020-11-06" scalable="true"
         singleton="true" stateless="false" type="IT"/>
     <tibex:ProcessInterface context=""
-        input="{http://it.linkem/rete/udb/getUserByImsi/sl/xsd}GetUserByImsi_SL_Input" output="{http://it.linkem/rete/udb/getUserByImsi/sl/xsd}GetUserByImsi_SL_Output">
-        <tibex:errorList>
-            <tibex:error
-                error="{http://it.linkem/common/core/lehf/AuditTypes/xsd}LogAudit" name="LogAudit"/>
-        </tibex:errorList>
-    </tibex:ProcessInterface>
+        input="{http://it.linkem/rete/udb/getUserByImsi/sl/xsd}GetUserByImsi_SL_Input" output="{http://it.linkem/rete/udb/getUserByImsi/sl/xsd}GetUserByImsi_SL_Output"/>
     <tibex:ProcessTemplateConfigurations/>
     <notation:Diagram measurementUnit="Pixel" type="BWProcess"
         xmlns:bwnotation="http://tns.tibco.com/bw/runtime/BWNotation"
