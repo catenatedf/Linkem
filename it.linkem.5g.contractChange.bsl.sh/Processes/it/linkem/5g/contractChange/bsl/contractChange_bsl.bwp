@@ -30,7 +30,8 @@
     xmlns:sca="http://docs.oasis-open.org/ns/opencsa/sca/200912"
     xmlns:sca-bpel="http://docs.oasis-open.org/ns/opencsa/sca-bpel/200801"
     xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"
-    xmlns:tibprop="http://ns.tibco.com/bw/property" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    xmlns:tibprop="http://ns.tibco.com/bw/property"
+    xmlns:tns="http://it.linkem/common/core/lehf/AuditTypes/xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
     <tibex:Types>
         <xs:schema attributeFormDefault="unqualified"
             elementFormDefault="qualified"
@@ -191,61 +192,6 @@
                 </complexContent>
             </complexType>
             <element name="DuplicateKeyException" type="tns:DuplicateKeyExceptionType"/>
-        </schema>
-        <schema elementFormDefault="unqualified"
-            targetNamespace="http://tns.tibco.com/bw/palette/internal/activityerror+3428f9ba-6189-4291-840e-de7ab9784bf2"
-            xmlns="http://www.w3.org/2001/XMLSchema"
-            xmlns:Q1="http://it.linkem/common/core/lehf/AuditTypes/xsd" xmlns:tns="http://tns.tibco.com/bw/palette/internal/activityerror+3428f9ba-6189-4291-840e-de7ab9784bf2">
-            <element name="ActivityErrorData" type="tns:ActivityErrorDataType"/>
-            <complexType name="ActivityErrorDataType">
-                <choice>
-                    <element maxOccurs="1" minOccurs="0" ref="Q1:LogAudit"/>
-                </choice>
-            </complexType>
-        </schema>
-        <schema elementFormDefault="unqualified"
-            targetNamespace="http://tns.tibco.com/bw/palette/internal/activityerror+a82952f1-b91f-437b-96ca-d38ac2aa0683"
-            xmlns="http://www.w3.org/2001/XMLSchema"
-            xmlns:Q1="http://it.linkem/common/core/lehf/AuditTypes/xsd" xmlns:tns="http://tns.tibco.com/bw/palette/internal/activityerror+a82952f1-b91f-437b-96ca-d38ac2aa0683">
-            <element name="ActivityErrorData" type="tns:ActivityErrorDataType"/>
-            <complexType name="ActivityErrorDataType">
-                <choice>
-                    <element maxOccurs="1" minOccurs="0" ref="Q1:LogAudit"/>
-                </choice>
-            </complexType>
-        </schema>
-        <schema elementFormDefault="unqualified"
-            targetNamespace="http://tns.tibco.com/bw/palette/internal/activityerror+4fcdf1ef-ab2e-4e5e-8a1e-e108cffc7a9e"
-            xmlns="http://www.w3.org/2001/XMLSchema"
-            xmlns:Q1="http://it.linkem/common/core/lehf/AuditTypes/xsd" xmlns:tns="http://tns.tibco.com/bw/palette/internal/activityerror+4fcdf1ef-ab2e-4e5e-8a1e-e108cffc7a9e">
-            <element name="ActivityErrorData" type="tns:ActivityErrorDataType"/>
-            <complexType name="ActivityErrorDataType">
-                <choice>
-                    <element maxOccurs="1" minOccurs="0" ref="Q1:LogAudit"/>
-                </choice>
-            </complexType>
-        </schema>
-        <schema elementFormDefault="unqualified"
-            targetNamespace="http://tns.tibco.com/bw/palette/internal/activityerror+324742b1-a452-470d-a102-5015103ab08d"
-            xmlns="http://www.w3.org/2001/XMLSchema"
-            xmlns:Q1="http://it.linkem/common/core/lehf/AuditTypes/xsd" xmlns:tns="http://tns.tibco.com/bw/palette/internal/activityerror+324742b1-a452-470d-a102-5015103ab08d">
-            <element name="ActivityErrorData" type="tns:ActivityErrorDataType"/>
-            <complexType name="ActivityErrorDataType">
-                <choice>
-                    <element maxOccurs="1" minOccurs="0" ref="Q1:LogAudit"/>
-                </choice>
-            </complexType>
-        </schema>
-        <schema elementFormDefault="unqualified"
-            targetNamespace="http://tns.tibco.com/bw/palette/internal/activityerror+39a266dc-6f14-4904-950a-229731792384"
-            xmlns="http://www.w3.org/2001/XMLSchema"
-            xmlns:Q1="http://it.linkem/common/core/lehf/AuditTypes/xsd" xmlns:tns="http://tns.tibco.com/bw/palette/internal/activityerror+39a266dc-6f14-4904-950a-229731792384">
-            <element name="ActivityErrorData" type="tns:ActivityErrorDataType"/>
-            <complexType name="ActivityErrorDataType">
-                <choice>
-                    <element maxOccurs="1" minOccurs="0" ref="Q1:LogAudit"/>
-                </choice>
-            </complexType>
         </schema>
     </tibex:Types>
     <tibex:ProcessInfo callable="true" createdBy="flavi"
@@ -1063,15 +1009,12 @@
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://it.linkem/rete/udb/changeStatus/sl/xsd"/>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://it.linkem/common/configuration/mapping/rete_crm/xsd"/>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://it.linkem/crm/UpdateSim/sl/xsd"/>
+    <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://it.linkem/common/core/lehf/AuditTypes/xsd"/>
     <bpws:variables>
         <bpws:variable element="ns:ProcessContext"
             name="_processContext" sca-bpel:internal="true"/>
         <bpws:variable element="ns1:ContractChange_Input" name="Start"
             sca-bpel:internal="true" tibex:parameter="in"/>
-        <bpws:variable element="ns2:GetSimById_Input"
-            name="GetSIMByGuidTDC-input" sca-bpel:internal="true"/>
-        <bpws:variable element="ns3:GetSimById_Output"
-            name="GetSIMByGuidTDC" sca-bpel:internal="true"/>
         <bpws:variable name="AzioneDisattiva" sca-bpel:hotUpdate="false"
             sca-bpel:privateProperty="true" sca-bpel:property="yes" type="xsd:string">
             <bpws:from>
@@ -1088,10 +1031,6 @@
             name="ChangeStatus_SimSuspended_sl" sca-bpel:internal="true"/>
         <bpws:variable name="IMSI" type="xsd:string"/>
         <bpws:variable element="ns8:MappingRete_CRMConfiguration" name="SDL_CRM_Configuration"/>
-        <bpws:variable element="ns4:GetUserByImsi_SL_Input"
-            name="GetUserByImsi_sl-input" sca-bpel:internal="true"/>
-        <bpws:variable element="ns4:GetUserByImsi_SL_Output"
-            name="GetUserByImsi_sl" sca-bpel:internal="true"/>
         <bpws:variable name="odbPOAccessEps_Disattiva"
             sca-bpel:hotUpdate="false" sca-bpel:privateProperty="true"
             sca-bpel:property="yes" type="xsd:string">
@@ -1112,17 +1051,17 @@
                 <bpws:literal>ATTIVA</bpws:literal>
             </bpws:from>
         </bpws:variable>
-        <bpws:variable element="ns11:ActivityErrorData"
-            name="_error_GetSIMByGuidTDC" sca-bpel:internal="true"/>
+
         <bpws:variable element="ns:ErrorReport" name="_error" sca-bpel:internal="true"/>
-        <bpws:variable element="ns12:ActivityErrorData"
-            name="_error_ChangeProfile_sl" sca-bpel:internal="true"/>
-        <bpws:variable element="ns13:ActivityErrorData"
-            name="_error_ChangeStatus_SimSuspended_sl" sca-bpel:internal="true"/>
-        <bpws:variable element="ns14:ActivityErrorData"
-            name="_error_GetUserByImsi_sl" sca-bpel:internal="true"/>
-        <bpws:variable element="ns15:ActivityErrorData"
-            name="_error_UpdateSimStatus" sca-bpel:internal="true"/>
+        
+        <bpws:variable element="ns4:GetUserByImsi_SL_Input"
+            name="GetUserByImsi_sl-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns4:GetUserByImsi_SL_Output"
+            name="GetUserByImsi_sl" sca-bpel:internal="true"/>
+        <bpws:variable element="ns2:GetSimById_Input"
+            name="GetSIMByGuidTDC-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns3:GetSimById_Output"
+            name="GetSIMByGuidTDC" sca-bpel:internal="true"/>
     </bpws:variables>
     <bpws:extensions>
         <bpws:extension mustUnderstand="no" namespace="http://www.eclipse.org/gmf/runtime/1.0.2/notation"/>

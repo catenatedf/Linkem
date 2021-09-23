@@ -9,6 +9,7 @@
     xmlns:ns0="http://www.example.org/ContractActivation_BSL"
     xmlns:ns1="http://tns.tibco.com/bw/palette/internal/activityerror+bw.internal.end"
     xmlns:ns10="http://tns.tibco.com/bw/palette/internal/activityerror+31fa840b-f5f6-4977-a85a-c4bb6686b00f"
+    xmlns:ns11="http://it/linkem/5g/Whitelist_stati_sottostatiMSV/config/xsd"
     xmlns:ns2="http://it.linkem/crm/getTestataContrattoByGuidTDC/sl/xsd"
     xmlns:ns3="http://it/linkem/5g/ContractChange/bsl/xsd"
     xmlns:ns4="http://it.linkem/crm/UpdateTestataContratto/sl/xsd"
@@ -21,42 +22,6 @@
     xmlns:sca-bpel="http://docs.oasis-open.org/ns/opencsa/sca-bpel/200801"
     xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"
     xmlns:tibprop="http://ns.tibco.com/bw/property" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-    <tibex:VariableDescriptor type="MemorySaving">
-        <task name="GetTestataByGuidTDC">
-            <endingVariables>
-                <variable>GetTestataByGuidTDC-input</variable>
-            </endingVariables>
-        </task>
-        <task name="contractChange_bsl">
-            <endingVariables>
-                <variable>contractChange_bsl-input</variable>
-                <variable>Azione_Attivazione</variable>
-            </endingVariables>
-        </task>
-        <task name="UpdateTestataContratto">
-            <endingVariables>
-                <variable>UpdateTestataContratto-input</variable>
-                <variable>UpdateTestataContratto</variable>
-                <variable>GetTestataByGuidTDC</variable>
-            </endingVariables>
-        </task>
-        <task name="GetLineeContrattoByGuidTDC">
-            <endingVariables>
-                <variable>GetLineeContrattoByGuidTDC-input</variable>
-                <variable>Start</variable>
-            </endingVariables>
-        </task>
-        <task name="ForEach">
-            <endingVariables>
-                <variable>GetLineeContrattoByGuidTDC</variable>
-            </endingVariables>
-        </task>
-        <task name="UpdateLineaContrattoEntity">
-            <endingVariables>
-                <variable>UpdateLineaContrattoEntity-input</variable>
-            </endingVariables>
-        </task>
-    </tibex:VariableDescriptor>
     <tibex:Types>
         <xs:schema attributeFormDefault="unqualified"
             elementFormDefault="qualified"
@@ -360,8 +325,8 @@
                                     <element href="//0/@process/@activity/@activity/@activities.1"/>
                                     <layoutConstraint
                                     height="40" width="199"
-                                    x="373"
-                                    xsi:type="notation:Bounds" y="199"/>
+                                    x="492"
+                                    xsi:type="notation:Bounds" y="200"/>
                                     </children>
                                     <children type="4002">
                                     <children type="4017">
@@ -396,7 +361,7 @@
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.2"/>
                                     <layoutConstraint
-                                    width="243" x="154"
+                                    width="243" x="122"
                                     xsi:type="notation:Bounds" y="199"/>
                                     </children>
                                     <children type="4002">
@@ -432,8 +397,8 @@
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.3"/>
                                     <layoutConstraint
-                                    width="218" x="668"
-                                    xsi:type="notation:Bounds" y="199"/>
+                                    width="218" x="761"
+                                    xsi:type="notation:Bounds" y="200"/>
                                     </children>
                                     <children type="4002">
                                     <children type="4017">
@@ -468,7 +433,7 @@
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.4"/>
                                     <layoutConstraint
-                                    width="176" x="899"
+                                    width="176" x="955"
                                     xsi:type="notation:Bounds" y="199"/>
                                     </children>
                                     <children type="4002">
@@ -508,7 +473,7 @@
                                     xsi:type="notation:Bounds" y="199"/>
                                     </children>
                                     <children
-                                    description="Input:  dataAttivazione  dataInizioFatturazione  dataUltimaModifica Stato  sottoStato&#xd;&#xa;idStato "
+                                    description="Input:  dataInizioFatturazione  (data corrente)"
                                     fillColor="13369343"
                                     fontName="Segoe UI"
                                     lineColor="6737151"
@@ -788,7 +753,7 @@
                                     xsi:type="notation:Bounds" y="200"/>
                                     </children>
                                     <children
-                                    description="check input mapping    dataAttivazione , dataInizioFatturazione, dataUltimoCambioStato,  stato , sottoStato (numeri) .   "
+                                    description="check input mapping    dataAttivazione , dataInizioFatturazione, dataUltimoCambioStato,  lnk_status , lnk_sottoStato (numeri) , statocorrenteId(complex) , sottostatoid(complex) ,   lnk_tecnologiaconnessione"
                                     fillColor="13369343"
                                     fontName="Segoe UI"
                                     lineColor="6737151"
@@ -803,8 +768,46 @@
                                     <styles xsi:type="notation:TextStyle"/>
                                     <styles xsi:type="notation:LineTypeStyle"/>
                                     <element xsi:nil="true"/>
-                                    <layoutConstraint x="965"
-                                    xsi:type="notation:Bounds" y="99"/>
+                                    <layoutConstraint
+                                    width="188" x="917"
+                                    xsi:type="notation:Bounds" y="358"/>
+                                    </children>
+                                    <children type="4002 bw.internal.getSharedVariable">
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <styles fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.9"/>
+                                    <layoutConstraint
+                                    height="40" width="40"
+                                    x="345"
+                                    xsi:type="notation:Bounds" y="199"/>
                                     </children>
                                     <styles xsi:type="notation:DrawerStyle"/>
                                     <styles xsi:type="notation:SortingStyle"/>
@@ -818,7 +821,7 @@
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <styles xsi:type="bwnotation:ResizingStyle"/>
                                     <element href="//0/@process/@activity/@activity"/>
-                                    <layoutConstraint height="560"
+                                    <layoutConstraint height="722"
                                     width="2117" xsi:type="notation:Bounds"/>
                                 </children>
                                 <styles xsi:type="notation:SortingStyle"/>
@@ -847,7 +850,7 @@
             </children>
             <styles fontName="Segoe UI" lineColor="0" xsi:type="notation:ShapeStyle"/>
             <element href="//0/@process"/>
-            <layoutConstraint height="636" width="2462" xsi:type="notation:Bounds"/>
+            <layoutConstraint height="798" width="2462" xsi:type="notation:Bounds"/>
         </children>
         <styles xsi:type="notation:DiagramStyle"/>
         <element href="//0"/>
@@ -887,7 +890,7 @@
         </edges>
         <edges
             source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2"
-            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.1" type="4006">
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.11" type="4006">
             <children type="6002">
                 <layoutConstraint xsi:type="notation:Location" y="40"/>
             </children>
@@ -993,6 +996,17 @@
             <element xsi:nil="true"/>
             <bendpoints points="[0, 0, -965, -223]$[914, 211, -51, -12]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
+        <edges
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.11"
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.1" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.9"/>
+            <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
     </notation:Diagram>
     <tibex:NamespaceRegistry enabled="true">
         <tibex:namespaceItem
@@ -1016,6 +1030,7 @@
     <bpws:import importType="http://www.w3.org/2001/XMLSchema"
         location="../../../../../../../it.linkem.crm.microsoftDynamics.sl.sh/Schemas/UpdateLineaContratto/UpdateLineaContratto_sl.xsd" namespace="http://it.linkem/crm/UpdateLineaContratto/sl/xsd"/>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://it.linkem/common/core/lehf/AuditTypes/xsd"/>
+    <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://it/linkem/5g/Whitelist_stati_sottostatiMSV/config/xsd"/>
     <bpws:variables>
         <bpws:variable element="ns:ProcessContext"
             name="_processContext" sca-bpel:internal="true"/>
@@ -1034,10 +1049,7 @@
             tibex:propertySource="/it.linkem.5g.contractactivation/Azione_Attivazione" type="xsd:string"/>
         <bpws:variable name="stato_TDC" sca-bpel:hotUpdate="false"
             sca-bpel:privateProperty="true" sca-bpel:property="yes"
-            tibex:propertySource="/it.linkem.5g.contractactivation/CheckIniziali/statoTDC_Attivazione" type="xsd:string"/>
-        <bpws:variable name="sottostato_TDC" sca-bpel:hotUpdate="false"
-            sca-bpel:privateProperty="true" sca-bpel:property="yes"
-            tibex:propertySource="/it.linkem.5g.contractactivation/CheckIniziali/sottostatoTDC_Attivazione" type="xsd:string"/>
+            tibex:propertySource="/it.linkem.5g.contractactivation/CheckIniziali/whitelist_stati_sottostati" type="xsd:string"/>
         <bpws:variable element="ns4:UpdateTestataContratto_Input"
             name="UpdateTestataContratto-input" sca-bpel:internal="true"/>
         <bpws:variable element="ns4:UpdateTestataContratto_Output"
@@ -1064,6 +1076,8 @@
             sca-bpel:hotUpdate="false" sca-bpel:privateProperty="true"
             sca-bpel:property="yes"
             tibex:propertySource="/it.linkem.5g.contractactivation/CRM/Attivazione/FixedParameters/lnk_sottostatoid" type="xsd:string"/>
+        <bpws:variable element="ns11:whiteList_Attivazione"
+            name="GetWhiteListStati" sca-bpel:internal="true"/>
     </bpws:variables>
     <bpws:extensions>
         <bpws:extension mustUnderstand="no" namespace="http://www.eclipse.org/gmf/runtime/1.0.2/notation"/>
@@ -1091,6 +1105,8 @@
                 <bpws:link name="GetLineeContrattoByGuidTDCToForEach" tibex:linkType="SUCCESS"/>
                 <bpws:link name="ForEachToEnd" tibex:linkType="SUCCESS"/>
                 <bpws:link name="EmptyToEnd" tibex:linkType="SUCCESS"/>
+                <bpws:link
+                    name="GetSharedVariableTocheckStato_Sottostato" tibex:linkType="SUCCESS"/>
             </bpws:links>
             <bpws:extensionActivity>
                 <tibex:receiveEvent createInstance="yes"
@@ -1107,15 +1123,15 @@
             </bpws:extensionActivity>
             <bpws:empty name="checkStato_Sottostato" tibex:xpdlId="fcedea3b-5cf9-4806-9cb9-47ecf502add3">
                 <bpws:targets>
-                    <bpws:target linkName="GetTestataByGuidTDCTocheckStato_Sottostato"/>
+                    <bpws:target linkName="GetSharedVariableTocheckStato_Sottostato"/>
                 </bpws:targets>
                 <bpws:sources>
                     <bpws:source linkName="checkStato_SottostatoTocontractChange_bsl">
                         <tibex:DesignExpression>
                             <tibex:expression
-                                expression="$GetTestataByGuidTDC/ns2:TestataDelContratto[1]/lnk_status=4 and  $GetTestataByGuidTDC/ns2:TestataDelContratto[1]/lnk_sottostato=2" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"/>
+                                expression="count($GetWhiteListStati/ns11:stati_sottostati[./ns11:stato=string($GetTestataByGuidTDC/ns2:TestataDelContratto[1]/lnk_status) and ./ns11:sottostato=string($GetTestataByGuidTDC/ns2:TestataDelContratto[1]/lnk_sottostato)])>0" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"/>
                         </tibex:DesignExpression>
-                        <bpws:transitionCondition expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"><![CDATA[$GetTestataByGuidTDC/ns2:TestataDelContratto[1]/lnk_status=4 and  $GetTestataByGuidTDC/ns2:TestataDelContratto[1]/lnk_sottostato=2]]></bpws:transitionCondition>
+                        <bpws:transitionCondition expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"><![CDATA[count($GetWhiteListStati/ns11:stati_sottostati[./ns11:stato=string($GetTestataByGuidTDC/ns2:TestataDelContratto[1]/lnk_status) and ./ns11:sottostato=string($GetTestataByGuidTDC/ns2:TestataDelContratto[1]/lnk_sottostato)])>0]]></bpws:transitionCondition>
                     </bpws:source>
                     <bpws:source linkName="checkStato_SottostatoToEmpty">
                         <tibex:DesignExpression>
@@ -1183,7 +1199,7 @@
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding coercion=""
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns5=&quot;http://it.linkem/crm/UpdateTestataContratto/sl/xsd&quot; xmlns:tns1=&quot;http://it.linkem/crm/getTestataContrattoByGuidTDC/sl/xsd&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;GetTestataByGuidTDC&quot;/>&lt;xsl:template name=&quot;UpdateTestataContratto-input&quot; match=&quot;/&quot;>&lt;tns5:UpdateTestataContratto_Input>&lt;xsl:variable name=&quot;testataContratto&quot; select=&quot;$GetTestataByGuidTDC/tns1:TestataDelContratto[1]&quot;/>&lt;tns5:lnk_testatadelcontratto>&lt;xsl:if test=&quot;$testataContratto/lnk_testatadelcontrattoid&quot;>&lt;lnk_testatadelcontrattoid>&lt;xsl:value-of select=&quot;$testataContratto/lnk_testatadelcontrattoid&quot;/>&lt;/lnk_testatadelcontrattoid>&lt;/xsl:if>&lt;lnk_dataattivazione>&lt;xsl:value-of select=&quot;current-dateTime()&quot;/>&lt;/lnk_dataattivazione>&lt;lnk_datainiziofatturazione>&lt;xsl:value-of select=&quot;current-dateTime()&quot;/>&lt;/lnk_datainiziofatturazione>&lt;lnk_dataultimocambiostato>&lt;xsl:value-of select=&quot;current-dateTime()&quot;/>&lt;/lnk_dataultimocambiostato>&lt;/tns5:lnk_testatadelcontratto>&lt;/tns5:UpdateTestataContratto_Input>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns5=&quot;http://it.linkem/crm/UpdateTestataContratto/sl/xsd&quot; xmlns:tns1=&quot;http://it.linkem/crm/getTestataContrattoByGuidTDC/sl/xsd&quot; xmlns:tns=&quot;http://www.example.org/ContractActivation_BSL&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;GetTestataByGuidTDC&quot;/>&lt;xsl:param name=&quot;FixedParams_statocorrenteid&quot;/>&lt;xsl:param name=&quot;FixedParams_sottostatoid&quot;/>&lt;xsl:param name=&quot;Start&quot;/>&lt;xsl:template name=&quot;UpdateTestataContratto-input&quot; match=&quot;/&quot;>&lt;tns5:UpdateTestataContratto_Input>&lt;xsl:variable name=&quot;testataContratto&quot; select=&quot;$GetTestataByGuidTDC/tns1:TestataDelContratto[1]&quot;/>&lt;tns5:lnk_testatadelcontratto>&lt;xsl:if test=&quot;$Start/tns:guid&quot;>&lt;lnk_testatadelcontrattoid>&lt;xsl:value-of select=&quot;$Start/tns:guid&quot;/>&lt;/lnk_testatadelcontrattoid>&lt;/xsl:if>&lt;lnk_statocorrenteid>&lt;entitylogicname>&lt;xsl:value-of select=&quot;$GetTestataByGuidTDC/tns1:TestataDelContratto/lnk_statocorrenteid/entitylogicname&quot;/>&lt;/entitylogicname>&lt;entityid>&lt;xsl:value-of select=&quot;$FixedParams_statocorrenteid&quot;/>&lt;/entityid>&lt;/lnk_statocorrenteid>&lt;lnk_status>&lt;xsl:value-of select=&quot;1&quot;/>&lt;/lnk_status>&lt;lnk_dataattivazione>&lt;xsl:value-of select=&quot;current-dateTime()&quot;/>&lt;/lnk_dataattivazione>&lt;lnk_datainiziofatturazione>&lt;xsl:value-of select=&quot;current-dateTime()&quot;/>&lt;/lnk_datainiziofatturazione>&lt;lnk_sottostatoid>&lt;entitylogicname>&lt;xsl:value-of select=&quot;$GetTestataByGuidTDC/tns1:TestataDelContratto/lnk_sottostatoid/entitylogicname&quot;/>&lt;/entitylogicname>&lt;entityid>&lt;xsl:value-of select=&quot;$FixedParams_sottostatoid&quot;/>&lt;/entityid>&lt;/lnk_sottostatoid>&lt;lnk_tecnologiaconnessione>&lt;xsl:value-of select=&quot;11&quot;/>&lt;/lnk_tecnologiaconnessione>&lt;lnk_sottostato>&lt;xsl:value-of select=&quot;3&quot;/>&lt;/lnk_sottostato>&lt;lnk_dataultimocambiostato>&lt;xsl:value-of select=&quot;current-dateTime()&quot;/>&lt;/lnk_dataultimocambiostato>&lt;/tns5:lnk_testatadelcontratto>&lt;/tns5:UpdateTestataContratto_Input>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:CallProcess
                         moduleRef="it.linkem.crm.microsoftDynamics.sl.sh"
@@ -1306,6 +1322,21 @@
                         </bwext:BWActivity>
                     </tibex:config>
                 </tibex:activityExtension>
+            </bpws:extensionActivity>
+            <bpws:extensionActivity>
+                <tibex:extActivity name="GetWhiteListStati"
+                    outputVariable="GetWhiteListStati"
+                    tibex:xpdlId="bd9ac9c1-239d-4f22-8a10-060a81f6b77a"
+                    type="bw.internal.getSharedVariable" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                    <bpws:targets>
+                        <bpws:target linkName="GetTestataByGuidTDCTocheckStato_Sottostato"/>
+                    </bpws:targets>
+                    <bpws:sources>
+                        <bpws:source linkName="GetSharedVariableTocheckStato_Sottostato"/>
+                    </bpws:sources>
+                    <tibex:GetSharedVariable
+                        variableName="WhitelistStatiCRM" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
+                </tibex:extActivity>
             </bpws:extensionActivity>
         </bpws:flow>
     </bpws:scope>

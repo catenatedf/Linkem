@@ -620,17 +620,7 @@
             </xs:complexType>
             <xs:element name="SleepInputSchema" type="tns:SleepInputSchema"/>
         </xs:schema>
-        <schema elementFormDefault="unqualified"
-            targetNamespace="http://tns.tibco.com/bw/palette/internal/activityerror+com.tibco.bw.core.design.process.editor.Activity_4002_Throw"
-            xmlns="http://www.w3.org/2001/XMLSchema"
-            xmlns:Q1="http://it.linkem/common/core/lehf/AuditTypes/xsd" xmlns:tns="http://tns.tibco.com/bw/palette/internal/activityerror+com.tibco.bw.core.design.process.editor.Activity_4002_Throw">
-            <element name="ActivityErrorData" type="tns:ActivityErrorDataType"/>
-            <complexType name="ActivityErrorDataType">
-                <choice>
-                    <element maxOccurs="1" minOccurs="0" ref="Q1:LogAudit"/>
-                </choice>
-            </complexType>
-        </schema>
+   
         <schema elementFormDefault="unqualified"
             targetNamespace="http://tns.tibco.com/bw/palette/internal/activityerror+bw.xml.transformxml"
             xmlns="http://www.w3.org/2001/XMLSchema"
@@ -1533,10 +1523,7 @@
             sca-bpel:hotUpdate="false" sca-bpel:privateProperty="true"
             sca-bpel:property="yes"
             tibex:propertySource="//it.linkem.common.core.lehf.sh///it.linkem.common.core.lehf.sh/Logging/Business_Exception" type="xsd:string"/>
-        <bpws:variable element="ns20:ActivityErrorData"
-            name="_error_Copy_1_ThrowTransfXMLError" sca-bpel:internal="true"/>
-        <bpws:variable element="ns6:ActivityErrorData"
-            name="_error_ParseChangeProfileResponse" sca-bpel:internal="true"/>
+        
         <bpws:variable element="ChangeProfile_Parameters" name="InputParameters"/>
     </bpws:variables>
     <bpws:extensions>
@@ -1793,25 +1780,7 @@
                     </tibex:DesignExpression>
                     <bpws:scope name="innerScope">
                         <bpws:faultHandlers>
-                            <bpws:catchAll
-                                tibex:faultDetailsVar="FaultDetails" tibex:faultNameVar="FaultName">
-                                <bpws:if name="if">
-                                    <tibex:DesignExpression>
-                                    <tibex:expression
-                                    expression="$index=$NumMaxRetry" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"/>
-                                    </tibex:DesignExpression>
-                                    <bpws:condition expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"><![CDATA[$index=$NumMaxRetry]]></bpws:condition>
-                                    <bpws:rethrow name="Rethrow"/>
-                                    <bpws:else>
-                                    <bpws:assign name="Assign" validate="no">
-                                    <bpws:copy>
-                                    <bpws:from expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"><![CDATA[false()]]></bpws:from>
-                                    <bpws:to variable="repeatOnError_success_flag"/>
-                                    </bpws:copy>
-                                    </bpws:assign>
-                                    </bpws:else>
-                                </bpws:if>
-                            </bpws:catchAll>
+
                         </bpws:faultHandlers>
                         <bpws:flow name="flow1">
                             <bpws:links>

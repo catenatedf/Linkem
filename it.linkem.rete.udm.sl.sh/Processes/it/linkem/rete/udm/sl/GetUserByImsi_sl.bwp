@@ -1770,25 +1770,7 @@
                     </tibex:DesignExpression>
                     <bpws:scope name="innerScope">
                         <bpws:faultHandlers>
-                            <bpws:catchAll
-                                tibex:faultDetailsVar="FaultDetails" tibex:faultNameVar="FaultName">
-                                <bpws:if name="if">
-                                    <tibex:DesignExpression>
-                                    <tibex:expression
-                                    expression="$index=$NumMaxRetry" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"/>
-                                    </tibex:DesignExpression>
-                                    <bpws:condition expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"><![CDATA[$index=$NumMaxRetry]]></bpws:condition>
-                                    <bpws:rethrow name="Rethrow"/>
-                                    <bpws:else>
-                                    <bpws:assign name="Assign" validate="no">
-                                    <bpws:copy>
-                                    <bpws:from expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"><![CDATA[false()]]></bpws:from>
-                                    <bpws:to variable="repeatOnError_success_flag"/>
-                                    </bpws:copy>
-                                    </bpws:assign>
-                                    </bpws:else>
-                                </bpws:if>
-                            </bpws:catchAll>
+                            
                         </bpws:faultHandlers>
                         <bpws:flow name="flow1">
                             <bpws:links>

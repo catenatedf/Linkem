@@ -22,6 +22,25 @@
     xmlns:sca-bpel="http://docs.oasis-open.org/ns/opencsa/sca-bpel/200801"
     xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"
     xmlns:tibprop="http://ns.tibco.com/bw/property" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <tibex:VariableDescriptor type="MemorySaving">
+        <task name="End">
+            <endingVariables>
+                <variable>RetrieveMultipleEntities_Simone</variable>
+            </endingVariables>
+        </task>
+        <task name="RetrieveMultipleEntities_NoGrant">
+            <endingVariables>
+                <variable>RetrieveMultipleEntities_NoGrant-input</variable>
+                <variable>RetrieveMultipleEntities_NoGrant</variable>
+            </endingVariables>
+        </task>
+        <task name="RetrieveMultipleEntities_Simone">
+            <endingVariables>
+                <variable>RetrieveMultipleEntities_Simone-input</variable>
+                <variable>Start</variable>
+            </endingVariables>
+        </task>
+    </tibex:VariableDescriptor>
     <tibex:Types>
         <xs:schema attributeFormDefault="unqualified"
             elementFormDefault="qualified"

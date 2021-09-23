@@ -66,20 +66,6 @@
       <packaging:overrideValue>false</packaging:overrideValue>
     </packaging:property>
     <packaging:property>
-      <packaging:name>//it.linkem.5g.contractActivation.md///it.linkem.5g.contractactivation/CheckIniziali/statoTDC_Attivazione</packaging:name>
-      <packaging:type>xsd:string</packaging:type>
-      <packaging:visibility>public</packaging:visibility>
-      <packaging:scalable>true</packaging:scalable>
-      <packaging:overrideValue>false</packaging:overrideValue>
-    </packaging:property>
-    <packaging:property>
-      <packaging:name>//it.linkem.5g.contractActivation.md///it.linkem.5g.contractactivation/CheckIniziali/sottostatoTDC_Attivazione</packaging:name>
-      <packaging:type>xsd:string</packaging:type>
-      <packaging:visibility>public</packaging:visibility>
-      <packaging:scalable>true</packaging:scalable>
-      <packaging:overrideValue>false</packaging:overrideValue>
-    </packaging:property>
-    <packaging:property>
       <packaging:name>//it.linkem.5g.contractActivation.md///it.linkem.5g.contractactivation/Azione_Attivazione</packaging:name>
       <packaging:type>xsd:string</packaging:type>
       <packaging:visibility>public</packaging:visibility>
@@ -683,6 +669,13 @@
     </packaging:property>
     <packaging:property>
       <packaging:name>//it.linkem.5g.contractActivation.md///it.linkem.5g.contractactivation/CRM/Attivazione/FixedParameters/lnk_statocorrenteId</packaging:name>
+      <packaging:type>xsd:string</packaging:type>
+      <packaging:visibility>public</packaging:visibility>
+      <packaging:scalable>true</packaging:scalable>
+      <packaging:overrideValue>false</packaging:overrideValue>
+    </packaging:property>
+    <packaging:property>
+      <packaging:name>//it.linkem.5g.contractActivation.md///it.linkem.5g.contractactivation/CheckIniziali/whitelist_stati_sottostati</packaging:name>
       <packaging:type>xsd:string</packaging:type>
       <packaging:visibility>public</packaging:visibility>
       <packaging:scalable>true</packaging:scalable>

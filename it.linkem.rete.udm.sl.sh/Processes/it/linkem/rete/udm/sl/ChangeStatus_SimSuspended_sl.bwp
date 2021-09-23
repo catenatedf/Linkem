@@ -18,7 +18,7 @@
     xmlns:ns18="http://tns.tibco.com/bw/palette/internal/errorlinkhandler+c7301a91-c0a8-45fe-9424-36c2dbd9f58c"
     xmlns:ns19="http://tns.tibco.com/bw/palette/internal/errorlinkhandler+a51a8e22-3f3a-4cf6-aa02-811dd09384f3"
     xmlns:ns2="http://tns.tibco.com/bw/activity/sendhttprequest/input+0e88576d-f9ca-4773-8468-2eb4b8d9b4e4+RequestActivityInput"
-    xmlns:ns20="http://tns.tibco.com/bw/palette/internal/activityerror+com.tibco.bw.core.design.process.editor.Activity_4002_Throw"
+
     xmlns:ns21="http://it.linkem/rete/udb/changeStatus/sl/xsd"
     xmlns:ns3="http://tns.tibco.com/bw/activity/sendhttprequest/output+0e88576d-f9ca-4773-8468-2eb4b8d9b4e4+RequestActivityOutput"
     xmlns:ns4="http://tns.tibco.com/bw/palette/internal/activityerror+bw.http.sendHTTPRequest"
@@ -620,17 +620,7 @@
             </xs:complexType>
             <xs:element name="SleepInputSchema" type="tns:SleepInputSchema"/>
         </xs:schema>
-        <schema elementFormDefault="unqualified"
-            targetNamespace="http://tns.tibco.com/bw/palette/internal/activityerror+com.tibco.bw.core.design.process.editor.Activity_4002_Throw"
-            xmlns="http://www.w3.org/2001/XMLSchema"
-            xmlns:Q1="http://it.linkem/common/core/lehf/AuditTypes/xsd" xmlns:tns="http://tns.tibco.com/bw/palette/internal/activityerror+com.tibco.bw.core.design.process.editor.Activity_4002_Throw">
-            <element name="ActivityErrorData" type="tns:ActivityErrorDataType"/>
-            <complexType name="ActivityErrorDataType">
-                <choice>
-                    <element maxOccurs="1" minOccurs="0" ref="Q1:LogAudit"/>
-                </choice>
-            </complexType>
-        </schema>
+        
         <schema elementFormDefault="unqualified"
             targetNamespace="http://tns.tibco.com/bw/palette/internal/activityerror+bw.xml.transformxml"
             xmlns="http://www.w3.org/2001/XMLSchema"
@@ -1584,11 +1574,9 @@
             sca-bpel:hotUpdate="false" sca-bpel:privateProperty="true"
             sca-bpel:property="yes"
             tibex:propertySource="//it.linkem.common.core.lehf.sh///it.linkem.common.core.lehf.sh/Logging/Business_Exception" type="xsd:string"/>
-        <bpws:variable element="ns20:ActivityErrorData"
-            name="_error_Copy_1_ThrowTransfXMLError" sca-bpel:internal="true"/>
+       
         <bpws:variable element="ChangeStatus_Parameters" name="InputParameters"/>
-        <bpws:variable element="ns6:ActivityErrorData"
-            name="_error_ParseChangeStatusResponse" sca-bpel:internal="true"/>
+       
     </bpws:variables>
     <bpws:extensions>
         <bpws:extension mustUnderstand="no" namespace="http://www.eclipse.org/gmf/runtime/1.0.2/notation"/>
