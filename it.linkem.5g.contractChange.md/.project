@@ -3,7 +3,11 @@
 	<name>it.linkem.5g.contractChange.md</name>
 	<comment></comment>
 	<projects>
+		<project>it.linkem.5g.contractChange.bsl.sh</project>
 		<project>it.linkem.common.core.lehf.sh</project>
+		<project>it.linkem.common.utils.sh</project>
+		<project>it.linkem.crm.microsoftDynamics.sl.sh</project>
+		<project>it.linkem.rete.udm.sl.sh</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
