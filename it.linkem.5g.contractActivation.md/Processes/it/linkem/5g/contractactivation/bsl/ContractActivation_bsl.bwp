@@ -472,7 +472,7 @@
                                     xsi:type="notation:Bounds" y="199"/>
                                     </children>
                                     <children
-                                    description="input da mappare (stato, date, ecc.)"
+                                    description="Input:  dataAttivazione  dataInizioFatturazione  dataUltimaModifica Stato  sottoStato&#xd;&#xa;idStato "
                                     fillColor="13369343"
                                     fontName="Segoe UI"
                                     lineColor="6737151"
@@ -487,8 +487,10 @@
                                     <styles xsi:type="notation:TextStyle"/>
                                     <styles xsi:type="notation:LineTypeStyle"/>
                                     <element xsi:nil="true"/>
-                                    <layoutConstraint x="960"
-                                    xsi:type="notation:Bounds" y="81"/>
+                                    <layoutConstraint
+                                    height="129" width="182"
+                                    x="1461"
+                                    xsi:type="notation:Bounds" y="400"/>
                                     </children>
                                     <children type="4018">
                                     <children type="3018">
@@ -749,6 +751,25 @@
                                     x="1984"
                                     xsi:type="notation:Bounds" y="200"/>
                                     </children>
+                                    <children
+                                    description="check input mapping"
+                                    fillColor="13369343"
+                                    fontName="Segoe UI"
+                                    lineColor="6737151"
+                                    lineWidth="1"
+                                    transparency="0" type="Note" xsi:type="notation:Shape">
+                                    <children type="DiagramName" xsi:type="notation:BasicDecorationNode">
+                                    <element xsi:nil="true"/>
+                                    </children>
+                                    <children type="Description" xsi:type="notation:BasicDecorationNode">
+                                    <element xsi:nil="true"/>
+                                    </children>
+                                    <styles xsi:type="notation:TextStyle"/>
+                                    <styles xsi:type="notation:LineTypeStyle"/>
+                                    <element xsi:nil="true"/>
+                                    <layoutConstraint x="965"
+                                    xsi:type="notation:Bounds" y="99"/>
+                                    </children>
                                     <styles xsi:type="notation:DrawerStyle"/>
                                     <styles xsi:type="notation:SortingStyle"/>
                                     <styles xsi:type="notation:FilteringStyle"/>
@@ -761,7 +782,7 @@
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <styles xsi:type="bwnotation:ResizingStyle"/>
                                     <element href="//0/@process/@activity/@activity"/>
-                                    <layoutConstraint height="473"
+                                    <layoutConstraint height="560"
                                     width="2117" xsi:type="notation:Bounds"/>
                                 </children>
                                 <styles xsi:type="notation:SortingStyle"/>
@@ -790,7 +811,7 @@
             </children>
             <styles fontName="Segoe UI" lineColor="0" xsi:type="notation:ShapeStyle"/>
             <element href="//0/@process"/>
-            <layoutConstraint height="549" width="2462" xsi:type="notation:Bounds"/>
+            <layoutConstraint height="636" width="2462" xsi:type="notation:Bounds"/>
         </children>
         <styles xsi:type="notation:DiagramStyle"/>
         <element href="//0"/>
@@ -885,15 +906,6 @@
         </edges>
         <edges lineColor="0" lineWidth="1"
             source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.6"
-            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.4"
-            type="NoteAttachment" xsi:type="notation:Connector">
-            <styles xsi:type="notation:ArrowStyle"/>
-            <styles xsi:type="notation:LineTypeStyle"/>
-            <element xsi:nil="true"/>
-            <bendpoints points="[0, 0, -965, -223]$[914, 211, -51, -12]" xsi:type="notation:RelativeBendpoints"/>
-        </edges>
-        <edges lineColor="0" lineWidth="1"
-            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.6"
             target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.7/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0"
             type="NoteAttachment" xsi:type="notation:Connector">
             <styles xsi:type="notation:ArrowStyle"/>
@@ -936,6 +948,15 @@
             <element href="//0/@process/@activity/@activity/@links/@children.8"/>
             <bendpoints points="[25, 1, -92, 0]$[93, 0, -24, -1]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
+        <edges lineColor="0" lineWidth="1"
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.10"
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.4"
+            type="NoteAttachment" xsi:type="notation:Connector">
+            <styles xsi:type="notation:ArrowStyle"/>
+            <styles xsi:type="notation:LineTypeStyle"/>
+            <element xsi:nil="true"/>
+            <bendpoints points="[0, 0, -965, -223]$[914, 211, -51, -12]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
     </notation:Diagram>
     <tibex:NamespaceRegistry enabled="true">
         <tibex:namespaceItem
@@ -944,6 +965,12 @@
             namespace="http://www.example.org/ContractActivation_BSL" prefix="tns"/>
         <tibex:namespaceItem
             namespace="http://it/linkem/5g/ContractChange/bsl/xsd" prefix="tns2"/>
+        <tibex:namespaceItem
+            namespace="http://it.linkem/crm/getLineeContratto/sl/xsd" prefix="tns3"/>
+        <tibex:namespaceItem
+            namespace="http://it.linkem/crm/UpdateLineaContratto/sl/xsd" prefix="tns4"/>
+        <tibex:namespaceItem
+            namespace="http://it.linkem/crm/UpdateTestataContratto/sl/xsd" prefix="tns5"/>
     </tibex:NamespaceRegistry>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://it/linkem/5g/ContractChange/bsl/xsd"/>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://it.linkem/crm/getTestataContrattoByGuidTDC/sl/xsd"/>
@@ -1112,7 +1139,7 @@
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding coercion=""
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://it.linkem/crm/UpdateTestataContratto/sl/xsd&quot; xmlns:tns1=&quot;http://it.linkem/crm/getTestataContrattoByGuidTDC/sl/xsd&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;GetTestataByGuidTDC&quot;/>&lt;xsl:template name=&quot;UpdateTestataContratto-input&quot; match=&quot;/&quot;>&lt;tns:UpdateTestataContratto_Input>&lt;xsl:variable name=&quot;testataContratto&quot; select=&quot;$GetTestataByGuidTDC/tns1:TestataDelContratto[1]&quot;/>&lt;tns:lnk_testatadelcontratto>&lt;xsl:if test=&quot;$testataContratto/lnk_testatadelcontrattoid&quot;>&lt;lnk_testatadelcontrattoid>&lt;xsl:value-of select=&quot;$testataContratto/lnk_testatadelcontrattoid&quot;/>&lt;/lnk_testatadelcontrattoid>&lt;/xsl:if>&lt;/tns:lnk_testatadelcontratto>&lt;/tns:UpdateTestataContratto_Input>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns5=&quot;http://it.linkem/crm/UpdateTestataContratto/sl/xsd&quot; xmlns:tns1=&quot;http://it.linkem/crm/getTestataContrattoByGuidTDC/sl/xsd&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;GetTestataByGuidTDC&quot;/>&lt;xsl:template name=&quot;UpdateTestataContratto-input&quot; match=&quot;/&quot;>&lt;tns5:UpdateTestataContratto_Input>&lt;xsl:variable name=&quot;testataContratto&quot; select=&quot;$GetTestataByGuidTDC/tns1:TestataDelContratto[1]&quot;/>&lt;tns5:lnk_testatadelcontratto>&lt;xsl:if test=&quot;$testataContratto/lnk_testatadelcontrattoid&quot;>&lt;lnk_testatadelcontrattoid>&lt;xsl:value-of select=&quot;$testataContratto/lnk_testatadelcontrattoid&quot;/>&lt;/lnk_testatadelcontrattoid>&lt;/xsl:if>&lt;lnk_status>&lt;xsl:value-of select=&quot;1&quot;/>&lt;/lnk_status>&lt;lnk_dataattivazione>&lt;xsl:value-of select=&quot;current-dateTime()&quot;/>&lt;/lnk_dataattivazione>&lt;lnk_datainiziofatturazione>&lt;xsl:value-of select=&quot;current-dateTime()&quot;/>&lt;/lnk_datainiziofatturazione>&lt;modifiedon>&lt;xsl:value-of select=&quot;current-dateTime()&quot;/>&lt;/modifiedon>&lt;/tns5:lnk_testatadelcontratto>&lt;/tns5:UpdateTestataContratto_Input>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:CallProcess
                         moduleRef="it.linkem.crm.microsoftDynamics.sl.sh"
@@ -1134,7 +1161,7 @@
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding coercion=""
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://www.example.org/ContractActivation_BSL&quot; xmlns:tns1=&quot;http://it.linkem/crm/getLineeContratto/sl/xsd&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;Start&quot;/>&lt;xsl:template name=&quot;GetLineeContrattoByGuidTDC-input&quot; match=&quot;/&quot;>&lt;tns1:getLineeContratto_Input>&lt;tns1:guid_TDC>&lt;xsl:value-of select=&quot;$Start/tns:guid&quot;/>&lt;/tns1:guid_TDC>&lt;/tns1:getLineeContratto_Input>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://www.example.org/ContractActivation_BSL&quot; xmlns:tns3=&quot;http://it.linkem/crm/getLineeContratto/sl/xsd&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;Start&quot;/>&#xa;    &lt;xsl:template name=&quot;GetLineeContrattoByGuidTDC-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns3:getLineeContratto_Input>&#xa;            &lt;tns3:guid_TDC>&#xa;                &lt;xsl:value-of select=&quot;$Start/tns:guid&quot;/>&#xa;            &lt;/tns3:guid_TDC>&#xa;        &lt;/tns3:getLineeContratto_Input>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:CallProcess
                         moduleRef="it.linkem.crm.microsoftDynamics.sl.sh"
@@ -1190,6 +1217,11 @@
                                     <bpws:sources>
                                     <bpws:source linkName="UpdateLineaContrattoEntityToGroupEnd"/>
                                     </bpws:sources>
+                                    <tibex:inputBindings>
+                                    <tibex:inputBinding
+                                    coercion=""
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns4=&quot;http://it.linkem/crm/UpdateLineaContratto/sl/xsd&quot; xmlns:tns3=&quot;http://it.linkem/crm/getLineeContratto/sl/xsd&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;index&quot;/>&lt;xsl:param name=&quot;GetLineeContrattoByGuidTDC&quot;/>&lt;xsl:template name=&quot;UpdateLineaContrattoEntity-input&quot; match=&quot;/&quot;>&lt;tns4:UpdateLineaContratto_Input>&lt;tns4:lnk_lineedelcontratto>&lt;lnk_datainiziofatturazione>&lt;xsl:value-of select=&quot;current-dateTime()&quot;/>&lt;/lnk_datainiziofatturazione>&lt;modifiedon>&lt;xsl:value-of select=&quot;current-dateTime()&quot;/>&lt;/modifiedon>&lt;lnk_status>&lt;xsl:value-of select=&quot;1&quot;/>&lt;/lnk_status>&lt;lnk_dataattivazione>&lt;xsl:value-of select=&quot;current-dateTime()&quot;/>&lt;/lnk_dataattivazione>&lt;xsl:if test=&quot;$GetLineeContrattoByGuidTDC/tns3:LineeDelContratto[$index]/lnk_lineedelcontrattoid&quot;>&lt;lnk_lineedelcontrattoid>&lt;xsl:value-of select=&quot;$GetLineeContrattoByGuidTDC/tns3:LineeDelContratto[$index]/lnk_lineedelcontrattoid&quot;/>&lt;/lnk_lineedelcontrattoid>&lt;/xsl:if>&lt;/tns4:lnk_lineedelcontratto>&lt;/tns4:UpdateLineaContratto_Input>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                    </tibex:inputBindings>
                                     <tibex:CallProcess
                                     moduleRef="it.linkem.crm.microsoftDynamics.sl.sh"
                                     subProcessName="it.linkem.crm.microsoftDynamics.sl.UpdateLineaContrattoEntity" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
