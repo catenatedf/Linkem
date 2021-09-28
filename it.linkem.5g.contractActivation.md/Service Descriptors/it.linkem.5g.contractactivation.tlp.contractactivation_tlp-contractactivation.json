@@ -76,7 +76,8 @@
           "type" : "string"
         },
         "Status" : {
-          "type" : "integer"
+          "type" : "integer",
+          "format" : "int32"
         }
       }
     },

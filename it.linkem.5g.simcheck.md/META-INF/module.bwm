@@ -39,4 +39,7 @@
       <sca:interface.wsdl xmi:id="_TqGOcQ8AEeyYyO9H7W6dmg" interface="http://xmlns.example.com/20210906125053PLT#wsdl.interface(simcheck)" scaext:wsdlLocation="../Processes/it/linkem/5g/simcheck/tlp/SimCheckREST_tlp.bwp"/>
     </sca:service>
   </sca:component>
+  <sca:component xmi:id="_b_MhcCB1EeyT7o-uHg8q_g" name="ComponentLoadMappingConfiguration" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_b_NIgCB1EeyT7o-uHg8q_g" processName="it.linkem.5g.simcheck.onStartup.LoadMappingConfiguration"/>
+  </sca:component>
 </sca:composite>
