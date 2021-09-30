@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <bpws:process exitOnStandardFault="no"
-    name="it.linkem.5g.simcheck.onStartup.LoadMappingConfiguration"
+    name="it.linkem.5g.simcheck.onStartup.LoadErrorConfiguration"
     suppressJoinFailure="yes"
-    targetNamespace="http://xmlns.example.com/20210928180210"
+    targetNamespace="http://xmlns.example.com/20210929093718"
     xmlns:bpws="http://docs.oasis-open.org/wsbpel/2.0/process/executable"
     xmlns:info="http://www.tibco.com/bw/process/info"
-    xmlns:ns="http://xmlns.example.com/20210928180210PLT"
+    xmlns:ns="http://xmlns.example.com/20210929093718PLT"
     xmlns:ns0="http://www.tibco.com/pe/EngineTypes"
     xmlns:ns1="http://tibco.com/bw/bw6/system/ModuleActivator"
     xmlns:sca="http://docs.oasis-open.org/ns/opencsa/sca/200912"
@@ -174,10 +174,10 @@
             <element name="DuplicateKeyException" type="tns:DuplicateKeyExceptionType"/>
         </schema>
         <wsdl:definitions
-            targetNamespace="http://xmlns.example.com/20210928180210PLT"
+            targetNamespace="http://xmlns.example.com/20210929093718PLT"
             xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype"
             xmlns:ptyp="http://tibco.com/bw/bw6/system/ModuleActivator"
-            xmlns:tns="http://xmlns.example.com/20210928180210PLT"
+            xmlns:tns="http://xmlns.example.com/20210929093718PLT"
             xmlns:vprop="http://docs.oasis-open.org/wsbpel/2.0/varprop"
             xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
             <plnk:partnerLinkType name="partnerLinkType">
@@ -186,10 +186,10 @@
             <wsdl:import namespace="http://tibco.com/bw/bw6/system/ModuleActivator"/>
         </wsdl:definitions>
     </tibex:Types>
-    <tibex:ProcessInfo callable="false" createdBy="flavi"
-        createdOn="Tue Sep 28 18:02:10 CEST 2021" description=""
+    <tibex:ProcessInfo callable="false" createdBy="catenate"
+        createdOn="Wed Sep 29 09:37:18 CEST 2021" description=""
         extraErrorVars="true" modifiers="public"
-        productVersion="6.7.0 HF3 V102 2021-08-10" scalable="true"
+        productVersion="6.7.0 V34 2020-11-06" scalable="true"
         singleton="true" stateless="false" type="IT"/>
     <tibex:ProcessInterface context="" input="" output=""/>
     <tibex:ProcessTemplateConfigurations/>
@@ -335,8 +335,6 @@
                                     <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@activity/@activities.0"/>
 
                                     <layoutConstraint
-                                    height="40"
-                                    width="40"
                                     xsi:type="notation:Bounds" y="40"/>
                                     </children>
                                     <styles xsi:type="notation:SortingStyle"/>
@@ -716,7 +714,7 @@
             </children>
             <styles fontName="Segoe UI" lineColor="0" xsi:type="notation:ShapeStyle"/>
             <element href="//0/@process"/>
-            <layoutConstraint height="460" width="1160" xsi:type="notation:Bounds"/>
+            <layoutConstraint height="460" width="1152" xsi:type="notation:Bounds"/>
         </children>
         <styles xsi:type="notation:DiagramStyle"/>
         <element href="//0"/>
@@ -737,7 +735,7 @@
             <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
             <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
             <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@activity/@links/@children.0"/>
-            <bendpoints points="[12, -1, -744, 18]$[744, -19, -12, 0]" xsi:type="notation:RelativeBendpoints"/>
+            <bendpoints points="[12, 0, -736, 0]$[736, 0, -12, 0]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
         <edges
             source="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.1/@children.0/@children.0"
@@ -748,7 +746,7 @@
             <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
             <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
             <element href="//0/@process/@activity/@activity/@activities.0/@messages.1/@activity/@activity/@links/@children.0"/>
-            <bendpoints points="[12, 0, -744, 0]$[744, 0, -12, 0]" xsi:type="notation:RelativeBendpoints"/>
+            <bendpoints points="[12, 0, -736, 0]$[736, 0, -12, 0]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
     </notation:Diagram>
     <bpws:import importType="http://schemas.xmlsoap.org/wsdl/" namespace="http://tibco.com/bw/bw6/system/ModuleActivator"/>
@@ -775,11 +773,11 @@
     <bpws:scope name="scope">
         <bpws:flow name="flow">
             <bpws:links/>
-            <bpws:pick createInstance="yes" name="pick" tibex:xpdlId="4363de9d-dd8a-4cde-bd11-e7499a2bfae4">
+            <bpws:pick createInstance="yes" name="pick" tibex:xpdlId="095bf5b2-77c1-45aa-be99-37e3c5a67da5">
                 <bpws:onMessage operation="onStartup"
                     partnerLink="ModuleActivator"
                     portType="ns1:ModuleActivator"
-                    tibex:xpdlId="4b80002e-bc21-4970-938f-6eff145e6815" variable="onStartup">
+                    tibex:xpdlId="ab6b8b4d-d32a-45f6-80e2-cf0bf9f60175" variable="onStartup">
                     <bpws:scope name="scope1">
                         <bpws:flow name="flow1">
                             <bpws:links>
@@ -787,13 +785,13 @@
                                     name="OnMessageStartToOnMessageEnd" tibex:linkType="SUCCESS"/>
                             </bpws:links>
                             <bpws:empty name="OnMessageStart"
-                                tibex:constructor="onMessageStart" tibex:xpdlId="f20894d1-6679-42ed-833a-7c5fbf55ff66">
+                                tibex:constructor="onMessageStart" tibex:xpdlId="d0edea16-1b9d-4e39-8001-71d98db1c2e2">
                                 <bpws:sources>
                                     <bpws:source linkName="OnMessageStartToOnMessageEnd"/>
                                 </bpws:sources>
                             </bpws:empty>
                             <bpws:empty name="OnMessageEnd"
-                                tibex:constructor="onMessageEnd" tibex:xpdlId="856ecf22-fa02-475d-9009-e002bf8f2f68">
+                                tibex:constructor="onMessageEnd" tibex:xpdlId="15cce39c-b805-4731-8f19-8551efe2c3c8">
                                 <bpws:targets>
                                     <bpws:target linkName="OnMessageStartToOnMessageEnd"/>
                                 </bpws:targets>
@@ -804,7 +802,7 @@
                 <bpws:onMessage operation="onShutdown"
                     partnerLink="ModuleActivator"
                     portType="ns1:ModuleActivator"
-                    tibex:xpdlId="97658bfb-168c-41cb-8799-0f56109390d7" variable="onShutdown">
+                    tibex:xpdlId="a51eda60-7323-4788-a99a-ccaf7dee6aaf" variable="onShutdown">
                     <bpws:scope name="scope2">
                         <bpws:flow name="flow2">
                             <bpws:links>
@@ -812,13 +810,13 @@
                                     name="OnMessageStart1ToOnMessageEnd1" tibex:linkType="SUCCESS"/>
                             </bpws:links>
                             <bpws:empty name="OnMessageStart1"
-                                tibex:constructor="onMessageStart" tibex:xpdlId="f7ae1565-c6d6-4abf-922b-dbb509fbd474">
+                                tibex:constructor="onMessageStart" tibex:xpdlId="d2690338-e393-4de1-8e33-9d2329f62188">
                                 <bpws:sources>
                                     <bpws:source linkName="OnMessageStart1ToOnMessageEnd1"/>
                                 </bpws:sources>
                             </bpws:empty>
                             <bpws:empty name="OnMessageEnd1"
-                                tibex:constructor="onMessageEnd" tibex:xpdlId="82c0499e-3318-4d9c-8c6d-039e67d01735">
+                                tibex:constructor="onMessageEnd" tibex:xpdlId="5257a7de-0c26-4fca-8b1c-99df17108e7e">
                                 <bpws:targets>
                                     <bpws:target linkName="OnMessageStart1ToOnMessageEnd1"/>
                                 </bpws:targets>

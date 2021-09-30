@@ -686,7 +686,7 @@
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.1"/>
-                                    <layoutConstraint x="1620"
+                                    <layoutConstraint x="1772"
                                     xsi:type="notation:Bounds" y="256"/>
                                     </children>
                                     <children type="4018">
@@ -1168,8 +1168,8 @@
                                     <element href="//0/@process/@activity/@activity/@activities.2"/>
                                     <layoutConstraint
                                     height="502" width="832"
-                                    x="237"
-                                    xsi:type="notation:Bounds" y="37"/>
+                                    x="524"
+                                    xsi:type="notation:Bounds" y="27"/>
                                     </children>
                                     <children type="4002 bw.restjson.JsonParser">
                                     <children type="4017">
@@ -1205,7 +1205,7 @@
                                     <element href="//0/@process/@activity/@activity/@activities.3"/>
                                     <layoutConstraint
                                     height="40" width="40"
-                                    x="1350"
+                                    x="1499"
                                     xsi:type="notation:Bounds" y="256"/>
                                     </children>
                                     <children type="4002 com.tibco.bw.core.design.process.editor.Activity_4002_Throw">
@@ -1242,10 +1242,10 @@
                                     <element href="//0/@process/@activity/@activity/@activities.4"/>
                                     <layoutConstraint
                                     height="40" width="204"
-                                    x="1310"
+                                    x="1459"
                                     xsi:type="notation:Bounds" y="426"/>
                                     </children>
-                                    <children type="4002 bw.internal.getSharedVariable">
+                                    <children type="4002">
                                     <children type="4017">
                                     <styles
                                     fontName="Segoe UI"
@@ -1277,10 +1277,80 @@
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.5"/>
+                                    <layoutConstraint x="162"
+                                    xsi:type="notation:Bounds" y="267"/>
+                                    </children>
+                                    <children type="4002">
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <styles fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.6"/>
+                                    <layoutConstraint x="1637"
+                                    xsi:type="notation:Bounds" y="256"/>
+                                    </children>
+                                    <children type="4002 bw.generalactivities.bwassign">
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <styles fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.7"/>
                                     <layoutConstraint
                                     height="40" width="40"
-                                    x="87"
-                                    xsi:type="notation:Bounds" y="256"/>
+                                    x="359"
+                                    xsi:type="notation:Bounds" y="267"/>
                                     </children>
                                     <styles xsi:type="notation:DrawerStyle"/>
                                     <styles xsi:type="notation:SortingStyle"/>
@@ -1295,7 +1365,7 @@
                                     <styles xsi:type="bwnotation:ResizingStyle"/>
                                     <element href="//0/@process/@activity/@activity"/>
                                     <layoutConstraint height="622"
-                                    width="2277" xsi:type="notation:Bounds"/>
+                                    width="1905" xsi:type="notation:Bounds"/>
                                 </children>
                                 <styles xsi:type="notation:SortingStyle"/>
                                 <styles xsi:type="notation:FilteringStyle"/>
@@ -1304,7 +1374,7 @@
                             <styles xsi:type="bwnotation:BackgroundStyle"/>
                             <styles xsi:type="bwnotation:ResizingStyle"/>
                             <element href="//0/@process/@activity"/>
-                            <layoutConstraint height="622" width="2280" xsi:type="notation:Bounds"/>
+                            <layoutConstraint height="622" width="1908" xsi:type="notation:Bounds"/>
                         </children>
                         <children type="4022">
                             <children type="3022">
@@ -1324,7 +1394,7 @@
                                     <children type="3030">
                                     <children type="4005">
                                     <children type="3007">
-                                    <children type="4002">
+                                    <children type="4002 com.tibco.bw.core.design.process.editor.Activity_4002_Throw">
                                     <children type="4017">
                                     <styles
                                     fontName="Segoe UI"
@@ -1362,51 +1432,10 @@
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <element href="//0/@process/@activity/@faultHandlers/@catch.0/@activity/@activity/@activities.0"/>
                                     <layoutConstraint
-                                    x="32"
-                                    xsi:type="notation:Bounds" y="45"/>
-                                    </children>
-                                    <children type="4002 com.tibco.bw.core.design.process.editor.Activity_4002_Throw">
-                                    <children type="4017">
-                                    <styles
-                                    fontName="Segoe UI"
-                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
-
-                                    <layoutConstraint xsi:type="notation:Bounds"/>
-                                    </children>
-                                    <children type="4017">
-                                    <styles
-                                    fontName="Segoe UI"
-                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
-
-                                    <layoutConstraint xsi:type="notation:Bounds"/>
-                                    </children>
-                                    <children type="4017">
-                                    <styles
-                                    fontName="Segoe UI"
-                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
-
-                                    <layoutConstraint xsi:type="notation:Bounds"/>
-                                    </children>
-                                    <children type="4017">
-                                    <styles
-                                    fontName="Segoe UI"
-                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
-
-                                    <layoutConstraint xsi:type="notation:Bounds"/>
-                                    </children>
-                                    <styles
-                                    fontName="Segoe UI"
-                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <styles
-                                    backgroundColor="16777215"
-                                    gradientEndColor="50431"
-                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
-                                    <element href="//0/@process/@activity/@faultHandlers/@catch.0/@activity/@activity/@activities.1"/>
-                                    <layoutConstraint
                                     height="40"
                                     width="40"
-                                    x="192"
-                                    xsi:type="notation:Bounds" y="46"/>
+                                    x="76"
+                                    xsi:type="notation:Bounds" y="56"/>
                                     </children>
                                     <styles xsi:type="notation:DrawerStyle"/>
                                     <styles xsi:type="notation:SortingStyle"/>
@@ -1489,7 +1518,7 @@
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <element href="//0/@process/@activity/@faultHandlers/@catchAll/@activity/@activity/@activities.0"/>
                                     <layoutConstraint
-                                    x="42"
+                                    x="74"
                                     xsi:type="notation:Bounds" y="55"/>
                                     </children>
                                     <styles xsi:type="notation:DrawerStyle"/>
@@ -1504,7 +1533,9 @@
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <styles xsi:type="bwnotation:ResizingStyle"/>
                                     <element href="//0/@process/@activity/@faultHandlers/@catchAll/@activity/@activity"/>
-                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    <layoutConstraint
+                                    height="169"
+                                    width="1807" xsi:type="notation:Bounds"/>
                                     </children>
                                     <styles xsi:type="notation:SortingStyle"/>
                                     <styles xsi:type="notation:FilteringStyle"/>
@@ -1534,7 +1565,7 @@
                     <styles xsi:type="bwnotation:BackgroundStyle"/>
                     <styles xsi:type="bwnotation:ResizingStyle"/>
                     <element href="//0/@process/@activity"/>
-                    <layoutConstraint height="1003" width="1764" x="1"
+                    <layoutConstraint height="1003" width="1908" x="1"
                         xsi:type="notation:Bounds" y="1"/>
                 </children>
                 <styles xsi:type="notation:SortingStyle"/>
@@ -1543,7 +1574,7 @@
             </children>
             <styles fontName="Segoe UI" lineColor="0" xsi:type="notation:ShapeStyle"/>
             <element href="//0/@process"/>
-            <layoutConstraint height="1055" width="2106" xsi:type="notation:Bounds"/>
+            <layoutConstraint height="1055" width="2250" xsi:type="notation:Bounds"/>
         </children>
         <styles xsi:type="notation:DiagramStyle"/>
         <element href="//0"/>
@@ -1618,7 +1649,7 @@
         </edges>
         <edges
             source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.3"
-            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.1" type="4006">
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.6" type="4006">
             <children type="6002">
                 <layoutConstraint xsi:type="notation:Location" y="40"/>
             </children>
@@ -1626,7 +1657,6 @@
             <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
             <element href="//0/@process/@activity/@activity/@links/@children.2"/>
             <bendpoints points="[25, 0, -248, 15]$[155, 0, -118, 15]" xsi:type="notation:RelativeBendpoints"/>
-            <targetAnchor id="(0.535593220338983,0.2)" xsi:type="notation:IdentityAnchor"/>
         </edges>
         <edges
             source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.0/@children.1/@children.0/@children.0/@children.0/@children.2"
@@ -1685,25 +1715,37 @@
             <bendpoints points="[1, 25, 0, -120]$[0, 121, -1, -24]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
         <edges
-            source="//@children.0/@children.3/@children.0/@children.0/@children.1/@children.0/@children.0/@children.1/@children.0/@children.0/@children.0"
-            target="//@children.0/@children.3/@children.0/@children.0/@children.1/@children.0/@children.0/@children.1/@children.0/@children.0/@children.1" type="4006">
-            <children type="6002">
-                <layoutConstraint xsi:type="notation:Location" y="40"/>
-            </children>
-            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
-            <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
-            <element href="//0/@process/@activity/@faultHandlers/@catch.0/@activity/@activity/@links/@children.0"/>
-            <bendpoints points="[25, 1, -135, 0]$[136, 0, -24, -1]" xsi:type="notation:RelativeBendpoints"/>
-        </edges>
-        <edges
             source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.5"
-            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2" type="4006">
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.7" type="4006">
             <children type="6002">
                 <layoutConstraint xsi:type="notation:Location" y="40"/>
             </children>
             <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
             <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
             <element href="//0/@process/@activity/@activity/@links/@children.4"/>
+            <bendpoints
+                points="[25, 0, -115, -11]$[66, 0, -74, -11]$[66, 11, -74, 0]$[116, 11, -24, 0]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.6"
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.1" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.5"/>
+            <bendpoints points="[25, 2, -119, -8]$[120, 8, -24, -2]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.7"
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.6"/>
             <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
     </notation:Diagram>
@@ -1736,6 +1778,8 @@
             namespace="http://schemas.tibco.com/bw/plugins/xml/5.0/JSONActivitiesExceptions" prefix="tns10"/>
         <tibex:namespaceItem
             namespace="http://tns.tibco.com/bw/activity/sendhttprequest/input+4bbee4d0-0d27-40f6-b25c-696849131f3d+RequestActivityInput" prefix="tns12"/>
+        <tibex:namespaceItem
+            namespace="http://it.linkem/common/core/lehf/ErrorConfiguration/xsd" prefix="tns11"/>
     </tibex:NamespaceRegistry>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://it.linkem/rete/pcrf/getImsiByIp/internal/xsd"/>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://it.linkem/rete/pcrf/getImsiByIp/sl/xsd"/>
@@ -1815,8 +1859,6 @@
             name="_errorOptional" sca-bpel:internal="true"/>
         <bpws:variable element="ns15:LogAudit"
             name="BusinessError-input" sca-bpel:internal="true"/>
-        <bpws:variable element="ns15:LogAudit" name="LogError-input" sca-bpel:internal="true"/>
-        <bpws:variable element="ns15:LogAuditOutput" name="LogError" sca-bpel:internal="true"/>
         <bpws:variable element="ns15:LogAudit"
             name="ThrowParseGetReponse-input" sca-bpel:internal="true"/>
         <bpws:variable name="FaultName1" sca-bpel:internal="true" type="xsd:string"/>
@@ -1827,8 +1869,14 @@
             name="LogGenericError" sca-bpel:internal="true"/>
         <bpws:variable element="ns15:LogAudit"
             name="ThrowLogError-input" sca-bpel:internal="true"/>
-        <bpws:variable element="ns15:LogContextElement"
-            name="GetLogContext" sca-bpel:internal="true"/>
+        <bpws:variable element="ns15:LogAudit" name="LogStart-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns15:LogAuditOutput" name="LogStart" sca-bpel:internal="true"/>
+        <bpws:variable name="DEBUG_Severity" sca-bpel:hotUpdate="false"
+            sca-bpel:privateProperty="true" sca-bpel:property="yes"
+            tibex:propertySource="//it.linkem.common.core.lehf.sh///it.linkem.common.core.lehf.sh/Logging/DEBUG_SEVERITY" type="xsd:string"/>
+        <bpws:variable element="ns15:LogAudit" name="LogEnd-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns15:LogAuditOutput" name="LogEnd" sca-bpel:internal="true"/>
+        <bpws:variable name="InputQueryString" type="xsd:string"/>
     </bpws:variables>
     <bpws:extensions>
         <bpws:extension mustUnderstand="no" namespace="http://www.eclipse.org/gmf/runtime/1.0.2/notation"/>
@@ -1841,41 +1889,17 @@
     <bpws:scope name="scope">
         <bpws:faultHandlers>
             <bpws:catch faultElement="ns15:LogAudit"
-                faultName="ns15:LogAudit" faultVariable="LogAudit" tibex:xpdlId="b4aaa11f-2052-4b70-a4c7-c1888847befb">
+                faultName="ns15:LogAudit" faultVariable="LogAudit" tibex:xpdlId="79cee6aa-8181-436a-9aa1-a2e1319c8659">
                 <bpws:scope name="scope1">
                     <bpws:flow name="flow2">
-                        <bpws:links>
-                            <bpws:link name="LogErrorToThrow" tibex:linkType="SUCCESS"/>
-                        </bpws:links>
-                        <bpws:extensionActivity>
-                            <tibex:extActivity
-                                inputVariable="LogError-input"
-                                name="LogError"
-                                outputVariable="LogError"
-                                tibex:xpdlId="94b762ee-be69-4cb8-a730-96718e937ceb"
-                                type="bw.generalactivities.callprocess" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
-                                <bpws:sources>
-                                    <bpws:source linkName="LogErrorToThrow"/>
-                                </bpws:sources>
-                                <tibex:inputBindings>
-                                    <tibex:inputBinding coercion=""
-                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns9=&quot;http://it.linkem/common/core/lehf/AuditTypes/xsd&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;LogAudit&quot;/>&lt;xsl:template name=&quot;LogError-input&quot; match=&quot;/&quot;>&lt;xsl:copy-of select=&quot;$LogAudit&quot;/>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
-                                </tibex:inputBindings>
-                                <tibex:CallProcess
-                                    moduleRef="it.linkem.common.core.lehf.sh"
-                                    subProcessName="it.linkem.common.core.lehf.sh.LoggingWrapper" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
-                            </tibex:extActivity>
-                        </bpws:extensionActivity>
+                        <bpws:links/>
                         <bpws:throw faultName="ns15:LogAudit"
                             faultVariable="ThrowLogError-input"
-                            name="ThrowLogError" tibex:xpdlId="37621bff-c999-4ff5-ae65-430aac0bfc12">
+                            name="ThrowLogError" tibex:xpdlId="3da0094e-c9b2-4ce6-8902-0eecbde97e78">
                             <tibex:inputBindings>
                                 <tibex:partBinding
-                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns9=&quot;http://it.linkem/common/core/lehf/AuditTypes/xsd&quot; xmlns:tns=&quot;http://it.linkem/common/core/lehf/ErrorConfiguration/xsd&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;LogError&quot;/>&lt;xsl:template name=&quot;ThrowLogError-input&quot; match=&quot;/&quot;>&lt;tns9:LogAudit>&lt;xsl:copy-of select=&quot;$LogError/tns9:LogAudit/auditElement&quot;/>&lt;tns9:auditErrorElement>&lt;ERRORCODE>&lt;xsl:value-of select=&quot;$LogError/tns:ErrorConfiguration/tns:ErrorCode&quot;/>&lt;/ERRORCODE>&lt;xsl:if test=&quot;$LogError/tns:ErrorConfiguration/tns:ErrorType&quot;>&lt;ERRORTYPE>&lt;xsl:value-of select=&quot;$LogError/tns:ErrorConfiguration/tns:ErrorType&quot;/>&lt;/ERRORTYPE>&lt;/xsl:if>&lt;ERRORMESSAGE>&lt;xsl:value-of select=&quot;$LogError/tns:ErrorConfiguration/tns:ErrorMessage&quot;/>&lt;/ERRORMESSAGE>&lt;xsl:if test=&quot;$LogError/tns9:LogAudit/tns9:auditErrorElement/ERRORDETAIL&quot;>&lt;ERRORDETAIL>&lt;xsl:value-of select=&quot;$LogError/tns9:LogAudit/tns9:auditErrorElement/ERRORDETAIL&quot;/>&lt;/ERRORDETAIL>&lt;/xsl:if>&lt;ERRORTIMESTAMP>&lt;xsl:value-of select=&quot;$LogError/tns9:LogAudit/tns9:auditErrorElement/ERRORTIMESTAMP&quot;/>&lt;/ERRORTIMESTAMP>&lt;xsl:if test=&quot;$LogError/tns9:LogAudit/tns9:auditErrorElement/ORIGINALMESSAGE&quot;>&lt;ORIGINALMESSAGE>&lt;xsl:value-of select=&quot;$LogError/tns9:LogAudit/tns9:auditErrorElement/ORIGINALMESSAGE&quot;/>&lt;/ORIGINALMESSAGE>&lt;/xsl:if>&lt;/tns9:auditErrorElement>&lt;/tns9:LogAudit>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns9=&quot;http://it.linkem/common/core/lehf/AuditTypes/xsd&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;LogAudit&quot;/>&lt;xsl:template name=&quot;ThrowLogError-input&quot; match=&quot;/&quot;>&lt;xsl:copy-of select=&quot;$LogAudit&quot;/>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                             </tibex:inputBindings>
-                            <bpws:targets>
-                                <bpws:target linkName="LogErrorToThrow"/>
-                            </bpws:targets>
                         </bpws:throw>
                     </bpws:flow>
                 </bpws:scope>
@@ -1907,13 +1931,14 @@
         </bpws:faultHandlers>
         <bpws:flow name="flow">
             <bpws:links>
-                <bpws:link name="StartToRepeatOnErrorRESTCall" tibex:linkType="SUCCESS"/>
+                <bpws:link name="StartToLoggingWrapper" tibex:linkType="SUCCESS"/>
                 <bpws:link name="RepeatOnErrorToEnd" tibex:linkType="SUCCESS"/>
-                <bpws:link name="ParseGetResponseToEnd" tibex:linkType="SUCCESS"/>
+                <bpws:link name="ParseGetResponseToCopy_1_LogStart" tibex:linkType="SUCCESS"/>
                 <bpws:link name="ParseGetResponseToThrow_error"
                     tibex:label="error" tibex:linkType="ERROR"/>
-                <bpws:link
-                    name="GetSharedVariableToRepeatOnErrorRESTCall" tibex:linkType="SUCCESS"/>
+                <bpws:link name="LoggingWrapperToRepeatOnErrorRESTCall" tibex:linkType="SUCCESS"/>
+                <bpws:link name="Copy_1_LogStartToEnd" tibex:linkType="SUCCESS"/>
+                <bpws:link name="AssignToRepeatOnErrorRESTCall" tibex:linkType="SUCCESS"/>
             </bpws:links>
             <bpws:extensionActivity>
                 <tibex:receiveEvent createInstance="yes"
@@ -1921,7 +1946,7 @@
                     tibex:xpdlId="9454eb8d-6eaf-4178-a22f-7f4a5b7a0317"
                     variable="Start" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                     <bpws:sources>
-                        <bpws:source linkName="StartToRepeatOnErrorRESTCall"/>
+                        <bpws:source linkName="StartToLoggingWrapper"/>
                     </bpws:sources>
                     <tibex:eventSource>
                         <tibex:StartEvent xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
@@ -1933,7 +1958,7 @@
                     name="End"
                     tibex:xpdlId="1c623e28-05ac-437c-92c5-686334a98723" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                     <bpws:targets>
-                        <bpws:target linkName="ParseGetResponseToEnd"/>
+                        <bpws:target linkName="Copy_1_LogStartToEnd"/>
                     </bpws:targets>
                     <tibex:inputBindings>
                         <tibex:inputBinding
@@ -1956,9 +1981,9 @@
                 </tibex:activityExtension>
             </bpws:extensionActivity>
             <bpws:scope name="RepeatOnErrorRESTCall"
-                tibex:group="repeatOnError" tibex:xpdlId="25148565-f233-4858-93d1-8dd2f5ee0abf">
+                tibex:group="repeatOnError" tibex:indexToGlobal="false" tibex:xpdlId="25148565-f233-4858-93d1-8dd2f5ee0abf">
                 <bpws:targets>
-                    <bpws:target linkName="GetSharedVariableToRepeatOnErrorRESTCall"/>
+                    <bpws:target linkName="AssignToRepeatOnErrorRESTCall"/>
                 </bpws:targets>
                 <bpws:sources>
                     <bpws:source linkName="RepeatOnErrorToEnd"/>
@@ -2121,7 +2146,7 @@
                                     </bpws:sources>
                                     <tibex:inputBindings>
                                     <tibex:inputBinding
-                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns12=&quot;http://tns.tibco.com/bw/activity/sendhttprequest/input+4bbee4d0-0d27-40f6-b25c-696849131f3d+RequestActivityInput&quot; xmlns:tns7=&quot;http://it.linkem/rete/pcrf/getImsiByIp/sl/xsd&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;RequestUrl&quot;/>&lt;xsl:param name=&quot;Start&quot;/>&lt;xsl:template name=&quot;Get_IMSI_By_Ip-input&quot; match=&quot;/&quot;>&lt;tns12:RequestActivityInput>&lt;Method>&lt;xsl:value-of select=&quot;&amp;quot;GET&amp;quot;&quot;/>&lt;/Method>&lt;RequestURI>&lt;xsl:value-of select=&quot;$RequestUrl&quot;/>&lt;/RequestURI>&lt;QueryString>&lt;xsl:value-of select=&quot;concat('processParams={&amp;quot;deviceId&amp;quot;:{&amp;quot;ip&amp;quot;:&amp;quot;',$Start/tns7:IP,'&amp;quot;},&amp;quot;sessionType&amp;quot;:&amp;quot;IPCANSESSION&amp;quot;}')&quot;/>&lt;/QueryString>&lt;Headers>&lt;Content-Type>&lt;xsl:value-of select=&quot;&amp;quot;application/json&amp;quot;&quot;/>&lt;/Content-Type>&lt;/Headers>&lt;DynamicHeaders/>&lt;/tns12:RequestActivityInput>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns12=&quot;http://tns.tibco.com/bw/activity/sendhttprequest/input+4bbee4d0-0d27-40f6-b25c-696849131f3d+RequestActivityInput&quot; xmlns:tns7=&quot;http://it.linkem/rete/pcrf/getImsiByIp/sl/xsd&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;RequestUrl&quot;/>&lt;xsl:param name=&quot;InputQueryString&quot;/>&lt;xsl:template name=&quot;Get_IMSI_By_Ip-input&quot; match=&quot;/&quot;>&lt;tns12:RequestActivityInput>&lt;Method>&lt;xsl:value-of select=&quot;&amp;quot;GET&amp;quot;&quot;/>&lt;/Method>&lt;RequestURI>&lt;xsl:value-of select=&quot;$RequestUrl&quot;/>&lt;/RequestURI>&lt;QueryString>&lt;xsl:value-of select=&quot;$InputQueryString&quot;/>&lt;/QueryString>&lt;Headers>&lt;Content-Type>&lt;xsl:value-of select=&quot;&amp;quot;application/json&amp;quot;&quot;/>&lt;/Content-Type>&lt;/Headers>&lt;DynamicHeaders/>&lt;/tns12:RequestActivityInput>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                                     </tibex:inputBindings>
                                     <tibex:config>
                                     <bwext:BWActivity
@@ -2152,7 +2177,7 @@
                                 name="BusinessError" tibex:xpdlId="fa732636-6520-4a07-addb-9126de36125a">
                                 <tibex:inputBindings>
                                     <tibex:partBinding
-                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns9=&quot;http://it.linkem/common/core/lehf/AuditTypes/xsd&quot; xmlns:tns4=&quot;http://schemas.tibco.com/bw/plugins/http/5.0/httpExceptions&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;ERROR_Severity&quot;/>&lt;xsl:param name=&quot;_error_Get_IMSI_By_Ip&quot;/>&lt;xsl:param name=&quot;Business_Exception&quot;/>&lt;xsl:param name=&quot;FaultDetails&quot;/>&lt;xsl:param name=&quot;GetLogContext&quot;/>&lt;xsl:template name=&quot;BusinessError-input&quot; match=&quot;/&quot;>&lt;tns9:LogAudit>&lt;auditElement>&lt;SEVERITY>&lt;xsl:value-of select=&quot;$ERROR_Severity&quot;/>&lt;/SEVERITY>&lt;xsl:copy-of select=&quot;$GetLogContext/BUSINESSKEY&quot;/>&lt;PROCESSSTACK>&lt;xsl:value-of select=&quot;$FaultDetails/ProcessStack&quot;/>&lt;/PROCESSSTACK>&lt;LOGMESSAGE>&lt;xsl:value-of select=&quot;&amp;quot;[ERROR] Business Error&amp;quot;&quot;/>&lt;/LOGMESSAGE>&lt;/auditElement>&lt;xsl:choose>&lt;xsl:when test=&quot;$_error_Get_IMSI_By_Ip/tns4:HttpClientException/statusLine/statusCode=400&quot;>&lt;tns9:auditErrorElement>&lt;ERRORCODE>&lt;xsl:value-of select=&quot;&amp;quot;ESB.PCRF.000001&amp;quot;&quot;/>&lt;/ERRORCODE>&lt;ERRORTYPE>&lt;xsl:value-of select=&quot;$Business_Exception&quot;/>&lt;/ERRORTYPE>&lt;ERRORMESSAGE>&lt;xsl:value-of select=&quot;&amp;quot;Business Exception occurred calling GetImsiByIp - Bad Request&amp;quot;&quot;/>&lt;/ERRORMESSAGE>&lt;ERRORTIMESTAMP>&lt;xsl:value-of select=&quot;current-dateTime()&quot;/>&lt;/ERRORTIMESTAMP>&lt;ORIGINALMESSAGE>&lt;xsl:value-of select=&quot;concat(&amp;quot;[ERROR] &amp;quot; , $_error_Get_IMSI_By_Ip/tns4:HttpClientException/msg)&quot;/>&lt;/ORIGINALMESSAGE>&lt;/tns9:auditErrorElement>&lt;/xsl:when>&lt;xsl:when test=&quot;$_error_Get_IMSI_By_Ip/tns4:HttpClientException/statusLine/statusCode=401&quot;>&lt;tns9:auditErrorElement>&lt;ERRORCODE>&lt;xsl:value-of select=&quot;&amp;quot;ESB.PCRF.000002&amp;quot;&quot;/>&lt;/ERRORCODE>&lt;ERRORTYPE>&lt;xsl:value-of select=&quot;$Business_Exception&quot;/>&lt;/ERRORTYPE>&lt;ERRORMESSAGE>&lt;xsl:value-of select=&quot;&amp;quot;Business Exception occurred calling GetImsiByIp - Unauthorized&amp;quot;&quot;/>&lt;/ERRORMESSAGE>&lt;ERRORTIMESTAMP>&lt;xsl:value-of select=&quot;current-dateTime()&quot;/>&lt;/ERRORTIMESTAMP>&lt;ORIGINALMESSAGE>&lt;xsl:value-of select=&quot;concat(&amp;quot;[ERROR] &amp;quot; , $_error_Get_IMSI_By_Ip/tns4:HttpClientException/msg)&quot;/>&lt;/ORIGINALMESSAGE>&lt;/tns9:auditErrorElement>&lt;/xsl:when>&lt;xsl:when test=&quot;$_error_Get_IMSI_By_Ip/tns4:HttpClientException/statusLine/statusCode=403&quot;>&lt;tns9:auditErrorElement>&lt;ERRORCODE>&lt;xsl:value-of select=&quot;&amp;quot;ESB.PCRF.000003&amp;quot;&quot;/>&lt;/ERRORCODE>&lt;ERRORTYPE>&lt;xsl:value-of select=&quot;$Business_Exception&quot;/>&lt;/ERRORTYPE>&lt;ERRORMESSAGE>&lt;xsl:value-of select=&quot;&amp;quot;Business Exception occurred calling GetImsiByIp - Forbidden&amp;quot;&quot;/>&lt;/ERRORMESSAGE>&lt;ERRORTIMESTAMP>&lt;xsl:value-of select=&quot;current-dateTime()&quot;/>&lt;/ERRORTIMESTAMP>&lt;ORIGINALMESSAGE>&lt;xsl:value-of select=&quot;concat(&amp;quot;[ERROR] &amp;quot; , $_error_Get_IMSI_By_Ip/tns4:HttpClientException/msg)&quot;/>&lt;/ORIGINALMESSAGE>&lt;/tns9:auditErrorElement>&lt;/xsl:when>&lt;xsl:when test=&quot;$_error_Get_IMSI_By_Ip/tns4:HttpClientException/statusLine/statusCode=404&quot;>&lt;tns9:auditErrorElement>&lt;ERRORCODE>&lt;xsl:value-of select=&quot;&amp;quot;ESB.PCRF.000004&amp;quot;&quot;/>&lt;/ERRORCODE>&lt;ERRORTYPE>&lt;xsl:value-of select=&quot;$Business_Exception&quot;/>&lt;/ERRORTYPE>&lt;ERRORMESSAGE>&lt;xsl:value-of select=&quot;&amp;quot;Business Exception occurred calling GetImsiByIp - IP not Found&amp;quot;&quot;/>&lt;/ERRORMESSAGE>&lt;ERRORTIMESTAMP>&lt;xsl:value-of select=&quot;current-dateTime()&quot;/>&lt;/ERRORTIMESTAMP>&lt;ORIGINALMESSAGE>&lt;xsl:value-of select=&quot;concat(&amp;quot;[ERROR] &amp;quot; , $_error_Get_IMSI_By_Ip/tns4:HttpClientException/msg)&quot;/>&lt;/ORIGINALMESSAGE>&lt;/tns9:auditErrorElement>&lt;/xsl:when>&lt;xsl:otherwise>&lt;tns9:auditErrorElement>&lt;ERRORCODE>&lt;xsl:value-of select=&quot;&amp;quot;ESB.PCRF.000005&amp;quot;&quot;/>&lt;/ERRORCODE>&lt;ERRORTYPE>&lt;xsl:value-of select=&quot;$Business_Exception&quot;/>&lt;/ERRORTYPE>&lt;ERRORMESSAGE>&lt;xsl:value-of select=&quot;&amp;quot;Generic Business Exception occurred calling GetImsiByIp&amp;quot;&quot;/>&lt;/ERRORMESSAGE>&lt;ERRORTIMESTAMP>&lt;xsl:value-of select=&quot;current-dateTime()&quot;/>&lt;/ERRORTIMESTAMP>&lt;ORIGINALMESSAGE>&lt;xsl:value-of select=&quot;concat(&amp;quot;[ERROR] &amp;quot; , $_error_Get_IMSI_By_Ip/tns4:HttpClientException/msg)&quot;/>&lt;/ORIGINALMESSAGE>&lt;/tns9:auditErrorElement>&lt;/xsl:otherwise>&lt;/xsl:choose>&lt;/tns9:LogAudit>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns9=&quot;http://it.linkem/common/core/lehf/AuditTypes/xsd&quot; xmlns:tns4=&quot;http://schemas.tibco.com/bw/plugins/http/5.0/httpExceptions&quot; xmlns:tib=&quot;http://www.tibco.com/bw/xslt/custom-functions&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;ERROR_Severity&quot;/>&lt;xsl:param name=&quot;_error_Get_IMSI_By_Ip&quot;/>&lt;xsl:param name=&quot;Business_Exception&quot;/>&lt;xsl:param name=&quot;FaultDetails&quot;/>&lt;xsl:param name=&quot;InputQueryString&quot;/>&lt;xsl:param name=&quot;_error&quot;/>&lt;xsl:template name=&quot;BusinessError-input&quot; match=&quot;/&quot;>&lt;tns9:LogAudit>&lt;auditElement>&lt;SEVERITY>&lt;xsl:value-of select=&quot;$ERROR_Severity&quot;/>&lt;/SEVERITY>&lt;PROCESSSTACK>&lt;xsl:value-of select=&quot;$FaultDetails/ProcessStack&quot;/>&lt;/PROCESSSTACK>&lt;LOGMESSAGE>&lt;xsl:value-of select=&quot;&amp;quot;[ERROR] Business Error&amp;quot;&quot;/>&lt;/LOGMESSAGE>&lt;/auditElement>&lt;xsl:choose>&lt;xsl:when test=&quot;$_error_Get_IMSI_By_Ip/tns4:HttpClientException/statusLine/statusCode=400&quot;>&lt;tns9:auditErrorElement>&lt;ERRORCODE>&lt;xsl:value-of select=&quot;&amp;quot;ESB.PCRF.000001&amp;quot;&quot;/>&lt;/ERRORCODE>&lt;ERRORTYPE>&lt;xsl:value-of select=&quot;$Business_Exception&quot;/>&lt;/ERRORTYPE>&lt;ERRORMESSAGE>&lt;xsl:value-of select=&quot;&amp;quot;Business Exception occurred calling GetImsiByIp - Bad Request&amp;quot;&quot;/>&lt;/ERRORMESSAGE>&lt;ERRORDETAIL>&lt;xsl:value-of select=&quot;tib:render-xml($_error, true(),false())&quot;/>&lt;/ERRORDETAIL>&lt;ERRORTIMESTAMP>&lt;xsl:value-of select=&quot;current-dateTime()&quot;/>&lt;/ERRORTIMESTAMP>&lt;ORIGINALMESSAGE>&lt;xsl:value-of select=&quot;$InputQueryString&quot;/>&lt;/ORIGINALMESSAGE>&lt;/tns9:auditErrorElement>&lt;/xsl:when>&lt;xsl:when test=&quot;$_error_Get_IMSI_By_Ip/tns4:HttpClientException/statusLine/statusCode=401&quot;>&lt;tns9:auditErrorElement>&lt;ERRORCODE>&lt;xsl:value-of select=&quot;&amp;quot;ESB.PCRF.000002&amp;quot;&quot;/>&lt;/ERRORCODE>&lt;ERRORTYPE>&lt;xsl:value-of select=&quot;$Business_Exception&quot;/>&lt;/ERRORTYPE>&lt;ERRORMESSAGE>&lt;xsl:value-of select=&quot;&amp;quot;Business Exception occurred calling GetImsiByIp - Unauthorized&amp;quot;&quot;/>&lt;/ERRORMESSAGE>&lt;ERRORDETAIL>&lt;xsl:value-of select=&quot;tib:render-xml($_error, true(),false())&quot;/>&lt;/ERRORDETAIL>&lt;ERRORTIMESTAMP>&lt;xsl:value-of select=&quot;current-dateTime()&quot;/>&lt;/ERRORTIMESTAMP>&lt;ORIGINALMESSAGE>&lt;xsl:value-of select=&quot;$InputQueryString&quot;/>&lt;/ORIGINALMESSAGE>&lt;/tns9:auditErrorElement>&lt;/xsl:when>&lt;xsl:when test=&quot;$_error_Get_IMSI_By_Ip/tns4:HttpClientException/statusLine/statusCode=403&quot;>&lt;tns9:auditErrorElement>&lt;ERRORCODE>&lt;xsl:value-of select=&quot;&amp;quot;ESB.PCRF.000003&amp;quot;&quot;/>&lt;/ERRORCODE>&lt;ERRORTYPE>&lt;xsl:value-of select=&quot;$Business_Exception&quot;/>&lt;/ERRORTYPE>&lt;ERRORMESSAGE>&lt;xsl:value-of select=&quot;&amp;quot;Business Exception occurred calling GetImsiByIp - Forbidden&amp;quot;&quot;/>&lt;/ERRORMESSAGE>&lt;ERRORDETAIL>&lt;xsl:value-of select=&quot;tib:render-xml($_error, true(),false())&quot;/>&lt;/ERRORDETAIL>&lt;ERRORTIMESTAMP>&lt;xsl:value-of select=&quot;current-dateTime()&quot;/>&lt;/ERRORTIMESTAMP>&lt;ORIGINALMESSAGE>&lt;xsl:value-of select=&quot;$InputQueryString&quot;/>&lt;/ORIGINALMESSAGE>&lt;/tns9:auditErrorElement>&lt;/xsl:when>&lt;xsl:when test=&quot;$_error_Get_IMSI_By_Ip/tns4:HttpClientException/statusLine/statusCode=404&quot;>&lt;tns9:auditErrorElement>&lt;ERRORCODE>&lt;xsl:value-of select=&quot;&amp;quot;ESB.PCRF.000004&amp;quot;&quot;/>&lt;/ERRORCODE>&lt;ERRORTYPE>&lt;xsl:value-of select=&quot;$Business_Exception&quot;/>&lt;/ERRORTYPE>&lt;ERRORMESSAGE>&lt;xsl:value-of select=&quot;&amp;quot;Business Exception occurred calling GetImsiByIp - IP not Found&amp;quot;&quot;/>&lt;/ERRORMESSAGE>&lt;ERRORDETAIL>&lt;xsl:value-of select=&quot;tib:render-xml($_error, true(),false())&quot;/>&lt;/ERRORDETAIL>&lt;ERRORTIMESTAMP>&lt;xsl:value-of select=&quot;current-dateTime()&quot;/>&lt;/ERRORTIMESTAMP>&lt;ORIGINALMESSAGE>&lt;xsl:value-of select=&quot;$InputQueryString&quot;/>&lt;/ORIGINALMESSAGE>&lt;/tns9:auditErrorElement>&lt;/xsl:when>&lt;xsl:otherwise>&lt;tns9:auditErrorElement>&lt;ERRORCODE>&lt;xsl:value-of select=&quot;&amp;quot;ESB.PCRF.000005&amp;quot;&quot;/>&lt;/ERRORCODE>&lt;ERRORTYPE>&lt;xsl:value-of select=&quot;$Business_Exception&quot;/>&lt;/ERRORTYPE>&lt;ERRORMESSAGE>&lt;xsl:value-of select=&quot;&amp;quot;Generic Business Exception occurred calling GetImsiByIp&amp;quot;&quot;/>&lt;/ERRORMESSAGE>&lt;ERRORDETAIL>&lt;xsl:value-of select=&quot;tib:render-xml($_error, true(),false())&quot;/>&lt;/ERRORDETAIL>&lt;ERRORTIMESTAMP>&lt;xsl:value-of select=&quot;current-dateTime()&quot;/>&lt;/ERRORTIMESTAMP>&lt;ORIGINALMESSAGE>&lt;xsl:value-of select=&quot;$InputQueryString&quot;/>&lt;/ORIGINALMESSAGE>&lt;/tns9:auditErrorElement>&lt;/xsl:otherwise>&lt;/xsl:choose>&lt;/tns9:LogAudit>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                                 </tibex:inputBindings>
                                 <bpws:targets>
                                     <bpws:target linkName="CheckErrorTypeToBusinessError_Business"/>
@@ -2163,7 +2188,7 @@
                                 name="SystemError" tibex:xpdlId="bdeba450-9ecf-4e18-874b-7a57b84e023b">
                                 <tibex:inputBindings>
                                     <tibex:partBinding
-                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns9=&quot;http://it.linkem/common/core/lehf/AuditTypes/xsd&quot; xmlns:tns4=&quot;http://schemas.tibco.com/bw/plugins/http/5.0/httpExceptions&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;ERROR_Severity&quot;/>&lt;xsl:param name=&quot;_error_Get_IMSI_By_Ip&quot;/>&lt;xsl:param name=&quot;System_Exception&quot;/>&lt;xsl:param name=&quot;FaultDetails&quot;/>&lt;xsl:param name=&quot;GetLogContext&quot;/>&lt;xsl:template name=&quot;SystemError-input&quot; match=&quot;/&quot;>&lt;tns9:LogAudit>&lt;auditElement>&lt;SEVERITY>&lt;xsl:value-of select=&quot;$ERROR_Severity&quot;/>&lt;/SEVERITY>&lt;xsl:copy-of select=&quot;$GetLogContext/BUSINESSKEY&quot;/>&lt;PROCESSSTACK>&lt;xsl:value-of select=&quot;$FaultDetails/ProcessStack&quot;/>&lt;/PROCESSSTACK>&lt;LOGMESSAGE>&lt;xsl:value-of select=&quot;&amp;quot;[ERROR] System Error&amp;quot;&quot;/>&lt;/LOGMESSAGE>&lt;/auditElement>&lt;xsl:choose>&lt;xsl:when test=&quot;$_error_Get_IMSI_By_Ip/tns4:HttpServerException/statusLine/statusCode=500&quot;>&lt;tns9:auditErrorElement>&lt;ERRORCODE>&lt;xsl:value-of select=&quot;&amp;quot;ESB.PCRF.000006&amp;quot;&quot;/>&lt;/ERRORCODE>&lt;ERRORTYPE>&lt;xsl:value-of select=&quot;$System_Exception&quot;/>&lt;/ERRORTYPE>&lt;ERRORMESSAGE>&lt;xsl:value-of select=&quot;&amp;quot;System Exception occurred calling GetImsiByIp - Internal Server Error&amp;quot;&quot;/>&lt;/ERRORMESSAGE>&lt;ERRORTIMESTAMP>&lt;xsl:value-of select=&quot;current-dateTime()&quot;/>&lt;/ERRORTIMESTAMP>&lt;ORIGINALMESSAGE>&lt;xsl:value-of select=&quot;concat(&amp;quot;[ERROR] &amp;quot; , $_error_Get_IMSI_By_Ip/tns4:HttpServerException/msg)&quot;/>&lt;/ORIGINALMESSAGE>&lt;/tns9:auditErrorElement>&lt;/xsl:when>&lt;xsl:otherwise>&lt;tns9:auditErrorElement>&lt;ERRORCODE>&lt;xsl:value-of select=&quot;&amp;quot;ESB.PCRF.000007&amp;quot;&quot;/>&lt;/ERRORCODE>&lt;ERRORTYPE>&lt;xsl:value-of select=&quot;$System_Exception&quot;/>&lt;/ERRORTYPE>&lt;ERRORMESSAGE>&lt;xsl:value-of select=&quot;&amp;quot;Generic System Exception occurred calling GetImsiByIp&amp;quot;&quot;/>&lt;/ERRORMESSAGE>&lt;ERRORTIMESTAMP>&lt;xsl:value-of select=&quot;current-dateTime()&quot;/>&lt;/ERRORTIMESTAMP>&lt;ORIGINALMESSAGE>&lt;xsl:value-of select=&quot;concat(&amp;quot;[ERROR] &amp;quot; , $_error_Get_IMSI_By_Ip/tns4:HttpServerException/msg)&quot;/>&lt;/ORIGINALMESSAGE>&lt;/tns9:auditErrorElement>&lt;/xsl:otherwise>&lt;/xsl:choose>&lt;/tns9:LogAudit>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns9=&quot;http://it.linkem/common/core/lehf/AuditTypes/xsd&quot; xmlns:tns4=&quot;http://schemas.tibco.com/bw/plugins/http/5.0/httpExceptions&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;ERROR_Severity&quot;/>&lt;xsl:param name=&quot;_error_Get_IMSI_By_Ip&quot;/>&lt;xsl:param name=&quot;System_Exception&quot;/>&lt;xsl:param name=&quot;FaultDetails&quot;/>&lt;xsl:param name=&quot;InputQueryString&quot;/>&lt;xsl:template name=&quot;SystemError-input&quot; match=&quot;/&quot;>&lt;tns9:LogAudit>&lt;auditElement>&lt;SEVERITY>&lt;xsl:value-of select=&quot;$ERROR_Severity&quot;/>&lt;/SEVERITY>&lt;PROCESSSTACK>&lt;xsl:value-of select=&quot;$FaultDetails/ProcessStack&quot;/>&lt;/PROCESSSTACK>&lt;LOGMESSAGE>&lt;xsl:value-of select=&quot;&amp;quot;[ERROR] System Error&amp;quot;&quot;/>&lt;/LOGMESSAGE>&lt;/auditElement>&lt;xsl:choose>&lt;xsl:when test=&quot;$_error_Get_IMSI_By_Ip/tns4:HttpServerException/statusLine/statusCode=500&quot;>&lt;tns9:auditErrorElement>&lt;ERRORCODE>&lt;xsl:value-of select=&quot;&amp;quot;ESB.PCRF.000006&amp;quot;&quot;/>&lt;/ERRORCODE>&lt;ERRORTYPE>&lt;xsl:value-of select=&quot;$System_Exception&quot;/>&lt;/ERRORTYPE>&lt;ERRORMESSAGE>&lt;xsl:value-of select=&quot;&amp;quot;System Exception occurred calling GetImsiByIp - Internal Server Error&amp;quot;&quot;/>&lt;/ERRORMESSAGE>&lt;ERRORTIMESTAMP>&lt;xsl:value-of select=&quot;current-dateTime()&quot;/>&lt;/ERRORTIMESTAMP>&lt;ORIGINALMESSAGE>&lt;xsl:value-of select=&quot;$InputQueryString&quot;/>&lt;/ORIGINALMESSAGE>&lt;/tns9:auditErrorElement>&lt;/xsl:when>&lt;xsl:otherwise>&lt;tns9:auditErrorElement>&lt;ERRORCODE>&lt;xsl:value-of select=&quot;&amp;quot;ESB.PCRF.000007&amp;quot;&quot;/>&lt;/ERRORCODE>&lt;ERRORTYPE>&lt;xsl:value-of select=&quot;$System_Exception&quot;/>&lt;/ERRORTYPE>&lt;ERRORMESSAGE>&lt;xsl:value-of select=&quot;&amp;quot;Generic System Exception occurred calling GetImsiByIp&amp;quot;&quot;/>&lt;/ERRORMESSAGE>&lt;ERRORTIMESTAMP>&lt;xsl:value-of select=&quot;current-dateTime()&quot;/>&lt;/ERRORTIMESTAMP>&lt;ORIGINALMESSAGE>&lt;xsl:value-of select=&quot;$InputQueryString&quot;/>&lt;/ORIGINALMESSAGE>&lt;/tns9:auditErrorElement>&lt;/xsl:otherwise>&lt;/xsl:choose>&lt;/tns9:LogAudit>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                                 </tibex:inputBindings>
                                 <bpws:targets>
                                     <bpws:target linkName="CheckErrorTypeToSystemError_System"/>
@@ -2184,9 +2209,9 @@
                                     <bpws:source linkName="CheckErrorTypeToBusinessError_Business">
                                     <tibex:DesignExpression>
                                     <tibex:expression
-                                    expression="exists($_error_Get_IMSI_By_Ip/tns:HttpClientException)" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"/>
+                                    expression="exists($_error_Get_IMSI_By_Ip/tns:HttpClientException) or $_error_Get_IMSI_By_Ip/tns:HttpClientException/statusLine/statusCode=400 or $_error_Get_IMSI_By_Ip/tns:HttpClientException/statusLine/statusCode=401 or $_error_Get_IMSI_By_Ip/tns:HttpClientException/statusLine/statusCode=403 or $_error_Get_IMSI_By_Ip/tns:HttpClientException/statusLine/statusCode=404" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"/>
                                     </tibex:DesignExpression>
-                                    <bpws:transitionCondition expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"><![CDATA[exists($_error_Get_IMSI_By_Ip/tns:HttpClientException)]]></bpws:transitionCondition>
+                                    <bpws:transitionCondition expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"><![CDATA[exists($_error_Get_IMSI_By_Ip/tns:HttpClientException) or $_error_Get_IMSI_By_Ip/tns:HttpClientException/statusLine/statusCode=400 or $_error_Get_IMSI_By_Ip/tns:HttpClientException/statusLine/statusCode=401 or $_error_Get_IMSI_By_Ip/tns:HttpClientException/statusLine/statusCode=403 or $_error_Get_IMSI_By_Ip/tns:HttpClientException/statusLine/statusCode=404]]></bpws:transitionCondition>
                                     </bpws:source>
                                 </bpws:sources>
                             </bpws:empty>
@@ -2205,7 +2230,7 @@
                         <bpws:target linkName="RepeatOnErrorToEnd"/>
                     </bpws:targets>
                     <bpws:sources>
-                        <bpws:source linkName="ParseGetResponseToEnd"/>
+                        <bpws:source linkName="ParseGetResponseToCopy_1_LogStart"/>
                         <bpws:source
                             linkName="ParseGetResponseToThrow_error"
                             tibex:faultDetailsVar="ParseGetResponse" tibex:faultNameVar="FaultName">
@@ -2245,26 +2270,84 @@
                 name="ThrowParseGetReponse" tibex:xpdlId="daeeee1f-bd61-4752-b370-a89270bf0a2b">
                 <tibex:inputBindings>
                     <tibex:partBinding
-                        expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns9=&quot;http://it.linkem/common/core/lehf/AuditTypes/xsd&quot; xmlns:tns10=&quot;http://schemas.tibco.com/bw/plugins/xml/5.0/JSONActivitiesExceptions&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;ERROR_Severity&quot;/>&lt;xsl:param name=&quot;Business_Exception&quot;/>&lt;xsl:param name=&quot;_error_ParseGetResponse&quot;/>&lt;xsl:template name=&quot;ThrowParseGetReponse-input&quot; match=&quot;/&quot;>&lt;tns9:LogAudit>&lt;auditElement>&lt;SEVERITY>&lt;xsl:value-of select=&quot;$ERROR_Severity&quot;/>&lt;/SEVERITY>&lt;PROCESSSTACK>&lt;xsl:value-of select=&quot;&amp;quot;&amp;quot;&quot;/>&lt;/PROCESSSTACK>&lt;LOGMESSAGE>&lt;xsl:value-of select=&quot;&amp;quot;[ERROR] Business Error&amp;quot;&quot;/>&lt;/LOGMESSAGE>&lt;/auditElement>&lt;tns9:auditErrorElement>&lt;ERRORCODE>&lt;xsl:value-of select=&quot;&amp;quot;ESB.PCRF.000008&amp;quot;&quot;/>&lt;/ERRORCODE>&lt;ERRORTYPE>&lt;xsl:value-of select=&quot;$Business_Exception&quot;/>&lt;/ERRORTYPE>&lt;ERRORMESSAGE>&lt;xsl:value-of select=&quot;&amp;quot;Business Exception during  ParseGetResponse into GetImsiByIp Process&amp;quot;&quot;/>&lt;/ERRORMESSAGE>&lt;ERRORTIMESTAMP>&lt;xsl:value-of select=&quot;current-dateTime()&quot;/>&lt;/ERRORTIMESTAMP>&lt;ORIGINALMESSAGE>&lt;xsl:value-of select=&quot;concat(&amp;quot;[ERROR] &amp;quot; , $_error_ParseGetResponse/tns10:JSONParserException/msg)&quot;/>&lt;/ORIGINALMESSAGE>&lt;/tns9:auditErrorElement>&lt;/tns9:LogAudit>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                        expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns9=&quot;http://it.linkem/common/core/lehf/AuditTypes/xsd&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;ERROR_Severity&quot;/>&lt;xsl:param name=&quot;Business_Exception&quot;/>&lt;xsl:param name=&quot;Get_IMSI_By_Ip&quot;/>&lt;xsl:template name=&quot;ThrowParseGetReponse-input&quot; match=&quot;/&quot;>&lt;tns9:LogAudit>&lt;auditElement>&lt;SEVERITY>&lt;xsl:value-of select=&quot;$ERROR_Severity&quot;/>&lt;/SEVERITY>&lt;PROCESSSTACK>&lt;xsl:value-of select=&quot;&amp;quot;&amp;quot;&quot;/>&lt;/PROCESSSTACK>&lt;LOGMESSAGE>&lt;xsl:value-of select=&quot;&amp;quot;[ERROR] Business Error&amp;quot;&quot;/>&lt;/LOGMESSAGE>&lt;/auditElement>&lt;tns9:auditErrorElement>&lt;ERRORCODE>&lt;xsl:value-of select=&quot;&amp;quot;ESB.PCRF.000008&amp;quot;&quot;/>&lt;/ERRORCODE>&lt;ERRORTYPE>&lt;xsl:value-of select=&quot;$Business_Exception&quot;/>&lt;/ERRORTYPE>&lt;ERRORMESSAGE>&lt;xsl:value-of select=&quot;&amp;quot;Business Error during ParseGetResponse into GetImsiByIp Process&amp;quot;&quot;/>&lt;/ERRORMESSAGE>&lt;ERRORTIMESTAMP>&lt;xsl:value-of select=&quot;current-dateTime()&quot;/>&lt;/ERRORTIMESTAMP>&lt;xsl:if test=&quot;$Get_IMSI_By_Ip/asciiContent&quot;>&lt;ORIGINALMESSAGE>&lt;xsl:value-of select=&quot;$Get_IMSI_By_Ip/asciiContent&quot;/>&lt;/ORIGINALMESSAGE>&lt;/xsl:if>&lt;/tns9:auditErrorElement>&lt;/tns9:LogAudit>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                 </tibex:inputBindings>
                 <bpws:targets>
                     <bpws:target linkName="ParseGetResponseToThrow_error"/>
                 </bpws:targets>
             </bpws:throw>
             <bpws:extensionActivity>
-                <tibex:extActivity name="GetLogContext"
-                    outputVariable="GetLogContext"
-                    tibex:xpdlId="70926b66-72ee-4304-8d8d-e8d2a5482157"
-                    type="bw.internal.getSharedVariable" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                <tibex:extActivity inputVariable="LogStart-input"
+                    name="LogStart" outputVariable="LogStart"
+                    tibex:xpdlId="b207b264-cded-447c-a4ee-e593368a3f2c"
+                    type="bw.generalactivities.callprocess" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                     <bpws:targets>
-                        <bpws:target linkName="StartToRepeatOnErrorRESTCall"/>
+                        <bpws:target linkName="StartToLoggingWrapper"/>
                     </bpws:targets>
                     <bpws:sources>
-                        <bpws:source linkName="GetSharedVariableToRepeatOnErrorRESTCall"/>
+                        <bpws:source linkName="LoggingWrapperToRepeatOnErrorRESTCall"/>
                     </bpws:sources>
-                    <tibex:GetSharedVariable inline="true"
-                        variableName="//it.linkem.common.core.lehf.sh//LogContext" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
+                    <tibex:inputBindings>
+                        <tibex:inputBinding coercion=""
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns9=&quot;http://it.linkem/common/core/lehf/AuditTypes/xsd&quot; xmlns:bw=&quot;http://www.tibco.com/bw/xpath/bw-custom-functions&quot; xmlns:tib=&quot;http://www.tibco.com/bw/xslt/custom-functions&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;Start&quot;/>&#xa;    &lt;xsl:template name=&quot;LogStart-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns9:LogAudit>&#xa;            &lt;auditElement>&#xa;                &lt;SEVERITY>&#xa;                    &lt;xsl:value-of select=&quot;$DEBUG_Severity&quot;/>&#xa;                &lt;/SEVERITY>&#xa;                &lt;PROCESSSTACK>&#xa;                    &lt;xsl:value-of select=&quot;bw:getModuleProperty(&amp;quot;BW.PROCESS.STACK&amp;quot;)&quot;/>&#xa;                &lt;/PROCESSSTACK>&#xa;                &lt;LOGMESSAGE>&#xa;                    &lt;xsl:value-of select=&quot;concat(&amp;quot;LogStart PCRF - GetIMSIByIP. &amp;quot;, tib:render-xml($Start, true(),false()))&quot;/>&#xa;                &lt;/LOGMESSAGE>&#xa;            &lt;/auditElement>&#xa;        &lt;/tns9:LogAudit>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                    </tibex:inputBindings>
+                    <tibex:CallProcess
+                        moduleRef="it.linkem.common.core.lehf.sh"
+                        subProcessName="it.linkem.common.core.lehf.sh.LoggingWrapper" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
                 </tibex:extActivity>
+            </bpws:extensionActivity>
+            <bpws:extensionActivity>
+                <tibex:extActivity inputVariable="LogEnd-input"
+                    name="LogEnd" outputVariable="LogEnd"
+                    tibex:xpdlId="fb116a86-66cd-49f4-84c1-c7d77ea0fab9"
+                    type="bw.generalactivities.callprocess" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                    <bpws:targets>
+                        <bpws:target linkName="ParseGetResponseToCopy_1_LogStart"/>
+                    </bpws:targets>
+                    <bpws:sources>
+                        <bpws:source linkName="Copy_1_LogStartToEnd"/>
+                    </bpws:sources>
+                    <tibex:inputBindings>
+                        <tibex:inputBinding coercion=""
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns9=&quot;http://it.linkem/common/core/lehf/AuditTypes/xsd&quot; xmlns:tns8=&quot;http://it.linkem/rete/pcrf/getImsiByIp/internal/xsd&quot; xmlns:bw=&quot;http://www.tibco.com/bw/xpath/bw-custom-functions&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;ParseGetResponse&quot;/>&#xa;    &lt;xsl:template name=&quot;LogEnd-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns9:LogAudit>&#xa;            &lt;auditElement>&#xa;                &lt;SEVERITY>&#xa;                    &lt;xsl:value-of select=&quot;$DEBUG_Severity&quot;/>&#xa;                &lt;/SEVERITY>&#xa;                &lt;PROCESSSTACK>&#xa;                    &lt;xsl:value-of select=&quot;bw:getModuleProperty(&amp;quot;BW.PROCESS.STACK&amp;quot;)&quot;/>&#xa;                &lt;/PROCESSSTACK>&#xa;                &lt;xsl:choose>&#xa;                    &lt;xsl:when test=&quot;string-length($ParseGetResponse/tns8:sessionDTOList[1]/tns8:sessionBindingIdentifier/tns8:subscriptionIds[1]/tns8:data)> 0&quot;>&#xa;                        &lt;LOGMESSAGE>&#xa;                            &lt;xsl:value-of select=&quot;concat(&amp;quot;LogEnd PCRF - GetIMSIByIP; Found IMSI : &amp;quot;, $ParseGetResponse/tns8:sessionDTOList[1]/tns8:sessionBindingIdentifier/tns8:subscriptionIds[1]/tns8:data)&quot;/>&#xa;                        &lt;/LOGMESSAGE>&#xa;                    &lt;/xsl:when>&#xa;                    &lt;xsl:otherwise>&#xa;                        &lt;LOGMESSAGE>&#xa;                            &lt;xsl:value-of select=&quot;&amp;quot;LogEnd PCRF - GetIMSIByIP; No IMSI founded&amp;quot;&quot;/>&#xa;                        &lt;/LOGMESSAGE>&#xa;                    &lt;/xsl:otherwise>&#xa;                &lt;/xsl:choose>&#xa;            &lt;/auditElement>&#xa;        &lt;/tns9:LogAudit>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                    </tibex:inputBindings>
+                    <tibex:CallProcess
+                        moduleRef="it.linkem.common.core.lehf.sh"
+                        subProcessName="it.linkem.common.core.lehf.sh.LoggingWrapper" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
+                </tibex:extActivity>
+            </bpws:extensionActivity>
+            <bpws:extensionActivity>
+                <tibex:activityExtension
+                    inputVariable="InputQueryString"
+                    name="InputQueryString"
+                    outputVariable="InputQueryString"
+                    tibex:xpdlId="e3f493a9-f017-4749-989c-870fc85948ae" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                    <bpws:targets>
+                        <bpws:target linkName="LoggingWrapperToRepeatOnErrorRESTCall"/>
+                    </bpws:targets>
+                    <bpws:sources>
+                        <bpws:source linkName="AssignToRepeatOnErrorRESTCall"/>
+                    </bpws:sources>
+                    <tibex:inputBindings>
+                        <tibex:inputBinding
+                            expression="concat('processParams={&quot;deviceId&quot;:{&quot;ip&quot;:&quot;',$Start/ns12:IP,'&quot;},&quot;sessionType&quot;:&quot;IPCANSESSION&quot;}')" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"/>
+                    </tibex:inputBindings>
+                    <tibex:config>
+                        <bwext:BWActivity
+                            activityTypeID="bw.generalactivities.bwassign"
+                            xmlns:activityconfig="http://tns.tibco.com/bw/model/activityconfig"
+                            xmlns:bwext="http://tns.tibco.com/bw/model/core/bwext"
+                            xmlns:generalactivities="http://ns.tibco.com/bw/palette/generalactivities" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                            <activityConfig>
+                                <properties name="config" xsi:type="activityconfig:EMFProperty">
+                                    <type href="http://ns.tibco.com/bw/palette/generalactivities#//BWAssign"/>
+                                    <value
+                                    processVariable="InputQueryString" xsi:type="generalactivities:BWAssign"/>
+                                </properties>
+                            </activityConfig>
+                        </bwext:BWActivity>
+                    </tibex:config>
+                </tibex:activityExtension>
             </bpws:extensionActivity>
         </bpws:flow>
     </bpws:scope>

@@ -1,0 +1,12 @@
+ErrorCode;ErrorMessage;ErrorType;HTTPStatusCode;APIname;BSLProcess
+ESB.PCRF.000001;Business Exception occurred calling GetImsiByIp - Bad Request;Business;400;;SimCheck
+ESB.PCRF.000002;Business Exception occurred calling GetImsiByIp - Unauthorized;Business;401;;SimCheck
+ESB.PCRF.000003;Business Exception occurred calling GetImsiByIp - Forbidden;Business;403;;SimCheck
+ESB.PCRF.000004;Business Exception occurred calling GetImsiByIp - IP not Found;Business;404;;SimCheck
+ESB.PCRF.000005;Generic Business Exception occurred calling GetImsiByIp;Business;;;SimCheck
+;;;;;
+ESB.PCRF.000006;System Exception occurred calling GetImsiByIp - Internal Server Error;System;500;;SimCheck
+ESB.PCRF.000007;Generic System Exception occurred calling GetImsiByIp;System;;;SimCheck
+;;;;;
+ESB.PCRF.000008;Business Exception during  ParseGetResponse into GetImsiByIp Process;Business;;;SimCheck
+ESB.PCRF.000009;Generic Error into GetImsiByIp process ;Business;;;SimCheck
