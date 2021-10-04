@@ -726,7 +726,7 @@
             name="_error_CRM_GetSIMFromAccount" sca-bpel:internal="true"/>
         <bpws:variable element="ns10:ActivityErrorData"
             name="_error_PCRF_GetIMSIByIp" sca-bpel:internal="true"/>
-        <bpws:variable element="ns5:LogAudit" name="Throw-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns5:LogAudit" name="ThrowLogAudit-input" sca-bpel:internal="true"/>
         <bpws:variable name="DEBUG_Severity" sca-bpel:hotUpdate="false"
             sca-bpel:privateProperty="true" sca-bpel:property="yes"
             tibex:propertySource="//it.linkem.common.core.lehf.sh///it.linkem.common.core.lehf.sh/Logging/DEBUG_SEVERITY" type="xsd:string"/>
@@ -752,7 +752,8 @@
                     <bpws:flow name="flow1">
                         <bpws:links/>
                         <bpws:throw faultName="ns5:LogAudit"
-                            faultVariable="Throw-input" name="Throw" tibex:xpdlId="51ae389c-57f1-4574-9995-4ace9f9c59e5">
+                            faultVariable="ThrowLogAudit-input"
+                            name="ThrowLogAudit" tibex:xpdlId="51ae389c-57f1-4574-9995-4ace9f9c59e5">
                             <tibex:inputBindings>
                                 <tibex:partBinding
                                     expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns4=&quot;http://it.linkem/common/core/lehf/AuditTypes/xsd&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;LogAudit&quot;/>&lt;xsl:template name=&quot;Throw-input&quot; match=&quot;/&quot;>&lt;xsl:copy-of select=&quot;$LogAudit&quot;/>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>

@@ -34,6 +34,7 @@
     xmlns:ns31="http://it.linkem/crm/UpdateLineaContratto/sl/xsd"
     xmlns:ns32="http://it.linkem/crm/UpdateTestataContratto/sl/xsd"
     xmlns:ns4="http://it.linkem/common/core/lehf/AuditTypes/xsd"
+    xmlns:ns5="http://tns.tibco.com/bw/palette/internal/errorlinkhandler+55090a2f-15ec-47dc-bad5-25d6ac533587"
     xmlns:ns7="http://tns.tibco.com/bw/palette/internal/activityerror+bw.internal.end"
     xmlns:ns8="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrievemultiple+30f54bac-cc52-44ff-b6e0-1f4bea566861+input"
     xmlns:ns9="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrievemultiple+30f54bac-cc52-44ff-b6e0-1f4bea566861+output"
@@ -41,19 +42,6 @@
     xmlns:sca-bpel="http://docs.oasis-open.org/ns/opencsa/sca-bpel/200801"
     xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"
     xmlns:tibprop="http://ns.tibco.com/bw/property" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-    <tibex:VariableDescriptor type="MemorySaving">
-        <task name="End">
-            <endingVariables>
-                <variable>UpdateTestataContratto</variable>
-            </endingVariables>
-        </task>
-        <task name="UpdateTestataContratto">
-            <endingVariables>
-                <variable>UpdateTestataContratto-input</variable>
-                <variable>Start</variable>
-            </endingVariables>
-        </task>
-    </tibex:VariableDescriptor>
     <tibex:Types>
         <xs:schema attributeFormDefault="unqualified"
             elementFormDefault="qualified"
@@ -818,12 +806,12 @@
             </complexType>
         </schema>
         <schema elementFormDefault="unqualified"
-            targetNamespace="http://tns.tibco.com/bw/palette/internal/activityerror+bw.dynamicscrm.UpdateEntity"
+            targetNamespace="http://tns.tibco.com/bw/palette/internal/errorlinkhandler+55090a2f-15ec-47dc-bad5-25d6ac533587"
             xmlns="http://www.w3.org/2001/XMLSchema"
-            xmlns:Q1="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/fault" xmlns:tns="http://tns.tibco.com/bw/palette/internal/activityerror+bw.dynamicscrm.UpdateEntity">
+            xmlns:Q1="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/fault" xmlns:tns="http://tns.tibco.com/bw/palette/internal/errorlinkhandler+55090a2f-15ec-47dc-bad5-25d6ac533587">
             <import namespace="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/fault"/>
-            <element name="ActivityErrorData" type="tns:ActivityErrorDataType"/>
-            <complexType name="ActivityErrorDataType">
+            <element name="ErrorLinkHandlerFaultData" type="tns:ErrorLinkHandlerFaultDataType"/>
+            <complexType name="ErrorLinkHandlerFaultDataType">
                 <choice>
                     <element maxOccurs="1" minOccurs="0" ref="Q1:ActivityFaultData"/>
                 </choice>
@@ -942,7 +930,7 @@
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.1"/>
-                                    <layoutConstraint x="781"
+                                    <layoutConstraint x="1005"
                                     xsi:type="notation:Bounds" y="124"/>
                                     </children>
                                     <children type="4002 bw.dynamicscrm.UpdateEntity">
@@ -982,6 +970,113 @@
                                     x="422"
                                     xsi:type="notation:Bounds" y="124"/>
                                     </children>
+                                    <children type="4002 com.tibco.bw.core.design.process.editor.Activity_4002_Throw">
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <styles fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.3"/>
+                                    <layoutConstraint
+                                    height="40" width="234"
+                                    x="388"
+                                    xsi:type="notation:Bounds" y="297"/>
+                                    </children>
+                                    <children type="4002">
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <styles fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.4"/>
+                                    <layoutConstraint x="179"
+                                    xsi:type="notation:Bounds" y="124"/>
+                                    </children>
+                                    <children type="4002">
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <styles fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.5"/>
+                                    <layoutConstraint x="734"
+                                    xsi:type="notation:Bounds" y="124"/>
+                                    </children>
                                     <styles xsi:type="notation:DrawerStyle"/>
                                     <styles xsi:type="notation:SortingStyle"/>
                                     <styles xsi:type="notation:FilteringStyle"/>
@@ -994,8 +1089,8 @@
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <styles xsi:type="bwnotation:ResizingStyle"/>
                                     <element href="//0/@process/@activity/@activity"/>
-                                    <layoutConstraint height="384"
-                                    width="1014" xsi:type="notation:Bounds"/>
+                                    <layoutConstraint height="393"
+                                    width="1222" xsi:type="notation:Bounds"/>
                                 </children>
                                 <styles xsi:type="notation:SortingStyle"/>
                                 <styles xsi:type="notation:FilteringStyle"/>
@@ -1005,7 +1100,103 @@
                             <styles xsi:type="bwnotation:BackgroundStyle"/>
                             <styles xsi:type="bwnotation:ResizingStyle"/>
                             <element href="//0/@process/@activity"/>
-                            <layoutConstraint height="384" width="812" xsi:type="notation:Bounds"/>
+                            <layoutConstraint height="400" width="1225" xsi:type="notation:Bounds"/>
+                        </children>
+                        <children type="4022">
+                            <children type="3022">
+                                <children type="4028">
+                                    <children type="3029">
+                                    <children type="4032">
+                                    <styles fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@faultHandlers/@catch.0"/>
+                                    <layoutConstraint
+                                    height="34" width="34"
+                                    xsi:type="notation:Bounds" y="68"/>
+                                    </children>
+                                    <styles xsi:type="notation:SortingStyle"/>
+                                    <styles xsi:type="notation:FilteringStyle"/>
+                                    </children>
+                                    <children type="3030">
+                                    <children type="4005">
+                                    <children type="3007">
+                                    <children type="4002 com.tibco.bw.core.design.process.editor.Activity_4002_Throw">
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+                                    <element href="//0/@process/@activity/@faultHandlers/@catch.0/@activity/@activity/@activities.0"/>
+                                    <layoutConstraint
+                                    height="40"
+                                    width="40"
+                                    x="75"
+                                    xsi:type="notation:Bounds" y="54"/>
+                                    </children>
+                                    <styles xsi:type="notation:DrawerStyle"/>
+                                    <styles xsi:type="notation:SortingStyle"/>
+                                    <styles xsi:type="notation:FilteringStyle"/>
+                                    </children>
+                                    <styles fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+                                    <styles xsi:type="bwnotation:ResizingStyle"/>
+                                    <element href="//0/@process/@activity/@faultHandlers/@catch.0/@activity/@activity"/>
+                                    <layoutConstraint
+                                    height="168"
+                                    width="1124" xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <styles xsi:type="notation:SortingStyle"/>
+                                    <styles xsi:type="notation:FilteringStyle"/>
+                                    </children>
+                                    <styles fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <styles xsi:type="bwnotation:BackgroundStyle"/>
+                                    <styles xsi:type="bwnotation:ResizingStyle"/>
+                                    <element href="//0/@process/@activity/@faultHandlers/@catch.0"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                </children>
+                                <styles xsi:type="notation:SortingStyle"/>
+                                <styles xsi:type="notation:FilteringStyle"/>
+                            </children>
+                            <styles fontName="Segoe UI" lineColor="0" xsi:type="notation:ShapeStyle"/>
+                            <styles xsi:type="bwnotation:BackgroundStyle"/>
+                            <styles xsi:type="bwnotation:ResizingStyle"/>
+                            <element href="//0/@process/@activity/@faultHandlers"/>
+                            <layoutConstraint height="200" width="922" xsi:type="notation:Bounds"/>
                         </children>
                         <styles xsi:type="notation:SortingStyle"/>
                         <styles xsi:type="notation:FilteringStyle"/>
@@ -1015,7 +1206,7 @@
                     <styles xsi:type="bwnotation:BackgroundStyle"/>
                     <styles xsi:type="bwnotation:ResizingStyle"/>
                     <element href="//0/@process/@activity"/>
-                    <layoutConstraint height="408" width="812" x="1"
+                    <layoutConstraint height="636" width="1225" x="1"
                         xsi:type="notation:Bounds" y="1"/>
                 </children>
                 <styles xsi:type="notation:SortingStyle"/>
@@ -1024,13 +1215,13 @@
             </children>
             <styles fontName="Segoe UI" lineColor="0" xsi:type="notation:ShapeStyle"/>
             <element href="//0/@process"/>
-            <layoutConstraint height="460" width="1359" xsi:type="notation:Bounds"/>
+            <layoutConstraint height="688" width="1567" xsi:type="notation:Bounds"/>
         </children>
         <styles xsi:type="notation:DiagramStyle"/>
         <element href="//0"/>
         <edges
             source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0"
-            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2" type="4006">
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.4" type="4006">
             <children type="6002">
                 <layoutConstraint xsi:type="notation:Location" y="40"/>
             </children>
@@ -1041,7 +1232,7 @@
         </edges>
         <edges
             source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2"
-            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.1" type="4006">
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.5" type="4006">
             <children type="6002">
                 <layoutConstraint xsi:type="notation:Location" y="40"/>
             </children>
@@ -1049,6 +1240,39 @@
             <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
             <element href="//0/@process/@activity/@activity/@links/@children.1"/>
             <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.5"
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.1" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.2"/>
+            <bendpoints points="[25, 0, -278, 0]$[279, 0, -24, 0]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.4"
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.3"/>
+            <bendpoints points="[25, 0, -240, 0]$[219, 0, -46, 0]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2"
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.3" type="4006">
+            <children type="6002">
+                <layoutConstraint x="-1" xsi:type="notation:Location" y="30"/>
+            </children>
+            <styles lineColor="255" xsi:type="notation:ConnectorStyle"/>
+            <styles fontColor="255" fontName="Segoe UI" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.4"/>
+            <bendpoints points="[-7, 25, 0, -149]$[0, 150, 7, -24]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
     </notation:Diagram>
     <tibex:NamespaceRegistry enabled="true">
@@ -1132,12 +1356,22 @@
             name="UpdateTestataContratto-input" sca-bpel:internal="true"/>
         <bpws:variable element="ns29:Entities"
             name="UpdateTestataContratto" sca-bpel:internal="true"/>
-        <bpws:variable element="ns30:ActivityErrorData"
+        <bpws:variable element="ns5:ErrorLinkHandlerFaultData"
             name="_error_UpdateTestataContratto" sca-bpel:internal="true"/>
         <bpws:variable element="ns32:UpdateTestataContratto_Input"
             name="Start" sca-bpel:internal="true" tibex:parameter="in"/>
         <bpws:variable element="ns32:UpdateTestataContratto_Output"
             name="End-input" sca-bpel:internal="true" tibex:parameter="out"/>
+        <bpws:variable element="ns4:LogAudit" name="LogStart-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns4:LogAuditOutput" name="LogStart" sca-bpel:internal="true"/>
+        <bpws:variable element="ns4:LogAudit" name="LogEnd-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns4:LogAuditOutput" name="LogEnd" sca-bpel:internal="true"/>
+        <bpws:variable name="FaultName" sca-bpel:internal="true" type="xsd:string"/>
+        <bpws:variable element="ns:OptionalErrorReport"
+            name="_errorOptional" sca-bpel:internal="true"/>
+        <bpws:variable element="ns4:LogAudit"
+            name="ThrowUpdateTestataContratto-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns4:LogAudit" name="ThrowLogAudit-input" sca-bpel:internal="true"/>
     </bpws:variables>
     <bpws:extensions>
         <bpws:extension mustUnderstand="no" namespace="http://www.eclipse.org/gmf/runtime/1.0.2/notation"/>
@@ -1148,10 +1382,33 @@
         <bpws:extension mustUnderstand="no" namespace="http://www.tibco.com/bpel/2007/extensions"/>
     </bpws:extensions>
     <bpws:scope name="scope">
+        <bpws:faultHandlers>
+            <bpws:catch faultElement="ns4:LogAudit"
+                faultName="ns4:LogAudit" faultVariable="LogAudit" tibex:xpdlId="a8966600-504e-4346-bd31-69bfa5c0e721">
+                <bpws:scope name="scope1">
+                    <bpws:flow name="flow1">
+                        <bpws:links/>
+                        <bpws:throw faultName="ns4:LogAudit"
+                            faultVariable="ThrowLogAudit-input"
+                            name="ThrowLogAudit" tibex:xpdlId="127a6a52-6e07-42ee-abdf-fae0d00b2b73">
+                            <tibex:inputBindings>
+                                <tibex:partBinding
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns9=&quot;http://it.linkem/common/core/lehf/AuditTypes/xsd&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;LogAudit&quot;/>&lt;xsl:template name=&quot;ThrowLogAudit-input&quot; match=&quot;/&quot;>&lt;xsl:copy-of select=&quot;$LogAudit&quot;/>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            </tibex:inputBindings>
+                        </bpws:throw>
+                    </bpws:flow>
+                </bpws:scope>
+            </bpws:catch>
+        </bpws:faultHandlers>
         <bpws:flow name="flow">
             <bpws:links>
-                <bpws:link name="StartToUpdateTestataContratto" tibex:linkType="SUCCESS"/>
-                <bpws:link name="UpdateTestataContrattoToEnd" tibex:linkType="SUCCESS"/>
+                <bpws:link name="StartToLogStart" tibex:linkType="SUCCESS"/>
+                <bpws:link name="UpdateTestataContrattoToLogEnd" tibex:linkType="SUCCESS"/>
+                <bpws:link name="LogEndToEnd" tibex:linkType="SUCCESS"/>
+                <bpws:link name="LogStartToUpdateTestataContratto" tibex:linkType="SUCCESS"/>
+                <bpws:link
+                    name="UpdateTestataContrattoToThrowUpdateSim_error"
+                    tibex:label="error" tibex:linkType="ERROR"/>
             </bpws:links>
             <bpws:extensionActivity>
                 <tibex:receiveEvent createInstance="yes"
@@ -1159,7 +1416,7 @@
                     tibex:xpdlId="290e44ae-1218-4582-93ab-3606191d41e9"
                     variable="Start" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                     <bpws:sources>
-                        <bpws:source linkName="StartToUpdateTestataContratto"/>
+                        <bpws:source linkName="StartToLogStart"/>
                     </bpws:sources>
                     <tibex:eventSource>
                         <tibex:StartEvent xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
@@ -1171,7 +1428,7 @@
                     name="End"
                     tibex:xpdlId="6e23e1b3-274a-4f62-8440-46f5bfc15b90" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                     <bpws:targets>
-                        <bpws:target linkName="UpdateTestataContrattoToEnd"/>
+                        <bpws:target linkName="LogEndToEnd"/>
                     </bpws:targets>
                     <tibex:inputBindings>
                         <tibex:inputBinding
@@ -1200,10 +1457,18 @@
                     outputVariable="UpdateTestataContratto"
                     tibex:xpdlId="55090a2f-15ec-47dc-bad5-25d6ac533587" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                     <bpws:targets>
-                        <bpws:target linkName="StartToUpdateTestataContratto"/>
+                        <bpws:target linkName="LogStartToUpdateTestataContratto"/>
                     </bpws:targets>
                     <bpws:sources>
-                        <bpws:source linkName="UpdateTestataContrattoToEnd"/>
+                        <bpws:source linkName="UpdateTestataContrattoToLogEnd"/>
+                        <bpws:source
+                            linkName="UpdateTestataContrattoToThrowUpdateSim_error"
+                            tibex:faultDetailsVar="UpdateTestataContratto" tibex:faultNameVar="FaultName">
+                            <tibex:DesignExpression>
+                                <tibex:expression expression="##error##" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"/>
+                            </tibex:DesignExpression>
+                            <bpws:transitionCondition expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"><![CDATA[##error##]]></bpws:transitionCondition>
+                        </bpws:source>
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding
@@ -3373,6 +3638,57 @@
                         </bwext:BWActivity>
                     </tibex:config>
                 </tibex:activityExtension>
+            </bpws:extensionActivity>
+            <bpws:throw faultName="ns4:LogAudit"
+                faultVariable="ThrowUpdateTestataContratto-input"
+                name="ThrowUpdateTestataContratto" tibex:xpdlId="643fd567-1e97-428f-928c-e4bf267ba350">
+                <tibex:inputBindings>
+                    <tibex:partBinding
+                        expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns9=&quot;http://it.linkem/common/core/lehf/AuditTypes/xsd&quot; xmlns:tib=&quot;http://www.tibco.com/bw/xslt/custom-functions&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;ERROR_Severity&quot;/>&lt;xsl:param name=&quot;_error&quot;/>&lt;xsl:param name=&quot;Business_Exception&quot;/>&lt;xsl:param name=&quot;Start&quot;/>&lt;xsl:template name=&quot;ThrowUpdateTestataContratto-input&quot; match=&quot;/&quot;>&lt;tns9:LogAudit>&lt;auditElement>&lt;SEVERITY>&lt;xsl:value-of select=&quot;$ERROR_Severity&quot;/>&lt;/SEVERITY>&lt;PROCESSSTACK>&lt;xsl:value-of select=&quot;$_error/ProcessStack&quot;/>&lt;/PROCESSSTACK>&lt;LOGMESSAGE>&lt;xsl:value-of select=&quot;&amp;quot;[ERROR} Business Error&amp;quot;&quot;/>&lt;/LOGMESSAGE>&lt;/auditElement>&lt;tns9:auditErrorElement>&lt;ERRORCODE>&lt;xsl:value-of select=&quot;&amp;quot;ESB.CRMD.000007&amp;quot;&quot;/>&lt;/ERRORCODE>&lt;ERRORTYPE>&lt;xsl:value-of select=&quot;$Business_Exception&quot;/>&lt;/ERRORTYPE>&lt;ERRORMESSAGE>&lt;xsl:value-of select=&quot;&amp;quot;Business Exception occurred calling UpdateTestataContratto - Bad Request&amp;quot;&quot;/>&lt;/ERRORMESSAGE>&lt;ERRORDETAIL>&lt;xsl:value-of select=&quot;tib:render-xml($_error, true(),false())&quot;/>&lt;/ERRORDETAIL>&lt;ERRORTIMESTAMP>&lt;xsl:value-of select=&quot;current-dateTime()&quot;/>&lt;/ERRORTIMESTAMP>&lt;ORIGINALMESSAGE>&lt;xsl:value-of select=&quot;tib:render-xml($Start, true(),false())&quot;/>&lt;/ORIGINALMESSAGE>&lt;/tns9:auditErrorElement>&lt;/tns9:LogAudit>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                </tibex:inputBindings>
+                <bpws:targets>
+                    <bpws:target linkName="UpdateTestataContrattoToThrowUpdateSim_error"/>
+                </bpws:targets>
+            </bpws:throw>
+            <bpws:extensionActivity>
+                <tibex:extActivity inputVariable="LogStart-input"
+                    name="LogStart" outputVariable="LogStart"
+                    tibex:xpdlId="5a2ad6d9-b3c3-4c4f-9385-0b177f3a9c4f"
+                    type="bw.generalactivities.callprocess" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                    <bpws:targets>
+                        <bpws:target linkName="StartToLogStart"/>
+                    </bpws:targets>
+                    <bpws:sources>
+                        <bpws:source linkName="LogStartToUpdateTestataContratto"/>
+                    </bpws:sources>
+                    <tibex:inputBindings>
+                        <tibex:inputBinding coercion=""
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns9=&quot;http://it.linkem/common/core/lehf/AuditTypes/xsd&quot; xmlns:bw=&quot;http://www.tibco.com/bw/xpath/bw-custom-functions&quot; xmlns:tib=&quot;http://www.tibco.com/bw/xslt/custom-functions&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;DEBUG_Severity&quot;/>&lt;xsl:param name=&quot;Start&quot;/>&lt;xsl:template name=&quot;LogStart-input&quot; match=&quot;/&quot;>&lt;tns9:LogAudit>&lt;auditElement>&lt;SEVERITY>&lt;xsl:value-of select=&quot;$DEBUG_Severity&quot;/>&lt;/SEVERITY>&lt;PROCESSSTACK>&lt;xsl:value-of select=&quot;bw:getModuleProperty(&amp;quot;BW.PROCESS.STACK&amp;quot;)&quot;/>&lt;/PROCESSSTACK>&lt;LOGMESSAGE>&lt;xsl:value-of select=&quot;concat(&amp;quot;LogStart UpdateTestataContratto. &amp;quot;, tib:render-xml($Start, true(),false()))&quot;/>&lt;/LOGMESSAGE>&lt;/auditElement>&lt;/tns9:LogAudit>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                    </tibex:inputBindings>
+                    <tibex:CallProcess
+                        moduleRef="it.linkem.common.core.lehf.sh"
+                        subProcessName="it.linkem.common.core.lehf.sh.LoggingWrapper" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
+                </tibex:extActivity>
+            </bpws:extensionActivity>
+            <bpws:extensionActivity>
+                <tibex:extActivity inputVariable="LogEnd-input"
+                    name="LogEnd" outputVariable="LogEnd"
+                    tibex:xpdlId="8eef2ede-9b6a-48d3-9060-4d62afe958a9"
+                    type="bw.generalactivities.callprocess" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                    <bpws:targets>
+                        <bpws:target linkName="UpdateTestataContrattoToLogEnd"/>
+                    </bpws:targets>
+                    <bpws:sources>
+                        <bpws:source linkName="LogEndToEnd"/>
+                    </bpws:sources>
+                    <tibex:inputBindings>
+                        <tibex:inputBinding coercion=""
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns9=&quot;http://it.linkem/common/core/lehf/AuditTypes/xsd&quot; xmlns:bw=&quot;http://www.tibco.com/bw/xpath/bw-custom-functions&quot; xmlns:tib=&quot;http://www.tibco.com/bw/xslt/custom-functions&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;DEBUG_Severity&quot;/>&lt;xsl:param name=&quot;UpdateTestataContratto&quot;/>&lt;xsl:template name=&quot;LogEnd-input&quot; match=&quot;/&quot;>&lt;tns9:LogAudit>&lt;auditElement>&lt;SEVERITY>&lt;xsl:value-of select=&quot;$DEBUG_Severity&quot;/>&lt;/SEVERITY>&lt;PROCESSSTACK>&lt;xsl:value-of select=&quot;bw:getModuleProperty(&amp;quot;BW.PROCESS.STACK&amp;quot;)&quot;/>&lt;/PROCESSSTACK>&lt;LOGMESSAGE>&lt;xsl:value-of select=&quot;concat(&amp;quot;LogEnd UpdateTestataContratto. &amp;quot;, tib:render-xml($UpdateTestataContratto, true(),false()))&quot;/>&lt;/LOGMESSAGE>&lt;/auditElement>&lt;/tns9:LogAudit>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                    </tibex:inputBindings>
+                    <tibex:CallProcess
+                        moduleRef="it.linkem.common.core.lehf.sh"
+                        subProcessName="it.linkem.common.core.lehf.sh.LoggingWrapper" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
+                </tibex:extActivity>
             </bpws:extensionActivity>
         </bpws:flow>
     </bpws:scope>

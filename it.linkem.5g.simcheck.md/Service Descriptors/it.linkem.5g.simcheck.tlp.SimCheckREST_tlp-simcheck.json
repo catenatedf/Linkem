@@ -5,7 +5,7 @@
     "title" : "simcheck",
     "description" : "simcheck service"
   },
-  "host" : "localhost:8083",
+  "host" : "",
   "basePath" : "/",
   "schemes" : [ "http" ],
   "paths" : {
