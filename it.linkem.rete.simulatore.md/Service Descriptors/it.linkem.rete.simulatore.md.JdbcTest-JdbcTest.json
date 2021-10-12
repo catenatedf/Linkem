@@ -5,7 +5,7 @@
     "title" : "JdbcTest",
     "description" : "JdbcTest service"
   },
-  "host" : "localhost:8081",
+  "host" : "localhost:8082",
   "basePath" : "/",
   "schemes" : [ "http" ],
   "paths" : {

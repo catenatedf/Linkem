@@ -1,21 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:rest="http://xsd.tns.tibco.com/bw/models/binding/rest" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scact="http://xsd.tns.tibco.com/amf/models/sca/componentType" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_9YnJICp5EeyKvsZnriCTtQ" targetNamespace="http://tns.tibco.com/bw/composite/it.linkem.rete.simulatore.md" name="it.linkem.rete.simulatore.md" compositeext:version="1.0.0" compositeext:formatVersion="2">
-  <sca:service xmi:id="_tnPv5Cp-EeyKvsZnriCTtQ" name="jdbctest" promote="ComponentJdbcTest/jdbctest">
-    <sca:interface.wsdl xmi:id="_tnPv6Cp-EeyKvsZnriCTtQ" interface="http://xmlns.example.com/20211011123345PLT#wsdl.interface(jdbctest)" scaext:wsdlLocation="../Processes/it/linkem/rete/simulatore/md/JdbcTest.bwp"/>
-    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_tnPv6Sp-EeyKvsZnriCTtQ" name="RestService" path="/jdbctest" docBasePath="http://localhost:7777/it.linkem.rete.simulatore.md" docResourcePath="JdbcTest" basePath="/" connector="it.linkem.rete.simulatore.md.HTTPConnectorResource2" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/it.linkem.rete.simulatore.md.JdbcTest-JdbcTest.json">
-      <operation xmi:id="_tnPv6yp-EeyKvsZnriCTtQ" operationName="get" nickname="get-jdbctest" httpMethod="GET" notes="getJdbcTest" responseStyle="element" outputPartName="item">
-        <parameters xmi:id="_8lIHoCqCEeyKvsZnriCTtQ"/>
-        <clientFormat>json</clientFormat>
-        <clientRequestFormat>json</clientRequestFormat>
-      </operation>
-      <parameters xmi:id="_tnY51yp-EeyKvsZnriCTtQ"/>
-      <advancedConfig xmi:id="_tnPv6ip-EeyKvsZnriCTtQ" blockingQueueSize="2147483647"/>
-    </scaext:binding>
-    <scact:bindingAdjunct xmi:id="_tnPv7Cp-EeyKvsZnriCTtQ" bindingName="RestService"/>
-  </sca:service>
   <sca:service xmi:id="_BQbyZCtCEeyUgORO6XNH0g" name="simulatore-rete-pcrf-getsimdetail2" promote="Componentsimulatoreretepcrfgetsimdetail2/simulatore-rete-pcrf-getsimdetail2">
     <sca:interface.wsdl xmi:id="_BQbyaCtCEeyUgORO6XNH0g" interface="http://xmlns.example.com/20211012115149PLT#wsdl.interface(simulatore-rete-pcrf-getsimdetail2)" scaext:wsdlLocation="../Processes/it/linkem/rete/simulatore/md/simulatoreretepcrfgetsimdetail2.bwp"/>
-    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_BQk8UCtCEeyUgORO6XNH0g" name="RestService2" path="/simulatore/rete/pcrf/getsimdetail2" docBasePath="http://localhost:7777/it.linkem.rete.simulatore.md" docResourcePath="simulatore/rete/pcrf/getsimdetail2" basePath="/" connector="it.linkem.rete.simulatore.md.HTTPConnectorResource2" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/it.linkem.rete.simulatore.md.simulatoreretepcrfgetsimdetail2-simulatore-rete-pcrf-getsimdetail2.json" enforceBWServiceResponse="true">
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_BQk8UCtCEeyUgORO6XNH0g" name="RestService2" path="/simulatore/rete/pcrf/getsimdetail2" docBasePath="http://localhost:7777/it.linkem.rete.simulatore.md" docResourcePath="simulatore/rete/pcrf/getsimdetail2" basePath="/" connector="it.linkem.rete.simulatore.md.HTTPConnectorResource2" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/it.linkem.rete.simulatore.md.simulatoreretepcrfgetsimdetail2-simulatore-rete-pcrf-getsimdetail2.json">
       <operation xmi:id="_BQk8UitCEeyUgORO6XNH0g" operationName="get" nickname="get-simulatore-rete-pcrf-getsimdetail2" httpMethod="GET" notes="getSimulatore/rete/pcrf/getsimdetail2" responseStyle="element" outputPartName="item">
         <parameters xmi:id="_n8kE8CtCEeyUgORO6XNH0g">
           <parameterMapping xmi:id="_n8kE8StCEeyUgORO6XNH0g" parameterName="processParams" parameterType="Query" dataType="string" required="true"/>
@@ -39,12 +26,6 @@
   <sca:property xmi:id="_9pZXICp5EeyKvsZnriCTtQ" name="BW.APPSPACE.NAME" type="XMLSchema:string" scalable="true"/>
   <sca:property xmi:id="_9pZXISp5EeyKvsZnriCTtQ" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
   <sca:property xmi:id="_9pjIICp5EeyKvsZnriCTtQ" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
-  <sca:component xmi:id="_tnPv4Cp-EeyKvsZnriCTtQ" name="ComponentJdbcTest" compositeext:version="1.0.0.qualifier">
-    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_tnPv4Sp-EeyKvsZnriCTtQ" processName="it.linkem.rete.simulatore.md.JdbcTest" autoStart="false"/>
-    <sca:service xmi:id="_tnPv4ip-EeyKvsZnriCTtQ" name="jdbctest">
-      <sca:interface.wsdl xmi:id="_tnPv4yp-EeyKvsZnriCTtQ" interface="http://xmlns.example.com/20211011123345PLT#wsdl.interface(jdbctest)" scaext:wsdlLocation="../Processes/it/linkem/rete/simulatore/md/JdbcTest.bwp"/>
-    </sca:service>
-  </sca:component>
   <sca:component xmi:id="_BQbyYCtCEeyUgORO6XNH0g" name="Componentsimulatoreretepcrfgetsimdetail2" compositeext:version="1.0.0.qualifier">
     <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_BQbyYStCEeyUgORO6XNH0g" processName="it.linkem.rete.simulatore.md.simulatoreretepcrfgetsimdetail2"/>
     <sca:service xmi:id="_BQbyYitCEeyUgORO6XNH0g" name="simulatore-rete-pcrf-getsimdetail2">

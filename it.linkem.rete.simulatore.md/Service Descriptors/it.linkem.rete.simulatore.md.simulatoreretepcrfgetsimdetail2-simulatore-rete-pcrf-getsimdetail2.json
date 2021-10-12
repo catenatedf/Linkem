@@ -5,7 +5,7 @@
     "title" : "simulatore/rete/pcrf/getsimdetail2",
     "description" : "simulatore/rete/pcrf/getsimdetail2 service"
   },
-  "host" : "localhost:8081",
+  "host" : "localhost:8082",
   "basePath" : "/",
   "schemes" : [ "http" ],
   "paths" : {
