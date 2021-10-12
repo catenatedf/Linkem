@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://tns.tibco.com/bw/json/1634032892726" elementFormDefault="qualified" targetNamespace="http://tns.tibco.com/bw/json/1634032892726">
+  <complexType name="JSONoutputElementType">
+    <sequence>
+      <element maxOccurs="unbounded" minOccurs="0" name="sessionSummaries">
+        <complexType>
+          <sequence>
+            <element maxOccurs="1" minOccurs="0" name="siteName" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="allSessionCount" type="integer"/>
+            <element maxOccurs="1" minOccurs="0" name="afSessionCount" type="integer"/>
+            <element maxOccurs="1" minOccurs="0" name="ipCanSessionCount" type="integer"/>
+            <element maxOccurs="1" minOccurs="0" name="sySessionCount" type="integer"/>
+            <element maxOccurs="1" minOccurs="0" name="sdSessionCount" type="integer"/>
+            <element maxOccurs="1" minOccurs="0" name="gySessionCount" type="integer"/>
+            <element maxOccurs="1" minOccurs="0" name="s9SessionCount" type="integer"/>
+            <element maxOccurs="1" minOccurs="0" name="nasREQSessioncount" type="integer"/>
+            <element maxOccurs="1" minOccurs="0" name="pduSessionCount" type="integer"/>
+            <element maxOccurs="1" minOccurs="0" name="nchfSessionCount" type="integer"/>
+            <element maxOccurs="1" minOccurs="0" name="amSessionCount" type="integer"/>
+            <element maxOccurs="1" minOccurs="0" name="ueSessionCount" type="integer"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element maxOccurs="unbounded" minOccurs="0" name="sessionDTOList">
+        <complexType>
+          <sequence>
+            <element maxOccurs="1" minOccurs="0" name="sessionId" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="diameterPeerId" type="string" nillable="true"/>
+            <element maxOccurs="1" minOccurs="0" name="diameterPeerHost" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="expiryTimeOfOutboundMessage" type="string" nillable="true"/>
+            <element maxOccurs="1" minOccurs="0" name="deviceId" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="sessionBindingIdentifier">
+              <complexType>
+                <sequence>
+                  <element maxOccurs="1" minOccurs="0" name="apnId" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="ipAddress" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="ipv6Prefix" type="string"/>
+                  <element maxOccurs="unbounded" minOccurs="0" name="subscriptionIds">
+                    <complexType>
+                      <sequence>
+                        <element maxOccurs="1" minOccurs="0" name="data" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="originalNAIData" type="string" nillable="true"/>
+                        <element maxOccurs="1" minOccurs="0" name="type" type="string"/>
+                      </sequence>
+                    </complexType>
+                  </element>
+                </sequence>
+              </complexType>
+            </element>
+            <element maxOccurs="1" minOccurs="0" name="timeOfLastMessage" type="long"/>
+            <element maxOccurs="unbounded" minOccurs="0" name="activeFeatures">
+              <complexType>
+                <sequence>
+                  <element maxOccurs="1" minOccurs="0" name="vendorId" type="integer"/>
+                  <element maxOccurs="1" minOccurs="0" name="featureListId" type="integer"/>
+                  <element maxOccurs="1" minOccurs="0" name="featureList" type="integer"/>
+                  <element maxOccurs="1" minOccurs="0" name="mBitFlag" type="boolean"/>
+                </sequence>
+              </complexType>
+            </element>
+            <element maxOccurs="1" minOccurs="0" name="terminating" type="boolean"/>
+            <element maxOccurs="1" minOccurs="0" name="failedMessageCount" type="integer"/>
+            <element maxOccurs="1" minOccurs="0" name="diameterPeer">
+              <complexType>
+                <sequence>
+                  <element maxOccurs="1" minOccurs="0" name="modifiedBy" type="string" nillable="true"/>
+                  <element maxOccurs="1" minOccurs="0" name="modifiedDate" type="string" nillable="true"/>
+                  <element maxOccurs="unbounded" minOccurs="0" name="distributionList" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="smProvState" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="peerId" type="string" nillable="true"/>
+                  <element maxOccurs="1" minOccurs="0" name="active" type="boolean"/>
+                  <element maxOccurs="1" minOccurs="0" name="originHost" type="string" nillable="true"/>
+                  <element maxOccurs="1" minOccurs="0" name="primaryAddress" type="string" nillable="true"/>
+                  <element maxOccurs="1" minOccurs="0" name="ingressPeerProfileName" type="string" nillable="true"/>
+                  <element maxOccurs="1" minOccurs="0" name="egressPeerProfileName" type="string" nillable="true"/>
+                  <element maxOccurs="1" minOccurs="0" name="downStreamOverLoadProfileName" type="string" nillable="true"/>
+                  <element maxOccurs="1" minOccurs="0" name="peerConnectionProfileName" type="string" nillable="true"/>
+                  <element maxOccurs="unbounded" minOccurs="0" name="secondaryAddresses" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="portNumber" type="integer"/>
+                  <element maxOccurs="1" minOccurs="0" name="protocol" type="string" nillable="true"/>
+                  <element maxOccurs="1" minOccurs="0" name="secure" type="boolean"/>
+                  <element maxOccurs="1" minOccurs="0" name="description" type="string" nillable="true"/>
+                  <element maxOccurs="1" minOccurs="0" name="locallyInitiated" type="string" nillable="true"/>
+                  <element maxOccurs="1" minOccurs="0" name="requestTimeout" type="string" nillable="true"/>
+                  <element maxOccurs="1" minOccurs="0" name="numberOfSendAttempts" type="string" nillable="true"/>
+                  <element maxOccurs="1" minOccurs="0" name="addrGrpName" type="string" nillable="true"/>
+                  <element maxOccurs="1" minOccurs="0" name="sourcePortNumber" type="string" nillable="true"/>
+                </sequence>
+              </complexType>
+            </element>
+            <element maxOccurs="1" minOccurs="0" name="apnId" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="ipAddress" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="ipv6Prefix" type="string" nillable="true"/>
+            <element maxOccurs="unbounded" minOccurs="0" name="subscriptionIds">
+              <complexType>
+                <sequence>
+                  <element maxOccurs="1" minOccurs="0" name="data" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="originalNAIData" type="string" nillable="true"/>
+                  <element maxOccurs="1" minOccurs="0" name="type" type="string"/>
+                </sequence>
+              </complexType>
+            </element>
+            <element maxOccurs="1" minOccurs="0" name="vendorSpecificAttributes">
+              <complexType>
+                <sequence/>
+              </complexType>
+            </element>
+            <element maxOccurs="1" minOccurs="0" name="key" type="string" nillable="true"/>
+            <element maxOccurs="1" minOccurs="0" name="isEmergency" type="boolean"/>
+            <element maxOccurs="1" minOccurs="0" name="adjustedDefaultEPSBearerQoS">
+              <complexType>
+                <sequence>
+                  <element maxOccurs="1" minOccurs="0" name="defaultBearerQCI" type="integer"/>
+                  <element maxOccurs="1" minOccurs="0" name="allocationRetentionPriority">
+                    <complexType>
+                      <sequence>
+                        <element maxOccurs="1" minOccurs="0" name="priorityLevel" type="integer"/>
+                        <element maxOccurs="1" minOccurs="0" name="preEmptionCapability" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="preEmptionVulnerability" type="string"/>
+                      </sequence>
+                    </complexType>
+                  </element>
+                </sequence>
+              </complexType>
+            </element>
+            <element maxOccurs="1" minOccurs="0" name="adjustedMaxBwForAPN">
+              <complexType>
+                <sequence>
+                  <element maxOccurs="1" minOccurs="0" name="upLinkBw" type="integer"/>
+                  <element maxOccurs="1" minOccurs="0" name="downLinkBw" type="integer"/>
+                  <element maxOccurs="1" minOccurs="0" name="kbps" type="boolean"/>
+                  <element maxOccurs="unbounded" minOccurs="0" name="condApnAmbr" type="string"/>
+                </sequence>
+              </complexType>
+            </element>
+            <element maxOccurs="1" minOccurs="0" name="adjustedSessionData">
+              <complexType>
+                <sequence>
+                  <element maxOccurs="1" minOccurs="0" name="defaultEPSBearerQoS">
+                    <complexType>
+                      <sequence>
+                        <element maxOccurs="1" minOccurs="0" name="defaultBearerQCI" type="integer"/>
+                        <element maxOccurs="1" minOccurs="0" name="allocationRetentionPriority">
+                          <complexType>
+                            <sequence>
+                              <element maxOccurs="1" minOccurs="0" name="priorityLevel" type="integer"/>
+                              <element maxOccurs="1" minOccurs="0" name="preEmptionCapability" type="string"/>
+                              <element maxOccurs="1" minOccurs="0" name="preEmptionVulnerability" type="string"/>
+                            </sequence>
+                          </complexType>
+                        </element>
+                      </sequence>
+                    </complexType>
+                  </element>
+                  <element maxOccurs="1" minOccurs="0" name="maxBwForAPN">
+                    <complexType>
+                      <sequence>
+                        <element maxOccurs="1" minOccurs="0" name="upLinkBw" type="integer"/>
+                        <element maxOccurs="1" minOccurs="0" name="downLinkBw" type="integer"/>
+                        <element maxOccurs="1" minOccurs="0" name="kbps" type="boolean"/>
+                        <element maxOccurs="unbounded" minOccurs="0" name="condApnAmbr" type="string"/>
+                      </sequence>
+                    </complexType>
+                  </element>
+                </sequence>
+              </complexType>
+            </element>
+            <element maxOccurs="1" minOccurs="0" name="anTrusted" type="string" nillable="true"/>
+            <element maxOccurs="1" minOccurs="0" name="bearerControlMode" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="bsId" type="string" nillable="true"/>
+            <element maxOccurs="1" minOccurs="0" name="ccRequestNumber" type="integer"/>
+            <element maxOccurs="1" minOccurs="0" name="defaultEPSBearerQoS">
+              <complexType>
+                <sequence>
+                  <element maxOccurs="1" minOccurs="0" name="defaultBearerQCI" type="integer"/>
+                  <element maxOccurs="1" minOccurs="0" name="allocationRetentionPriority">
+                    <complexType>
+                      <sequence>
+                        <element maxOccurs="1" minOccurs="0" name="priorityLevel" type="integer"/>
+                        <element maxOccurs="1" minOccurs="0" name="preEmptionCapability" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="preEmptionVulnerability" type="string"/>
+                      </sequence>
+                    </complexType>
+                  </element>
+                </sequence>
+              </complexType>
+            </element>
+            <element maxOccurs="1" minOccurs="0" name="emergency" type="boolean"/>
+            <element maxOccurs="1" minOccurs="0" name="ipCanType" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="ipv4ANGWAddress" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="ipv6ANGWAddress" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="maxBwForAPN">
+              <complexType>
+                <sequence>
+                  <element maxOccurs="1" minOccurs="0" name="upLinkBw" type="integer"/>
+                  <element maxOccurs="1" minOccurs="0" name="downLinkBw" type="integer"/>
+                  <element maxOccurs="1" minOccurs="0" name="kbps" type="boolean"/>
+                  <element maxOccurs="unbounded" minOccurs="0" name="condApnAmbr" type="string"/>
+                </sequence>
+              </complexType>
+            </element>
+            <element maxOccurs="1" minOccurs="0" name="maximumBandwidth" type="string" nillable="true"/>
+            <element maxOccurs="1" minOccurs="0" name="msTimezone" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="networkRequestSupport" type="string"/>
+            <element maxOccurs="unbounded" minOccurs="0" name="policyTriggerRegistrations" type="string"/>
+            <element maxOccurs="unbounded" minOccurs="0" name="qosInfo" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="qosNegotiation" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="rai" type="string" nillable="true"/>
+            <element maxOccurs="1" minOccurs="0" name="ratType" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="ratType3Gpp" type="string" nillable="true"/>
+            <element maxOccurs="1" minOccurs="0" name="sgsnAddress" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="sgsnIpv6Address" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="sgsnMccMnc" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="tcpSourcePort" type="string" nillable="true"/>
+            <element maxOccurs="unbounded" minOccurs="0" name="triggerRegistrations" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="udpSourcePort" type="string" nillable="true"/>
+            <element maxOccurs="1" minOccurs="0" name="ueLocalIpAddress" type="string" nillable="true"/>
+            <element maxOccurs="1" minOccurs="0" name="userLocationInfo">
+              <complexType>
+                <sequence>
+                  <element maxOccurs="1" minOccurs="0" name="geoLocationType" type="string"/>
+                  <element maxOccurs="unbounded" minOccurs="0" name="userLocationIds">
+                    <complexType>
+                      <sequence>
+                        <element maxOccurs="1" minOccurs="0" name="identityType" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="data" type="string"/>
+                      </sequence>
+                    </complexType>
+                  </element>
+                </sequence>
+              </complexType>
+            </element>
+            <element maxOccurs="1" minOccurs="0" name="userLocationInfoTime" type="string" nillable="true"/>
+            <element maxOccurs="unbounded" minOccurs="0" name="ipCanBearers" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="anChargingAddr">
+              <complexType>
+                <sequence>
+                  <element maxOccurs="1" minOccurs="0" name="addressFamily" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="addressValue" type="string"/>
+                </sequence>
+              </complexType>
+            </element>
+            <element maxOccurs="1" minOccurs="0" name="qosUpgrade" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="reportRegistrations" type="integer"/>
+            <element maxOccurs="1" minOccurs="0" name="anChargingIdValue" type="string"/>
+            <element maxOccurs="unbounded" minOccurs="0" name="pccRules">
+              <complexType>
+                <sequence>
+                  <element maxOccurs="1" minOccurs="0" name="activationTime" type="string" nillable="true"/>
+                  <element maxOccurs="1" minOccurs="0" name="adjustedQosInfo" type="string" nillable="true"/>
+                  <element maxOccurs="1" minOccurs="0" name="afSignallingProtocol" type="string" nillable="true"/>
+                  <element maxOccurs="1" minOccurs="0" name="anChargingIdValue" type="string" nillable="true"/>
+                  <element maxOccurs="1" minOccurs="0" name="bearerControlModeOperation" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="bearerIdentifier" type="string" nillable="true"/>
+                  <element maxOccurs="1" minOccurs="0" name="deactivationTime" type="string" nillable="true"/>
+                  <element maxOccurs="unbounded" minOccurs="0" name="flowInformations" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="name" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="precedence" type="string" nillable="true"/>
+                  <element maxOccurs="1" minOccurs="0" name="qosInfo" type="string" nillable="true"/>
+                  <element maxOccurs="unbounded" minOccurs="0" name="requiredAccessInfos" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="ruleSource" type="integer"/>
+                  <element maxOccurs="1" minOccurs="0" name="ruleStatus" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="ruleType" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="qosDecs" type="string" nillable="true"/>
+                  <element maxOccurs="1" minOccurs="0" name="adjustedQosDecs" type="string" nillable="true"/>
+                  <element maxOccurs="1" minOccurs="0" name="timeToLiveInRollbackCache" type="integer"/>
+                  <element maxOccurs="1" minOccurs="0" name="waitingForAfPeer" type="boolean"/>
+                  <element maxOccurs="1" minOccurs="0" name="afChargingIdentifier" type="string" nillable="true"/>
+                  <element maxOccurs="1" minOccurs="0" name="applicationServiceProviderIdentity" type="string" nillable="true"/>
+                  <element maxOccurs="unbounded" minOccurs="0" name="applications" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="bearerUsage" type="string" nillable="true"/>
+                  <element maxOccurs="1" minOccurs="0" name="flowStatus" type="string" nillable="true"/>
+                  <element maxOccurs="1" minOccurs="0" name="meteringMethod" type="string" nillable="true"/>
+                  <element maxOccurs="1" minOccurs="0" name="monitoringKey" type="string" nillable="true"/>
+                  <element maxOccurs="1" minOccurs="0" name="muteNotification" type="string" nillable="true"/>
+                  <element maxOccurs="1" minOccurs="0" name="offline" type="string" nillable="true"/>
+                  <element maxOccurs="1" minOccurs="0" name="online" type="string" nillable="true"/>
+                  <element maxOccurs="unbounded" minOccurs="0" name="outOfCreditRule" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="outOfCreditState" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="psToCsSessionContinuity" type="string" nillable="true"/>
+                  <element maxOccurs="1" minOccurs="0" name="qosInfoRadius" type="string" nillable="true"/>
+                  <element maxOccurs="1" minOccurs="0" name="ratingGroup" type="string" nillable="true"/>
+                  <element maxOccurs="1" minOccurs="0" name="redirectInformation" type="string" nillable="true"/>
+                  <element maxOccurs="1" minOccurs="0" name="reportingLevel" type="string" nillable="true"/>
+                  <element maxOccurs="1" minOccurs="0" name="serviceFlowDetection" type="string" nillable="true"/>
+                  <element maxOccurs="unbounded" minOccurs="0" name="serviceFlows" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="serviceId" type="string" nillable="true"/>
+                  <element maxOccurs="1" minOccurs="0" name="sponsorIdentity" type="string" nillable="true"/>
+                  <element maxOccurs="1" minOccurs="0" name="tdfApplicationIdentifier" type="string" nillable="true"/>
+                  <element maxOccurs="1" minOccurs="0" name="updated" type="boolean"/>
+                  <element maxOccurs="unbounded" minOccurs="0" name="usageMonitoringDataIds" type="string"/>
+                  <element maxOccurs="unbounded" minOccurs="0" name="trafficControlIds" type="string"/>
+                  <element maxOccurs="unbounded" minOccurs="0" name="conditionDataIds" type="string"/>
+                </sequence>
+              </complexType>
+            </element>
+            <element maxOccurs="unbounded" minOccurs="0" name="condPolInfo" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="sessionType" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="sySessionId" type="string" nillable="true"/>
+            <element maxOccurs="1" minOccurs="0" name="online" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="offline" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="revalidationTime" type="string" nillable="true"/>
+            <element maxOccurs="1" minOccurs="0" name="s9Subsession" type="string" nillable="true"/>
+            <element maxOccurs="1" minOccurs="0" name="nextScheduledReauth" type="string" nillable="true"/>
+            <element maxOccurs="1" minOccurs="0" name="lastReauthTime" type="integer"/>
+            <element maxOccurs="1" minOccurs="0" name="nextRuleStatusChangeTime" type="string" nillable="true"/>
+            <element maxOccurs="1" minOccurs="0" name="nasPortId" type="string" nillable="true"/>
+            <element maxOccurs="1" minOccurs="0" name="nasPortType" type="string" nillable="true"/>
+            <element maxOccurs="1" minOccurs="0" name="logicalAccessId" type="string" nillable="true"/>
+            <element maxOccurs="1" minOccurs="0" name="physicalAccessId" type="string" nillable="true"/>
+            <element maxOccurs="1" minOccurs="0" name="delegatedIPv6Prefix" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="sySession" type="string" nillable="true"/>
+            <element maxOccurs="unbounded" minOccurs="0" name="usageTracking" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="ruleSetForEDR" type="string" nillable="true"/>
+            <element maxOccurs="unbounded" minOccurs="0" name="praInformation" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="ipcanRevalidationTime" type="string" nillable="true"/>
+            <element maxOccurs="1" minOccurs="0" name="userEquipmentInfo">
+              <complexType>
+                <sequence>
+                  <element maxOccurs="1" minOccurs="0" name="type" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="value" type="string"/>
+                </sequence>
+              </complexType>
+            </element>
+          </sequence>
+        </complexType>
+      </element>
+    </sequence>
+  </complexType>
+  <element name="JSONoutputElement" type="tns:JSONoutputElementType"/>
+</schema>

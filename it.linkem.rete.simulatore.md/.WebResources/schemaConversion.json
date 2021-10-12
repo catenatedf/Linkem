@@ -1,0 +1,17 @@
+{"records": [
+    {
+        "jsonSchemaLocation": "/it.linkem.rete.simulatore.md/Service Descriptors/it.linkem.rete.simulatore.md.simulatoreretepcrfgetsimdetail-simulatore-rete-pcrf-getsimdetail.json",
+        "conversionType": "linked",
+        "xsdSchemaTargetNamespace": "http://tns.tibco.com/bw/json/1633950311229"
+    },
+    {
+        "jsonSchemaLocation": "/it.linkem.rete.simulatore.md/Service Descriptors/it.linkem.rete.simulatore.md.Resource-Resource.json",
+        "conversionType": "linked",
+        "xsdSchemaTargetNamespace": "http://tns.tibco.com/bw/json/1633966852840"
+    },
+    {
+        "jsonSchemaLocation": "/it.linkem.rete.simulatore.md/Service Descriptors/it.linkem.rete.simulatore.md.simulatoreretepcrfgetsimdetail2-simulatore-rete-pcrf-getsimdetail2.json",
+        "conversionType": "linked",
+        "xsdSchemaTargetNamespace": "http://tns.tibco.com/bw/json/1633950311229"
+    }
+]}

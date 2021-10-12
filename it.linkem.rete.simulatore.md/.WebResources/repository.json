@@ -1,0 +1,29 @@
+{
+    "records": [{
+        "name": "Cloud",
+        "items": [],
+        "url": "https://integration.cloud.tibco.com:443"
+    }],
+    "resources": [
+        {
+            "location": "Service Descriptors/it.linkem.rete.simulatore.md.JdbcTest-JdbcTest.json",
+            "type": "generated"
+        },
+        {
+            "location": "Service Descriptors/it.linkem.rete.simulatore.md.simulatoreretepcrfgetsimdetail-simulatore-rete-pcrf-getsimdetail.json",
+            "type": "generated"
+        },
+        {
+            "location": "Service Descriptors/it.linkem.rete.simulatore.md.Resource-Resource.json",
+            "type": "generated"
+        },
+        {
+            "location": "Service Descriptors/it.linkem.rete.simulatore.md.test1-test1.json",
+            "type": "generated"
+        },
+        {
+            "location": "Service Descriptors/it.linkem.rete.simulatore.md.simulatoreretepcrfgetsimdetail2-simulatore-rete-pcrf-getsimdetail2.json",
+            "type": "generated"
+        }
+    ]
+}

@@ -1,0 +1,52 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0",
+    "title" : "Resource",
+    "description" : "Resource service"
+  },
+  "host" : "localhost:8080",
+  "basePath" : "/",
+  "schemes" : [ "http" ],
+  "paths" : {
+    "/resource" : {
+      "get" : {
+        "summary" : "getResource",
+        "description" : "getResource",
+        "operationId" : "get-resource",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "a ipElement to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/ipElement"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "ipElement" : {
+      "type" : "object",
+      "properties" : {
+        "deviceId" : {
+          "$ref" : "#/definitions/deviceId"
+        },
+        "sessionType" : {
+          "type" : "string"
+        }
+      }
+    },
+    "deviceId" : {
+      "type" : "object",
+      "properties" : {
+        "ip" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}

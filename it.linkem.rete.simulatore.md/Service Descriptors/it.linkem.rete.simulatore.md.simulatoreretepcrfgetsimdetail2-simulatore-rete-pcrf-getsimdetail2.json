@@ -1,0 +1,856 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0",
+    "title" : "simulatore/rete/pcrf/getsimdetail2",
+    "description" : "simulatore/rete/pcrf/getsimdetail2 service"
+  },
+  "host" : "localhost:8081",
+  "basePath" : "/",
+  "schemes" : [ "http" ],
+  "paths" : {
+    "/simulatore/rete/pcrf/getsimdetail2" : {
+      "get" : {
+        "summary" : "getSimulatore/rete/pcrf/getsimdetail2",
+        "description" : "getSimulatore/rete/pcrf/getsimdetail2",
+        "operationId" : "get-simulatore-rete-pcrf-getsimdetail2",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "processParams",
+          "in" : "query",
+          "description" : "",
+          "type" : "string",
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a JSONoutputElement to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/JSONoutputElement"
+            },
+            "headers" : { }
+          },
+          "500" : {
+            "description" : "Internal Server Error",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "sessionBindingIdentifier" : {
+      "type" : "object",
+      "properties" : {
+        "apnId" : {
+          "type" : "string"
+        },
+        "ipAddress" : {
+          "type" : "string"
+        },
+        "ipv6Prefix" : {
+          "type" : "string"
+        },
+        "subscriptionIds" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/subscriptionIds",
+            "uniqueItems" : false
+          }
+        }
+      }
+    },
+    "activeFeatures" : {
+      "type" : "object",
+      "properties" : {
+        "vendorId" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "featureListId" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "featureList" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "mBitFlag" : {
+          "type" : "boolean"
+        }
+      }
+    },
+    "sessionDTOList" : {
+      "type" : "object",
+      "properties" : {
+        "sessionId" : {
+          "type" : "string"
+        },
+        "diameterPeerId" : {
+          "type" : "string"
+        },
+        "diameterPeerHost" : {
+          "type" : "string"
+        },
+        "expiryTimeOfOutboundMessage" : {
+          "type" : "string"
+        },
+        "deviceId" : {
+          "type" : "string"
+        },
+        "sessionBindingIdentifier" : {
+          "$ref" : "#/definitions/sessionBindingIdentifier"
+        },
+        "timeOfLastMessage" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
+        "activeFeatures" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/activeFeatures",
+            "uniqueItems" : false
+          }
+        },
+        "terminating" : {
+          "type" : "boolean"
+        },
+        "failedMessageCount" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "diameterPeer" : {
+          "$ref" : "#/definitions/diameterPeer"
+        },
+        "apnId" : {
+          "type" : "string"
+        },
+        "ipAddress" : {
+          "type" : "string"
+        },
+        "ipv6Prefix" : {
+          "type" : "string"
+        },
+        "subscriptionIds" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/subscriptionIds",
+            "uniqueItems" : false
+          }
+        },
+        "vendorSpecificAttributes" : {
+          "$ref" : "#/definitions/vendorSpecificAttributes"
+        },
+        "key" : {
+          "type" : "string"
+        },
+        "isEmergency" : {
+          "type" : "boolean"
+        },
+        "adjustedDefaultEPSBearerQoS" : {
+          "$ref" : "#/definitions/adjustedDefaultEPSBearerQoS"
+        },
+        "adjustedMaxBwForAPN" : {
+          "$ref" : "#/definitions/adjustedMaxBwForAPN"
+        },
+        "adjustedSessionData" : {
+          "$ref" : "#/definitions/adjustedSessionData"
+        },
+        "anTrusted" : {
+          "type" : "string"
+        },
+        "bearerControlMode" : {
+          "type" : "string"
+        },
+        "bsId" : {
+          "type" : "string"
+        },
+        "ccRequestNumber" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "defaultEPSBearerQoS" : {
+          "$ref" : "#/definitions/defaultEPSBearerQoS"
+        },
+        "emergency" : {
+          "type" : "boolean"
+        },
+        "ipCanType" : {
+          "type" : "string"
+        },
+        "ipv4ANGWAddress" : {
+          "type" : "string"
+        },
+        "ipv6ANGWAddress" : {
+          "type" : "string"
+        },
+        "maxBwForAPN" : {
+          "$ref" : "#/definitions/maxBwForAPN"
+        },
+        "maximumBandwidth" : {
+          "type" : "string"
+        },
+        "msTimezone" : {
+          "type" : "string"
+        },
+        "networkRequestSupport" : {
+          "type" : "string"
+        },
+        "policyTriggerRegistrations" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string",
+            "uniqueItems" : false
+          }
+        },
+        "qosInfo" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string",
+            "uniqueItems" : false
+          }
+        },
+        "qosNegotiation" : {
+          "type" : "string"
+        },
+        "rai" : {
+          "type" : "string"
+        },
+        "ratType" : {
+          "type" : "string"
+        },
+        "ratType3Gpp" : {
+          "type" : "string"
+        },
+        "sgsnAddress" : {
+          "type" : "string"
+        },
+        "sgsnIpv6Address" : {
+          "type" : "string"
+        },
+        "sgsnMccMnc" : {
+          "type" : "string"
+        },
+        "tcpSourcePort" : {
+          "type" : "string"
+        },
+        "triggerRegistrations" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string",
+            "uniqueItems" : false
+          }
+        },
+        "udpSourcePort" : {
+          "type" : "string"
+        },
+        "ueLocalIpAddress" : {
+          "type" : "string"
+        },
+        "userLocationInfo" : {
+          "$ref" : "#/definitions/userLocationInfo"
+        },
+        "userLocationInfoTime" : {
+          "type" : "string"
+        },
+        "ipCanBearers" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string",
+            "uniqueItems" : false
+          }
+        },
+        "anChargingAddr" : {
+          "$ref" : "#/definitions/anChargingAddr"
+        },
+        "qosUpgrade" : {
+          "type" : "string"
+        },
+        "reportRegistrations" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "anChargingIdValue" : {
+          "type" : "string"
+        },
+        "pccRules" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/pccRules",
+            "uniqueItems" : false
+          }
+        },
+        "condPolInfo" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string",
+            "uniqueItems" : false
+          }
+        },
+        "sessionType" : {
+          "type" : "string"
+        },
+        "sySessionId" : {
+          "type" : "string"
+        },
+        "online" : {
+          "type" : "string"
+        },
+        "offline" : {
+          "type" : "string"
+        },
+        "revalidationTime" : {
+          "type" : "string"
+        },
+        "s9Subsession" : {
+          "type" : "string"
+        },
+        "nextScheduledReauth" : {
+          "type" : "string"
+        },
+        "lastReauthTime" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "nextRuleStatusChangeTime" : {
+          "type" : "string"
+        },
+        "nasPortId" : {
+          "type" : "string"
+        },
+        "nasPortType" : {
+          "type" : "string"
+        },
+        "logicalAccessId" : {
+          "type" : "string"
+        },
+        "physicalAccessId" : {
+          "type" : "string"
+        },
+        "delegatedIPv6Prefix" : {
+          "type" : "string"
+        },
+        "sySession" : {
+          "type" : "string"
+        },
+        "usageTracking" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string",
+            "uniqueItems" : false
+          }
+        },
+        "ruleSetForEDR" : {
+          "type" : "string"
+        },
+        "praInformation" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string",
+            "uniqueItems" : false
+          }
+        },
+        "ipcanRevalidationTime" : {
+          "type" : "string"
+        },
+        "userEquipmentInfo" : {
+          "$ref" : "#/definitions/userEquipmentInfo"
+        }
+      }
+    },
+    "JSONoutputElement" : {
+      "type" : "object",
+      "properties" : {
+        "sessionSummaries" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/sessionSummaries",
+            "uniqueItems" : false
+          }
+        },
+        "sessionDTOList" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/sessionDTOList",
+            "uniqueItems" : false
+          }
+        }
+      }
+    },
+    "allocationRetentionPriority" : {
+      "type" : "object",
+      "properties" : {
+        "priorityLevel" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "preEmptionCapability" : {
+          "type" : "string"
+        },
+        "preEmptionVulnerability" : {
+          "type" : "string"
+        }
+      }
+    },
+    "adjustedSessionData" : {
+      "type" : "object",
+      "properties" : {
+        "defaultEPSBearerQoS" : {
+          "$ref" : "#/definitions/defaultEPSBearerQoS"
+        },
+        "maxBwForAPN" : {
+          "$ref" : "#/definitions/maxBwForAPN"
+        }
+      }
+    },
+    "userLocationInfo" : {
+      "type" : "object",
+      "properties" : {
+        "geoLocationType" : {
+          "type" : "string"
+        },
+        "userLocationIds" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/userLocationIds",
+            "uniqueItems" : false
+          }
+        }
+      }
+    },
+    "userEquipmentInfo" : {
+      "type" : "object",
+      "properties" : {
+        "type" : {
+          "type" : "string"
+        },
+        "value" : {
+          "type" : "string"
+        }
+      }
+    },
+    "maxBwForAPN" : {
+      "type" : "object",
+      "properties" : {
+        "upLinkBw" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "downLinkBw" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "kbps" : {
+          "type" : "boolean"
+        },
+        "condApnAmbr" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string",
+            "uniqueItems" : false
+          }
+        }
+      }
+    },
+    "pccRules" : {
+      "type" : "object",
+      "properties" : {
+        "activationTime" : {
+          "type" : "string"
+        },
+        "adjustedQosInfo" : {
+          "type" : "string"
+        },
+        "afSignallingProtocol" : {
+          "type" : "string"
+        },
+        "anChargingIdValue" : {
+          "type" : "string"
+        },
+        "bearerControlModeOperation" : {
+          "type" : "string"
+        },
+        "bearerIdentifier" : {
+          "type" : "string"
+        },
+        "deactivationTime" : {
+          "type" : "string"
+        },
+        "flowInformations" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string",
+            "uniqueItems" : false
+          }
+        },
+        "name" : {
+          "type" : "string"
+        },
+        "precedence" : {
+          "type" : "string"
+        },
+        "qosInfo" : {
+          "type" : "string"
+        },
+        "requiredAccessInfos" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string",
+            "uniqueItems" : false
+          }
+        },
+        "ruleSource" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "ruleStatus" : {
+          "type" : "string"
+        },
+        "ruleType" : {
+          "type" : "string"
+        },
+        "qosDecs" : {
+          "type" : "string"
+        },
+        "adjustedQosDecs" : {
+          "type" : "string"
+        },
+        "timeToLiveInRollbackCache" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "waitingForAfPeer" : {
+          "type" : "boolean"
+        },
+        "afChargingIdentifier" : {
+          "type" : "string"
+        },
+        "applicationServiceProviderIdentity" : {
+          "type" : "string"
+        },
+        "applications" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string",
+            "uniqueItems" : false
+          }
+        },
+        "bearerUsage" : {
+          "type" : "string"
+        },
+        "flowStatus" : {
+          "type" : "string"
+        },
+        "meteringMethod" : {
+          "type" : "string"
+        },
+        "monitoringKey" : {
+          "type" : "string"
+        },
+        "muteNotification" : {
+          "type" : "string"
+        },
+        "offline" : {
+          "type" : "string"
+        },
+        "online" : {
+          "type" : "string"
+        },
+        "outOfCreditRule" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string",
+            "uniqueItems" : false
+          }
+        },
+        "outOfCreditState" : {
+          "type" : "string"
+        },
+        "psToCsSessionContinuity" : {
+          "type" : "string"
+        },
+        "qosInfoRadius" : {
+          "type" : "string"
+        },
+        "ratingGroup" : {
+          "type" : "string"
+        },
+        "redirectInformation" : {
+          "type" : "string"
+        },
+        "reportingLevel" : {
+          "type" : "string"
+        },
+        "serviceFlowDetection" : {
+          "type" : "string"
+        },
+        "serviceFlows" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string",
+            "uniqueItems" : false
+          }
+        },
+        "serviceId" : {
+          "type" : "string"
+        },
+        "sponsorIdentity" : {
+          "type" : "string"
+        },
+        "tdfApplicationIdentifier" : {
+          "type" : "string"
+        },
+        "updated" : {
+          "type" : "boolean"
+        },
+        "usageMonitoringDataIds" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string",
+            "uniqueItems" : false
+          }
+        },
+        "trafficControlIds" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string",
+            "uniqueItems" : false
+          }
+        },
+        "conditionDataIds" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string",
+            "uniqueItems" : false
+          }
+        }
+      }
+    },
+    "userLocationIds" : {
+      "type" : "object",
+      "properties" : {
+        "identityType" : {
+          "type" : "string"
+        },
+        "data" : {
+          "type" : "string"
+        }
+      }
+    },
+    "adjustedDefaultEPSBearerQoS" : {
+      "type" : "object",
+      "properties" : {
+        "defaultBearerQCI" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "allocationRetentionPriority" : {
+          "$ref" : "#/definitions/allocationRetentionPriority"
+        }
+      }
+    },
+    "subscriptionIds" : {
+      "type" : "object",
+      "properties" : {
+        "data" : {
+          "type" : "string"
+        },
+        "originalNAIData" : {
+          "type" : "string"
+        },
+        "type" : {
+          "type" : "string"
+        }
+      }
+    },
+    "diameterPeer" : {
+      "type" : "object",
+      "properties" : {
+        "modifiedBy" : {
+          "type" : "string"
+        },
+        "modifiedDate" : {
+          "type" : "string"
+        },
+        "distributionList" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string",
+            "uniqueItems" : false
+          }
+        },
+        "smProvState" : {
+          "type" : "string"
+        },
+        "peerId" : {
+          "type" : "string"
+        },
+        "active" : {
+          "type" : "boolean"
+        },
+        "originHost" : {
+          "type" : "string"
+        },
+        "primaryAddress" : {
+          "type" : "string"
+        },
+        "ingressPeerProfileName" : {
+          "type" : "string"
+        },
+        "egressPeerProfileName" : {
+          "type" : "string"
+        },
+        "downStreamOverLoadProfileName" : {
+          "type" : "string"
+        },
+        "peerConnectionProfileName" : {
+          "type" : "string"
+        },
+        "secondaryAddresses" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string",
+            "uniqueItems" : false
+          }
+        },
+        "portNumber" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "protocol" : {
+          "type" : "string"
+        },
+        "secure" : {
+          "type" : "boolean"
+        },
+        "description" : {
+          "type" : "string"
+        },
+        "locallyInitiated" : {
+          "type" : "string"
+        },
+        "requestTimeout" : {
+          "type" : "string"
+        },
+        "numberOfSendAttempts" : {
+          "type" : "string"
+        },
+        "addrGrpName" : {
+          "type" : "string"
+        },
+        "sourcePortNumber" : {
+          "type" : "string"
+        }
+      }
+    },
+    "defaultEPSBearerQoS" : {
+      "type" : "object",
+      "properties" : {
+        "defaultBearerQCI" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "allocationRetentionPriority" : {
+          "$ref" : "#/definitions/allocationRetentionPriority"
+        }
+      }
+    },
+    "sessionSummaries" : {
+      "type" : "object",
+      "properties" : {
+        "siteName" : {
+          "type" : "string"
+        },
+        "allSessionCount" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "afSessionCount" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "ipCanSessionCount" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "sySessionCount" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "sdSessionCount" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "gySessionCount" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "s9SessionCount" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "nasREQSessioncount" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "pduSessionCount" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "nchfSessionCount" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "amSessionCount" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "ueSessionCount" : {
+          "type" : "integer",
+          "format" : "int32"
+        }
+      }
+    },
+    "vendorSpecificAttributes" : {
+      "type" : "object",
+      "properties" : { }
+    },
+    "adjustedMaxBwForAPN" : {
+      "type" : "object",
+      "properties" : {
+        "upLinkBw" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "downLinkBw" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "kbps" : {
+          "type" : "boolean"
+        },
+        "condApnAmbr" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string",
+            "uniqueItems" : false
+          }
+        }
+      }
+    },
+    "anChargingAddr" : {
+      "type" : "object",
+      "properties" : {
+        "addressFamily" : {
+          "type" : "string"
+        },
+        "addressValue" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}
