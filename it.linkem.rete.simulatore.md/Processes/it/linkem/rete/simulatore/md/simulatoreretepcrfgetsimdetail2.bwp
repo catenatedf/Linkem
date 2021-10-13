@@ -1201,6 +1201,9 @@
             name="MapJsonResponse-input" sca-bpel:internal="true"/>
         <bpws:variable element="ns8:JSONoutputElement"
             name="MapJsonResponse" sca-bpel:internal="true"/>
+        <bpws:variable name="tableName" sca-bpel:hotUpdate="false"
+            sca-bpel:privateProperty="true" sca-bpel:property="yes"
+            tibex:propertySource="/PCRF/TableName" type="xsd:string"/>
     </bpws:variables>
     <bpws:extensions>
         <bpws:extension mustUnderstand="no" namespace="http://www.eclipse.org/gmf/runtime/1.0.2/notation"/>
@@ -1318,7 +1321,7 @@
                                     </bpws:sources>
                                     <tibex:inputBindings>
                                     <tibex:inputBinding
-                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns3=&quot;http://tns.tibco.com/bw/json/1633966852840&quot; xmlns:tns8=&quot;http://www.tibco.com/namespaces/tnt/plugins/jdbc+3c518ca3-1fed-4b88-b657-cca1e0eefe47+input&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:bw=&quot;http://www.tibco.com/bw/xpath/bw-custom-functions&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;inputParseJSON&quot;/>&lt;xsl:template name=&quot;JDBCQuery-input&quot; match=&quot;/&quot;>&lt;tns8:jdbcQueryActivityInput>&lt;SqlStatement>&lt;xsl:value-of select=&quot;concat(&amp;quot;SELECT * FROM &amp;quot;, bw:getModuleProperty(&amp;quot;/PCRF/TableName&amp;quot;), &amp;quot; WHERE ip='&amp;quot;, $inputParseJSON/tns3:deviceId/tns3:ip, &amp;quot;'&amp;quot;)&quot;/>&lt;/SqlStatement>&lt;/tns8:jdbcQueryActivityInput>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns3=&quot;http://tns.tibco.com/bw/json/1633966852840&quot; xmlns:tns8=&quot;http://www.tibco.com/namespaces/tnt/plugins/jdbc+3c518ca3-1fed-4b88-b657-cca1e0eefe47+input&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:bw=&quot;http://www.tibco.com/bw/xpath/bw-custom-functions&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;inputParseJSON&quot;/>&lt;xsl:param name=&quot;tableName&quot;/>&lt;xsl:template name=&quot;JDBCQuery-input&quot; match=&quot;/&quot;>&lt;tns8:jdbcQueryActivityInput>&lt;SqlStatement>&lt;xsl:value-of select=&quot;concat(&amp;quot;SELECT * FROM &amp;quot;, $tableName, &amp;quot; WHERE ip='&amp;quot;, $inputParseJSON/tns3:deviceId/tns3:ip, &amp;quot;'&amp;quot;)&quot;/>&lt;/SqlStatement>&lt;/tns8:jdbcQueryActivityInput>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                                     </tibex:inputBindings>
                                     <tibex:config>
                                     <bwext:BWActivity
