@@ -258,14 +258,14 @@
             <element name="jdbcQueryActivityInput">
                 <complexType>
                     <sequence>
-                        <element maxOccurs="1" minOccurs="1" name="ip"
-                            nillable="true" type="string"/>
                         <element maxOccurs="1" minOccurs="0"
                             name="ServerTimeZone" type="string"/>
                         <element maxOccurs="1" minOccurs="0"
                             name="timeout" type="long"/>
                         <element maxOccurs="1" minOccurs="0"
                             name="maxRows" type="long"/>
+                        <element maxOccurs="1" minOccurs="1"
+                            name="SqlStatement" type="string"/>
                     </sequence>
                 </complexType>
             </element>
@@ -281,8 +281,8 @@
                                 <sequence>
                                     <element maxOccurs="1" minOccurs="1"
                                     name="ip" type="string"/>
-                                    <element maxOccurs="1" minOccurs="0"
-                                    name="imsi" nillable="false" type="string"/>
+                                    <element maxOccurs="1" minOccurs="1"
+                                    name="imsi" type="string"/>
                                     <element maxOccurs="1" minOccurs="0"
                                     name="pcrfsimdetails"
                                     nillable="false" type="string"/>
@@ -1318,7 +1318,7 @@
                                     </bpws:sources>
                                     <tibex:inputBindings>
                                     <tibex:inputBinding
-                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns8=&quot;http://www.tibco.com/namespaces/tnt/plugins/jdbc+3c518ca3-1fed-4b88-b657-cca1e0eefe47+input&quot; xmlns:tns3=&quot;http://tns.tibco.com/bw/json/1633966852840&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;inputParseJSON&quot;/>&lt;xsl:template name=&quot;JDBCQuery-input&quot; match=&quot;/&quot;>&lt;tns8:jdbcQueryActivityInput>&lt;ip>&lt;xsl:choose>&lt;xsl:when test=&quot;exists($inputParseJSON/tns3:deviceId/tns3:ip)&quot;>&lt;xsl:value-of select=&quot;$inputParseJSON/tns3:deviceId/tns3:ip&quot;/>&lt;/xsl:when>&lt;xsl:otherwise>&lt;xsl:attribute name=&quot;xsi:nil&quot;>true&lt;/xsl:attribute>&lt;/xsl:otherwise>&lt;/xsl:choose>&lt;/ip>&lt;/tns8:jdbcQueryActivityInput>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns3=&quot;http://tns.tibco.com/bw/json/1633966852840&quot; xmlns:tns8=&quot;http://www.tibco.com/namespaces/tnt/plugins/jdbc+3c518ca3-1fed-4b88-b657-cca1e0eefe47+input&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:bw=&quot;http://www.tibco.com/bw/xpath/bw-custom-functions&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;inputParseJSON&quot;/>&lt;xsl:template name=&quot;JDBCQuery-input&quot; match=&quot;/&quot;>&lt;tns8:jdbcQueryActivityInput>&lt;SqlStatement>&lt;xsl:value-of select=&quot;concat(&amp;quot;SELECT * FROM &amp;quot;, bw:getModuleProperty(&amp;quot;/PCRF/TableName&amp;quot;), &amp;quot; WHERE ip='&amp;quot;, $inputParseJSON/tns3:deviceId/tns3:ip, &amp;quot;'&amp;quot;)&quot;/>&lt;/SqlStatement>&lt;/tns8:jdbcQueryActivityInput>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                                     </tibex:inputBindings>
                                     <tibex:config>
                                     <bwext:BWActivity
@@ -1331,13 +1331,10 @@
                                     name="config" xsi:type="activityconfig:EMFProperty">
                                     <type href="http://ns.tibco.com/bw/palette/jdbc#//JDBCQueryActivity"/>
                                     <value maxRows="100"
+                                    overrideSQLSTMT="true"
                                     sharedResourceProperty="jdbcProperty"
-                                    sqlStatement="SELECT * FROM public.PCRFMockConfig&#xd;&#xa;WHERE ip = ?"
+                                    sqlStatement="SELECT * FROM public.PCRFMockConfig&#xd;&#xa;WHERE ip = '10.10.10.1'"
                                     timeout="10" xsi:type="jdbcPalette:JDBCQueryActivity">
-
-                                    <PreparedParameters
-                                    DataType="12"
-                                    DataTypeDisplayValue="VARCHAR" ParameterName="ip"/>
                                     <columnMetadata
                                     columnIndex="1"
                                     columnName="ip"
@@ -1345,13 +1342,12 @@
                                     <columnMetadata
                                     columnIndex="2"
                                     columnName="imsi"
-                                    dataType="12"
-                                    status="OptionalElement" typeName="varchar"/>
+                                    dataType="12" typeName="varchar"/>
                                     <columnMetadata
                                     columnIndex="3"
                                     columnName="pcrfsimdetails"
-                                    dataType="1111"
-                                    status="OptionalElement" typeName="json"/>
+                                    dataType="12"
+                                    status="OptionalElement" typeName="text"/>
                                     </value>
                                     </properties>
                                     </activityConfig>
