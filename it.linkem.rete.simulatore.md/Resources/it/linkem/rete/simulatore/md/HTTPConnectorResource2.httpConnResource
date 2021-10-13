@@ -1,6 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:httpconnector="http://xsd.tns.tibco.com/bw/models/sharedresource/httpconnector" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_fPKh4StAEeyUgORO6XNH0g" name="it.linkem.rete.simulatore.md.HTTPConnectorResource2" type="httpconnector:HttpConnectorConfiguration">
-  <jndi:configuration xsi:type="httpconnector:HttpConnectorConfiguration" xmi:id="_fPKh4itAEeyUgORO6XNH0g" port="8082" acceptQueueSize="-1" newAccessLogs="true">
+  <jndi:configuration xsi:type="httpconnector:HttpConnectorConfiguration" xmi:id="_fPKh4itAEeyUgORO6XNH0g" newAccessLogs="true">
     <substitutionBindings xmi:id="_fPKh4ytAEeyUgORO6XNH0g" template="host" propName="BW.HOST.NAME"/>
+    <substitutionBindings xmi:id="_5tRAACv-EeykIJOpUtr6iw" template="port" propName="/HTTPConnectorResource/Port"/>
+    <substitutionBindings xmi:id="_bO48kCv_EeykIJOpUtr6iw" template="acceptQueueSize" propName="/HTTPConnectorResource/AcceptQueueSize"/>
+    <substitutionBindings xmi:id="_czyd0Cv_EeykIJOpUtr6iw" template="acceptors" propName="/HTTPConnectorResource/AcceptorThreads"/>
+    <substitutionBindings xmi:id="_wN_MsCv_EeykIJOpUtr6iw" template="hideErrorResponse" propName="/HTTPConnectorResource/HideServerImplementation"/>
+    <substitutionBindings xmi:id="_CFZ6MCwAEeykIJOpUtr6iw" template="headerBufferSize" propName="/HTTPConnectorResource/HeaderBufferSize"/>
+    <substitutionBindings xmi:id="_PGt0YCwAEeykIJOpUtr6iw" template="useDirectBuffers" propName="/HTTPConnectorResource/UseDirectBuffers"/>
+    <substitutionBindings xmi:id="_TGr0cCwBEeykIJOpUtr6iw" template="uriEncoding" propName="/HTTPConnectorResource/URIEncoding"/>
+    <substitutionBindings xmi:id="_0PPJsCwBEeykIJOpUtr6iw" template="enableDNSLookup" propName="/HTTPConnectorResource/EnableDNSLookups"/>
+    <substitutionBindings xmi:id="_1xN50CwBEeykIJOpUtr6iw" template="compression" propName="/HTTPConnectorResource/Compression"/>
+    <substitutionBindings xmi:id="_3FCSICwBEeykIJOpUtr6iw" template="compressableMimeTypes" propName="/HTTPConnectorResource/CompressibleMimeTypes"/>
+    <substitutionBindings xmi:id="_4tWTwCwBEeykIJOpUtr6iw" template="reverseProxyHost" propName="/HTTPConnectorResource/ReverseProxyHost"/>
+    <substitutionBindings xmi:id="_63DyQCwBEeykIJOpUtr6iw" template="reverseProxyPort" propName="/HTTPConnectorResource/ReverseProxyPort"/>
+    <substitutionBindings xmi:id="_OnDyACwCEeykIJOpUtr6iw" template="enableAccessLogs" propName="/HTTPConnectorResource/EnableAccessLogs"/>
+    <substitutionBindings xmi:id="_Pv3NICwCEeykIJOpUtr6iw" template="shareAcrossApplications" propName="/HTTPConnectorResource/ShareAcrossApplications"/>
+    <substitutionBindings xmi:id="_TXMDsCwDEeykIJOpUtr6iw" template="requestBufferSize" propName="/HTTPConnectorResource/RequestBufferSize"/>
+    <substitutionBindings xmi:id="_VPbXsCwDEeykIJOpUtr6iw" template="responseBufferSize" propName="/HTTPConnectorResource/ResponseBufferSize"/>
+    <substitutionBindings xmi:id="_XTe6ICwDEeykIJOpUtr6iw" template="maxIdleTime" propName="/HTTPConnectorResource/MaxIdleTime-ms"/>
+    <substitutionBindings xmi:id="_Yolr4CwDEeykIJOpUtr6iw" template="maxThreads" propName="/HTTPConnectorResource/MaxQTPThreads"/>
+    <substitutionBindings xmi:id="_0Nt00CwDEeykIJOpUtr6iw" template="lowResourceMaxIdleTime" propName="/HTTPConnectorResource/LowResourceMaxIdleTime"/>
+    <substitutionBindings xmi:id="_2cbvICwDEeykIJOpUtr6iw" template="lingerTime" propName="/HTTPConnectorResource/LingerTime-ms"/>
+    <substitutionBindings xmi:id="_3xs48CwDEeykIJOpUtr6iw" template="sessionTimeout" propName="/HTTPConnectorResource/SessionTimeout"/>
+    <substitutionBindings xmi:id="_7PZu4CwDEeykIJOpUtr6iw" template="maxPostSize" propName="/HTTPConnectorResource/MaxPostSize"/>
+    <substitutionBindings xmi:id="_8NnDkCwDEeykIJOpUtr6iw" template="maxSavePostSize" propName="/HTTPConnectorResource/MaxSavePostSize"/>
+    <substitutionBindings xmi:id="_9FRrYCwDEeykIJOpUtr6iw" template="minThreads" propName="/HTTPConnectorResource/MinQTPThreads"/>
+    <substitutionBindings xmi:id="_XXjsYCwEEeykIJOpUtr6iw" template="svcRegServiceName" propName="/HTTPConnectorResource/ServiceName"/>
   </jndi:configuration>
 </jndi:namedResource>

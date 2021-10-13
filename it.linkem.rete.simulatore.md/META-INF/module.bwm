@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:rest="http://xsd.tns.tibco.com/bw/models/binding/rest" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scact="http://xsd.tns.tibco.com/amf/models/sca/componentType" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_9YnJICp5EeyKvsZnriCTtQ" targetNamespace="http://tns.tibco.com/bw/composite/it.linkem.rete.simulatore.md" name="it.linkem.rete.simulatore.md" compositeext:version="1.0.0" compositeext:formatVersion="2">
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:rest="http://xsd.tns.tibco.com/bw/models/binding/rest" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scact="http://xsd.tns.tibco.com/amf/models/sca/componentType" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmlns:tibprop="http://ns.tibco.com/bw/property" xmi:id="_9YnJICp5EeyKvsZnriCTtQ" targetNamespace="http://tns.tibco.com/bw/composite/it.linkem.rete.simulatore.md" name="it.linkem.rete.simulatore.md" compositeext:version="1.0.0" compositeext:formatVersion="2">
   <sca:service xmi:id="_BQbyZCtCEeyUgORO6XNH0g" name="simulatore-rete-pcrf-getsimdetail2" promote="Componentsimulatoreretepcrfgetsimdetail2/simulatore-rete-pcrf-getsimdetail2">
     <sca:interface.wsdl xmi:id="_BQbyaCtCEeyUgORO6XNH0g" interface="http://xmlns.example.com/20211012115149PLT#wsdl.interface(simulatore-rete-pcrf-getsimdetail2)" scaext:wsdlLocation="../Processes/it/linkem/rete/simulatore/md/simulatoreretepcrfgetsimdetail2.bwp"/>
     <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_BQk8UCtCEeyUgORO6XNH0g" name="RestService2" path="/simulatore/rete/pcrf/getsimdetail2" docBasePath="http://localhost:7777/it.linkem.rete.simulatore.md" docResourcePath="simulatore/rete/pcrf/getsimdetail2" basePath="/" connector="it.linkem.rete.simulatore.md.HTTPConnectorResource2" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/it.linkem.rete.simulatore.md.simulatoreretepcrfgetsimdetail2-simulatore-rete-pcrf-getsimdetail2.json">
@@ -26,6 +26,39 @@
   <sca:property xmi:id="_9pZXICp5EeyKvsZnriCTtQ" name="BW.APPSPACE.NAME" type="XMLSchema:string" scalable="true"/>
   <sca:property xmi:id="_9pZXISp5EeyKvsZnriCTtQ" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
   <sca:property xmi:id="_9pjIICp5EeyKvsZnriCTtQ" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_27rK8Ct2EeyZqanDodKp1A" name="/JdbcConnectionResource/DbUsername" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_4D2T8Ct2EeyZqanDodKp1A" name="/JdbcConnectionResource/DbPassword" type="tibprop:password" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_4luR8Ct2EeyZqanDodKp1A" name="/JdbcConnectionResource/DbUrl" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_5iwh8Ct2EeyZqanDodKp1A" name="/JdbcConnectionResource/MaxConnections" type="XMLSchema:int" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_6FKEYCt2EeyZqanDodKp1A" name="/JdbcConnectionResource/DbDriver" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_BftxcCt3EeyZqanDodKp1A" name="/JdbcConnectionResource/LoginTimeoutSec" type="XMLSchema:int" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_839twCt3EeyZqanDodKp1A" name="/JdbcConnectionResource/ConnectionTimeout" type="XMLSchema:int" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_MkioACv_EeykIJOpUtr6iw" name="/HTTPConnectorResource/Port" type="XMLSchema:int" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_UiumkCv_EeykIJOpUtr6iw" name="/HTTPConnectorResource/AcceptQueueSize" type="XMLSchema:int" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_d3cTMCv_EeykIJOpUtr6iw" name="/HTTPConnectorResource/AcceptorThreads" type="XMLSchema:int" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_x-7l4Cv_EeykIJOpUtr6iw" name="/HTTPConnectorResource/HideServerImplementation" type="XMLSchema:boolean" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_D8QuICwAEeykIJOpUtr6iw" name="/HTTPConnectorResource/HeaderBufferSize" type="XMLSchema:int" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_S17RECwAEeykIJOpUtr6iw" name="/HTTPConnectorResource/UseDirectBuffers" type="XMLSchema:boolean" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_U_PRgCwBEeykIJOpUtr6iw" name="/HTTPConnectorResource/URIEncoding" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_acoHQCwBEeykIJOpUtr6iw" name="/HTTPConnectorResource/EnableDNSLookups" type="XMLSchema:boolean" scaext:simpleValue="false" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_hxKE0CwBEeykIJOpUtr6iw" name="/HTTPConnectorResource/Compression" type="XMLSchema:boolean" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_kOgRACwBEeykIJOpUtr6iw" name="/HTTPConnectorResource/CompressibleMimeTypes" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_lfPgICwBEeykIJOpUtr6iw" name="/HTTPConnectorResource/ReverseProxyHost" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_-BEQICwBEeykIJOpUtr6iw" name="/HTTPConnectorResource/ReverseProxyPort" type="XMLSchema:int" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_CpVbwCwCEeykIJOpUtr6iw" name="/HTTPConnectorResource/EnableAccessLogs" type="XMLSchema:boolean" scaext:simpleValue="false" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_H76vsCwCEeykIJOpUtr6iw" name="/HTTPConnectorResource/ShareAcrossApplications" type="XMLSchema:boolean" scaext:simpleValue="false" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_WWXAACwCEeykIJOpUtr6iw" name="/HTTPConnectorResource/RequestBufferSize" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_Wc00YCwCEeykIJOpUtr6iw" name="/HTTPConnectorResource/ResponseBufferSize" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_Wf9A4CwCEeykIJOpUtr6iw" name="/HTTPConnectorResource/MaxIdleTime-ms" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_WiL1gCwCEeykIJOpUtr6iw" name="/HTTPConnectorResource/LowResourceMaxIdleTime" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_Wks-ACwCEeykIJOpUtr6iw" name="/HTTPConnectorResource/LingerTime-ms" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_Wm7yoCwCEeykIJOpUtr6iw" name="/HTTPConnectorResource/SessionTimeout" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_WpUYQCwCEeykIJOpUtr6iw" name="/HTTPConnectorResource/MaxPostSize" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_Wr2H0CwCEeykIJOpUtr6iw" name="/HTTPConnectorResource/MaxSavePostSize" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_WuPUgCwCEeykIJOpUtr6iw" name="/HTTPConnectorResource/MinQTPThreads" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_XMSicCwCEeykIJOpUtr6iw" name="/HTTPConnectorResource/MaxQTPThreads" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_NojQcCwEEeykIJOpUtr6iw" name="/HTTPConnectorResource/ServiceName" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_wM3joCwFEeykIJOpUtr6iw" name="/PCRF/TableName" type="XMLSchema:string" publicAccess="true" scalable="true"/>
   <sca:component xmi:id="_BQbyYCtCEeyUgORO6XNH0g" name="Componentsimulatoreretepcrfgetsimdetail2" compositeext:version="1.0.0.qualifier">
     <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_BQbyYStCEeyUgORO6XNH0g" processName="it.linkem.rete.simulatore.md.simulatoreretepcrfgetsimdetail2"/>
     <sca:service xmi:id="_BQbyYitCEeyUgORO6XNH0g" name="simulatore-rete-pcrf-getsimdetail2">

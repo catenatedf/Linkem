@@ -4,6 +4,7 @@
     suppressJoinFailure="yes"
     targetNamespace="http://xmlns.example.com/20211012115149"
     xmlns:bpws="http://docs.oasis-open.org/wsbpel/2.0/process/executable"
+    xmlns:bw="http://www.tibco.com/bw/xpath/bw-custom-functions"
     xmlns:info="http://www.tibco.com/bw/process/info"
     xmlns:ns="http://xmlns.example.com/20211012115149PLT"
     xmlns:ns0="http://www.tibco.com/pe/EngineTypes"
@@ -12,6 +13,9 @@
     xmlns:ns11="http://www.tibco.com/namespaces/tnt/plugins/jdbc+3c518ca3-1fed-4b88-b657-cca1e0eefe47+input"
     xmlns:ns12="http://www.tibco.com/namespaces/tnt/plugins/jdbc+3c518ca3-1fed-4b88-b657-cca1e0eefe47+output"
     xmlns:ns13="activity.jsonParser.input+ce254996-ef97-4413-9530-c05a1ea09209+ActivityInputType"
+    xmlns:ns14="http://www.tibco.com/namespaces/tnt/plugins/jdbc+1962cd2f-63f0-4c32-8472-bd4d8f300eca+input"
+    xmlns:ns15="http://www.tibco.com/namespaces/tnt/plugins/jdbc"
+    xmlns:ns16="http://tns.tibco.com/bw/palette/internal/activityerror+bw.jdbc.SQLDirect"
     xmlns:ns2="http://tns.tibco.com/bw/json/1633966852840"
     xmlns:ns3="http://tns.tibco.com/bw/palette/internal/activityerror+bw.restjson.JsonParser"
     xmlns:ns4="http://www.tibco.com/namespaces/tnt/plugins/jdbc+b09f3d96-9e7b-4ae5-b1c0-18ec65ffef78+input"
@@ -880,60 +884,6 @@
                                     xsi:type="notation:Bounds" y="54"/>
                                     </children>
 
-                                    <children type="4002">
-
-                                    <children type="4017">
-
-                                    <styles
-                                    fontName="Segoe UI"
-                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
-
-                                    <layoutConstraint xsi:type="notation:Bounds"/>
-                                    </children>
-
-                                    <children type="4017">
-
-                                    <styles
-                                    fontName="Segoe UI"
-                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
-
-                                    <layoutConstraint xsi:type="notation:Bounds"/>
-                                    </children>
-
-                                    <children type="4017">
-
-                                    <styles
-                                    fontName="Segoe UI"
-                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
-
-                                    <layoutConstraint xsi:type="notation:Bounds"/>
-                                    </children>
-
-                                    <children type="4017">
-
-                                    <styles
-                                    fontName="Segoe UI"
-                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
-
-                                    <layoutConstraint xsi:type="notation:Bounds"/>
-                                    </children>
-
-                                    <styles
-                                    fontName="Segoe UI"
-                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
-
-                                    <styles
-                                    backgroundColor="16777215"
-                                    gradientEndColor="50431"
-                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
-
-                                    <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@activity/@activities.7"/>
-
-                                    <layoutConstraint
-                                    x="603"
-                                    xsi:type="notation:Bounds" y="141"/>
-                                    </children>
-
                                     <styles xsi:type="notation:DrawerStyle"/>
 
                                     <styles xsi:type="notation:SortingStyle"/>
@@ -1118,17 +1068,6 @@
         <styles xsi:type="notation:DiagramStyle"/>
         <element href="//0"/>
         <edges
-            source="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.0/@children.1/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.1"
-            target="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.0/@children.1/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2" type="4006">
-            <children type="6002">
-                <layoutConstraint xsi:type="notation:Location" y="40"/>
-            </children>
-            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
-            <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
-            <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@activity/@links/@children.0"/>
-            <bendpoints points="[25, -2, -118, 9]$[119, -9, -24, 2]" xsi:type="notation:RelativeBendpoints"/>
-        </edges>
-        <edges
             source="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.0/@children.1/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2"
             target="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.0/@children.1/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.3" type="4006">
             <children type="6002">
@@ -1136,7 +1075,7 @@
             </children>
             <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
             <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
-            <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@activity/@links/@children.1"/>
+            <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@activity/@links/@children.0"/>
             <bendpoints points="[25, 0, -141, 0]$[142, 0, -24, 0]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
         <edges
@@ -1147,7 +1086,7 @@
             </children>
             <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
             <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
-            <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@activity/@links/@children.2"/>
+            <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@activity/@links/@children.1"/>
             <bendpoints points="[25, -8, -190, 0]$[191, 0, -24, 8]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
         <edges
@@ -1158,30 +1097,31 @@
             </children>
             <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
             <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
-            <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@activity/@links/@children.3"/>
+            <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@activity/@links/@children.2"/>
             <bendpoints points="[12, 1, -97, -11]$[85, 9, -24, -3]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
         <edges
             source="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.0/@children.1/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.4"
-            target="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.0/@children.1/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.5" type="4006">
-            <children type="6002">
-                <layoutConstraint xsi:type="notation:Location" y="40"/>
-            </children>
-            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
-            <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
-            <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@activity/@links/@children.4"/>
-            <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
-        </edges>
-        <edges
-            source="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.0/@children.1/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.5"
             target="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.0/@children.1/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0" type="4006">
             <children type="6002">
                 <layoutConstraint xsi:type="notation:Location" y="40"/>
             </children>
             <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
             <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
-            <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@activity/@links/@children.5"/>
-            <bendpoints points="[10, -24, -32, 81]$[32, -80, -10, 25]" xsi:type="notation:RelativeBendpoints"/>
+            <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@activity/@links/@children.3"/>
+            <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.0/@children.1/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.1"
+            target="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.0/@children.1/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@activity/@links/@children.4"/>
+            <bendpoints points="[14, 25, -50, -91]$[50, 92, -14, -24]" xsi:type="notation:RelativeBendpoints"/>
+            <targetAnchor id="(0.024390243902439025,0.5466666666666666)" xsi:type="notation:IdentityAnchor"/>
         </edges>
     </notation:Diagram>
     <tibex:NamespaceRegistry enabled="true">
@@ -1214,6 +1154,10 @@
             namespace="http://www.example.org/output_test" prefix="tns12"/>
         <tibex:namespaceItem
             namespace="http://tns.tibco.com/bw/json/1634032892726" prefix="tns11"/>
+        <tibex:namespaceItem
+            namespace="http://www.tibco.com/namespaces/tnt/plugins/jdbc+1962cd2f-63f0-4c32-8472-bd4d8f300eca+input" prefix="tns13"/>
+        <tibex:namespaceItem
+            namespace="http://www.tibco.com/bw/xpath/bw-custom-functions" prefix="bw"/>
     </tibex:NamespaceRegistry>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://tns.tibco.com/bw/REST"/>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://xmlns.example.com/simulatore/rete/pcrf/getsimdetail2/parameters"/>
@@ -1257,10 +1201,6 @@
             name="MapJsonResponse-input" sca-bpel:internal="true"/>
         <bpws:variable element="ns8:JSONoutputElement"
             name="MapJsonResponse" sca-bpel:internal="true"/>
-        <bpws:variable element="ns8:JSONoutputElement"
-            name="NotWorkingMapping-input" sca-bpel:internal="true"/>
-        <bpws:variable element="ns8:JSONoutputElement"
-            name="NotWorkingMapping" sca-bpel:internal="true"/>
     </bpws:variables>
     <bpws:extensions>
         <bpws:extension mustUnderstand="no" namespace="http://www.eclipse.org/gmf/runtime/1.0.2/notation"/>
@@ -1282,16 +1222,15 @@
                         <bpws:flow name="flow1">
                             <bpws:links>
                                 <bpws:link
-                                    name="inputParseJSONToJDBCQuery" tibex:linkType="SUCCESS"/>
-                                <bpws:link
                                     name="JDBCQueryTooutputParseJSON1" tibex:linkType="SUCCESS"/>
                                 <bpws:link
                                     name="outputParseJSONTogetOut" tibex:linkType="SUCCESS"/>
                                 <bpws:link
                                     name="OnMessageStartToinputParseJSON" tibex:linkType="SUCCESS"/>
                                 <bpws:link
-                                    name="MapJsonResponseToMapper" tibex:linkType="SUCCESS"/>
-                                <bpws:link name="MapperTogetOut" tibex:linkType="SUCCESS"/>
+                                    name="MapJsonResponseTogetOut" tibex:linkType="SUCCESS"/>
+                                <bpws:link
+                                    name="inputParseJSONToJDBCQuery" tibex:linkType="SUCCESS"/>
                             </bpws:links>
                             <bpws:empty name="OnMessageStart"
                                 tibex:constructor="onMessageStart" tibex:xpdlId="979561bf-f511-453d-b1cf-672e9dc80080">
@@ -1321,7 +1260,7 @@
     &lt;/xsl:template&gt;
 &lt;/xsl:stylesheet&gt;</tibex:inputBinding>
                                 <bpws:targets>
-                                    <bpws:target linkName="MapperTogetOut"/>
+                                    <bpws:target linkName="MapJsonResponseTogetOut"/>
                                 </bpws:targets>
                                 <bpws:correlations/>
                             </bpws:reply>
@@ -1393,7 +1332,7 @@
                                     <type href="http://ns.tibco.com/bw/palette/jdbc#//JDBCQueryActivity"/>
                                     <value maxRows="100"
                                     sharedResourceProperty="jdbcProperty"
-                                    sqlStatement="SELECT * FROM public.&quot;PCRFMockConfig&quot;&#xd;&#xa;WHERE ip = ?"
+                                    sqlStatement="SELECT * FROM public.PCRFMockConfig&#xd;&#xa;WHERE ip = ?"
                                     timeout="10" xsi:type="jdbcPalette:JDBCQueryActivity">
 
                                     <PreparedParameters
@@ -1468,48 +1407,11 @@
                                     <bpws:target linkName="outputParseJSONTogetOut"/>
                                     </bpws:targets>
                                     <bpws:sources>
-                                    <bpws:source linkName="MapJsonResponseToMapper"/>
+                                    <bpws:source linkName="MapJsonResponseTogetOut"/>
                                     </bpws:sources>
                                     <tibex:inputBindings>
                                     <tibex:inputBinding
                                     expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns11=&quot;http://tns.tibco.com/bw/json/1634032892726&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;outputParseJSON&quot;/>&lt;xsl:template name=&quot;Mapper-input&quot; match=&quot;/&quot;>&lt;tns11:JSONoutputElement>&lt;xsl:copy-of select=&quot;$outputParseJSON/tns11:sessionSummaries&quot;/>&lt;xsl:for-each select=&quot;$outputParseJSON/tns11:sessionDTOList&quot;>&lt;tns11:sessionDTOList>&lt;xsl:if test=&quot;tns11:sessionId&quot;>&lt;tns11:sessionId>&lt;xsl:value-of select=&quot;tns11:sessionId&quot;/>&lt;/tns11:sessionId>&lt;/xsl:if>&lt;xsl:if test=&quot;tns11:diameterPeerId&quot;>&lt;tns11:diameterPeerId>&lt;xsl:copy-of select=&quot;tns11:diameterPeerId/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;tns11:diameterPeerId&quot;/>&lt;/tns11:diameterPeerId>&lt;/xsl:if>&lt;xsl:if test=&quot;tns11:diameterPeerHost&quot;>&lt;tns11:diameterPeerHost>&lt;xsl:value-of select=&quot;tns11:diameterPeerHost&quot;/>&lt;/tns11:diameterPeerHost>&lt;/xsl:if>&lt;xsl:if test=&quot;tns11:expiryTimeOfOutboundMessage&quot;>&lt;tns11:expiryTimeOfOutboundMessage>&lt;xsl:copy-of select=&quot;tns11:expiryTimeOfOutboundMessage/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;tns11:expiryTimeOfOutboundMessage&quot;/>&lt;/tns11:expiryTimeOfOutboundMessage>&lt;/xsl:if>&lt;xsl:if test=&quot;tns11:deviceId&quot;>&lt;tns11:deviceId>&lt;xsl:value-of select=&quot;tns11:deviceId&quot;/>&lt;/tns11:deviceId>&lt;/xsl:if>&lt;xsl:copy-of select=&quot;tns11:sessionBindingIdentifier&quot;/>&lt;xsl:if test=&quot;tns11:timeOfLastMessage&quot;>&lt;tns11:timeOfLastMessage>&lt;xsl:value-of select=&quot;tns11:timeOfLastMessage&quot;/>&lt;/tns11:timeOfLastMessage>&lt;/xsl:if>&lt;xsl:copy-of select=&quot;tns11:activeFeatures&quot;/>&lt;xsl:if test=&quot;tns11:terminating&quot;>&lt;tns11:terminating>&lt;xsl:value-of select=&quot;tns11:terminating&quot;/>&lt;/tns11:terminating>&lt;/xsl:if>&lt;xsl:if test=&quot;tns11:failedMessageCount&quot;>&lt;tns11:failedMessageCount>&lt;xsl:value-of select=&quot;tns11:failedMessageCount&quot;/>&lt;/tns11:failedMessageCount>&lt;/xsl:if>&lt;xsl:copy-of select=&quot;tns11:diameterPeer&quot;/>&lt;xsl:if test=&quot;tns11:apnId&quot;>&lt;tns11:apnId>&lt;xsl:value-of select=&quot;tns11:apnId&quot;/>&lt;/tns11:apnId>&lt;/xsl:if>&lt;xsl:if test=&quot;tns11:ipAddress&quot;>&lt;tns11:ipAddress>&lt;xsl:value-of select=&quot;tns11:ipAddress&quot;/>&lt;/tns11:ipAddress>&lt;/xsl:if>&lt;xsl:if test=&quot;tns11:ipv6Prefix&quot;>&lt;tns11:ipv6Prefix>&lt;xsl:copy-of select=&quot;tns11:ipv6Prefix/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;tns11:ipv6Prefix&quot;/>&lt;/tns11:ipv6Prefix>&lt;/xsl:if>&lt;xsl:copy-of select=&quot;tns11:subscriptionIds&quot;/>&lt;xsl:if test=&quot;tns11:key&quot;>&lt;tns11:key>&lt;xsl:copy-of select=&quot;tns11:key/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;tns11:key&quot;/>&lt;/tns11:key>&lt;/xsl:if>&lt;xsl:if test=&quot;tns11:isEmergency&quot;>&lt;tns11:isEmergency>&lt;xsl:value-of select=&quot;tns11:isEmergency&quot;/>&lt;/tns11:isEmergency>&lt;/xsl:if>&lt;xsl:copy-of select=&quot;tns11:adjustedDefaultEPSBearerQoS&quot;/>&lt;xsl:copy-of select=&quot;tns11:adjustedMaxBwForAPN&quot;/>&lt;xsl:copy-of select=&quot;tns11:adjustedSessionData&quot;/>&lt;xsl:if test=&quot;tns11:anTrusted&quot;>&lt;tns11:anTrusted>&lt;xsl:copy-of select=&quot;tns11:anTrusted/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;tns11:anTrusted&quot;/>&lt;/tns11:anTrusted>&lt;/xsl:if>&lt;xsl:if test=&quot;tns11:bearerControlMode&quot;>&lt;tns11:bearerControlMode>&lt;xsl:value-of select=&quot;tns11:bearerControlMode&quot;/>&lt;/tns11:bearerControlMode>&lt;/xsl:if>&lt;xsl:if test=&quot;tns11:bsId&quot;>&lt;tns11:bsId>&lt;xsl:copy-of select=&quot;tns11:bsId/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;tns11:bsId&quot;/>&lt;/tns11:bsId>&lt;/xsl:if>&lt;xsl:if test=&quot;tns11:ccRequestNumber&quot;>&lt;tns11:ccRequestNumber>&lt;xsl:value-of select=&quot;tns11:ccRequestNumber&quot;/>&lt;/tns11:ccRequestNumber>&lt;/xsl:if>&lt;xsl:copy-of select=&quot;tns11:defaultEPSBearerQoS&quot;/>&lt;xsl:if test=&quot;tns11:emergency&quot;>&lt;tns11:emergency>&lt;xsl:value-of select=&quot;tns11:emergency&quot;/>&lt;/tns11:emergency>&lt;/xsl:if>&lt;xsl:if test=&quot;tns11:ipCanType&quot;>&lt;tns11:ipCanType>&lt;xsl:value-of select=&quot;tns11:ipCanType&quot;/>&lt;/tns11:ipCanType>&lt;/xsl:if>&lt;xsl:if test=&quot;tns11:ipv4ANGWAddress&quot;>&lt;tns11:ipv4ANGWAddress>&lt;xsl:value-of select=&quot;tns11:ipv4ANGWAddress&quot;/>&lt;/tns11:ipv4ANGWAddress>&lt;/xsl:if>&lt;xsl:if test=&quot;tns11:ipv6ANGWAddress&quot;>&lt;tns11:ipv6ANGWAddress>&lt;xsl:value-of select=&quot;tns11:ipv6ANGWAddress&quot;/>&lt;/tns11:ipv6ANGWAddress>&lt;/xsl:if>&lt;xsl:copy-of select=&quot;tns11:maxBwForAPN&quot;/>&lt;xsl:if test=&quot;tns11:maximumBandwidth&quot;>&lt;tns11:maximumBandwidth>&lt;xsl:copy-of select=&quot;tns11:maximumBandwidth/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;tns11:maximumBandwidth&quot;/>&lt;/tns11:maximumBandwidth>&lt;/xsl:if>&lt;xsl:if test=&quot;tns11:msTimezone&quot;>&lt;tns11:msTimezone>&lt;xsl:value-of select=&quot;tns11:msTimezone&quot;/>&lt;/tns11:msTimezone>&lt;/xsl:if>&lt;xsl:if test=&quot;tns11:networkRequestSupport&quot;>&lt;tns11:networkRequestSupport>&lt;xsl:value-of select=&quot;tns11:networkRequestSupport&quot;/>&lt;/tns11:networkRequestSupport>&lt;/xsl:if>&lt;xsl:for-each select=&quot;tns11:policyTriggerRegistrations&quot;>&lt;tns11:policyTriggerRegistrations>&lt;xsl:value-of select=&quot;.&quot;/>&lt;/tns11:policyTriggerRegistrations>&lt;/xsl:for-each>&lt;xsl:for-each select=&quot;tns11:qosInfo&quot;>&lt;tns11:qosInfo>&lt;xsl:value-of select=&quot;.&quot;/>&lt;/tns11:qosInfo>&lt;/xsl:for-each>&lt;xsl:if test=&quot;tns11:qosNegotiation&quot;>&lt;tns11:qosNegotiation>&lt;xsl:value-of select=&quot;tns11:qosNegotiation&quot;/>&lt;/tns11:qosNegotiation>&lt;/xsl:if>&lt;xsl:if test=&quot;tns11:rai&quot;>&lt;tns11:rai>&lt;xsl:copy-of select=&quot;tns11:rai/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;tns11:rai&quot;/>&lt;/tns11:rai>&lt;/xsl:if>&lt;xsl:if test=&quot;tns11:ratType&quot;>&lt;tns11:ratType>&lt;xsl:value-of select=&quot;tns11:ratType&quot;/>&lt;/tns11:ratType>&lt;/xsl:if>&lt;xsl:if test=&quot;tns11:ratType3Gpp&quot;>&lt;tns11:ratType3Gpp>&lt;xsl:copy-of select=&quot;tns11:ratType3Gpp/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;tns11:ratType3Gpp&quot;/>&lt;/tns11:ratType3Gpp>&lt;/xsl:if>&lt;xsl:if test=&quot;tns11:sgsnAddress&quot;>&lt;tns11:sgsnAddress>&lt;xsl:value-of select=&quot;tns11:sgsnAddress&quot;/>&lt;/tns11:sgsnAddress>&lt;/xsl:if>&lt;xsl:if test=&quot;tns11:sgsnIpv6Address&quot;>&lt;tns11:sgsnIpv6Address>&lt;xsl:value-of select=&quot;tns11:sgsnIpv6Address&quot;/>&lt;/tns11:sgsnIpv6Address>&lt;/xsl:if>&lt;xsl:if test=&quot;tns11:sgsnMccMnc&quot;>&lt;tns11:sgsnMccMnc>&lt;xsl:value-of select=&quot;tns11:sgsnMccMnc&quot;/>&lt;/tns11:sgsnMccMnc>&lt;/xsl:if>&lt;xsl:if test=&quot;tns11:tcpSourcePort&quot;>&lt;tns11:tcpSourcePort>&lt;xsl:copy-of select=&quot;tns11:tcpSourcePort/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;tns11:tcpSourcePort&quot;/>&lt;/tns11:tcpSourcePort>&lt;/xsl:if>&lt;xsl:for-each select=&quot;tns11:triggerRegistrations&quot;>&lt;tns11:triggerRegistrations>&lt;xsl:value-of select=&quot;.&quot;/>&lt;/tns11:triggerRegistrations>&lt;/xsl:for-each>&lt;xsl:if test=&quot;tns11:udpSourcePort&quot;>&lt;tns11:udpSourcePort>&lt;xsl:copy-of select=&quot;tns11:udpSourcePort/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;tns11:udpSourcePort&quot;/>&lt;/tns11:udpSourcePort>&lt;/xsl:if>&lt;xsl:if test=&quot;tns11:ueLocalIpAddress&quot;>&lt;tns11:ueLocalIpAddress>&lt;xsl:copy-of select=&quot;tns11:ueLocalIpAddress/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;tns11:ueLocalIpAddress&quot;/>&lt;/tns11:ueLocalIpAddress>&lt;/xsl:if>&lt;xsl:copy-of select=&quot;tns11:userLocationInfo&quot;/>&lt;xsl:if test=&quot;tns11:userLocationInfoTime&quot;>&lt;tns11:userLocationInfoTime>&lt;xsl:copy-of select=&quot;tns11:userLocationInfoTime/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;tns11:userLocationInfoTime&quot;/>&lt;/tns11:userLocationInfoTime>&lt;/xsl:if>&lt;xsl:for-each select=&quot;tns11:ipCanBearers&quot;>&lt;tns11:ipCanBearers>&lt;xsl:value-of select=&quot;.&quot;/>&lt;/tns11:ipCanBearers>&lt;/xsl:for-each>&lt;xsl:copy-of select=&quot;tns11:anChargingAddr&quot;/>&lt;xsl:if test=&quot;tns11:qosUpgrade&quot;>&lt;tns11:qosUpgrade>&lt;xsl:value-of select=&quot;tns11:qosUpgrade&quot;/>&lt;/tns11:qosUpgrade>&lt;/xsl:if>&lt;xsl:if test=&quot;tns11:reportRegistrations&quot;>&lt;tns11:reportRegistrations>&lt;xsl:value-of select=&quot;tns11:reportRegistrations&quot;/>&lt;/tns11:reportRegistrations>&lt;/xsl:if>&lt;xsl:if test=&quot;tns11:anChargingIdValue&quot;>&lt;tns11:anChargingIdValue>&lt;xsl:value-of select=&quot;tns11:anChargingIdValue&quot;/>&lt;/tns11:anChargingIdValue>&lt;/xsl:if>&lt;xsl:copy-of select=&quot;tns11:pccRules&quot;/>&lt;xsl:for-each select=&quot;tns11:condPolInfo&quot;>&lt;tns11:condPolInfo>&lt;xsl:value-of select=&quot;.&quot;/>&lt;/tns11:condPolInfo>&lt;/xsl:for-each>&lt;xsl:if test=&quot;tns11:sessionType&quot;>&lt;tns11:sessionType>&lt;xsl:value-of select=&quot;tns11:sessionType&quot;/>&lt;/tns11:sessionType>&lt;/xsl:if>&lt;xsl:if test=&quot;tns11:sySessionId&quot;>&lt;tns11:sySessionId>&lt;xsl:copy-of select=&quot;tns11:sySessionId/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;tns11:sySessionId&quot;/>&lt;/tns11:sySessionId>&lt;/xsl:if>&lt;xsl:if test=&quot;tns11:online&quot;>&lt;tns11:online>&lt;xsl:value-of select=&quot;tns11:online&quot;/>&lt;/tns11:online>&lt;/xsl:if>&lt;xsl:if test=&quot;tns11:offline&quot;>&lt;tns11:offline>&lt;xsl:value-of select=&quot;tns11:offline&quot;/>&lt;/tns11:offline>&lt;/xsl:if>&lt;xsl:if test=&quot;tns11:revalidationTime&quot;>&lt;tns11:revalidationTime>&lt;xsl:copy-of select=&quot;tns11:revalidationTime/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;tns11:revalidationTime&quot;/>&lt;/tns11:revalidationTime>&lt;/xsl:if>&lt;xsl:if test=&quot;tns11:s9Subsession&quot;>&lt;tns11:s9Subsession>&lt;xsl:copy-of select=&quot;tns11:s9Subsession/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;tns11:s9Subsession&quot;/>&lt;/tns11:s9Subsession>&lt;/xsl:if>&lt;xsl:if test=&quot;tns11:nextScheduledReauth&quot;>&lt;tns11:nextScheduledReauth>&lt;xsl:copy-of select=&quot;tns11:nextScheduledReauth/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;tns11:nextScheduledReauth&quot;/>&lt;/tns11:nextScheduledReauth>&lt;/xsl:if>&lt;xsl:if test=&quot;tns11:lastReauthTime&quot;>&lt;tns11:lastReauthTime>&lt;xsl:value-of select=&quot;tns11:lastReauthTime&quot;/>&lt;/tns11:lastReauthTime>&lt;/xsl:if>&lt;xsl:if test=&quot;tns11:nextRuleStatusChangeTime&quot;>&lt;tns11:nextRuleStatusChangeTime>&lt;xsl:copy-of select=&quot;tns11:nextRuleStatusChangeTime/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;tns11:nextRuleStatusChangeTime&quot;/>&lt;/tns11:nextRuleStatusChangeTime>&lt;/xsl:if>&lt;xsl:if test=&quot;tns11:nasPortId&quot;>&lt;tns11:nasPortId>&lt;xsl:copy-of select=&quot;tns11:nasPortId/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;tns11:nasPortId&quot;/>&lt;/tns11:nasPortId>&lt;/xsl:if>&lt;xsl:if test=&quot;tns11:nasPortType&quot;>&lt;tns11:nasPortType>&lt;xsl:copy-of select=&quot;tns11:nasPortType/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;tns11:nasPortType&quot;/>&lt;/tns11:nasPortType>&lt;/xsl:if>&lt;xsl:if test=&quot;tns11:logicalAccessId&quot;>&lt;tns11:logicalAccessId>&lt;xsl:copy-of select=&quot;tns11:logicalAccessId/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;tns11:logicalAccessId&quot;/>&lt;/tns11:logicalAccessId>&lt;/xsl:if>&lt;xsl:if test=&quot;tns11:physicalAccessId&quot;>&lt;tns11:physicalAccessId>&lt;xsl:copy-of select=&quot;tns11:physicalAccessId/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;tns11:physicalAccessId&quot;/>&lt;/tns11:physicalAccessId>&lt;/xsl:if>&lt;xsl:if test=&quot;tns11:delegatedIPv6Prefix&quot;>&lt;tns11:delegatedIPv6Prefix>&lt;xsl:value-of select=&quot;tns11:delegatedIPv6Prefix&quot;/>&lt;/tns11:delegatedIPv6Prefix>&lt;/xsl:if>&lt;xsl:if test=&quot;tns11:sySession&quot;>&lt;tns11:sySession>&lt;xsl:copy-of select=&quot;tns11:sySession/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;tns11:sySession&quot;/>&lt;/tns11:sySession>&lt;/xsl:if>&lt;xsl:for-each select=&quot;tns11:usageTracking&quot;>&lt;tns11:usageTracking>&lt;xsl:value-of select=&quot;.&quot;/>&lt;/tns11:usageTracking>&lt;/xsl:for-each>&lt;xsl:if test=&quot;tns11:ruleSetForEDR&quot;>&lt;tns11:ruleSetForEDR>&lt;xsl:copy-of select=&quot;tns11:ruleSetForEDR/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;tns11:ruleSetForEDR&quot;/>&lt;/tns11:ruleSetForEDR>&lt;/xsl:if>&lt;xsl:for-each select=&quot;tns11:praInformation&quot;>&lt;tns11:praInformation>&lt;xsl:value-of select=&quot;.&quot;/>&lt;/tns11:praInformation>&lt;/xsl:for-each>&lt;xsl:if test=&quot;tns11:ipcanRevalidationTime&quot;>&lt;tns11:ipcanRevalidationTime>&lt;xsl:copy-of select=&quot;tns11:ipcanRevalidationTime/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;tns11:ipcanRevalidationTime&quot;/>&lt;/tns11:ipcanRevalidationTime>&lt;/xsl:if>&lt;xsl:copy-of select=&quot;tns11:userEquipmentInfo&quot;/>&lt;/tns11:sessionDTOList>&lt;/xsl:for-each>&lt;/tns11:JSONoutputElement>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
-                                    </tibex:inputBindings>
-                                    <tibex:config>
-                                    <bwext:BWActivity
-                                    activityTypeID="bw.generalactivities.mapper"
-                                    version="6.0.0.001"
-                                    xmlns:activityconfig="http://tns.tibco.com/bw/model/activityconfig"
-                                    xmlns:bwext="http://tns.tibco.com/bw/model/core/bwext"
-                                    xmlns:generalactivities="http://ns.tibco.com/bw/palette/generalactivities"
-                                    xmlns:json_1634032892726="http://tns.tibco.com/bw/json/1634032892726" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-                                    <activityConfig>
-                                    <properties
-                                    name="config" xsi:type="activityconfig:EMFProperty">
-                                    <type href="http://ns.tibco.com/bw/palette/generalactivities#//Mapper"/>
-                                    <value
-                                    inputQName="json_1634032892726:JSONoutputElement" xsi:type="generalactivities:Mapper"/>
-                                    </properties>
-                                    </activityConfig>
-                                    </bwext:BWActivity>
-                                    </tibex:config>
-                                </tibex:activityExtension>
-                            </bpws:extensionActivity>
-                            <bpws:extensionActivity>
-                                <tibex:activityExtension
-                                    inputVariable="NotWorkingMapping-input"
-                                    name="NotWorkingMapping"
-                                    outputVariable="NotWorkingMapping"
-                                    tibex:copyOf="outputParseJSON"
-                                    tibex:xpdlId="4ff4453e-d9dc-4e6b-ab92-d6d5f8b0a1c7" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
-                                    <bpws:targets>
-                                    <bpws:target linkName="MapJsonResponseToMapper"/>
-                                    </bpws:targets>
-                                    <bpws:sources>
-                                    <bpws:source linkName="MapperTogetOut"/>
-                                    </bpws:sources>
-                                    <tibex:inputBindings>
-                                    <tibex:inputBinding
-                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns11=&quot;http://tns.tibco.com/bw/json/1634032892726&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;outputParseJSON&quot;/>&lt;xsl:template name=&quot;Mapper-input&quot; match=&quot;/&quot;>&lt;xsl:copy-of select=&quot;$outputParseJSON&quot;/>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                                     </tibex:inputBindings>
                                     <tibex:config>
                                     <bwext:BWActivity

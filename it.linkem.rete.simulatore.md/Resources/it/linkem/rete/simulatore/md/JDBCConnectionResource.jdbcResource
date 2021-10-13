@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jdbc="http://xsd.tns.tibco.com/amf/models/sharedresource/jdbc" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmlns:subject="http://xsd.tns.tibco.com/trinity/models/identity/subject" xmi:id="_kpWSsSp8EeyKvsZnriCTtQ" name="it.linkem.rete.simulatore.md.JDBCConnectionResource" type="jdbc:JdbcDataSource">
   <jndi:reference xmi:id="_kqPDgCp8EeyKvsZnriCTtQ" key="subjectJndiName" type="subject:SubjectConfiguration" value=""/>
-  <jndi:configuration xsi:type="jdbc:JdbcDataSource" xmi:id="_kqPDgSp8EeyKvsZnriCTtQ" username="postgres" password="#!GKQRvzWDwXZkBlhWNHQyYRpLGCVCeEnxAy6IdFtiMcQ=">
-    <connectionConfig xsi:type="jdbc:NonXaConnection" xmi:id="_kqPDgip8EeyKvsZnriCTtQ" jdbcDriver="org.postgresql.Driver" dbURL="jdbc:postgresql://localhost:5432/postgres"/>
+  <jndi:configuration xsi:type="jdbc:JdbcDataSource" xmi:id="_kqPDgSp8EeyKvsZnriCTtQ">
+    <substitutionBindings xmi:id="_FIQa4Ct2EeyZqanDodKp1A" template="password" propName="/JdbcConnectionResource/DbPassword"/>
+    <substitutionBindings xmi:id="_k9PaACt3EeyZqanDodKp1A" template="maxConnections" propName="/JdbcConnectionResource/MaxConnections"/>
+    <substitutionBindings xmi:id="_oJsH4Ct3EeyZqanDodKp1A" template="username" propName="/JdbcConnectionResource/DbUsername"/>
+    <connectionConfig xsi:type="jdbc:NonXaConnection" xmi:id="_kqPDgip8EeyKvsZnriCTtQ">
+      <substitutionBindings xmi:id="_PDNLoCt3EeyZqanDodKp1A" template="loginTimeout" propName="/JdbcConnectionResource/LoginTimeoutSec"/>
+      <substitutionBindings xmi:id="_uSR2wCt3EeyZqanDodKp1A" template="jdbcDriver" propName="/JdbcConnectionResource/DbDriver"/>
+      <substitutionBindings xmi:id="_yBhIoCt3EeyZqanDodKp1A" template="dbURL" propName="/JdbcConnectionResource/DbUrl"/>
+      <substitutionBindings xmi:id="_AmYgQCt4EeyZqanDodKp1A" template="connectionIdleTimeout" propName="/JdbcConnectionResource/ConnectionTimeout"/>
+    </connectionConfig>
   </jndi:configuration>
 </jndi:namedResource>
