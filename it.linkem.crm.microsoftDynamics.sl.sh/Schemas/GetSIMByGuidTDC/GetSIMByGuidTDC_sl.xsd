@@ -4,7 +4,7 @@
 	elementFormDefault="qualified">
 	
 	<import namespace="http://it.linkem/crm/entities/sim/xsd" schemaLocation="../Entities/Sim.xsd"/>
-	<element name="GetSimById_Input">
+	<element name="GetSimByGuidTDC_Input">
 		<complexType>
 			<sequence>
 				<element minOccurs="0" maxOccurs="1" name="guid_TDC" type="string"/>
@@ -12,7 +12,7 @@
 			</sequence>
 		</complexType>
 	</element>
-	<element name="GetSimById_Output">
+	<element name="GetSimByGuidTDC_Output">
 		<complexType>
 			<sequence>
 				<element minOccurs="0" maxOccurs="unbounded" name="Sim" type="sim:lnk_sim"/>

@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/CRM_SimCheck"
-	xmlns:tns="http://www.example.org/CRM_SimCheck" elementFormDefault="qualified">
-
+	xmlns:tns="http://www.example.org/CRM_SimCheck" elementFormDefault="qualified"
+	xmlns:sim="http://it.linkem/crm/entities/sim/xsd"
+	>
+<import schemaLocation="../Entities/Sim.xsd" namespace="http://it.linkem/crm/entities/sim/xsd"/>
 	<element name="GetSimFromAccount_Input">
 		<complexType>
 			<sequence>
@@ -19,9 +21,12 @@
 				<element maxOccurs="1" minOccurs="0" name="IMSI" type="string" />
 				<element maxOccurs="1" minOccurs="1" name="ResponseCode"
 					type="string" />
-				<element maxOccurs="1" minOccurs="0" name="SimDetails" type="string" />
+				<element maxOccurs="1" minOccurs="0" name="SimDetails" type="sim:lnk_sim" />
 			</sequence>
 		</complexType>
 	</element>
+
+
+
 
 </schema>

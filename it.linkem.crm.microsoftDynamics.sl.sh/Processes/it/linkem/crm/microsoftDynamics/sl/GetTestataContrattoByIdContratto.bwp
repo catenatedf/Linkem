@@ -1,36 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <bpws:process exitOnStandardFault="no"
-    name="it.linkem.crm.microsoftDynamics.sl.GetTestataByGuidTDC"
+    name="it.linkem.crm.microsoftDynamics.sl.GetTestataContrattoByIdContratto"
     suppressJoinFailure="yes"
-    targetNamespace="http://xmlns.example.com/20210915110459"
+    targetNamespace="http://xmlns.example.com/20211015153008"
     xmlns:bpws="http://docs.oasis-open.org/wsbpel/2.0/process/executable"
     xmlns:info="http://www.tibco.com/bw/process/info"
     xmlns:ns="http://www.tibco.com/pe/EngineTypes"
-    xmlns:ns0="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrievemultiple+97b73aed-a75b-422e-9abd-79664aac5b5b+input"
-    xmlns:ns1="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrievemultiple+97b73aed-a75b-422e-9abd-79664aac5b5b+output"
-    xmlns:ns10="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrievemultiple+523e9cdd-cd59-4df5-be3c-4dc00cb8e50d+input"
-    xmlns:ns11="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrievemultiple+523e9cdd-cd59-4df5-be3c-4dc00cb8e50d+output"
-    xmlns:ns12="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrievemultiple+81fe79b6-1303-474d-89fa-a3f312c04ebd+input"
-    xmlns:ns13="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrievemultiple+81fe79b6-1303-474d-89fa-a3f312c04ebd+output"
-    xmlns:ns14="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrieve+66581511-2c4b-4f3f-9616-249f3996025f+input"
-    xmlns:ns15="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrieve+66581511-2c4b-4f3f-9616-249f3996025f+output"
-    xmlns:ns16="http://tns.tibco.com/bw/palette/internal/activityerror+bw.dynamicscrm.RetrieveEntity"
-    xmlns:ns17="http://it.linkem/crm/getContractById/sl/xsd"
-    xmlns:ns18="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrieve+d656c57d-65f6-405c-9e99-302e21f8ced7+input"
-    xmlns:ns19="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrieve+d656c57d-65f6-405c-9e99-302e21f8ced7+output"
+    xmlns:ns0="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrievemultiple+62143d10-772e-4053-9b04-08ee524167d8+input"
+    xmlns:ns1="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrievemultiple+62143d10-772e-4053-9b04-08ee524167d8+output"
     xmlns:ns2="http://tns.tibco.com/bw/palette/internal/activityerror+bw.dynamicscrm.RetrieveMultipleEntity"
-    xmlns:ns20="http://tns.tibco.com/bw/palette/internal/errorlinkhandler+66581511-2c4b-4f3f-9616-249f3996025f"
-    xmlns:ns21="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrieve+bdea94a4-781a-41f1-826f-85010fdcb68d+input"
-    xmlns:ns22="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrieve+bdea94a4-781a-41f1-826f-85010fdcb68d+output"
-    xmlns:ns23="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrievemultiple+511497e7-d90e-4827-a4f3-512431afbec0+input"
-    xmlns:ns24="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrievemultiple+511497e7-d90e-4827-a4f3-512431afbec0+output"
-    xmlns:ns25="http://it.linkem/crm/getLineeContrattoByGUIDTDC/sl/xsd"
-    xmlns:ns26="http://it.linkem/crm/getTestataContrattoByGuidTDC/sl/xsd"
-    xmlns:ns3="http://www.example.org/CRM_SimCheck"
+    xmlns:ns3="http://it.linkem/crm/getTestataContrattoByGuidTDC/sl/xsd"
     xmlns:ns4="http://it.linkem/common/core/lehf/AuditTypes/xsd"
-    xmlns:ns7="http://tns.tibco.com/bw/palette/internal/activityerror+bw.internal.end"
-    xmlns:ns8="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrievemultiple+30f54bac-cc52-44ff-b6e0-1f4bea566861+input"
-    xmlns:ns9="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrievemultiple+30f54bac-cc52-44ff-b6e0-1f4bea566861+output"
     xmlns:sca="http://docs.oasis-open.org/ns/opencsa/sca/200912"
     xmlns:sca-bpel="http://docs.oasis-open.org/ns/opencsa/sca-bpel/200801"
     xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"
@@ -143,8 +123,7 @@
                         block="extension restriction substitution"
                         form="unqualified" minOccurs="0"
                         name="CustomJobId" type="xs:string"/>
-                    <!--xs:element name="RestartedFromCheckpoint" form="unqualified" block="extension 
-						restriction substitution" type="xs:boolean"/ -->
+                    <!--xs:element name="RestartedFromCheckpoint" form="unqualified" block="extension restriction substitution" type="xs:boolean"/-->
                     <xs:element
                         block="extension restriction substitution"
                         form="unqualified" maxOccurs="unbounded"
@@ -198,74 +177,44 @@
             <element name="DuplicateKeyException" type="tns:DuplicateKeyExceptionType"/>
         </schema>
         <schema
-            targetNamespace="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/fault"
-            xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/fault">
-            <complexType name="ActivityFaultData">
-                <sequence>
-                    <element maxOccurs="unbounded" minOccurs="0"
-                        name="DynamicsCRMActivityFaultException" type="tns:DynamicsCRMActivityFaultException"/>
-                </sequence>
-            </complexType>
-            <element name="ActivityFaultData" type="tns:ActivityFaultData"/>
-            <complexType name="DynamicsCRMActivityFaultException">
-                <sequence>
-                    <element maxOccurs="1" minOccurs="0" name="message" type="string"/>
-                    <element maxOccurs="1" minOccurs="0"
-                        name="messageCode" type="string"/>
-                </sequence>
-            </complexType>
-        </schema>
-        <schema elementFormDefault="unqualified"
-            targetNamespace="http://tns.tibco.com/bw/palette/internal/activityerror+bw.internal.end"
-            xmlns="http://www.w3.org/2001/XMLSchema"
-            xmlns:Q1="http://it.linkem/common/core/lehf/AuditTypes/xsd" xmlns:tns="http://tns.tibco.com/bw/palette/internal/activityerror+bw.internal.end">
-            <import namespace="http://it.linkem/common/core/lehf/AuditTypes/xsd"/>
-            <element name="ActivityErrorData" type="tns:ActivityErrorDataType"/>
-            <complexType name="ActivityErrorDataType">
-                <choice>
-                    <element maxOccurs="1" minOccurs="0" ref="Q1:LogAudit"/>
-                </choice>
-            </complexType>
-        </schema>
-        <schema elementFormDefault="unqualified"
-            targetNamespace="http://tns.tibco.com/bw/palette/internal/activityerror+bw.dynamicscrm.RetrieveEntity"
-            xmlns="http://www.w3.org/2001/XMLSchema"
-            xmlns:Q1="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/fault" xmlns:tns="http://tns.tibco.com/bw/palette/internal/activityerror+bw.dynamicscrm.RetrieveEntity">
-            <import namespace="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/fault"/>
-            <element name="ActivityErrorData" type="tns:ActivityErrorDataType"/>
-            <complexType name="ActivityErrorDataType">
-                <choice>
-                    <element maxOccurs="1" minOccurs="0" ref="Q1:ActivityFaultData"/>
-                </choice>
-            </complexType>
-        </schema>
-        <schema
-            targetNamespace="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrieve+d656c57d-65f6-405c-9e99-302e21f8ced7+input"
-            xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrieve+d656c57d-65f6-405c-9e99-302e21f8ced7+input">
+            targetNamespace="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrievemultiple+62143d10-772e-4053-9b04-08ee524167d8+input"
+            xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrievemultiple+62143d10-772e-4053-9b04-08ee524167d8+input">
             <complexType name="Entities">
                 <sequence>
-                    <element maxOccurs="unbounded" minOccurs="0"
+                    <element maxOccurs="1" minOccurs="0"
                         name="lnk_testatadelcontratto" type="tns:lnk_testatadelcontratto"/>
                 </sequence>
             </complexType>
             <element name="Entities" type="tns:Entities"/>
             <complexType name="lnk_testatadelcontratto">
                 <sequence>
-                    <element maxOccurs="1" minOccurs="0"
-                        name="lnk_testatadelcontrattoid" type="string"/>
+                    <element maxOccurs="1" minOccurs="1" name="FetchXML" type="string"/>
                 </sequence>
             </complexType>
         </schema>
         <schema
-            targetNamespace="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrieve+d656c57d-65f6-405c-9e99-302e21f8ced7+output"
-            xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrieve+d656c57d-65f6-405c-9e99-302e21f8ced7+output">
+            targetNamespace="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrievemultiple+62143d10-772e-4053-9b04-08ee524167d8+output"
+            xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrievemultiple+62143d10-772e-4053-9b04-08ee524167d8+output">
             <complexType name="Entities">
                 <sequence>
+                    <element maxOccurs="unbounded" minOccurs="0"
+                        name="List" type="tns:List"/>
+                </sequence>
+            </complexType>
+            <element name="Entities" type="tns:Entities"/>
+            <complexType name="List">
+                <sequence>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="pagenumber" type="integer"/>
+                    <element maxOccurs="1" minOccurs="0" name="pagesize" type="integer"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="pagingcookie" type="string"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="totalcount" type="integer"/>
                     <element maxOccurs="unbounded" minOccurs="0"
                         name="lnk_testatadelcontratto" type="tns:lnk_testatadelcontratto"/>
                 </sequence>
             </complexType>
-            <element name="Entities" type="tns:Entities"/>
             <complexType name="lnk_testatadelcontratto">
                 <sequence>
                     <element maxOccurs="1" minOccurs="0"
@@ -1001,36 +950,57 @@
                 </sequence>
             </complexType>
         </schema>
+        <schema
+            targetNamespace="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/fault"
+            xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/fault">
+            <complexType name="ActivityFaultData">
+                <sequence>
+                    <element maxOccurs="unbounded" minOccurs="0"
+                        name="DynamicsCRMActivityFaultException" type="tns:DynamicsCRMActivityFaultException"/>
+                </sequence>
+            </complexType>
+            <element name="ActivityFaultData" type="tns:ActivityFaultData"/>
+            <complexType name="DynamicsCRMActivityFaultException">
+                <sequence>
+                    <element maxOccurs="1" minOccurs="0" name="message" type="string"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="messageCode" type="string"/>
+                </sequence>
+            </complexType>
+        </schema>
+        <schema elementFormDefault="unqualified"
+            targetNamespace="http://tns.tibco.com/bw/palette/internal/activityerror+bw.dynamicscrm.RetrieveMultipleEntity"
+            xmlns="http://www.w3.org/2001/XMLSchema"
+            xmlns:Q1="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/fault" xmlns:tns="http://tns.tibco.com/bw/palette/internal/activityerror+bw.dynamicscrm.RetrieveMultipleEntity">
+            <import namespace="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/fault"/>
+            <element name="ActivityErrorData" type="tns:ActivityErrorDataType"/>
+            <complexType name="ActivityErrorDataType">
+                <choice>
+                    <element maxOccurs="1" minOccurs="0" ref="Q1:ActivityFaultData"/>
+                </choice>
+            </complexType>
+        </schema>
     </tibex:Types>
-    <tibex:ProcessInfo callable="true" createdBy="flavi"
-        createdOn="Tue Sep 07 14:27:33 CEST 2021" description=""
+    <tibex:ProcessInfo callable="true" createdBy="Stefano"
+        createdOn="Fri Oct 15 15:30:08 CEST 2021" description=""
         extraErrorVars="true" modifiers="public"
-        productVersion="2.6.1 V57 2021-02-13" scalable="true"
+        productVersion="6.7.0 HF3 V102 2021-08-10" scalable="true"
         singleton="true" stateless="false" type="IT"/>
     <tibex:ProcessInterface context=""
-        input="{http://it.linkem/crm/getTestataContrattoByGuidTDC/sl/xsd}GetTestataContrattoByGuidTDC_Input" output="{http://it.linkem/crm/getTestataContrattoByGuidTDC/sl/xsd}GetTestataContrattoByGuidTDC_Output">
-        <tibex:errorList>
-            <tibex:error
-                error="{http://it.linkem/common/core/lehf/AuditTypes/xsd}LogAudit" name="LogAudit"/>
-        </tibex:errorList>
-    </tibex:ProcessInterface>
+        input="{http://it.linkem/crm/getTestataContrattoByGuidTDC/sl/xsd}GetTestataContrattoByIdContratto_Input" output="{http://it.linkem/crm/getTestataContrattoByGuidTDC/sl/xsd}GetTestataContrattoByIdContratto_Output"/>
     <tibex:ProcessTemplateConfigurations/>
     <notation:Diagram measurementUnit="Pixel" type="BWProcess"
         xmlns:bwnotation="http://tns.tibco.com/bw/runtime/BWNotation"
         xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         <children type="2001">
-            <children type="5001">
-                <element href="//0/@process"/>
-            </children>
+            <children type="5001"/>
             <children type="3002">
                 <styles xsi:type="notation:SortingStyle"/>
                 <styles xsi:type="notation:FilteringStyle"/>
-                <element href="//0/@process"/>
             </children>
             <children type="3003">
                 <styles xsi:type="notation:SortingStyle"/>
                 <styles xsi:type="notation:FilteringStyle"/>
-                <element href="//0/@process"/>
             </children>
             <children type="3004">
                 <children type="4018">
@@ -1044,28 +1014,24 @@
                                     <styles
                                     fontName="Segoe UI"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.0"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles
                                     fontName="Segoe UI"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.0"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles
                                     fontName="Segoe UI"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.0"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles
                                     fontName="Segoe UI"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.0"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <styles fontName="Segoe UI"
@@ -1075,36 +1041,32 @@
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.0"/>
-                                    <layoutConstraint x="-45"
-                                    xsi:type="notation:Bounds" y="124"/>
+                                    <layoutConstraint x="4"
+                                    xsi:type="notation:Bounds" y="102"/>
                                     </children>
                                     <children type="4002">
                                     <children type="4017">
                                     <styles
                                     fontName="Segoe UI"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.1"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles
                                     fontName="Segoe UI"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.1"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles
                                     fontName="Segoe UI"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.1"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles
                                     fontName="Segoe UI"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.1"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <styles fontName="Segoe UI"
@@ -1114,36 +1076,32 @@
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.1"/>
-                                    <layoutConstraint x="770"
-                                    xsi:type="notation:Bounds" y="124"/>
+                                    <layoutConstraint x="1135"
+                                    xsi:type="notation:Bounds" y="102"/>
                                     </children>
-                                    <children type="4002">
+                                    <children type="4002 bw.dynamicscrm.RetrieveMultipleEntity">
                                     <children type="4017">
                                     <styles
                                     fontName="Segoe UI"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.2"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles
                                     fontName="Segoe UI"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.2"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles
                                     fontName="Segoe UI"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.2"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles
                                     fontName="Segoe UI"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.2"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <styles fontName="Segoe UI"
@@ -1153,10 +1111,12 @@
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.2"/>
-                                    <layoutConstraint x="296"
-                                    xsi:type="notation:Bounds" y="124"/>
+                                    <layoutConstraint
+                                    height="40" width="265"
+                                    x="447"
+                                    xsi:type="notation:Bounds" y="102"/>
                                     </children>
-                                    <children type="4002">
+                                    <children type="4002 bw.generalactivities.bwassign">
                                     <children type="4017">
                                     <styles
                                     fontName="Segoe UI"
@@ -1188,8 +1148,10 @@
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.3"/>
-                                    <layoutConstraint x="137"
-                                    xsi:type="notation:Bounds" y="124"/>
+                                    <layoutConstraint
+                                    height="40" width="40"
+                                    x="274"
+                                    xsi:type="notation:Bounds" y="102"/>
                                     </children>
                                     <children type="4002">
                                     <children type="4017">
@@ -1223,10 +1185,11 @@
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.4"/>
-                                    <layoutConstraint x="627"
-                                    xsi:type="notation:Bounds" y="124"/>
+                                    <layoutConstraint
+                                    width="226" x="760"
+                                    xsi:type="notation:Bounds" y="102"/>
                                     </children>
-                                    <children type="4002 bw.generalactivities.mapper">
+                                    <children type="4002">
                                     <children type="4017">
                                     <styles
                                     fontName="Segoe UI"
@@ -1258,10 +1221,43 @@
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.5"/>
-                                    <layoutConstraint
-                                    height="40" width="40"
-                                    x="480"
-                                    xsi:type="notation:Bounds" y="124"/>
+                                    <layoutConstraint x="150"
+                                    xsi:type="notation:Bounds" y="102"/>
+                                    </children>
+                                    <children type="4002">
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <styles fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.6"/>
+                                    <layoutConstraint x="994"
+                                    xsi:type="notation:Bounds" y="102"/>
                                     </children>
                                     <styles xsi:type="notation:DrawerStyle"/>
                                     <styles xsi:type="notation:SortingStyle"/>
@@ -1276,112 +1272,16 @@
                                     <styles xsi:type="bwnotation:ResizingStyle"/>
                                     <element href="//0/@process/@activity/@activity"/>
                                     <layoutConstraint height="384"
-                                    width="1009" xsi:type="notation:Bounds"/>
+                                    width="1268" xsi:type="notation:Bounds"/>
                                 </children>
                                 <styles xsi:type="notation:SortingStyle"/>
                                 <styles xsi:type="notation:FilteringStyle"/>
-                                <element href="//0/@process/@activity"/>
                             </children>
                             <styles fontName="Segoe UI" lineColor="0" xsi:type="notation:ShapeStyle"/>
                             <styles xsi:type="bwnotation:BackgroundStyle"/>
                             <styles xsi:type="bwnotation:ResizingStyle"/>
                             <element href="//0/@process/@activity"/>
-                            <layoutConstraint height="372" width="1012" xsi:type="notation:Bounds"/>
-                        </children>
-                        <children type="4022">
-                            <children type="3022">
-                                <children type="4029">
-                                    <children type="3031">
-                                    <children type="4033">
-                                    <styles fontName="Segoe UI"
-                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <element href="//0/@process/@activity/@faultHandlers/@catchAll"/>
-                                    <layoutConstraint
-                                    height="34" width="34"
-                                    xsi:type="notation:Bounds" y="68"/>
-                                    </children>
-                                    <styles xsi:type="notation:SortingStyle"/>
-                                    <styles xsi:type="notation:FilteringStyle"/>
-                                    </children>
-                                    <children type="3032">
-                                    <children type="4005">
-                                    <children type="3007">
-                                    <children type="4002 com.tibco.bw.core.design.process.editor.Activity_4002_Throw">
-                                    <children type="4017">
-                                    <styles
-                                    fontName="Segoe UI"
-                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
-
-                                    <layoutConstraint xsi:type="notation:Bounds"/>
-                                    </children>
-                                    <children type="4017">
-                                    <styles
-                                    fontName="Segoe UI"
-                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
-
-                                    <layoutConstraint xsi:type="notation:Bounds"/>
-                                    </children>
-                                    <children type="4017">
-                                    <styles
-                                    fontName="Segoe UI"
-                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
-
-                                    <layoutConstraint xsi:type="notation:Bounds"/>
-                                    </children>
-                                    <children type="4017">
-                                    <styles
-                                    fontName="Segoe UI"
-                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
-
-                                    <layoutConstraint xsi:type="notation:Bounds"/>
-                                    </children>
-                                    <styles
-                                    fontName="Segoe UI"
-                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <styles
-                                    backgroundColor="16777215"
-                                    gradientEndColor="50431"
-                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
-                                    <element href="//0/@process/@activity/@faultHandlers/@catchAll/@activity/@activity/@activities.0"/>
-                                    <layoutConstraint
-                                    height="40"
-                                    width="170"
-                                    x="30"
-                                    xsi:type="notation:Bounds" y="41"/>
-                                    </children>
-                                    <styles xsi:type="notation:DrawerStyle"/>
-                                    <styles xsi:type="notation:SortingStyle"/>
-                                    <styles xsi:type="notation:FilteringStyle"/>
-                                    </children>
-                                    <styles fontName="Segoe UI"
-                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <styles
-                                    backgroundColor="16777215"
-                                    gradientEndColor="50431"
-                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
-                                    <styles xsi:type="bwnotation:ResizingStyle"/>
-                                    <element href="//0/@process/@activity/@faultHandlers/@catchAll/@activity/@activity"/>
-                                    <layoutConstraint
-                                    height="168" width="911" xsi:type="notation:Bounds"/>
-                                    </children>
-                                    <styles xsi:type="notation:SortingStyle"/>
-                                    <styles xsi:type="notation:FilteringStyle"/>
-                                    </children>
-                                    <styles fontName="Segoe UI"
-                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <styles xsi:type="bwnotation:BackgroundStyle"/>
-                                    <styles xsi:type="bwnotation:ResizingStyle"/>
-                                    <element href="//0/@process/@activity/@faultHandlers/@catchAll"/>
-                                    <layoutConstraint xsi:type="notation:Bounds"/>
-                                </children>
-                                <styles xsi:type="notation:SortingStyle"/>
-                                <styles xsi:type="notation:FilteringStyle"/>
-                            </children>
-                            <styles fontName="Segoe UI" lineColor="0" xsi:type="notation:ShapeStyle"/>
-                            <styles xsi:type="bwnotation:BackgroundStyle"/>
-                            <styles xsi:type="bwnotation:ResizingStyle"/>
-                            <element href="//0/@process/@activity/@faultHandlers"/>
-                            <layoutConstraint height="200" width="717" xsi:type="notation:Bounds"/>
+                            <layoutConstraint height="384" width="1271" xsi:type="notation:Bounds"/>
                         </children>
                         <styles xsi:type="notation:SortingStyle"/>
                         <styles xsi:type="notation:FilteringStyle"/>
@@ -1391,7 +1291,7 @@
                     <styles xsi:type="bwnotation:BackgroundStyle"/>
                     <styles xsi:type="bwnotation:ResizingStyle"/>
                     <element href="//0/@process/@activity"/>
-                    <layoutConstraint height="608" width="1012" x="1"
+                    <layoutConstraint height="408" width="1271" x="1"
                         xsi:type="notation:Bounds" y="1"/>
                 </children>
                 <styles xsi:type="notation:SortingStyle"/>
@@ -1400,12 +1300,12 @@
             </children>
             <styles fontName="Segoe UI" lineColor="0" xsi:type="notation:ShapeStyle"/>
             <element href="//0/@process"/>
-            <layoutConstraint height="660" width="1354" xsi:type="notation:Bounds"/>
+            <layoutConstraint height="460" width="1613" xsi:type="notation:Bounds"/>
         </children>
         <styles xsi:type="notation:DiagramStyle"/>
         <element href="//0"/>
         <edges
-            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2"
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0"
             target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.5" type="4006">
             <children type="6002">
                 <layoutConstraint xsi:type="notation:Location" y="40"/>
@@ -1413,19 +1313,18 @@
             <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
             <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
             <element href="//0/@process/@activity/@activity/@links/@children.0"/>
-            <bendpoints points="[25, 0, -185, 14]$[193, 0, -17, 14]" xsi:type="notation:RelativeBendpoints"/>
-            <targetAnchor id="(0.36585365853658536,0.21333333333333335)" xsi:type="notation:IdentityAnchor"/>
+            <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
         <edges
-            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0"
-            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.3" type="4006">
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2"
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.4" type="4006">
             <children type="6002">
                 <layoutConstraint xsi:type="notation:Location" y="40"/>
             </children>
             <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
             <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
             <element href="//0/@process/@activity/@activity/@links/@children.1"/>
-            <bendpoints points="[25, -6, -226, 55]$[227, -55, -24, 6]" xsi:type="notation:RelativeBendpoints"/>
+            <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
         <edges
             source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.3"
@@ -1436,59 +1335,54 @@
             <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
             <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
             <element href="//0/@process/@activity/@activity/@links/@children.2"/>
-            <bendpoints points="[25, 0, -260, 0]$[261, 0, -24, 0]" xsi:type="notation:RelativeBendpoints"/>
+            <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
         <edges
             source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.4"
-            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.1" type="4006">
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.6" type="4006">
             <children type="6002">
                 <layoutConstraint xsi:type="notation:Location" y="40"/>
             </children>
             <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
             <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
             <element href="//0/@process/@activity/@activity/@links/@children.3"/>
-            <bendpoints points="[25, 0, -179, 0]$[180, 0, -24, 0]" xsi:type="notation:RelativeBendpoints"/>
+            <bendpoints points="[76, 0, -94, 0]$[146, 0, -24, 0]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
         <edges
             source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.5"
-            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.4" type="4006">
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.3" type="4006">
             <children type="6002">
                 <layoutConstraint xsi:type="notation:Location" y="40"/>
             </children>
             <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
             <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
             <element href="//0/@process/@activity/@activity/@links/@children.4"/>
-            <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
+            <bendpoints points="[25, -21, -75, 63]$[76, -63, -24, 21]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.6"
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.1" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.5"/>
+            <bendpoints points="[25, 0, -116, 0]$[117, 0, -24, 0]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
     </notation:Diagram>
     <tibex:NamespaceRegistry enabled="true">
         <tibex:namespaceItem
-            namespace="http://www.example.org/CRM_SimCheck" prefix="tns"/>
+            namespace="http://it.linkem/crm/getTestataContrattoByGuidTDC/sl/xsd" prefix="tns"/>
         <tibex:namespaceItem
-            namespace="http://it.linkem/common/core/lehf/AuditTypes/xsd" prefix="tns9"/>
+            namespace="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrievemultiple+62143d10-772e-4053-9b04-08ee524167d8+input" prefix="tns1"/>
         <tibex:namespaceItem
             namespace="http://www.tibco.com/bw/xpath/bw-custom-functions" prefix="bw"/>
         <tibex:namespaceItem
-            namespace="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrievemultiple+523e9cdd-cd59-4df5-be3c-4dc00cb8e50d+input" prefix="tns1"/>
-        <tibex:namespaceItem
-            namespace="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrievemultiple+30f54bac-cc52-44ff-b6e0-1f4bea566861+input" prefix="tns2"/>
-        <tibex:namespaceItem
-            namespace="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrieve+66581511-2c4b-4f3f-9616-249f3996025f+input" prefix="tns3"/>
-        <tibex:namespaceItem
             namespace="http://www.tibco.com/bw/xslt/custom-functions" prefix="tib"/>
-        <tibex:namespaceItem
-            namespace="http://it.linkem/crm/getContractById/sl/xsd" prefix="tns4"/>
-        <tibex:namespaceItem
-            namespace="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrieve+d656c57d-65f6-405c-9e99-302e21f8ced7+input" prefix="tns5"/>
-        <tibex:namespaceItem
-            namespace="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrievemultiple+511497e7-d90e-4827-a4f3-512431afbec0+input" prefix="tns6"/>
-        <tibex:namespaceItem
-            namespace="http://it.linkem/crm/getTestataContrattoByGuidTDC/sl/xsd" prefix="tns7"/>
     </tibex:NamespaceRegistry>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://it.linkem/crm/getTestataContrattoByGuidTDC/sl/xsd"/>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://it.linkem/common/core/lehf/AuditTypes/xsd"/>
-    <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://it.linkem/crm/getTestataContrattoByGuidTDC/sl/xsd"/>
-    <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://it.linkem/crm/getTestataContrattoByGuidTDC/sl/xsd"/>
     <bpws:variables>
         <bpws:variable element="ns:ProcessContext"
             name="_processContext" sca-bpel:internal="true"/>
@@ -1500,57 +1394,38 @@
                 <bpws:literal>it.linkem.crm.microsoftdynamics.sl.sh.DynamicsCRMConnection</bpws:literal>
             </bpws:from>
         </bpws:variable>
+        <bpws:variable element="ns0:Entities"
+            name="retrieveTestataContrattoByIdContratto-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns1:Entities"
+            name="retrieveTestataContrattoByIdContratto" sca-bpel:internal="true"/>
+        <bpws:variable element="ns2:ActivityErrorData"
+            name="_error_retrieveTestataContrattoByIdContratto" sca-bpel:internal="true"/>
         <bpws:variable element="ns:ErrorReport" name="_error" sca-bpel:internal="true"/>
-        <bpws:variable element="ns26:GetTestataContrattoByGuidTDC_Input"
+        <bpws:variable
+            element="ns3:GetTestataContrattoByIdContratto_Input"
             name="Start" sca-bpel:internal="true" tibex:parameter="in"/>
         <bpws:variable
-            element="ns26:GetTestataContrattoByGuidTDC_Output"
+            element="ns3:GetTestataContrattoByIdContratto_Output"
             name="End-input" sca-bpel:internal="true" tibex:parameter="out"/>
+        <bpws:variable name="idContratto" type="xsd:string"/>
+        <bpws:variable name="guid_TDC" type="xsd:string"/>
+        <bpws:variable element="ns3:GetTestataContrattoByGuidTDC_Input"
+            name="GetTestataByGuidTDC-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns3:GetTestataContrattoByGuidTDC_Output"
+            name="GetTestataByGuidTDC" sca-bpel:internal="true"/>
+        <bpws:variable element="ns4:LogAudit" name="LogStart-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns4:LogAuditOutput" name="LogStart" sca-bpel:internal="true"/>
+        <bpws:variable element="ns4:LogAudit" name="LogEnd-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns4:LogAuditOutput" name="LogEnd" sca-bpel:internal="true"/>
         <bpws:variable name="INFO_Severity" sca-bpel:hotUpdate="false"
             sca-bpel:privateProperty="true" sca-bpel:property="yes"
             tibex:propertySource="//it.linkem.common.core.lehf.sh///it.linkem.common.core.lehf.sh/Logging/INFO_SEVERITY" type="xsd:string"/>
-        <bpws:variable name="ERROR_Severity" sca-bpel:hotUpdate="false"
-            sca-bpel:privateProperty="true" sca-bpel:property="yes"
-            tibex:propertySource="//it.linkem.common.core.lehf.sh///it.linkem.common.core.lehf.sh/Logging/ERROR_SEVERITY" type="xsd:string"/>
-        <bpws:variable name="Business_Exception"
-            sca-bpel:hotUpdate="false" sca-bpel:privateProperty="true"
-            sca-bpel:property="yes"
-            tibex:propertySource="//it.linkem.common.core.lehf.sh///it.linkem.common.core.lehf.sh/Logging/Business_Exception" type="xsd:string"/>
-        <bpws:variable name="System_Exception"
-            sca-bpel:hotUpdate="false" sca-bpel:privateProperty="true"
-            sca-bpel:property="yes"
-            tibex:propertySource="//it.linkem.common.core.lehf.sh///it.linkem.common.core.lehf.sh/Logging/System_Exception" type="xsd:string"/>
-        <bpws:variable element="ns7:ActivityErrorData" name="_error_End" sca-bpel:internal="true"/>
-        <bpws:variable name="dynamicsCRMConnectionNoGrant"
-            sca-bpel:hotUpdate="false" sca-bpel:privateProperty="true"
-            sca-bpel:property="yes"
-            sca-bpel:sharedResourceType="{http://ns.tibco.com/bw/palette/dynamicscrmconnection}Dynamicscrm" type="xsd:string">
-            <bpws:from>
-                <bpws:literal>it.linkem.crm.microsoftdynamics.sl.sh.DynamicsCRMConnection</bpws:literal>
-            </bpws:from>
-        </bpws:variable>
-        <bpws:variable element="ns18:Entities"
-            name="getTestataByGUID-input" sca-bpel:internal="true"/>
-        <bpws:variable element="ns19:Entities" name="getTestataByGUID" sca-bpel:internal="true"/>
-        <bpws:variable element="ns16:ActivityErrorData"
-            name="_error_getTestataByGUID" sca-bpel:internal="true"/>
-        <bpws:variable element="ns4:LogAudit" name="LogStart-input" sca-bpel:internal="true"/>
-        <bpws:variable element="ns4:LogAuditOutput" name="LogStart" sca-bpel:internal="true"/>
         <bpws:variable name="DEBUG_Severity" sca-bpel:hotUpdate="false"
             sca-bpel:privateProperty="true" sca-bpel:property="yes"
             tibex:propertySource="//it.linkem.common.core.lehf.sh///it.linkem.common.core.lehf.sh/Logging/DEBUG_SEVERITY" type="xsd:string"/>
-        <bpws:variable element="ns4:LogAudit" name="LogEnd-input" sca-bpel:internal="true"/>
-        <bpws:variable element="ns4:LogAuditOutput" name="LogEnd" sca-bpel:internal="true"/>
-        <bpws:variable
-            element="ns26:GetTestataContrattoByGuidTDC_Output"
-            name="MapResponse-input" sca-bpel:internal="true"/>
-        <bpws:variable
-            element="ns26:GetTestataContrattoByGuidTDC_Output"
-            name="MapResponse" sca-bpel:internal="true"/>
-        <bpws:variable name="FaultName" sca-bpel:internal="true" type="xsd:string"/>
-        <bpws:variable element="ns:FaultDetail" name="FaultDetails" sca-bpel:internal="true"/>
-        <bpws:variable element="ns4:LogAudit"
-            name="ThrowGenericError-input" sca-bpel:internal="true"/>
+        <bpws:variable name="ERROR_Severity" sca-bpel:hotUpdate="false"
+            sca-bpel:privateProperty="true" sca-bpel:property="yes"
+            tibex:propertySource="//it.linkem.common.core.lehf.sh///it.linkem.common.core.lehf.sh/Logging/ERROR_SEVERITY" type="xsd:string"/>
     </bpws:variables>
     <bpws:extensions>
         <bpws:extension mustUnderstand="no" namespace="http://www.eclipse.org/gmf/runtime/1.0.2/notation"/>
@@ -1561,36 +1436,21 @@
         <bpws:extension mustUnderstand="no" namespace="http://www.tibco.com/bpel/2007/extensions"/>
     </bpws:extensions>
     <bpws:scope name="scope">
-        <bpws:faultHandlers>
-            <bpws:catchAll tibex:faultDetailsVar="FaultDetails"
-                tibex:faultNameVar="FaultName" tibex:xpdlId="8870da67-55ce-446e-a95d-541832a4d217">
-                <bpws:scope name="scope1">
-                    <bpws:flow name="flow1">
-                        <bpws:links/>
-                        <bpws:throw faultName="ns4:LogAudit"
-                            faultVariable="ThrowGenericError-input"
-                            name="ThrowGenericError" tibex:xpdlId="60af9e0e-4a63-4dfd-9ab0-1db60092b23f">
-                            <tibex:inputBindings>
-                                <tibex:partBinding
-                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns9=&quot;http://it.linkem/common/core/lehf/AuditTypes/xsd&quot; xmlns:tib=&quot;http://www.tibco.com/bw/xslt/custom-functions&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;ERROR_Severity&quot;/>&lt;xsl:param name=&quot;FaultDetails&quot;/>&lt;xsl:param name=&quot;System_Exception&quot;/>&lt;xsl:param name=&quot;Start&quot;/>&lt;xsl:param name=&quot;_error&quot;/>&lt;xsl:template name=&quot;ThrowGenericError-input&quot; match=&quot;/&quot;>&lt;tns9:LogAudit>&lt;auditElement>&lt;SEVERITY>&lt;xsl:value-of select=&quot;$ERROR_Severity&quot;/>&lt;/SEVERITY>&lt;PROCESSSTACK>&lt;xsl:value-of select=&quot;$FaultDetails/ProcessStack&quot;/>&lt;/PROCESSSTACK>&lt;LOGMESSAGE>&lt;xsl:value-of select=&quot;&amp;quot;Error occurred during GetTestataByGUIDTDC&amp;quot;&quot;/>&lt;/LOGMESSAGE>&lt;/auditElement>&lt;tns9:auditErrorElement>&lt;ERRORCODE>&lt;xsl:value-of select=&quot;&amp;quot;ESB.MDYN.000002&amp;quot;&quot;/>&lt;/ERRORCODE>&lt;ERRORTYPE>&lt;xsl:value-of select=&quot;$System_Exception&quot;/>&lt;/ERRORTYPE>&lt;ERRORMESSAGE>&lt;xsl:value-of select=&quot;&amp;quot;Generic Error occurred during GetTestataByGUIDTDC (CRM)&amp;quot;&quot;/>&lt;/ERRORMESSAGE>&lt;ERRORDETAIL>&lt;xsl:value-of select=&quot;concat(tib:render-xml($_error,false(),true()),&amp;quot;  &amp;quot;,tib:render-xml($FaultDetails,false(),true()))&quot;/>&lt;/ERRORDETAIL>&lt;ERRORTIMESTAMP>&lt;xsl:value-of select=&quot;current-dateTime()&quot;/>&lt;/ERRORTIMESTAMP>&lt;ORIGINALMESSAGE>&lt;xsl:value-of select=&quot;tib:render-xml($Start,false(),true())&quot;/>&lt;/ORIGINALMESSAGE>&lt;/tns9:auditErrorElement>&lt;/tns9:LogAudit>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
-                            </tibex:inputBindings>
-                        </bpws:throw>
-                    </bpws:flow>
-                </bpws:scope>
-            </bpws:catchAll>
-        </bpws:faultHandlers>
         <bpws:flow name="flow">
             <bpws:links>
-                <bpws:link name="getTestataByGUIDToCopy_1_LogStart" tibex:linkType="SUCCESS"/>
                 <bpws:link name="StartToLoggingWrapper" tibex:linkType="SUCCESS"/>
-                <bpws:link name="LoggingWrapperTogetTestataByGUID" tibex:linkType="SUCCESS"/>
-                <bpws:link name="Copy_1_LogStartToEnd" tibex:linkType="SUCCESS"/>
-                <bpws:link name="MapperToCopy_1_LogStart" tibex:linkType="SUCCESS"/>
+                <bpws:link
+                    name="retrieveTestataContrattoByIdContrattoToGetTestataByGuidTDC" tibex:linkType="SUCCESS"/>
+                <bpws:link
+                    name="setIdContrattoToretrieveTestataContrattoByIdContratto" tibex:linkType="SUCCESS"/>
+                <bpws:link name="GetTestataByGuidTDCToLoggingWrapper" tibex:linkType="SUCCESS"/>
+                <bpws:link name="LogStartTosetIdContratto" tibex:linkType="SUCCESS"/>
+                <bpws:link name="LogDebugToEnd" tibex:linkType="SUCCESS"/>
             </bpws:links>
             <bpws:extensionActivity>
                 <tibex:receiveEvent createInstance="yes"
                     eventTimeout="0" name="Start"
-                    tibex:xpdlId="290e44ae-1218-4582-93ab-3606191d41e9"
+                    tibex:xpdlId="86f6b258-aef8-41df-a1ae-a1c0b4e0c804"
                     variable="Start" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                     <bpws:sources>
                         <bpws:source linkName="StartToLoggingWrapper"/>
@@ -1602,14 +1462,14 @@
             </bpws:extensionActivity>
             <bpws:extensionActivity>
                 <tibex:activityExtension inputVariable="End-input"
-                    name="End" tibex:copyOf="MapResponse"
-                    tibex:xpdlId="6e23e1b3-274a-4f62-8440-46f5bfc15b90" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                    name="End"
+                    tibex:xpdlId="8b59e7f7-3905-4081-9fad-d72fce606e57" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                     <bpws:targets>
-                        <bpws:target linkName="Copy_1_LogStartToEnd"/>
+                        <bpws:target linkName="LogDebugToEnd"/>
                     </bpws:targets>
                     <tibex:inputBindings>
                         <tibex:inputBinding
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns7=&quot;http://it.linkem/crm/getTestataContrattoByGuidTDC/sl/xsd&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;MapResponse&quot;/>&lt;xsl:template name=&quot;End-input&quot; match=&quot;/&quot;>&lt;xsl:copy-of select=&quot;$MapResponse&quot;/>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://it.linkem/crm/getTestataContrattoByGuidTDC/sl/xsd&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;GetTestataByGuidTDC&quot;/>&lt;xsl:template name=&quot;End-input&quot; match=&quot;/&quot;>&lt;tns:GetTestataContrattoByIdContratto_Output>&lt;xsl:copy-of select=&quot;$GetTestataByGuidTDC/tns:TestataDelContratto&quot;/>&lt;tns:ResponseCode>&lt;xsl:value-of select=&quot;&amp;quot;000000&amp;quot;&quot;/>&lt;/tns:ResponseCode>&lt;/tns:GetTestataContrattoByIdContratto_Output>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:config>
                         <bwext:BWActivity
@@ -1629,32 +1489,33 @@
             </bpws:extensionActivity>
             <bpws:extensionActivity>
                 <tibex:activityExtension
-                    inputVariable="getTestataByGUID-input"
-                    name="getTestataByGUID"
-                    outputVariable="getTestataByGUID"
-                    tibex:xpdlId="d656c57d-65f6-405c-9e99-302e21f8ced7" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                    inputVariable="retrieveTestataContrattoByIdContratto-input"
+                    name="retrieveTestataContrattoByIdContratto"
+                    outputVariable="retrieveTestataContrattoByIdContratto"
+                    tibex:xpdlId="62143d10-772e-4053-9b04-08ee524167d8" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                     <bpws:targets>
-                        <bpws:target linkName="LoggingWrapperTogetTestataByGUID"/>
+                        <bpws:target linkName="setIdContrattoToretrieveTestataContrattoByIdContratto"/>
                     </bpws:targets>
                     <bpws:sources>
-                        <bpws:source linkName="getTestataByGUIDToCopy_1_LogStart"/>
+                        <bpws:source linkName="retrieveTestataContrattoByIdContrattoToGetTestataByGuidTDC"/>
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns5=&quot;http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrieve+d656c57d-65f6-405c-9e99-302e21f8ced7+input&quot; xmlns:tns7=&quot;http://it.linkem/crm/getTestataContrattoByGuidTDC/sl/xsd&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;Start&quot;/>&#xa;    &lt;xsl:template name=&quot;getTestataByGUID-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns5:Entities>&#xa;            &lt;lnk_testatadelcontratto>&#xa;                &lt;lnk_testatadelcontrattoid>&#xa;                    &lt;xsl:value-of select=&quot;$Start/tns7:guid_TDC&quot;/>&#xa;                &lt;/lnk_testatadelcontrattoid>&#xa;            &lt;/lnk_testatadelcontratto>&#xa;        &lt;/tns5:Entities>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns1=&quot;http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/retrievemultiple+62143d10-772e-4053-9b04-08ee524167d8+input&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;idContratto&quot;/>&lt;xsl:template name=&quot;retrieveTestataContrattoByIdContratto-input&quot; match=&quot;/&quot;>&lt;tns1:Entities>&lt;lnk_testatadelcontratto>&lt;FetchXML>&lt;xsl:value-of select=&quot;concat('&amp;lt;fetch version=&amp;quot;1.0&amp;quot; output-format=&amp;quot;xml-platform&amp;quot; mapping=&amp;quot;logical&amp;quot; distinct=&amp;quot;false&amp;quot;>&amp;#x9;&amp;lt;entity name=&amp;quot;lnk_testatadelcontratto&amp;quot;>&amp;#x9;&amp;#x9;&amp;lt;attribute name=&amp;quot;lnk_name&amp;quot;/>&amp;#x9;&amp;#x9;&amp;lt;attribute name=&amp;quot;lnk_testatadelcontrattoid&amp;quot;/>&amp;#x9;&amp;#x9;&amp;lt;order attribute=&amp;quot;lnk_name&amp;quot; descending=&amp;quot;false&amp;quot;/>&amp;#x9;&amp;#x9;&amp;lt;filter type=&amp;quot;and&amp;quot;>&amp;#x9;&amp;#x9;&amp;#x9;&amp;lt;condition attribute=&amp;quot;lnk_name&amp;quot; operator=&amp;quot;eq&amp;quot; value=&amp;quot;',$idContratto,'&amp;quot;/>&amp;#x9;&amp;#x9;&amp;lt;/filter>&amp;#x9;&amp;lt;/entity>&amp;lt;/fetch>')&quot;/>&lt;/FetchXML>&lt;/lnk_testatadelcontratto>&lt;/tns1:Entities>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:config>
                         <bwext:BWActivity
-                            activityTypeID="bw.dynamicscrm.RetrieveEntity"
+                            activityTypeID="bw.dynamicscrm.RetrieveMultipleEntity"
                             xmlns:activityconfig="http://tns.tibco.com/bw/model/activityconfig"
                             xmlns:bwext="http://tns.tibco.com/bw/model/core/bwext"
                             xmlns:dynamicscrm="http://ns.tibco.com/bw/palette/dynamicscrm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                             <activityConfig>
                                 <properties name="config" xsi:type="activityconfig:EMFProperty">
-                                    <type href="http://ns.tibco.com/bw/palette/dynamicscrm#//RetrieveEntity"/>
+                                    <type href="http://ns.tibco.com/bw/palette/dynamicscrm#//RetrieveMultipleEntity"/>
                                     <value
                                     dynamicscrmConnection="dynamicsCRMConnection"
-                                    dynamicscrmEntityOption="Contratto testata (R)(lnk_testatadelcontratto)" xsi:type="dynamicscrm:RetrieveEntity">
+                                    dynamicscrmEntityOption="Contratto testata (R)(lnk_testatadelcontratto)"
+                                    retrieveType="FetchXML" xsi:type="dynamicscrm:RetrieveMultipleEntity">
                                     <entitymetadatatamap key="lnk_canaledivenditaname">
                                     <value CRMType="Virtual"
                                     EntityLogicalName="lnk_testatadelcontratto"
@@ -1959,7 +1820,7 @@
                                     asOutput="true"
                                     attributeOf="null"
                                     changeable="true"
-                                    displayName="Note per IT"
+                                    displayName="Note per Telecom"
                                     logicName="lnk_notetelecom"
                                     requried="None"
                                     schemaName="lnk_notetelecom"
@@ -2065,7 +1926,7 @@
                                     asOutput="true"
                                     attributeOf="null"
                                     changeable="true"
-                                    displayName="Estrazione per sconto al Portatore"
+                                    displayName="Estrazione per sconto al Portato"
                                     logicName="lnk_estrazioneportatore"
                                     requried="None"
                                     schemaName="lnk_estrazioneportatore"
@@ -2143,7 +2004,6 @@
                                     <value
                                     CRMType="Uniqueidentifier"
                                     EntityLogicalName="lnk_testatadelcontratto"
-                                    asInput="true"
                                     asOutput="true"
                                     attributeOf="null"
                                     displayName="Testata del Contratto"
@@ -2421,7 +2281,7 @@
                                     asOutput="true"
                                     attributeOf="null"
                                     changeable="true"
-                                    displayName="Data creazione record"
+                                    displayName="Civico"
                                     logicName="overriddencreatedon"
                                     requried="None"
                                     schemaName="OverriddenCreatedOn"
@@ -2944,7 +2804,7 @@
                                     asOutput="true"
                                     attributeOf="null"
                                     changeable="true"
-                                    displayName="Nazione CPE"
+                                    displayName="Nazione"
                                     logicName="lnk_cpenazione"
                                     requried="None"
                                     schemaName="lnk_cpenazione"
@@ -3134,7 +2994,7 @@
                                     asOutput="true"
                                     attributeOf="null"
                                     changeable="true"
-                                    displayName="Welcome Call Effettuata"
+                                    displayName="Welcome Call effettuata"
                                     logicName="lnk_welcomecalleffettuata"
                                     requried="None"
                                     schemaName="lnk_welcomecalleffettuata"
@@ -3608,7 +3468,7 @@
                                     asOutput="true"
                                     attributeOf="null"
                                     changeable="true"
-                                    displayName="Fidelity Code"
+                                    displayName="Codice Fedeltà"
                                     logicName="lnk_fidelitycode"
                                     requried="None"
                                     schemaName="lnk_fidelitycode"
@@ -3884,7 +3744,7 @@
                                     asOutput="true"
                                     attributeOf="null"
                                     changeable="true"
-                                    displayName="Originating Lead"
+                                    displayName="Lead di Origine"
                                     logicName="lnk_originatingleadid"
                                     requried="None"
                                     schemaName="lnk_originatingleadid"
@@ -4128,7 +3988,7 @@
                                     asOutput="true"
                                     attributeOf="null"
                                     changeable="true"
-                                    displayName="Città CPE"
+                                    displayName="Città"
                                     logicName="lnk_cpecitta"
                                     requried="None"
                                     schemaName="lnk_cpecitta"
@@ -4383,7 +4243,7 @@
                                     asOutput="true"
                                     attributeOf="null"
                                     changeable="true"
-                                    displayName="Gestione amministrativa"
+                                    displayName="Gestione Amministrativa"
                                     logicName="lnk_gestioneamministrativa"
                                     requried="None"
                                     schemaName="lnk_gestioneamministrativa"
@@ -4713,7 +4573,7 @@
                                     asOutput="true"
                                     attributeOf="null"
                                     changeable="true"
-                                    displayName="Sotto Stato OLD"
+                                    displayName="Sotto Stato"
                                     logicName="lnk_sottostato"
                                     requried="None"
                                     schemaName="lnk_sottostato"
@@ -5139,19 +4999,70 @@
                 </tibex:activityExtension>
             </bpws:extensionActivity>
             <bpws:extensionActivity>
+                <tibex:activityExtension inputVariable="idContratto"
+                    name="setIdContratto" outputVariable="idContratto"
+                    tibex:xpdlId="a1a80fd8-49b2-4fd9-94d3-fb821e4dda45" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                    <bpws:targets>
+                        <bpws:target linkName="LogStartTosetIdContratto"/>
+                    </bpws:targets>
+                    <bpws:sources>
+                        <bpws:source linkName="setIdContrattoToretrieveTestataContrattoByIdContratto"/>
+                    </bpws:sources>
+                    <tibex:inputBindings>
+                        <tibex:inputBinding
+                            expression="$Start/ns3:idContratto" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"/>
+                    </tibex:inputBindings>
+                    <tibex:config>
+                        <bwext:BWActivity
+                            activityTypeID="bw.generalactivities.bwassign"
+                            xmlns:activityconfig="http://tns.tibco.com/bw/model/activityconfig"
+                            xmlns:bwext="http://tns.tibco.com/bw/model/core/bwext"
+                            xmlns:generalactivities="http://ns.tibco.com/bw/palette/generalactivities" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                            <activityConfig>
+                                <properties name="config" xsi:type="activityconfig:EMFProperty">
+                                    <type href="http://ns.tibco.com/bw/palette/generalactivities#//BWAssign"/>
+                                    <value processVariable="idContratto" xsi:type="generalactivities:BWAssign"/>
+                                </properties>
+                            </activityConfig>
+                        </bwext:BWActivity>
+                    </tibex:config>
+                </tibex:activityExtension>
+            </bpws:extensionActivity>
+            <bpws:extensionActivity>
+                <tibex:extActivity
+                    inputVariable="GetTestataByGuidTDC-input"
+                    name="GetTestataByGuidTDC"
+                    outputVariable="GetTestataByGuidTDC"
+                    tibex:xpdlId="35af8a4d-d12c-450b-89ec-6740f2e4318a"
+                    type="bw.generalactivities.callprocess" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                    <bpws:targets>
+                        <bpws:target linkName="retrieveTestataContrattoByIdContrattoToGetTestataByGuidTDC"/>
+                    </bpws:targets>
+                    <bpws:sources>
+                        <bpws:source linkName="GetTestataByGuidTDCToLoggingWrapper"/>
+                    </bpws:sources>
+                    <tibex:inputBindings>
+                        <tibex:inputBinding coercion=""
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://it.linkem/crm/getTestataContrattoByGuidTDC/sl/xsd&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;retrieveTestataContrattoByIdContratto&quot;/>&lt;xsl:template name=&quot;GetTestataByGuidTDC-input&quot; match=&quot;/&quot;>&lt;tns:GetTestataContrattoByGuidTDC_Input>&lt;tns:guid_TDC>&lt;xsl:value-of select=&quot;$retrieveTestataContrattoByIdContratto/List[1]/lnk_testatadelcontratto[1]/lnk_testatadelcontrattoid&quot;/>&lt;/tns:guid_TDC>&lt;/tns:GetTestataContrattoByGuidTDC_Input>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                    </tibex:inputBindings>
+                    <tibex:CallProcess
+                        subProcessName="it.linkem.crm.microsoftDynamics.sl.GetTestataByGuidTDC" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
+                </tibex:extActivity>
+            </bpws:extensionActivity>
+            <bpws:extensionActivity>
                 <tibex:extActivity inputVariable="LogStart-input"
                     name="LogStart" outputVariable="LogStart"
-                    tibex:xpdlId="d295cb82-7995-48bd-88ec-a07be5df15b4"
+                    tibex:xpdlId="42e71627-2dca-4aaf-99b1-c9f45d30a386"
                     type="bw.generalactivities.callprocess" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                     <bpws:targets>
                         <bpws:target linkName="StartToLoggingWrapper"/>
                     </bpws:targets>
                     <bpws:sources>
-                        <bpws:source linkName="LoggingWrapperTogetTestataByGUID"/>
+                        <bpws:source linkName="LogStartTosetIdContratto"/>
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding coercion=""
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns9=&quot;http://it.linkem/common/core/lehf/AuditTypes/xsd&quot; xmlns:bw=&quot;http://www.tibco.com/bw/xpath/bw-custom-functions&quot; xmlns:tib=&quot;http://www.tibco.com/bw/xslt/custom-functions&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;Start&quot;/>&lt;xsl:param name=&quot;DEBUG_Severity&quot;/>&lt;xsl:template name=&quot;LogStart-input&quot; match=&quot;/&quot;>&lt;tns9:LogAudit>&lt;auditElement>&lt;SEVERITY>&lt;xsl:value-of select=&quot;$DEBUG_Severity&quot;/>&lt;/SEVERITY>&lt;PROCESSSTACK>&lt;xsl:value-of select=&quot;bw:getModuleProperty(&amp;quot;BW.PROCESS.STACK&amp;quot;)&quot;/>&lt;/PROCESSSTACK>&lt;LOGMESSAGE>&lt;xsl:value-of select=&quot;concat(bw:getModuleProperty(&amp;quot;BW.PROCESS.NAME&amp;quot;),&amp;quot; process started ** Input : &amp;quot;,tib:render-xml($Start,false(),true()))&quot;/>&lt;/LOGMESSAGE>&lt;/auditElement>&lt;/tns9:LogAudit>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://it.linkem/common/core/lehf/AuditTypes/xsd&quot; xmlns:bw=&quot;http://www.tibco.com/bw/xpath/bw-custom-functions&quot; xmlns:tib=&quot;http://www.tibco.com/bw/xslt/custom-functions&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;DEBUG_Severity&quot;/>&lt;xsl:param name=&quot;Start&quot;/>&lt;xsl:template name=&quot;LogStart-input&quot; match=&quot;/&quot;>&lt;tns:LogAudit>&lt;auditElement>&lt;SEVERITY>&lt;xsl:value-of select=&quot;$DEBUG_Severity&quot;/>&lt;/SEVERITY>&lt;PROCESSSTACK>&lt;xsl:value-of select=&quot;bw:getModuleProperty(&amp;quot;BW.PROCESS.STACK&amp;quot;)&quot;/>&lt;/PROCESSSTACK>&lt;LOGMESSAGE>&lt;xsl:value-of select=&quot;concat(&amp;quot;Start GetTestataContrattobyIdContratto&amp;quot;, tib:render-xml($Start,false(),true()))&quot;/>&lt;/LOGMESSAGE>&lt;/auditElement>&lt;/tns:LogAudit>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:CallProcess
                         moduleRef="it.linkem.common.core.lehf.sh"
@@ -5161,56 +5072,22 @@
             <bpws:extensionActivity>
                 <tibex:extActivity inputVariable="LogEnd-input"
                     name="LogEnd" outputVariable="LogEnd"
-                    tibex:xpdlId="1f353ef3-9df7-464a-babe-ffae9e7bcdb8"
+                    tibex:xpdlId="530cd944-c4a0-4ef3-9c0e-d84900c919ee"
                     type="bw.generalactivities.callprocess" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                     <bpws:targets>
-                        <bpws:target linkName="MapperToCopy_1_LogStart"/>
+                        <bpws:target linkName="GetTestataByGuidTDCToLoggingWrapper"/>
                     </bpws:targets>
                     <bpws:sources>
-                        <bpws:source linkName="Copy_1_LogStartToEnd"/>
+                        <bpws:source linkName="LogDebugToEnd"/>
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding coercion=""
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns9=&quot;http://it.linkem/common/core/lehf/AuditTypes/xsd&quot; xmlns:bw=&quot;http://www.tibco.com/bw/xpath/bw-custom-functions&quot; xmlns:tib=&quot;http://www.tibco.com/bw/xslt/custom-functions&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;DEBUG_Severity&quot;/>&lt;xsl:param name=&quot;MapResponse&quot;/>&lt;xsl:template name=&quot;LogEnd-input&quot; match=&quot;/&quot;>&lt;tns9:LogAudit>&lt;auditElement>&lt;SEVERITY>&lt;xsl:value-of select=&quot;$DEBUG_Severity&quot;/>&lt;/SEVERITY>&lt;PROCESSSTACK>&lt;xsl:value-of select=&quot;bw:getModuleProperty(&amp;quot;BW.PROCESS.STACK&amp;quot;)&quot;/>&lt;/PROCESSSTACK>&lt;LOGMESSAGE>&lt;xsl:value-of select=&quot;concat(&amp;quot;getTestataByGUID executed successfully .   Output : &amp;quot;,tib:render-xml($MapResponse,false(),true()))&quot;/>&lt;/LOGMESSAGE>&lt;/auditElement>&lt;/tns9:LogAudit>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://it.linkem/common/core/lehf/AuditTypes/xsd&quot; xmlns:bw=&quot;http://www.tibco.com/bw/xpath/bw-custom-functions&quot; xmlns:tib=&quot;http://www.tibco.com/bw/xslt/custom-functions&quot; xmlns:tns1=&quot;http://it.linkem/crm/getTestataContrattoByGuidTDC/sl/xsd&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;DEBUG_Severity&quot;/>&lt;xsl:param name=&quot;GetTestataByGuidTDC&quot;/>&lt;xsl:template name=&quot;LogEnd-input&quot; match=&quot;/&quot;>&lt;tns:LogAudit>&lt;auditElement>&lt;SEVERITY>&lt;xsl:value-of select=&quot;$DEBUG_Severity&quot;/>&lt;/SEVERITY>&lt;PROCESSSTACK>&lt;xsl:value-of select=&quot;bw:getModuleProperty(&amp;quot;BW.PROCESS.STACK&amp;quot;)&quot;/>&lt;/PROCESSSTACK>&lt;LOGMESSAGE>&lt;xsl:value-of select=&quot;concat(&amp;quot;END  GetTestataContrattobyIdContratto Process&amp;quot;, tib:render-xml($GetTestataByGuidTDC,false(),true()))&quot;/>&lt;/LOGMESSAGE>&lt;/auditElement>&lt;/tns:LogAudit>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:CallProcess
                         moduleRef="it.linkem.common.core.lehf.sh"
                         subProcessName="it.linkem.common.core.lehf.sh.LoggingWrapper" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
                 </tibex:extActivity>
-            </bpws:extensionActivity>
-            <bpws:extensionActivity>
-                <tibex:activityExtension
-                    inputVariable="MapResponse-input" name="MapResponse"
-                    outputVariable="MapResponse"
-                    tibex:xpdlId="54dce043-c510-4eed-a790-d9f7de4e2b6a" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
-                    <bpws:targets>
-                        <bpws:target linkName="getTestataByGUIDToCopy_1_LogStart"/>
-                    </bpws:targets>
-                    <bpws:sources>
-                        <bpws:source linkName="MapperToCopy_1_LogStart"/>
-                    </bpws:sources>
-                    <tibex:inputBindings>
-                        <tibex:inputBinding
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns7=&quot;http://it.linkem/crm/getTestataContrattoByGuidTDC/sl/xsd&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;getTestataByGUID&quot;/>&#xa;    &lt;xsl:template name=&quot;Mapper-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns7:GetTestataContrattoByGuidTDC_Output>&#xa;            &lt;xsl:for-each select=&quot;$getTestataByGUID/lnk_testatadelcontratto&quot;>&#xa;                &lt;tns7:TestataDelContratto>&#xa;                    &lt;xsl:if test=&quot;lnk_canaledivenditaname&quot;>&#xa;                        &lt;lnk_canaledivenditaname>&#xa;                            &lt;xsl:value-of select=&quot;lnk_canaledivenditaname&quot;/>&#xa;                        &lt;/lnk_canaledivenditaname>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_codiceordine&quot;>&#xa;                        &lt;lnk_codiceordine>&#xa;                            &lt;xsl:value-of select=&quot;lnk_codiceordine&quot;/>&#xa;                        &lt;/lnk_codiceordine>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_dataultimoaddebitook&quot;>&#xa;                        &lt;lnk_dataultimoaddebitook>&#xa;                            &lt;xsl:value-of select=&quot;lnk_dataultimoaddebitook&quot;/>&#xa;                        &lt;/lnk_dataultimoaddebitook>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_richiestapagamentosdd&quot;>&#xa;                        &lt;lnk_richiestapagamentosdd>&#xa;                            &lt;xsl:value-of select=&quot;lnk_richiestapagamentosdd&quot;/>&#xa;                        &lt;/lnk_richiestapagamentosdd>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_addebitoripetitivoattivato&quot;>&#xa;                        &lt;lnk_addebitoripetitivoattivato>&#xa;                            &lt;xsl:value-of select=&quot;lnk_addebitoripetitivoattivato&quot;/>&#xa;                        &lt;/lnk_addebitoripetitivoattivato>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:copy-of select=&quot;owninguser&quot;/>&#xa;                    &lt;xsl:if test=&quot;lnk_addebitoripetitivoattivatoname&quot;>&#xa;                        &lt;lnk_addebitoripetitivoattivatoname>&#xa;                            &lt;xsl:value-of select=&quot;lnk_addebitoripetitivoattivatoname&quot;/>&#xa;                        &lt;/lnk_addebitoripetitivoattivatoname>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_noteinfattura&quot;>&#xa;                        &lt;lnk_noteinfattura>&#xa;                            &lt;xsl:value-of select=&quot;lnk_noteinfattura&quot;/>&#xa;                        &lt;/lnk_noteinfattura>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_metodoconsegna&quot;>&#xa;                        &lt;lnk_metodoconsegna>&#xa;                            &lt;xsl:value-of select=&quot;lnk_metodoconsegna&quot;/>&#xa;                        &lt;/lnk_metodoconsegna>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:copy-of select=&quot;lnk_provinciacpeid&quot;/>&#xa;                    &lt;xsl:if test=&quot;lnk_unicafattura&quot;>&#xa;                        &lt;lnk_unicafattura>&#xa;                            &lt;xsl:value-of select=&quot;lnk_unicafattura&quot;/>&#xa;                        &lt;/lnk_unicafattura>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_ricezionedocumentilte&quot;>&#xa;                        &lt;lnk_ricezionedocumentilte>&#xa;                            &lt;xsl:value-of select=&quot;lnk_ricezionedocumentilte&quot;/>&#xa;                        &lt;/lnk_ricezionedocumentilte>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_statoprovisioning&quot;>&#xa;                        &lt;lnk_statoprovisioning>&#xa;                            &lt;xsl:value-of select=&quot;lnk_statoprovisioning&quot;/>&#xa;                        &lt;/lnk_statoprovisioning>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_cpenumerocivico&quot;>&#xa;                        &lt;lnk_cpenumerocivico>&#xa;                            &lt;xsl:value-of select=&quot;lnk_cpenumerocivico&quot;/>&#xa;                        &lt;/lnk_cpenumerocivico>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;statuscode&quot;>&#xa;                        &lt;statuscode>&#xa;                            &lt;xsl:value-of select=&quot;statuscode&quot;/>&#xa;                        &lt;/statuscode>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_name&quot;>&#xa;                        &lt;lnk_name>&#xa;                            &lt;xsl:value-of select=&quot;lnk_name&quot;/>&#xa;                        &lt;/lnk_name>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_spesedispedizionename&quot;>&#xa;                        &lt;lnk_spesedispedizionename>&#xa;                            &lt;xsl:value-of select=&quot;lnk_spesedispedizionename&quot;/>&#xa;                        &lt;/lnk_spesedispedizionename>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_statoaddebito&quot;>&#xa;                        &lt;lnk_statoaddebito>&#xa;                            &lt;xsl:value-of select=&quot;lnk_statoaddebito&quot;/>&#xa;                        &lt;/lnk_statoaddebito>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_spesedispedizione&quot;>&#xa;                        &lt;lnk_spesedispedizione>&#xa;                            &lt;xsl:value-of select=&quot;lnk_spesedispedizione&quot;/>&#xa;                        &lt;/lnk_spesedispedizione>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_verificadocumentilte&quot;>&#xa;                        &lt;lnk_verificadocumentilte>&#xa;                            &lt;xsl:value-of select=&quot;lnk_verificadocumentilte&quot;/>&#xa;                        &lt;/lnk_verificadocumentilte>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_skipcpcheckname&quot;>&#xa;                        &lt;lnk_skipcpcheckname>&#xa;                            &lt;xsl:value-of select=&quot;lnk_skipcpcheckname&quot;/>&#xa;                        &lt;/lnk_skipcpcheckname>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:copy-of select=&quot;lnk_primocontrattoid&quot;/>&#xa;                    &lt;xsl:if test=&quot;lnk_notetelecom&quot;>&#xa;                        &lt;lnk_notetelecom>&#xa;                            &lt;xsl:value-of select=&quot;lnk_notetelecom&quot;/>&#xa;                        &lt;/lnk_notetelecom>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:copy-of select=&quot;lnk_businesspartnerbpid&quot;/>&#xa;                    &lt;xsl:copy-of select=&quot;lnk_modalitadivenditaid&quot;/>&#xa;                    &lt;xsl:copy-of select=&quot;lnk_telefonataid&quot;/>&#xa;                    &lt;xsl:if test=&quot;lnk_contrattopredefinitoname&quot;>&#xa;                        &lt;lnk_contrattopredefinitoname>&#xa;                            &lt;xsl:value-of select=&quot;lnk_contrattopredefinitoname&quot;/>&#xa;                        &lt;/lnk_contrattopredefinitoname>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;timezoneruleversionnumber&quot;>&#xa;                        &lt;timezoneruleversionnumber>&#xa;                            &lt;xsl:value-of select=&quot;timezoneruleversionnumber&quot;/>&#xa;                        &lt;/timezoneruleversionnumber>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;createdonbehalfbyname&quot;>&#xa;                        &lt;createdonbehalfbyname>&#xa;                            &lt;xsl:value-of select=&quot;createdonbehalfbyname&quot;/>&#xa;                        &lt;/createdonbehalfbyname>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_doc_turbo_archiviataname&quot;>&#xa;                        &lt;lnk_doc_turbo_archiviataname>&#xa;                            &lt;xsl:value-of select=&quot;lnk_doc_turbo_archiviataname&quot;/>&#xa;                        &lt;/lnk_doc_turbo_archiviataname>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_estrazioneportatore&quot;>&#xa;                        &lt;lnk_estrazioneportatore>&#xa;                            &lt;xsl:value-of select=&quot;lnk_estrazioneportatore&quot;/>&#xa;                        &lt;/lnk_estrazioneportatore>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_capspedfattura&quot;>&#xa;                        &lt;lnk_capspedfattura>&#xa;                            &lt;xsl:value-of select=&quot;lnk_capspedfattura&quot;/>&#xa;                        &lt;/lnk_capspedfattura>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:copy-of select=&quot;ownerid&quot;/>&#xa;                    &lt;xsl:if test=&quot;lnk_primocontrattoidname&quot;>&#xa;                        &lt;lnk_primocontrattoidname>&#xa;                            &lt;xsl:value-of select=&quot;lnk_primocontrattoidname&quot;/>&#xa;                        &lt;/lnk_primocontrattoidname>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:copy-of select=&quot;lnk_paesecpeid&quot;/>&#xa;                    &lt;xsl:if test=&quot;lnk_capidname&quot;>&#xa;                        &lt;lnk_capidname>&#xa;                            &lt;xsl:value-of select=&quot;lnk_capidname&quot;/>&#xa;                        &lt;/lnk_capidname>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_testatadelcontrattoid&quot;>&#xa;                        &lt;lnk_testatadelcontrattoid>&#xa;                            &lt;xsl:value-of select=&quot;lnk_testatadelcontrattoid&quot;/>&#xa;                        &lt;/lnk_testatadelcontrattoid>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:copy-of select=&quot;owningbusinessunit&quot;/>&#xa;                    &lt;xsl:if test=&quot;lnk_prov_extid&quot;>&#xa;                        &lt;lnk_prov_extid>&#xa;                            &lt;xsl:value-of select=&quot;lnk_prov_extid&quot;/>&#xa;                        &lt;/lnk_prov_extid>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_macaddress&quot;>&#xa;                        &lt;lnk_macaddress>&#xa;                            &lt;xsl:value-of select=&quot;lnk_macaddress&quot;/>&#xa;                        &lt;/lnk_macaddress>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;createdbyyominame&quot;>&#xa;                        &lt;createdbyyominame>&#xa;                            &lt;xsl:value-of select=&quot;createdbyyominame&quot;/>&#xa;                        &lt;/createdbyyominame>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_identificativofferta&quot;>&#xa;                        &lt;lnk_identificativofferta>&#xa;                            &lt;xsl:value-of select=&quot;lnk_identificativofferta&quot;/>&#xa;                        &lt;/lnk_identificativofferta>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_codiceattivazioneweb&quot;>&#xa;                        &lt;lnk_codiceattivazioneweb>&#xa;                            &lt;xsl:value-of select=&quot;lnk_codiceattivazioneweb&quot;/>&#xa;                        &lt;/lnk_codiceattivazioneweb>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_civico&quot;>&#xa;                        &lt;lnk_civico>&#xa;                            &lt;xsl:value-of select=&quot;lnk_civico&quot;/>&#xa;                        &lt;/lnk_civico>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;owneridyominame&quot;>&#xa;                        &lt;owneridyominame>&#xa;                            &lt;xsl:value-of select=&quot;owneridyominame&quot;/>&#xa;                        &lt;/owneridyominame>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_morosoname&quot;>&#xa;                        &lt;lnk_morosoname>&#xa;                            &lt;xsl:value-of select=&quot;lnk_morosoname&quot;/>&#xa;                        &lt;/lnk_morosoname>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_cittaspedfattura&quot;>&#xa;                        &lt;lnk_cittaspedfattura>&#xa;                            &lt;xsl:value-of select=&quot;lnk_cittaspedfattura&quot;/>&#xa;                        &lt;/lnk_cittaspedfattura>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;statecode&quot;>&#xa;                        &lt;statecode>&#xa;                            &lt;xsl:value-of select=&quot;statecode&quot;/>&#xa;                        &lt;/statecode>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_cig&quot;>&#xa;                        &lt;lnk_cig>&#xa;                            &lt;xsl:value-of select=&quot;lnk_cig&quot;/>&#xa;                        &lt;/lnk_cig>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:copy-of select=&quot;lnk_capid&quot;/>&#xa;                    &lt;xsl:if test=&quot;lnk_tipocontrattoname&quot;>&#xa;                        &lt;lnk_tipocontrattoname>&#xa;                            &lt;xsl:value-of select=&quot;lnk_tipocontrattoname&quot;/>&#xa;                        &lt;/lnk_tipocontrattoname>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_sottostatoname&quot;>&#xa;                        &lt;lnk_sottostatoname>&#xa;                            &lt;xsl:value-of select=&quot;lnk_sottostatoname&quot;/>&#xa;                        &lt;/lnk_sottostatoname>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_cpeprovincia&quot;>&#xa;                        &lt;lnk_cpeprovincia>&#xa;                            &lt;xsl:value-of select=&quot;lnk_cpeprovincia&quot;/>&#xa;                        &lt;/lnk_cpeprovincia>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_verificadatiltename&quot;>&#xa;                        &lt;lnk_verificadatiltename>&#xa;                            &lt;xsl:value-of select=&quot;lnk_verificadatiltename&quot;/>&#xa;                        &lt;/lnk_verificadatiltename>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_pagamentotransactionid&quot;>&#xa;                        &lt;lnk_pagamentotransactionid>&#xa;                            &lt;xsl:value-of select=&quot;lnk_pagamentotransactionid&quot;/>&#xa;                        &lt;/lnk_pagamentotransactionid>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_businesspartneryominame&quot;>&#xa;                        &lt;lnk_businesspartneryominame>&#xa;                            &lt;xsl:value-of select=&quot;lnk_businesspartneryominame&quot;/>&#xa;                        &lt;/lnk_businesspartneryominame>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_gestioneamministrativaname&quot;>&#xa;                        &lt;lnk_gestioneamministrativaname>&#xa;                            &lt;xsl:value-of select=&quot;lnk_gestioneamministrativaname&quot;/>&#xa;                        &lt;/lnk_gestioneamministrativaname>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;overriddencreatedon&quot;>&#xa;                        &lt;overriddencreatedon>&#xa;                            &lt;xsl:value-of select=&quot;overriddencreatedon&quot;/>&#xa;                        &lt;/overriddencreatedon>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_sottostatoidname&quot;>&#xa;                        &lt;lnk_sottostatoidname>&#xa;                            &lt;xsl:value-of select=&quot;lnk_sottostatoidname&quot;/>&#xa;                        &lt;/lnk_sottostatoidname>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_codiceservizioaggiuntivoinviato&quot;>&#xa;                        &lt;lnk_codiceservizioaggiuntivoinviato>&#xa;                            &lt;xsl:value-of select=&quot;lnk_codiceservizioaggiuntivoinviato&quot;/>&#xa;                        &lt;/lnk_codiceservizioaggiuntivoinviato>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;dynamics_integrationkey&quot;>&#xa;                        &lt;dynamics_integrationkey>&#xa;                            &lt;xsl:value-of select=&quot;dynamics_integrationkey&quot;/>&#xa;                        &lt;/dynamics_integrationkey>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:copy-of select=&quot;lnk_comunecpeid&quot;/>&#xa;                    &lt;xsl:if test=&quot;lnk_visibilitacontrattoareaclientiname&quot;>&#xa;                        &lt;lnk_visibilitacontrattoareaclientiname>&#xa;                            &lt;xsl:value-of select=&quot;lnk_visibilitacontrattoareaclientiname&quot;/>&#xa;                        &lt;/lnk_visibilitacontrattoareaclientiname>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;modifiedbyyominame&quot;>&#xa;                        &lt;modifiedbyyominame>&#xa;                            &lt;xsl:value-of select=&quot;modifiedbyyominame&quot;/>&#xa;                        &lt;/modifiedbyyominame>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_origineidname&quot;>&#xa;                        &lt;lnk_origineidname>&#xa;                            &lt;xsl:value-of select=&quot;lnk_origineidname&quot;/>&#xa;                        &lt;/lnk_origineidname>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_dataultimarichiestaaddebito&quot;>&#xa;                        &lt;lnk_dataultimarichiestaaddebito>&#xa;                            &lt;xsl:value-of select=&quot;lnk_dataultimarichiestaaddebito&quot;/>&#xa;                        &lt;/lnk_dataultimarichiestaaddebito>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_prov_data&quot;>&#xa;                        &lt;lnk_prov_data>&#xa;                            &lt;xsl:value-of select=&quot;lnk_prov_data&quot;/>&#xa;                        &lt;/lnk_prov_data>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:copy-of select=&quot;lnk_statocorrenteid&quot;/>&#xa;                    &lt;xsl:if test=&quot;versionnumber&quot;>&#xa;                        &lt;versionnumber>&#xa;                            &lt;xsl:value-of select=&quot;versionnumber&quot;/>&#xa;                        &lt;/versionnumber>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_businesspartnerbpidname&quot;>&#xa;                        &lt;lnk_businesspartnerbpidname>&#xa;                            &lt;xsl:value-of select=&quot;lnk_businesspartnerbpidname&quot;/>&#xa;                        &lt;/lnk_businesspartnerbpidname>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_aliasareaclienti&quot;>&#xa;                        &lt;lnk_aliasareaclienti>&#xa;                            &lt;xsl:value-of select=&quot;lnk_aliasareaclienti&quot;/>&#xa;                        &lt;/lnk_aliasareaclienti>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_descrizione&quot;>&#xa;                        &lt;lnk_descrizione>&#xa;                            &lt;xsl:value-of select=&quot;lnk_descrizione&quot;/>&#xa;                        &lt;/lnk_descrizione>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_prepagataname&quot;>&#xa;                        &lt;lnk_prepagataname>&#xa;                            &lt;xsl:value-of select=&quot;lnk_prepagataname&quot;/>&#xa;                        &lt;/lnk_prepagataname>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_status&quot;>&#xa;                        &lt;lnk_status>&#xa;                            &lt;xsl:value-of select=&quot;lnk_status&quot;/>&#xa;                        &lt;/lnk_status>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_canaledivendita&quot;>&#xa;                        &lt;lnk_canaledivendita>&#xa;                            &lt;xsl:value-of select=&quot;lnk_canaledivendita&quot;/>&#xa;                        &lt;/lnk_canaledivendita>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_statusname&quot;>&#xa;                        &lt;lnk_statusname>&#xa;                            &lt;xsl:value-of select=&quot;lnk_statusname&quot;/>&#xa;                        &lt;/lnk_statusname>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_costidisattivazionename&quot;>&#xa;                        &lt;lnk_costidisattivazionename>&#xa;                            &lt;xsl:value-of select=&quot;lnk_costidisattivazionename&quot;/>&#xa;                        &lt;/lnk_costidisattivazionename>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_statoaddebitoname&quot;>&#xa;                        &lt;lnk_statoaddebitoname>&#xa;                            &lt;xsl:value-of select=&quot;lnk_statoaddebitoname&quot;/>&#xa;                        &lt;/lnk_statoaddebitoname>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_contrattooutdoorname&quot;>&#xa;                        &lt;lnk_contrattooutdoorname>&#xa;                            &lt;xsl:value-of select=&quot;lnk_contrattooutdoorname&quot;/>&#xa;                        &lt;/lnk_contrattooutdoorname>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_tipodicontrattoname&quot;>&#xa;                        &lt;lnk_tipodicontrattoname>&#xa;                            &lt;xsl:value-of select=&quot;lnk_tipodicontrattoname&quot;/>&#xa;                        &lt;/lnk_tipodicontrattoname>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_tipostradaattivazione&quot;>&#xa;                        &lt;lnk_tipostradaattivazione>&#xa;                            &lt;xsl:value-of select=&quot;lnk_tipostradaattivazione&quot;/>&#xa;                        &lt;/lnk_tipostradaattivazione>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_moroso&quot;>&#xa;                        &lt;lnk_moroso>&#xa;                            &lt;xsl:value-of select=&quot;lnk_moroso&quot;/>&#xa;                        &lt;/lnk_moroso>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:copy-of select=&quot;createdby&quot;/>&#xa;                    &lt;xsl:if test=&quot;lnk_descrizioneko&quot;>&#xa;                        &lt;lnk_descrizioneko>&#xa;                            &lt;xsl:value-of select=&quot;lnk_descrizioneko&quot;/>&#xa;                        &lt;/lnk_descrizioneko>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:copy-of select=&quot;owningteam&quot;/>&#xa;                    &lt;xsl:if test=&quot;lnk_costimancatarestituzioneapparatoname&quot;>&#xa;                        &lt;lnk_costimancatarestituzioneapparatoname>&#xa;                            &lt;xsl:value-of select=&quot;lnk_costimancatarestituzioneapparatoname&quot;/>&#xa;                        &lt;/lnk_costimancatarestituzioneapparatoname>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_comunecpeidname&quot;>&#xa;                        &lt;lnk_comunecpeidname>&#xa;                            &lt;xsl:value-of select=&quot;lnk_comunecpeidname&quot;/>&#xa;                        &lt;/lnk_comunecpeidname>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_prefissocliadsl&quot;>&#xa;                        &lt;lnk_prefissocliadsl>&#xa;                            &lt;xsl:value-of select=&quot;lnk_prefissocliadsl&quot;/>&#xa;                        &lt;/lnk_prefissocliadsl>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_modellocpe&quot;>&#xa;                        &lt;lnk_modellocpe>&#xa;                            &lt;xsl:value-of select=&quot;lnk_modellocpe&quot;/>&#xa;                        &lt;/lnk_modellocpe>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_dataricezioneraccomandata&quot;>&#xa;                        &lt;lnk_dataricezioneraccomandata>&#xa;                            &lt;xsl:value-of select=&quot;lnk_dataricezioneraccomandata&quot;/>&#xa;                        &lt;/lnk_dataricezioneraccomandata>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_bts&quot;>&#xa;                        &lt;lnk_bts>&#xa;                            &lt;xsl:value-of select=&quot;lnk_bts&quot;/>&#xa;                        &lt;/lnk_bts>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_verificadocumentiltename&quot;>&#xa;                        &lt;lnk_verificadocumentiltename>&#xa;                            &lt;xsl:value-of select=&quot;lnk_verificadocumentiltename&quot;/>&#xa;                        &lt;/lnk_verificadocumentiltename>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_statoattivazioneridname&quot;>&#xa;                        &lt;lnk_statoattivazioneridname>&#xa;                            &lt;xsl:value-of select=&quot;lnk_statoattivazioneridname&quot;/>&#xa;                        &lt;/lnk_statoattivazioneridname>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_costimancatarestituzioneapparato&quot;>&#xa;                        &lt;lnk_costimancatarestituzioneapparato>&#xa;                            &lt;xsl:value-of select=&quot;lnk_costimancatarestituzioneapparato&quot;/>&#xa;                        &lt;/lnk_costimancatarestituzioneapparato>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_citta&quot;>&#xa;                        &lt;lnk_citta>&#xa;                            &lt;xsl:value-of select=&quot;lnk_citta&quot;/>&#xa;                        &lt;/lnk_citta>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;owneridtype&quot;>&#xa;                        &lt;owneridtype>&#xa;                            &lt;xsl:value-of select=&quot;owneridtype&quot;/>&#xa;                        &lt;/owneridtype>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_errorepayback&quot;>&#xa;                        &lt;lnk_errorepayback>&#xa;                            &lt;xsl:value-of select=&quot;lnk_errorepayback&quot;/>&#xa;                        &lt;/lnk_errorepayback>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_cpenazione&quot;>&#xa;                        &lt;lnk_cpenazione>&#xa;                            &lt;xsl:value-of select=&quot;lnk_cpenazione&quot;/>&#xa;                        &lt;/lnk_cpenazione>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_cperegione&quot;>&#xa;                        &lt;lnk_cperegione>&#xa;                            &lt;xsl:value-of select=&quot;lnk_cperegione&quot;/>&#xa;                        &lt;/lnk_cperegione>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_statopayback&quot;>&#xa;                        &lt;lnk_statopayback>&#xa;                            &lt;xsl:value-of select=&quot;lnk_statopayback&quot;/>&#xa;                        &lt;/lnk_statopayback>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:copy-of select=&quot;lnk_causalebloccofatturazione&quot;/>&#xa;                    &lt;xsl:if test=&quot;lnk_cup&quot;>&#xa;                        &lt;lnk_cup>&#xa;                            &lt;xsl:value-of select=&quot;lnk_cup&quot;/>&#xa;                        &lt;/lnk_cup>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_ipstatico&quot;>&#xa;                        &lt;lnk_ipstatico>&#xa;                            &lt;xsl:value-of select=&quot;lnk_ipstatico&quot;/>&#xa;                        &lt;/lnk_ipstatico>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_regioneidname&quot;>&#xa;                        &lt;lnk_regioneidname>&#xa;                            &lt;xsl:value-of select=&quot;lnk_regioneidname&quot;/>&#xa;                        &lt;/lnk_regioneidname>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_statoattivazionerid&quot;>&#xa;                        &lt;lnk_statoattivazionerid>&#xa;                            &lt;xsl:value-of select=&quot;lnk_statoattivazionerid&quot;/>&#xa;                        &lt;/lnk_statoattivazionerid>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_capcpeidname&quot;>&#xa;                        &lt;lnk_capcpeidname>&#xa;                            &lt;xsl:value-of select=&quot;lnk_capcpeidname&quot;/>&#xa;                        &lt;/lnk_capcpeidname>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_ipstaticoname&quot;>&#xa;                        &lt;lnk_ipstaticoname>&#xa;                            &lt;xsl:value-of select=&quot;lnk_ipstaticoname&quot;/>&#xa;                        &lt;/lnk_ipstaticoname>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_dataattivazione&quot;>&#xa;                        &lt;lnk_dataattivazione>&#xa;                            &lt;xsl:value-of select=&quot;lnk_dataattivazione&quot;/>&#xa;                        &lt;/lnk_dataattivazione>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_piano&quot;>&#xa;                        &lt;lnk_piano>&#xa;                            &lt;xsl:value-of select=&quot;lnk_piano&quot;/>&#xa;                        &lt;/lnk_piano>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_identificativoofferta&quot;>&#xa;                        &lt;lnk_identificativoofferta>&#xa;                            &lt;xsl:value-of select=&quot;lnk_identificativoofferta&quot;/>&#xa;                        &lt;/lnk_identificativoofferta>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_tipopagamentoca&quot;>&#xa;                        &lt;lnk_tipopagamentoca>&#xa;                            &lt;xsl:value-of select=&quot;lnk_tipopagamentoca&quot;/>&#xa;                        &lt;/lnk_tipopagamentoca>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_welcomecalleffettuata&quot;>&#xa;                        &lt;lnk_welcomecalleffettuata>&#xa;                            &lt;xsl:value-of select=&quot;lnk_welcomecalleffettuata&quot;/>&#xa;                        &lt;/lnk_welcomecalleffettuata>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_versionetemplatecontratto&quot;>&#xa;                        &lt;lnk_versionetemplatecontratto>&#xa;                            &lt;xsl:value-of select=&quot;lnk_versionetemplatecontratto&quot;/>&#xa;                        &lt;/lnk_versionetemplatecontratto>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_tipodicontratto&quot;>&#xa;                        &lt;lnk_tipodicontratto>&#xa;                            &lt;xsl:value-of select=&quot;lnk_tipodicontratto&quot;/>&#xa;                        &lt;/lnk_tipodicontratto>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_unicafatturaname&quot;>&#xa;                        &lt;lnk_unicafatturaname>&#xa;                            &lt;xsl:value-of select=&quot;lnk_unicafatturaname&quot;/>&#xa;                        &lt;/lnk_unicafatturaname>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_numeroclipilota&quot;>&#xa;                        &lt;lnk_numeroclipilota>&#xa;                            &lt;xsl:value-of select=&quot;lnk_numeroclipilota&quot;/>&#xa;                        &lt;/lnk_numeroclipilota>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_cpecivico&quot;>&#xa;                        &lt;lnk_cpecivico>&#xa;                            &lt;xsl:value-of select=&quot;lnk_cpecivico&quot;/>&#xa;                        &lt;/lnk_cpecivico>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_datafinevalidita&quot;>&#xa;                        &lt;lnk_datafinevalidita>&#xa;                            &lt;xsl:value-of select=&quot;lnk_datafinevalidita&quot;/>&#xa;                        &lt;/lnk_datafinevalidita>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_allegabolletinoccp&quot;>&#xa;                        &lt;lnk_allegabolletinoccp>&#xa;                            &lt;xsl:value-of select=&quot;lnk_allegabolletinoccp&quot;/>&#xa;                        &lt;/lnk_allegabolletinoccp>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:copy-of select=&quot;lnk_provinciaid&quot;/>&#xa;                    &lt;xsl:if test=&quot;createdbyname&quot;>&#xa;                        &lt;createdbyname>&#xa;                            &lt;xsl:value-of select=&quot;createdbyname&quot;/>&#xa;                        &lt;/createdbyname>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:copy-of select=&quot;lnk_fatturareanoid&quot;/>&#xa;                    &lt;xsl:if test=&quot;lnk_datainiziofatturazione&quot;>&#xa;                        &lt;lnk_datainiziofatturazione>&#xa;                            &lt;xsl:value-of select=&quot;lnk_datainiziofatturazione&quot;/>&#xa;                        &lt;/lnk_datainiziofatturazione>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_comuneidname&quot;>&#xa;                        &lt;lnk_comuneidname>&#xa;                            &lt;xsl:value-of select=&quot;lnk_comuneidname&quot;/>&#xa;                        &lt;/lnk_comuneidname>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_bloccofatturazione&quot;>&#xa;                        &lt;lnk_bloccofatturazione>&#xa;                            &lt;xsl:value-of select=&quot;lnk_bloccofatturazione&quot;/>&#xa;                        &lt;/lnk_bloccofatturazione>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_utenteadsl&quot;>&#xa;                        &lt;lnk_utenteadsl>&#xa;                            &lt;xsl:value-of select=&quot;lnk_utenteadsl&quot;/>&#xa;                        &lt;/lnk_utenteadsl>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_costidisattivazione&quot;>&#xa;                        &lt;lnk_costidisattivazione>&#xa;                            &lt;xsl:value-of select=&quot;lnk_costidisattivazione&quot;/>&#xa;                        &lt;/lnk_costidisattivazione>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;statecodename&quot;>&#xa;                        &lt;statecodename>&#xa;                            &lt;xsl:value-of select=&quot;statecodename&quot;/>&#xa;                        &lt;/statecodename>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_richiestapagamentosddname&quot;>&#xa;                        &lt;lnk_richiestapagamentosddname>&#xa;                            &lt;xsl:value-of select=&quot;lnk_richiestapagamentosddname&quot;/>&#xa;                        &lt;/lnk_richiestapagamentosddname>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:copy-of select=&quot;lnk_capcpeid&quot;/>&#xa;                    &lt;xsl:if test=&quot;lnk_dataattivazionerid&quot;>&#xa;                        &lt;lnk_dataattivazionerid>&#xa;                            &lt;xsl:value-of select=&quot;lnk_dataattivazionerid&quot;/>&#xa;                        &lt;/lnk_dataattivazionerid>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_latitudine&quot;>&#xa;                        &lt;lnk_latitudine>&#xa;                            &lt;xsl:value-of select=&quot;lnk_latitudine&quot;/>&#xa;                        &lt;/lnk_latitudine>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_dataultimadisattivazione&quot;>&#xa;                        &lt;lnk_dataultimadisattivazione>&#xa;                            &lt;xsl:value-of select=&quot;lnk_dataultimadisattivazione&quot;/>&#xa;                        &lt;/lnk_dataultimadisattivazione>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_contrattopredefinito&quot;>&#xa;                        &lt;lnk_contrattopredefinito>&#xa;                            &lt;xsl:value-of select=&quot;lnk_contrattopredefinito&quot;/>&#xa;                        &lt;/lnk_contrattopredefinito>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_prefissoclipilota&quot;>&#xa;                        &lt;lnk_prefissoclipilota>&#xa;                            &lt;xsl:value-of select=&quot;lnk_prefissoclipilota&quot;/>&#xa;                        &lt;/lnk_prefissoclipilota>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_codicesportubeinviato&quot;>&#xa;                        &lt;lnk_codicesportubeinviato>&#xa;                            &lt;xsl:value-of select=&quot;lnk_codicesportubeinviato&quot;/>&#xa;                        &lt;/lnk_codicesportubeinviato>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_skipcpcheck&quot;>&#xa;                        &lt;lnk_skipcpcheck>&#xa;                            &lt;xsl:value-of select=&quot;lnk_skipcpcheck&quot;/>&#xa;                        &lt;/lnk_skipcpcheck>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_estrazioneportato&quot;>&#xa;                        &lt;lnk_estrazioneportato>&#xa;                            &lt;xsl:value-of select=&quot;lnk_estrazioneportato&quot;/>&#xa;                        &lt;/lnk_estrazioneportato>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_modalitadivenditaidname&quot;>&#xa;                        &lt;lnk_modalitadivenditaidname>&#xa;                            &lt;xsl:value-of select=&quot;lnk_modalitadivenditaidname&quot;/>&#xa;                        &lt;/lnk_modalitadivenditaidname>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_datacessazione&quot;>&#xa;                        &lt;lnk_datacessazione>&#xa;                            &lt;xsl:value-of select=&quot;lnk_datacessazione&quot;/>&#xa;                        &lt;/lnk_datacessazione>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_trybuyname&quot;>&#xa;                        &lt;lnk_trybuyname>&#xa;                            &lt;xsl:value-of select=&quot;lnk_trybuyname&quot;/>&#xa;                        &lt;/lnk_trybuyname>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_via&quot;>&#xa;                        &lt;lnk_via>&#xa;                            &lt;xsl:value-of select=&quot;lnk_via&quot;/>&#xa;                        &lt;/lnk_via>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_prepagata&quot;>&#xa;                        &lt;lnk_prepagata>&#xa;                            &lt;xsl:value-of select=&quot;lnk_prepagata&quot;/>&#xa;                        &lt;/lnk_prepagata>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_provinciaspedfattura&quot;>&#xa;                        &lt;lnk_provinciaspedfattura>&#xa;                            &lt;xsl:value-of select=&quot;lnk_provinciaspedfattura&quot;/>&#xa;                        &lt;/lnk_provinciaspedfattura>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_originatingleadidyominame&quot;>&#xa;                        &lt;lnk_originatingleadidyominame>&#xa;                            &lt;xsl:value-of select=&quot;lnk_originatingleadidyominame&quot;/>&#xa;                        &lt;/lnk_originatingleadidyominame>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_operatore&quot;>&#xa;                        &lt;lnk_operatore>&#xa;                            &lt;xsl:value-of select=&quot;lnk_operatore&quot;/>&#xa;                        &lt;/lnk_operatore>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_fidelitycode&quot;>&#xa;                        &lt;lnk_fidelitycode>&#xa;                            &lt;xsl:value-of select=&quot;lnk_fidelitycode&quot;/>&#xa;                        &lt;/lnk_fidelitycode>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_cpecap&quot;>&#xa;                        &lt;lnk_cpecap>&#xa;                            &lt;xsl:value-of select=&quot;lnk_cpecap&quot;/>&#xa;                        &lt;/lnk_cpecap>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:copy-of select=&quot;lnk_sottostatoid&quot;/>&#xa;                    &lt;xsl:if test=&quot;createdonbehalfbyyominame&quot;>&#xa;                        &lt;createdonbehalfbyyominame>&#xa;                            &lt;xsl:value-of select=&quot;createdonbehalfbyyominame&quot;/>&#xa;                        &lt;/createdonbehalfbyyominame>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_wip&quot;>&#xa;                        &lt;lnk_wip>&#xa;                            &lt;xsl:value-of select=&quot;lnk_wip&quot;/>&#xa;                        &lt;/lnk_wip>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_tecnologiaconnessionename&quot;>&#xa;                        &lt;lnk_tecnologiaconnessionename>&#xa;                            &lt;xsl:value-of select=&quot;lnk_tecnologiaconnessionename&quot;/>&#xa;                        &lt;/lnk_tecnologiaconnessionename>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_contrattodiservizioname&quot;>&#xa;                        &lt;lnk_contrattodiservizioname>&#xa;                            &lt;xsl:value-of select=&quot;lnk_contrattodiservizioname&quot;/>&#xa;                        &lt;/lnk_contrattodiservizioname>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_richiestarimborsocliente&quot;>&#xa;                        &lt;lnk_richiestarimborsocliente>&#xa;                            &lt;xsl:value-of select=&quot;lnk_richiestarimborsocliente&quot;/>&#xa;                        &lt;/lnk_richiestarimborsocliente>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;modifiedon&quot;>&#xa;                        &lt;modifiedon>&#xa;                            &lt;xsl:value-of select=&quot;modifiedon&quot;/>&#xa;                        &lt;/modifiedon>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_statocorrenteidname&quot;>&#xa;                        &lt;lnk_statocorrenteidname>&#xa;                            &lt;xsl:value-of select=&quot;lnk_statocorrenteidname&quot;/>&#xa;                        &lt;/lnk_statocorrenteidname>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_civicospedfattura&quot;>&#xa;                        &lt;lnk_civicospedfattura>&#xa;                            &lt;xsl:value-of select=&quot;lnk_civicospedfattura&quot;/>&#xa;                        &lt;/lnk_civicospedfattura>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:copy-of select=&quot;lnk_metodopagamento&quot;/>&#xa;                    &lt;xsl:if test=&quot;lnk_paeseidname&quot;>&#xa;                        &lt;lnk_paeseidname>&#xa;                            &lt;xsl:value-of select=&quot;lnk_paeseidname&quot;/>&#xa;                        &lt;/lnk_paeseidname>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_numerocliadsl&quot;>&#xa;                        &lt;lnk_numerocliadsl>&#xa;                            &lt;xsl:value-of select=&quot;lnk_numerocliadsl&quot;/>&#xa;                        &lt;/lnk_numerocliadsl>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_ccambiotariffadisabilitatoname&quot;>&#xa;                        &lt;lnk_ccambiotariffadisabilitatoname>&#xa;                            &lt;xsl:value-of select=&quot;lnk_ccambiotariffadisabilitatoname&quot;/>&#xa;                        &lt;/lnk_ccambiotariffadisabilitatoname>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_ricaricatapromolancio&quot;>&#xa;                        &lt;lnk_ricaricatapromolancio>&#xa;                            &lt;xsl:value-of select=&quot;lnk_ricaricatapromolancio&quot;/>&#xa;                        &lt;/lnk_ricaricatapromolancio>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_ccambiotariffadisabilitato&quot;>&#xa;                        &lt;lnk_ccambiotariffadisabilitato>&#xa;                            &lt;xsl:value-of select=&quot;lnk_ccambiotariffadisabilitato&quot;/>&#xa;                        &lt;/lnk_ccambiotariffadisabilitato>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_try&quot;>&#xa;                        &lt;lnk_try>&#xa;                            &lt;xsl:value-of select=&quot;lnk_try&quot;/>&#xa;                        &lt;/lnk_try>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_metodopagamentoname&quot;>&#xa;                        &lt;lnk_metodopagamentoname>&#xa;                            &lt;xsl:value-of select=&quot;lnk_metodopagamentoname&quot;/>&#xa;                        &lt;/lnk_metodopagamentoname>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_allegabolletinoccpname&quot;>&#xa;                        &lt;lnk_allegabolletinoccpname>&#xa;                            &lt;xsl:value-of select=&quot;lnk_allegabolletinoccpname&quot;/>&#xa;                        &lt;/lnk_allegabolletinoccpname>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;utcconversiontimezonecode&quot;>&#xa;                        &lt;utcconversiontimezonecode>&#xa;                            &lt;xsl:value-of select=&quot;utcconversiontimezonecode&quot;/>&#xa;                        &lt;/utcconversiontimezonecode>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:copy-of select=&quot;lnk_originatingleadid&quot;/>&#xa;                    &lt;xsl:if test=&quot;lnk_nomespedfattura&quot;>&#xa;                        &lt;lnk_nomespedfattura>&#xa;                            &lt;xsl:value-of select=&quot;lnk_nomespedfattura&quot;/>&#xa;                        &lt;/lnk_nomespedfattura>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:copy-of select=&quot;lnk_paeseid&quot;/>&#xa;                    &lt;xsl:copy-of select=&quot;lnk_businesspartner&quot;/>&#xa;                    &lt;xsl:copy-of select=&quot;lnk_origineid&quot;/>&#xa;                    &lt;xsl:if test=&quot;lnk_contrattooutdoor&quot;>&#xa;                        &lt;lnk_contrattooutdoor>&#xa;                            &lt;xsl:value-of select=&quot;lnk_contrattooutdoor&quot;/>&#xa;                        &lt;/lnk_contrattooutdoor>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_btsverificacopertura&quot;>&#xa;                        &lt;lnk_btsverificacopertura>&#xa;                            &lt;xsl:value-of select=&quot;lnk_btsverificacopertura&quot;/>&#xa;                        &lt;/lnk_btsverificacopertura>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_cap&quot;>&#xa;                        &lt;lnk_cap>&#xa;                            &lt;xsl:value-of select=&quot;lnk_cap&quot;/>&#xa;                        &lt;/lnk_cap>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_tryname&quot;>&#xa;                        &lt;lnk_tryname>&#xa;                            &lt;xsl:value-of select=&quot;lnk_tryname&quot;/>&#xa;                        &lt;/lnk_tryname>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_tecnologiaconnessione&quot;>&#xa;                        &lt;lnk_tecnologiaconnessione>&#xa;                            &lt;xsl:value-of select=&quot;lnk_tecnologiaconnessione&quot;/>&#xa;                        &lt;/lnk_tecnologiaconnessione>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_codiceipstatico&quot;>&#xa;                        &lt;lnk_codiceipstatico>&#xa;                            &lt;xsl:value-of select=&quot;lnk_codiceipstatico&quot;/>&#xa;                        &lt;/lnk_codiceipstatico>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_dataricezioneordine&quot;>&#xa;                        &lt;lnk_dataricezioneordine>&#xa;                            &lt;xsl:value-of select=&quot;lnk_dataricezioneordine&quot;/>&#xa;                        &lt;/lnk_dataricezioneordine>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_ricaricatapromolancioname&quot;>&#xa;                        &lt;lnk_ricaricatapromolancioname>&#xa;                            &lt;xsl:value-of select=&quot;lnk_ricaricatapromolancioname&quot;/>&#xa;                        &lt;/lnk_ricaricatapromolancioname>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_indirizzospedfattura&quot;>&#xa;                        &lt;lnk_indirizzospedfattura>&#xa;                            &lt;xsl:value-of select=&quot;lnk_indirizzospedfattura&quot;/>&#xa;                        &lt;/lnk_indirizzospedfattura>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_codicesportubeinviatoname&quot;>&#xa;                        &lt;lnk_codicesportubeinviatoname>&#xa;                            &lt;xsl:value-of select=&quot;lnk_codicesportubeinviatoname&quot;/>&#xa;                        &lt;/lnk_codicesportubeinviatoname>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:copy-of select=&quot;lnk_periodicitafatturazioneid&quot;/>&#xa;                    &lt;xsl:if test=&quot;lnk_codiceservizioaggiuntivoinviatoname&quot;>&#xa;                        &lt;lnk_codiceservizioaggiuntivoinviatoname>&#xa;                            &lt;xsl:value-of select=&quot;lnk_codiceservizioaggiuntivoinviatoname&quot;/>&#xa;                        &lt;/lnk_codiceservizioaggiuntivoinviatoname>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_doc_turbo_archiviata&quot;>&#xa;                        &lt;lnk_doc_turbo_archiviata>&#xa;                            &lt;xsl:value-of select=&quot;lnk_doc_turbo_archiviata&quot;/>&#xa;                        &lt;/lnk_doc_turbo_archiviata>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_cpecitta&quot;>&#xa;                        &lt;lnk_cpecitta>&#xa;                            &lt;xsl:value-of select=&quot;lnk_cpecitta&quot;/>&#xa;                        &lt;/lnk_cpecitta>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;statuscodename&quot;>&#xa;                        &lt;statuscodename>&#xa;                            &lt;xsl:value-of select=&quot;statuscodename&quot;/>&#xa;                        &lt;/statuscodename>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_bsid&quot;>&#xa;                        &lt;lnk_bsid>&#xa;                            &lt;xsl:value-of select=&quot;lnk_bsid&quot;/>&#xa;                        &lt;/lnk_bsid>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;owneridname&quot;>&#xa;                        &lt;owneridname>&#xa;                            &lt;xsl:value-of select=&quot;owneridname&quot;/>&#xa;                        &lt;/owneridname>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_dataswap&quot;>&#xa;                        &lt;lnk_dataswap>&#xa;                            &lt;xsl:value-of select=&quot;lnk_dataswap&quot;/>&#xa;                        &lt;/lnk_dataswap>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;createdon&quot;>&#xa;                        &lt;createdon>&#xa;                            &lt;xsl:value-of select=&quot;createdon&quot;/>&#xa;                        &lt;/createdon>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_metodoconsegnaname&quot;>&#xa;                        &lt;lnk_metodoconsegnaname>&#xa;                            &lt;xsl:value-of select=&quot;lnk_metodoconsegnaname&quot;/>&#xa;                        &lt;/lnk_metodoconsegnaname>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_welcomecalleffettuataname&quot;>&#xa;                        &lt;lnk_welcomecalleffettuataname>&#xa;                            &lt;xsl:value-of select=&quot;lnk_welcomecalleffettuataname&quot;/>&#xa;                        &lt;/lnk_welcomecalleffettuataname>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_longitudine&quot;>&#xa;                        &lt;lnk_longitudine>&#xa;                            &lt;xsl:value-of select=&quot;lnk_longitudine&quot;/>&#xa;                        &lt;/lnk_longitudine>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_cpevia&quot;>&#xa;                        &lt;lnk_cpevia>&#xa;                            &lt;xsl:value-of select=&quot;lnk_cpevia&quot;/>&#xa;                        &lt;/lnk_cpevia>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_paesecpeidname&quot;>&#xa;                        &lt;lnk_paesecpeidname>&#xa;                            &lt;xsl:value-of select=&quot;lnk_paesecpeidname&quot;/>&#xa;                        &lt;/lnk_paesecpeidname>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_prov_status&quot;>&#xa;                        &lt;lnk_prov_status>&#xa;                            &lt;xsl:value-of select=&quot;lnk_prov_status&quot;/>&#xa;                        &lt;/lnk_prov_status>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_nazione&quot;>&#xa;                        &lt;lnk_nazione>&#xa;                            &lt;xsl:value-of select=&quot;lnk_nazione&quot;/>&#xa;                        &lt;/lnk_nazione>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;importsequencenumber&quot;>&#xa;                        &lt;importsequencenumber>&#xa;                            &lt;xsl:value-of select=&quot;importsequencenumber&quot;/>&#xa;                        &lt;/importsequencenumber>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_businesspartnername&quot;>&#xa;                        &lt;lnk_businesspartnername>&#xa;                            &lt;xsl:value-of select=&quot;lnk_businesspartnername&quot;/>&#xa;                        &lt;/lnk_businesspartnername>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_originatingleadidname&quot;>&#xa;                        &lt;lnk_originatingleadidname>&#xa;                            &lt;xsl:value-of select=&quot;lnk_originatingleadidname&quot;/>&#xa;                        &lt;/lnk_originatingleadidname>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_causalebloccofatturazionename&quot;>&#xa;                        &lt;lnk_causalebloccofatturazionename>&#xa;                            &lt;xsl:value-of select=&quot;lnk_causalebloccofatturazionename&quot;/>&#xa;                        &lt;/lnk_causalebloccofatturazionename>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_provinciaidname&quot;>&#xa;                        &lt;lnk_provinciaidname>&#xa;                            &lt;xsl:value-of select=&quot;lnk_provinciaidname&quot;/>&#xa;                        &lt;/lnk_provinciaidname>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_periodicitafatturazioneidname&quot;>&#xa;                        &lt;lnk_periodicitafatturazioneidname>&#xa;                            &lt;xsl:value-of select=&quot;lnk_periodicitafatturazioneidname&quot;/>&#xa;                        &lt;/lnk_periodicitafatturazioneidname>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_wipname&quot;>&#xa;                        &lt;lnk_wipname>&#xa;                            &lt;xsl:value-of select=&quot;lnk_wipname&quot;/>&#xa;                        &lt;/lnk_wipname>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_gestioneamministrativa&quot;>&#xa;                        &lt;lnk_gestioneamministrativa>&#xa;                            &lt;xsl:value-of select=&quot;lnk_gestioneamministrativa&quot;/>&#xa;                        &lt;/lnk_gestioneamministrativa>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_tipostradacpe&quot;>&#xa;                        &lt;lnk_tipostradacpe>&#xa;                            &lt;xsl:value-of select=&quot;lnk_tipostradacpe&quot;/>&#xa;                        &lt;/lnk_tipostradacpe>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_accettazionecondizioniadslname&quot;>&#xa;                        &lt;lnk_accettazionecondizioniadslname>&#xa;                            &lt;xsl:value-of select=&quot;lnk_accettazionecondizioniadslname&quot;/>&#xa;                        &lt;/lnk_accettazionecondizioniadslname>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_provinciacpeidname&quot;>&#xa;                        &lt;lnk_provinciacpeidname>&#xa;                            &lt;xsl:value-of select=&quot;lnk_provinciacpeidname&quot;/>&#xa;                        &lt;/lnk_provinciacpeidname>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_fatturareanoidname&quot;>&#xa;                        &lt;lnk_fatturareanoidname>&#xa;                            &lt;xsl:value-of select=&quot;lnk_fatturareanoidname&quot;/>&#xa;                        &lt;/lnk_fatturareanoidname>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_statoswap&quot;>&#xa;                        &lt;lnk_statoswap>&#xa;                            &lt;xsl:value-of select=&quot;lnk_statoswap&quot;/>&#xa;                        &lt;/lnk_statoswap>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_trybuy&quot;>&#xa;                        &lt;lnk_trybuy>&#xa;                            &lt;xsl:value-of select=&quot;lnk_trybuy&quot;/>&#xa;                        &lt;/lnk_trybuy>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:copy-of select=&quot;lnk_comuneid&quot;/>&#xa;                    &lt;xsl:if test=&quot;lnk_generazioneodl&quot;>&#xa;                        &lt;lnk_generazioneodl>&#xa;                            &lt;xsl:value-of select=&quot;lnk_generazioneodl&quot;/>&#xa;                        &lt;/lnk_generazioneodl>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_accettazionecondizioniadsl&quot;>&#xa;                        &lt;lnk_accettazionecondizioniadsl>&#xa;                            &lt;xsl:value-of select=&quot;lnk_accettazionecondizioniadsl&quot;/>&#xa;                        &lt;/lnk_accettazionecondizioniadsl>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_installatoreidname&quot;>&#xa;                        &lt;lnk_installatoreidname>&#xa;                            &lt;xsl:value-of select=&quot;lnk_installatoreidname&quot;/>&#xa;                        &lt;/lnk_installatoreidname>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_datainviocodiceservizioaggiuntivo&quot;>&#xa;                        &lt;lnk_datainviocodiceservizioaggiuntivo>&#xa;                            &lt;xsl:value-of select=&quot;lnk_datainviocodiceservizioaggiuntivo&quot;/>&#xa;                        &lt;/lnk_datainviocodiceservizioaggiuntivo>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_statoswap5g&quot;>&#xa;                        &lt;lnk_statoswap5g>&#xa;                            &lt;xsl:value-of select=&quot;lnk_statoswap5g&quot;/>&#xa;                        &lt;/lnk_statoswap5g>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_skipstatemachine&quot;>&#xa;                        &lt;lnk_skipstatemachine>&#xa;                            &lt;xsl:value-of select=&quot;lnk_skipstatemachine&quot;/>&#xa;                        &lt;/lnk_skipstatemachine>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:copy-of select=&quot;modifiedonbehalfby&quot;/>&#xa;                    &lt;xsl:copy-of select=&quot;modifiedby&quot;/>&#xa;                    &lt;xsl:if test=&quot;lnk_btsripuntamento&quot;>&#xa;                        &lt;lnk_btsripuntamento>&#xa;                            &lt;xsl:value-of select=&quot;lnk_btsripuntamento&quot;/>&#xa;                        &lt;/lnk_btsripuntamento>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;ip_importid&quot;>&#xa;                        &lt;ip_importid>&#xa;                            &lt;xsl:value-of select=&quot;ip_importid&quot;/>&#xa;                        &lt;/ip_importid>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_visibilitacontrattoareaclienti&quot;>&#xa;                        &lt;lnk_visibilitacontrattoareaclienti>&#xa;                            &lt;xsl:value-of select=&quot;lnk_visibilitacontrattoareaclienti&quot;/>&#xa;                        &lt;/lnk_visibilitacontrattoareaclienti>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_bloccofatturazionename&quot;>&#xa;                        &lt;lnk_bloccofatturazionename>&#xa;                            &lt;xsl:value-of select=&quot;lnk_bloccofatturazionename&quot;/>&#xa;                        &lt;/lnk_bloccofatturazionename>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:copy-of select=&quot;createdonbehalfby&quot;/>&#xa;                    &lt;xsl:if test=&quot;lnk_statoswapname&quot;>&#xa;                        &lt;lnk_statoswapname>&#xa;                            &lt;xsl:value-of select=&quot;lnk_statoswapname&quot;/>&#xa;                        &lt;/lnk_statoswapname>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_minutiliberialmese&quot;>&#xa;                        &lt;lnk_minutiliberialmese>&#xa;                            &lt;xsl:value-of select=&quot;lnk_minutiliberialmese&quot;/>&#xa;                        &lt;/lnk_minutiliberialmese>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_provincia&quot;>&#xa;                        &lt;lnk_provincia>&#xa;                            &lt;xsl:value-of select=&quot;lnk_provincia&quot;/>&#xa;                        &lt;/lnk_provincia>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_statocodicecontrattoname&quot;>&#xa;                        &lt;lnk_statocodicecontrattoname>&#xa;                            &lt;xsl:value-of select=&quot;lnk_statocodicecontrattoname&quot;/>&#xa;                        &lt;/lnk_statocodicecontrattoname>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_sottostato&quot;>&#xa;                        &lt;lnk_sottostato>&#xa;                            &lt;xsl:value-of select=&quot;lnk_sottostato&quot;/>&#xa;                        &lt;/lnk_sottostato>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;modifiedbyname&quot;>&#xa;                        &lt;modifiedbyname>&#xa;                            &lt;xsl:value-of select=&quot;modifiedbyname&quot;/>&#xa;                        &lt;/modifiedbyname>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_co&quot;>&#xa;                        &lt;lnk_co>&#xa;                            &lt;xsl:value-of select=&quot;lnk_co&quot;/>&#xa;                        &lt;/lnk_co>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_tipocontratto&quot;>&#xa;                        &lt;lnk_tipocontratto>&#xa;                            &lt;xsl:value-of select=&quot;lnk_tipocontratto&quot;/>&#xa;                        &lt;/lnk_tipocontratto>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_pwdadsl&quot;>&#xa;                        &lt;lnk_pwdadsl>&#xa;                            &lt;xsl:value-of select=&quot;lnk_pwdadsl&quot;/>&#xa;                        &lt;/lnk_pwdadsl>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_prov_statusvoip&quot;>&#xa;                        &lt;lnk_prov_statusvoip>&#xa;                            &lt;xsl:value-of select=&quot;lnk_prov_statusvoip&quot;/>&#xa;                        &lt;/lnk_prov_statusvoip>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_contrattodiservizio&quot;>&#xa;                        &lt;lnk_contrattodiservizio>&#xa;                            &lt;xsl:value-of select=&quot;lnk_contrattodiservizio&quot;/>&#xa;                        &lt;/lnk_contrattodiservizio>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_datacontratto&quot;>&#xa;                        &lt;lnk_datacontratto>&#xa;                            &lt;xsl:value-of select=&quot;lnk_datacontratto&quot;/>&#xa;                        &lt;/lnk_datacontratto>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:copy-of select=&quot;lnk_installatoreid&quot;/>&#xa;                    &lt;xsl:copy-of select=&quot;lnk_regioneid&quot;/>&#xa;                    &lt;xsl:if test=&quot;lnk_codicesbloccosms&quot;>&#xa;                        &lt;lnk_codicesbloccosms>&#xa;                            &lt;xsl:value-of select=&quot;lnk_codicesbloccosms&quot;/>&#xa;                        &lt;/lnk_codicesbloccosms>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_fatturareanoidyominame&quot;>&#xa;                        &lt;lnk_fatturareanoidyominame>&#xa;                            &lt;xsl:value-of select=&quot;lnk_fatturareanoidyominame&quot;/>&#xa;                        &lt;/lnk_fatturareanoidyominame>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_idprimocontratto&quot;>&#xa;                        &lt;lnk_idprimocontratto>&#xa;                            &lt;xsl:value-of select=&quot;lnk_idprimocontratto&quot;/>&#xa;                        &lt;/lnk_idprimocontratto>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_skipstatemachinename&quot;>&#xa;                        &lt;lnk_skipstatemachinename>&#xa;                            &lt;xsl:value-of select=&quot;lnk_skipstatemachinename&quot;/>&#xa;                        &lt;/lnk_skipstatemachinename>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_dataultimafatturazione&quot;>&#xa;                        &lt;lnk_dataultimafatturazione>&#xa;                            &lt;xsl:value-of select=&quot;lnk_dataultimafatturazione&quot;/>&#xa;                        &lt;/lnk_dataultimafatturazione>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_datainviocodicesportube&quot;>&#xa;                        &lt;lnk_datainviocodicesportube>&#xa;                            &lt;xsl:value-of select=&quot;lnk_datainviocodicesportube&quot;/>&#xa;                        &lt;/lnk_datainviocodicesportube>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_ricezionedocumentiltename&quot;>&#xa;                        &lt;lnk_ricezionedocumentiltename>&#xa;                            &lt;xsl:value-of select=&quot;lnk_ricezionedocumentiltename&quot;/>&#xa;                        &lt;/lnk_ricezionedocumentiltename>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_tipopagamentocaname&quot;>&#xa;                        &lt;lnk_tipopagamentocaname>&#xa;                            &lt;xsl:value-of select=&quot;lnk_tipopagamentocaname&quot;/>&#xa;                        &lt;/lnk_tipopagamentocaname>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_datautimadisattivazione&quot;>&#xa;                        &lt;lnk_datautimadisattivazione>&#xa;                            &lt;xsl:value-of select=&quot;lnk_datautimadisattivazione&quot;/>&#xa;                        &lt;/lnk_datautimadisattivazione>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_dataultimocambiostato&quot;>&#xa;                        &lt;lnk_dataultimocambiostato>&#xa;                            &lt;xsl:value-of select=&quot;lnk_dataultimocambiostato&quot;/>&#xa;                        &lt;/lnk_dataultimocambiostato>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_statopaybackname&quot;>&#xa;                        &lt;lnk_statopaybackname>&#xa;                            &lt;xsl:value-of select=&quot;lnk_statopaybackname&quot;/>&#xa;                        &lt;/lnk_statopaybackname>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_paesespedfattura&quot;>&#xa;                        &lt;lnk_paesespedfattura>&#xa;                            &lt;xsl:value-of select=&quot;lnk_paesespedfattura&quot;/>&#xa;                        &lt;/lnk_paesespedfattura>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_generazioneodlname&quot;>&#xa;                        &lt;lnk_generazioneodlname>&#xa;                            &lt;xsl:value-of select=&quot;lnk_generazioneodlname&quot;/>&#xa;                        &lt;/lnk_generazioneodlname>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_numerocontratto&quot;>&#xa;                        &lt;lnk_numerocontratto>&#xa;                            &lt;xsl:value-of select=&quot;lnk_numerocontratto&quot;/>&#xa;                        &lt;/lnk_numerocontratto>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_telefonataidname&quot;>&#xa;                        &lt;lnk_telefonataidname>&#xa;                            &lt;xsl:value-of select=&quot;lnk_telefonataidname&quot;/>&#xa;                        &lt;/lnk_telefonataidname>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;modifiedonbehalfbyyominame&quot;>&#xa;                        &lt;modifiedonbehalfbyyominame>&#xa;                            &lt;xsl:value-of select=&quot;modifiedonbehalfbyyominame&quot;/>&#xa;                        &lt;/modifiedonbehalfbyyominame>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_segnale&quot;>&#xa;                        &lt;lnk_segnale>&#xa;                            &lt;xsl:value-of select=&quot;lnk_segnale&quot;/>&#xa;                        &lt;/lnk_segnale>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;modifiedonbehalfbyname&quot;>&#xa;                        &lt;modifiedonbehalfbyname>&#xa;                            &lt;xsl:value-of select=&quot;modifiedonbehalfbyname&quot;/>&#xa;                        &lt;/modifiedonbehalfbyname>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_richiestarimborsoclientename&quot;>&#xa;                        &lt;lnk_richiestarimborsoclientename>&#xa;                            &lt;xsl:value-of select=&quot;lnk_richiestarimborsoclientename&quot;/>&#xa;                        &lt;/lnk_richiestarimborsoclientename>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_verificadatilte&quot;>&#xa;                        &lt;lnk_verificadatilte>&#xa;                            &lt;xsl:value-of select=&quot;lnk_verificadatilte&quot;/>&#xa;                        &lt;/lnk_verificadatilte>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_statocodicecontratto&quot;>&#xa;                        &lt;lnk_statocodicecontratto>&#xa;                            &lt;xsl:value-of select=&quot;lnk_statocodicecontratto&quot;/>&#xa;                        &lt;/lnk_statocodicecontratto>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;lnk_statoprovisioningname&quot;>&#xa;                        &lt;lnk_statoprovisioningname>&#xa;                            &lt;xsl:value-of select=&quot;lnk_statoprovisioningname&quot;/>&#xa;                        &lt;/lnk_statoprovisioningname>&#xa;                    &lt;/xsl:if>&#xa;                &lt;/tns7:TestataDelContratto>&#xa;            &lt;/xsl:for-each>&#xa;            &lt;tns7:ResponseCode>&#xa;                &lt;xsl:value-of select=&quot;''&quot;/>&#xa;            &lt;/tns7:ResponseCode>&#xa;        &lt;/tns7:GetTestataContrattoByGuidTDC_Output>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
-                    </tibex:inputBindings>
-                    <tibex:config>
-                        <bwext:BWActivity
-                            activityTypeID="bw.generalactivities.mapper"
-                            version="6.0.0.001"
-                            xmlns:activityconfig="http://tns.tibco.com/bw/model/activityconfig"
-                            xmlns:bwext="http://tns.tibco.com/bw/model/core/bwext"
-                            xmlns:generalactivities="http://ns.tibco.com/bw/palette/generalactivities"
-                            xmlns:xsd="http://it.linkem/crm/getTestataContrattoByGuidTDC/sl/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-                            <activityConfig>
-                                <properties name="config" xsi:type="activityconfig:EMFProperty">
-                                    <type href="http://ns.tibco.com/bw/palette/generalactivities#//Mapper"/>
-                                    <value
-                                    inputQName="xsd:GetTestataContrattoByGuidTDC_Output" xsi:type="generalactivities:Mapper"/>
-                                </properties>
-                            </activityConfig>
-                        </bwext:BWActivity>
-                    </tibex:config>
-                </tibex:activityExtension>
             </bpws:extensionActivity>
         </bpws:flow>
     </bpws:scope>

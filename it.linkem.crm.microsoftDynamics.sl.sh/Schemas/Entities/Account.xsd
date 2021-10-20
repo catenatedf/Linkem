@@ -1,0 +1,629 @@
+<schema targetNamespace="http://it.linkem/crm/entities/Account/xsd" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://it.linkem/crm/entities/Account/xsd">
+	<complexType name="Entities">
+		<sequence>
+			<element maxOccurs="unbounded" minOccurs="0" name="account" type="tns:account"/>
+		</sequence>
+	</complexType>
+	<element name="Entities" type="tns:Entities"/>
+	<complexType name="account">
+		<sequence>
+			<element maxOccurs="1" minOccurs="0" name="lnk_modelloaccountid" type="tns:lnk_modelloaccountid"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_esclusionedafename" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="donotbulkemailname" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="address1_addresstypecode" type="integer"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_copertura_newname" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="shippingmethodcodename" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_originename" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="openrevenue" type="decimal"/>
+			<element maxOccurs="1" minOccurs="0" name="owninguser" type="tns:owninguser"/>
+			<element maxOccurs="1" minOccurs="0" name="participatesinworkflow" type="boolean"/>
+			<element maxOccurs="1" minOccurs="0" name="statuscode" type="integer"/>
+			<element maxOccurs="1" minOccurs="0" name="masterid" type="tns:masterid"/>
+			<element maxOccurs="1" minOccurs="0" name="entityimage_url" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="donotemailname" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="donotsendmm" type="boolean"/>
+			<element maxOccurs="1" minOccurs="0" name="donotfaxname" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="createdbyexternalpartyname" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="preferredappointmenttimecode" type="integer"/>
+			<element maxOccurs="1" minOccurs="0" name="primarysatoriid" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_cambiapassword" type="boolean"/>
+			<element maxOccurs="1" minOccurs="0" name="createdonbehalfbyname" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="address1_stateorprovince" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="timezoneruleversionnumber" type="integer"/>
+			<element maxOccurs="1" minOccurs="0" name="donotpostalmailname" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="ownerid" type="tns:ownerid"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_capspedfattura" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="participatesinworkflowname" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="address2_city" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_disabilitafatture" type="boolean"/>
+			<element maxOccurs="1" minOccurs="0" name="lastonholdtime" type="dateTime"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_modelaccountid" type="tns:lnk_modelaccountid"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_documentlibrary" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="preferredequipmentidname" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="address2_addresstypecodename" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="address2_latitude" type="double"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_effettuarecambiopassword" type="boolean"/>
+			<element maxOccurs="1" minOccurs="0" name="preferredsystemuseridyominame" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_consensoprivacysky" type="boolean"/>
+			<element maxOccurs="1" minOccurs="0" name="parentaccountidyominame" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="address1_shippingmethodcodename" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="owningbusinessunit" type="tns:owningbusinessunit"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_segnalatodabpidname" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="donotbulkpostalmail" type="boolean"/>
+			<element maxOccurs="1" minOccurs="0" name="marketcap" type="decimal"/>
+			<element maxOccurs="1" minOccurs="0" name="createdbyyominame" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_datamodificapwd" type="dateTime"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_isgestioneamministrativaname" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="owneridyominame" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_cittaspedfattura" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_abbonatopaytv" type="integer"/>
+			<element maxOccurs="1" minOccurs="0" name="statecode" type="integer"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_utentemobile" type="boolean"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_documentoricevuto" type="boolean"/>
+			<element maxOccurs="1" minOccurs="0" name="openrevenue_state" type="integer"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_persona" type="integer"/>
+			<element maxOccurs="1" minOccurs="0" name="sharesoutstanding" type="integer"/>
+			<element maxOccurs="1" minOccurs="0" name="modifiedbyexternalpartyyominame" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_paese1id" type="tns:lnk_paese1id"/>
+			<element maxOccurs="1" minOccurs="0" name="overriddencreatedon" type="dateTime"/>
+			<element maxOccurs="1" minOccurs="0" name="address2_county" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="address2_shippingmethodcode" type="integer"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_segnale_new" type="double"/>
+			<element maxOccurs="1" minOccurs="0" name="entityimageid" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="cdi_allowtextmessages" type="boolean"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_contrattoricevuto" type="boolean"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_consensoprivacyskyname" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_paese2idname" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_codicefiscale" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="donotfax" type="boolean"/>
+			<element maxOccurs="1" minOccurs="0" name="modifiedbyyominame" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_metodopagamentoidname" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_origineidname" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_bts_new" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="businesstypecode" type="integer"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_personaname" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_storeidnoverca" type="integer"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_prov_data" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="versionnumber" type="long"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_tipokoname" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="address1_primarycontactname" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_passwordcambiata" type="boolean"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_telefonomobile" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="address2_postofficebox" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="websiteurl" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lastusedincampaign" type="dateTime"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_cognome" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="onholdtime" type="integer"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_dataultimaaccettazioneprivacy" type="dateTime"/>
+			<element maxOccurs="1" minOccurs="0" name="address1_name" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="stageid" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="address1_telephone2" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="address1_telephone3" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_utentemobilename" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_partneridyominame" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_statocodicecliente" type="integer"/>
+			<element maxOccurs="1" minOccurs="0" name="originatingleadidname" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_loyaltylevel" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="originatingleadidyominame" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="ownershipcode" type="integer"/>
+			<element maxOccurs="1" minOccurs="0" name="mergedname" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="creditlimit_base" type="decimal"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_emailvalidataname" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="donotemail" type="boolean"/>
+			<element maxOccurs="1" minOccurs="0" name="customertypecodename" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="address1_country" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_accessoareaclientiabilitato" type="boolean"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_inviodettagliotraffico" type="boolean"/>
+			<element maxOccurs="1" minOccurs="0" name="createdby" type="tns:createdby"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_copertura" type="integer"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_paese2id" type="tns:lnk_paese2id"/>
+			<element maxOccurs="1" minOccurs="0" name="owningteam" type="tns:owningteam"/>
+			<element maxOccurs="1" minOccurs="0" name="defaultpricelevelid" type="tns:defaultpricelevelid"/>
+			<element maxOccurs="1" minOccurs="0" name="primarycontactidyominame" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_cambiapasswordname" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="address1_telephone1" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="preferredappointmenttimecodename" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_disponibilitaadsl" type="integer"/>
+			<element maxOccurs="1" minOccurs="0" name="openrevenue_base" type="decimal"/>
+			<element maxOccurs="1" minOccurs="0" name="donotsendmarketingmaterialname" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_loyaltypoints" type="integer"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_bts" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="address1_addressid" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="customersizecodename" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_numeromobile" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_dataultimamodificacellulare" type="dateTime"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_primoaccessoeffettuatoname" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="name" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="paymenttermscode" type="integer"/>
+			<element maxOccurs="1" minOccurs="0" name="territoryid" type="tns:territoryid"/>
+			<element maxOccurs="1" minOccurs="0" name="creditonholdname" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_cap1id" type="tns:lnk_cap1id"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_comune1id" type="tns:lnk_comune1id"/>
+			<element maxOccurs="1" minOccurs="0" name="industrycodename" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="owneridtype" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_codicesbloccomobile" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="address2_composite" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="marketcap_base" type="decimal"/>
+			<element maxOccurs="1" minOccurs="0" name="slaid" type="tns:slaid"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_assegnatoabpidname" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="exchangerate" type="decimal"/>
+			<element maxOccurs="1" minOccurs="0" name="description" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="primarytwitterid" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="numberofemployees" type="integer"/>
+			<element maxOccurs="1" minOccurs="0" name="sic" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_login" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="territorycodename" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="ftpsiteurl" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_statocodiceclientename" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_controlloriferimenticliente" type="dateTime"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_segnalerssi" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_dataultimarecall" type="dateTime"/>
+			<element maxOccurs="1" minOccurs="0" name="territoryidname" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_dataultimamodificaemail" type="dateTime"/>
+			<element maxOccurs="1" minOccurs="0" name="primarycontactid" type="tns:primarycontactid"/>
+			<element maxOccurs="1" minOccurs="0" name="address1_county" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="defaultpricelevelidname" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_vip" type="boolean"/>
+			<element maxOccurs="1" minOccurs="0" name="address2_freighttermscode" type="integer"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_segnalatodaidname" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="merged" type="boolean"/>
+			<element maxOccurs="1" minOccurs="0" name="aging90" type="decimal"/>
+			<element maxOccurs="1" minOccurs="0" name="cdi_accountscore" type="integer"/>
+			<element maxOccurs="1" minOccurs="0" name="aging60_base" type="decimal"/>
+			<element maxOccurs="1" minOccurs="0" name="slaname" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_dataultimamodificacanaledicomunicazione" type="dateTime"/>
+			<element maxOccurs="1" minOccurs="0" name="cdi_allowtextmessagesname" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_segnaledaweb" type="double"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_comune1idname" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="revenue_base" type="decimal"/>
+			<element maxOccurs="1" minOccurs="0" name="address2_upszone" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_cap2id" type="tns:lnk_cap2id"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_comune2id" type="tns:lnk_comune2id"/>
+			<element maxOccurs="1" minOccurs="0" name="preferredcontactmethodcodename" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="creditlimit" type="decimal"/>
+			<element maxOccurs="1" minOccurs="0" name="createdbyname" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_esitorecallcc" type="integer"/>
+			<element maxOccurs="1" minOccurs="0" name="address2_utcoffset" type="integer"/>
+			<element maxOccurs="1" minOccurs="0" name="address1_city" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_comune2idname" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="address2_name" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_regione2idname" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="address1_latitude" type="double"/>
+			<element maxOccurs="1" minOccurs="0" name="transactioncurrencyidname" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="emailaddress2" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="preferredserviceidname" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="emailaddress3" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_assegnatoabpid" type="tns:lnk_assegnatoabpid"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_regione1id" type="tns:lnk_regione1id"/>
+			<element maxOccurs="1" minOccurs="0" name="emailaddress1" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="statecodename" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="donotbulkpostalmailname" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_accessoareaclientiabilitatoname" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="accountid" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_provincia2id" type="tns:lnk_provincia2id"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_scontospecialename" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_documentoricevutoname" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_latitudine" type="decimal"/>
+			<element maxOccurs="1" minOccurs="0" name="address1_freighttermscodename" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="opendeals" type="integer"/>
+			<element maxOccurs="1" minOccurs="0" name="shippingmethodcode" type="integer"/>
+			<element maxOccurs="1" minOccurs="0" name="address1_line1" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="address1_shippingmethodcode" type="integer"/>
+			<element maxOccurs="1" minOccurs="0" name="fax" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="masteraccountidyominame" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="masteraccountidname" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="address1_line3" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_qualitacinr" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="address1_longitude" type="double"/>
+			<element maxOccurs="1" minOccurs="0" name="address1_line2" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_provinciaspedfattura" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_originatingleadidyominame" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="address1_addresstypecodename" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_partnerid" type="tns:lnk_partnerid"/>
+			<element maxOccurs="1" minOccurs="0" name="address2_fax" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_modelaccountidname" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="address1_utcoffset" type="integer"/>
+			<element maxOccurs="1" minOccurs="0" name="stockexchange" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_password" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_fidelitycode" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_effettuarecambiopwdname" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="createdonbehalfbyyominame" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="address2_freighttermscodename" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_segnalatodabpid" type="tns:lnk_segnalatodabpid"/>
+			<element maxOccurs="1" minOccurs="0" name="address2_postalcode" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_cap2idname" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="modifiedon" type="dateTime"/>
+			<element maxOccurs="1" minOccurs="0" name="accountcategorycodename" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="address1_upszone" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_copertura_new" type="integer"/>
+			<element maxOccurs="1" minOccurs="0" name="donotphone" type="boolean"/>
+			<element maxOccurs="1" minOccurs="0" name="industrycode" type="integer"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_civicospedfattura" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="businesstypecodename" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_registrazioneeffettuata" type="boolean"/>
+			<element maxOccurs="1" minOccurs="0" name="isprivatename" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="customersizecode" type="integer"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_paese1idname" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_dataultimamodificaprivacy" type="dateTime"/>
+			<element maxOccurs="1" minOccurs="0" name="customertypecode" type="integer"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_segnalatodaidyominame" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="territorycode" type="integer"/>
+			<element maxOccurs="1" minOccurs="0" name="address2_addressid" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="utcconversiontimezonecode" type="integer"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_primoaccessoeffettuato" type="boolean"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_originatingleadid" type="tns:lnk_originatingleadid"/>
+			<element maxOccurs="1" minOccurs="0" name="aging60" type="decimal"/>
+			<element maxOccurs="1" minOccurs="0" name="address1_postalcode" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_tipostradaindirizzoprimario" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_esclusionedafe" type="boolean"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_regione2id" type="tns:lnk_regione2id"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_nomespedfattura" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="slainvokedid" type="tns:slainvokedid"/>
+			<element maxOccurs="1" minOccurs="0" name="aging30_base" type="decimal"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_origineid" type="tns:lnk_origineid"/>
+			<element maxOccurs="1" minOccurs="0" name="slainvokedidname" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_effettuarecambiopasswordname" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="address2_shippingmethodcodename" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_indirizzospedfattura" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_origine" type="integer"/>
+			<element maxOccurs="1" minOccurs="0" name="address2_primarycontactname" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="statuscodename" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_partitaiva" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="modifiedbyexternalparty" type="tns:modifiedbyexternalparty"/>
+			<element maxOccurs="1" minOccurs="0" name="owneridname" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="createdon" type="dateTime"/>
+			<element maxOccurs="1" minOccurs="0" name="address2_telephone2" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="address2_telephone1" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="address2_telephone3" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_modelloaccountidname" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="address2_line3" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="originatingleadid" type="tns:originatingleadid"/>
+			<element maxOccurs="1" minOccurs="0" name="aging90_base" type="decimal"/>
+			<element maxOccurs="1" minOccurs="0" name="processid" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="address2_line1" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_longitudine" type="decimal"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_coperturaname" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="address2_line2" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_esitorecallccname" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_segnalatodaid" type="tns:lnk_segnalatodaid"/>
+			<element maxOccurs="1" minOccurs="0" name="donotphonename" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="yominame" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="importsequencenumber" type="integer"/>
+			<element maxOccurs="1" minOccurs="0" name="parentaccountid" type="tns:parentaccountid"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_datacopertura_new" type="dateTime"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_originatingleadidname" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_modelloaccountidyominame" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="accountratingcodename" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_emailvalidata" type="boolean"/>
+			<element maxOccurs="1" minOccurs="0" name="telephone3" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="telephone2" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="telephone1" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="parentaccountidname" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="preferredserviceid" type="tns:preferredserviceid"/>
+			<element maxOccurs="1" minOccurs="0" name="address1_postofficebox" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="revenue" type="decimal"/>
+			<element maxOccurs="1" minOccurs="0" name="opendeals_date" type="dateTime"/>
+			<element maxOccurs="1" minOccurs="0" name="address2_stateorprovince" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_abbonatopaytvname" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="address1_composite" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_partneridname" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_gestioneamministrativa" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_cap1idname" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_tipostradacpe" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="primarycontactidname" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_nome" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_isgestioneamministrativa" type="integer"/>
+			<element maxOccurs="1" minOccurs="0" name="aging30" type="decimal"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_loyalty" type="boolean"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_idordinemobile" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="address1_freighttermscode" type="integer"/>
+			<element maxOccurs="1" minOccurs="0" name="donotbulkemail" type="boolean"/>
+			<element maxOccurs="1" minOccurs="0" name="donotpostalmail" type="boolean"/>
+			<element maxOccurs="1" minOccurs="0" name="paymenttermscodename" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="preferredcontactmethodcode" type="integer"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_tipoko" type="integer"/>
+			<element maxOccurs="1" minOccurs="0" name="preferredsystemuserid" type="tns:preferredsystemuserid"/>
+			<element maxOccurs="1" minOccurs="0" name="address1_fax" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_inviodettagliotrafficoname" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_codicedestinatario" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="modifiedonbehalfby" type="tns:modifiedonbehalfby"/>
+			<element maxOccurs="1" minOccurs="0" name="modifiedby" type="tns:modifiedby"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_provincia2idname" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="accountratingcode" type="integer"/>
+			<element maxOccurs="1" minOccurs="0" name="preferredappointmentdaycode" type="integer"/>
+			<element maxOccurs="1" minOccurs="0" name="preferredsystemuseridname" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="ip_importid" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="createdonbehalfby" type="tns:createdonbehalfby"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_loyaltyname" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="creditonhold" type="boolean"/>
+			<element maxOccurs="1" minOccurs="0" name="preferredequipmentid" type="tns:preferredequipmentid"/>
+			<element maxOccurs="1" minOccurs="0" name="openrevenue_date" type="dateTime"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_classe" type="integer"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_effettuarecambiopwd" type="boolean"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_registrazioneeffettuataname" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="entityimage_timestamp" type="long"/>
+			<element maxOccurs="1" minOccurs="0" name="accountclassificationcode" type="integer"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_coupon" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_co" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="new_gestpay" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="modifiedbyname" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="createdbyexternalparty" type="tns:createdbyexternalparty"/>
+			<element maxOccurs="1" minOccurs="0" name="ownershipcodename" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="opendeals_state" type="integer"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_classename" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_vipname" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="preferredappointmentdaycodename" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_provincia1id" type="tns:lnk_provincia1id"/>
+			<element maxOccurs="1" minOccurs="0" name="accountclassificationcodename" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_disabilitafatturename" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="accountcategorycode" type="integer"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_provincia1idname" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="address2_addresstypecode" type="integer"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_datacopertura" type="dateTime"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_scontospeciale" type="integer"/>
+			<element maxOccurs="1" minOccurs="0" name="address2_country" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_disponibilitaadslname" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="tickersymbol" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="accountnumber" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_paesespedfattura" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="traversedpath" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_passwordcambiataname" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="createdbyexternalpartyyominame" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_regione1idname" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="transactioncurrencyid" type="tns:transactioncurrencyid"/>
+			<element maxOccurs="1" minOccurs="0" name="modifiedonbehalfbyyominame" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_contrattoricevutoname" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="modifiedbyexternalpartyname" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_metodopagamentoid" type="tns:lnk_metodopagamentoid"/>
+			<element maxOccurs="1" minOccurs="0" name="modifiedonbehalfbyname" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="address2_longitude" type="double"/>
+			<element maxOccurs="1" minOccurs="0" name="lnk_dataultimoaccesoac" type="dateTime"/>
+		</sequence>
+	</complexType>
+	<complexType name="lnk_modelloaccountid">
+		<sequence>
+			<element maxOccurs="1" minOccurs="1" name="entitylogicname" type="string"/>
+			<element maxOccurs="1" minOccurs="1" name="entityid" type="string"/>
+		</sequence>
+	</complexType>
+	<complexType name="owninguser">
+		<sequence>
+			<element maxOccurs="1" minOccurs="1" name="entitylogicname" type="string"/>
+			<element maxOccurs="1" minOccurs="1" name="entityid" type="string"/>
+		</sequence>
+	</complexType>
+	<complexType name="masterid">
+		<sequence>
+			<element maxOccurs="1" minOccurs="1" name="entitylogicname" type="string"/>
+			<element maxOccurs="1" minOccurs="1" name="entityid" type="string"/>
+		</sequence>
+	</complexType>
+	<complexType name="ownerid">
+		<sequence>
+			<element maxOccurs="1" minOccurs="1" name="entitylogicname" type="string"/>
+			<element maxOccurs="1" minOccurs="1" name="entityid" type="string"/>
+		</sequence>
+	</complexType>
+	<complexType name="lnk_modelaccountid">
+		<sequence>
+			<element maxOccurs="1" minOccurs="1" name="entitylogicname" type="string"/>
+			<element maxOccurs="1" minOccurs="1" name="entityid" type="string"/>
+		</sequence>
+	</complexType>
+	<complexType name="owningbusinessunit">
+		<sequence>
+			<element maxOccurs="1" minOccurs="1" name="entitylogicname" type="string"/>
+			<element maxOccurs="1" minOccurs="1" name="entityid" type="string"/>
+		</sequence>
+	</complexType>
+	<complexType name="lnk_paese1id">
+		<sequence>
+			<element maxOccurs="1" minOccurs="1" name="entitylogicname" type="string"/>
+			<element maxOccurs="1" minOccurs="1" name="entityid" type="string"/>
+		</sequence>
+	</complexType>
+	<complexType name="createdby">
+		<sequence>
+			<element maxOccurs="1" minOccurs="1" name="entitylogicname" type="string"/>
+			<element maxOccurs="1" minOccurs="1" name="entityid" type="string"/>
+		</sequence>
+	</complexType>
+	<complexType name="lnk_paese2id">
+		<sequence>
+			<element maxOccurs="1" minOccurs="1" name="entitylogicname" type="string"/>
+			<element maxOccurs="1" minOccurs="1" name="entityid" type="string"/>
+		</sequence>
+	</complexType>
+	<complexType name="owningteam">
+		<sequence>
+			<element maxOccurs="1" minOccurs="1" name="entitylogicname" type="string"/>
+			<element maxOccurs="1" minOccurs="1" name="entityid" type="string"/>
+		</sequence>
+	</complexType>
+	<complexType name="defaultpricelevelid">
+		<sequence>
+			<element maxOccurs="1" minOccurs="1" name="entitylogicname" type="string"/>
+			<element maxOccurs="1" minOccurs="1" name="entityid" type="string"/>
+		</sequence>
+	</complexType>
+	<complexType name="territoryid">
+		<sequence>
+			<element maxOccurs="1" minOccurs="1" name="entitylogicname" type="string"/>
+			<element maxOccurs="1" minOccurs="1" name="entityid" type="string"/>
+		</sequence>
+	</complexType>
+	<complexType name="lnk_cap1id">
+		<sequence>
+			<element maxOccurs="1" minOccurs="1" name="entitylogicname" type="string"/>
+			<element maxOccurs="1" minOccurs="1" name="entityid" type="string"/>
+		</sequence>
+	</complexType>
+	<complexType name="lnk_comune1id">
+		<sequence>
+			<element maxOccurs="1" minOccurs="1" name="entitylogicname" type="string"/>
+			<element maxOccurs="1" minOccurs="1" name="entityid" type="string"/>
+		</sequence>
+	</complexType>
+	<complexType name="slaid">
+		<sequence>
+			<element maxOccurs="1" minOccurs="1" name="entitylogicname" type="string"/>
+			<element maxOccurs="1" minOccurs="1" name="entityid" type="string"/>
+		</sequence>
+	</complexType>
+	<complexType name="primarycontactid">
+		<sequence>
+			<element maxOccurs="1" minOccurs="1" name="entitylogicname" type="string"/>
+			<element maxOccurs="1" minOccurs="1" name="entityid" type="string"/>
+		</sequence>
+	</complexType>
+	<complexType name="lnk_cap2id">
+		<sequence>
+			<element maxOccurs="1" minOccurs="1" name="entitylogicname" type="string"/>
+			<element maxOccurs="1" minOccurs="1" name="entityid" type="string"/>
+		</sequence>
+	</complexType>
+	<complexType name="lnk_comune2id">
+		<sequence>
+			<element maxOccurs="1" minOccurs="1" name="entitylogicname" type="string"/>
+			<element maxOccurs="1" minOccurs="1" name="entityid" type="string"/>
+		</sequence>
+	</complexType>
+	<complexType name="lnk_assegnatoabpid">
+		<sequence>
+			<element maxOccurs="1" minOccurs="1" name="entitylogicname" type="string"/>
+			<element maxOccurs="1" minOccurs="1" name="entityid" type="string"/>
+		</sequence>
+	</complexType>
+	<complexType name="lnk_regione1id">
+		<sequence>
+			<element maxOccurs="1" minOccurs="1" name="entitylogicname" type="string"/>
+			<element maxOccurs="1" minOccurs="1" name="entityid" type="string"/>
+		</sequence>
+	</complexType>
+	<complexType name="lnk_provincia2id">
+		<sequence>
+			<element maxOccurs="1" minOccurs="1" name="entitylogicname" type="string"/>
+			<element maxOccurs="1" minOccurs="1" name="entityid" type="string"/>
+		</sequence>
+	</complexType>
+	<complexType name="lnk_partnerid">
+		<sequence>
+			<element maxOccurs="1" minOccurs="1" name="entitylogicname" type="string"/>
+			<element maxOccurs="1" minOccurs="1" name="entityid" type="string"/>
+		</sequence>
+	</complexType>
+	<complexType name="lnk_segnalatodabpid">
+		<sequence>
+			<element maxOccurs="1" minOccurs="1" name="entitylogicname" type="string"/>
+			<element maxOccurs="1" minOccurs="1" name="entityid" type="string"/>
+		</sequence>
+	</complexType>
+	<complexType name="lnk_originatingleadid">
+		<sequence>
+			<element maxOccurs="1" minOccurs="1" name="entitylogicname" type="string"/>
+			<element maxOccurs="1" minOccurs="1" name="entityid" type="string"/>
+		</sequence>
+	</complexType>
+	<complexType name="lnk_regione2id">
+		<sequence>
+			<element maxOccurs="1" minOccurs="1" name="entitylogicname" type="string"/>
+			<element maxOccurs="1" minOccurs="1" name="entityid" type="string"/>
+		</sequence>
+	</complexType>
+	<complexType name="slainvokedid">
+		<sequence>
+			<element maxOccurs="1" minOccurs="1" name="entitylogicname" type="string"/>
+			<element maxOccurs="1" minOccurs="1" name="entityid" type="string"/>
+		</sequence>
+	</complexType>
+	<complexType name="lnk_origineid">
+		<sequence>
+			<element maxOccurs="1" minOccurs="1" name="entitylogicname" type="string"/>
+			<element maxOccurs="1" minOccurs="1" name="entityid" type="string"/>
+		</sequence>
+	</complexType>
+	<complexType name="modifiedbyexternalparty">
+		<sequence>
+			<element maxOccurs="1" minOccurs="1" name="entitylogicname" type="string"/>
+			<element maxOccurs="1" minOccurs="1" name="entityid" type="string"/>
+		</sequence>
+	</complexType>
+	<complexType name="originatingleadid">
+		<sequence>
+			<element maxOccurs="1" minOccurs="1" name="entitylogicname" type="string"/>
+			<element maxOccurs="1" minOccurs="1" name="entityid" type="string"/>
+		</sequence>
+	</complexType>
+	<complexType name="lnk_segnalatodaid">
+		<sequence>
+			<element maxOccurs="1" minOccurs="1" name="entitylogicname" type="string"/>
+			<element maxOccurs="1" minOccurs="1" name="entityid" type="string"/>
+		</sequence>
+	</complexType>
+	<complexType name="parentaccountid">
+		<sequence>
+			<element maxOccurs="1" minOccurs="1" name="entitylogicname" type="string"/>
+			<element maxOccurs="1" minOccurs="1" name="entityid" type="string"/>
+		</sequence>
+	</complexType>
+	<complexType name="preferredserviceid">
+		<sequence>
+			<element maxOccurs="1" minOccurs="1" name="entitylogicname" type="string"/>
+			<element maxOccurs="1" minOccurs="1" name="entityid" type="string"/>
+		</sequence>
+	</complexType>
+	<complexType name="preferredsystemuserid">
+		<sequence>
+			<element maxOccurs="1" minOccurs="1" name="entitylogicname" type="string"/>
+			<element maxOccurs="1" minOccurs="1" name="entityid" type="string"/>
+		</sequence>
+	</complexType>
+	<complexType name="modifiedonbehalfby">
+		<sequence>
+			<element maxOccurs="1" minOccurs="1" name="entitylogicname" type="string"/>
+			<element maxOccurs="1" minOccurs="1" name="entityid" type="string"/>
+		</sequence>
+	</complexType>
+	<complexType name="modifiedby">
+		<sequence>
+			<element maxOccurs="1" minOccurs="1" name="entitylogicname" type="string"/>
+			<element maxOccurs="1" minOccurs="1" name="entityid" type="string"/>
+		</sequence>
+	</complexType>
+	<complexType name="createdonbehalfby">
+		<sequence>
+			<element maxOccurs="1" minOccurs="1" name="entitylogicname" type="string"/>
+			<element maxOccurs="1" minOccurs="1" name="entityid" type="string"/>
+		</sequence>
+	</complexType>
+	<complexType name="preferredequipmentid">
+		<sequence>
+			<element maxOccurs="1" minOccurs="1" name="entitylogicname" type="string"/>
+			<element maxOccurs="1" minOccurs="1" name="entityid" type="string"/>
+		</sequence>
+	</complexType>
+	<complexType name="createdbyexternalparty">
+		<sequence>
+			<element maxOccurs="1" minOccurs="1" name="entitylogicname" type="string"/>
+			<element maxOccurs="1" minOccurs="1" name="entityid" type="string"/>
+		</sequence>
+	</complexType>
+	<complexType name="lnk_provincia1id">
+		<sequence>
+			<element maxOccurs="1" minOccurs="1" name="entitylogicname" type="string"/>
+			<element maxOccurs="1" minOccurs="1" name="entityid" type="string"/>
+		</sequence>
+	</complexType>
+	<complexType name="transactioncurrencyid">
+		<sequence>
+			<element maxOccurs="1" minOccurs="1" name="entitylogicname" type="string"/>
+			<element maxOccurs="1" minOccurs="1" name="entityid" type="string"/>
+		</sequence>
+	</complexType>
+	<complexType name="lnk_metodopagamentoid">
+		<sequence>
+			<element maxOccurs="1" minOccurs="1" name="entitylogicname" type="string"/>
+			<element maxOccurs="1" minOccurs="1" name="entityid" type="string"/>
+		</sequence>
+	</complexType>
+</schema>
