@@ -1,0 +1,6 @@
+ESB.PCRF.000001;Generic/Unknown error occured on GetIMSIByIP process;System;500;
+ESB.PCRF.000002;JSONParse Exception occurred on ParseGetResponse activity;System;500;
+ESB.PCRF.000003;HTTPClient Exception occurred on GetIMSIByIP activity;System;500;
+ESB.PCRF.000004;HTTPServer Exception occurred on GetIMSIByIP activity;System;500;
+ESB.PCRF.000005;HTTPCommunication Exception occurred on GetIMSIByIP activity;System;500;
+ESB.PCRF.000006;ActivityTimedOut Exception occurred on GetIMSIByIP activity;System;500;
