@@ -11,3 +11,5 @@ ESB.MDYN.000009;Generic Error occurred on GetTestataContrattoByRelatedIMSI proce
 ESB.MDYN.000010;Generic/Unknown error occurred on GetSImFromAccount process;System;500;
 ESB.MDYN.000011;Connection Exception occurred call Microsoft Dynamics through the RetrieveSIMEntity activity;System;500;
 ESB.MDYN.000012;Business exception occurred on GETSIMFromAccount process;Business;400;
+ESB.MDYN.000013;System error occurred ın the GEtSIMbySımID process;System;500;
+ESB.MDYN.000014;Generic/Unknown error occurred on GetSIMBySimID process;System;500;

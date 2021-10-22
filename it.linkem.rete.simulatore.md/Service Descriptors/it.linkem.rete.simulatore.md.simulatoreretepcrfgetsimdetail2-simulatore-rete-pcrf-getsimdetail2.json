@@ -73,16 +73,13 @@
       "type" : "object",
       "properties" : {
         "vendorId" : {
-          "type" : "integer",
-          "format" : "int32"
+          "type" : "integer"
         },
         "featureListId" : {
-          "type" : "integer",
-          "format" : "int32"
+          "type" : "integer"
         },
         "featureList" : {
-          "type" : "integer",
-          "format" : "int32"
+          "type" : "integer"
         },
         "mBitFlag" : {
           "type" : "boolean"
@@ -111,8 +108,7 @@
           "$ref" : "#/definitions/sessionBindingIdentifier"
         },
         "timeOfLastMessage" : {
-          "type" : "integer",
-          "format" : "int64"
+          "type" : "string"
         },
         "activeFeatures" : {
           "type" : "array",
@@ -125,8 +121,7 @@
           "type" : "boolean"
         },
         "failedMessageCount" : {
-          "type" : "integer",
-          "format" : "int32"
+          "type" : "integer"
         },
         "diameterPeer" : {
           "$ref" : "#/definitions/diameterPeer"
@@ -175,8 +170,7 @@
           "type" : "string"
         },
         "ccRequestNumber" : {
-          "type" : "integer",
-          "format" : "int32"
+          "type" : "integer"
         },
         "defaultEPSBearerQoS" : {
           "$ref" : "#/definitions/defaultEPSBearerQoS"
@@ -276,8 +270,7 @@
           "type" : "string"
         },
         "reportRegistrations" : {
-          "type" : "integer",
-          "format" : "int32"
+          "type" : "integer"
         },
         "anChargingIdValue" : {
           "type" : "string"
@@ -318,8 +311,7 @@
           "type" : "string"
         },
         "lastReauthTime" : {
-          "type" : "integer",
-          "format" : "int32"
+          "type" : "integer"
         },
         "nextRuleStatusChangeTime" : {
           "type" : "string"
@@ -390,8 +382,7 @@
       "type" : "object",
       "properties" : {
         "priorityLevel" : {
-          "type" : "integer",
-          "format" : "int32"
+          "type" : "integer"
         },
         "preEmptionCapability" : {
           "type" : "string"
@@ -442,12 +433,10 @@
       "type" : "object",
       "properties" : {
         "upLinkBw" : {
-          "type" : "integer",
-          "format" : "int32"
+          "type" : "integer"
         },
         "downLinkBw" : {
-          "type" : "integer",
-          "format" : "int32"
+          "type" : "integer"
         },
         "kbps" : {
           "type" : "boolean"
@@ -509,8 +498,7 @@
           }
         },
         "ruleSource" : {
-          "type" : "integer",
-          "format" : "int32"
+          "type" : "integer"
         },
         "ruleStatus" : {
           "type" : "string"
@@ -525,8 +513,7 @@
           "type" : "string"
         },
         "timeToLiveInRollbackCache" : {
-          "type" : "integer",
-          "format" : "int32"
+          "type" : "integer"
         },
         "waitingForAfPeer" : {
           "type" : "boolean"
@@ -650,8 +637,7 @@
       "type" : "object",
       "properties" : {
         "defaultBearerQCI" : {
-          "type" : "integer",
-          "format" : "int32"
+          "type" : "integer"
         },
         "allocationRetentionPriority" : {
           "$ref" : "#/definitions/allocationRetentionPriority"
@@ -723,8 +709,7 @@
           }
         },
         "portNumber" : {
-          "type" : "integer",
-          "format" : "int32"
+          "type" : "integer"
         },
         "protocol" : {
           "type" : "string"
@@ -756,8 +741,7 @@
       "type" : "object",
       "properties" : {
         "defaultBearerQCI" : {
-          "type" : "integer",
-          "format" : "int32"
+          "type" : "integer"
         },
         "allocationRetentionPriority" : {
           "$ref" : "#/definitions/allocationRetentionPriority"
@@ -771,52 +755,40 @@
           "type" : "string"
         },
         "allSessionCount" : {
-          "type" : "integer",
-          "format" : "int32"
+          "type" : "integer"
         },
         "afSessionCount" : {
-          "type" : "integer",
-          "format" : "int32"
+          "type" : "integer"
         },
         "ipCanSessionCount" : {
-          "type" : "integer",
-          "format" : "int32"
+          "type" : "integer"
         },
         "sySessionCount" : {
-          "type" : "integer",
-          "format" : "int32"
+          "type" : "integer"
         },
         "sdSessionCount" : {
-          "type" : "integer",
-          "format" : "int32"
+          "type" : "integer"
         },
         "gySessionCount" : {
-          "type" : "integer",
-          "format" : "int32"
+          "type" : "integer"
         },
         "s9SessionCount" : {
-          "type" : "integer",
-          "format" : "int32"
+          "type" : "integer"
         },
         "nasREQSessioncount" : {
-          "type" : "integer",
-          "format" : "int32"
+          "type" : "integer"
         },
         "pduSessionCount" : {
-          "type" : "integer",
-          "format" : "int32"
+          "type" : "integer"
         },
         "nchfSessionCount" : {
-          "type" : "integer",
-          "format" : "int32"
+          "type" : "integer"
         },
         "amSessionCount" : {
-          "type" : "integer",
-          "format" : "int32"
+          "type" : "integer"
         },
         "ueSessionCount" : {
-          "type" : "integer",
-          "format" : "int32"
+          "type" : "integer"
         }
       }
     },
@@ -828,12 +800,10 @@
       "type" : "object",
       "properties" : {
         "upLinkBw" : {
-          "type" : "integer",
-          "format" : "int32"
+          "type" : "integer"
         },
         "downLinkBw" : {
-          "type" : "integer",
-          "format" : "int32"
+          "type" : "integer"
         },
         "kbps" : {
           "type" : "boolean"
