@@ -14,10 +14,13 @@
     xmlns:ns5="http://tns.tibco.com/bw/palette/internal/activityerror+bw.dynamicscrm.RetrieveMultipleEntity"
     xmlns:ns6="http://it.linkem/crm/getAccountByCodiceFiscaleOrPIVA/sl/xsd"
     xmlns:ns7="http://it.linkem/common/core/lehf/AuditTypes/xsd"
+    xmlns:ns8="http://tns.tibco.com/bw/palette/internal/errorlinkhandler+8e3acb7e-0d72-4cbd-b945-3045acd895b9"
+    xmlns:ns9="http://tns.tibco.com/bw/palette/internal/activityerror+com.tibco.bw.core.design.process.editor.Activity_4002_Throw"
     xmlns:sca="http://docs.oasis-open.org/ns/opencsa/sca/200912"
     xmlns:sca-bpel="http://docs.oasis-open.org/ns/opencsa/sca-bpel/200801"
     xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"
-    xmlns:tibprop="http://ns.tibco.com/bw/property" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    xmlns:tibprop="http://ns.tibco.com/bw/property"
+    xmlns:tns="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/fault" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
     <tibex:Types>
         <xs:schema attributeFormDefault="unqualified"
             elementFormDefault="qualified"
@@ -1275,14 +1278,26 @@
             </complexType>
         </schema>
         <schema elementFormDefault="unqualified"
-            targetNamespace="http://tns.tibco.com/bw/palette/internal/activityerror+bw.dynamicscrm.RetrieveMultipleEntity"
+            targetNamespace="http://tns.tibco.com/bw/palette/internal/errorlinkhandler+8e3acb7e-0d72-4cbd-b945-3045acd895b9"
             xmlns="http://www.w3.org/2001/XMLSchema"
-            xmlns:Q1="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/fault" xmlns:tns="http://tns.tibco.com/bw/palette/internal/activityerror+bw.dynamicscrm.RetrieveMultipleEntity">
+            xmlns:Q1="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/fault" xmlns:tns="http://tns.tibco.com/bw/palette/internal/errorlinkhandler+8e3acb7e-0d72-4cbd-b945-3045acd895b9">
             <import namespace="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/fault"/>
+            <element name="ErrorLinkHandlerFaultData" type="tns:ErrorLinkHandlerFaultDataType"/>
+            <complexType name="ErrorLinkHandlerFaultDataType">
+                <choice>
+                    <element maxOccurs="1" minOccurs="0" ref="Q1:ActivityFaultData"/>
+                </choice>
+            </complexType>
+        </schema>
+        <schema elementFormDefault="unqualified"
+            targetNamespace="http://tns.tibco.com/bw/palette/internal/activityerror+com.tibco.bw.core.design.process.editor.Activity_4002_Throw"
+            xmlns="http://www.w3.org/2001/XMLSchema"
+            xmlns:Q1="http://it.linkem/common/core/lehf/AuditTypes/xsd" xmlns:tns="http://tns.tibco.com/bw/palette/internal/activityerror+com.tibco.bw.core.design.process.editor.Activity_4002_Throw">
+            <import namespace="http://it.linkem/common/core/lehf/AuditTypes/xsd"/>
             <element name="ActivityErrorData" type="tns:ActivityErrorDataType"/>
             <complexType name="ActivityErrorDataType">
                 <choice>
-                    <element maxOccurs="1" minOccurs="0" ref="Q1:ActivityFaultData"/>
+                    <element maxOccurs="1" minOccurs="0" ref="Q1:LogAudit"/>
                 </choice>
             </complexType>
         </schema>
@@ -1387,7 +1402,7 @@
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.1"/>
-                                    <layoutConstraint x="817"
+                                    <layoutConstraint x="1008"
                                     xsi:type="notation:Bounds" y="122"/>
                                     </children>
                                     <children type="4002 bw.dynamicscrm.RetrieveMultipleEntity">
@@ -1494,7 +1509,182 @@
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.4"/>
-                                    <layoutConstraint x="657"
+                                    <layoutConstraint x="858"
+                                    xsi:type="notation:Bounds" y="122"/>
+                                    </children>
+                                    <children type="4002">
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <styles fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.5"/>
+                                    <layoutConstraint x="353"
+                                    xsi:type="notation:Bounds" y="269"/>
+                                    </children>
+                                    <children type="4002">
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <styles fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.6"/>
+                                    <layoutConstraint x="496"
+                                    xsi:type="notation:Bounds" y="269"/>
+                                    </children>
+                                    <children type="4002">
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <styles fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.7"/>
+                                    <layoutConstraint x="858"
+                                    xsi:type="notation:Bounds" y="231"/>
+                                    </children>
+                                    <children type="4002">
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <styles fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.8"/>
+                                    <layoutConstraint x="167"
+                                    xsi:type="notation:Bounds" y="269"/>
+                                    </children>
+                                    <children type="4002">
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <styles fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.9"/>
+                                    <layoutConstraint x="633"
                                     xsi:type="notation:Bounds" y="122"/>
                                     </children>
                                     <styles xsi:type="notation:DrawerStyle"/>
@@ -1509,8 +1699,8 @@
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <styles xsi:type="bwnotation:ResizingStyle"/>
                                     <element href="//0/@process/@activity/@activity"/>
-                                    <layoutConstraint height="384"
-                                    width="950" xsi:type="notation:Bounds"/>
+                                    <layoutConstraint height="407"
+                                    width="1141" xsi:type="notation:Bounds"/>
                                 </children>
                                 <styles xsi:type="notation:SortingStyle"/>
                                 <styles xsi:type="notation:FilteringStyle"/>
@@ -1519,10 +1709,91 @@
                             <styles xsi:type="bwnotation:BackgroundStyle"/>
                             <styles xsi:type="bwnotation:ResizingStyle"/>
                             <element href="//0/@process/@activity"/>
-                            <layoutConstraint height="372" width="953" xsi:type="notation:Bounds"/>
+                            <layoutConstraint height="407" width="1144" xsi:type="notation:Bounds"/>
                         </children>
                         <children type="4022">
                             <children type="3022">
+                                <children type="4028">
+                                    <children type="3029">
+                                    <children type="4032">
+                                    <styles fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@faultHandlers/@catch.0"/>
+                                    <layoutConstraint
+                                    height="34" width="34"
+                                    xsi:type="notation:Bounds" y="68"/>
+                                    </children>
+                                    <styles xsi:type="notation:SortingStyle"/>
+                                    <styles xsi:type="notation:FilteringStyle"/>
+                                    </children>
+                                    <children type="3030">
+                                    <children type="4005">
+                                    <children type="3007">
+                                    <children type="4002">
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+                                    <element href="//0/@process/@activity/@faultHandlers/@catch.0/@activity/@activity/@activities.0"/>
+                                    <layoutConstraint
+                                    x="53"
+                                    xsi:type="notation:Bounds" y="26"/>
+                                    </children>
+                                    <styles xsi:type="notation:DrawerStyle"/>
+                                    <styles xsi:type="notation:SortingStyle"/>
+                                    <styles xsi:type="notation:FilteringStyle"/>
+                                    </children>
+                                    <styles fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+                                    <styles xsi:type="bwnotation:ResizingStyle"/>
+                                    <element href="//0/@process/@activity/@faultHandlers/@catch.0/@activity/@activity"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <styles xsi:type="notation:SortingStyle"/>
+                                    <styles xsi:type="notation:FilteringStyle"/>
+                                    </children>
+                                    <styles fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <styles xsi:type="bwnotation:BackgroundStyle"/>
+                                    <styles xsi:type="bwnotation:ResizingStyle"/>
+                                    <element href="//0/@process/@activity/@faultHandlers/@catch.0"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                </children>
                                 <children type="4029">
                                     <children type="3031">
                                     <children type="4033">
@@ -1614,7 +1885,8 @@
                             <styles xsi:type="bwnotation:BackgroundStyle"/>
                             <styles xsi:type="bwnotation:ResizingStyle"/>
                             <element href="//0/@process/@activity/@faultHandlers"/>
-                            <layoutConstraint height="200" width="858" xsi:type="notation:Bounds"/>
+                            <layoutConstraint height="380" width="913"
+                                x="22" xsi:type="notation:Bounds" y="407"/>
                         </children>
                         <styles xsi:type="notation:SortingStyle"/>
                         <styles xsi:type="notation:FilteringStyle"/>
@@ -1624,7 +1896,7 @@
                     <styles xsi:type="bwnotation:BackgroundStyle"/>
                     <styles xsi:type="bwnotation:ResizingStyle"/>
                     <element href="//0/@process/@activity"/>
-                    <layoutConstraint height="608" width="953" x="1"
+                    <layoutConstraint height="788" width="1144" x="1"
                         xsi:type="notation:Bounds" y="1"/>
                 </children>
                 <styles xsi:type="notation:SortingStyle"/>
@@ -1633,7 +1905,7 @@
             </children>
             <styles fontName="Segoe UI" lineColor="0" xsi:type="notation:ShapeStyle"/>
             <element href="//0/@process"/>
-            <layoutConstraint height="660" width="1295" xsi:type="notation:Bounds"/>
+            <layoutConstraint height="840" width="1486" xsi:type="notation:Bounds"/>
         </children>
         <styles xsi:type="notation:DiagramStyle"/>
         <element href="//0"/>
@@ -1651,7 +1923,7 @@
         </edges>
         <edges
             source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2"
-            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.4" type="4006">
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.9" type="4006">
             <children type="6002">
                 <layoutConstraint xsi:type="notation:Location" y="40"/>
             </children>
@@ -1682,6 +1954,62 @@
             <element href="//0/@process/@activity/@activity/@links/@children.3"/>
             <bendpoints points="[25, -7, -127, 0]$[128, 0, -24, 7]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
+        <edges
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2"
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.5" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="255" xsi:type="notation:ConnectorStyle"/>
+            <styles fontColor="255" fontName="Segoe UI" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.4"/>
+            <bendpoints points="[-7, 25, 21, -76]$[-21, 77, 7, -24]" xsi:type="notation:RelativeBendpoints"/>
+            <targetAnchor id="(0.4146341463414634,0.2)" xsi:type="notation:IdentityAnchor"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.5"
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.6" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="33023" xsi:type="notation:ConnectorStyle"/>
+            <styles fontColor="33023" fontName="Segoe UI" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.5"/>
+            <bendpoints points="[25, -3, -113, 12]$[114, -12, -24, 3]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.5"
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.8" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="33023" xsi:type="notation:ConnectorStyle"/>
+            <styles fontColor="33023" fontName="Segoe UI" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.6"/>
+            <bendpoints points="[-24, 0, 162, 0]$[-161, 0, 25, 0]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.9"
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.4" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.7"/>
+            <bendpoints points="[25, 0, -200, 0]$[201, 0, -24, 0]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.9"
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.7" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="255" xsi:type="notation:ConnectorStyle"/>
+            <styles fontColor="255" fontName="Segoe UI" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.8"/>
+            <bendpoints points="[25, 12, -200, -97]$[201, 97, -24, -12]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
     </notation:Diagram>
     <tibex:NamespaceRegistry enabled="true">
         <tibex:namespaceItem
@@ -1694,6 +2022,8 @@
             namespace="http://www.tibco.com/bw/xpath/bw-custom-functions" prefix="bw"/>
         <tibex:namespaceItem
             namespace="http://www.tibco.com/bw/xslt/custom-functions" prefix="tib"/>
+        <tibex:namespaceItem
+            namespace="http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/fault" prefix="tns2"/>
     </tibex:NamespaceRegistry>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://it.linkem/crm/getAccountByCodiceFiscaleOrPIVA/sl/xsd"/>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://it.linkem/common/core/lehf/AuditTypes/xsd"/>
@@ -1713,7 +2043,7 @@
             name="getAccountByCodiceFiscaleOrPIVA-input" sca-bpel:internal="true"/>
         <bpws:variable element="ns4:Entities"
             name="getAccountByCodiceFiscaleOrPIVA" sca-bpel:internal="true"/>
-        <bpws:variable element="ns5:ActivityErrorData"
+        <bpws:variable element="ns8:ErrorLinkHandlerFaultData"
             name="_error_getAccountByCodiceFiscaleOrPIVA" sca-bpel:internal="true"/>
         <bpws:variable
             element="ns6:getAccountByCodiceFiscaleOrPIVA_Input"
@@ -1739,6 +2069,25 @@
             sca-bpel:hotUpdate="false" sca-bpel:privateProperty="true"
             sca-bpel:property="yes"
             tibex:propertySource="//it.linkem.common.core.lehf.sh///it.linkem.common.core.lehf.sh/Logging/System_Exception" type="xsd:string"/>
+        <bpws:variable element="ns7:LogAudit" name="ThrowError-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns7:LogAudit"
+            name="ThrowSystemError-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns:OptionalErrorReport"
+            name="_errorOptional" sca-bpel:internal="true"/>
+        <bpws:variable element="ns7:LogAudit"
+            name="ThrowMapResponseError-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns9:ActivityErrorData"
+            name="_error_ThrowMapResponseError" sca-bpel:internal="true"/>
+        <bpws:variable element="ns7:LogAudit"
+            name="ThrowBusinessError-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns9:ActivityErrorData"
+            name="_error__ThrowSystemError" sca-bpel:internal="true"/>
+        <bpws:variable
+            element="ns6:getAccountByCodiceFiscaleOrPIVA_Output"
+            name="MapResponse-input" sca-bpel:internal="true"/>
+        <bpws:variable
+            element="ns6:getAccountByCodiceFiscaleOrPIVA_Output"
+            name="MapResponse" sca-bpel:internal="true"/>
     </bpws:variables>
     <bpws:extensions>
         <bpws:extension mustUnderstand="no" namespace="http://www.eclipse.org/gmf/runtime/1.0.2/notation"/>
@@ -1750,6 +2099,22 @@
     </bpws:extensions>
     <bpws:scope name="scope">
         <bpws:faultHandlers>
+            <bpws:catch faultElement="ns7:LogAudit"
+                faultName="ns7:LogAudit" faultVariable="LogAudit" tibex:xpdlId="30d0f2fd-2ede-444f-80a2-e8e09ee0511d">
+                <bpws:scope name="scope2">
+                    <bpws:flow name="flow2">
+                        <bpws:links/>
+                        <bpws:throw faultName="ns7:LogAudit"
+                            faultVariable="ThrowError-input"
+                            name="ThrowError" tibex:xpdlId="f44af5de-4c36-4e60-a1be-ac683176a477">
+                            <tibex:inputBindings>
+                                <tibex:partBinding
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns9=&quot;http://it.linkem/common/core/lehf/AuditTypes/xsd&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;LogAudit&quot;/>&lt;xsl:template name=&quot;ThrowError-input&quot; match=&quot;/&quot;>&lt;xsl:copy-of select=&quot;$LogAudit&quot;/>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            </tibex:inputBindings>
+                        </bpws:throw>
+                    </bpws:flow>
+                </bpws:scope>
+            </bpws:catch>
             <bpws:catchAll tibex:faultDetailsVar="FaultDetails"
                 tibex:faultNameVar="FaultName" tibex:xpdlId="549820d6-59bd-4334-9c76-7dfdec17a658">
                 <bpws:scope name="scope1">
@@ -1771,10 +2136,18 @@
             <bpws:links>
                 <bpws:link name="StartToLoggingWrapper" tibex:linkType="SUCCESS"/>
                 <bpws:link
-                    name="getAccountByCodiceFiscaleOrPIVAToCopy_1_LogStart" tibex:linkType="SUCCESS"/>
+                    name="getAccountByCodiceFiscaleOrPIVAToMapper" tibex:linkType="SUCCESS"/>
                 <bpws:link
                     name="LogStartTogetAccountByCodiceFiscaleOrPIVA" tibex:linkType="SUCCESS"/>
                 <bpws:link name="Copy_1_LogStartToEnd" tibex:linkType="SUCCESS"/>
+                <bpws:link
+                    name="getAccountByCodiceFiscaleOrPIVAToErrorCheck" tibex:linkType="ERROR"/>
+                <bpws:link name="ErrorCheckToThrow" tibex:linkType="SUCCESS"/>
+                <bpws:link
+                    name="ErrorCheckToCopy_2_formatexceptionbusiness"
+                    tibex:label="format exception business" tibex:linkType="SUCCESSWITHCONDITION"/>
+                <bpws:link name="MapperToLogEnd" tibex:linkType="SUCCESS"/>
+                <bpws:link name="MapResponseToCopy_1_ThrowSystemError" tibex:linkType="ERROR"/>
             </bpws:links>
             <bpws:extensionActivity>
                 <tibex:receiveEvent createInstance="yes"
@@ -1826,7 +2199,15 @@
                         <bpws:target linkName="LogStartTogetAccountByCodiceFiscaleOrPIVA"/>
                     </bpws:targets>
                     <bpws:sources>
-                        <bpws:source linkName="getAccountByCodiceFiscaleOrPIVAToCopy_1_LogStart"/>
+                        <bpws:source linkName="getAccountByCodiceFiscaleOrPIVAToMapper"/>
+                        <bpws:source
+                            linkName="getAccountByCodiceFiscaleOrPIVAToErrorCheck"
+                            tibex:faultDetailsVar="getAccountByCodiceFiscaleOrPIVA" tibex:faultNameVar="FaultName">
+                            <tibex:DesignExpression>
+                                <tibex:expression expression="##error##" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"/>
+                            </tibex:DesignExpression>
+                            <bpws:transitionCondition expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"><![CDATA[##error##]]></bpws:transitionCondition>
+                        </bpws:source>
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding
@@ -6677,7 +7058,7 @@
                     tibex:xpdlId="e6496ae7-f508-4754-aebd-939a380dc812"
                     type="bw.generalactivities.callprocess" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                     <bpws:targets>
-                        <bpws:target linkName="getAccountByCodiceFiscaleOrPIVAToCopy_1_LogStart"/>
+                        <bpws:target linkName="MapperToLogEnd"/>
                     </bpws:targets>
                     <bpws:sources>
                         <bpws:source linkName="Copy_1_LogStartToEnd"/>
@@ -6690,6 +7071,96 @@
                         moduleRef="it.linkem.common.core.lehf.sh"
                         subProcessName="it.linkem.common.core.lehf.sh.LoggingWrapper" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
                 </tibex:extActivity>
+            </bpws:extensionActivity>
+            <bpws:empty name="ErrorCheck" tibex:xpdlId="b7f162a3-d851-4f78-b729-3223f804c28b">
+                <bpws:targets>
+                    <bpws:target linkName="getAccountByCodiceFiscaleOrPIVAToErrorCheck"/>
+                </bpws:targets>
+                <bpws:sources>
+                    <bpws:source linkName="ErrorCheckToThrow"/>
+                    <bpws:source linkName="ErrorCheckToCopy_2_formatexceptionbusiness">
+                        <tibex:DesignExpression>
+                            <tibex:expression
+                                expression="contains( upper-case($_error_getAccountByCodiceFiscaleOrPIVA/tns:ActivityFaultData/DynamicsCRMActivityFaultException[1]/message),&quot;SYSTEM.FORMATEXCEPTION&quot;)" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"/>
+                        </tibex:DesignExpression>
+                        <bpws:transitionCondition expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"><![CDATA[contains( upper-case($_error_getAccountByCodiceFiscaleOrPIVA/tns:ActivityFaultData/DynamicsCRMActivityFaultException[1]/message),"SYSTEM.FORMATEXCEPTION")]]></bpws:transitionCondition>
+                    </bpws:source>
+                </bpws:sources>
+            </bpws:empty>
+            <bpws:throw faultName="ns7:LogAudit"
+                faultVariable="ThrowSystemError-input"
+                name="ThrowSystemError" tibex:xpdlId="41bda11e-ab11-451e-a0df-b8bc76249342">
+                <tibex:inputBindings>
+                    <tibex:partBinding
+                        expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns9=&quot;http://it.linkem/common/core/lehf/AuditTypes/xsd&quot; xmlns:tns2=&quot;http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/fault&quot; xmlns:tib=&quot;http://www.tibco.com/bw/xslt/custom-functions&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;ERROR_Severity&quot;/>&lt;xsl:param name=&quot;System_Exception&quot;/>&lt;xsl:param name=&quot;_error&quot;/>&lt;xsl:param name=&quot;_error_getAccountByCodiceFiscaleOrPIVA&quot;/>&lt;xsl:param name=&quot;Start&quot;/>&lt;xsl:template name=&quot;ThrowSystemError-input&quot; match=&quot;/&quot;>&lt;tns9:LogAudit>&lt;auditElement>&lt;SEVERITY>&lt;xsl:value-of select=&quot;$ERROR_Severity&quot;/>&lt;/SEVERITY>&lt;PROCESSSTACK>&lt;xsl:value-of select=&quot;$_error/ProcessStack&quot;/>&lt;/PROCESSSTACK>&lt;LOGMESSAGE>&lt;xsl:value-of select=&quot;&amp;quot;System error occurred during getAccountByCodiceFiscaleOrPIVA process&amp;quot;&quot;/>&lt;/LOGMESSAGE>&lt;/auditElement>&lt;tns9:auditErrorElement>&lt;ERRORCODE>&lt;xsl:value-of select=&quot;&amp;quot;ESB.MDYN.000026&amp;quot;&quot;/>&lt;/ERRORCODE>&lt;ERRORTYPE>&lt;xsl:value-of select=&quot;$System_Exception&quot;/>&lt;/ERRORTYPE>&lt;ERRORMESSAGE>&lt;xsl:value-of select=&quot;concat(&amp;quot;System error occurred during getAccountByCodiceFiscaleOrPIVA process  - &amp;quot;, $_error_getAccountByCodiceFiscaleOrPIVA/tns2:ActivityFaultData/DynamicsCRMActivityFaultException[1]/message)&quot;/>&lt;/ERRORMESSAGE>&lt;ERRORDETAIL>&lt;xsl:value-of select=&quot;concat(tib:render-xml($_error,false(),true()),&amp;quot;  -   &amp;quot;,tib:render-xml($_error_getAccountByCodiceFiscaleOrPIVA,false(),true()))&quot;/>&lt;/ERRORDETAIL>&lt;ERRORTIMESTAMP>&lt;xsl:value-of select=&quot;current-dateTime()&quot;/>&lt;/ERRORTIMESTAMP>&lt;ORIGINALMESSAGE>&lt;xsl:value-of select=&quot;tib:render-xml($Start,false(),true())&quot;/>&lt;/ORIGINALMESSAGE>&lt;/tns9:auditErrorElement>&lt;/tns9:LogAudit>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                </tibex:inputBindings>
+                <bpws:targets>
+                    <bpws:target linkName="ErrorCheckToThrow"/>
+                </bpws:targets>
+            </bpws:throw>
+            <bpws:throw faultName="ns7:LogAudit"
+                faultVariable="ThrowMapResponseError-input"
+                name="ThrowMapResponseError" tibex:xpdlId="610a0d64-92bf-4d53-9bdd-e623af52e648">
+                <tibex:inputBindings>
+                    <tibex:partBinding
+                        expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns9=&quot;http://it.linkem/common/core/lehf/AuditTypes/xsd&quot; xmlns:tns2=&quot;http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/fault&quot; xmlns:tib=&quot;http://www.tibco.com/bw/xslt/custom-functions&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;ERROR_Severity&quot;/>&lt;xsl:param name=&quot;System_Exception&quot;/>&lt;xsl:param name=&quot;_error&quot;/>&lt;xsl:param name=&quot;Start&quot;/>&lt;xsl:param name=&quot;MapResponse&quot;/>&lt;xsl:template name=&quot;ThrowMapResponseError-input&quot; match=&quot;/&quot;>&lt;tns9:LogAudit>&lt;auditElement>&lt;SEVERITY>&lt;xsl:value-of select=&quot;$ERROR_Severity&quot;/>&lt;/SEVERITY>&lt;PROCESSSTACK>&lt;xsl:value-of select=&quot;$_error/ProcessStack&quot;/>&lt;/PROCESSSTACK>&lt;LOGMESSAGE>&lt;xsl:value-of select=&quot;&amp;quot;System error occurred during MapResponse process&amp;quot;&quot;/>&lt;/LOGMESSAGE>&lt;/auditElement>&lt;tns9:auditErrorElement>&lt;ERRORCODE>&lt;xsl:value-of select=&quot;&amp;quot;ESB.MDYN.000017&amp;quot;&quot;/>&lt;/ERRORCODE>&lt;ERRORTYPE>&lt;xsl:value-of select=&quot;$System_Exception&quot;/>&lt;/ERRORTYPE>&lt;ERRORMESSAGE>&lt;xsl:value-of select=&quot;concat(&amp;quot;System error occurred during MapResponse process  - &amp;quot;, string($MapResponse))&quot;/>&lt;/ERRORMESSAGE>&lt;ERRORDETAIL>&lt;xsl:value-of select=&quot;concat(tib:render-xml($_error,false(),true()),&amp;quot;  -   &amp;quot;,tib:render-xml($MapResponse,false(),true()))&quot;/>&lt;/ERRORDETAIL>&lt;ERRORTIMESTAMP>&lt;xsl:value-of select=&quot;current-dateTime()&quot;/>&lt;/ERRORTIMESTAMP>&lt;ORIGINALMESSAGE>&lt;xsl:value-of select=&quot;tib:render-xml($Start,false(),true())&quot;/>&lt;/ORIGINALMESSAGE>&lt;/tns9:auditErrorElement>&lt;/tns9:LogAudit>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                </tibex:inputBindings>
+                <bpws:targets>
+                    <bpws:target linkName="MapResponseToCopy_1_ThrowSystemError"/>
+                </bpws:targets>
+            </bpws:throw>
+            <bpws:throw faultName="ns7:LogAudit"
+                faultVariable="ThrowBusinessError-input"
+                name="ThrowBusinessError" tibex:xpdlId="6070004a-3ad9-41a5-a5fd-fc1402b7f45e">
+                <tibex:inputBindings>
+                    <tibex:partBinding
+                        expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns9=&quot;http://it.linkem/common/core/lehf/AuditTypes/xsd&quot; xmlns:tns2=&quot;http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/fault&quot; xmlns:tib=&quot;http://www.tibco.com/bw/xslt/custom-functions&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;ERROR_Severity&quot;/>&lt;xsl:param name=&quot;_error&quot;/>&lt;xsl:param name=&quot;_error_getAccountByCodiceFiscaleOrPIVA&quot;/>&lt;xsl:param name=&quot;Start&quot;/>&lt;xsl:template name=&quot;ThrowBusinessError-input&quot; match=&quot;/&quot;>&lt;tns9:LogAudit>&lt;auditElement>&lt;SEVERITY>&lt;xsl:value-of select=&quot;$ERROR_Severity&quot;/>&lt;/SEVERITY>&lt;PROCESSSTACK>&lt;xsl:value-of select=&quot;$_error/ProcessStack&quot;/>&lt;/PROCESSSTACK>&lt;LOGMESSAGE>&lt;xsl:value-of select=&quot;&amp;quot;Business error occurred during getAccountByCodiceFiscaleOrPIVA process&amp;quot;&quot;/>&lt;/LOGMESSAGE>&lt;/auditElement>&lt;tns9:auditErrorElement>&lt;ERRORCODE>&lt;xsl:value-of select=&quot;&amp;quot;ESB.MDYN.000026&amp;quot;&quot;/>&lt;/ERRORCODE>&lt;xsl:if test=&quot;$Business_Exception&quot;>&lt;ERRORTYPE>&lt;xsl:value-of select=&quot;$Business_Exception&quot;/>&lt;/ERRORTYPE>&lt;/xsl:if>&lt;ERRORMESSAGE>&lt;xsl:value-of select=&quot;concat(&amp;quot;Business error occurred during getAccountByCodiceFiscaleOrPIVA process  - &amp;quot;, $_error_getAccountByCodiceFiscaleOrPIVA/tns2:ActivityFaultData/DynamicsCRMActivityFaultException[1]/message)&quot;/>&lt;/ERRORMESSAGE>&lt;ERRORDETAIL>&lt;xsl:value-of select=&quot;concat(tib:render-xml($_error,false(),true()),&amp;quot;  -   &amp;quot;,tib:render-xml($_error_getAccountByCodiceFiscaleOrPIVA,false(),true()))&quot;/>&lt;/ERRORDETAIL>&lt;ERRORTIMESTAMP>&lt;xsl:value-of select=&quot;current-dateTime()&quot;/>&lt;/ERRORTIMESTAMP>&lt;ORIGINALMESSAGE>&lt;xsl:value-of select=&quot;tib:render-xml($Start,false(),true())&quot;/>&lt;/ORIGINALMESSAGE>&lt;/tns9:auditErrorElement>&lt;/tns9:LogAudit>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                </tibex:inputBindings>
+                <bpws:targets>
+                    <bpws:target linkName="ErrorCheckToCopy_2_formatexceptionbusiness"/>
+                </bpws:targets>
+            </bpws:throw>
+            <bpws:extensionActivity>
+                <tibex:activityExtension
+                    inputVariable="MapResponse-input" name="MapResponse"
+                    outputVariable="MapResponse"
+                    tibex:xpdlId="38fea25f-4054-476b-99be-d403db4bc52c" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                    <bpws:targets>
+                        <bpws:target linkName="getAccountByCodiceFiscaleOrPIVAToMapper"/>
+                    </bpws:targets>
+                    <bpws:sources>
+                        <bpws:source linkName="MapperToLogEnd"/>
+                        <bpws:source
+                            linkName="MapResponseToCopy_1_ThrowSystemError"
+                            tibex:faultDetailsVar="MapResponse" tibex:faultNameVar="FaultName">
+                            <tibex:DesignExpression>
+                                <tibex:expression expression="##error##" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"/>
+                            </tibex:DesignExpression>
+                            <bpws:transitionCondition expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"><![CDATA[##error##]]></bpws:transitionCondition>
+                        </bpws:source>
+                    </bpws:sources>
+                    <tibex:inputBindings>
+                        <tibex:inputBinding
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns1=&quot;http://it.linkem/crm/getAccountByCodiceFiscaleOrPIVA/sl/xsd&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;getAccountByCodiceFiscaleOrPIVA&quot;/>&lt;xsl:template name=&quot;MapResponse-input&quot; match=&quot;/&quot;>&lt;tns1:getAccountByCodiceFiscaleOrPIVA_Output>&lt;xsl:for-each select=&quot;$getAccountByCodiceFiscaleOrPIVA/List/account&quot;>&lt;tns1:Account>&lt;xsl:copy-of select=&quot;lnk_modelloaccountid&quot;/>&lt;xsl:if test=&quot;lnk_esclusionedafename&quot;>&lt;lnk_esclusionedafename>&lt;xsl:value-of select=&quot;lnk_esclusionedafename&quot;/>&lt;/lnk_esclusionedafename>&lt;/xsl:if>&lt;xsl:if test=&quot;donotbulkemailname&quot;>&lt;donotbulkemailname>&lt;xsl:value-of select=&quot;donotbulkemailname&quot;/>&lt;/donotbulkemailname>&lt;/xsl:if>&lt;xsl:if test=&quot;address1_addresstypecode&quot;>&lt;address1_addresstypecode>&lt;xsl:value-of select=&quot;address1_addresstypecode&quot;/>&lt;/address1_addresstypecode>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_copertura_newname&quot;>&lt;lnk_copertura_newname>&lt;xsl:value-of select=&quot;lnk_copertura_newname&quot;/>&lt;/lnk_copertura_newname>&lt;/xsl:if>&lt;xsl:if test=&quot;shippingmethodcodename&quot;>&lt;shippingmethodcodename>&lt;xsl:value-of select=&quot;shippingmethodcodename&quot;/>&lt;/shippingmethodcodename>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_originename&quot;>&lt;lnk_originename>&lt;xsl:value-of select=&quot;lnk_originename&quot;/>&lt;/lnk_originename>&lt;/xsl:if>&lt;xsl:if test=&quot;openrevenue&quot;>&lt;openrevenue>&lt;xsl:value-of select=&quot;openrevenue&quot;/>&lt;/openrevenue>&lt;/xsl:if>&lt;xsl:copy-of select=&quot;owninguser&quot;/>&lt;xsl:if test=&quot;participatesinworkflow&quot;>&lt;participatesinworkflow>&lt;xsl:value-of select=&quot;participatesinworkflow&quot;/>&lt;/participatesinworkflow>&lt;/xsl:if>&lt;xsl:if test=&quot;statuscode&quot;>&lt;statuscode>&lt;xsl:value-of select=&quot;statuscode&quot;/>&lt;/statuscode>&lt;/xsl:if>&lt;xsl:copy-of select=&quot;masterid&quot;/>&lt;xsl:if test=&quot;entityimage_url&quot;>&lt;entityimage_url>&lt;xsl:value-of select=&quot;entityimage_url&quot;/>&lt;/entityimage_url>&lt;/xsl:if>&lt;xsl:if test=&quot;donotemailname&quot;>&lt;donotemailname>&lt;xsl:value-of select=&quot;donotemailname&quot;/>&lt;/donotemailname>&lt;/xsl:if>&lt;xsl:if test=&quot;donotsendmm&quot;>&lt;donotsendmm>&lt;xsl:value-of select=&quot;donotsendmm&quot;/>&lt;/donotsendmm>&lt;/xsl:if>&lt;xsl:if test=&quot;donotfaxname&quot;>&lt;donotfaxname>&lt;xsl:value-of select=&quot;donotfaxname&quot;/>&lt;/donotfaxname>&lt;/xsl:if>&lt;xsl:if test=&quot;createdbyexternalpartyname&quot;>&lt;createdbyexternalpartyname>&lt;xsl:value-of select=&quot;createdbyexternalpartyname&quot;/>&lt;/createdbyexternalpartyname>&lt;/xsl:if>&lt;xsl:if test=&quot;preferredappointmenttimecode&quot;>&lt;preferredappointmenttimecode>&lt;xsl:value-of select=&quot;preferredappointmenttimecode&quot;/>&lt;/preferredappointmenttimecode>&lt;/xsl:if>&lt;xsl:if test=&quot;primarysatoriid&quot;>&lt;primarysatoriid>&lt;xsl:value-of select=&quot;primarysatoriid&quot;/>&lt;/primarysatoriid>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_cambiapassword&quot;>&lt;lnk_cambiapassword>&lt;xsl:value-of select=&quot;lnk_cambiapassword&quot;/>&lt;/lnk_cambiapassword>&lt;/xsl:if>&lt;xsl:if test=&quot;createdonbehalfbyname&quot;>&lt;createdonbehalfbyname>&lt;xsl:value-of select=&quot;createdonbehalfbyname&quot;/>&lt;/createdonbehalfbyname>&lt;/xsl:if>&lt;xsl:if test=&quot;address1_stateorprovince&quot;>&lt;address1_stateorprovince>&lt;xsl:value-of select=&quot;address1_stateorprovince&quot;/>&lt;/address1_stateorprovince>&lt;/xsl:if>&lt;xsl:if test=&quot;timezoneruleversionnumber&quot;>&lt;timezoneruleversionnumber>&lt;xsl:value-of select=&quot;timezoneruleversionnumber&quot;/>&lt;/timezoneruleversionnumber>&lt;/xsl:if>&lt;xsl:if test=&quot;donotpostalmailname&quot;>&lt;donotpostalmailname>&lt;xsl:value-of select=&quot;donotpostalmailname&quot;/>&lt;/donotpostalmailname>&lt;/xsl:if>&lt;xsl:copy-of select=&quot;ownerid&quot;/>&lt;xsl:if test=&quot;lnk_capspedfattura&quot;>&lt;lnk_capspedfattura>&lt;xsl:value-of select=&quot;lnk_capspedfattura&quot;/>&lt;/lnk_capspedfattura>&lt;/xsl:if>&lt;xsl:if test=&quot;participatesinworkflowname&quot;>&lt;participatesinworkflowname>&lt;xsl:value-of select=&quot;participatesinworkflowname&quot;/>&lt;/participatesinworkflowname>&lt;/xsl:if>&lt;xsl:if test=&quot;address2_city&quot;>&lt;address2_city>&lt;xsl:value-of select=&quot;address2_city&quot;/>&lt;/address2_city>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_disabilitafatture&quot;>&lt;lnk_disabilitafatture>&lt;xsl:value-of select=&quot;lnk_disabilitafatture&quot;/>&lt;/lnk_disabilitafatture>&lt;/xsl:if>&lt;xsl:if test=&quot;lastonholdtime&quot;>&lt;lastonholdtime>&lt;xsl:value-of select=&quot;lastonholdtime&quot;/>&lt;/lastonholdtime>&lt;/xsl:if>&lt;xsl:copy-of select=&quot;lnk_modelaccountid&quot;/>&lt;xsl:if test=&quot;lnk_documentlibrary&quot;>&lt;lnk_documentlibrary>&lt;xsl:value-of select=&quot;lnk_documentlibrary&quot;/>&lt;/lnk_documentlibrary>&lt;/xsl:if>&lt;xsl:if test=&quot;preferredequipmentidname&quot;>&lt;preferredequipmentidname>&lt;xsl:value-of select=&quot;preferredequipmentidname&quot;/>&lt;/preferredequipmentidname>&lt;/xsl:if>&lt;xsl:if test=&quot;address2_addresstypecodename&quot;>&lt;address2_addresstypecodename>&lt;xsl:value-of select=&quot;address2_addresstypecodename&quot;/>&lt;/address2_addresstypecodename>&lt;/xsl:if>&lt;xsl:if test=&quot;address2_latitude&quot;>&lt;address2_latitude>&lt;xsl:value-of select=&quot;address2_latitude&quot;/>&lt;/address2_latitude>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_effettuarecambiopassword&quot;>&lt;lnk_effettuarecambiopassword>&lt;xsl:value-of select=&quot;lnk_effettuarecambiopassword&quot;/>&lt;/lnk_effettuarecambiopassword>&lt;/xsl:if>&lt;xsl:if test=&quot;preferredsystemuseridyominame&quot;>&lt;preferredsystemuseridyominame>&lt;xsl:value-of select=&quot;preferredsystemuseridyominame&quot;/>&lt;/preferredsystemuseridyominame>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_consensoprivacysky&quot;>&lt;lnk_consensoprivacysky>&lt;xsl:value-of select=&quot;lnk_consensoprivacysky&quot;/>&lt;/lnk_consensoprivacysky>&lt;/xsl:if>&lt;xsl:if test=&quot;parentaccountidyominame&quot;>&lt;parentaccountidyominame>&lt;xsl:value-of select=&quot;parentaccountidyominame&quot;/>&lt;/parentaccountidyominame>&lt;/xsl:if>&lt;xsl:if test=&quot;address1_shippingmethodcodename&quot;>&lt;address1_shippingmethodcodename>&lt;xsl:value-of select=&quot;address1_shippingmethodcodename&quot;/>&lt;/address1_shippingmethodcodename>&lt;/xsl:if>&lt;xsl:copy-of select=&quot;owningbusinessunit&quot;/>&lt;xsl:if test=&quot;lnk_segnalatodabpidname&quot;>&lt;lnk_segnalatodabpidname>&lt;xsl:value-of select=&quot;lnk_segnalatodabpidname&quot;/>&lt;/lnk_segnalatodabpidname>&lt;/xsl:if>&lt;xsl:if test=&quot;donotbulkpostalmail&quot;>&lt;donotbulkpostalmail>&lt;xsl:value-of select=&quot;donotbulkpostalmail&quot;/>&lt;/donotbulkpostalmail>&lt;/xsl:if>&lt;xsl:if test=&quot;marketcap&quot;>&lt;marketcap>&lt;xsl:value-of select=&quot;marketcap&quot;/>&lt;/marketcap>&lt;/xsl:if>&lt;xsl:if test=&quot;createdbyyominame&quot;>&lt;createdbyyominame>&lt;xsl:value-of select=&quot;createdbyyominame&quot;/>&lt;/createdbyyominame>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_datamodificapwd&quot;>&lt;lnk_datamodificapwd>&lt;xsl:value-of select=&quot;lnk_datamodificapwd&quot;/>&lt;/lnk_datamodificapwd>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_isgestioneamministrativaname&quot;>&lt;lnk_isgestioneamministrativaname>&lt;xsl:value-of select=&quot;lnk_isgestioneamministrativaname&quot;/>&lt;/lnk_isgestioneamministrativaname>&lt;/xsl:if>&lt;xsl:if test=&quot;owneridyominame&quot;>&lt;owneridyominame>&lt;xsl:value-of select=&quot;owneridyominame&quot;/>&lt;/owneridyominame>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_cittaspedfattura&quot;>&lt;lnk_cittaspedfattura>&lt;xsl:value-of select=&quot;lnk_cittaspedfattura&quot;/>&lt;/lnk_cittaspedfattura>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_abbonatopaytv&quot;>&lt;lnk_abbonatopaytv>&lt;xsl:value-of select=&quot;lnk_abbonatopaytv&quot;/>&lt;/lnk_abbonatopaytv>&lt;/xsl:if>&lt;xsl:if test=&quot;statecode&quot;>&lt;statecode>&lt;xsl:value-of select=&quot;statecode&quot;/>&lt;/statecode>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_utentemobile&quot;>&lt;lnk_utentemobile>&lt;xsl:value-of select=&quot;lnk_utentemobile&quot;/>&lt;/lnk_utentemobile>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_documentoricevuto&quot;>&lt;lnk_documentoricevuto>&lt;xsl:value-of select=&quot;lnk_documentoricevuto&quot;/>&lt;/lnk_documentoricevuto>&lt;/xsl:if>&lt;xsl:if test=&quot;openrevenue_state&quot;>&lt;openrevenue_state>&lt;xsl:value-of select=&quot;openrevenue_state&quot;/>&lt;/openrevenue_state>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_persona&quot;>&lt;lnk_persona>&lt;xsl:value-of select=&quot;lnk_persona&quot;/>&lt;/lnk_persona>&lt;/xsl:if>&lt;xsl:if test=&quot;sharesoutstanding&quot;>&lt;sharesoutstanding>&lt;xsl:value-of select=&quot;sharesoutstanding&quot;/>&lt;/sharesoutstanding>&lt;/xsl:if>&lt;xsl:if test=&quot;modifiedbyexternalpartyyominame&quot;>&lt;modifiedbyexternalpartyyominame>&lt;xsl:value-of select=&quot;modifiedbyexternalpartyyominame&quot;/>&lt;/modifiedbyexternalpartyyominame>&lt;/xsl:if>&lt;xsl:copy-of select=&quot;lnk_paese1id&quot;/>&lt;xsl:if test=&quot;overriddencreatedon&quot;>&lt;overriddencreatedon>&lt;xsl:value-of select=&quot;overriddencreatedon&quot;/>&lt;/overriddencreatedon>&lt;/xsl:if>&lt;xsl:if test=&quot;address2_county&quot;>&lt;address2_county>&lt;xsl:value-of select=&quot;address2_county&quot;/>&lt;/address2_county>&lt;/xsl:if>&lt;xsl:if test=&quot;address2_shippingmethodcode&quot;>&lt;address2_shippingmethodcode>&lt;xsl:value-of select=&quot;address2_shippingmethodcode&quot;/>&lt;/address2_shippingmethodcode>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_segnale_new&quot;>&lt;lnk_segnale_new>&lt;xsl:value-of select=&quot;lnk_segnale_new&quot;/>&lt;/lnk_segnale_new>&lt;/xsl:if>&lt;xsl:if test=&quot;entityimageid&quot;>&lt;entityimageid>&lt;xsl:value-of select=&quot;entityimageid&quot;/>&lt;/entityimageid>&lt;/xsl:if>&lt;xsl:if test=&quot;cdi_allowtextmessages&quot;>&lt;cdi_allowtextmessages>&lt;xsl:value-of select=&quot;cdi_allowtextmessages&quot;/>&lt;/cdi_allowtextmessages>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_contrattoricevuto&quot;>&lt;lnk_contrattoricevuto>&lt;xsl:value-of select=&quot;lnk_contrattoricevuto&quot;/>&lt;/lnk_contrattoricevuto>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_consensoprivacyskyname&quot;>&lt;lnk_consensoprivacyskyname>&lt;xsl:value-of select=&quot;lnk_consensoprivacyskyname&quot;/>&lt;/lnk_consensoprivacyskyname>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_paese2idname&quot;>&lt;lnk_paese2idname>&lt;xsl:value-of select=&quot;lnk_paese2idname&quot;/>&lt;/lnk_paese2idname>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_codicefiscale&quot;>&lt;lnk_codicefiscale>&lt;xsl:value-of select=&quot;lnk_codicefiscale&quot;/>&lt;/lnk_codicefiscale>&lt;/xsl:if>&lt;xsl:if test=&quot;donotfax&quot;>&lt;donotfax>&lt;xsl:value-of select=&quot;donotfax&quot;/>&lt;/donotfax>&lt;/xsl:if>&lt;xsl:if test=&quot;modifiedbyyominame&quot;>&lt;modifiedbyyominame>&lt;xsl:value-of select=&quot;modifiedbyyominame&quot;/>&lt;/modifiedbyyominame>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_metodopagamentoidname&quot;>&lt;lnk_metodopagamentoidname>&lt;xsl:value-of select=&quot;lnk_metodopagamentoidname&quot;/>&lt;/lnk_metodopagamentoidname>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_origineidname&quot;>&lt;lnk_origineidname>&lt;xsl:value-of select=&quot;lnk_origineidname&quot;/>&lt;/lnk_origineidname>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_bts_new&quot;>&lt;lnk_bts_new>&lt;xsl:value-of select=&quot;lnk_bts_new&quot;/>&lt;/lnk_bts_new>&lt;/xsl:if>&lt;xsl:if test=&quot;businesstypecode&quot;>&lt;businesstypecode>&lt;xsl:value-of select=&quot;businesstypecode&quot;/>&lt;/businesstypecode>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_personaname&quot;>&lt;lnk_personaname>&lt;xsl:value-of select=&quot;lnk_personaname&quot;/>&lt;/lnk_personaname>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_storeidnoverca&quot;>&lt;lnk_storeidnoverca>&lt;xsl:value-of select=&quot;lnk_storeidnoverca&quot;/>&lt;/lnk_storeidnoverca>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_prov_data&quot;>&lt;lnk_prov_data>&lt;xsl:value-of select=&quot;lnk_prov_data&quot;/>&lt;/lnk_prov_data>&lt;/xsl:if>&lt;xsl:if test=&quot;versionnumber&quot;>&lt;versionnumber>&lt;xsl:value-of select=&quot;versionnumber&quot;/>&lt;/versionnumber>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_tipokoname&quot;>&lt;lnk_tipokoname>&lt;xsl:value-of select=&quot;lnk_tipokoname&quot;/>&lt;/lnk_tipokoname>&lt;/xsl:if>&lt;xsl:if test=&quot;address1_primarycontactname&quot;>&lt;address1_primarycontactname>&lt;xsl:value-of select=&quot;address1_primarycontactname&quot;/>&lt;/address1_primarycontactname>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_passwordcambiata&quot;>&lt;lnk_passwordcambiata>&lt;xsl:value-of select=&quot;lnk_passwordcambiata&quot;/>&lt;/lnk_passwordcambiata>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_telefonomobile&quot;>&lt;lnk_telefonomobile>&lt;xsl:value-of select=&quot;lnk_telefonomobile&quot;/>&lt;/lnk_telefonomobile>&lt;/xsl:if>&lt;xsl:if test=&quot;address2_postofficebox&quot;>&lt;address2_postofficebox>&lt;xsl:value-of select=&quot;address2_postofficebox&quot;/>&lt;/address2_postofficebox>&lt;/xsl:if>&lt;xsl:if test=&quot;websiteurl&quot;>&lt;websiteurl>&lt;xsl:value-of select=&quot;websiteurl&quot;/>&lt;/websiteurl>&lt;/xsl:if>&lt;xsl:if test=&quot;lastusedincampaign&quot;>&lt;lastusedincampaign>&lt;xsl:value-of select=&quot;lastusedincampaign&quot;/>&lt;/lastusedincampaign>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_cognome&quot;>&lt;lnk_cognome>&lt;xsl:value-of select=&quot;lnk_cognome&quot;/>&lt;/lnk_cognome>&lt;/xsl:if>&lt;xsl:if test=&quot;onholdtime&quot;>&lt;onholdtime>&lt;xsl:value-of select=&quot;onholdtime&quot;/>&lt;/onholdtime>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_dataultimaaccettazioneprivacy&quot;>&lt;lnk_dataultimaaccettazioneprivacy>&lt;xsl:value-of select=&quot;lnk_dataultimaaccettazioneprivacy&quot;/>&lt;/lnk_dataultimaaccettazioneprivacy>&lt;/xsl:if>&lt;xsl:if test=&quot;address1_name&quot;>&lt;address1_name>&lt;xsl:value-of select=&quot;address1_name&quot;/>&lt;/address1_name>&lt;/xsl:if>&lt;xsl:if test=&quot;stageid&quot;>&lt;stageid>&lt;xsl:value-of select=&quot;stageid&quot;/>&lt;/stageid>&lt;/xsl:if>&lt;xsl:if test=&quot;address1_telephone2&quot;>&lt;address1_telephone2>&lt;xsl:value-of select=&quot;address1_telephone2&quot;/>&lt;/address1_telephone2>&lt;/xsl:if>&lt;xsl:if test=&quot;address1_telephone3&quot;>&lt;address1_telephone3>&lt;xsl:value-of select=&quot;address1_telephone3&quot;/>&lt;/address1_telephone3>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_utentemobilename&quot;>&lt;lnk_utentemobilename>&lt;xsl:value-of select=&quot;lnk_utentemobilename&quot;/>&lt;/lnk_utentemobilename>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_partneridyominame&quot;>&lt;lnk_partneridyominame>&lt;xsl:value-of select=&quot;lnk_partneridyominame&quot;/>&lt;/lnk_partneridyominame>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_statocodicecliente&quot;>&lt;lnk_statocodicecliente>&lt;xsl:value-of select=&quot;lnk_statocodicecliente&quot;/>&lt;/lnk_statocodicecliente>&lt;/xsl:if>&lt;xsl:if test=&quot;originatingleadidname&quot;>&lt;originatingleadidname>&lt;xsl:value-of select=&quot;originatingleadidname&quot;/>&lt;/originatingleadidname>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_loyaltylevel&quot;>&lt;lnk_loyaltylevel>&lt;xsl:value-of select=&quot;lnk_loyaltylevel&quot;/>&lt;/lnk_loyaltylevel>&lt;/xsl:if>&lt;xsl:if test=&quot;originatingleadidyominame&quot;>&lt;originatingleadidyominame>&lt;xsl:value-of select=&quot;originatingleadidyominame&quot;/>&lt;/originatingleadidyominame>&lt;/xsl:if>&lt;xsl:if test=&quot;ownershipcode&quot;>&lt;ownershipcode>&lt;xsl:value-of select=&quot;ownershipcode&quot;/>&lt;/ownershipcode>&lt;/xsl:if>&lt;xsl:if test=&quot;mergedname&quot;>&lt;mergedname>&lt;xsl:value-of select=&quot;mergedname&quot;/>&lt;/mergedname>&lt;/xsl:if>&lt;xsl:if test=&quot;creditlimit_base&quot;>&lt;creditlimit_base>&lt;xsl:value-of select=&quot;creditlimit_base&quot;/>&lt;/creditlimit_base>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_emailvalidataname&quot;>&lt;lnk_emailvalidataname>&lt;xsl:value-of select=&quot;lnk_emailvalidataname&quot;/>&lt;/lnk_emailvalidataname>&lt;/xsl:if>&lt;xsl:if test=&quot;donotemail&quot;>&lt;donotemail>&lt;xsl:value-of select=&quot;donotemail&quot;/>&lt;/donotemail>&lt;/xsl:if>&lt;xsl:if test=&quot;customertypecodename&quot;>&lt;customertypecodename>&lt;xsl:value-of select=&quot;customertypecodename&quot;/>&lt;/customertypecodename>&lt;/xsl:if>&lt;xsl:if test=&quot;address1_country&quot;>&lt;address1_country>&lt;xsl:value-of select=&quot;address1_country&quot;/>&lt;/address1_country>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_accessoareaclientiabilitato&quot;>&lt;lnk_accessoareaclientiabilitato>&lt;xsl:value-of select=&quot;lnk_accessoareaclientiabilitato&quot;/>&lt;/lnk_accessoareaclientiabilitato>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_inviodettagliotraffico&quot;>&lt;lnk_inviodettagliotraffico>&lt;xsl:value-of select=&quot;lnk_inviodettagliotraffico&quot;/>&lt;/lnk_inviodettagliotraffico>&lt;/xsl:if>&lt;xsl:copy-of select=&quot;createdby&quot;/>&lt;xsl:if test=&quot;lnk_copertura&quot;>&lt;lnk_copertura>&lt;xsl:value-of select=&quot;lnk_copertura&quot;/>&lt;/lnk_copertura>&lt;/xsl:if>&lt;xsl:copy-of select=&quot;lnk_paese2id&quot;/>&lt;xsl:copy-of select=&quot;owningteam&quot;/>&lt;xsl:copy-of select=&quot;defaultpricelevelid&quot;/>&lt;xsl:if test=&quot;primarycontactidyominame&quot;>&lt;primarycontactidyominame>&lt;xsl:value-of select=&quot;primarycontactidyominame&quot;/>&lt;/primarycontactidyominame>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_cambiapasswordname&quot;>&lt;lnk_cambiapasswordname>&lt;xsl:value-of select=&quot;lnk_cambiapasswordname&quot;/>&lt;/lnk_cambiapasswordname>&lt;/xsl:if>&lt;xsl:if test=&quot;address1_telephone1&quot;>&lt;address1_telephone1>&lt;xsl:value-of select=&quot;address1_telephone1&quot;/>&lt;/address1_telephone1>&lt;/xsl:if>&lt;xsl:if test=&quot;preferredappointmenttimecodename&quot;>&lt;preferredappointmenttimecodename>&lt;xsl:value-of select=&quot;preferredappointmenttimecodename&quot;/>&lt;/preferredappointmenttimecodename>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_disponibilitaadsl&quot;>&lt;lnk_disponibilitaadsl>&lt;xsl:value-of select=&quot;lnk_disponibilitaadsl&quot;/>&lt;/lnk_disponibilitaadsl>&lt;/xsl:if>&lt;xsl:if test=&quot;openrevenue_base&quot;>&lt;openrevenue_base>&lt;xsl:value-of select=&quot;openrevenue_base&quot;/>&lt;/openrevenue_base>&lt;/xsl:if>&lt;xsl:if test=&quot;donotsendmarketingmaterialname&quot;>&lt;donotsendmarketingmaterialname>&lt;xsl:value-of select=&quot;donotsendmarketingmaterialname&quot;/>&lt;/donotsendmarketingmaterialname>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_loyaltypoints&quot;>&lt;lnk_loyaltypoints>&lt;xsl:value-of select=&quot;lnk_loyaltypoints&quot;/>&lt;/lnk_loyaltypoints>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_bts&quot;>&lt;lnk_bts>&lt;xsl:value-of select=&quot;lnk_bts&quot;/>&lt;/lnk_bts>&lt;/xsl:if>&lt;xsl:if test=&quot;address1_addressid&quot;>&lt;address1_addressid>&lt;xsl:value-of select=&quot;address1_addressid&quot;/>&lt;/address1_addressid>&lt;/xsl:if>&lt;xsl:if test=&quot;customersizecodename&quot;>&lt;customersizecodename>&lt;xsl:value-of select=&quot;customersizecodename&quot;/>&lt;/customersizecodename>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_numeromobile&quot;>&lt;lnk_numeromobile>&lt;xsl:value-of select=&quot;lnk_numeromobile&quot;/>&lt;/lnk_numeromobile>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_dataultimamodificacellulare&quot;>&lt;lnk_dataultimamodificacellulare>&lt;xsl:value-of select=&quot;lnk_dataultimamodificacellulare&quot;/>&lt;/lnk_dataultimamodificacellulare>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_primoaccessoeffettuatoname&quot;>&lt;lnk_primoaccessoeffettuatoname>&lt;xsl:value-of select=&quot;lnk_primoaccessoeffettuatoname&quot;/>&lt;/lnk_primoaccessoeffettuatoname>&lt;/xsl:if>&lt;xsl:if test=&quot;name&quot;>&lt;name>&lt;xsl:value-of select=&quot;name&quot;/>&lt;/name>&lt;/xsl:if>&lt;xsl:if test=&quot;paymenttermscode&quot;>&lt;paymenttermscode>&lt;xsl:value-of select=&quot;paymenttermscode&quot;/>&lt;/paymenttermscode>&lt;/xsl:if>&lt;xsl:copy-of select=&quot;territoryid&quot;/>&lt;xsl:if test=&quot;creditonholdname&quot;>&lt;creditonholdname>&lt;xsl:value-of select=&quot;creditonholdname&quot;/>&lt;/creditonholdname>&lt;/xsl:if>&lt;xsl:copy-of select=&quot;lnk_cap1id&quot;/>&lt;xsl:copy-of select=&quot;lnk_comune1id&quot;/>&lt;xsl:if test=&quot;industrycodename&quot;>&lt;industrycodename>&lt;xsl:value-of select=&quot;industrycodename&quot;/>&lt;/industrycodename>&lt;/xsl:if>&lt;xsl:if test=&quot;owneridtype&quot;>&lt;owneridtype>&lt;xsl:value-of select=&quot;owneridtype&quot;/>&lt;/owneridtype>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_codicesbloccomobile&quot;>&lt;lnk_codicesbloccomobile>&lt;xsl:value-of select=&quot;lnk_codicesbloccomobile&quot;/>&lt;/lnk_codicesbloccomobile>&lt;/xsl:if>&lt;xsl:if test=&quot;address2_composite&quot;>&lt;address2_composite>&lt;xsl:value-of select=&quot;address2_composite&quot;/>&lt;/address2_composite>&lt;/xsl:if>&lt;xsl:if test=&quot;marketcap_base&quot;>&lt;marketcap_base>&lt;xsl:value-of select=&quot;marketcap_base&quot;/>&lt;/marketcap_base>&lt;/xsl:if>&lt;xsl:copy-of select=&quot;slaid&quot;/>&lt;xsl:if test=&quot;lnk_assegnatoabpidname&quot;>&lt;lnk_assegnatoabpidname>&lt;xsl:value-of select=&quot;lnk_assegnatoabpidname&quot;/>&lt;/lnk_assegnatoabpidname>&lt;/xsl:if>&lt;xsl:if test=&quot;exchangerate&quot;>&lt;exchangerate>&lt;xsl:value-of select=&quot;exchangerate&quot;/>&lt;/exchangerate>&lt;/xsl:if>&lt;xsl:if test=&quot;description&quot;>&lt;description>&lt;xsl:value-of select=&quot;description&quot;/>&lt;/description>&lt;/xsl:if>&lt;xsl:if test=&quot;primarytwitterid&quot;>&lt;primarytwitterid>&lt;xsl:value-of select=&quot;primarytwitterid&quot;/>&lt;/primarytwitterid>&lt;/xsl:if>&lt;xsl:if test=&quot;numberofemployees&quot;>&lt;numberofemployees>&lt;xsl:value-of select=&quot;numberofemployees&quot;/>&lt;/numberofemployees>&lt;/xsl:if>&lt;xsl:if test=&quot;sic&quot;>&lt;sic>&lt;xsl:value-of select=&quot;sic&quot;/>&lt;/sic>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_login&quot;>&lt;lnk_login>&lt;xsl:value-of select=&quot;lnk_login&quot;/>&lt;/lnk_login>&lt;/xsl:if>&lt;xsl:if test=&quot;territorycodename&quot;>&lt;territorycodename>&lt;xsl:value-of select=&quot;territorycodename&quot;/>&lt;/territorycodename>&lt;/xsl:if>&lt;xsl:if test=&quot;ftpsiteurl&quot;>&lt;ftpsiteurl>&lt;xsl:value-of select=&quot;ftpsiteurl&quot;/>&lt;/ftpsiteurl>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_statocodiceclientename&quot;>&lt;lnk_statocodiceclientename>&lt;xsl:value-of select=&quot;lnk_statocodiceclientename&quot;/>&lt;/lnk_statocodiceclientename>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_controlloriferimenticliente&quot;>&lt;lnk_controlloriferimenticliente>&lt;xsl:value-of select=&quot;lnk_controlloriferimenticliente&quot;/>&lt;/lnk_controlloriferimenticliente>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_segnalerssi&quot;>&lt;lnk_segnalerssi>&lt;xsl:value-of select=&quot;lnk_segnalerssi&quot;/>&lt;/lnk_segnalerssi>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_dataultimarecall&quot;>&lt;lnk_dataultimarecall>&lt;xsl:value-of select=&quot;lnk_dataultimarecall&quot;/>&lt;/lnk_dataultimarecall>&lt;/xsl:if>&lt;xsl:if test=&quot;territoryidname&quot;>&lt;territoryidname>&lt;xsl:value-of select=&quot;territoryidname&quot;/>&lt;/territoryidname>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_dataultimamodificaemail&quot;>&lt;lnk_dataultimamodificaemail>&lt;xsl:value-of select=&quot;lnk_dataultimamodificaemail&quot;/>&lt;/lnk_dataultimamodificaemail>&lt;/xsl:if>&lt;xsl:copy-of select=&quot;primarycontactid&quot;/>&lt;xsl:if test=&quot;address1_county&quot;>&lt;address1_county>&lt;xsl:value-of select=&quot;address1_county&quot;/>&lt;/address1_county>&lt;/xsl:if>&lt;xsl:if test=&quot;defaultpricelevelidname&quot;>&lt;defaultpricelevelidname>&lt;xsl:value-of select=&quot;defaultpricelevelidname&quot;/>&lt;/defaultpricelevelidname>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_vip&quot;>&lt;lnk_vip>&lt;xsl:value-of select=&quot;lnk_vip&quot;/>&lt;/lnk_vip>&lt;/xsl:if>&lt;xsl:if test=&quot;address2_freighttermscode&quot;>&lt;address2_freighttermscode>&lt;xsl:value-of select=&quot;address2_freighttermscode&quot;/>&lt;/address2_freighttermscode>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_segnalatodaidname&quot;>&lt;lnk_segnalatodaidname>&lt;xsl:value-of select=&quot;lnk_segnalatodaidname&quot;/>&lt;/lnk_segnalatodaidname>&lt;/xsl:if>&lt;xsl:if test=&quot;merged&quot;>&lt;merged>&lt;xsl:value-of select=&quot;merged&quot;/>&lt;/merged>&lt;/xsl:if>&lt;xsl:if test=&quot;aging90&quot;>&lt;aging90>&lt;xsl:value-of select=&quot;aging90&quot;/>&lt;/aging90>&lt;/xsl:if>&lt;xsl:if test=&quot;cdi_accountscore&quot;>&lt;cdi_accountscore>&lt;xsl:value-of select=&quot;cdi_accountscore&quot;/>&lt;/cdi_accountscore>&lt;/xsl:if>&lt;xsl:if test=&quot;aging60_base&quot;>&lt;aging60_base>&lt;xsl:value-of select=&quot;aging60_base&quot;/>&lt;/aging60_base>&lt;/xsl:if>&lt;xsl:if test=&quot;slaname&quot;>&lt;slaname>&lt;xsl:value-of select=&quot;slaname&quot;/>&lt;/slaname>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_dataultimamodificacanaledicomunicazione&quot;>&lt;lnk_dataultimamodificacanaledicomunicazione>&lt;xsl:value-of select=&quot;lnk_dataultimamodificacanaledicomunicazione&quot;/>&lt;/lnk_dataultimamodificacanaledicomunicazione>&lt;/xsl:if>&lt;xsl:if test=&quot;cdi_allowtextmessagesname&quot;>&lt;cdi_allowtextmessagesname>&lt;xsl:value-of select=&quot;cdi_allowtextmessagesname&quot;/>&lt;/cdi_allowtextmessagesname>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_segnaledaweb&quot;>&lt;lnk_segnaledaweb>&lt;xsl:value-of select=&quot;lnk_segnaledaweb&quot;/>&lt;/lnk_segnaledaweb>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_comune1idname&quot;>&lt;lnk_comune1idname>&lt;xsl:value-of select=&quot;lnk_comune1idname&quot;/>&lt;/lnk_comune1idname>&lt;/xsl:if>&lt;xsl:if test=&quot;revenue_base&quot;>&lt;revenue_base>&lt;xsl:value-of select=&quot;revenue_base&quot;/>&lt;/revenue_base>&lt;/xsl:if>&lt;xsl:if test=&quot;address2_upszone&quot;>&lt;address2_upszone>&lt;xsl:value-of select=&quot;address2_upszone&quot;/>&lt;/address2_upszone>&lt;/xsl:if>&lt;xsl:copy-of select=&quot;lnk_cap2id&quot;/>&lt;xsl:copy-of select=&quot;lnk_comune2id&quot;/>&lt;xsl:if test=&quot;preferredcontactmethodcodename&quot;>&lt;preferredcontactmethodcodename>&lt;xsl:value-of select=&quot;preferredcontactmethodcodename&quot;/>&lt;/preferredcontactmethodcodename>&lt;/xsl:if>&lt;xsl:if test=&quot;creditlimit&quot;>&lt;creditlimit>&lt;xsl:value-of select=&quot;creditlimit&quot;/>&lt;/creditlimit>&lt;/xsl:if>&lt;xsl:if test=&quot;createdbyname&quot;>&lt;createdbyname>&lt;xsl:value-of select=&quot;createdbyname&quot;/>&lt;/createdbyname>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_esitorecallcc&quot;>&lt;lnk_esitorecallcc>&lt;xsl:value-of select=&quot;lnk_esitorecallcc&quot;/>&lt;/lnk_esitorecallcc>&lt;/xsl:if>&lt;xsl:if test=&quot;address2_utcoffset&quot;>&lt;address2_utcoffset>&lt;xsl:value-of select=&quot;address2_utcoffset&quot;/>&lt;/address2_utcoffset>&lt;/xsl:if>&lt;xsl:if test=&quot;address1_city&quot;>&lt;address1_city>&lt;xsl:value-of select=&quot;address1_city&quot;/>&lt;/address1_city>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_comune2idname&quot;>&lt;lnk_comune2idname>&lt;xsl:value-of select=&quot;lnk_comune2idname&quot;/>&lt;/lnk_comune2idname>&lt;/xsl:if>&lt;xsl:if test=&quot;address2_name&quot;>&lt;address2_name>&lt;xsl:value-of select=&quot;address2_name&quot;/>&lt;/address2_name>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_regione2idname&quot;>&lt;lnk_regione2idname>&lt;xsl:value-of select=&quot;lnk_regione2idname&quot;/>&lt;/lnk_regione2idname>&lt;/xsl:if>&lt;xsl:if test=&quot;address1_latitude&quot;>&lt;address1_latitude>&lt;xsl:value-of select=&quot;address1_latitude&quot;/>&lt;/address1_latitude>&lt;/xsl:if>&lt;xsl:if test=&quot;transactioncurrencyidname&quot;>&lt;transactioncurrencyidname>&lt;xsl:value-of select=&quot;transactioncurrencyidname&quot;/>&lt;/transactioncurrencyidname>&lt;/xsl:if>&lt;xsl:if test=&quot;emailaddress2&quot;>&lt;emailaddress2>&lt;xsl:value-of select=&quot;emailaddress2&quot;/>&lt;/emailaddress2>&lt;/xsl:if>&lt;xsl:if test=&quot;preferredserviceidname&quot;>&lt;preferredserviceidname>&lt;xsl:value-of select=&quot;preferredserviceidname&quot;/>&lt;/preferredserviceidname>&lt;/xsl:if>&lt;xsl:if test=&quot;emailaddress3&quot;>&lt;emailaddress3>&lt;xsl:value-of select=&quot;emailaddress3&quot;/>&lt;/emailaddress3>&lt;/xsl:if>&lt;xsl:copy-of select=&quot;lnk_assegnatoabpid&quot;/>&lt;xsl:copy-of select=&quot;lnk_regione1id&quot;/>&lt;xsl:if test=&quot;emailaddress1&quot;>&lt;emailaddress1>&lt;xsl:value-of select=&quot;emailaddress1&quot;/>&lt;/emailaddress1>&lt;/xsl:if>&lt;xsl:if test=&quot;statecodename&quot;>&lt;statecodename>&lt;xsl:value-of select=&quot;statecodename&quot;/>&lt;/statecodename>&lt;/xsl:if>&lt;xsl:if test=&quot;donotbulkpostalmailname&quot;>&lt;donotbulkpostalmailname>&lt;xsl:value-of select=&quot;donotbulkpostalmailname&quot;/>&lt;/donotbulkpostalmailname>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_accessoareaclientiabilitatoname&quot;>&lt;lnk_accessoareaclientiabilitatoname>&lt;xsl:value-of select=&quot;lnk_accessoareaclientiabilitatoname&quot;/>&lt;/lnk_accessoareaclientiabilitatoname>&lt;/xsl:if>&lt;xsl:if test=&quot;accountid&quot;>&lt;accountid>&lt;xsl:value-of select=&quot;accountid&quot;/>&lt;/accountid>&lt;/xsl:if>&lt;xsl:copy-of select=&quot;lnk_provincia2id&quot;/>&lt;xsl:if test=&quot;lnk_scontospecialename&quot;>&lt;lnk_scontospecialename>&lt;xsl:value-of select=&quot;lnk_scontospecialename&quot;/>&lt;/lnk_scontospecialename>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_documentoricevutoname&quot;>&lt;lnk_documentoricevutoname>&lt;xsl:value-of select=&quot;lnk_documentoricevutoname&quot;/>&lt;/lnk_documentoricevutoname>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_latitudine&quot;>&lt;lnk_latitudine>&lt;xsl:value-of select=&quot;lnk_latitudine&quot;/>&lt;/lnk_latitudine>&lt;/xsl:if>&lt;xsl:if test=&quot;address1_freighttermscodename&quot;>&lt;address1_freighttermscodename>&lt;xsl:value-of select=&quot;address1_freighttermscodename&quot;/>&lt;/address1_freighttermscodename>&lt;/xsl:if>&lt;xsl:if test=&quot;opendeals&quot;>&lt;opendeals>&lt;xsl:value-of select=&quot;opendeals&quot;/>&lt;/opendeals>&lt;/xsl:if>&lt;xsl:if test=&quot;shippingmethodcode&quot;>&lt;shippingmethodcode>&lt;xsl:value-of select=&quot;shippingmethodcode&quot;/>&lt;/shippingmethodcode>&lt;/xsl:if>&lt;xsl:if test=&quot;address1_line1&quot;>&lt;address1_line1>&lt;xsl:value-of select=&quot;address1_line1&quot;/>&lt;/address1_line1>&lt;/xsl:if>&lt;xsl:if test=&quot;address1_shippingmethodcode&quot;>&lt;address1_shippingmethodcode>&lt;xsl:value-of select=&quot;address1_shippingmethodcode&quot;/>&lt;/address1_shippingmethodcode>&lt;/xsl:if>&lt;xsl:if test=&quot;fax&quot;>&lt;fax>&lt;xsl:value-of select=&quot;fax&quot;/>&lt;/fax>&lt;/xsl:if>&lt;xsl:if test=&quot;masteraccountidyominame&quot;>&lt;masteraccountidyominame>&lt;xsl:value-of select=&quot;masteraccountidyominame&quot;/>&lt;/masteraccountidyominame>&lt;/xsl:if>&lt;xsl:if test=&quot;masteraccountidname&quot;>&lt;masteraccountidname>&lt;xsl:value-of select=&quot;masteraccountidname&quot;/>&lt;/masteraccountidname>&lt;/xsl:if>&lt;xsl:if test=&quot;address1_line3&quot;>&lt;address1_line3>&lt;xsl:value-of select=&quot;address1_line3&quot;/>&lt;/address1_line3>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_qualitacinr&quot;>&lt;lnk_qualitacinr>&lt;xsl:value-of select=&quot;lnk_qualitacinr&quot;/>&lt;/lnk_qualitacinr>&lt;/xsl:if>&lt;xsl:if test=&quot;address1_longitude&quot;>&lt;address1_longitude>&lt;xsl:value-of select=&quot;address1_longitude&quot;/>&lt;/address1_longitude>&lt;/xsl:if>&lt;xsl:if test=&quot;address1_line2&quot;>&lt;address1_line2>&lt;xsl:value-of select=&quot;address1_line2&quot;/>&lt;/address1_line2>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_provinciaspedfattura&quot;>&lt;lnk_provinciaspedfattura>&lt;xsl:value-of select=&quot;lnk_provinciaspedfattura&quot;/>&lt;/lnk_provinciaspedfattura>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_originatingleadidyominame&quot;>&lt;lnk_originatingleadidyominame>&lt;xsl:value-of select=&quot;lnk_originatingleadidyominame&quot;/>&lt;/lnk_originatingleadidyominame>&lt;/xsl:if>&lt;xsl:if test=&quot;address1_addresstypecodename&quot;>&lt;address1_addresstypecodename>&lt;xsl:value-of select=&quot;address1_addresstypecodename&quot;/>&lt;/address1_addresstypecodename>&lt;/xsl:if>&lt;xsl:copy-of select=&quot;lnk_partnerid&quot;/>&lt;xsl:if test=&quot;address2_fax&quot;>&lt;address2_fax>&lt;xsl:value-of select=&quot;address2_fax&quot;/>&lt;/address2_fax>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_modelaccountidname&quot;>&lt;lnk_modelaccountidname>&lt;xsl:value-of select=&quot;lnk_modelaccountidname&quot;/>&lt;/lnk_modelaccountidname>&lt;/xsl:if>&lt;xsl:if test=&quot;address1_utcoffset&quot;>&lt;address1_utcoffset>&lt;xsl:value-of select=&quot;address1_utcoffset&quot;/>&lt;/address1_utcoffset>&lt;/xsl:if>&lt;xsl:if test=&quot;stockexchange&quot;>&lt;stockexchange>&lt;xsl:value-of select=&quot;stockexchange&quot;/>&lt;/stockexchange>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_password&quot;>&lt;lnk_password>&lt;xsl:value-of select=&quot;lnk_password&quot;/>&lt;/lnk_password>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_fidelitycode&quot;>&lt;lnk_fidelitycode>&lt;xsl:value-of select=&quot;lnk_fidelitycode&quot;/>&lt;/lnk_fidelitycode>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_effettuarecambiopwdname&quot;>&lt;lnk_effettuarecambiopwdname>&lt;xsl:value-of select=&quot;lnk_effettuarecambiopwdname&quot;/>&lt;/lnk_effettuarecambiopwdname>&lt;/xsl:if>&lt;xsl:if test=&quot;createdonbehalfbyyominame&quot;>&lt;createdonbehalfbyyominame>&lt;xsl:value-of select=&quot;createdonbehalfbyyominame&quot;/>&lt;/createdonbehalfbyyominame>&lt;/xsl:if>&lt;xsl:if test=&quot;address2_freighttermscodename&quot;>&lt;address2_freighttermscodename>&lt;xsl:value-of select=&quot;address2_freighttermscodename&quot;/>&lt;/address2_freighttermscodename>&lt;/xsl:if>&lt;xsl:copy-of select=&quot;lnk_segnalatodabpid&quot;/>&lt;xsl:if test=&quot;address2_postalcode&quot;>&lt;address2_postalcode>&lt;xsl:value-of select=&quot;address2_postalcode&quot;/>&lt;/address2_postalcode>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_cap2idname&quot;>&lt;lnk_cap2idname>&lt;xsl:value-of select=&quot;lnk_cap2idname&quot;/>&lt;/lnk_cap2idname>&lt;/xsl:if>&lt;xsl:if test=&quot;modifiedon&quot;>&lt;modifiedon>&lt;xsl:value-of select=&quot;modifiedon&quot;/>&lt;/modifiedon>&lt;/xsl:if>&lt;xsl:if test=&quot;accountcategorycodename&quot;>&lt;accountcategorycodename>&lt;xsl:value-of select=&quot;accountcategorycodename&quot;/>&lt;/accountcategorycodename>&lt;/xsl:if>&lt;xsl:if test=&quot;address1_upszone&quot;>&lt;address1_upszone>&lt;xsl:value-of select=&quot;address1_upszone&quot;/>&lt;/address1_upszone>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_copertura_new&quot;>&lt;lnk_copertura_new>&lt;xsl:value-of select=&quot;lnk_copertura_new&quot;/>&lt;/lnk_copertura_new>&lt;/xsl:if>&lt;xsl:if test=&quot;donotphone&quot;>&lt;donotphone>&lt;xsl:value-of select=&quot;donotphone&quot;/>&lt;/donotphone>&lt;/xsl:if>&lt;xsl:if test=&quot;industrycode&quot;>&lt;industrycode>&lt;xsl:value-of select=&quot;industrycode&quot;/>&lt;/industrycode>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_civicospedfattura&quot;>&lt;lnk_civicospedfattura>&lt;xsl:value-of select=&quot;lnk_civicospedfattura&quot;/>&lt;/lnk_civicospedfattura>&lt;/xsl:if>&lt;xsl:if test=&quot;businesstypecodename&quot;>&lt;businesstypecodename>&lt;xsl:value-of select=&quot;businesstypecodename&quot;/>&lt;/businesstypecodename>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_registrazioneeffettuata&quot;>&lt;lnk_registrazioneeffettuata>&lt;xsl:value-of select=&quot;lnk_registrazioneeffettuata&quot;/>&lt;/lnk_registrazioneeffettuata>&lt;/xsl:if>&lt;xsl:if test=&quot;isprivatename&quot;>&lt;isprivatename>&lt;xsl:value-of select=&quot;isprivatename&quot;/>&lt;/isprivatename>&lt;/xsl:if>&lt;xsl:if test=&quot;customersizecode&quot;>&lt;customersizecode>&lt;xsl:value-of select=&quot;customersizecode&quot;/>&lt;/customersizecode>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_paese1idname&quot;>&lt;lnk_paese1idname>&lt;xsl:value-of select=&quot;lnk_paese1idname&quot;/>&lt;/lnk_paese1idname>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_dataultimamodificaprivacy&quot;>&lt;lnk_dataultimamodificaprivacy>&lt;xsl:value-of select=&quot;lnk_dataultimamodificaprivacy&quot;/>&lt;/lnk_dataultimamodificaprivacy>&lt;/xsl:if>&lt;xsl:if test=&quot;customertypecode&quot;>&lt;customertypecode>&lt;xsl:value-of select=&quot;customertypecode&quot;/>&lt;/customertypecode>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_segnalatodaidyominame&quot;>&lt;lnk_segnalatodaidyominame>&lt;xsl:value-of select=&quot;lnk_segnalatodaidyominame&quot;/>&lt;/lnk_segnalatodaidyominame>&lt;/xsl:if>&lt;xsl:if test=&quot;territorycode&quot;>&lt;territorycode>&lt;xsl:value-of select=&quot;territorycode&quot;/>&lt;/territorycode>&lt;/xsl:if>&lt;xsl:if test=&quot;address2_addressid&quot;>&lt;address2_addressid>&lt;xsl:value-of select=&quot;address2_addressid&quot;/>&lt;/address2_addressid>&lt;/xsl:if>&lt;xsl:if test=&quot;utcconversiontimezonecode&quot;>&lt;utcconversiontimezonecode>&lt;xsl:value-of select=&quot;utcconversiontimezonecode&quot;/>&lt;/utcconversiontimezonecode>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_primoaccessoeffettuato&quot;>&lt;lnk_primoaccessoeffettuato>&lt;xsl:value-of select=&quot;lnk_primoaccessoeffettuato&quot;/>&lt;/lnk_primoaccessoeffettuato>&lt;/xsl:if>&lt;xsl:copy-of select=&quot;lnk_originatingleadid&quot;/>&lt;xsl:if test=&quot;aging60&quot;>&lt;aging60>&lt;xsl:value-of select=&quot;aging60&quot;/>&lt;/aging60>&lt;/xsl:if>&lt;xsl:if test=&quot;address1_postalcode&quot;>&lt;address1_postalcode>&lt;xsl:value-of select=&quot;address1_postalcode&quot;/>&lt;/address1_postalcode>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_tipostradaindirizzoprimario&quot;>&lt;lnk_tipostradaindirizzoprimario>&lt;xsl:value-of select=&quot;lnk_tipostradaindirizzoprimario&quot;/>&lt;/lnk_tipostradaindirizzoprimario>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_esclusionedafe&quot;>&lt;lnk_esclusionedafe>&lt;xsl:value-of select=&quot;lnk_esclusionedafe&quot;/>&lt;/lnk_esclusionedafe>&lt;/xsl:if>&lt;xsl:copy-of select=&quot;lnk_regione2id&quot;/>&lt;xsl:if test=&quot;lnk_nomespedfattura&quot;>&lt;lnk_nomespedfattura>&lt;xsl:value-of select=&quot;lnk_nomespedfattura&quot;/>&lt;/lnk_nomespedfattura>&lt;/xsl:if>&lt;xsl:copy-of select=&quot;slainvokedid&quot;/>&lt;xsl:if test=&quot;aging30_base&quot;>&lt;aging30_base>&lt;xsl:value-of select=&quot;aging30_base&quot;/>&lt;/aging30_base>&lt;/xsl:if>&lt;xsl:copy-of select=&quot;lnk_origineid&quot;/>&lt;xsl:if test=&quot;slainvokedidname&quot;>&lt;slainvokedidname>&lt;xsl:value-of select=&quot;slainvokedidname&quot;/>&lt;/slainvokedidname>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_effettuarecambiopasswordname&quot;>&lt;lnk_effettuarecambiopasswordname>&lt;xsl:value-of select=&quot;lnk_effettuarecambiopasswordname&quot;/>&lt;/lnk_effettuarecambiopasswordname>&lt;/xsl:if>&lt;xsl:if test=&quot;address2_shippingmethodcodename&quot;>&lt;address2_shippingmethodcodename>&lt;xsl:value-of select=&quot;address2_shippingmethodcodename&quot;/>&lt;/address2_shippingmethodcodename>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_indirizzospedfattura&quot;>&lt;lnk_indirizzospedfattura>&lt;xsl:value-of select=&quot;lnk_indirizzospedfattura&quot;/>&lt;/lnk_indirizzospedfattura>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_origine&quot;>&lt;lnk_origine>&lt;xsl:value-of select=&quot;lnk_origine&quot;/>&lt;/lnk_origine>&lt;/xsl:if>&lt;xsl:if test=&quot;address2_primarycontactname&quot;>&lt;address2_primarycontactname>&lt;xsl:value-of select=&quot;address2_primarycontactname&quot;/>&lt;/address2_primarycontactname>&lt;/xsl:if>&lt;xsl:if test=&quot;statuscodename&quot;>&lt;statuscodename>&lt;xsl:value-of select=&quot;statuscodename&quot;/>&lt;/statuscodename>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_partitaiva&quot;>&lt;lnk_partitaiva>&lt;xsl:value-of select=&quot;lnk_partitaiva&quot;/>&lt;/lnk_partitaiva>&lt;/xsl:if>&lt;xsl:copy-of select=&quot;modifiedbyexternalparty&quot;/>&lt;xsl:if test=&quot;owneridname&quot;>&lt;owneridname>&lt;xsl:value-of select=&quot;owneridname&quot;/>&lt;/owneridname>&lt;/xsl:if>&lt;xsl:if test=&quot;createdon&quot;>&lt;createdon>&lt;xsl:value-of select=&quot;createdon&quot;/>&lt;/createdon>&lt;/xsl:if>&lt;xsl:if test=&quot;address2_telephone2&quot;>&lt;address2_telephone2>&lt;xsl:value-of select=&quot;address2_telephone2&quot;/>&lt;/address2_telephone2>&lt;/xsl:if>&lt;xsl:if test=&quot;address2_telephone1&quot;>&lt;address2_telephone1>&lt;xsl:value-of select=&quot;address2_telephone1&quot;/>&lt;/address2_telephone1>&lt;/xsl:if>&lt;xsl:if test=&quot;address2_telephone3&quot;>&lt;address2_telephone3>&lt;xsl:value-of select=&quot;address2_telephone3&quot;/>&lt;/address2_telephone3>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_modelloaccountidname&quot;>&lt;lnk_modelloaccountidname>&lt;xsl:value-of select=&quot;lnk_modelloaccountidname&quot;/>&lt;/lnk_modelloaccountidname>&lt;/xsl:if>&lt;xsl:if test=&quot;address2_line3&quot;>&lt;address2_line3>&lt;xsl:value-of select=&quot;address2_line3&quot;/>&lt;/address2_line3>&lt;/xsl:if>&lt;xsl:copy-of select=&quot;originatingleadid&quot;/>&lt;xsl:if test=&quot;aging90_base&quot;>&lt;aging90_base>&lt;xsl:value-of select=&quot;aging90_base&quot;/>&lt;/aging90_base>&lt;/xsl:if>&lt;xsl:if test=&quot;processid&quot;>&lt;processid>&lt;xsl:value-of select=&quot;processid&quot;/>&lt;/processid>&lt;/xsl:if>&lt;xsl:if test=&quot;address2_line1&quot;>&lt;address2_line1>&lt;xsl:value-of select=&quot;address2_line1&quot;/>&lt;/address2_line1>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_longitudine&quot;>&lt;lnk_longitudine>&lt;xsl:value-of select=&quot;lnk_longitudine&quot;/>&lt;/lnk_longitudine>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_coperturaname&quot;>&lt;lnk_coperturaname>&lt;xsl:value-of select=&quot;lnk_coperturaname&quot;/>&lt;/lnk_coperturaname>&lt;/xsl:if>&lt;xsl:if test=&quot;address2_line2&quot;>&lt;address2_line2>&lt;xsl:value-of select=&quot;address2_line2&quot;/>&lt;/address2_line2>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_esitorecallccname&quot;>&lt;lnk_esitorecallccname>&lt;xsl:value-of select=&quot;lnk_esitorecallccname&quot;/>&lt;/lnk_esitorecallccname>&lt;/xsl:if>&lt;xsl:copy-of select=&quot;lnk_segnalatodaid&quot;/>&lt;xsl:if test=&quot;donotphonename&quot;>&lt;donotphonename>&lt;xsl:value-of select=&quot;donotphonename&quot;/>&lt;/donotphonename>&lt;/xsl:if>&lt;xsl:if test=&quot;yominame&quot;>&lt;yominame>&lt;xsl:value-of select=&quot;yominame&quot;/>&lt;/yominame>&lt;/xsl:if>&lt;xsl:if test=&quot;importsequencenumber&quot;>&lt;importsequencenumber>&lt;xsl:value-of select=&quot;importsequencenumber&quot;/>&lt;/importsequencenumber>&lt;/xsl:if>&lt;xsl:copy-of select=&quot;parentaccountid&quot;/>&lt;xsl:if test=&quot;lnk_datacopertura_new&quot;>&lt;lnk_datacopertura_new>&lt;xsl:value-of select=&quot;lnk_datacopertura_new&quot;/>&lt;/lnk_datacopertura_new>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_originatingleadidname&quot;>&lt;lnk_originatingleadidname>&lt;xsl:value-of select=&quot;lnk_originatingleadidname&quot;/>&lt;/lnk_originatingleadidname>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_modelloaccountidyominame&quot;>&lt;lnk_modelloaccountidyominame>&lt;xsl:value-of select=&quot;lnk_modelloaccountidyominame&quot;/>&lt;/lnk_modelloaccountidyominame>&lt;/xsl:if>&lt;xsl:if test=&quot;accountratingcodename&quot;>&lt;accountratingcodename>&lt;xsl:value-of select=&quot;accountratingcodename&quot;/>&lt;/accountratingcodename>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_emailvalidata&quot;>&lt;lnk_emailvalidata>&lt;xsl:value-of select=&quot;lnk_emailvalidata&quot;/>&lt;/lnk_emailvalidata>&lt;/xsl:if>&lt;xsl:if test=&quot;telephone3&quot;>&lt;telephone3>&lt;xsl:value-of select=&quot;telephone3&quot;/>&lt;/telephone3>&lt;/xsl:if>&lt;xsl:if test=&quot;telephone2&quot;>&lt;telephone2>&lt;xsl:value-of select=&quot;telephone2&quot;/>&lt;/telephone2>&lt;/xsl:if>&lt;xsl:if test=&quot;telephone1&quot;>&lt;telephone1>&lt;xsl:value-of select=&quot;telephone1&quot;/>&lt;/telephone1>&lt;/xsl:if>&lt;xsl:if test=&quot;parentaccountidname&quot;>&lt;parentaccountidname>&lt;xsl:value-of select=&quot;parentaccountidname&quot;/>&lt;/parentaccountidname>&lt;/xsl:if>&lt;xsl:copy-of select=&quot;preferredserviceid&quot;/>&lt;xsl:if test=&quot;address1_postofficebox&quot;>&lt;address1_postofficebox>&lt;xsl:value-of select=&quot;address1_postofficebox&quot;/>&lt;/address1_postofficebox>&lt;/xsl:if>&lt;xsl:if test=&quot;revenue&quot;>&lt;revenue>&lt;xsl:value-of select=&quot;revenue&quot;/>&lt;/revenue>&lt;/xsl:if>&lt;xsl:if test=&quot;opendeals_date&quot;>&lt;opendeals_date>&lt;xsl:value-of select=&quot;opendeals_date&quot;/>&lt;/opendeals_date>&lt;/xsl:if>&lt;xsl:if test=&quot;address2_stateorprovince&quot;>&lt;address2_stateorprovince>&lt;xsl:value-of select=&quot;address2_stateorprovince&quot;/>&lt;/address2_stateorprovince>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_abbonatopaytvname&quot;>&lt;lnk_abbonatopaytvname>&lt;xsl:value-of select=&quot;lnk_abbonatopaytvname&quot;/>&lt;/lnk_abbonatopaytvname>&lt;/xsl:if>&lt;xsl:if test=&quot;address1_composite&quot;>&lt;address1_composite>&lt;xsl:value-of select=&quot;address1_composite&quot;/>&lt;/address1_composite>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_partneridname&quot;>&lt;lnk_partneridname>&lt;xsl:value-of select=&quot;lnk_partneridname&quot;/>&lt;/lnk_partneridname>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_gestioneamministrativa&quot;>&lt;lnk_gestioneamministrativa>&lt;xsl:value-of select=&quot;lnk_gestioneamministrativa&quot;/>&lt;/lnk_gestioneamministrativa>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_cap1idname&quot;>&lt;lnk_cap1idname>&lt;xsl:value-of select=&quot;lnk_cap1idname&quot;/>&lt;/lnk_cap1idname>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_tipostradacpe&quot;>&lt;lnk_tipostradacpe>&lt;xsl:value-of select=&quot;lnk_tipostradacpe&quot;/>&lt;/lnk_tipostradacpe>&lt;/xsl:if>&lt;xsl:if test=&quot;primarycontactidname&quot;>&lt;primarycontactidname>&lt;xsl:value-of select=&quot;primarycontactidname&quot;/>&lt;/primarycontactidname>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_nome&quot;>&lt;lnk_nome>&lt;xsl:value-of select=&quot;lnk_nome&quot;/>&lt;/lnk_nome>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_isgestioneamministrativa&quot;>&lt;lnk_isgestioneamministrativa>&lt;xsl:value-of select=&quot;lnk_isgestioneamministrativa&quot;/>&lt;/lnk_isgestioneamministrativa>&lt;/xsl:if>&lt;xsl:if test=&quot;aging30&quot;>&lt;aging30>&lt;xsl:value-of select=&quot;aging30&quot;/>&lt;/aging30>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_loyalty&quot;>&lt;lnk_loyalty>&lt;xsl:value-of select=&quot;lnk_loyalty&quot;/>&lt;/lnk_loyalty>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_idordinemobile&quot;>&lt;lnk_idordinemobile>&lt;xsl:value-of select=&quot;lnk_idordinemobile&quot;/>&lt;/lnk_idordinemobile>&lt;/xsl:if>&lt;xsl:if test=&quot;address1_freighttermscode&quot;>&lt;address1_freighttermscode>&lt;xsl:value-of select=&quot;address1_freighttermscode&quot;/>&lt;/address1_freighttermscode>&lt;/xsl:if>&lt;xsl:if test=&quot;donotbulkemail&quot;>&lt;donotbulkemail>&lt;xsl:value-of select=&quot;donotbulkemail&quot;/>&lt;/donotbulkemail>&lt;/xsl:if>&lt;xsl:if test=&quot;donotpostalmail&quot;>&lt;donotpostalmail>&lt;xsl:value-of select=&quot;donotpostalmail&quot;/>&lt;/donotpostalmail>&lt;/xsl:if>&lt;xsl:if test=&quot;paymenttermscodename&quot;>&lt;paymenttermscodename>&lt;xsl:value-of select=&quot;paymenttermscodename&quot;/>&lt;/paymenttermscodename>&lt;/xsl:if>&lt;xsl:if test=&quot;preferredcontactmethodcode&quot;>&lt;preferredcontactmethodcode>&lt;xsl:value-of select=&quot;preferredcontactmethodcode&quot;/>&lt;/preferredcontactmethodcode>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_tipoko&quot;>&lt;lnk_tipoko>&lt;xsl:value-of select=&quot;lnk_tipoko&quot;/>&lt;/lnk_tipoko>&lt;/xsl:if>&lt;xsl:copy-of select=&quot;preferredsystemuserid&quot;/>&lt;xsl:if test=&quot;address1_fax&quot;>&lt;address1_fax>&lt;xsl:value-of select=&quot;address1_fax&quot;/>&lt;/address1_fax>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_inviodettagliotrafficoname&quot;>&lt;lnk_inviodettagliotrafficoname>&lt;xsl:value-of select=&quot;lnk_inviodettagliotrafficoname&quot;/>&lt;/lnk_inviodettagliotrafficoname>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_codicedestinatario&quot;>&lt;lnk_codicedestinatario>&lt;xsl:value-of select=&quot;lnk_codicedestinatario&quot;/>&lt;/lnk_codicedestinatario>&lt;/xsl:if>&lt;xsl:copy-of select=&quot;modifiedonbehalfby&quot;/>&lt;xsl:copy-of select=&quot;modifiedby&quot;/>&lt;xsl:if test=&quot;lnk_provincia2idname&quot;>&lt;lnk_provincia2idname>&lt;xsl:value-of select=&quot;lnk_provincia2idname&quot;/>&lt;/lnk_provincia2idname>&lt;/xsl:if>&lt;xsl:if test=&quot;accountratingcode&quot;>&lt;accountratingcode>&lt;xsl:value-of select=&quot;accountratingcode&quot;/>&lt;/accountratingcode>&lt;/xsl:if>&lt;xsl:if test=&quot;preferredappointmentdaycode&quot;>&lt;preferredappointmentdaycode>&lt;xsl:value-of select=&quot;preferredappointmentdaycode&quot;/>&lt;/preferredappointmentdaycode>&lt;/xsl:if>&lt;xsl:if test=&quot;preferredsystemuseridname&quot;>&lt;preferredsystemuseridname>&lt;xsl:value-of select=&quot;preferredsystemuseridname&quot;/>&lt;/preferredsystemuseridname>&lt;/xsl:if>&lt;xsl:if test=&quot;ip_importid&quot;>&lt;ip_importid>&lt;xsl:value-of select=&quot;ip_importid&quot;/>&lt;/ip_importid>&lt;/xsl:if>&lt;xsl:copy-of select=&quot;createdonbehalfby&quot;/>&lt;xsl:if test=&quot;lnk_loyaltyname&quot;>&lt;lnk_loyaltyname>&lt;xsl:value-of select=&quot;lnk_loyaltyname&quot;/>&lt;/lnk_loyaltyname>&lt;/xsl:if>&lt;xsl:if test=&quot;creditonhold&quot;>&lt;creditonhold>&lt;xsl:value-of select=&quot;creditonhold&quot;/>&lt;/creditonhold>&lt;/xsl:if>&lt;xsl:copy-of select=&quot;preferredequipmentid&quot;/>&lt;xsl:if test=&quot;openrevenue_date&quot;>&lt;openrevenue_date>&lt;xsl:value-of select=&quot;openrevenue_date&quot;/>&lt;/openrevenue_date>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_classe&quot;>&lt;lnk_classe>&lt;xsl:value-of select=&quot;lnk_classe&quot;/>&lt;/lnk_classe>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_effettuarecambiopwd&quot;>&lt;lnk_effettuarecambiopwd>&lt;xsl:value-of select=&quot;lnk_effettuarecambiopwd&quot;/>&lt;/lnk_effettuarecambiopwd>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_registrazioneeffettuataname&quot;>&lt;lnk_registrazioneeffettuataname>&lt;xsl:value-of select=&quot;lnk_registrazioneeffettuataname&quot;/>&lt;/lnk_registrazioneeffettuataname>&lt;/xsl:if>&lt;xsl:if test=&quot;entityimage_timestamp&quot;>&lt;entityimage_timestamp>&lt;xsl:value-of select=&quot;entityimage_timestamp&quot;/>&lt;/entityimage_timestamp>&lt;/xsl:if>&lt;xsl:if test=&quot;accountclassificationcode&quot;>&lt;accountclassificationcode>&lt;xsl:value-of select=&quot;accountclassificationcode&quot;/>&lt;/accountclassificationcode>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_coupon&quot;>&lt;lnk_coupon>&lt;xsl:value-of select=&quot;lnk_coupon&quot;/>&lt;/lnk_coupon>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_co&quot;>&lt;lnk_co>&lt;xsl:value-of select=&quot;lnk_co&quot;/>&lt;/lnk_co>&lt;/xsl:if>&lt;xsl:if test=&quot;new_gestpay&quot;>&lt;new_gestpay>&lt;xsl:value-of select=&quot;new_gestpay&quot;/>&lt;/new_gestpay>&lt;/xsl:if>&lt;xsl:if test=&quot;modifiedbyname&quot;>&lt;modifiedbyname>&lt;xsl:value-of select=&quot;modifiedbyname&quot;/>&lt;/modifiedbyname>&lt;/xsl:if>&lt;xsl:copy-of select=&quot;createdbyexternalparty&quot;/>&lt;xsl:if test=&quot;ownershipcodename&quot;>&lt;ownershipcodename>&lt;xsl:value-of select=&quot;ownershipcodename&quot;/>&lt;/ownershipcodename>&lt;/xsl:if>&lt;xsl:if test=&quot;opendeals_state&quot;>&lt;opendeals_state>&lt;xsl:value-of select=&quot;opendeals_state&quot;/>&lt;/opendeals_state>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_classename&quot;>&lt;lnk_classename>&lt;xsl:value-of select=&quot;lnk_classename&quot;/>&lt;/lnk_classename>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_vipname&quot;>&lt;lnk_vipname>&lt;xsl:value-of select=&quot;lnk_vipname&quot;/>&lt;/lnk_vipname>&lt;/xsl:if>&lt;xsl:if test=&quot;preferredappointmentdaycodename&quot;>&lt;preferredappointmentdaycodename>&lt;xsl:value-of select=&quot;preferredappointmentdaycodename&quot;/>&lt;/preferredappointmentdaycodename>&lt;/xsl:if>&lt;xsl:copy-of select=&quot;lnk_provincia1id&quot;/>&lt;xsl:if test=&quot;accountclassificationcodename&quot;>&lt;accountclassificationcodename>&lt;xsl:value-of select=&quot;accountclassificationcodename&quot;/>&lt;/accountclassificationcodename>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_disabilitafatturename&quot;>&lt;lnk_disabilitafatturename>&lt;xsl:value-of select=&quot;lnk_disabilitafatturename&quot;/>&lt;/lnk_disabilitafatturename>&lt;/xsl:if>&lt;xsl:if test=&quot;accountcategorycode&quot;>&lt;accountcategorycode>&lt;xsl:value-of select=&quot;accountcategorycode&quot;/>&lt;/accountcategorycode>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_provincia1idname&quot;>&lt;lnk_provincia1idname>&lt;xsl:value-of select=&quot;lnk_provincia1idname&quot;/>&lt;/lnk_provincia1idname>&lt;/xsl:if>&lt;xsl:if test=&quot;address2_addresstypecode&quot;>&lt;address2_addresstypecode>&lt;xsl:value-of select=&quot;address2_addresstypecode&quot;/>&lt;/address2_addresstypecode>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_datacopertura&quot;>&lt;lnk_datacopertura>&lt;xsl:value-of select=&quot;lnk_datacopertura&quot;/>&lt;/lnk_datacopertura>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_scontospeciale&quot;>&lt;lnk_scontospeciale>&lt;xsl:value-of select=&quot;lnk_scontospeciale&quot;/>&lt;/lnk_scontospeciale>&lt;/xsl:if>&lt;xsl:if test=&quot;address2_country&quot;>&lt;address2_country>&lt;xsl:value-of select=&quot;address2_country&quot;/>&lt;/address2_country>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_disponibilitaadslname&quot;>&lt;lnk_disponibilitaadslname>&lt;xsl:value-of select=&quot;lnk_disponibilitaadslname&quot;/>&lt;/lnk_disponibilitaadslname>&lt;/xsl:if>&lt;xsl:if test=&quot;tickersymbol&quot;>&lt;tickersymbol>&lt;xsl:value-of select=&quot;tickersymbol&quot;/>&lt;/tickersymbol>&lt;/xsl:if>&lt;xsl:if test=&quot;accountnumber&quot;>&lt;accountnumber>&lt;xsl:value-of select=&quot;accountnumber&quot;/>&lt;/accountnumber>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_paesespedfattura&quot;>&lt;lnk_paesespedfattura>&lt;xsl:value-of select=&quot;lnk_paesespedfattura&quot;/>&lt;/lnk_paesespedfattura>&lt;/xsl:if>&lt;xsl:if test=&quot;traversedpath&quot;>&lt;traversedpath>&lt;xsl:value-of select=&quot;traversedpath&quot;/>&lt;/traversedpath>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_passwordcambiataname&quot;>&lt;lnk_passwordcambiataname>&lt;xsl:value-of select=&quot;lnk_passwordcambiataname&quot;/>&lt;/lnk_passwordcambiataname>&lt;/xsl:if>&lt;xsl:if test=&quot;createdbyexternalpartyyominame&quot;>&lt;createdbyexternalpartyyominame>&lt;xsl:value-of select=&quot;createdbyexternalpartyyominame&quot;/>&lt;/createdbyexternalpartyyominame>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_regione1idname&quot;>&lt;lnk_regione1idname>&lt;xsl:value-of select=&quot;lnk_regione1idname&quot;/>&lt;/lnk_regione1idname>&lt;/xsl:if>&lt;xsl:copy-of select=&quot;transactioncurrencyid&quot;/>&lt;xsl:if test=&quot;modifiedonbehalfbyyominame&quot;>&lt;modifiedonbehalfbyyominame>&lt;xsl:value-of select=&quot;modifiedonbehalfbyyominame&quot;/>&lt;/modifiedonbehalfbyyominame>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_contrattoricevutoname&quot;>&lt;lnk_contrattoricevutoname>&lt;xsl:value-of select=&quot;lnk_contrattoricevutoname&quot;/>&lt;/lnk_contrattoricevutoname>&lt;/xsl:if>&lt;xsl:if test=&quot;modifiedbyexternalpartyname&quot;>&lt;modifiedbyexternalpartyname>&lt;xsl:value-of select=&quot;modifiedbyexternalpartyname&quot;/>&lt;/modifiedbyexternalpartyname>&lt;/xsl:if>&lt;xsl:copy-of select=&quot;lnk_metodopagamentoid&quot;/>&lt;xsl:if test=&quot;modifiedonbehalfbyname&quot;>&lt;modifiedonbehalfbyname>&lt;xsl:value-of select=&quot;modifiedonbehalfbyname&quot;/>&lt;/modifiedonbehalfbyname>&lt;/xsl:if>&lt;xsl:if test=&quot;address2_longitude&quot;>&lt;address2_longitude>&lt;xsl:value-of select=&quot;address2_longitude&quot;/>&lt;/address2_longitude>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_dataultimoaccesoac&quot;>&lt;lnk_dataultimoaccesoac>&lt;xsl:value-of select=&quot;lnk_dataultimoaccesoac&quot;/>&lt;/lnk_dataultimoaccesoac>&lt;/xsl:if>&lt;/tns1:Account>&lt;/xsl:for-each>&lt;tns1:ResponseCode>&lt;xsl:value-of select=&quot;&amp;quot;&amp;quot;&quot;/>&lt;/tns1:ResponseCode>&lt;/tns1:getAccountByCodiceFiscaleOrPIVA_Output>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                    </tibex:inputBindings>
+                    <tibex:config>
+                        <bwext:BWActivity
+                            activityTypeID="bw.generalactivities.mapper"
+                            version="6.0.0.001"
+                            xmlns:activityconfig="http://tns.tibco.com/bw/model/activityconfig"
+                            xmlns:bwext="http://tns.tibco.com/bw/model/core/bwext"
+                            xmlns:generalactivities="http://ns.tibco.com/bw/palette/generalactivities"
+                            xmlns:xsd="http://it.linkem/crm/getAccountByCodiceFiscaleOrPIVA/sl/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                            <activityConfig>
+                                <properties name="config" xsi:type="activityconfig:EMFProperty">
+                                    <type href="http://ns.tibco.com/bw/palette/generalactivities#//Mapper"/>
+                                    <value
+                                    inputQName="xsd:getAccountByCodiceFiscaleOrPIVA_Output" xsi:type="generalactivities:Mapper"/>
+                                </properties>
+                            </activityConfig>
+                        </bwext:BWActivity>
+                    </tibex:config>
+                </tibex:activityExtension>
             </bpws:extensionActivity>
         </bpws:flow>
     </bpws:scope>
