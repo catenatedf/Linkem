@@ -491,7 +491,7 @@
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.1"/>
-                                    <layoutConstraint x="837"
+                                    <layoutConstraint x="881"
                                     xsi:type="notation:Bounds" y="124"/>
                                     </children>
                                     <children type="4002 bw.dynamicscrm.RetrieveEntity">
@@ -602,7 +602,7 @@
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.4"/>
-                                    <layoutConstraint x="588"
+                                    <layoutConstraint x="730"
                                     xsi:type="notation:Bounds" y="124"/>
                                     </children>
                                     <children type="4002">
@@ -638,7 +638,7 @@
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.5"/>
                                     <layoutConstraint x="588"
-                                    xsi:type="notation:Bounds" y="285"/>
+                                    xsi:type="notation:Bounds" y="237"/>
                                     </children>
                                     <children type="4002">
                                     <children type="4017">
@@ -675,6 +675,43 @@
                                     <layoutConstraint x="395"
                                     xsi:type="notation:Bounds" y="237"/>
                                     </children>
+                                    <children type="4002 bw.generalactivities.mapper">
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <styles fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.7"/>
+                                    <layoutConstraint
+                                    height="40" width="40"
+                                    x="581"
+                                    xsi:type="notation:Bounds" y="124"/>
+                                    </children>
                                     <styles xsi:type="notation:DrawerStyle"/>
                                     <styles xsi:type="notation:SortingStyle"/>
                                     <styles xsi:type="notation:FilteringStyle"/>
@@ -687,7 +724,7 @@
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <styles xsi:type="bwnotation:ResizingStyle"/>
                                     <element href="//0/@process/@activity/@activity"/>
-                                    <layoutConstraint height="394"
+                                    <layoutConstraint height="410"
                                     width="1148" xsi:type="notation:Bounds"/>
                                 </children>
                                 <styles xsi:type="notation:SortingStyle"/>
@@ -841,6 +878,7 @@
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <element href="//0/@process/@activity/@faultHandlers/@catchAll/@activity/@activity/@activities.0"/>
                                     <layoutConstraint
+                                    width="153"
                                     x="128"
                                     xsi:type="notation:Bounds" y="42"/>
                                     </children>
@@ -907,7 +945,7 @@
         <element href="//0"/>
         <edges
             source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2"
-            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.4" type="4006">
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.7" type="4006">
             <children type="6002">
                 <layoutConstraint xsi:type="notation:Location" y="40"/>
             </children>
@@ -970,6 +1008,17 @@
             <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
             <element href="//0/@process/@activity/@activity/@links/@children.5"/>
             <bendpoints points="[25, 5, -177, -36]$[178, 36, -24, -5]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.7"
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.4" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.6"/>
+            <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
     </notation:Diagram>
     <tibex:NamespaceRegistry enabled="true">
@@ -1046,6 +1095,9 @@
             name="_errorOptional" sca-bpel:internal="true"/>
         <bpws:variable element="ns4:LogAudit"
             name="ThrowGenericError-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns14:GetSimById_Output"
+            name="MapOutput-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns14:GetSimById_Output" name="MapOutput" sca-bpel:internal="true"/>
     </bpws:variables>
     <bpws:extensions>
         <bpws:extension mustUnderstand="no" namespace="http://www.eclipse.org/gmf/runtime/1.0.2/notation"/>
@@ -1098,6 +1150,7 @@
                 <bpws:link name="LoggingWrapper1ToEnd" tibex:linkType="SUCCESS"/>
                 <bpws:link name="GetSimToEmpty" tibex:linkType="ERROR"/>
                 <bpws:link name="EmptyToThrow1" tibex:linkType="SUCCESS"/>
+                <bpws:link name="MapperToLogOutput" tibex:linkType="SUCCESS"/>
             </bpws:links>
             <bpws:extensionActivity>
                 <tibex:receiveEvent createInstance="yes"
@@ -1114,14 +1167,14 @@
             </bpws:extensionActivity>
             <bpws:extensionActivity>
                 <tibex:activityExtension inputVariable="End-input"
-                    name="End"
+                    name="End" tibex:copyOf="MapOutput"
                     tibex:xpdlId="6e23e1b3-274a-4f62-8440-46f5bfc15b90" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                     <bpws:targets>
                         <bpws:target linkName="LoggingWrapper1ToEnd"/>
                     </bpws:targets>
                     <tibex:inputBindings>
                         <tibex:inputBinding
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:ns=&quot;http://it/linkem/5g/MDYN/CRM_GetSIMFromGuid&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;GetSim&quot;/>&lt;xsl:template name=&quot;End-input&quot; match=&quot;/&quot;>&lt;ns:GetSimById_Output>&lt;xsl:for-each select=&quot;$GetSim/lnk_sim&quot;>&lt;ns:Sim>&lt;xsl:copy-of select=&quot;createdonbehalfby&quot;/>&lt;xsl:if test=&quot;lnk_dataassegnazione&quot;>&lt;lnk_dataassegnazione>&lt;xsl:value-of select=&quot;lnk_dataassegnazione&quot;/>&lt;/lnk_dataassegnazione>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_stato&quot;>&lt;lnk_stato>&lt;xsl:value-of select=&quot;lnk_stato&quot;/>&lt;/lnk_stato>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_contrattoidname&quot;>&lt;lnk_contrattoidname>&lt;xsl:value-of select=&quot;lnk_contrattoidname&quot;/>&lt;/lnk_contrattoidname>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_profilo&quot;>&lt;lnk_profilo>&lt;xsl:value-of select=&quot;lnk_profilo&quot;/>&lt;/lnk_profilo>&lt;/xsl:if>&lt;xsl:copy-of select=&quot;lnk_contrattoid&quot;/>&lt;xsl:if test=&quot;lnk_simid&quot;>&lt;lnk_simid>&lt;xsl:value-of select=&quot;lnk_simid&quot;/>&lt;/lnk_simid>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_iccid&quot;>&lt;lnk_iccid>&lt;xsl:value-of select=&quot;lnk_iccid&quot;/>&lt;/lnk_iccid>&lt;/xsl:if>&lt;xsl:if test=&quot;createdonbehalfbyname&quot;>&lt;createdonbehalfbyname>&lt;xsl:value-of select=&quot;createdonbehalfbyname&quot;/>&lt;/createdonbehalfbyname>&lt;/xsl:if>&lt;xsl:if test=&quot;modifiedbyyominame&quot;>&lt;modifiedbyyominame>&lt;xsl:value-of select=&quot;modifiedbyyominame&quot;/>&lt;/modifiedbyyominame>&lt;/xsl:if>&lt;xsl:if test=&quot;createdonbehalfbyyominame&quot;>&lt;createdonbehalfbyyominame>&lt;xsl:value-of select=&quot;createdonbehalfbyyominame&quot;/>&lt;/createdonbehalfbyyominame>&lt;/xsl:if>&lt;xsl:if test=&quot;modifiedonbehalfbyyominame&quot;>&lt;modifiedonbehalfbyyominame>&lt;xsl:value-of select=&quot;modifiedonbehalfbyyominame&quot;/>&lt;/modifiedonbehalfbyyominame>&lt;/xsl:if>&lt;xsl:if test=&quot;modifiedon&quot;>&lt;modifiedon>&lt;xsl:value-of select=&quot;modifiedon&quot;/>&lt;/modifiedon>&lt;/xsl:if>&lt;xsl:if test=&quot;modifiedonbehalfbyname&quot;>&lt;modifiedonbehalfbyname>&lt;xsl:value-of select=&quot;modifiedonbehalfbyname&quot;/>&lt;/modifiedonbehalfbyname>&lt;/xsl:if>&lt;xsl:copy-of select=&quot;modifiedonbehalfby&quot;/>&lt;xsl:if test=&quot;lnk_imsi&quot;>&lt;lnk_imsi>&lt;xsl:value-of select=&quot;lnk_imsi&quot;/>&lt;/lnk_imsi>&lt;/xsl:if>&lt;/ns:Sim>&lt;/xsl:for-each>&lt;/ns:GetSimById_Output>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:ns=&quot;http://it/linkem/5g/MDYN/CRM_GetSIMFromGuid&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;MapOutput&quot;/>&lt;xsl:template name=&quot;End-input&quot; match=&quot;/&quot;>&lt;xsl:copy-of select=&quot;$MapOutput&quot;/>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:config>
                         <bwext:BWActivity
@@ -1666,7 +1719,7 @@
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding coercion=""
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns9=&quot;http://it.linkem/common/core/lehf/AuditTypes/xsd&quot; xmlns:bw=&quot;http://www.tibco.com/bw/xpath/bw-custom-functions&quot; xmlns:tib=&quot;http://www.tibco.com/bw/xslt/custom-functions&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;Start&quot;/>&lt;xsl:param name=&quot;DEBUG_Severity&quot;/>&lt;xsl:template name=&quot;LogInput-input&quot; match=&quot;/&quot;>&lt;tns9:LogAudit>&lt;auditElement>&lt;SEVERITY>&lt;xsl:value-of select=&quot;$DEBUG_Severity&quot;/>&lt;/SEVERITY>&lt;PROCESSSTACK>&lt;xsl:value-of select=&quot;bw:getModuleProperty(&amp;quot;BW.PROCESS.STACK&amp;quot;)&quot;/>&lt;/PROCESSSTACK>&lt;LOGMESSAGE>&lt;xsl:value-of select=&quot;concat(&amp;quot;LogStart MDN -  GetSIMBySimID :  &amp;quot;, tib:render-xml($Start, false(),true()))&quot;/>&lt;/LOGMESSAGE>&lt;/auditElement>&lt;tns9:auditErrorElement>&lt;ERRORCODE>&lt;xsl:value-of select=&quot;&amp;quot;111&amp;quot;&quot;/>&lt;/ERRORCODE>&lt;ERRORMESSAGE>&lt;xsl:value-of select=&quot;&amp;quot;qwertyu&amp;quot;&quot;/>&lt;/ERRORMESSAGE>&lt;ERRORTIMESTAMP>&lt;xsl:value-of select=&quot;current-dateTime()&quot;/>&lt;/ERRORTIMESTAMP>&lt;/tns9:auditErrorElement>&lt;/tns9:LogAudit>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns9=&quot;http://it.linkem/common/core/lehf/AuditTypes/xsd&quot; xmlns:bw=&quot;http://www.tibco.com/bw/xpath/bw-custom-functions&quot; xmlns:tib=&quot;http://www.tibco.com/bw/xslt/custom-functions&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;Start&quot;/>&lt;xsl:param name=&quot;DEBUG_Severity&quot;/>&lt;xsl:template name=&quot;LogInput-input&quot; match=&quot;/&quot;>&lt;tns9:LogAudit>&lt;auditElement>&lt;SEVERITY>&lt;xsl:value-of select=&quot;$DEBUG_Severity&quot;/>&lt;/SEVERITY>&lt;PROCESSSTACK>&lt;xsl:value-of select=&quot;bw:getModuleProperty(&amp;quot;BW.PROCESS.STACK&amp;quot;)&quot;/>&lt;/PROCESSSTACK>&lt;LOGMESSAGE>&lt;xsl:value-of select=&quot;concat(&amp;quot;LogStart MDN -  GetSIMBySimID :  &amp;quot;, tib:render-xml($Start, false(),true()))&quot;/>&lt;/LOGMESSAGE>&lt;/auditElement>&lt;/tns9:LogAudit>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:CallProcess
                         moduleRef="it.linkem.common.core.lehf.sh"
@@ -1679,14 +1732,14 @@
                     tibex:xpdlId="b5c7d255-107e-4b6a-92be-55dd518d574c"
                     type="bw.generalactivities.callprocess" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                     <bpws:targets>
-                        <bpws:target linkName="GetSimToLoggingWrapper1"/>
+                        <bpws:target linkName="MapperToLogOutput"/>
                     </bpws:targets>
                     <bpws:sources>
                         <bpws:source linkName="LoggingWrapper1ToEnd"/>
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding coercion=""
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns9=&quot;http://it.linkem/common/core/lehf/AuditTypes/xsd&quot; xmlns:bw=&quot;http://www.tibco.com/bw/xpath/bw-custom-functions&quot; xmlns:tib=&quot;http://www.tibco.com/bw/xslt/custom-functions&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;DEBUG_Severity&quot;/>&lt;xsl:param name=&quot;GetSim&quot;/>&lt;xsl:template name=&quot;LogOutput-input&quot; match=&quot;/&quot;>&lt;tns9:LogAudit>&lt;auditElement>&lt;SEVERITY>&lt;xsl:value-of select=&quot;$DEBUG_Severity&quot;/>&lt;/SEVERITY>&lt;PROCESSSTACK>&lt;xsl:value-of select=&quot;bw:getModuleProperty(&amp;quot;BW.PROCESS.STACK&amp;quot;)&quot;/>&lt;/PROCESSSTACK>&lt;LOGMESSAGE>&lt;xsl:value-of select=&quot;concat(&amp;quot;LogEnd MDN -  GetSIMBySimID &amp;quot;, tib:render-xml($GetSim, true(), false()))&quot;/>&lt;/LOGMESSAGE>&lt;/auditElement>&lt;/tns9:LogAudit>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns9=&quot;http://it.linkem/common/core/lehf/AuditTypes/xsd&quot; xmlns:bw=&quot;http://www.tibco.com/bw/xpath/bw-custom-functions&quot; xmlns:tib=&quot;http://www.tibco.com/bw/xslt/custom-functions&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;DEBUG_Severity&quot;/>&lt;xsl:param name=&quot;MapOutput&quot;/>&lt;xsl:template name=&quot;LogOutput-input&quot; match=&quot;/&quot;>&lt;tns9:LogAudit>&lt;auditElement>&lt;SEVERITY>&lt;xsl:value-of select=&quot;$DEBUG_Severity&quot;/>&lt;/SEVERITY>&lt;PROCESSSTACK>&lt;xsl:value-of select=&quot;bw:getModuleProperty(&amp;quot;BW.PROCESS.STACK&amp;quot;)&quot;/>&lt;/PROCESSSTACK>&lt;LOGMESSAGE>&lt;xsl:value-of select=&quot;concat(&amp;quot;LogEnd MDN -  GetSIMBySimID &amp;quot;, tib:render-xml($MapOutput,false(),true()))&quot;/>&lt;/LOGMESSAGE>&lt;/auditElement>&lt;/tns9:LogAudit>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:CallProcess
                         moduleRef="it.linkem.common.core.lehf.sh"
@@ -1698,7 +1751,7 @@
                 name="ThrowSystemError" tibex:xpdlId="cbe89d28-90c6-4847-acbc-9a7a176463fb">
                 <tibex:inputBindings>
                     <tibex:partBinding
-                        expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns9=&quot;http://it.linkem/common/core/lehf/AuditTypes/xsd&quot; xmlns:tns4=&quot;http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/fault&quot; xmlns:tib=&quot;http://www.tibco.com/bw/xslt/custom-functions&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;ERROR_Severity&quot;/>&lt;xsl:param name=&quot;System_Exception&quot;/>&lt;xsl:param name=&quot;_error_GetSim&quot;/>&lt;xsl:param name=&quot;_error&quot;/>&lt;xsl:param name=&quot;Start&quot;/>&lt;xsl:template name=&quot;ThrowSystemError-input&quot; match=&quot;/&quot;>&lt;tns9:LogAudit>&lt;auditElement>&lt;SEVERITY>&lt;xsl:value-of select=&quot;$ERROR_Severity&quot;/>&lt;/SEVERITY>&lt;PROCESSSTACK>&lt;xsl:value-of select=&quot;$_error/ProcessStack&quot;/>&lt;/PROCESSSTACK>&lt;LOGMESSAGE>&lt;xsl:value-of select=&quot;&amp;quot;SYSTEM ERROR LOG MESSAGE TEST&amp;quot;&quot;/>&lt;/LOGMESSAGE>&lt;/auditElement>&lt;tns9:auditErrorElement>&lt;ERRORCODE>&lt;xsl:value-of select=&quot;&amp;quot;ESB.MDYN.000013&amp;quot;&quot;/>&lt;/ERRORCODE>&lt;ERRORTYPE>&lt;xsl:value-of select=&quot;$System_Exception&quot;/>&lt;/ERRORTYPE>&lt;ERRORMESSAGE>&lt;xsl:value-of select=&quot;concat(&amp;quot;System error occurred ın the GEtSIMbySımID process  - &amp;quot;, $_error_GetSim/tns4:ActivityFaultData/DynamicsCRMActivityFaultException[1]/message)&quot;/>&lt;/ERRORMESSAGE>&lt;ERRORDETAIL>&lt;xsl:value-of select=&quot;concat(tib:render-xml($_error,false(),true()),&amp;quot;  -   &amp;quot;,tib:render-xml($_error_GetSim,false(),true()))&quot;/>&lt;/ERRORDETAIL>&lt;ERRORTIMESTAMP>&lt;xsl:value-of select=&quot;current-dateTime()&quot;/>&lt;/ERRORTIMESTAMP>&lt;ORIGINALMESSAGE>&lt;xsl:value-of select=&quot;tib:render-xml($Start,false(),true())&quot;/>&lt;/ORIGINALMESSAGE>&lt;/tns9:auditErrorElement>&lt;/tns9:LogAudit>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                        expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns9=&quot;http://it.linkem/common/core/lehf/AuditTypes/xsd&quot; xmlns:tns4=&quot;http://www.tibco.com/namespaces/tnt/plugins/dynamicscrm/fault&quot; xmlns:tib=&quot;http://www.tibco.com/bw/xslt/custom-functions&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;ERROR_Severity&quot;/>&lt;xsl:param name=&quot;System_Exception&quot;/>&lt;xsl:param name=&quot;_error_GetSim&quot;/>&lt;xsl:param name=&quot;_error&quot;/>&lt;xsl:param name=&quot;Start&quot;/>&lt;xsl:template name=&quot;ThrowSystemError-input&quot; match=&quot;/&quot;>&lt;tns9:LogAudit>&lt;auditElement>&lt;SEVERITY>&lt;xsl:value-of select=&quot;$ERROR_Severity&quot;/>&lt;/SEVERITY>&lt;PROCESSSTACK>&lt;xsl:value-of select=&quot;$_error/ProcessStack&quot;/>&lt;/PROCESSSTACK>&lt;LOGMESSAGE>&lt;xsl:value-of select=&quot;&amp;quot;System error occurred ın the GEtSIMbySımID process&amp;quot;&quot;/>&lt;/LOGMESSAGE>&lt;/auditElement>&lt;tns9:auditErrorElement>&lt;ERRORCODE>&lt;xsl:value-of select=&quot;&amp;quot;ESB.MDYN.000013&amp;quot;&quot;/>&lt;/ERRORCODE>&lt;ERRORTYPE>&lt;xsl:value-of select=&quot;$System_Exception&quot;/>&lt;/ERRORTYPE>&lt;ERRORMESSAGE>&lt;xsl:value-of select=&quot;concat(&amp;quot;System error occurred ın the GEtSIMbySımID process  - &amp;quot;, $_error_GetSim/tns4:ActivityFaultData/DynamicsCRMActivityFaultException[1]/message)&quot;/>&lt;/ERRORMESSAGE>&lt;ERRORDETAIL>&lt;xsl:value-of select=&quot;concat(tib:render-xml($_error,false(),true()),&amp;quot;  -   &amp;quot;,tib:render-xml($_error_GetSim,false(),true()))&quot;/>&lt;/ERRORDETAIL>&lt;ERRORTIMESTAMP>&lt;xsl:value-of select=&quot;current-dateTime()&quot;/>&lt;/ERRORTIMESTAMP>&lt;ORIGINALMESSAGE>&lt;xsl:value-of select=&quot;tib:render-xml($Start,false(),true())&quot;/>&lt;/ORIGINALMESSAGE>&lt;/tns9:auditErrorElement>&lt;/tns9:LogAudit>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                 </tibex:inputBindings>
                 <bpws:targets>
                     <bpws:target linkName="EmptyToThrow1"/>
@@ -1712,6 +1765,39 @@
                     <bpws:source linkName="EmptyToThrow1"/>
                 </bpws:sources>
             </bpws:empty>
+            <bpws:extensionActivity>
+                <tibex:activityExtension inputVariable="MapOutput-input"
+                    name="MapOutput" outputVariable="MapOutput"
+                    tibex:xpdlId="2fed67c7-ac13-429a-af74-d4cc6f56b36c" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                    <bpws:targets>
+                        <bpws:target linkName="GetSimToLoggingWrapper1"/>
+                    </bpws:targets>
+                    <bpws:sources>
+                        <bpws:source linkName="MapperToLogOutput"/>
+                    </bpws:sources>
+                    <tibex:inputBindings>
+                        <tibex:inputBinding
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:ns=&quot;http://it/linkem/5g/MDYN/CRM_GetSIMFromGuid&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;GetSim&quot;/>&lt;xsl:template name=&quot;MapOutput-input&quot; match=&quot;/&quot;>&lt;ns:GetSimById_Output>&lt;xsl:for-each select=&quot;$GetSim/lnk_sim&quot;>&lt;ns:Sim>&lt;xsl:copy-of select=&quot;createdonbehalfby&quot;/>&lt;xsl:if test=&quot;importsequencenumber&quot;>&lt;importsequencenumber>&lt;xsl:value-of select=&quot;importsequencenumber&quot;/>&lt;/importsequencenumber>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_dataassegnazione&quot;>&lt;lnk_dataassegnazione>&lt;xsl:value-of select=&quot;lnk_dataassegnazione&quot;/>&lt;/lnk_dataassegnazione>&lt;/xsl:if>&lt;xsl:if test=&quot;createdbyyominame&quot;>&lt;createdbyyominame>&lt;xsl:value-of select=&quot;createdbyyominame&quot;/>&lt;/createdbyyominame>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_datafineassegnazione&quot;>&lt;lnk_datafineassegnazione>&lt;xsl:value-of select=&quot;lnk_datafineassegnazione&quot;/>&lt;/lnk_datafineassegnazione>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_stato&quot;>&lt;lnk_stato>&lt;xsl:value-of select=&quot;lnk_stato&quot;/>&lt;/lnk_stato>&lt;/xsl:if>&lt;xsl:if test=&quot;organizationidname&quot;>&lt;organizationidname>&lt;xsl:value-of select=&quot;organizationidname&quot;/>&lt;/organizationidname>&lt;/xsl:if>&lt;xsl:if test=&quot;modifiedbyname&quot;>&lt;modifiedbyname>&lt;xsl:value-of select=&quot;modifiedbyname&quot;/>&lt;/modifiedbyname>&lt;/xsl:if>&lt;xsl:if test=&quot;utcconversiontimezonecode&quot;>&lt;utcconversiontimezonecode>&lt;xsl:value-of select=&quot;utcconversiontimezonecode&quot;/>&lt;/utcconversiontimezonecode>&lt;/xsl:if>&lt;xsl:if test=&quot;statecode&quot;>&lt;statecode>&lt;xsl:value-of select=&quot;statecode&quot;/>&lt;/statecode>&lt;/xsl:if>&lt;xsl:if test=&quot;statecodename&quot;>&lt;statecodename>&lt;xsl:value-of select=&quot;statecodename&quot;/>&lt;/statecodename>&lt;/xsl:if>&lt;xsl:if test=&quot;statuscode&quot;>&lt;statuscode>&lt;xsl:value-of select=&quot;statuscode&quot;/>&lt;/statuscode>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_contrattoidname&quot;>&lt;lnk_contrattoidname>&lt;xsl:value-of select=&quot;lnk_contrattoidname&quot;/>&lt;/lnk_contrattoidname>&lt;/xsl:if>&lt;xsl:copy-of select=&quot;createdby&quot;/>&lt;xsl:if test=&quot;overriddencreatedon&quot;>&lt;overriddencreatedon>&lt;xsl:value-of select=&quot;overriddencreatedon&quot;/>&lt;/overriddencreatedon>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_profilo&quot;>&lt;lnk_profilo>&lt;xsl:value-of select=&quot;lnk_profilo&quot;/>&lt;/lnk_profilo>&lt;/xsl:if>&lt;xsl:copy-of select=&quot;lnk_contrattoid&quot;/>&lt;xsl:if test=&quot;lnk_simid&quot;>&lt;lnk_simid>&lt;xsl:value-of select=&quot;lnk_simid&quot;/>&lt;/lnk_simid>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_iccid&quot;>&lt;lnk_iccid>&lt;xsl:value-of select=&quot;lnk_iccid&quot;/>&lt;/lnk_iccid>&lt;/xsl:if>&lt;xsl:if test=&quot;timezoneruleversionnumber&quot;>&lt;timezoneruleversionnumber>&lt;xsl:value-of select=&quot;timezoneruleversionnumber&quot;/>&lt;/timezoneruleversionnumber>&lt;/xsl:if>&lt;xsl:if test=&quot;createdonbehalfbyname&quot;>&lt;createdonbehalfbyname>&lt;xsl:value-of select=&quot;createdonbehalfbyname&quot;/>&lt;/createdonbehalfbyname>&lt;/xsl:if>&lt;xsl:if test=&quot;modifiedbyyominame&quot;>&lt;modifiedbyyominame>&lt;xsl:value-of select=&quot;modifiedbyyominame&quot;/>&lt;/modifiedbyyominame>&lt;/xsl:if>&lt;xsl:if test=&quot;statuscodename&quot;>&lt;statuscodename>&lt;xsl:value-of select=&quot;statuscodename&quot;/>&lt;/statuscodename>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_statoname&quot;>&lt;lnk_statoname>&lt;xsl:value-of select=&quot;lnk_statoname&quot;/>&lt;/lnk_statoname>&lt;/xsl:if>&lt;xsl:if test=&quot;versionnumber&quot;>&lt;versionnumber>&lt;xsl:value-of select=&quot;versionnumber&quot;/>&lt;/versionnumber>&lt;/xsl:if>&lt;xsl:if test=&quot;createdonbehalfbyyominame&quot;>&lt;createdonbehalfbyyominame>&lt;xsl:value-of select=&quot;createdonbehalfbyyominame&quot;/>&lt;/createdonbehalfbyyominame>&lt;/xsl:if>&lt;xsl:if test=&quot;createdon&quot;>&lt;createdon>&lt;xsl:value-of select=&quot;createdon&quot;/>&lt;/createdon>&lt;/xsl:if>&lt;xsl:copy-of select=&quot;organizationid&quot;/>&lt;xsl:if test=&quot;modifiedonbehalfbyyominame&quot;>&lt;modifiedonbehalfbyyominame>&lt;xsl:value-of select=&quot;modifiedonbehalfbyyominame&quot;/>&lt;/modifiedonbehalfbyyominame>&lt;/xsl:if>&lt;xsl:if test=&quot;modifiedon&quot;>&lt;modifiedon>&lt;xsl:value-of select=&quot;modifiedon&quot;/>&lt;/modifiedon>&lt;/xsl:if>&lt;xsl:if test=&quot;modifiedonbehalfbyname&quot;>&lt;modifiedonbehalfbyname>&lt;xsl:value-of select=&quot;modifiedonbehalfbyname&quot;/>&lt;/modifiedonbehalfbyname>&lt;/xsl:if>&lt;xsl:copy-of select=&quot;modifiedonbehalfby&quot;/>&lt;xsl:copy-of select=&quot;modifiedby&quot;/>&lt;xsl:if test=&quot;lnk_imsi&quot;>&lt;lnk_imsi>&lt;xsl:value-of select=&quot;lnk_imsi&quot;/>&lt;/lnk_imsi>&lt;/xsl:if>&lt;xsl:if test=&quot;lnk_datacambiostato&quot;>&lt;lnk_datacambiostato>&lt;xsl:value-of select=&quot;lnk_datacambiostato&quot;/>&lt;/lnk_datacambiostato>&lt;/xsl:if>&lt;xsl:if test=&quot;ip_importid&quot;>&lt;ip_importid>&lt;xsl:value-of select=&quot;ip_importid&quot;/>&lt;/ip_importid>&lt;/xsl:if>&lt;xsl:if test=&quot;createdbyname&quot;>&lt;createdbyname>&lt;xsl:value-of select=&quot;createdbyname&quot;/>&lt;/createdbyname>&lt;/xsl:if>&lt;/ns:Sim>&lt;/xsl:for-each>&lt;ns:ResponseCode>&lt;xsl:value-of select=&quot;'000000'&quot;/>&lt;/ns:ResponseCode>&lt;/ns:GetSimById_Output>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                    </tibex:inputBindings>
+                    <tibex:config>
+                        <bwext:BWActivity
+                            activityTypeID="bw.generalactivities.mapper"
+                            version="6.0.0.001"
+                            xmlns:CRM_GetSIMFromGuid="http://it/linkem/5g/MDYN/CRM_GetSIMFromGuid"
+                            xmlns:activityconfig="http://tns.tibco.com/bw/model/activityconfig"
+                            xmlns:bwext="http://tns.tibco.com/bw/model/core/bwext"
+                            xmlns:generalactivities="http://ns.tibco.com/bw/palette/generalactivities" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                            <activityConfig>
+                                <properties name="config" xsi:type="activityconfig:EMFProperty">
+                                    <type href="http://ns.tibco.com/bw/palette/generalactivities#//Mapper"/>
+                                    <value
+                                    inputQName="CRM_GetSIMFromGuid:GetSimById_Output" xsi:type="generalactivities:Mapper"/>
+                                </properties>
+                            </activityConfig>
+                        </bwext:BWActivity>
+                    </tibex:config>
+                </tibex:activityExtension>
+            </bpws:extensionActivity>
         </bpws:flow>
     </bpws:scope>
 </bpws:process>
