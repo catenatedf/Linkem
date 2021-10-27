@@ -5572,9 +5572,9 @@
                     <bpws:source linkName="EmptyToCopy_1_formatexceptionbusiness">
                         <tibex:DesignExpression>
                             <tibex:expression
-                                expression="contains( upper-case($_error_getTestataByGUID/tns:ActivityFaultData/DynamicsCRMActivityFaultException[1]/message),&quot;SYSTEM.FORMATEXCEPTION&quot;)" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"/>
+                                expression="contains( upper-case($_error_getTestataByGUID/tns:ActivityFaultData/DynamicsCRMActivityFaultException[1]/message),&quot;SYSTEM.FORMATEXCEPTION&quot;) or contains(($_error_getTestataByGUID/tns:ActivityFaultData/DynamicsCRMActivityFaultException[1]/message),&quot;InnerException&quot;) or contains(($_error_getTestataByGUID/tns:ActivityFaultData/DynamicsCRMActivityFaultException[1]/message),&quot;Does Not Exist&quot;)" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"/>
                         </tibex:DesignExpression>
-                        <bpws:transitionCondition expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"><![CDATA[contains( upper-case($_error_getTestataByGUID/tns:ActivityFaultData/DynamicsCRMActivityFaultException[1]/message),"SYSTEM.FORMATEXCEPTION")]]></bpws:transitionCondition>
+                        <bpws:transitionCondition expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"><![CDATA[contains( upper-case($_error_getTestataByGUID/tns:ActivityFaultData/DynamicsCRMActivityFaultException[1]/message),"SYSTEM.FORMATEXCEPTION") or contains(($_error_getTestataByGUID/tns:ActivityFaultData/DynamicsCRMActivityFaultException[1]/message),"InnerException") or contains(($_error_getTestataByGUID/tns:ActivityFaultData/DynamicsCRMActivityFaultException[1]/message),"Does Not Exist")]]></bpws:transitionCondition>
                     </bpws:source>
                 </bpws:sources>
             </bpws:empty>
