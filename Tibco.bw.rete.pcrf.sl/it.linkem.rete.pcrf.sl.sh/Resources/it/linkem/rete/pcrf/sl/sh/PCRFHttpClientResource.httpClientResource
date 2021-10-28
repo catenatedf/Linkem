@@ -18,6 +18,8 @@
     <substitutionBindings xmi:id="_otzxYA_HEeySlY7vVr8Zcw" template="logReqRespTime" propName="/Pcrf/Connection/Http/LogRequest"/>
     <substitutionBindings xmi:id="_t_jX0A_HEeySlY7vVr8Zcw" template="retryCount" propName="/Pcrf/Connection/Http/RetryCount"/>
     <substitutionBindings xmi:id="_CxQFIA_IEeySlY7vVr8Zcw" template="useNonPreemptiveAuth" propName="/Pcrf/Connection/Http/UseNonPreemtiveAuth"/>
+    <substitutionBindings xmi:id="_YkB6EC3GEeyF8IXBmjPezQ" template="useSSL" propName="/Pcrf/Connection/Http/Confidentiality"/>
+    <substitutionBindings xmi:id="_a5Fs8C3GEeyF8IXBmjPezQ" template="useDefaultSSL" propName="/Pcrf/Connection/Http/DefaultConfidentiality"/>
     <tcpDetails xmi:id="_xm9DsA_EEeySlY7vVr8Zcw">
       <substitutionBindings xmi:id="_S4qqEA_HEeySlY7vVr8Zcw" template="host" propName="/Pcrf/Connection/Http/Host"/>
       <substitutionBindings xmi:id="_VPxEUA_HEeySlY7vVr8Zcw" template="port" propName="/Pcrf/Connection/Http/Port"/>

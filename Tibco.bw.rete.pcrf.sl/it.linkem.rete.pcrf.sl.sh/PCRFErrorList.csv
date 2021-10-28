@@ -1,0 +1,7 @@
+ErrorCode;ErrorMessage;ErrorType;HTTPStatusCode;APIname
+ESB.PCRF.000001;Generic Error occurred GetImsiByIp_sl process;System;500;
+ESB.PCRF.000002;Business Exception during  ParseGetResponse into GetImsiByIp Process;Business;400;
+ESB.PCRF.000003;HTTPClient Exception occurred on GetIMSIByIP activity;Business;400;
+ESB.PCRF.000004;HTTPServer Exception occurred on GetIMSIByIP activity;System;500;
+ESB.PCRF.000005;HTTPCommunication Exception occurred on GetIMSIByIP activity;System;500;
+ESB.PCRF.000006;ActivityTimedOut Exception occurred on GetIMSIByIP activity;System;500;

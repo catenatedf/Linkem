@@ -210,12 +210,13 @@
 		</globalVariable>
 		<globalVariable>
 			<name>//it.linkem.rete.pcrf.sl.sh///Pcrf/Connection/Http/Port</name>
-			<value>443</value>
+			<value>9090</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
 			<type>Integer</type>
-			<isOverride>false</isOverride>
+			<isOverride>true</isOverride>
 			<useLookupValue>false</useLookupValue>
+			<lookupValue>9090</lookupValue>
 		</globalVariable>
 		<globalVariable>
 			<name>//it.linkem.rete.pcrf.sl.sh///Pcrf/Connection/Http/DisableConnectionPolling</name>
@@ -246,12 +247,13 @@
 		</globalVariable>
 		<globalVariable>
 			<name>//it.linkem.rete.pcrf.sl.sh///Pcrf/Connection/RequestUrl</name>
-			<value>/services/ServiceManager/getRefData/Session</value>
+			<value>/getimsifromip</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
 			<type>String</type>
-			<isOverride>false</isOverride>
+			<isOverride>true</isOverride>
 			<useLookupValue>false</useLookupValue>
+			<lookupValue>/getimsifromip</lookupValue>
 		</globalVariable>
 		<globalVariable>
 			<name>//it.linkem.rete.pcrf.sl.sh///Pcrf/Connection/Http/LogRequest</name>
@@ -264,12 +266,13 @@
 		</globalVariable>
 		<globalVariable>
 			<name>//it.linkem.rete.pcrf.sl.sh///Pcrf/Connection/Http/DefaultConfidentiality</name>
-			<value>true</value>
+			<value>false</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
 			<type>Boolean</type>
-			<isOverride>false</isOverride>
+			<isOverride>true</isOverride>
 			<useLookupValue>false</useLookupValue>
+			<lookupValue>false</lookupValue>
 		</globalVariable>
 		<globalVariable>
 			<name>//it.linkem.rete.pcrf.sl.sh///Pcrf/Connection/Http/AcceptRedirect</name>
@@ -372,12 +375,13 @@
 		</globalVariable>
 		<globalVariable>
 			<name>//it.linkem.rete.pcrf.sl.sh///Pcrf/Connection/Http/Host</name>
-			<value>172.28.85.73</value>
+			<value>192.172.2.35</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
 			<type>String</type>
-			<isOverride>false</isOverride>
+			<isOverride>true</isOverride>
 			<useLookupValue>false</useLookupValue>
+			<lookupValue>192.172.2.35</lookupValue>
 		</globalVariable>
 		<globalVariable>
 			<name>//it.linkem.rete.pcrf.sl.sh//BW.APPSPACE.NAME</name>
@@ -677,12 +681,13 @@
 		</globalVariable>
 		<globalVariable>
 			<name>//it.linkem.rete.pcrf.sl.sh///Pcrf/Connection/Http/SSL/pcrf_jks_fullpath</name>
-			<value>/opt/linkem_cfg/pcrf-certs.jks</value>
+			<value>/home/tibco/TIBCO_CFG/tibco/cfgmgmt/certs/pcrf/pcrf-certs.jks</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
 			<type>String</type>
-			<isOverride>false</isOverride>
+			<isOverride>true</isOverride>
 			<useLookupValue>false</useLookupValue>
+			<lookupValue>/home/tibco/TIBCO_CFG/tibco/cfgmgmt/certs/pcrf/pcrf-certs.jks</lookupValue>
 		</globalVariable>
 	</globalVariables>
 </repository>

@@ -1,0 +1,183 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0",
+    "title" : "simcheck",
+    "description" : "simcheck service"
+  },
+  "host" : "localhost:8083",
+  "basePath" : "/",
+  "schemes" : [ "http" ],
+  "paths" : {
+    "/simcheck" : {
+      "get" : {
+        "summary" : "getSimcheck",
+        "description" : "getSimcheck",
+        "operationId" : "get-simcheck",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "CodiceSblocco",
+          "in" : "query",
+          "description" : "",
+          "type" : "string",
+          "required" : true
+        }, {
+          "name" : "PIVA",
+          "in" : "query",
+          "description" : "",
+          "type" : "string",
+          "required" : false
+        }, {
+          "name" : "IP",
+          "in" : "query",
+          "description" : "",
+          "type" : "string",
+          "required" : true
+        }, {
+          "name" : "CodiceFiscale",
+          "in" : "query",
+          "description" : "",
+          "type" : "string",
+          "required" : false
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a SimCheckResponse to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/SimCheckResponse"
+            },
+            "headers" : { }
+          },
+          "400" : {
+            "description" : "Bad Request",
+            "schema" : {
+              "type" : "string"
+            }
+          },
+          "404" : {
+            "description" : "Not Found",
+            "schema" : {
+              "type" : "string"
+            }
+          },
+          "500" : {
+            "description" : "Internal Server Error",
+            "schema" : {
+              "type" : "string"
+            }
+          },
+          "201" : {
+            "description" : "Created",
+            "schema" : {
+              "type" : "string"
+            }
+          },
+          "202" : {
+            "description" : "Accepted",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "ResultInfoType" : {
+      "type" : "object",
+      "properties" : {
+        "ResultInfo" : {
+          "$ref" : "#/definitions/ResultInfo"
+        }
+      }
+    },
+    "ContractInfoType" : {
+      "type" : "object",
+      "required" : [ "VerificaDatiLte", "PagamentoEffettuato", "RicezioneDocumentiLte", "StatoSwap" ],
+      "properties" : {
+        "Nome" : {
+          "type" : "string"
+        },
+        "CodiceFiscale" : {
+          "type" : "string"
+        },
+        "PartitaIva" : {
+          "type" : "string"
+        },
+        "TipoCliente" : {
+          "type" : "string"
+        },
+        "Via" : {
+          "type" : "string"
+        },
+        "NumeroCivico" : {
+          "type" : "string"
+        },
+        "Citta" : {
+          "type" : "string"
+        },
+        "Provincia" : {
+          "type" : "string"
+        },
+        "Status" : {
+          "type" : "string"
+        },
+        "TecnologiaConnessione" : {
+          "type" : "string"
+        },
+        "TestataDelContrattoId" : {
+          "type" : "string"
+        },
+        "PrimoContrattoId" : {
+          "type" : "string"
+        },
+        "IdContratto" : {
+          "type" : "string"
+        },
+        "IccId" : {
+          "type" : "string"
+        },
+        "StatoSwap" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "VerificaDatiLte" : {
+          "type" : "boolean"
+        },
+        "RicezioneDocumentiLte" : {
+          "type" : "boolean"
+        },
+        "PagamentoEffettuato" : {
+          "type" : "boolean"
+        },
+        "IdentificativoOfferta" : {
+          "type" : "string"
+        }
+      }
+    },
+    "SimCheckResponse" : {
+      "type" : "object",
+      "required" : [ "ResultInfo" ],
+      "properties" : {
+        "ResultInfo" : {
+          "$ref" : "#/definitions/ResultInfoType"
+        },
+        "ContractInfo" : {
+          "$ref" : "#/definitions/ContractInfoType"
+        }
+      }
+    },
+    "ResultInfo" : {
+      "type" : "object",
+      "properties" : {
+        "ResultCode" : {
+          "type" : "string"
+        },
+        "ErrorMessage" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}

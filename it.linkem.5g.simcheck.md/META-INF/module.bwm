@@ -34,9 +34,12 @@
   <sca:property xmi:id="_dUTfYA7_EeyYyO9H7W6dmg" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
   <sca:property xmi:id="_dUV7oA7_EeyYyO9H7W6dmg" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
   <sca:component xmi:id="_TqDyMA8AEeyYyO9H7W6dmg" name="ComponentSimCheckREST_tlp" compositeext:version="1.0.0.qualifier">
-    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_TqDyMQ8AEeyYyO9H7W6dmg" processName="it.linkem.5g.simcheck.tlp.SimCheckREST_tlp"/>
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_TqDyMQ8AEeyYyO9H7W6dmg" processName="it.linkem.5g.simcheck.tl.SimCheckREST_tlp"/>
     <sca:service xmi:id="_TqGOcA8AEeyYyO9H7W6dmg" name="simcheck">
       <sca:interface.wsdl xmi:id="_TqGOcQ8AEeyYyO9H7W6dmg" interface="http://xmlns.example.com/20210906125053PLT#wsdl.interface(simcheck)" scaext:wsdlLocation="../Processes/it/linkem/5g/simcheck/tlp/SimCheckREST_tlp.bwp"/>
     </sca:service>
+  </sca:component>
+  <sca:component xmi:id="_foxqkDWaEeykP6Ij1IWjiw" name="ComponentModuleActivator" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_foxqkTWaEeykP6Ij1IWjiw" processName="it.linkem.5g.simcheck.startup.StartLoadErrorConfig"/>
   </sca:component>
 </sca:composite>

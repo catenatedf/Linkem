@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://it/linkem/5g/SimCheck/xsd" xmlns:tns="http://it/linkem/5g/SimCheck/xsd" elementFormDefault="qualified">
+
 	<element name="SimCheckBSL_Input">
 		<complexType>
 			<sequence>
@@ -10,11 +11,67 @@
 			</sequence>
 		</complexType>
 	</element>
+	
+	
 	<element name="SimCheckBSL_Output">
 		<complexType>
 			<sequence>
 				<element maxOccurs="1" minOccurs="1" name="Response" type="string"/>
+				<element maxOccurs="1" minOccurs="0" ref="tns:SimCheckResponse"/>
 			</sequence>
 		</complexType>
 	</element>
+	
+
+	<element name="SimCheckResponse">
+		<complexType>
+			<sequence>
+				<element maxOccurs="1" minOccurs="1" name="ResultInfo" type="tns:ResultInfoType"/>			
+				<element maxOccurs="1" minOccurs="0" name="ContractInfo" type="tns:ContractInfoType"/>
+			</sequence>
+		</complexType>
+	</element>	
+
+	
+	<complexType name="ContractInfoType">
+						<sequence>
+							<element minOccurs="0" maxOccurs="1" form="unqualified" name="Nome" type="string"/>
+							<element minOccurs="0" maxOccurs="1" form="unqualified" name="CodiceFiscale" type="string"/>
+							<element minOccurs="0" maxOccurs="1" form="unqualified" name="PartitaIva" type="string"/>
+							<element minOccurs="0" maxOccurs="1" form="unqualified" name="TipoCliente" type="string"/>
+							<element minOccurs="0" maxOccurs="1" form="unqualified" name="Via" type="string"/>
+							<element minOccurs="0" maxOccurs="1" form="unqualified" name="NumeroCivico" type="string"/>
+							<element minOccurs="0" maxOccurs="1" form="unqualified" name="Citta" type="string"/>
+							<element minOccurs="0" maxOccurs="1" form="unqualified" name="Provincia" type="string"/>
+							<element minOccurs="0" maxOccurs="1" form="unqualified" name="Status" type="string"/>
+							<element minOccurs="0" maxOccurs="1" form="unqualified" name="TecnologiaConnessione" type="string"/>
+							<element minOccurs="0" maxOccurs="1" form="unqualified" name="TestataDelContrattoId" type="string"/>
+							<element minOccurs="0" maxOccurs="1" form="unqualified" name="PrimoContrattoId" type="string"/>
+							<element minOccurs="0" maxOccurs="1" form="unqualified" name="IdContratto" type="string"/>
+							<element minOccurs="0" maxOccurs="1" form="unqualified" name="IccId" type="string"/>
+							<element minOccurs="1" maxOccurs="1" form="unqualified" name="StatoSwap" type="int"/>
+							<element minOccurs="1" maxOccurs="1" form="unqualified" name="VerificaDatiLte" type="boolean"/>
+							<element minOccurs="1" maxOccurs="1" form="unqualified" name="RicezioneDocumentiLte" type="boolean"/>
+							<element minOccurs="1" maxOccurs="1" form="unqualified" name="PagamentoEffettuato" type="boolean"/>
+							<element minOccurs="0" maxOccurs="1" form="unqualified" name="IdentificativoOfferta" type="string"/>
+						</sequence>
+					</complexType>
+	
+	
+	
+
+		<complexType name="ResultInfoType">
+			<sequence>
+				<element minOccurs="0" maxOccurs="1" form="unqualified" name="ResultInfo">
+					<complexType>
+						<sequence>
+							<element minOccurs="0" maxOccurs="1" form="unqualified" name="ResultCode" type="string"/>
+							<element minOccurs="0" maxOccurs="1" form="unqualified" name="ErrorMessage" type="string"/>
+						</sequence>
+					</complexType>
+				</element>
+			</sequence>
+		</complexType>
+	
+
 </schema>

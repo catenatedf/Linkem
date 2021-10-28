@@ -1,7 +1,11 @@
 {
-    "records": [],
+    "records": [{
+        "name": "Cloud",
+        "items": [],
+        "url": "https://integration.cloud.tibco.com:443"
+    }],
     "resources": [{
-        "location": "Service Descriptors/it.linkem.5g.simcheck.tlp.SimCheckREST_tlp-simcheck.json",
+        "location": "Service Descriptors/it.linkem.5g.simcheck.tl.SimCheckREST_tlp-simcheck.json",
         "type": "generated"
     }]
 }

@@ -31,4 +31,5 @@
   <sca:property xmi:id="_jz7mcA_JEeySlY7vVr8Zcw" name="/Pcrf/Connection/Http/ShortRetryManagement/MaxShortRetry" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
   <sca:property xmi:id="_sQrs8BbzEeytqoDlaIw1eA" name="/Pcrf/Connection/Http/BasicAuthentication/username" type="XMLSchema:string" publicAccess="true" scalable="true"/>
   <sca:property xmi:id="_t9tPcBbzEeytqoDlaIw1eA" name="/Pcrf/Connection/Http/BasicAuthentication/password" type="property:password" scaext:simpleValue="#!AaNcsMXraGqqJkkxCtv9sw==" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_KEzzUCW2EeyIpNgVDnxdHg" name="/Pcrf/Connection/Http/SSL/pcrf_jks_fullpath" type="XMLSchema:string" publicAccess="true" scalable="true"/>
 </sca:composite>
