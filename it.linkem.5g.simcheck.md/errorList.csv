@@ -11,6 +11,7 @@ ESB.PCRF.000003;HTTPClient Exception occurred on GetIMSIByIP activity;Business;4
 ESB.PCRF.000004;HTTPServer Exception occurred on GetIMSIByIP activity;System;500;
 ESB.PCRF.000005;HTTPCommunication Exception occurred on GetIMSIByIP activity;System;500;
 ESB.PCRF.000006;ActivityTimedOut Exception occurred on GetIMSIByIP activity;System;500;
+ESB.PCRF.000007;IP not found;Business;400;
 ESB.MDYN.000001;System Error occurred during RetrieveSIMEntity (CRM);System;500;
 ESB.MDYN.000002;Generic Error occurred during GetTestataByGUIDTDC (CRM);System;500;
 ESB.MDYN.000003;Generic Error occurred during GetSIMByGuidTDC (CRM);System;500;
