@@ -34,7 +34,7 @@ ESB.MDYN.000032;Business error occurred during GetTestataContrattoByIdContratto 
 ESB.MDYN.000033;System error occurred during GetLineeContrattoByGuidTDC process;System;500;
 ESB.MDYN.000034;Business error occurred during GetLineeContrattoByGuidTDC process;Business;400;
 ESB.MDYN.000035;Business error occurred during GetSIMbySimID process;Business;400;
-ESB.MDYN.000036;Generic/Unknown Error occurred during GetAccountById (CRM);System;500;
-ESB.MDYN.000037;System error occurred during GetAccountById process;System;500;
-ESB.MDYN.000038;Business error occurred during GetAccountById process;Business;400;
+ESB.MDYN.000036;Generic/Unknown Error occurred during GetAccountByAccountId (CRM);System;500;
+ESB.MDYN.000037;System error occurred during GetAccountByAccountId process;System;500;
+ESB.MDYN.000038;Business error occurred during GetAccountByAccountId process;Business;400;
 
