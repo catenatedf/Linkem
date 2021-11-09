@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:tibex="http://www.tibco.com/bpel/2007/extensions" xmlns:tns="http://www.example.com/namespaces/tns/1636477876810" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://www.example.com/namespaces/tns/1636477876810">
+  <xsd:element name="staticIpConfiguration">
+  
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element maxOccurs="1" minOccurs="0" name="btsname" type="xsd:string"/>
+        <xsd:element maxOccurs="1" minOccurs="0" name="tipocontratto" type="xsd:string"/>
+        <xsd:element maxOccurs="1" minOccurs="1" name="idrisorsa" type="xsd:string"/>
+        <xsd:element maxOccurs="1" minOccurs="0" name="imsi" type="xsd:string"/>
+        <xsd:element maxOccurs="1" minOccurs="0" name="cod" type="xsd:string"/>
+        <xsd:element maxOccurs="1" minOccurs="0" name="descrizione" type="xsd:string"/>
+        <xsd:element maxOccurs="1" minOccurs="0" name="ippubblico" type="xsd:string"/>
+        <xsd:element maxOccurs="1" minOccurs="0" name="mask" type="xsd:string"/>
+        <xsd:element maxOccurs="1" minOccurs="0" name="ipprivato" type="xsd:string"/>
+        <xsd:element maxOccurs="1" minOccurs="0" name="idtransizione" type="xsd:string"/>
+        <xsd:element maxOccurs="1" minOccurs="0" name="azione" type="xsd:string"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="getInput">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element maxOccurs="1" minOccurs="1" name="idrisorsa" type="xsd:string"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

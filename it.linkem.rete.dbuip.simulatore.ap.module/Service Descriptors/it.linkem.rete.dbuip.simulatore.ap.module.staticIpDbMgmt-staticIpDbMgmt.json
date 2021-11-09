@@ -1,0 +1,136 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0",
+    "title" : "staticIpDbMgmt",
+    "description" : "staticIpDbMgmt service"
+  },
+  "host" : "localhost:8080",
+  "basePath" : "/",
+  "schemes" : [ "http" ],
+  "paths" : {
+    "/staticipdbmgmt" : {
+      "post" : {
+        "summary" : "postStaticIpDbMgmt",
+        "description" : "postStaticIpDbMgmt",
+        "operationId" : "post-staticipdbmgmt",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "$ref" : "#/definitions/staticIpConfiguration"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      },
+      "get" : {
+        "summary" : "getStaticIpDbMgmt",
+        "description" : "getStaticIpDbMgmt",
+        "operationId" : "get-staticipdbmgmt",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "a staticIpConfiguration to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/staticIpConfiguration"
+            }
+          }
+        }
+      },
+      "put" : {
+        "summary" : "putStaticIpDbMgmt",
+        "description" : "putStaticIpDbMgmt",
+        "operationId" : "put-staticipdbmgmt",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "$ref" : "#/definitions/staticIpConfiguration"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      },
+      "delete" : {
+        "summary" : "deleteStaticIpDbMgmt",
+        "description" : "deleteStaticIpDbMgmt",
+        "operationId" : "delete-staticipdbmgmt",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "staticIpConfiguration" : {
+      "type" : "object",
+      "required" : [ "idrisorsa" ],
+      "properties" : {
+        "btsname" : {
+          "type" : "string"
+        },
+        "tipocontratto" : {
+          "type" : "string"
+        },
+        "idrisorsa" : {
+          "type" : "string"
+        },
+        "imsi" : {
+          "type" : "string"
+        },
+        "cod" : {
+          "type" : "string"
+        },
+        "descrizione" : {
+          "type" : "string"
+        },
+        "ippubblico" : {
+          "type" : "string"
+        },
+        "mask" : {
+          "type" : "string"
+        },
+        "ipprivato" : {
+          "type" : "string"
+        },
+        "idtransizione" : {
+          "type" : "string"
+        },
+        "azione" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+    "records": [{
+        "name": "Cloud",
+        "items": [],
+        "url": "https://integration.cloud.tibco.com:443"
+    }],
+    "resources": [
+        {
+            "location": "Service Descriptors/it.linkem.rete.dbuip.simulatore.ap.module.restService-restService.json",
+            "type": "generated"
+        },
+        {
+            "location": "Service Descriptors/it.linkem.rete.dbuip.simulatore.ap.module.staticIpDbMgmt-staticIpDbMgmt.json",
+            "type": "generated"
+        }
+    ]
+}

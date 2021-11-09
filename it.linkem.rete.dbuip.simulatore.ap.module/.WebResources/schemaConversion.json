@@ -1,0 +1,12 @@
+{"records": [
+    {
+        "jsonSchemaLocation": "/it.linkem.rete.dbuip.simulatore.ap.module/Service Descriptors/it.linkem.rete.dbuip.simulatore.ap.module.restService-restService.json",
+        "conversionType": "linked",
+        "xsdSchemaTargetNamespace": "http://www.example.com/namespaces/tns/1636477876810"
+    },
+    {
+        "jsonSchemaLocation": "/it.linkem.rete.dbuip.simulatore.ap.module/Service Descriptors/it.linkem.rete.dbuip.simulatore.ap.module.staticIpDbMgmt-staticIpDbMgmt.json",
+        "conversionType": "linked",
+        "xsdSchemaTargetNamespace": "http://www.example.com/namespaces/tns/1636477876810"
+    }
+]}

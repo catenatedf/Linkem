@@ -1,0 +1,138 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0",
+    "title" : "restService",
+    "description" : "restService service"
+  },
+  "host" : "localhost:8080",
+  "basePath" : "/",
+  "schemes" : [ "http" ],
+  "paths" : {
+    "/restsrv" : {
+      "post" : {
+        "summary" : "postRestService",
+        "description" : "postRestService",
+        "operationId" : "post-restsrv",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "$ref" : "#/definitions/Element"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      },
+      "get" : {
+        "summary" : "getRestService",
+        "description" : "getRestService",
+        "operationId" : "get-restsrv",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    },
+    "/restservice" : {
+      "get" : {
+        "summary" : "getRestService",
+        "description" : "getRestService",
+        "operationId" : "get-restservice",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      },
+      "put" : {
+        "summary" : "putRestService",
+        "description" : "putRestService",
+        "operationId" : "put-restservice",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "type" : "string"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "Element" : {
+      "type" : "object",
+      "required" : [ "idrisorsa" ],
+      "properties" : {
+        "btsname" : {
+          "type" : "string"
+        },
+        "tipocontratto" : {
+          "type" : "string"
+        },
+        "idrisorsa" : {
+          "type" : "string"
+        },
+        "imsi" : {
+          "type" : "string"
+        },
+        "cod" : {
+          "type" : "string"
+        },
+        "descrizione" : {
+          "type" : "string"
+        },
+        "ippubblico" : {
+          "type" : "string"
+        },
+        "mask" : {
+          "type" : "string"
+        },
+        "ipprivato" : {
+          "type" : "string"
+        },
+        "idtransizione" : {
+          "type" : "string"
+        },
+        "azione" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}
