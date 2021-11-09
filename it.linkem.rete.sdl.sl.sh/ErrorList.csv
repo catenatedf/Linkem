@@ -1,0 +1,20 @@
+ErrorCode;ErrorMessage;ErrorType;HTTPStatusCode;APIname;BSLProcess
+ESB.NSDB.000001;System Exception occurred calling SDB-GetUser;System;500;GetUser;
+ESB.NSDB.000002;Error occurred during TransformXML activity-RemoveNamespacesPrefix in ChangeProfile subprocess;System;;ChangeProfile;
+ESB.NSDB.000003;Error occurred parsing GetUser Response;Business;;GetUser;
+ESB.NSDB.000004;System Exception occurred calling SDB-ChangeProfile;System;500;ChangeProfile;
+ESB.NSDB.000005;Error occurred during TransformXML activity-RemoveNamespacesPrefix in ChangeProfile subprocess;System;;ChangeProfile;
+ESB.NSDB.000006;Error occurred parsing ChangeProfile Response;Business;;ChangeProfile;
+
+
+ESB.NSDB.000007;System Exception occurred calling SDB-ChangeStatus;System;500;ChangeStatus;
+ESB.NSDB.000008;Error occurred during TransformXML activity-RemoveNamespacesPrefix in ChangeStatus subprocess;System;;ChangeStatus;
+ESB.NSDB.000009;Error occurred parsing ChangeStatus Response;Business;;ChangeStatus;
+
+ESB.NSDB.000010;System Exception occurred calling SDB-ChangeStatus-Suspended;System;500;ChangeStatus;
+ESB.NSDB.000011;Error occurred during TransformXML activity-RemoveNamespacesPrefix in ChangeStatus-Suspended subprocess;System;;ChangeStatus;
+ESB.NSDB.000012;Error occurred parsing ChangeStatus-Suspended Response;Business;;ChangeStatus;
+
+ESB.NSDL.000001;Error occurred during  GetUserByImsi;System;500;;
+ESB.NSDL.000002;Error occurred during ChangeProfile;System;500;;
+ESB.NSDL.000003;Generic Error occurred during ChangeStatus_suspended process;System;500;;

@@ -1,0 +1,19 @@
+<soapenv:Envelope xmlns:q0="urn:siemens:names:prov:gw:SPML:2:0" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <soapenv:Body>
+    <q0:modifyRequest xmlns:subscriber="urn:siemens:names:prov:gw:SUBSCRIBER:1:0" >
+      <version>SUBSCRIBER_v10</version>
+      <objectclass>Subscriber</objectclass>
+      <identifier alias="imsi">{0}</identifier>
+      <modification operation="addorset">
+        <valueObject xsi:type="subscriber:HLR">
+          <eps>
+            <defaultPdnContextId>1</defaultPdnContextId>
+            <odbPOAccessEps>NONE</odbPOAccessEps>
+            <!--or <odbPOAccessEps>ALLPOS</odbPOAccessEps>-->
+          </eps>
+        </valueObject>
+      </modification>
+    </q0:modifyRequest>
+  </soapenv:Body>
+</soapenv:Envelope>

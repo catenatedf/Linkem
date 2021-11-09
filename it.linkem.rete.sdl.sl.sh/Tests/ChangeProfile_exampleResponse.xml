@@ -1,0 +1,28 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<soapenv:Body>
+		<ns1:modifyResponse executionTime="0" requestID="403d940a:17baa826b70:7c90" result="success" xmlns:ns1="urn:siemens:names:prov:gw:SPML:2:0" xmlns:subscriber="urn:siemens:names:prov:gw:SUBSCRIBER:1:0">
+			<version>SUBSCRIBER_v10</version>
+			<objectclass>Subscriber</objectclass>
+			<identifier alias="imsi">222380001477705</identifier>
+			<modification name="hlr" operation="addorset" scope="uniqueTypeMapping">
+				<valueObject xsi:type="ns2:HLR" xmlns:ns2="urn:siemens:names:prov:gw:SUBSCRIBER:1:0">
+					<eps>
+						<defaultPdnContextId>1</defaultPdnContextId>
+						<maxBandwidthUp>500000000</maxBandwidthUp>
+						<maxBandwidthDown>1000000000</maxBandwidthDown>
+						<odbPOAccessEps>NONE</odbPOAccessEps>
+					</eps>
+					<epsPdnContext>
+						<apn>apn.linkem.com</apn>
+						<contextId>1</contextId>
+						<type>both</type>
+						<pdnGwDynamicAllocation>true</pdnGwDynamicAllocation>
+						<maxBandwidthUp>500000</maxBandwidthUp>
+						<maxBandwidthDown>10000000</maxBandwidthDown>
+						<qos>Consumer</qos>
+					</epsPdnContext>
+				</valueObject>
+			</modification>
+		</ns1:modifyResponse>
+	</soapenv:Body>
+</soapenv:Envelope>

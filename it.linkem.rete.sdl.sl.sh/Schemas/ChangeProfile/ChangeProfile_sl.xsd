@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://it.linkem/rete/udb/changeProfile/sl/xsd"
+	xmlns:tns="http://it.linkem/rete/udb/changeProfile/sl/xsd"
+	elementFormDefault="qualified">
+	<element name="ChangeProfile_SL_Input">
+		<complexType>
+			<sequence>
+				<element maxOccurs="1" minOccurs="1" name="IMSI" type="string"/>
+				<element maxOccurs="1" minOccurs="0" name="eps_maxBandwidthUp" type="string"/>
+				<element maxOccurs="1" minOccurs="0" name="eps_maxBandwidthDown" type="string"/>
+				<element maxOccurs="1" minOccurs="1" name="epsPdnContext_apn" type="string"/>
+				<element maxOccurs="1" minOccurs="0" name="epsPdnContext_pdnGwDynamicAllocation" type="string"/>
+				<element maxOccurs="1" minOccurs="0" name="epsPdnContext_maxBandwidthUp" type="string"/>
+				<element maxOccurs="1" minOccurs="0" name="epsPdnContext_maxBandwidthDown" type="string"/>
+				<element maxOccurs="1" minOccurs="0" name="epsPdnContext_qos" type="string"/>
+			</sequence>
+		</complexType>
+	</element>
+	<element name="ChangeProfile_SL_Output">
+		<complexType>
+			<sequence>
+				<element maxOccurs="1" minOccurs="0" name="ChangeProfile_Response" type="anySimpleType"/>
+				<element maxOccurs="1" minOccurs="1" name="ResponseCode" type="string"/>
+			</sequence>
+		</complexType>
+	</element>
+</schema>

@@ -1,0 +1,62 @@
+<schema xmlns="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified">
+	<element name="modifyResponse">
+		<complexType>
+			<sequence>
+				<!-- qui dentro -->
+				<element name="version" type="string"/>
+				<element name="objectclass" type="string"/>
+				<element name="identifier">
+					<complexType>
+						<simpleContent>
+							<extension base="long">
+								<attribute type="string" name="alias"/>
+							</extension>
+						</simpleContent>
+					</complexType>
+				</element>
+				<element name="modification">
+					<complexType>
+						<sequence>
+							<element name="valueObject">
+								<complexType>
+									<sequence>
+										<element name="eps">
+											<complexType>
+												<sequence>
+													<element type="byte" name="defaultPdnContextId"/>
+													<element type="int" name="maxBandwidthUp"/>
+													<element type="int" name="maxBandwidthDown"/>
+													<element type="string" name="odbPOAccessEps"/>
+												</sequence>
+											</complexType>
+										</element>
+										<element name="epsPdnContext">
+											<complexType>
+												<sequence>
+													<element type="string" name="apn"/>
+													<element type="byte" name="contextId"/>
+													<element type="string" name="type"/>
+													<element type="string" name="pdnGwDynamicAllocation"/>
+													<element type="int" name="maxBandwidthUp"/>
+													<element type="int" name="maxBandwidthDown"/>
+													<element type="string" name="qos"/>
+												</sequence>
+											</complexType>
+										</element>
+									</sequence>
+									<attribute name="type" type="string"/>
+								</complexType>
+							</element>
+						</sequence>
+						<attribute name="name" type="string"/>
+						<attribute name="operation" type="string"/>
+						<attribute name="scope" type="string"/>
+					</complexType>
+				</element>
+			</sequence>
+			<attribute name="executionTime" type="string"/>
+			<attribute name="requestID" type="string"/>
+			<attribute name="result" type="string"/>
+		</complexType>
+	</element>
+</schema>

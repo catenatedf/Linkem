@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmi:id="_phausA--EeySlY7vVr8Zcw" targetNamespace="http://tns.tibco.com/bw/composite/it.linkem.rete.sdl.sl.sh" name="it.linkem.rete.sdl.sl.sh" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:property xmi:id="_p7MgoA--EeySlY7vVr8Zcw" name="BW.DEPLOYMENTUNIT.TYPE" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_p7s28A--EeySlY7vVr8Zcw" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_p7yWgA--EeySlY7vVr8Zcw" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_p732EA--EeySlY7vVr8Zcw" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_p78ukA--EeySlY7vVr8Zcw" name="BW.DOMAIN.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_p8BAAA--EeySlY7vVr8Zcw" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_p8EqYA--EeySlY7vVr8Zcw" name="BW.APPSPACE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_p8I70A--EeySlY7vVr8Zcw" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_p8NNQA--EeySlY7vVr8Zcw" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_Bl8oIBFTEeyuS_nZ2YNeNA" name="/it.linkem.rete.sdl.sl.sh/SDL/Connections/HTTPClient/URI" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_t9MtoBFXEeyuS_nZ2YNeNA" name="/it.linkem.rete.sdl.sl.sh/SDL/Connections/HTTPClient/Method" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_u0bQkBFXEeyuS_nZ2YNeNA" name="/it.linkem.rete.sdl.sl.sh/SDL/Connections/HTTPClient/ContentType" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_jw6xwBFVEeyuS_nZ2YNeNA" name="/it.linkem.rete.sdl.sl.sh/SDL/Connections/HTTPClient/Common/Host" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_lxpTYBFVEeyuS_nZ2YNeNA" name="/it.linkem.rete.sdl.sl.sh/SDL/Connections/HTTPClient/Common/Port" type="XMLSchema:int" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_oPvGcBFVEeyuS_nZ2YNeNA" name="/it.linkem.rete.sdl.sl.sh/SDL/Connections/HTTPClient/Common/DisableConnectionPolling" type="XMLSchema:boolean" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_qDSuwBFVEeyuS_nZ2YNeNA" name="/it.linkem.rete.sdl.sl.sh/SDL/Connections/HTTPClient/Common/IdleConnectionTimeout" type="XMLSchema:int" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_qmtk4BFVEeyuS_nZ2YNeNA" name="/it.linkem.rete.sdl.sl.sh/SDL/Connections/HTTPClient/Common/StaleCheck" type="XMLSchema:boolean" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_r4umYBFVEeyuS_nZ2YNeNA" name="/it.linkem.rete.sdl.sl.sh/SDL/Connections/HTTPClient/Common/MaximumTotalConnections" type="XMLSchema:int" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_sgWnEBFVEeyuS_nZ2YNeNA" name="/it.linkem.rete.sdl.sl.sh/SDL/Connections/HTTPClient/Common/MaximumTotConnectionsPerHost" type="XMLSchema:int" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_tPLb8BFVEeyuS_nZ2YNeNA" name="/it.linkem.rete.sdl.sl.sh/SDL/Connections/HTTPClient/Common/SocketTimeout" type="XMLSchema:int" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_ucrw4BFVEeyuS_nZ2YNeNA" name="/it.linkem.rete.sdl.sl.sh/SDL/Connections/HTTPClient/Common/AcceptRedirect" type="XMLSchema:boolean" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_vKsGYBFVEeyuS_nZ2YNeNA" name="/it.linkem.rete.sdl.sl.sh/SDL/Connections/HTTPClient/Common/UseSingleCookieHeader" type="XMLSchema:boolean" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_vv5FMBFVEeyuS_nZ2YNeNA" name="/it.linkem.rete.sdl.sl.sh/SDL/Connections/HTTPClient/Common/ConnectionTImeout" type="XMLSchema:int" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_wVTfYBFVEeyuS_nZ2YNeNA" name="/it.linkem.rete.sdl.sl.sh/SDL/Connections/HTTPClient/Common/LogRequest" type="XMLSchema:boolean" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_w48_ABFVEeyuS_nZ2YNeNA" name="/it.linkem.rete.sdl.sl.sh/SDL/Connections/HTTPClient/Common/DefaultConfidentiality" type="XMLSchema:boolean" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_xkhEgBFVEeyuS_nZ2YNeNA" name="/it.linkem.rete.sdl.sl.sh/SDL/Connections/HTTPClient/Common/RetryCount" type="XMLSchema:int" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_yPoeEBFVEeyuS_nZ2YNeNA" name="/it.linkem.rete.sdl.sl.sh/SDL/Connections/HTTPClient/Common/Confidentiality" type="XMLSchema:boolean" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_y5D1kBFVEeyuS_nZ2YNeNA" name="/it.linkem.rete.sdl.sl.sh/SDL/Connections/HTTPClient/Common/UseNonPreemtiveAuth" type="XMLSchema:boolean" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_1weHkBFVEeyuS_nZ2YNeNA" name="/it.linkem.rete.sdl.sl.sh/SDL/Connections/HTTPClient/Common/ShortRetryManagement/BaseRetryDelay_s" type="XMLSchema:int" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_2D-5cBFVEeyuS_nZ2YNeNA" name="/it.linkem.rete.sdl.sl.sh/SDL/Connections/HTTPClient/Common/ShortRetryManagement/MaxShortRetry" type="XMLSchema:int" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_4Xv-oDAcEeyfOYaxf9qDAg" name="/it.linkem.rete.sdl.sl.sh/SDL/Connections/HTTPClient/SSL/sdl_jks_fullpath" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+</sca:composite>
