@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://it.linkem/crm/portalsharingdatadb/codaRichiesteIPSatico/xsd" xmlns:tns="http://it.linkem/crm/portalsharingdatadb/codaRichiesteIPSatico/xsd" elementFormDefault="qualified">
+	<element name="CodaRichiesteIPStatico_record">
+		<complexType>
+			<sequence>
+				<element maxOccurs="1" minOccurs="1" name="Id" type="int"/>
+				<element maxOccurs="1" minOccurs="0" name="CrmIdIpStatico" type="string"/>
+				<element maxOccurs="1" minOccurs="0" name="CrmIdTestata" type="string"/>
+				<element maxOccurs="1" minOccurs="1" name="Bts" type="string"/>
+				<element maxOccurs="1" minOccurs="1" name="CodiceIpStatico" type="string"/>				
+				<element maxOccurs="1" minOccurs="0" name="IdRisorsa" type="string"/>
+				<element maxOccurs="1" minOccurs="0" name="IdTransizione" type="string"/>
+				<element maxOccurs="1" minOccurs="0" name="IpPubblico" type="string"/>
+				<element maxOccurs="1" minOccurs="0" name="IpPrivato" type="string"/>
+				<element maxOccurs="1" minOccurs="0" name="Imsi" type="string"/>
+				<element maxOccurs="1" minOccurs="0" name="Mask" type="string"/>
+				<element maxOccurs="1" minOccurs="1" name="Azione" type="string"/>
+				<element maxOccurs="1" minOccurs="0" name="NumeroTentativo" type="int"/>
+				<element maxOccurs="1" minOccurs="0" name="CodiceOperazione" type="int"/>
+				<element maxOccurs="1" minOccurs="0" name="DescrizioneOperazione" type="string"/>
+				<element maxOccurs="1" minOccurs="0" name="DataCreazioneRichiesta" type="dateTime"/>
+				<element maxOccurs="1" minOccurs="0" name="DataEsecuzioneRichiesta" type="dateTime"/>
+				<element maxOccurs="1" minOccurs="1" name="DaProcessare" type="int"/>
+			</sequence>
+		</complexType>
+	</element>
+</schema>

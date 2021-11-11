@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:extns="http://www.example.org/schema/1636559239498" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://172.28.136.90/dbuip/ws/SpringIfService" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://172.28.136.90/dbuip/ws/SpringIfService">
+    <wsdl:import location="../Schemas/IPActivationSchema.xsd" namespace="http://www.example.org/schema/1636559239498"/>
+    <types>
+<xsd:schema targetNamespace="http://172.28.136.90/dbuip/ws/SpringIfService">
+ <xsd:complexType name="IpReservationStruct_IN">
+  <xsd:all>
+   <xsd:element name="btsName" type="xsd:string" use="required"/>
+   <xsd:element name="tipoContratto" type="xsd:string" use="required"/>
+  </xsd:all>
+ </xsd:complexType>
+ <xsd:complexType name="IpReservationStruct_OUT">
+  <xsd:all>
+   <xsd:element name="cod" type="xsd:int" use="required"/>
+   <xsd:element name="desc" type="xsd:string" use="required"/>
+   <xsd:element name="idRisorsa" type="xsd:string" use="required"/>
+   <xsd:element name="ipPubblico" type="xsd:string" use="required"/>
+   <xsd:element name="mask" type="xsd:int"/>
+   <xsd:element name="ipPrivato" type="xsd:string"/>
+   <xsd:element name="idTransizione" type="xsd:ID" use="required"/>
+  </xsd:all>
+ </xsd:complexType>
+ <xsd:complexType name="DeleteIPReservationStruct_IN">
+  <xsd:all>
+   <xsd:element name="idRisorsa" type="xsd:string" use="required"/>
+  </xsd:all>
+ </xsd:complexType>
+ <xsd:complexType name="DeleteIPReservationIpStruct_OUT">
+  <xsd:all>
+   <xsd:element name="cod" type="xsd:int" use="required"/>
+   <xsd:element name="desc" type="xsd:string" use="required"/>
+   <xsd:element name="idTransizione" type="xsd:ID" use="required"/>
+  </xsd:all>
+ </xsd:complexType>
+ <xsd:complexType name="IpActivationStruct_IN">
+  <xsd:all>
+   <xsd:element name="idRisorsa" type="xsd:string" use="required"/>
+   <xsd:element name="imsi" type="xsd:string"/>
+  </xsd:all>
+ </xsd:complexType>
+ <xsd:complexType name="IpActivationStruct_OUT">
+  <xsd:all>
+   <xsd:element name="cod" type="xsd:int" use="required"/>
+   <xsd:element name="desc" type="xsd:string" use="required"/>
+   <xsd:element name="idTransizione" type="xsd:ID" use="required"/>
+  </xsd:all>
+ </xsd:complexType>
+ <xsd:complexType name="IpReleaseStruct_IN">
+  <xsd:all>
+   <xsd:element name="idRisorsa" type="xsd:string" use="required"/>
+  </xsd:all>
+ </xsd:complexType>
+ <xsd:complexType name="IpReleaseStruct_OUT">
+  <xsd:all>
+   <xsd:element name="cod" type="xsd:int" use="required"/>
+   <xsd:element name="desc" type="xsd:string" use="required"/>
+   <xsd:element name="idTransizione" type="xsd:ID" use="required"/>
+  </xsd:all>
+ </xsd:complexType>
+ <xsd:complexType name="ChangeDeviceStruct_IN">
+  <xsd:all>
+   <xsd:element name="idRisorsa" type="xsd:string" use="required"/>
+   <xsd:element name="imsi" type="xsd:string"/>
+  </xsd:all>
+ </xsd:complexType>
+ <xsd:complexType name="ChangeDeviceStruct_OUT">
+  <xsd:all>
+   <xsd:element name="cod" type="xsd:int" use="required"/>
+   <xsd:element name="desc" type="xsd:string" use="required"/>
+   <xsd:element name="idTransizione" type="xsd:ID" use="required"/>
+  </xsd:all>
+ </xsd:complexType>
+ <xsd:complexType name="IpDeActivation_IN">
+  <xsd:all>
+   <xsd:element name="idRisorsa" type="xsd:string" use="required"/>
+  </xsd:all>
+ </xsd:complexType>
+ <xsd:complexType name="IpDeActivation_OUT">
+  <xsd:all>
+   <xsd:element name="cod" type="xsd:int" use="required"/>
+   <xsd:element name="desc" type="xsd:string" use="required"/>
+   <xsd:element name="idTransizione" type="xsd:ID" use="required"/>
+  </xsd:all>
+ </xsd:complexType>
+</xsd:schema>
+</types>
+<message name="IpReservationRequest">
+  <part name="parameter" type="tns:IpReservationStruct_IN"/>
+  </message>
+<message name="IpReservationResponse">
+  <part name="parameter" type="tns:IpReservationStruct_OUT"/>
+  </message>
+<message name="DeleteIPReservationRequest">
+  <part name="parameter" type="tns:DeleteIPReservationStruct_IN"/>
+  </message>
+<message name="DeleteIPReservationResponse">
+  <part name="parameter" type="tns:DeleteIPReservationIpStruct_OUT"/>
+  </message>
+<message name="IpActivationRequest">
+  <part name="parameter" type="tns:IpActivationStruct_IN"/>
+  </message>
+<message name="IpActivationResponse">
+  <part name="parameter" type="tns:IpActivationStruct_OUT"/>
+  </message>
+<message name="IpReleaseRequest">
+  <part name="parameter" type="tns:IpReleaseStruct_IN"/>
+  </message>
+<message name="IpReleaseResponse">
+  <part name="parameter" type="tns:IpReleaseStruct_OUT"/>
+  </message>
+<message name="ChangeDeviceRequest">
+  <part name="parameter" type="tns:ChangeDeviceStruct_IN"/>
+  </message>
+<message name="ChangeDeviceResponse">
+  <part name="parameter" type="tns:ChangeDeviceStruct_OUT"/>
+  </message>
+<message name="IpDeActivationRequest">
+  <part name="parameter" type="tns:IpDeActivation_IN"/>
+  </message>
+<message name="IpDeActivationResponse">
+  <part name="parameter" type="tns:IpDeActivation_OUT"/>
+  </message>
+    <wsdl:message name="operationRequest">
+    <wsdl:part element="extns:operationRequest" name="parameters"/>
+  </wsdl:message>
+    <wsdl:message name="operationResponse">
+    <wsdl:part element="extns:operationResponse" name="parameters"/>
+  </wsdl:message>
+    <portType name="SpringIfServicePortType">
+  <operation name="IpReservation">
+    <documentation>Ask to book an IP Address</documentation>
+    <input message="tns:IpReservationRequest"/>
+    <output message="tns:IpReservationResponse"/>
+  </operation>
+  <operation name="DeleteIPReservation">
+    <documentation>Delete a booked IP Address</documentation>
+    <input message="tns:DeleteIPReservationRequest"/>
+    <output message="tns:DeleteIPReservationResponse"/>
+  </operation>
+  <operation name="IpActivation">
+    <documentation>Activate a booked IP Address</documentation>
+    <input message="tns:IpActivationRequest"/>
+    <output message="tns:IpActivationResponse"/>
+  </operation>
+  <operation name="IpRelease">
+    <documentation>Release a booked IP Address</documentation>
+    <input message="tns:IpReleaseRequest"/>
+    <output message="tns:IpReleaseResponse"/>
+  </operation>
+  <operation name="ChangeDevice">
+    <documentation>Ask to change CPE</documentation>
+    <input message="tns:ChangeDeviceRequest"/>
+    <output message="tns:ChangeDeviceResponse"/>
+  </operation>
+  <operation name="IpDeActivation">
+    <documentation>Deactivate a resource.</documentation>
+    <input message="tns:IpDeActivationRequest"/>
+    <output message="tns:IpDeActivationResponse"/>
+  </operation>
+</portType>
+    <wsdl:portType name="IPActivation">
+    <wsdl:operation name="operation">
+      <wsdl:input message="tns:operationRequest" name="operationInput"/>
+      <wsdl:output message="tns:operationResponse" name="operationOutput"/>
+    </wsdl:operation>
+  </wsdl:portType>
+    <binding name="SpringIfServiceBinding" type="tns:SpringIfServicePortType">
+  <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+  <operation name="IpReservation">
+    <soap:operation soapAction="http://172.28.136.90/dbuip/ws/SpringIfService#NewOperation" style="rpc"/>
+    <input>
+        <soap:body namespace="http://172.28.136.90/dbuip/ws/SpringIfService" use="literal"/>
+      </input>
+    <output>
+        <soap:body namespace="http://172.28.136.90/dbuip/ws/SpringIfService" use="literal"/>
+      </output>
+  </operation>
+  <operation name="DeleteIPReservation">
+    <soap:operation soapAction="http://172.28.136.90/dbuip/ws/SpringIfService#NewOperation2" style="rpc"/>
+    <input>
+        <soap:body namespace="http://172.28.136.90/dbuip/ws/SpringIfService" use="literal"/>
+      </input>
+    <output>
+        <soap:body namespace="http://172.28.136.90/dbuip/ws/SpringIfService" use="literal"/>
+      </output>
+  </operation>
+  <operation name="IpActivation">
+    <soap:operation soapAction="http://172.28.136.90/dbuip/ws/SpringIfService#NewOperation3" style="rpc"/>
+    <input>
+        <soap:body namespace="http://172.28.136.90/dbuip/ws/SpringIfService" use="literal"/>
+      </input>
+    <output>
+        <soap:body namespace="http://172.28.136.90/dbuip/ws/SpringIfService" use="literal"/>
+      </output>
+  </operation>
+  <operation name="IpRelease">
+    <soap:operation soapAction="http://172.28.136.90/dbuip/ws/SpringIfService#NewOperation4" style="rpc"/>
+    <input>
+        <soap:body namespace="http://172.28.136.90/dbuip/ws/SpringIfService" use="literal"/>
+      </input>
+    <output>
+        <soap:body namespace="http://172.28.136.90/dbuip/ws/SpringIfService" use="literal"/>
+      </output>
+  </operation>
+  <operation name="ChangeDevice">
+    <soap:operation soapAction="http://172.28.136.90/dbuip/ws/SpringIfService#NewOperation5" style="rpc"/>
+    <input>
+        <soap:body namespace="http://172.28.136.90/dbuip/ws/SpringIfService" use="literal"/>
+      </input>
+    <output>
+        <soap:body namespace="http://172.28.136.90/dbuip/ws/SpringIfService" use="literal"/>
+      </output>
+  </operation>
+  <operation name="IpDeActivation">
+    <soap:operation soapAction="http://172.28.136.90/dbuip/ws/SpringIfService#NewOperation6" style="rpc"/>
+    <input>
+        <soap:body namespace="http://172.28.136.90/dbuip/ws/SpringIfService" use="literal"/>
+      </input>
+    <output>
+        <soap:body namespace="http://172.28.136.90/dbuip/ws/SpringIfService" use="literal"/>
+      </output>
+  </operation>
+</binding>
+<service name="SpringIfService">
+  <port binding="tns:SpringIfServiceBinding" name="SpringIfServicePort">
+    <soap:address location="http://172.28.136.90/dbuip/ws/dbu2bss.php"/>
+  </port>
+</service>
+</definitions>

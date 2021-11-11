@@ -1,0 +1,2141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpws:process exitOnStandardFault="no"
+    name="it.linkem.esb.staticIPManagement.onStartup.startPollingCodaRichiesteIPStatico"
+    suppressJoinFailure="yes"
+    targetNamespace="http://xmlns.example.com/20211109170457"
+    xmlns:bpws="http://docs.oasis-open.org/wsbpel/2.0/process/executable"
+    xmlns:info="http://www.tibco.com/bw/process/info"
+    xmlns:ns="http://www.tibco.com/pe/EngineTypes"
+    xmlns:ns0="http://tns.tibco.com/bw/activity/timer/xsd/output"
+    xmlns:ns1="http://www.tibco.com/namespaces/tnt/plugins/jdbc+9ff8eed8-3823-46b2-a183-61df4b4ca836+input"
+    xmlns:ns2="http://www.tibco.com/namespaces/tnt/plugins/jdbc+9ff8eed8-3823-46b2-a183-61df4b4ca836+output"
+    xmlns:ns3="http://tns.tibco.com/bw/palette/internal/activityerror+bw.jdbc.JDBCQuery"
+    xmlns:ns4="http://www.tibco.com/pe/WriteToLogActivitySchema"
+    xmlns:ns5="http://tns.tibco.com/bw/activity/sleep/xsd"
+    xmlns:ns6="http://it.linkem/crm/portalsharingdatadb/codaRichiesteIPSatico/xsd"
+    xmlns:sca="http://docs.oasis-open.org/ns/opencsa/sca/200912"
+    xmlns:sca-bpel="http://docs.oasis-open.org/ns/opencsa/sca-bpel/200801"
+    xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"
+    xmlns:tibprop="http://ns.tibco.com/bw/property" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <tibex:Types>
+        <xs:schema attributeFormDefault="unqualified"
+            elementFormDefault="qualified"
+            targetNamespace="http://www.tibco.com/pe/EngineTypes"
+            xmlns:tns="http://www.tibco.com/pe/EngineTypes" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <xs:complexType block="extension restriction"
+                final="extension restriction" name="ErrorReport">
+                <xs:sequence>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" name="StackTrace" type="xs:string"/>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" name="Msg" type="xs:string"/>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" name="FullClass" type="xs:string"/>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" name="Class" type="xs:string"/>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" name="ProcessStack" type="xs:string"/>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" minOccurs="0" name="MsgCode" type="xs:string"/>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" minOccurs="0" name="Data" type="tns:anydata"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType block="extension restriction"
+                final="extension restriction" name="OptionalErrorReport">
+                <xs:sequence>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" minOccurs="0"
+                        name="StackTrace" type="xs:string"/>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" minOccurs="0" name="Msg" type="xs:string"/>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" minOccurs="0"
+                        name="FullClass" type="xs:string"/>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" minOccurs="0" name="Class" type="xs:string"/>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" minOccurs="0"
+                        name="ProcessStack" type="xs:string"/>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" minOccurs="0" name="MsgCode" type="xs:string"/>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" minOccurs="0" name="Data" type="tns:anydata"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType block="extension restriction"
+                final="extension restriction" name="FaultDetail">
+                <xs:sequence>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" name="ActivityName" type="xs:string"/>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" minOccurs="0" name="Data" type="tns:anydata"/>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" name="Msg" type="xs:string"/>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" name="MsgCode" type="xs:string"/>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" name="ProcessStack" type="xs:string"/>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" name="StackTrace" type="xs:string"/>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" name="FullClass" type="xs:string"/>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" name="Class" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType block="extension restriction"
+                final="extension restriction" name="ProcessContext">
+                <xs:sequence>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" name="JobId" type="xs:string"/>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" name="ApplicationName" type="xs:string"/>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" name="EngineName" type="xs:string"/>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" name="ProcessInstanceId" type="xs:string"/>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" minOccurs="0"
+                        name="CustomJobId" type="xs:string"/>
+                    <!--xs:element name="RestartedFromCheckpoint" form="unqualified" block="extension restriction substitution" type="xs:boolean"/-->
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" maxOccurs="unbounded"
+                        minOccurs="0" name="TrackingInfo" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType block="extension restriction"
+                final="extension restriction" name="anydata">
+                <xs:sequence>
+                    <xs:any namespace="##any" processContents="lax"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element block="extension restriction substitution"
+                final="extension restriction" name="OptionalErrorReport" type="tns:OptionalErrorReport"/>
+            <xs:element block="extension restriction substitution"
+                final="extension restriction" name="ErrorReport" type="tns:ErrorReport"/>
+            <xs:element block="extension restriction substitution"
+                final="extension restriction" name="FaultDetail" type="tns:FaultDetail"/>
+            <xs:element block="extension restriction substitution"
+                final="extension restriction" name="ProcessContext" type="tns:ProcessContext"/>
+            <xs:element block="extension restriction substitution"
+                final="extension restriction" name="CorrelationValue" type="xs:string"/>
+        </xs:schema>
+        <schema attributeFormDefault="unqualified"
+            elementFormDefault="unqualified"
+            targetNamespace="http://schemas.tibco.com/bw/pe/plugin/5.0/exceptions"
+            version="" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.tibco.com/bw/pe/plugin/5.0/exceptions">
+            <complexType name="ActivityExceptionType">
+                <sequence>
+                    <element name="msg" type="string"/>
+                    <element minOccurs="0" name="msgCode" type="string"/>
+                </sequence>
+            </complexType>
+            <element name="ActivityException" type="tns:ActivityExceptionType"/>
+            <complexType name="ActivityTimedOutExceptionType">
+                <complexContent>
+                    <extension base="tns:ActivityExceptionType"/>
+                </complexContent>
+            </complexType>
+            <element name="ActivityTimedOutException" type="tns:ActivityTimedOutExceptionType"/>
+            <complexType name="DuplicateKeyExceptionType">
+                <complexContent>
+                    <extension base="tns:ActivityExceptionType">
+                        <sequence>
+                            <element name="duplicateKey" type="string"/>
+                            <element minOccurs="0" name="previousJobID" type="string"/>
+                        </sequence>
+                    </extension>
+                </complexContent>
+            </complexType>
+            <element name="DuplicateKeyException" type="tns:DuplicateKeyExceptionType"/>
+        </schema>
+        <xs:schema attributeFormDefault="unqualified"
+            elementFormDefault="qualified"
+            targetNamespace="http://tns.tibco.com/bw/activity/timer/xsd/output"
+            xmlns:tns="http://tns.tibco.com/bw/activity/timer/xsd/output" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <xs:complexType name="TimerOutputSchemaType">
+                <xs:sequence>
+                    <xs:element form="unqualified" name="Now" type="xs:long"/>
+                    <xs:element form="unqualified" name="Hour" type="xs:int"/>
+                    <xs:element form="unqualified" name="Minute" type="xs:int"/>
+                    <xs:element form="unqualified" name="Second" type="xs:int"/>
+                    <xs:element form="unqualified" name="Week" type="xs:int"/>
+                    <xs:element form="unqualified" name="Month" type="xs:int"/>
+                    <xs:element form="unqualified" name="Year" type="xs:int"/>
+                    <xs:element form="unqualified" name="Date" type="xs:date"/>
+                    <xs:element form="unqualified" name="Time" type="xs:string"/>
+                    <xs:element form="unqualified" name="DayOfMonth" type="xs:int"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="TimerOutputSchema" type="tns:TimerOutputSchemaType"/>
+        </xs:schema>
+        <schema
+            targetNamespace="http://www.tibco.com/namespaces/tnt/plugins/jdbc+9ff8eed8-3823-46b2-a183-61df4b4ca836+input"
+            xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.tibco.com/namespaces/tnt/plugins/jdbc+9ff8eed8-3823-46b2-a183-61df4b4ca836+input">
+            <element name="jdbcQueryActivityInput">
+                <complexType>
+                    <sequence>
+                        <element maxOccurs="1" minOccurs="0"
+                            name="ServerTimeZone" type="string"/>
+                        <element maxOccurs="1" minOccurs="0"
+                            name="timeout" type="long"/>
+                        <element maxOccurs="1" minOccurs="0"
+                            name="maxRows" type="long"/>
+                    </sequence>
+                </complexType>
+            </element>
+        </schema>
+        <schema
+            targetNamespace="http://www.tibco.com/namespaces/tnt/plugins/jdbc+9ff8eed8-3823-46b2-a183-61df4b4ca836+output"
+            xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.tibco.com/namespaces/tnt/plugins/jdbc+9ff8eed8-3823-46b2-a183-61df4b4ca836+output">
+            <element name="resultSet">
+                <complexType>
+                    <sequence>
+                        <element maxOccurs="unbounded" minOccurs="0" name="Record">
+                            <complexType>
+                                <sequence>
+                                    <element maxOccurs="1" minOccurs="0"
+                                    name="Id" nillable="false" type="int"/>
+                                    <element maxOccurs="1" minOccurs="0"
+                                    name="CrmIdIpStatico"
+                                    nillable="false" type="string"/>
+                                    <element maxOccurs="1" minOccurs="0"
+                                    name="CrmIdTestata"
+                                    nillable="false" type="string"/>
+                                    <element maxOccurs="1" minOccurs="0"
+                                    name="Bts" nillable="false" type="string"/>
+                                    <element maxOccurs="1" minOccurs="0"
+                                    name="CodiceIpStatico"
+                                    nillable="false" type="string"/>
+                                    <element maxOccurs="1" minOccurs="0"
+                                    name="IdRisorsa"
+                                    nillable="false" type="string"/>
+                                    <element maxOccurs="1" minOccurs="0"
+                                    name="IdTransizione"
+                                    nillable="false" type="string"/>
+                                    <element maxOccurs="1" minOccurs="0"
+                                    name="IpPubblico"
+                                    nillable="false" type="string"/>
+                                    <element maxOccurs="1" minOccurs="0"
+                                    name="IpPrivato"
+                                    nillable="false" type="string"/>
+                                    <element maxOccurs="1" minOccurs="0"
+                                    name="Imsi" nillable="false" type="string"/>
+                                    <element maxOccurs="1" minOccurs="0"
+                                    name="Mask" nillable="false" type="string"/>
+                                    <element maxOccurs="1" minOccurs="0"
+                                    name="Azione" nillable="false" type="string"/>
+                                    <element maxOccurs="1" minOccurs="0"
+                                    name="NumeroTentativo"
+                                    nillable="false" type="int"/>
+                                    <element maxOccurs="1" minOccurs="0"
+                                    name="CodiceOperazione"
+                                    nillable="false" type="int"/>
+                                    <element maxOccurs="1" minOccurs="0"
+                                    name="DescrizioneOperazione"
+                                    nillable="false" type="string"/>
+                                    <element maxOccurs="1" minOccurs="0"
+                                    name="DataCreazioneRichiesta"
+                                    nillable="false" type="dateTime"/>
+                                    <element maxOccurs="1" minOccurs="0"
+                                    name="DataEsecuzioneRichiesta"
+                                    nillable="false" type="dateTime"/>
+                                    <element maxOccurs="1" minOccurs="0"
+                                    name="DaProcessare"
+                                    nillable="false" type="int"/>
+                                </sequence>
+                            </complexType>
+                        </element>
+                    </sequence>
+                </complexType>
+            </element>
+        </schema>
+        <schema elementFormDefault="unqualified"
+            targetNamespace="http://schemas.tibco.com/bw/plugins/jdbc/5.0/jdbcExceptions"
+            version="0.1" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns2="http://schemas.tibco.com/bw/plugins/jdbc/5.0/jdbcExceptions">
+            <complexType name="ActivityExceptionType">
+                <sequence>
+                    <element name="msg" type="string"/>
+                    <element minOccurs="0" name="msgCode" type="string"/>
+                </sequence>
+            </complexType>
+            <complexType name="PluginExceptionType">
+                <complexContent>
+                    <extension base="tns2:ActivityExceptionType"/>
+                </complexContent>
+            </complexType>
+            <element name="JDBCPluginException" type="tns2:JDBCPluginExceptionType"/>
+            <complexType name="JDBCPluginExceptionType">
+                <complexContent>
+                    <extension base="tns2:PluginExceptionType"/>
+                </complexContent>
+            </complexType>
+            <element name="InvalidSQLTypeException" type="tns2:InvalidSQLTypeExceptionType"/>
+            <complexType name="InvalidSQLTypeExceptionType">
+                <complexContent>
+                    <extension base="tns2:JDBCPluginExceptionType">
+                        <sequence>
+                            <element name="typeName" type="string"/>
+                        </sequence>
+                    </extension>
+                </complexContent>
+            </complexType>
+            <element name="JDBCConnectionNotFoundException" type="tns2:JDBCConnectionNotFoundExceptionType"/>
+            <complexType name="JDBCConnectionNotFoundExceptionType">
+                <complexContent>
+                    <extension base="tns2:JDBCPluginExceptionType">
+                        <sequence>
+                            <element name="jdbcConnection" type="string"/>
+                        </sequence>
+                    </extension>
+                </complexContent>
+            </complexType>
+            <element name="DuplicatedFieldNameException" type="tns2:DuplicatedFieldNameExceptionType"/>
+            <complexType name="DuplicatedFieldNameExceptionType">
+                <complexContent>
+                    <extension base="tns2:JDBCPluginExceptionType">
+                        <sequence>
+                            <element name="fieldName" type="string"/>
+                        </sequence>
+                    </extension>
+                </complexContent>
+            </complexType>
+            <element name="InvalidTimeZoneException" type="tns2:InvalidTimeZoneExceptionType"/>
+            <complexType name="InvalidTimeZoneExceptionType">
+                <complexContent>
+                    <extension base="tns2:JDBCPluginExceptionType">
+                        <sequence>
+                            <element name="timeZone" type="string"/>
+                        </sequence>
+                    </extension>
+                </complexContent>
+            </complexType>
+            <element name="JDBCSQLException" type="tns2:JDBCSQLExceptionType"/>
+            <complexType name="JDBCSQLExceptionType">
+                <complexContent>
+                    <extension base="tns2:JDBCPluginExceptionType">
+                        <sequence>
+                            <element name="sqlState" type="string"/>
+                            <element name="detailStr" type="string"/>
+                        </sequence>
+                    </extension>
+                </complexContent>
+            </complexType>
+            <element name="LoginTimedOutException" type="tns2:LoginTimedOutExceptionType"/>
+            <complexType name="LoginTimedOutExceptionType">
+                <complexContent>
+                    <extension base="tns2:JDBCPluginExceptionType"/>
+                </complexContent>
+            </complexType>
+        </schema>
+        <schema elementFormDefault="unqualified"
+            targetNamespace="http://tns.tibco.com/bw/palette/internal/activityerror+bw.jdbc.JDBCQuery"
+            xmlns="http://www.w3.org/2001/XMLSchema"
+            xmlns:Q1="http://schemas.tibco.com/bw/plugins/jdbc/5.0/jdbcExceptions"
+            xmlns:Q2="http://schemas.tibco.com/bw/pe/plugin/5.0/exceptions" xmlns:tns="http://tns.tibco.com/bw/palette/internal/activityerror+bw.jdbc.JDBCQuery">
+            <import namespace="http://schemas.tibco.com/bw/pe/plugin/5.0/exceptions"/>
+            <import namespace="http://schemas.tibco.com/bw/plugins/jdbc/5.0/jdbcExceptions"/>
+            <import namespace="http://schemas.tibco.com/bw/plugins/jdbc/5.0/jdbcExceptions"/>
+            <import namespace="http://schemas.tibco.com/bw/plugins/jdbc/5.0/jdbcExceptions"/>
+            <import namespace="http://schemas.tibco.com/bw/plugins/jdbc/5.0/jdbcExceptions"/>
+            <import namespace="http://schemas.tibco.com/bw/plugins/jdbc/5.0/jdbcExceptions"/>
+            <import namespace="http://schemas.tibco.com/bw/plugins/jdbc/5.0/jdbcExceptions"/>
+            <element name="ActivityErrorData" type="tns:ActivityErrorDataType"/>
+            <complexType name="ActivityErrorDataType">
+                <choice>
+                    <element maxOccurs="1" minOccurs="0" ref="Q1:JDBCConnectionNotFoundException"/>
+                    <element maxOccurs="1" minOccurs="0" ref="Q1:InvalidTimeZoneException"/>
+                    <element maxOccurs="1" minOccurs="0" ref="Q1:JDBCSQLException"/>
+                    <element maxOccurs="1" minOccurs="0" ref="Q1:LoginTimedOutException"/>
+                    <element maxOccurs="1" minOccurs="0" ref="Q1:InvalidSQLTypeException"/>
+                    <element maxOccurs="1" minOccurs="0" ref="Q1:DuplicatedFieldNameException"/>
+                    <element maxOccurs="1" minOccurs="0" ref="Q2:ActivityTimedOutException"/>
+                </choice>
+            </complexType>
+        </schema>
+        <xs:schema attributeFormDefault="unqualified"
+            elementFormDefault="qualified"
+            targetNamespace="http://www.tibco.com/pe/WriteToLogActivitySchema"
+            xmlns:tns="http://www.tibco.com/pe/WriteToLogActivitySchema" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <xs:complexType name="LogParametersType">
+                <xs:sequence>
+                    <xs:element form="unqualified" minOccurs="0"
+                        name="msgCode" type="xs:string"/>
+                    <xs:element form="unqualified" minOccurs="0"
+                        name="loggerName" type="xs:string"/>
+                    <xs:element form="unqualified" minOccurs="0"
+                        name="logLevel" type="xs:string"/>
+                    <xs:element form="unqualified" name="message" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="ActivityInput" type="tns:LogParametersType"/>
+        </xs:schema>
+        <xs:schema attributeFormDefault="unqualified"
+            elementFormDefault="qualified"
+            targetNamespace="http://tns.tibco.com/bw/activity/sleep/xsd"
+            xmlns:tns="http://tns.tibco.com/bw/activity/sleep/xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <xs:complexType name="SleepInputSchema">
+                <xs:sequence>
+                    <xs:element form="unqualified"
+                        name="IntervalInMillisec" type="xs:integer"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="SleepInputSchema" type="tns:SleepInputSchema"/>
+        </xs:schema>
+    </tibex:Types>
+    <tibex:ProcessInfo callable="false" createdBy="fferri"
+        createdOn="Tue Nov 09 17:04:57 CET 2021" description=""
+        extraErrorVars="true" modifiers="public"
+        productVersion="6.7.0 HF3 V102 2021-08-10" scalable="true"
+        singleton="true" stateless="false" type="IT"/>
+    <tibex:ProcessInterface context="" input="" output=""/>
+    <tibex:ProcessTemplateConfigurations/>
+    <notation:Diagram measurementUnit="Pixel" type="BWProcess"
+        xmlns:bwnotation="http://tns.tibco.com/bw/runtime/BWNotation"
+        xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <children type="2001">
+            <children type="5001">
+                <element href="//0/@process"/>
+            </children>
+            <children type="3001">
+                <styles xsi:type="notation:SortingStyle"/>
+                <styles xsi:type="notation:FilteringStyle"/>
+                <element href="//0/@process"/>
+            </children>
+            <children type="3002">
+                <styles xsi:type="notation:SortingStyle"/>
+                <styles xsi:type="notation:FilteringStyle"/>
+                <element href="//0/@process"/>
+            </children>
+            <children type="3003">
+                <styles xsi:type="notation:SortingStyle"/>
+                <styles xsi:type="notation:FilteringStyle"/>
+                <element href="//0/@process"/>
+            </children>
+            <children type="3004">
+                <children type="4018">
+                    <children type="3018">
+                        <children type="4020">
+                            <children type="3020">
+                                <children type="4005">
+                                    <children type="3007">
+                                    <children type="4002 bw.generalactivities.timer">
+                                    <children type="4017">
+                                    <styles
+                                    fontName=".AppleSystemUIFont"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.0"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName=".AppleSystemUIFont"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.0"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName=".AppleSystemUIFont"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.0"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName=".AppleSystemUIFont"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.0"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <styles
+                                    fontName=".AppleSystemUIFont"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.0"/>
+                                    <layoutConstraint
+                                    height="40" width="40"
+                                    x="-87"
+                                    xsi:type="notation:Bounds" y="149"/>
+                                    </children>
+                                    <children type="4002 bw.jdbc.JDBCQuery">
+                                    <children type="4017">
+                                    <styles
+                                    fontName=".AppleSystemUIFont"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.1"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName=".AppleSystemUIFont"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.1"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName=".AppleSystemUIFont"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.1"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName=".AppleSystemUIFont"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.1"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <styles
+                                    fontName=".AppleSystemUIFont"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.1"/>
+                                    <layoutConstraint
+                                    height="40" width="40"
+                                    x="299"
+                                    xsi:type="notation:Bounds" y="149"/>
+                                    </children>
+                                    <children type="4018">
+                                    <children type="3018">
+                                    <children type="4020">
+                                    <children type="3020">
+                                    <children type="4005">
+                                    <children type="3007">
+
+                                    <children type="4002 bw.generalactivities.log">
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName=".AppleSystemUIFont"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <element href="//0/@process/@activity/@activity/@activities.2/@activity/@activities.1/@activity/@activity/@activities.2"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName=".AppleSystemUIFont"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <element href="//0/@process/@activity/@activity/@activities.2/@activity/@activities.1/@activity/@activity/@activities.2"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName=".AppleSystemUIFont"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <element href="//0/@process/@activity/@activity/@activities.2/@activity/@activities.1/@activity/@activity/@activities.2"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName=".AppleSystemUIFont"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <element href="//0/@process/@activity/@activity/@activities.2/@activity/@activities.1/@activity/@activity/@activities.2"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <styles
+                                    fontName=".AppleSystemUIFont"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+
+                                    <element href="//0/@process/@activity/@activity/@activities.2/@activity/@activities.1/@activity/@activity/@activities.2"/>
+
+                                    <layoutConstraint
+                                    height="40"
+                                    width="40"
+                                    x="270"
+                                    xsi:type="notation:Bounds" y="559"/>
+                                    </children>
+
+                                    <children type="4002">
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName=".AppleSystemUIFont"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <element href="//0/@process/@activity/@activity/@activities.2/@activity/@activities.1/@activity/@activity/@activities.3"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName=".AppleSystemUIFont"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <element href="//0/@process/@activity/@activity/@activities.2/@activity/@activities.1/@activity/@activity/@activities.3"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName=".AppleSystemUIFont"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <element href="//0/@process/@activity/@activity/@activities.2/@activity/@activities.1/@activity/@activity/@activities.3"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName=".AppleSystemUIFont"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <element href="//0/@process/@activity/@activity/@activities.2/@activity/@activities.1/@activity/@activity/@activities.3"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <styles
+                                    fontName=".AppleSystemUIFont"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+
+                                    <element href="//0/@process/@activity/@activity/@activities.2/@activity/@activities.1/@activity/@activity/@activities.3"/>
+
+                                    <layoutConstraint
+                                    x="270"
+                                    xsi:type="notation:Bounds" y="436"/>
+                                    </children>
+
+                                    <children type="4002">
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName=".AppleSystemUIFont"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <element href="//0/@process/@activity/@activity/@activities.2/@activity/@activities.1/@activity/@activity/@activities.4"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName=".AppleSystemUIFont"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <element href="//0/@process/@activity/@activity/@activities.2/@activity/@activities.1/@activity/@activity/@activities.4"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName=".AppleSystemUIFont"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <element href="//0/@process/@activity/@activity/@activities.2/@activity/@activities.1/@activity/@activity/@activities.4"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName=".AppleSystemUIFont"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <element href="//0/@process/@activity/@activity/@activities.2/@activity/@activities.1/@activity/@activity/@activities.4"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <styles
+                                    fontName=".AppleSystemUIFont"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+
+                                    <element href="//0/@process/@activity/@activity/@activities.2/@activity/@activities.1/@activity/@activity/@activities.4"/>
+
+                                    <layoutConstraint
+                                    x="270"
+                                    xsi:type="notation:Bounds" y="306"/>
+                                    </children>
+
+                                    <children type="4002">
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName=".AppleSystemUIFont"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <element href="//0/@process/@activity/@activity/@activities.2/@activity/@activities.1/@activity/@activity/@activities.5"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName=".AppleSystemUIFont"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <element href="//0/@process/@activity/@activity/@activities.2/@activity/@activities.1/@activity/@activity/@activities.5"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName=".AppleSystemUIFont"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <element href="//0/@process/@activity/@activity/@activities.2/@activity/@activities.1/@activity/@activity/@activities.5"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName=".AppleSystemUIFont"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <element href="//0/@process/@activity/@activity/@activities.2/@activity/@activities.1/@activity/@activity/@activities.5"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <styles
+                                    fontName=".AppleSystemUIFont"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+
+                                    <element href="//0/@process/@activity/@activity/@activities.2/@activity/@activities.1/@activity/@activity/@activities.5"/>
+
+                                    <layoutConstraint
+                                    x="327"
+                                    xsi:type="notation:Bounds" y="193"/>
+                                    </children>
+
+                                    <children type="4002">
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName=".AppleSystemUIFont"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <element href="//0/@process/@activity/@activity/@activities.2/@activity/@activities.1/@activity/@activity/@activities.6"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName=".AppleSystemUIFont"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <element href="//0/@process/@activity/@activity/@activities.2/@activity/@activities.1/@activity/@activity/@activities.6"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName=".AppleSystemUIFont"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <element href="//0/@process/@activity/@activity/@activities.2/@activity/@activities.1/@activity/@activity/@activities.6"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName=".AppleSystemUIFont"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <element href="//0/@process/@activity/@activity/@activities.2/@activity/@activities.1/@activity/@activity/@activities.6"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <styles
+                                    fontName=".AppleSystemUIFont"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+
+                                    <element href="//0/@process/@activity/@activity/@activities.2/@activity/@activities.1/@activity/@activity/@activities.6"/>
+
+                                    <layoutConstraint
+                                    x="262"
+                                    xsi:type="notation:Bounds" y="106"/>
+                                    </children>
+
+                                    <children type="4002">
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName=".AppleSystemUIFont"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <element href="//0/@process/@activity/@activity/@activities.2/@activity/@activities.1/@activity/@activity/@activities.7"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName=".AppleSystemUIFont"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <element href="//0/@process/@activity/@activity/@activities.2/@activity/@activities.1/@activity/@activity/@activities.7"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName=".AppleSystemUIFont"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <element href="//0/@process/@activity/@activity/@activities.2/@activity/@activities.1/@activity/@activity/@activities.7"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName=".AppleSystemUIFont"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <element href="//0/@process/@activity/@activity/@activities.2/@activity/@activities.1/@activity/@activity/@activities.7"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <styles
+                                    fontName=".AppleSystemUIFont"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+
+                                    <element href="//0/@process/@activity/@activity/@activities.2/@activity/@activities.1/@activity/@activity/@activities.7"/>
+
+                                    <layoutConstraint
+                                    x="255"
+                                    xsi:type="notation:Bounds" y="17"/>
+                                    </children>
+                                    <styles xsi:type="notation:DrawerStyle"/>
+                                    <styles xsi:type="notation:SortingStyle"/>
+                                    <styles xsi:type="notation:FilteringStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.2/@activity/@activities.1/@activity/@activity"/>
+                                    </children>
+                                    <styles
+                                    fontName=".AppleSystemUIFont"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+                                    <styles xsi:type="bwnotation:ResizingStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.2/@activity/@activities.1/@activity/@activity"/>
+
+                                    <layoutConstraint
+                                    height="644"
+                                    width="764" xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <styles xsi:type="notation:SortingStyle"/>
+                                    <styles xsi:type="notation:FilteringStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.2"/>
+                                    </children>
+                                    <styles
+                                    fontName=".AppleSystemUIFont"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <styles xsi:type="bwnotation:BackgroundStyle"/>
+                                    <styles xsi:type="bwnotation:ResizingStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.2"/>
+                                    <layoutConstraint
+                                    height="644"
+                                    width="767"
+                                    x="15"
+                                    xsi:type="notation:Bounds" y="20"/>
+                                    </children>
+                                    <children type="4002">
+                                    <children type="4017">
+                                    <styles
+                                    fontName=".AppleSystemUIFont"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.2/@activity/@activities.1/@activity/@activity/@activities.0"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName=".AppleSystemUIFont"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.2/@activity/@activities.1/@activity/@activity/@activities.0"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName=".AppleSystemUIFont"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.2/@activity/@activities.1/@activity/@activity/@activities.0"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName=".AppleSystemUIFont"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.2/@activity/@activities.1/@activity/@activity/@activities.0"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <styles
+                                    fontName=".AppleSystemUIFont"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.2/@activity/@activities.1/@activity/@activity/@activities.0"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4002">
+                                    <children type="4017">
+                                    <styles
+                                    fontName=".AppleSystemUIFont"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.2/@activity/@activities.1/@activity/@activity/@activities.1"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName=".AppleSystemUIFont"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.2/@activity/@activities.1/@activity/@activity/@activities.1"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName=".AppleSystemUIFont"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.2/@activity/@activities.1/@activity/@activity/@activities.1"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName=".AppleSystemUIFont"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.2/@activity/@activities.1/@activity/@activity/@activities.1"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <styles
+                                    fontName=".AppleSystemUIFont"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.2/@activity/@activities.1/@activity/@activity/@activities.1"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <styles xsi:type="notation:SortingStyle"/>
+                                    <styles xsi:type="notation:FilteringStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.2"/>
+                                    </children>
+                                    <styles
+                                    fontName=".AppleSystemUIFont"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <styles xsi:type="bwnotation:BackgroundStyle"/>
+                                    <styles restoreHeight="220"
+                                    restoreWidth="380"
+                                    restoreX="573"
+                                    restoreY="80" xsi:type="bwnotation:ResizingStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.2"/>
+                                    <layoutConstraint
+                                    height="688" width="807"
+                                    x="573"
+                                    xsi:type="notation:Bounds" y="80"/>
+                                    </children>
+                                    <children type="4002 bw.internal.getSharedVariable">
+                                    <children type="4017">
+                                    <styles
+                                    fontName=".AppleSystemUIFont"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.3"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName=".AppleSystemUIFont"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.3"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName=".AppleSystemUIFont"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.3"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName=".AppleSystemUIFont"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.3"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <styles
+                                    fontName=".AppleSystemUIFont"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.3"/>
+                                    <layoutConstraint
+                                    height="40" width="40"
+                                    x="17"
+                                    xsi:type="notation:Bounds" y="149"/>
+                                    </children>
+                                    <children type="4002 bw.generalactivities.log">
+                                    <children type="4017">
+                                    <styles
+                                    fontName=".AppleSystemUIFont"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.4"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName=".AppleSystemUIFont"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.4"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName=".AppleSystemUIFont"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.4"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName=".AppleSystemUIFont"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.4"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <styles
+                                    fontName=".AppleSystemUIFont"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.4"/>
+                                    <layoutConstraint
+                                    height="40" width="40"
+                                    x="17"
+                                    xsi:type="notation:Bounds" y="326"/>
+                                    </children>
+                                    <children type="4002 bw.internal.setSharedVariable">
+                                    <children type="4017">
+                                    <styles
+                                    fontName=".AppleSystemUIFont"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.5"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName=".AppleSystemUIFont"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.5"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName=".AppleSystemUIFont"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.5"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName=".AppleSystemUIFont"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.5"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <styles
+                                    fontName=".AppleSystemUIFont"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.5"/>
+                                    <layoutConstraint
+                                    height="40" width="40"
+                                    x="151"
+                                    xsi:type="notation:Bounds" y="149"/>
+                                    </children>
+                                    <children type="4002 bw.internal.setSharedVariable">
+                                    <children type="4017">
+                                    <styles
+                                    fontName=".AppleSystemUIFont"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.6"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName=".AppleSystemUIFont"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.6"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName=".AppleSystemUIFont"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.6"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName=".AppleSystemUIFont"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.6"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <styles
+                                    fontName=".AppleSystemUIFont"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.6"/>
+                                    <layoutConstraint
+                                    height="40" width="40"
+                                    x="1513"
+                                    xsi:type="notation:Bounds" y="197"/>
+                                    </children>
+                                    <children type="4002 bw.generalactivities.sleep">
+                                    <children type="4017">
+                                    <styles
+                                    fontName=".AppleSystemUIFont"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.7"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName=".AppleSystemUIFont"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.7"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName=".AppleSystemUIFont"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.7"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName=".AppleSystemUIFont"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.7"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <styles
+                                    fontName=".AppleSystemUIFont"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.7"/>
+                                    <layoutConstraint
+                                    height="40" width="40"
+                                    x="1363"
+                                    xsi:type="notation:Bounds" y="197"/>
+                                    </children>
+                                    <children
+                                    description="DeleteIpReservation&#xa;IpActivation&#xa;IpRersevation&#xa;IpRelease&#xa;DeleteIpReservationIpRelease"
+                                    fillColor="13369343"
+                                    fontName=".AppleSystemUIFont"
+                                    lineColor="6737151"
+                                    lineWidth="1"
+                                    transparency="0" type="Note" xsi:type="notation:Shape">
+                                    <children type="DiagramName" xsi:type="notation:BasicDecorationNode">
+                                    <element xsi:nil="true"/>
+                                    </children>
+                                    <children type="Description" xsi:type="notation:BasicDecorationNode">
+                                    <element xsi:nil="true"/>
+                                    </children>
+                                    <styles xsi:type="notation:TextStyle"/>
+                                    <styles xsi:type="notation:LineTypeStyle"/>
+                                    <element xsi:nil="true"/>
+                                    <layoutConstraint x="360"
+                                    xsi:type="notation:Bounds" y="49"/>
+                                    </children>
+                                    <styles xsi:type="notation:DrawerStyle"/>
+                                    <styles xsi:type="notation:SortingStyle"/>
+                                    <styles xsi:type="notation:FilteringStyle"/>
+                                    <element href="//0/@process/@activity/@activity"/>
+                                    </children>
+                                    <styles
+                                    fontName=".AppleSystemUIFont"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <styles backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+                                    <styles xsi:type="bwnotation:ResizingStyle"/>
+                                    <element href="//0/@process/@activity/@activity"/>
+                                    <layoutConstraint height="778"
+                                    width="1646" xsi:type="notation:Bounds"/>
+                                </children>
+                                <styles xsi:type="notation:SortingStyle"/>
+                                <styles xsi:type="notation:FilteringStyle"/>
+                                <element href="//0/@process/@activity"/>
+                            </children>
+                            <styles fontName=".AppleSystemUIFont"
+                                lineColor="0" xsi:type="notation:ShapeStyle"/>
+                            <styles xsi:type="bwnotation:BackgroundStyle"/>
+                            <styles xsi:type="bwnotation:ResizingStyle"/>
+                            <element href="//0/@process/@activity"/>
+                            <layoutConstraint height="778" width="1649" xsi:type="notation:Bounds"/>
+                        </children>
+                        <styles xsi:type="notation:SortingStyle"/>
+                        <styles xsi:type="notation:FilteringStyle"/>
+                        <element href="//0/@process/@activity"/>
+                    </children>
+                    <styles fontName=".AppleSystemUIFont" lineColor="0" xsi:type="notation:ShapeStyle"/>
+                    <styles xsi:type="bwnotation:BackgroundStyle"/>
+                    <styles xsi:type="bwnotation:ResizingStyle"/>
+                    <element href="//0/@process/@activity"/>
+                    <layoutConstraint height="802" width="1649" x="1"
+                        xsi:type="notation:Bounds" y="1"/>
+                </children>
+                <styles xsi:type="notation:SortingStyle"/>
+                <styles xsi:type="notation:FilteringStyle"/>
+                <element href="//0/@process"/>
+            </children>
+            <styles fontName=".AppleSystemUIFont" lineColor="0" xsi:type="notation:ShapeStyle"/>
+            <element href="//0/@process"/>
+            <layoutConstraint height="854" width="2086" xsi:type="notation:Bounds"/>
+        </children>
+        <styles xsi:type="notation:DiagramStyle"/>
+        <element href="//0"/>
+        <edges
+            source="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0"
+            target="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.3" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName=".AppleSystemUIFont" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.0"/>
+            <bendpoints points="[25, 1, -118, 0]$[119, 0, -24, -1]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.1"
+            target="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName=".AppleSystemUIFont" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.1"/>
+            <bendpoints
+                points="[25, 7, -499, -147]$[352, 103, -172, -51]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.0/@children.1"
+            target="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName=".AppleSystemUIFont" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@activities.2/@activity/@activities.1/@activity/@activity/@links/@children.0"/>
+            <bendpoints points="[12, -4, -164, 0]$[152, 0, -24, 4]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0"
+            target="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.0/@children.2" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName=".AppleSystemUIFont" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@activities.2/@activity/@activities.1/@activity/@activity/@links/@children.1"/>
+            <bendpoints points="[25, 4, -142, 0]$[155, 0, -12, -4]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.3"
+            target="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.5" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="2815024" xsi:type="notation:ConnectorStyle"/>
+            <styles fontColor="2815024" fontName=".AppleSystemUIFont" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.2"/>
+            <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.3"
+            target="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.4" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="4336884" xsi:type="notation:ConnectorStyle"/>
+            <styles fontColor="4336884" fontName=".AppleSystemUIFont" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.3"/>
+            <bendpoints points="[10, 25, -68, -176]$[68, 177, -10, -24]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.5"
+            target="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.1" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName=".AppleSystemUIFont" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.4"/>
+            <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2"
+            target="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.7" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName=".AppleSystemUIFont" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.5"/>
+            <bendpoints points="[48, -10, -233, 0]$[257, 0, -24, 10]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.7"
+            target="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.6" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName=".AppleSystemUIFont" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.6"/>
+            <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.0/@children.1"
+            target="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.0/@children.0/@children.0/@children.0/@children.0/@children.1" type="4006">
+            <children type="6002">
+                <layoutConstraint x="82" xsi:type="notation:Location" y="-90"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName=".AppleSystemUIFont" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@activities.2/@activity/@activities.1/@activity/@activity/@links/@children.2"/>
+            <bendpoints points="[12, -9, -228, 0]$[216, 0, -24, 9]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.0/@children.0/@children.0/@children.0/@children.0/@children.1"
+            target="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.0/@children.2" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName=".AppleSystemUIFont" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@activities.2/@activity/@activities.1/@activity/@activity/@links/@children.3"/>
+            <bendpoints points="[25, -3, -294, 31]$[307, -33, -12, 1]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges lineColor="0" lineWidth="1"
+            source="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.8"
+            target="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.1"
+            type="NoteAttachment" xsi:type="notation:Connector">
+            <styles xsi:type="notation:ArrowStyle"/>
+            <styles xsi:type="notation:LineTypeStyle"/>
+            <element xsi:nil="true"/>
+            <bendpoints points="[0, 0, -360, -173]$[336, 161, -24, -12]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.0/@children.1"
+            target="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2" type="4006">
+            <children type="6002">
+                <layoutConstraint x="18" xsi:type="notation:Location" y="-98"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName=".AppleSystemUIFont" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@activities.2/@activity/@activities.1/@activity/@activity/@links/@children.4"/>
+            <bendpoints points="[12, -4, -228, 59]$[216, -57, -24, 6]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2"
+            target="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.0/@children.2" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName=".AppleSystemUIFont" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@activities.2/@activity/@activities.1/@activity/@activity/@links/@children.5"/>
+            <bendpoints points="[25, 4, -467, -67]$[480, 69, -12, -2]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.0/@children.1"
+            target="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.0/@children.0/@children.0/@children.0/@children.0/@children.3" type="4006">
+            <children type="6002">
+                <layoutConstraint x="56" xsi:type="notation:Location" y="91"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName=".AppleSystemUIFont" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@activities.2/@activity/@activities.1/@activity/@activity/@links/@children.6"/>
+            <bendpoints points="[12, -2, -327, 40]$[315, -39, -24, 3]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.0/@children.1"
+            target="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.0/@children.0/@children.0/@children.0/@children.0/@children.4" type="4006">
+            <children type="6002">
+                <layoutConstraint x="102" xsi:type="notation:Location" y="84"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName=".AppleSystemUIFont" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@activities.2/@activity/@activities.1/@activity/@activity/@links/@children.7"/>
+            <bendpoints
+                points="[12, -5, -319, 129]$[307, -124, -24, 10]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.0/@children.0/@children.0/@children.0/@children.0/@children.4"
+            target="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.0/@children.2" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName=".AppleSystemUIFont" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@activities.2/@activity/@activities.1/@activity/@activity/@links/@children.8"/>
+            <bendpoints points="[25, 7, -414, -127]$[427, 130, -12, -4]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.0/@children.1"
+            target="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.0/@children.0/@children.0/@children.0/@children.0/@children.5" type="4006">
+            <children type="6002">
+                <layoutConstraint x="147" xsi:type="notation:Location" y="75"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName=".AppleSystemUIFont" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@activities.2/@activity/@activities.1/@activity/@activity/@links/@children.9"/>
+            <bendpoints
+                points="[12, -11, -312, 265]$[300, -255, -24, 21]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.0/@children.0/@children.0/@children.0/@children.0/@children.5"
+            target="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.0/@children.2" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName=".AppleSystemUIFont" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@activities.2/@activity/@activities.1/@activity/@activity/@links/@children.10"/>
+            <bendpoints
+                points="[25, 15, -421, -261]$[434, 268, -12, -8]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.0/@children.0/@children.0/@children.0/@children.0/@children.3"
+            target="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.0/@children.2" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName=".AppleSystemUIFont" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@activities.2/@activity/@activities.1/@activity/@activity/@links/@children.11"/>
+            <bendpoints points="[25, 7, -334, -91]$[347, 94, -12, -4]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+    </notation:Diagram>
+    <tibex:NamespaceRegistry enabled="true">
+        <tibex:namespaceItem
+            namespace="http://www.tibco.com/pe/WriteToLogActivitySchema" prefix="tns"/>
+        <tibex:namespaceItem
+            namespace="http://tns.tibco.com/bw/activity/sleep/xsd" prefix="tns1"/>
+        <tibex:namespaceItem
+            namespace="http://it.linkem/crm/portalsharingdatadb/codaRichiesteIPSatico/xsd" prefix="tns2"/>
+    </tibex:NamespaceRegistry>
+    <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://it.linkem/crm/portalsharingdatadb/codaRichiesteIPSatico/xsd"/>
+    <bpws:variables>
+        <bpws:variable element="ns:ProcessContext"
+            name="_processContext" sca-bpel:internal="true"/>
+        <bpws:variable element="ns0:TimerOutputSchema" name="Timer" sca-bpel:internal="true"/>
+        <bpws:variable element="ns1:jdbcQueryActivityInput"
+            name="getCodaRichiesteIPStatico-Records-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns2:resultSet"
+            name="getCodaRichiesteIPStatico-Records" sca-bpel:internal="true"/>
+        <bpws:variable element="ns3:ActivityErrorData"
+            name="_error_getCodaRichiesteIPStatico-Records" sca-bpel:internal="true"/>
+        <bpws:variable element="ns:ErrorReport" name="_error" sca-bpel:internal="true"/>
+        <bpws:variable name="jdbcProperty" sca-bpel:hotUpdate="false"
+            sca-bpel:privateProperty="true" sca-bpel:property="yes"
+            sca-bpel:sharedResourceType="{http://xsd.tns.tibco.com/amf/models/sharedresource/jdbc}JdbcDataSource" type="xsd:string">
+            <bpws:from>
+                <bpws:literal>it.linkem.esb.staticipmanagement.module.JDBCConPortalSharingData</bpws:literal>
+            </bpws:from>
+        </bpws:variable>
+        <bpws:variable element="ns4:ActivityInput" name="Error-input" sca-bpel:internal="true"/>
+        <bpws:variable name="intervall" sca-bpel:hotUpdate="false"
+            sca-bpel:privateProperty="true" sca-bpel:property="yes"
+            tibex:propertySource="/polling/intervall" type="xsd:int"/>
+        <bpws:variable name="GetSemaphore" sca-bpel:internal="true" type="xsd:integer"/>
+        <bpws:variable element="ns4:ActivityInput"
+            name="proceesAlreadyRunning-input" sca-bpel:internal="true"/>
+        <bpws:variable name="SetSemaphore-input"
+            sca-bpel:internal="true" type="xsd:integer"/>
+        <bpws:variable name="SetSemaphore" sca-bpel:internal="true" type="xsd:integer"/>
+        <bpws:variable name="SetSemaphor-input" sca-bpel:internal="true" type="xsd:integer"/>
+        <bpws:variable name="SetSemaphor" sca-bpel:internal="true" type="xsd:integer"/>
+        <bpws:variable element="ns5:SleepInputSchema" name="Sleep-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns6:CodaRichiesteIPStatico_record"
+            name="IPReservation-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns6:CodaRichiesteIPStatico_record"
+            name="IPActivation-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns6:CodaRichiesteIPStatico_record"
+            name="DeleteIpReservationIpRelease-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns6:CodaRichiesteIPStatico_record"
+            name="DeleteIpReservation-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns6:CodaRichiesteIPStatico_record"
+            name="IPRelease-input" sca-bpel:internal="true"/>
+    </bpws:variables>
+    <bpws:extensions>
+        <bpws:extension mustUnderstand="no" namespace="http://www.eclipse.org/gmf/runtime/1.0.2/notation"/>
+        <bpws:extension mustUnderstand="no" namespace="http://www.tibco.com/bw/process/info"/>
+        <bpws:extension mustUnderstand="no" namespace="http://docs.oasis-open.org/ns/opencsa/sca-bpel/200801"/>
+        <bpws:extension mustUnderstand="no" namespace="http://docs.oasis-open.org/ns/opencsa/sca/200912"/>
+        <bpws:extension mustUnderstand="no" namespace="http://ns.tibco.com/bw/property"/>
+        <bpws:extension mustUnderstand="no" namespace="http://www.tibco.com/bpel/2007/extensions"/>
+    </bpws:extensions>
+    <bpws:scope name="scope">
+        <bpws:flow name="flow">
+            <bpws:links>
+                <bpws:link name="TimerToJDBCQuery" tibex:linkType="SUCCESS"/>
+                <bpws:link
+                    name="getCodaRichiesteIPStatico-RecordsToForEach" tibex:linkType="SUCCESS"/>
+                <bpws:link
+                    name="GetSharedVariableTogetCodaRichiesteIPStatico-Records_green"
+                    tibex:label="green" tibex:linkType="SUCCESSWITHCONDITION"/>
+                <bpws:link name="GetSemaphoreToLog1_red"
+                    tibex:label="red" tibex:linkType="SUCCESSWITHNOCONDITION"/>
+                <bpws:link
+                    name="SetSharedVariableTogetCodaRichiesteIPStatico-Records" tibex:linkType="SUCCESS"/>
+                <bpws:link name="ForEachToSetSemaphor" tibex:linkType="SUCCESS"/>
+                <bpws:link name="SleepToSetSemaphor" tibex:linkType="SUCCESS"/>
+            </bpws:links>
+            <bpws:extensionActivity>
+                <tibex:receiveEvent createInstance="yes"
+                    eventTimeout="60" name="Timer"
+                    tibex:xpdlId="ef44d745-483f-4f92-925f-7075655f9b0d"
+                    variable="Timer" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                    <bpws:sources>
+                        <bpws:source linkName="TimerToJDBCQuery"/>
+                    </bpws:sources>
+                    <tibex:eventSource>
+                        <bwext:BWActivity
+                            activityTypeID="bw.generalactivities.timer"
+                            version="6.0.0.001"
+                            xmlns:activityconfig="http://tns.tibco.com/bw/model/activityconfig"
+                            xmlns:bwext="http://tns.tibco.com/bw/model/core/bwext"
+                            xmlns:generalactivities="http://ns.tibco.com/bw/palette/generalactivities" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                            <attributeBindings
+                                bindingType="moduleProperty"
+                                eAttributeName="timeInterval" processProperty="intervall"/>
+                            <activityConfig>
+                                <properties name="config" xsi:type="activityconfig:EMFProperty">
+                                    <type href="http://ns.tibco.com/bw/palette/generalactivities#//Timer"/>
+                                    <value authoringTimeZone="+01:00"
+                                    endTime="2021-11-09T17:05:57.439+0100"
+                                    intervalUnit="Second"
+                                    startTime="2021-11-09T17:05:57.439+0100"
+                                    useLocalTime="true" xsi:type="generalactivities:Timer"/>
+                                </properties>
+                            </activityConfig>
+                        </bwext:BWActivity>
+                    </tibex:eventSource>
+                </tibex:receiveEvent>
+            </bpws:extensionActivity>
+            <bpws:extensionActivity>
+                <tibex:activityExtension
+                    inputVariable="getCodaRichiesteIPStatico-Records-input"
+                    name="getCodaRichiesteIPStatico-Records"
+                    outputVariable="getCodaRichiesteIPStatico-Records"
+                    tibex:xpdlId="9ff8eed8-3823-46b2-a183-61df4b4ca836" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                    <bpws:targets>
+                        <bpws:target linkName="SetSharedVariableTogetCodaRichiesteIPStatico-Records"/>
+                    </bpws:targets>
+                    <bpws:sources>
+                        <bpws:source linkName="getCodaRichiesteIPStatico-RecordsToForEach"/>
+                    </bpws:sources>
+                    <tibex:inputBindings>
+                        <tibex:inputBinding
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns3=&quot;http://www.tibco.com/namespaces/tnt/plugins/jdbc+9ff8eed8-3823-46b2-a183-61df4b4ca836+input&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:template name=&quot;JDBCQuery-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns3:jdbcQueryActivityInput/>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                    </tibex:inputBindings>
+                    <tibex:config>
+                        <bwext:BWActivity
+                            activityTypeID="bw.jdbc.JDBCQuery"
+                            xmlns:activityconfig="http://tns.tibco.com/bw/model/activityconfig"
+                            xmlns:bwext="http://tns.tibco.com/bw/model/core/bwext"
+                            xmlns:jdbcPalette="http://ns.tibco.com/bw/palette/jdbc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                            <activityConfig>
+                                <properties name="config" xsi:type="activityconfig:EMFProperty">
+                                    <type href="http://ns.tibco.com/bw/palette/jdbc#//JDBCQueryActivity"/>
+                                    <value maxRows="100"
+                                    sharedResourceProperty="jdbcProperty"
+                                    sqlStatement="SELECT *&#xa;  FROM CodaRichiesteIpStatico&#xa;"
+                                    timeout="10" xsi:type="jdbcPalette:JDBCQueryActivity">
+                                    <columnMetadata columnIndex="1"
+                                    columnName="Id" dataType="4"
+                                    status="OptionalElement" typeName="int"/>
+                                    <columnMetadata columnIndex="2"
+                                    columnName="CrmIdIpStatico"
+                                    dataType="12"
+                                    status="OptionalElement" typeName="varchar"/>
+                                    <columnMetadata columnIndex="3"
+                                    columnName="CrmIdTestata"
+                                    dataType="12"
+                                    status="OptionalElement" typeName="varchar"/>
+                                    <columnMetadata columnIndex="4"
+                                    columnName="Bts"
+                                    dataType="12"
+                                    status="OptionalElement" typeName="varchar"/>
+                                    <columnMetadata columnIndex="5"
+                                    columnName="CodiceIpStatico"
+                                    dataType="12"
+                                    status="OptionalElement" typeName="varchar"/>
+                                    <columnMetadata columnIndex="6"
+                                    columnName="IdRisorsa"
+                                    dataType="12"
+                                    status="OptionalElement" typeName="varchar"/>
+                                    <columnMetadata columnIndex="7"
+                                    columnName="IdTransizione"
+                                    dataType="12"
+                                    status="OptionalElement" typeName="varchar"/>
+                                    <columnMetadata columnIndex="8"
+                                    columnName="IpPubblico"
+                                    dataType="12"
+                                    status="OptionalElement" typeName="varchar"/>
+                                    <columnMetadata columnIndex="9"
+                                    columnName="IpPrivato"
+                                    dataType="12"
+                                    status="OptionalElement" typeName="varchar"/>
+                                    <columnMetadata columnIndex="10"
+                                    columnName="Imsi"
+                                    dataType="12"
+                                    status="OptionalElement" typeName="varchar"/>
+                                    <columnMetadata columnIndex="11"
+                                    columnName="Mask"
+                                    dataType="12"
+                                    status="OptionalElement" typeName="varchar"/>
+                                    <columnMetadata columnIndex="12"
+                                    columnName="Azione"
+                                    dataType="12"
+                                    status="OptionalElement" typeName="varchar"/>
+                                    <columnMetadata columnIndex="13"
+                                    columnName="NumeroTentativo"
+                                    dataType="4"
+                                    status="OptionalElement" typeName="int"/>
+                                    <columnMetadata columnIndex="14"
+                                    columnName="CodiceOperazione"
+                                    dataType="4"
+                                    status="OptionalElement" typeName="int"/>
+                                    <columnMetadata columnIndex="15"
+                                    columnName="DescrizioneOperazione"
+                                    dataType="12"
+                                    status="OptionalElement" typeName="varchar"/>
+                                    <columnMetadata columnIndex="16"
+                                    columnName="DataCreazioneRichiesta"
+                                    dataType="93"
+                                    status="OptionalElement" typeName="datetime"/>
+                                    <columnMetadata columnIndex="17"
+                                    columnName="DataEsecuzioneRichiesta"
+                                    dataType="93"
+                                    status="OptionalElement" typeName="datetime"/>
+                                    <columnMetadata columnIndex="18"
+                                    columnName="DaProcessare"
+                                    dataType="4"
+                                    status="OptionalElement" typeName="int"/>
+                                    </value>
+                                </properties>
+                            </activityConfig>
+                        </bwext:BWActivity>
+                    </tibex:config>
+                </tibex:activityExtension>
+            </bpws:extensionActivity>
+            <bpws:scope name="ForEach" tibex:group="foreach" tibex:xpdlId="6541c28e-c90d-4bd8-8bb3-b470db004bba">
+                <bpws:targets>
+                    <bpws:target linkName="getCodaRichiesteIPStatico-RecordsToForEach"/>
+                </bpws:targets>
+                <bpws:sources>
+                    <bpws:source linkName="ForEachToSetSemaphor"/>
+                </bpws:sources>
+                <bpws:sequence name="sequence" tibex:group="foreach">
+                    <bpws:empty name="GroupInit" tibex:group="groupInit"/>
+                    <bpws:forEach counterName="index" name="forEach"
+                        parallel="no" tibex:group="foreach">
+                        <tibex:DesignExpression name="final">
+                            <tibex:expression
+                                expression="count($getCodaRichiesteIPStatico-Records/Record)" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"/>
+                        </tibex:DesignExpression>
+                        <bpws:startCounterValue><![CDATA[1]]></bpws:startCounterValue>
+                        <bpws:finalCounterValue expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"><![CDATA[count($getCodaRichiesteIPStatico-Records/Record)]]></bpws:finalCounterValue>
+                        <bpws:scope name="innerScope">
+                            <bpws:flow name="flow1">
+                                <bpws:links>
+                                    <bpws:link name="GroupStartToLog" tibex:linkType="SUCCESSWITHNOCONDITION"/>
+                                    <bpws:link name="LogToGroupEnd" tibex:linkType="SUCCESS"/>
+                                    <bpws:link
+                                    name="GroupStartToIPReservation_AzioneIpReservation"
+                                    tibex:label="Azione=IpReservation" tibex:linkType="SUCCESSWITHCONDITION"/>
+                                    <bpws:link
+                                    name="IPReservationToGroupEnd" tibex:linkType="SUCCESS"/>
+                                    <bpws:link
+                                    name="GroupStartToIPActivation_AzioneIPActivation"
+                                    tibex:label="Azione = IPActivation" tibex:linkType="SUCCESSWITHCONDITION"/>
+                                    <bpws:link
+                                    name="IPActivationToGroupEnd" tibex:linkType="SUCCESS"/>
+                                    <bpws:link
+                                    name="GroupStartToDeleteIpReservationIpRelease_AzioneDeleteIpReservationIpRelease"
+                                    tibex:label="Azione = DeleteIpReservationIpRelease" tibex:linkType="SUCCESSWITHCONDITION"/>
+                                    <bpws:link
+                                    name="GroupStartToDeleteIpReservation_AzioneDeleteIpReservation"
+                                    tibex:label="Azione = DeleteIpReservation" tibex:linkType="SUCCESSWITHCONDITION"/>
+                                    <bpws:link
+                                    name="DeleteIpReservationToGroupEnd" tibex:linkType="SUCCESS"/>
+                                    <bpws:link
+                                    name="GroupStartToIPRelease_AzioneIPRelease"
+                                    tibex:label="Azione = IPRelease" tibex:linkType="SUCCESSWITHCONDITION"/>
+                                    <bpws:link
+                                    name="IPReleaseToGroupEnd" tibex:linkType="SUCCESS"/>
+                                    <bpws:link
+                                    name="DeleteIpReservationIpReleaseToGroupEnd" tibex:linkType="SUCCESS"/>
+                                </bpws:links>
+                                <bpws:empty name="GroupStart"
+                                    tibex:group="groupStart" tibex:xpdlId="4e2cf3c7-310f-4546-ab83-4f2c3059fc52">
+                                    <bpws:sources>
+                                    <bpws:source linkName="GroupStartToLog">
+                                    <tibex:DesignExpression>
+                                    <tibex:expression
+                                    expression="##otherwise##" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"/>
+                                    </tibex:DesignExpression>
+                                    <bpws:transitionCondition expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"><![CDATA[##otherwise##]]></bpws:transitionCondition>
+                                    </bpws:source>
+                                    <bpws:source linkName="GroupStartToIPReservation_AzioneIpReservation">
+                                    <tibex:DesignExpression>
+                                    <tibex:expression
+                                    expression="$getCodaRichiesteIPStatico-Records/Record[$index]/Azione='IpRersevation'" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"/>
+                                    </tibex:DesignExpression>
+                                    <bpws:transitionCondition expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"><![CDATA[$getCodaRichiesteIPStatico-Records/Record[$index]/Azione='IpRersevation']]></bpws:transitionCondition>
+                                    </bpws:source>
+                                    <bpws:source linkName="GroupStartToIPActivation_AzioneIPActivation">
+                                    <tibex:DesignExpression>
+                                    <tibex:expression
+                                    expression="$getCodaRichiesteIPStatico-Records/Record[$index]/Azione='IpActivation'" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"/>
+                                    </tibex:DesignExpression>
+                                    <bpws:transitionCondition expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"><![CDATA[$getCodaRichiesteIPStatico-Records/Record[$index]/Azione='IpActivation']]></bpws:transitionCondition>
+                                    </bpws:source>
+                                    <bpws:source linkName="GroupStartToDeleteIpReservationIpRelease_AzioneDeleteIpReservationIpRelease">
+                                    <tibex:DesignExpression>
+                                    <tibex:expression
+                                    expression="$getCodaRichiesteIPStatico-Records/Record[$index]/Azione='DeleteIpReservationIpRelease'" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"/>
+                                    </tibex:DesignExpression>
+                                    <bpws:transitionCondition expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"><![CDATA[$getCodaRichiesteIPStatico-Records/Record[$index]/Azione='DeleteIpReservationIpRelease']]></bpws:transitionCondition>
+                                    </bpws:source>
+                                    <bpws:source linkName="GroupStartToDeleteIpReservation_AzioneDeleteIpReservation">
+                                    <tibex:DesignExpression>
+                                    <tibex:expression
+                                    expression="$getCodaRichiesteIPStatico-Records/Record[$index]/Azione='DeleteIpReservation'" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"/>
+                                    </tibex:DesignExpression>
+                                    <bpws:transitionCondition expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"><![CDATA[$getCodaRichiesteIPStatico-Records/Record[$index]/Azione='DeleteIpReservation']]></bpws:transitionCondition>
+                                    </bpws:source>
+                                    <bpws:source linkName="GroupStartToIPRelease_AzioneIPRelease">
+                                    <tibex:DesignExpression>
+                                    <tibex:expression
+                                    expression="$getCodaRichiesteIPStatico-Records/Record[$index]/Azione='IpRelease'" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"/>
+                                    </tibex:DesignExpression>
+                                    <bpws:transitionCondition expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"><![CDATA[$getCodaRichiesteIPStatico-Records/Record[$index]/Azione='IpRelease']]></bpws:transitionCondition>
+                                    </bpws:source>
+                                    </bpws:sources>
+                                </bpws:empty>
+                                <bpws:empty name="GroupEnd"
+                                    tibex:group="groupEnd" tibex:xpdlId="bd85b10a-fb85-4f50-9f25-ae792b6f1558">
+                                    <bpws:targets>
+                                    <bpws:target linkName="LogToGroupEnd"/>
+                                    <bpws:target linkName="IPReservationToGroupEnd"/>
+                                    <bpws:target linkName="IPActivationToGroupEnd"/>
+                                    <bpws:target linkName="DeleteIpReservationToGroupEnd"/>
+                                    <bpws:target linkName="IPReleaseToGroupEnd"/>
+                                    <bpws:target linkName="DeleteIpReservationIpReleaseToGroupEnd"/>
+                                    </bpws:targets>
+                                </bpws:empty>
+                                <bpws:extensionActivity>
+                                    <tibex:activityExtension
+                                    inputVariable="Error-input"
+                                    name="Error"
+                                    tibex:xpdlId="1cfbb852-c60e-483f-8c4c-923419436c63" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                                    <bpws:targets>
+                                    <bpws:target linkName="GroupStartToLog"/>
+                                    </bpws:targets>
+                                    <bpws:sources>
+                                    <bpws:source linkName="LogToGroupEnd"/>
+                                    </bpws:sources>
+                                    <tibex:inputBindings>
+                                    <tibex:inputBinding
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://www.tibco.com/pe/WriteToLogActivitySchema&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;index&quot;/>&lt;xsl:param name=&quot;getCodaRichiesteIPStatico-Records&quot;/>&lt;xsl:template name=&quot;Error-input&quot; match=&quot;/&quot;>&lt;tns:ActivityInput>&lt;message>&lt;xsl:value-of select=&quot;concat(&amp;quot;ERRORE Gestione Record CodaRichieste. Azione Sconosciuta:  &amp;quot;,&amp;quot;Azione = &amp;quot;, $getCodaRichiesteIPStatico-Records/Record[$index]/Azione)&quot;/>&lt;/message>&lt;/tns:ActivityInput>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                    </tibex:inputBindings>
+                                    <tibex:config>
+                                    <bwext:BWActivity
+                                    activityTypeID="bw.generalactivities.log"
+                                    version="6.0.0.001"
+                                    xmlns:activityconfig="http://tns.tibco.com/bw/model/activityconfig"
+                                    xmlns:bwext="http://tns.tibco.com/bw/model/core/bwext"
+                                    xmlns:generalactivities="http://ns.tibco.com/bw/palette/generalactivities" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                                    <activityConfig>
+                                    <properties
+                                    name="config" xsi:type="activityconfig:EMFProperty">
+                                    <type href="http://ns.tibco.com/bw/palette/generalactivities#//Log"/>
+                                    <value
+                                    controlBy="Application"
+                                    role="Info"
+                                    suppressJobInfo="true" xsi:type="generalactivities:Log"/>
+                                    </properties>
+                                    </activityConfig>
+                                    </bwext:BWActivity>
+                                    </tibex:config>
+                                    </tibex:activityExtension>
+                                </bpws:extensionActivity>
+                                <bpws:extensionActivity>
+                                    <tibex:extActivity
+                                    inputVariable="IPReservation-input"
+                                    name="IPReservation"
+                                    tibex:xpdlId="494e1e34-16cf-49e9-a35e-a0b9215b4494"
+                                    type="bw.generalactivities.callprocess" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                                    <bpws:targets>
+                                    <bpws:target linkName="GroupStartToIPReservation_AzioneIpReservation"/>
+                                    </bpws:targets>
+                                    <bpws:sources>
+                                    <bpws:source linkName="IPReservationToGroupEnd"/>
+                                    </bpws:sources>
+                                    <tibex:inputBindings>
+                                    <tibex:inputBinding
+                                    coercion=""
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns2=&quot;http://it.linkem/crm/portalsharingdatadb/codaRichiesteIPSatico/xsd&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;getCodaRichiesteIPStatico-Records&quot;/>&lt;xsl:param name=&quot;index&quot;/>&lt;xsl:template name=&quot;IPReservation-input&quot; match=&quot;/&quot;>&lt;tns2:CodaRichiesteIPStatico_record>&lt;tns2:Id>&lt;xsl:value-of select=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/Id&quot;/>&lt;/tns2:Id>&lt;xsl:if test=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/CrmIdIpStatico&quot;>&lt;tns2:CrmIdIpStatico>&lt;xsl:value-of select=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/CrmIdIpStatico&quot;/>&lt;/tns2:CrmIdIpStatico>&lt;/xsl:if>&lt;xsl:if test=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/CrmIdTestata&quot;>&lt;tns2:CrmIdTestata>&lt;xsl:value-of select=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/CrmIdTestata&quot;/>&lt;/tns2:CrmIdTestata>&lt;/xsl:if>&lt;tns2:Bts>&lt;xsl:value-of select=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/Bts&quot;/>&lt;/tns2:Bts>&lt;tns2:CodiceIpStatico>&lt;xsl:value-of select=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/CodiceIpStatico&quot;/>&lt;/tns2:CodiceIpStatico>&lt;xsl:if test=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/IdRisorsa&quot;>&lt;tns2:IdRisorsa>&lt;xsl:value-of select=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/IdRisorsa&quot;/>&lt;/tns2:IdRisorsa>&lt;/xsl:if>&lt;xsl:if test=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/IdTransizione&quot;>&lt;tns2:IdTransizione>&lt;xsl:value-of select=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/IdTransizione&quot;/>&lt;/tns2:IdTransizione>&lt;/xsl:if>&lt;xsl:if test=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/IpPubblico&quot;>&lt;tns2:IpPubblico>&lt;xsl:value-of select=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/IpPubblico&quot;/>&lt;/tns2:IpPubblico>&lt;/xsl:if>&lt;xsl:if test=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/IpPrivato&quot;>&lt;tns2:IpPrivato>&lt;xsl:value-of select=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/IpPrivato&quot;/>&lt;/tns2:IpPrivato>&lt;/xsl:if>&lt;xsl:if test=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/Imsi&quot;>&lt;tns2:Imsi>&lt;xsl:value-of select=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/Imsi&quot;/>&lt;/tns2:Imsi>&lt;/xsl:if>&lt;xsl:if test=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/Mask&quot;>&lt;tns2:Mask>&lt;xsl:value-of select=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/Mask&quot;/>&lt;/tns2:Mask>&lt;/xsl:if>&lt;tns2:Azione>&lt;xsl:value-of select=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/Azione&quot;/>&lt;/tns2:Azione>&lt;xsl:if test=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/NumeroTentativo&quot;>&lt;tns2:NumeroTentativo>&lt;xsl:value-of select=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/NumeroTentativo&quot;/>&lt;/tns2:NumeroTentativo>&lt;/xsl:if>&lt;xsl:if test=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/CodiceOperazione&quot;>&lt;tns2:CodiceOperazione>&lt;xsl:value-of select=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/CodiceOperazione&quot;/>&lt;/tns2:CodiceOperazione>&lt;/xsl:if>&lt;xsl:if test=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/DescrizioneOperazione&quot;>&lt;tns2:DescrizioneOperazione>&lt;xsl:value-of select=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/DescrizioneOperazione&quot;/>&lt;/tns2:DescrizioneOperazione>&lt;/xsl:if>&lt;xsl:if test=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/DataCreazioneRichiesta&quot;>&lt;tns2:DataCreazioneRichiesta>&lt;xsl:value-of select=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/DataCreazioneRichiesta&quot;/>&lt;/tns2:DataCreazioneRichiesta>&lt;/xsl:if>&lt;xsl:if test=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/DataEsecuzioneRichiesta&quot;>&lt;tns2:DataEsecuzioneRichiesta>&lt;xsl:value-of select=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/DataEsecuzioneRichiesta&quot;/>&lt;/tns2:DataEsecuzioneRichiesta>&lt;/xsl:if>&lt;tns2:DaProcessare>&lt;xsl:value-of select=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/DaProcessare&quot;/>&lt;/tns2:DaProcessare>&lt;/tns2:CodaRichiesteIPStatico_record>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                    </tibex:inputBindings>
+                                    <tibex:CallProcess
+                                    subProcessName="it.linkem.esb.staticIPManagement.bsl.IPReservation" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
+                                    </tibex:extActivity>
+                                </bpws:extensionActivity>
+                                <bpws:extensionActivity>
+                                    <tibex:extActivity
+                                    inputVariable="IPActivation-input"
+                                    name="IPActivation"
+                                    tibex:xpdlId="27585946-01e0-4bb1-a076-72d77e3218ea"
+                                    type="bw.generalactivities.callprocess" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                                    <bpws:targets>
+                                    <bpws:target linkName="GroupStartToIPActivation_AzioneIPActivation"/>
+                                    </bpws:targets>
+                                    <bpws:sources>
+                                    <bpws:source linkName="IPActivationToGroupEnd"/>
+                                    </bpws:sources>
+                                    <tibex:inputBindings>
+                                    <tibex:inputBinding
+                                    coercion=""
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns2=&quot;http://it.linkem/crm/portalsharingdatadb/codaRichiesteIPSatico/xsd&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;index&quot;/>&lt;xsl:param name=&quot;getCodaRichiesteIPStatico-Records&quot;/>&lt;xsl:template name=&quot;IPActivation-input&quot; match=&quot;/&quot;>&lt;tns2:CodaRichiesteIPStatico_record>&lt;tns2:Id>&lt;xsl:value-of select=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/Id&quot;/>&lt;/tns2:Id>&lt;xsl:if test=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/CrmIdIpStatico&quot;>&lt;tns2:CrmIdIpStatico>&lt;xsl:value-of select=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/CrmIdIpStatico&quot;/>&lt;/tns2:CrmIdIpStatico>&lt;/xsl:if>&lt;xsl:if test=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/CrmIdTestata&quot;>&lt;tns2:CrmIdTestata>&lt;xsl:value-of select=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/CrmIdTestata&quot;/>&lt;/tns2:CrmIdTestata>&lt;/xsl:if>&lt;tns2:Bts>&lt;xsl:value-of select=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/Bts&quot;/>&lt;/tns2:Bts>&lt;tns2:CodiceIpStatico>&lt;xsl:value-of select=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/CodiceIpStatico&quot;/>&lt;/tns2:CodiceIpStatico>&lt;xsl:if test=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/IdRisorsa&quot;>&lt;tns2:IdRisorsa>&lt;xsl:value-of select=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/IdRisorsa&quot;/>&lt;/tns2:IdRisorsa>&lt;/xsl:if>&lt;xsl:if test=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/IdTransizione&quot;>&lt;tns2:IdTransizione>&lt;xsl:value-of select=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/IdTransizione&quot;/>&lt;/tns2:IdTransizione>&lt;/xsl:if>&lt;xsl:if test=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/IpPubblico&quot;>&lt;tns2:IpPubblico>&lt;xsl:value-of select=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/IpPubblico&quot;/>&lt;/tns2:IpPubblico>&lt;/xsl:if>&lt;xsl:if test=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/IpPrivato&quot;>&lt;tns2:IpPrivato>&lt;xsl:value-of select=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/IpPrivato&quot;/>&lt;/tns2:IpPrivato>&lt;/xsl:if>&lt;xsl:if test=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/Imsi&quot;>&lt;tns2:Imsi>&lt;xsl:value-of select=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/Imsi&quot;/>&lt;/tns2:Imsi>&lt;/xsl:if>&lt;xsl:if test=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/Mask&quot;>&lt;tns2:Mask>&lt;xsl:value-of select=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/Mask&quot;/>&lt;/tns2:Mask>&lt;/xsl:if>&lt;tns2:Azione>&lt;xsl:value-of select=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/Azione&quot;/>&lt;/tns2:Azione>&lt;xsl:if test=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/NumeroTentativo&quot;>&lt;tns2:NumeroTentativo>&lt;xsl:value-of select=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/NumeroTentativo&quot;/>&lt;/tns2:NumeroTentativo>&lt;/xsl:if>&lt;xsl:if test=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/CodiceOperazione&quot;>&lt;tns2:CodiceOperazione>&lt;xsl:value-of select=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/CodiceOperazione&quot;/>&lt;/tns2:CodiceOperazione>&lt;/xsl:if>&lt;xsl:if test=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/DescrizioneOperazione&quot;>&lt;tns2:DescrizioneOperazione>&lt;xsl:value-of select=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/DescrizioneOperazione&quot;/>&lt;/tns2:DescrizioneOperazione>&lt;/xsl:if>&lt;xsl:if test=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/DataCreazioneRichiesta&quot;>&lt;tns2:DataCreazioneRichiesta>&lt;xsl:value-of select=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/DataCreazioneRichiesta&quot;/>&lt;/tns2:DataCreazioneRichiesta>&lt;/xsl:if>&lt;xsl:if test=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/DataEsecuzioneRichiesta&quot;>&lt;tns2:DataEsecuzioneRichiesta>&lt;xsl:value-of select=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/DataEsecuzioneRichiesta&quot;/>&lt;/tns2:DataEsecuzioneRichiesta>&lt;/xsl:if>&lt;tns2:DaProcessare>&lt;xsl:value-of select=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/DaProcessare&quot;/>&lt;/tns2:DaProcessare>&lt;/tns2:CodaRichiesteIPStatico_record>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                    </tibex:inputBindings>
+                                    <tibex:CallProcess
+                                    subProcessName="it.linkem.esb.staticIPManagement.bsl.IPActivation" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
+                                    </tibex:extActivity>
+                                </bpws:extensionActivity>
+                                <bpws:extensionActivity>
+                                    <tibex:extActivity
+                                    inputVariable="DeleteIpReservationIpRelease-input"
+                                    name="DeleteIpReservationIpRelease"
+                                    tibex:xpdlId="91e63ec4-f988-40c6-9816-ee0abdd2a5de"
+                                    type="bw.generalactivities.callprocess" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                                    <bpws:targets>
+                                    <bpws:target linkName="GroupStartToDeleteIpReservationIpRelease_AzioneDeleteIpReservationIpRelease"/>
+                                    </bpws:targets>
+                                    <bpws:sources>
+                                    <bpws:source linkName="DeleteIpReservationIpReleaseToGroupEnd"/>
+                                    </bpws:sources>
+                                    <tibex:inputBindings>
+                                    <tibex:inputBinding
+                                    coercion=""
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns2=&quot;http://it.linkem/crm/portalsharingdatadb/codaRichiesteIPSatico/xsd&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;index&quot;/>&lt;xsl:param name=&quot;getCodaRichiesteIPStatico-Records&quot;/>&lt;xsl:template name=&quot;DeleteIpReservationIpRelease-input&quot; match=&quot;/&quot;>&lt;tns2:CodaRichiesteIPStatico_record>&lt;tns2:Id>&lt;xsl:value-of select=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/Id&quot;/>&lt;/tns2:Id>&lt;xsl:if test=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/CrmIdIpStatico&quot;>&lt;tns2:CrmIdIpStatico>&lt;xsl:value-of select=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/CrmIdIpStatico&quot;/>&lt;/tns2:CrmIdIpStatico>&lt;/xsl:if>&lt;xsl:if test=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/CrmIdTestata&quot;>&lt;tns2:CrmIdTestata>&lt;xsl:value-of select=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/CrmIdTestata&quot;/>&lt;/tns2:CrmIdTestata>&lt;/xsl:if>&lt;tns2:Bts>&lt;xsl:value-of select=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/Bts&quot;/>&lt;/tns2:Bts>&lt;tns2:CodiceIpStatico>&lt;xsl:value-of select=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/CodiceIpStatico&quot;/>&lt;/tns2:CodiceIpStatico>&lt;xsl:if test=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/IdRisorsa&quot;>&lt;tns2:IdRisorsa>&lt;xsl:value-of select=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/IdRisorsa&quot;/>&lt;/tns2:IdRisorsa>&lt;/xsl:if>&lt;xsl:if test=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/IdTransizione&quot;>&lt;tns2:IdTransizione>&lt;xsl:value-of select=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/IdTransizione&quot;/>&lt;/tns2:IdTransizione>&lt;/xsl:if>&lt;xsl:if test=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/IpPubblico&quot;>&lt;tns2:IpPubblico>&lt;xsl:value-of select=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/IpPubblico&quot;/>&lt;/tns2:IpPubblico>&lt;/xsl:if>&lt;xsl:if test=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/IpPrivato&quot;>&lt;tns2:IpPrivato>&lt;xsl:value-of select=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/IpPrivato&quot;/>&lt;/tns2:IpPrivato>&lt;/xsl:if>&lt;xsl:if test=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/Imsi&quot;>&lt;tns2:Imsi>&lt;xsl:value-of select=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/Imsi&quot;/>&lt;/tns2:Imsi>&lt;/xsl:if>&lt;xsl:if test=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/Mask&quot;>&lt;tns2:Mask>&lt;xsl:value-of select=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/Mask&quot;/>&lt;/tns2:Mask>&lt;/xsl:if>&lt;tns2:Azione>&lt;xsl:value-of select=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/Azione&quot;/>&lt;/tns2:Azione>&lt;xsl:if test=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/NumeroTentativo&quot;>&lt;tns2:NumeroTentativo>&lt;xsl:value-of select=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/NumeroTentativo&quot;/>&lt;/tns2:NumeroTentativo>&lt;/xsl:if>&lt;xsl:if test=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/CodiceOperazione&quot;>&lt;tns2:CodiceOperazione>&lt;xsl:value-of select=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/CodiceOperazione&quot;/>&lt;/tns2:CodiceOperazione>&lt;/xsl:if>&lt;xsl:if test=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/DescrizioneOperazione&quot;>&lt;tns2:DescrizioneOperazione>&lt;xsl:value-of select=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/DescrizioneOperazione&quot;/>&lt;/tns2:DescrizioneOperazione>&lt;/xsl:if>&lt;xsl:if test=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/DataCreazioneRichiesta&quot;>&lt;tns2:DataCreazioneRichiesta>&lt;xsl:value-of select=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/DataCreazioneRichiesta&quot;/>&lt;/tns2:DataCreazioneRichiesta>&lt;/xsl:if>&lt;xsl:if test=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/DataEsecuzioneRichiesta&quot;>&lt;tns2:DataEsecuzioneRichiesta>&lt;xsl:value-of select=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/DataEsecuzioneRichiesta&quot;/>&lt;/tns2:DataEsecuzioneRichiesta>&lt;/xsl:if>&lt;tns2:DaProcessare>&lt;xsl:value-of select=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/DaProcessare&quot;/>&lt;/tns2:DaProcessare>&lt;/tns2:CodaRichiesteIPStatico_record>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                    </tibex:inputBindings>
+                                    <tibex:CallProcess
+                                    subProcessName="it.linkem.esb.staticIPManagement.bsl.DeleteIpReservationIpRelease" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
+                                    </tibex:extActivity>
+                                </bpws:extensionActivity>
+                                <bpws:extensionActivity>
+                                    <tibex:extActivity
+                                    inputVariable="DeleteIpReservation-input"
+                                    name="DeleteIpReservation"
+                                    tibex:xpdlId="7d59c258-dc32-40f0-b736-c47791cee075"
+                                    type="bw.generalactivities.callprocess" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                                    <bpws:targets>
+                                    <bpws:target linkName="GroupStartToDeleteIpReservation_AzioneDeleteIpReservation"/>
+                                    </bpws:targets>
+                                    <bpws:sources>
+                                    <bpws:source linkName="DeleteIpReservationToGroupEnd"/>
+                                    </bpws:sources>
+                                    <tibex:inputBindings>
+                                    <tibex:inputBinding
+                                    coercion=""
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns2=&quot;http://it.linkem/crm/portalsharingdatadb/codaRichiesteIPSatico/xsd&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;index&quot;/>&lt;xsl:param name=&quot;getCodaRichiesteIPStatico-Records&quot;/>&lt;xsl:template name=&quot;DeleteIpReservation-input&quot; match=&quot;/&quot;>&lt;tns2:CodaRichiesteIPStatico_record>&lt;tns2:Id>&lt;xsl:value-of select=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/Id&quot;/>&lt;/tns2:Id>&lt;xsl:if test=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/CrmIdIpStatico&quot;>&lt;tns2:CrmIdIpStatico>&lt;xsl:value-of select=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/CrmIdIpStatico&quot;/>&lt;/tns2:CrmIdIpStatico>&lt;/xsl:if>&lt;xsl:if test=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/CrmIdTestata&quot;>&lt;tns2:CrmIdTestata>&lt;xsl:value-of select=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/CrmIdTestata&quot;/>&lt;/tns2:CrmIdTestata>&lt;/xsl:if>&lt;tns2:Bts>&lt;xsl:value-of select=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/Bts&quot;/>&lt;/tns2:Bts>&lt;tns2:CodiceIpStatico>&lt;xsl:value-of select=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/CodiceIpStatico&quot;/>&lt;/tns2:CodiceIpStatico>&lt;xsl:if test=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/IdRisorsa&quot;>&lt;tns2:IdRisorsa>&lt;xsl:value-of select=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/IdRisorsa&quot;/>&lt;/tns2:IdRisorsa>&lt;/xsl:if>&lt;xsl:if test=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/IdTransizione&quot;>&lt;tns2:IdTransizione>&lt;xsl:value-of select=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/IdTransizione&quot;/>&lt;/tns2:IdTransizione>&lt;/xsl:if>&lt;xsl:if test=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/IpPubblico&quot;>&lt;tns2:IpPubblico>&lt;xsl:value-of select=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/IpPubblico&quot;/>&lt;/tns2:IpPubblico>&lt;/xsl:if>&lt;xsl:if test=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/IpPrivato&quot;>&lt;tns2:IpPrivato>&lt;xsl:value-of select=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/IpPrivato&quot;/>&lt;/tns2:IpPrivato>&lt;/xsl:if>&lt;xsl:if test=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/Imsi&quot;>&lt;tns2:Imsi>&lt;xsl:value-of select=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/Imsi&quot;/>&lt;/tns2:Imsi>&lt;/xsl:if>&lt;xsl:if test=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/Mask&quot;>&lt;tns2:Mask>&lt;xsl:value-of select=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/Mask&quot;/>&lt;/tns2:Mask>&lt;/xsl:if>&lt;tns2:Azione>&lt;xsl:value-of select=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/Azione&quot;/>&lt;/tns2:Azione>&lt;xsl:if test=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/NumeroTentativo&quot;>&lt;tns2:NumeroTentativo>&lt;xsl:value-of select=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/NumeroTentativo&quot;/>&lt;/tns2:NumeroTentativo>&lt;/xsl:if>&lt;xsl:if test=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/CodiceOperazione&quot;>&lt;tns2:CodiceOperazione>&lt;xsl:value-of select=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/CodiceOperazione&quot;/>&lt;/tns2:CodiceOperazione>&lt;/xsl:if>&lt;xsl:if test=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/DescrizioneOperazione&quot;>&lt;tns2:DescrizioneOperazione>&lt;xsl:value-of select=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/DescrizioneOperazione&quot;/>&lt;/tns2:DescrizioneOperazione>&lt;/xsl:if>&lt;xsl:if test=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/DataCreazioneRichiesta&quot;>&lt;tns2:DataCreazioneRichiesta>&lt;xsl:value-of select=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/DataCreazioneRichiesta&quot;/>&lt;/tns2:DataCreazioneRichiesta>&lt;/xsl:if>&lt;xsl:if test=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/DataEsecuzioneRichiesta&quot;>&lt;tns2:DataEsecuzioneRichiesta>&lt;xsl:value-of select=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/DataEsecuzioneRichiesta&quot;/>&lt;/tns2:DataEsecuzioneRichiesta>&lt;/xsl:if>&lt;tns2:DaProcessare>&lt;xsl:value-of select=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/DaProcessare&quot;/>&lt;/tns2:DaProcessare>&lt;/tns2:CodaRichiesteIPStatico_record>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                    </tibex:inputBindings>
+                                    <tibex:CallProcess
+                                    subProcessName="it.linkem.esb.staticIPManagement.bsl.DeleteIpReservation" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
+                                    </tibex:extActivity>
+                                </bpws:extensionActivity>
+                                <bpws:extensionActivity>
+                                    <tibex:extActivity
+                                    inputVariable="IPRelease-input"
+                                    name="IPRelease"
+                                    tibex:xpdlId="6415ebaa-7285-45a0-8553-0434199b62d9"
+                                    type="bw.generalactivities.callprocess" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                                    <bpws:targets>
+                                    <bpws:target linkName="GroupStartToIPRelease_AzioneIPRelease"/>
+                                    </bpws:targets>
+                                    <bpws:sources>
+                                    <bpws:source linkName="IPReleaseToGroupEnd"/>
+                                    </bpws:sources>
+                                    <tibex:inputBindings>
+                                    <tibex:inputBinding
+                                    coercion=""
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns2=&quot;http://it.linkem/crm/portalsharingdatadb/codaRichiesteIPSatico/xsd&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;index&quot;/>&lt;xsl:param name=&quot;getCodaRichiesteIPStatico-Records&quot;/>&lt;xsl:template name=&quot;IPRelease-input&quot; match=&quot;/&quot;>&lt;tns2:CodaRichiesteIPStatico_record>&lt;tns2:Id>&lt;xsl:value-of select=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/Id&quot;/>&lt;/tns2:Id>&lt;xsl:if test=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/CrmIdIpStatico&quot;>&lt;tns2:CrmIdIpStatico>&lt;xsl:value-of select=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/CrmIdIpStatico&quot;/>&lt;/tns2:CrmIdIpStatico>&lt;/xsl:if>&lt;xsl:if test=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/CrmIdTestata&quot;>&lt;tns2:CrmIdTestata>&lt;xsl:value-of select=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/CrmIdTestata&quot;/>&lt;/tns2:CrmIdTestata>&lt;/xsl:if>&lt;tns2:Bts>&lt;xsl:value-of select=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/Bts&quot;/>&lt;/tns2:Bts>&lt;tns2:CodiceIpStatico>&lt;xsl:value-of select=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/CodiceIpStatico&quot;/>&lt;/tns2:CodiceIpStatico>&lt;xsl:if test=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/IdRisorsa&quot;>&lt;tns2:IdRisorsa>&lt;xsl:value-of select=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/IdRisorsa&quot;/>&lt;/tns2:IdRisorsa>&lt;/xsl:if>&lt;xsl:if test=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/IdTransizione&quot;>&lt;tns2:IdTransizione>&lt;xsl:value-of select=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/IdTransizione&quot;/>&lt;/tns2:IdTransizione>&lt;/xsl:if>&lt;xsl:if test=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/IpPubblico&quot;>&lt;tns2:IpPubblico>&lt;xsl:value-of select=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/IpPubblico&quot;/>&lt;/tns2:IpPubblico>&lt;/xsl:if>&lt;xsl:if test=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/IpPrivato&quot;>&lt;tns2:IpPrivato>&lt;xsl:value-of select=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/IpPrivato&quot;/>&lt;/tns2:IpPrivato>&lt;/xsl:if>&lt;xsl:if test=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/Imsi&quot;>&lt;tns2:Imsi>&lt;xsl:value-of select=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/Imsi&quot;/>&lt;/tns2:Imsi>&lt;/xsl:if>&lt;xsl:if test=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/Mask&quot;>&lt;tns2:Mask>&lt;xsl:value-of select=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/Mask&quot;/>&lt;/tns2:Mask>&lt;/xsl:if>&lt;tns2:Azione>&lt;xsl:value-of select=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/Azione&quot;/>&lt;/tns2:Azione>&lt;xsl:if test=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/NumeroTentativo&quot;>&lt;tns2:NumeroTentativo>&lt;xsl:value-of select=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/NumeroTentativo&quot;/>&lt;/tns2:NumeroTentativo>&lt;/xsl:if>&lt;xsl:if test=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/CodiceOperazione&quot;>&lt;tns2:CodiceOperazione>&lt;xsl:value-of select=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/CodiceOperazione&quot;/>&lt;/tns2:CodiceOperazione>&lt;/xsl:if>&lt;xsl:if test=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/DescrizioneOperazione&quot;>&lt;tns2:DescrizioneOperazione>&lt;xsl:value-of select=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/DescrizioneOperazione&quot;/>&lt;/tns2:DescrizioneOperazione>&lt;/xsl:if>&lt;xsl:if test=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/DataCreazioneRichiesta&quot;>&lt;tns2:DataCreazioneRichiesta>&lt;xsl:value-of select=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/DataCreazioneRichiesta&quot;/>&lt;/tns2:DataCreazioneRichiesta>&lt;/xsl:if>&lt;xsl:if test=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/DataEsecuzioneRichiesta&quot;>&lt;tns2:DataEsecuzioneRichiesta>&lt;xsl:value-of select=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/DataEsecuzioneRichiesta&quot;/>&lt;/tns2:DataEsecuzioneRichiesta>&lt;/xsl:if>&lt;tns2:DaProcessare>&lt;xsl:value-of select=&quot;$getCodaRichiesteIPStatico-Records/Record[$index]/DaProcessare&quot;/>&lt;/tns2:DaProcessare>&lt;/tns2:CodaRichiesteIPStatico_record>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                    </tibex:inputBindings>
+                                    <tibex:CallProcess
+                                    subProcessName="it.linkem.esb.staticIPManagement.bsl.IPRelease" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
+                                    </tibex:extActivity>
+                                </bpws:extensionActivity>
+                            </bpws:flow>
+                        </bpws:scope>
+                    </bpws:forEach>
+                </bpws:sequence>
+            </bpws:scope>
+            <bpws:extensionActivity>
+                <tibex:extActivity name="GetSemaphore"
+                    outputVariable="GetSemaphore"
+                    tibex:xpdlId="ff0bf621-5900-440f-b057-7d0bc08b104d"
+                    type="bw.internal.getSharedVariable" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                    <bpws:targets>
+                        <bpws:target linkName="TimerToJDBCQuery"/>
+                    </bpws:targets>
+                    <bpws:sources>
+                        <bpws:source linkName="GetSharedVariableTogetCodaRichiesteIPStatico-Records_green">
+                            <tibex:DesignExpression>
+                                <tibex:expression
+                                    expression="$GetSemaphore=0" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"/>
+                            </tibex:DesignExpression>
+                            <bpws:transitionCondition expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"><![CDATA[$GetSemaphore=0]]></bpws:transitionCondition>
+                        </bpws:source>
+                        <bpws:source linkName="GetSemaphoreToLog1_red">
+                            <tibex:DesignExpression>
+                                <tibex:expression
+                                    expression="##otherwise##" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"/>
+                            </tibex:DesignExpression>
+                            <bpws:transitionCondition expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"><![CDATA[##otherwise##]]></bpws:transitionCondition>
+                        </bpws:source>
+                    </bpws:sources>
+                    <tibex:GetSharedVariable variableName="semaphore" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
+                </tibex:extActivity>
+            </bpws:extensionActivity>
+            <bpws:extensionActivity>
+                <tibex:activityExtension
+                    inputVariable="proceesAlreadyRunning-input"
+                    name="proceesAlreadyRunning"
+                    tibex:xpdlId="dead765f-1100-43b7-904a-c0e61589e735" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                    <bpws:targets>
+                        <bpws:target linkName="GetSemaphoreToLog1_red"/>
+                    </bpws:targets>
+                    <tibex:inputBindings>
+                        <tibex:inputBinding
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://www.tibco.com/pe/WriteToLogActivitySchema&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;_processContext&quot;/>&lt;xsl:template name=&quot;proceesAlreadyRunning-input&quot; match=&quot;/&quot;>&lt;tns:ActivityInput>&lt;message>&lt;xsl:value-of select=&quot;concat(&amp;quot;Processing records alreadsy in progress.....&amp;quot;, $_processContext/ProcessInstanceId)&quot;/>&lt;/message>&lt;/tns:ActivityInput>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                    </tibex:inputBindings>
+                    <tibex:config>
+                        <bwext:BWActivity
+                            activityTypeID="bw.generalactivities.log"
+                            version="6.0.0.001"
+                            xmlns:activityconfig="http://tns.tibco.com/bw/model/activityconfig"
+                            xmlns:bwext="http://tns.tibco.com/bw/model/core/bwext"
+                            xmlns:generalactivities="http://ns.tibco.com/bw/palette/generalactivities" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                            <activityConfig>
+                                <properties name="config" xsi:type="activityconfig:EMFProperty">
+                                    <type href="http://ns.tibco.com/bw/palette/generalactivities#//Log"/>
+                                    <value controlBy="Application"
+                                    role="Info"
+                                    suppressJobInfo="true" xsi:type="generalactivities:Log"/>
+                                </properties>
+                            </activityConfig>
+                        </bwext:BWActivity>
+                    </tibex:config>
+                </tibex:activityExtension>
+            </bpws:extensionActivity>
+            <bpws:extensionActivity>
+                <tibex:extActivity inputVariable="SetSemaphore-input"
+                    name="SetSemaphore" outputVariable="SetSemaphore"
+                    tibex:xpdlId="b5c93bdb-c730-4166-950d-922213c8a3e8"
+                    type="bw.internal.setSharedVariable" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                    <bpws:targets>
+                        <bpws:target linkName="GetSharedVariableTogetCodaRichiesteIPStatico-Records_green"/>
+                    </bpws:targets>
+                    <bpws:sources>
+                        <bpws:source linkName="SetSharedVariableTogetCodaRichiesteIPStatico-Records"/>
+                    </bpws:sources>
+                    <tibex:inputBindings>
+                        <tibex:inputBinding coercion="" expression="1" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"/>
+                    </tibex:inputBindings>
+                    <tibex:SetSharedVariable variableName="semaphore" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
+                </tibex:extActivity>
+            </bpws:extensionActivity>
+            <bpws:extensionActivity>
+                <tibex:extActivity inputVariable="SetSemaphor-input"
+                    name="SetSemaphor" outputVariable="SetSemaphor"
+                    tibex:xpdlId="f5abb579-96f0-43ac-b9bd-d649472dcdeb"
+                    type="bw.internal.setSharedVariable" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                    <bpws:targets>
+                        <bpws:target linkName="SleepToSetSemaphor"/>
+                    </bpws:targets>
+                    <tibex:inputBindings>
+                        <tibex:inputBinding coercion="" expression="0" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"/>
+                    </tibex:inputBindings>
+                    <tibex:SetSharedVariable variableName="semaphore" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
+                </tibex:extActivity>
+            </bpws:extensionActivity>
+            <bpws:extensionActivity>
+                <tibex:activityExtension inputVariable="Sleep-input"
+                    name="Sleep"
+                    tibex:xpdlId="cb3f0e9c-d8c3-4ce3-85fb-6915d875772c" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                    <bpws:targets>
+                        <bpws:target linkName="ForEachToSetSemaphor"/>
+                    </bpws:targets>
+                    <bpws:sources>
+                        <bpws:source linkName="SleepToSetSemaphor"/>
+                    </bpws:sources>
+                    <tibex:inputBindings>
+                        <tibex:inputBinding
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns1=&quot;http://tns.tibco.com/bw/activity/sleep/xsd&quot; version=&quot;2.0&quot;>&lt;xsl:template name=&quot;Sleep-input&quot; match=&quot;/&quot;>&lt;tns1:SleepInputSchema>&lt;IntervalInMillisec>&lt;xsl:value-of select=&quot;16000&quot;/>&lt;/IntervalInMillisec>&lt;/tns1:SleepInputSchema>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                    </tibex:inputBindings>
+                    <tibex:config>
+                        <bwext:BWActivity
+                            activityTypeID="bw.generalactivities.sleep"
+                            xmlns:activityconfig="http://tns.tibco.com/bw/model/activityconfig"
+                            xmlns:bwext="http://tns.tibco.com/bw/model/core/bwext"
+                            xmlns:generalactivities="http://ns.tibco.com/bw/palette/generalactivities" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                            <activityConfig>
+                                <properties name="config" xsi:type="activityconfig:EMFProperty">
+                                    <type href="http://ns.tibco.com/bw/palette/generalactivities#//Sleep"/>
+                                    <value xsi:type="generalactivities:Sleep"/>
+                                </properties>
+                            </activityConfig>
+                        </bwext:BWActivity>
+                    </tibex:config>
+                </tibex:activityExtension>
+            </bpws:extensionActivity>
+        </bpws:flow>
+    </bpws:scope>
+</bpws:process>
