@@ -8,10 +8,10 @@
         <xsd:element maxOccurs="1" minOccurs="0" name="tipocontratto" type="xsd:string"/>
         <xsd:element maxOccurs="1" minOccurs="1" name="idrisorsa" type="xsd:string"/>
         <xsd:element maxOccurs="1" minOccurs="0" name="imsi" type="xsd:string"/>
-        <xsd:element maxOccurs="1" minOccurs="0" name="cod" type="xsd:string"/>
+        <xsd:element maxOccurs="1" minOccurs="0" name="cod" type="xsd:int"/>
         <xsd:element maxOccurs="1" minOccurs="0" name="descrizione" type="xsd:string"/>
         <xsd:element maxOccurs="1" minOccurs="0" name="ippubblico" type="xsd:string"/>
-        <xsd:element maxOccurs="1" minOccurs="0" name="mask" type="xsd:string"/>
+        <xsd:element maxOccurs="1" minOccurs="0" name="mask" type="xsd:int"/>
         <xsd:element maxOccurs="1" minOccurs="0" name="ipprivato" type="xsd:string"/>
         <xsd:element maxOccurs="1" minOccurs="0" name="idtransizione" type="xsd:string"/>
         <xsd:element maxOccurs="1" minOccurs="0" name="azione" type="xsd:string"/>
@@ -22,6 +22,31 @@
     <xsd:complexType>
       <xsd:sequence>
         <xsd:element maxOccurs="1" minOccurs="1" name="idrisorsa" type="xsd:string"/>
+            </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+    <xsd:element name="updateInput">
+    <xsd:complexType>
+      <xsd:sequence>
+      	<xsd:element maxOccurs="1" minOccurs="0" name="btsname" type="xsd:string"/>
+        <xsd:element maxOccurs="1" minOccurs="0" name="tipocontratto" type="xsd:string"/>
+        <xsd:element maxOccurs="1" minOccurs="1" name="idrisorsa" type="xsd:string"/>
+        <xsd:element maxOccurs="1" minOccurs="0" name="imsi" type="xsd:string"/>
+        <xsd:element maxOccurs="1" minOccurs="0" name="cod" type="xsd:int"/>
+        <xsd:element maxOccurs="1" minOccurs="0" name="descrizione" type="xsd:string"/>
+        <xsd:element maxOccurs="1" minOccurs="0" name="ippubblico" type="xsd:string"/>
+        <xsd:element maxOccurs="1" minOccurs="0" name="mask" type="xsd:int"/>
+        <xsd:element maxOccurs="1" minOccurs="0" name="ipprivato" type="xsd:string"/>
+        <xsd:element maxOccurs="1" minOccurs="0" name="idtransizione" type="xsd:string"/>
+        <xsd:element maxOccurs="1" minOccurs="0" name="azione" type="xsd:string"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+    <xsd:element name="ipReservationInput">
+    <xsd:complexType>
+      <xsd:sequence>
+      	<xsd:element maxOccurs="1" minOccurs="1" name="btsName" type="xsd:string"/>
+        <xsd:element maxOccurs="1" minOccurs="1" name="tipoContratto" type="xsd:string"/>
       </xsd:sequence>
     </xsd:complexType>
   </xsd:element>

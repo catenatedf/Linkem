@@ -105,6 +105,9 @@
         <clientRequestFormat>json</clientRequestFormat>
       </operation>
       <operation xmi:id="_7ELhUkGDEeytw7vUKPSDeQ" operationName="delete" nickname="delete-staticipdbmgmt" httpMethod="DELETE" notes="deleteStaticIpDbMgmt" responseStyle="element" outputPartName="msg">
+        <parameters xmi:id="_ZBztQEI1Eey95NKtC28LXQ">
+          <parameterMapping xmi:id="_egb5IEI1Eey95NKtC28LXQ" parameterName="idrisorsa" parameterType="Query" dataType="string"/>
+        </parameters>
         <clientFormat>json</clientFormat>
         <clientRequestFormat>json</clientRequestFormat>
       </operation>
@@ -135,8 +138,5 @@
     <sca:service xmi:id="_7BRXQEGDEeytw7vUKPSDeQ" name="staticipdbmgmt">
       <sca:interface.wsdl xmi:id="_7BRXQUGDEeytw7vUKPSDeQ" interface="http://xmlns.example.com/20211109183849PLT#wsdl.interface(staticipdbmgmt)" scaext:wsdlLocation="../Processes/it/linkem/rete/dbuip/simulatore/ap/module/staticIpDbMgmt.bwp"/>
     </sca:service>
-  </sca:component>
-  <sca:component xmi:id="_bFyjAEGMEeytw7vUKPSDeQ" name="Componenttest" compositeext:version="1.0.0.qualifier">
-    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_bFyjAUGMEeytw7vUKPSDeQ" processName="it.linkem.rete.dbuip.simulatore.ap.module.test"/>
   </sca:component>
 </sca:composite>
