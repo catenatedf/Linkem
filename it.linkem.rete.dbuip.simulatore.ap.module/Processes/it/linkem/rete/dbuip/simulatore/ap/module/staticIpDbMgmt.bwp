@@ -541,7 +541,7 @@
                                     <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@activity/@activities.3"/>
 
                                     <layoutConstraint
-                                    x="152"
+                                    x="269"
                                     xsi:type="notation:Bounds" y="14"/>
                                     </children>
 
@@ -595,8 +595,9 @@
                                     <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@activity/@activities.4"/>
 
                                     <layoutConstraint
-                                    x="36"
-                                    xsi:type="notation:Bounds" y="20"/>
+                                    width="143"
+                                    x="58"
+                                    xsi:type="notation:Bounds" y="14"/>
                                     </children>
 
                                     <styles xsi:type="notation:DrawerStyle"/>
@@ -884,7 +885,61 @@
 
                                     <layoutConstraint
                                     width="186"
-                                    x="146"
+                                    x="242"
+                                    xsi:type="notation:Bounds" y="9"/>
+                                    </children>
+
+                                    <children type="4002">
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+
+                                    <element href="//0/@process/@activity/@activity/@activities.0/@messages.1/@activity/@activity/@activities.4"/>
+
+                                    <layoutConstraint
+                                    x="62"
                                     xsi:type="notation:Bounds" y="9"/>
                                     </children>
 
@@ -911,7 +966,7 @@
                                     <element href="//0/@process/@activity/@activity/@activities.0/@messages.1/@activity/@activity"/>
 
                                     <layoutConstraint
-                                    height="117"
+                                    height="119"
                                     width="746" xsi:type="notation:Bounds"/>
                                     </children>
 
@@ -1121,8 +1176,8 @@
                                     <element href="//0/@process/@activity/@activity/@activities.0/@messages.2/@activity/@activity/@activities.2"/>
 
                                     <layoutConstraint
-                                    x="455"
-                                    xsi:type="notation:Bounds" y="14"/>
+                                    x="456"
+                                    xsi:type="notation:Bounds" y="9"/>
                                     </children>
 
                                     <children type="4002">
@@ -1175,8 +1230,62 @@
                                     <element href="//0/@process/@activity/@activity/@activities.0/@messages.2/@activity/@activity/@activities.3"/>
 
                                     <layoutConstraint
-                                    x="161"
-                                    xsi:type="notation:Bounds" y="14"/>
+                                    x="273"
+                                    xsi:type="notation:Bounds" y="9"/>
+                                    </children>
+
+                                    <children type="4002">
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+
+                                    <element href="//0/@process/@activity/@activity/@activities.0/@messages.2/@activity/@activity/@activities.4"/>
+
+                                    <layoutConstraint
+                                    x="60"
+                                    xsi:type="notation:Bounds" y="9"/>
                                     </children>
 
                                     <styles xsi:type="notation:DrawerStyle"/>
@@ -1202,7 +1311,7 @@
                                     <element href="//0/@process/@activity/@activity/@activities.0/@messages.2/@activity/@activity"/>
 
                                     <layoutConstraint
-                                    height="118"
+                                    height="115"
                                     width="746" xsi:type="notation:Bounds"/>
                                     </children>
 
@@ -1467,7 +1576,62 @@
 
                                     <layoutConstraint
                                     width="182"
-                                    x="147"
+                                    x="248"
+                                    xsi:type="notation:Bounds" y="14"/>
+                                    </children>
+
+                                    <children type="4002">
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+
+                                    <element href="//0/@process/@activity/@activity/@activities.0/@messages.3/@activity/@activity/@activities.4"/>
+
+                                    <layoutConstraint
+                                    width="158"
+                                    x="41"
                                     xsi:type="notation:Bounds" y="14"/>
                                     </children>
 
@@ -1494,7 +1658,7 @@
                                     <element href="//0/@process/@activity/@activity/@activities.0/@messages.3/@activity/@activity"/>
 
                                     <layoutConstraint
-                                    height="111"
+                                    height="138"
                                     width="746" xsi:type="notation:Bounds"/>
                                     </children>
 
@@ -1654,7 +1818,7 @@
         <element href="//0"/>
         <edges
             source="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.1/@children.0/@children.0"
-            target="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.1/@children.1/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.1" type="4006">
+            target="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.1/@children.1/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2" type="4006">
             <children type="6002">
                 <layoutConstraint xsi:type="notation:Location" y="40"/>
             </children>
@@ -1676,7 +1840,7 @@
         </edges>
         <edges
             source="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.0/@children.0/@children.0"
-            target="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.0/@children.1/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.1" type="4006">
+            target="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.0/@children.1/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2" type="4006">
             <children type="6002">
                 <layoutConstraint xsi:type="notation:Location" y="40"/>
             </children>
@@ -1684,6 +1848,7 @@
             <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
             <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@activity/@links/@children.0"/>
             <bendpoints points="[12, 5, -236, 0]$[224, 0, -24, -5]" xsi:type="notation:RelativeBendpoints"/>
+            <targetAnchor id="(0.23577235772357724,0.4666666666666667)" xsi:type="notation:IdentityAnchor"/>
         </edges>
         <edges
             source="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.0/@children.1/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.1"
@@ -1698,14 +1863,15 @@
         </edges>
         <edges
             source="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.3/@children.0/@children.0"
-            target="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.3/@children.1/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.1" type="4006">
+            target="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.3/@children.1/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2" type="4006">
             <children type="6002">
                 <layoutConstraint xsi:type="notation:Location" y="40"/>
             </children>
             <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
             <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
             <element href="//0/@process/@activity/@activity/@activities.0/@messages.3/@activity/@activity/@links/@children.0"/>
-            <bendpoints points="[12, -3, -278, 0]$[236, 0, -54, 3]" xsi:type="notation:RelativeBendpoints"/>
+            <bendpoints points="[12, -1, -138, 0]$[126, -1, -24, 0]" xsi:type="notation:RelativeBendpoints"/>
+            <targetAnchor id="(0.23577235772357724,0.4533333333333333)" xsi:type="notation:IdentityAnchor"/>
         </edges>
         <edges
             source="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.3/@children.1/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.1"
@@ -1720,7 +1886,7 @@
         </edges>
         <edges
             source="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.2/@children.0/@children.0"
-            target="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.2/@children.1/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.1" type="4006">
+            target="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.2/@children.1/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2" type="4006">
             <children type="6002">
                 <layoutConstraint xsi:type="notation:Location" y="40"/>
             </children>
@@ -1741,17 +1907,6 @@
             <bendpoints points="[25, 1, -379, -12]$[380, 12, -24, -1]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
         <edges
-            source="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.0/@children.0/@children.0"
-            target="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.0/@children.1/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2" type="4006">
-            <children type="6002">
-                <layoutConstraint xsi:type="notation:Location" y="40"/>
-            </children>
-            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
-            <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
-            <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@activity/@links/@children.2"/>
-            <bendpoints points="[12, 1, -119, -10]$[107, 9, -24, -2]" xsi:type="notation:RelativeBendpoints"/>
-        </edges>
-        <edges
             source="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.0/@children.1/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2"
             target="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.0/@children.1/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.1" type="4006">
             <children type="6002">
@@ -1759,8 +1914,41 @@
             </children>
             <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
             <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
-            <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@activity/@links/@children.3"/>
-            <bendpoints points="[25, -6, -91, 0]$[92, 0, -24, 6]" xsi:type="notation:RelativeBendpoints"/>
+            <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@activity/@links/@children.2"/>
+            <bendpoints points="[25, 0, -186, 0]$[187, 0, -24, 0]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.1/@children.1/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2"
+            target="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.1/@children.1/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.1" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@activities.0/@messages.1/@activity/@activity/@links/@children.2"/>
+            <bendpoints points="[25, 0, -209, 0]$[178, 0, -56, 0]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.2/@children.1/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2"
+            target="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.2/@children.1/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.1" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@activities.0/@messages.2/@activity/@activity/@links/@children.2"/>
+            <bendpoints points="[25, 5, -186, 0]$[187, 0, -24, -5]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.3/@children.1/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2"
+            target="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.3/@children.1/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.1" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@activities.0/@messages.3/@activity/@activity/@links/@children.2"/>
+            <bendpoints points="[25, 6, -198, 0]$[169, 0, -54, -6]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
     </notation:Diagram>
     <tibex:NamespaceRegistry enabled="true">
@@ -1772,6 +1960,8 @@
             namespace="http://xmlns.example.com/staticIpDbMgmt/parameters" prefix="tns2"/>
         <tibex:namespaceItem
             namespace="http://www.tibco.com/bw/xslt/custom-functions" prefix="tib"/>
+        <tibex:namespaceItem
+            namespace="http://it.linkem/common/core/lehf/AuditTypes/xsd" prefix="tns3"/>
     </tibex:NamespaceRegistry>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.example.com/namespaces/tns/1636477876810"/>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://tns.tibco.com/bw/REST"/>
@@ -1817,7 +2007,13 @@
         <bpws:variable element="ns11:sytemOutput"
             name="removeRecordByIdRisorsa" sca-bpel:internal="true"/>
         <bpws:variable element="ns12:LogContextElement"
-            name="SetLogContext-input" sca-bpel:internal="true"/>
+            name="SetLogContextPOST-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns12:LogContextElement"
+            name="SetLogContextGET-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns12:LogContextElement"
+            name="SetLogContextPUT-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns12:LogContextElement"
+            name="SetLogContextDELETE-input" sca-bpel:internal="true"/>
     </bpws:variables>
     <bpws:extensions>
         <bpws:extension mustUnderstand="no" namespace="http://www.eclipse.org/gmf/runtime/1.0.2/notation"/>
@@ -1839,17 +2035,14 @@
                         <bpws:flow name="flow1">
                             <bpws:links>
                                 <bpws:link
-                                    name="OnMessageStartToaddNewRecord" tibex:linkType="SUCCESS"/>
-                                <bpws:link name="addNewRecordTopostOut" tibex:linkType="SUCCESS"/>
-                                <bpws:link
                                     name="OnMessageStartToSetLogContext" tibex:linkType="SUCCESS"/>
+                                <bpws:link name="addNewRecordTopostOut" tibex:linkType="SUCCESS"/>
                                 <bpws:link
                                     name="SetLogContextToaddNewRecord" tibex:linkType="SUCCESS"/>
                             </bpws:links>
                             <bpws:empty name="OnMessageStart"
                                 tibex:constructor="onMessageStart" tibex:xpdlId="dcc0214d-540c-48df-9e4e-79e6e11438c7">
                                 <bpws:sources>
-                                    <bpws:source linkName="OnMessageStartToaddNewRecord"/>
                                     <bpws:source linkName="OnMessageStartToSetLogContext"/>
                                 </bpws:sources>
                             </bpws:empty>
@@ -1861,15 +2054,15 @@
                                 tibex:xpdlId="73cd6d11-e00c-41d6-af4b-995819201fbb" variable="postOut-input">
                                 <tibex:inputBindings>
                                     <tibex:partBinding
-                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://xmlns.example.com/20211109183849PLT&quot; xmlns:tns3=&quot;http://www.example.com/namespaces/tns/1636549133422&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;addNewRecord&quot;/>&#xa;    &lt;xsl:template name=&quot;postOut-input&quot; match=&quot;/&quot;>&#xa;        &lt;item>&#xa;            &lt;xsl:value-of select=&quot;$addNewRecord/tns3:msg&quot;/>&#xa;        &lt;/item>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://xmlns.example.com/20211109183849PLT&quot; xmlns:tns4=&quot;http://www.example.com/namespaces/tns/1636549133422&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;addNewRecord&quot;/>&#xa;    &lt;xsl:template name=&quot;postOut-input&quot; match=&quot;/&quot;>&#xa;        &lt;item>&#xa;            &lt;xsl:value-of select=&quot;$addNewRecord/tns4:msg&quot;/>&#xa;        &lt;/item>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                                 </tibex:inputBindings>
                                 <tibex:inputBinding expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:tns="http://xmlns.example.com/20211109183849PLT" xmlns:tns3="http://www.example.com/namespaces/tns/1636549133422" version="2.0"&gt;
+&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:tns="http://xmlns.example.com/20211109183849PLT" xmlns:tns4="http://www.example.com/namespaces/tns/1636549133422" version="2.0"&gt;
     &lt;xsl:param name="addNewRecord"/&gt;
     &lt;xsl:template name="postOut-input" match="/"&gt;
         &lt;tns:postResponse&gt;
             &lt;item&gt;
-                &lt;xsl:value-of select="$addNewRecord/tns3:msg"/&gt;
+                &lt;xsl:value-of select="$addNewRecord/tns4:msg"/&gt;
             &lt;/item&gt;
         &lt;/tns:postResponse&gt;
     &lt;/xsl:template&gt;
@@ -1888,7 +2081,6 @@
                                     tibex:xpdlId="b098777f-4745-4612-9b54-1eb0da942d38"
                                     type="bw.generalactivities.callprocess" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                                     <bpws:targets>
-                                    <bpws:target linkName="OnMessageStartToaddNewRecord"/>
                                     <bpws:target linkName="SetLogContextToaddNewRecord"/>
                                     </bpws:targets>
                                     <bpws:sources>
@@ -1904,9 +2096,9 @@
                             </bpws:extensionActivity>
                             <bpws:extensionActivity>
                                 <tibex:extActivity
-                                    inputVariable="SetLogContext-input"
-                                    name="SetLogContext"
-                                    tibex:xpdlId="2c114053-8130-469f-914d-f9e5dd0e115f"
+                                    inputVariable="SetLogContextPOST-input"
+                                    name="SetLogContextPOST"
+                                    tibex:xpdlId="af54beed-4b32-4607-a2a2-33f4adc09d44"
                                     type="bw.generalactivities.callprocess" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                                     <bpws:targets>
                                     <bpws:target linkName="OnMessageStartToSetLogContext"/>
@@ -1916,7 +2108,7 @@
                                     </bpws:sources>
                                     <tibex:inputBindings>
                                     <tibex:inputBinding coercion=""
-                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://it.linkem/common/core/lehf/AuditTypes/xsd&quot; xmlns:tib=&quot;http://www.tibco.com/bw/xslt/custom-functions&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;_processContext&quot;/>&lt;xsl:template name=&quot;SetLogContext-input&quot; match=&quot;/&quot;>&lt;tns:LogContextElement>&lt;APPLICATION_NAME>&lt;xsl:value-of select=&quot;$_processContext/ApplicationName&quot;/>&lt;/APPLICATION_NAME>&lt;STARTTIMESTAMP>&lt;xsl:value-of select=&quot;current-dateTime()&quot;/>&lt;/STARTTIMESTAMP>&lt;TRACKINGID>&lt;xsl:value-of select=&quot;tib:uuid()&quot;/>&lt;/TRACKINGID>&lt;/tns:LogContextElement>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns3=&quot;http://it.linkem/common/core/lehf/AuditTypes/xsd&quot; xmlns:tib=&quot;http://www.tibco.com/bw/xslt/custom-functions&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;_processContext&quot;/>&#xa;    &lt;xsl:template name=&quot;SetLogContext-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns3:LogContextElement>&#xa;            &lt;APPLICATION_NAME>&#xa;                &lt;xsl:value-of select=&quot;$_processContext/ApplicationName&quot;/>&#xa;            &lt;/APPLICATION_NAME>&#xa;            &lt;STARTTIMESTAMP>&#xa;                &lt;xsl:value-of select=&quot;current-dateTime()&quot;/>&#xa;            &lt;/STARTTIMESTAMP>&#xa;            &lt;TRACKINGID>&#xa;                &lt;xsl:value-of select=&quot;tib:uuid()&quot;/>&#xa;            &lt;/TRACKINGID>&#xa;        &lt;/tns3:LogContextElement>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                                     </tibex:inputBindings>
                                     <tibex:CallProcess
                                     moduleRef="it.linkem.common.core.lehf.sh"
@@ -1934,14 +2126,16 @@
                         <bpws:flow name="flow2">
                             <bpws:links>
                                 <bpws:link
-                                    name="OnMessageStart1TogetRecordByIdRisorsa" tibex:linkType="SUCCESS"/>
+                                    name="OnMessageStart1ToSetLogContextGET" tibex:linkType="SUCCESS"/>
                                 <bpws:link
                                     name="getRecordByIdRisorsaTogetOut" tibex:linkType="SUCCESS"/>
+                                <bpws:link
+                                    name="SetLogContextGETTogetRecordByIdRisorsa" tibex:linkType="SUCCESS"/>
                             </bpws:links>
                             <bpws:empty name="OnMessageStart1"
                                 tibex:constructor="onMessageStart" tibex:xpdlId="20b7d504-f2b0-4521-9659-f362ef05547e">
                                 <bpws:sources>
-                                    <bpws:source linkName="OnMessageStart1TogetRecordByIdRisorsa"/>
+                                    <bpws:source linkName="OnMessageStart1ToSetLogContextGET"/>
                                 </bpws:sources>
                             </bpws:empty>
                             <bpws:empty name="OnMessageEnd1"
@@ -1970,7 +2164,7 @@
                                     tibex:xpdlId="07e3ead2-a3b3-483d-8660-03484e3498dd"
                                     type="bw.generalactivities.callprocess" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                                     <bpws:targets>
-                                    <bpws:target linkName="OnMessageStart1TogetRecordByIdRisorsa"/>
+                                    <bpws:target linkName="SetLogContextGETTogetRecordByIdRisorsa"/>
                                     </bpws:targets>
                                     <bpws:sources>
                                     <bpws:source linkName="getRecordByIdRisorsaTogetOut"/>
@@ -1981,6 +2175,27 @@
                                     </tibex:inputBindings>
                                     <tibex:CallProcess
                                     subProcessName="dbMgmt.sub.getRecordByIdRisorsa" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
+                                </tibex:extActivity>
+                            </bpws:extensionActivity>
+                            <bpws:extensionActivity>
+                                <tibex:extActivity
+                                    inputVariable="SetLogContextGET-input"
+                                    name="SetLogContextGET"
+                                    tibex:xpdlId="80142f2f-f6a4-4d53-bb9a-59e17cc0d240"
+                                    type="bw.generalactivities.callprocess" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                                    <bpws:targets>
+                                    <bpws:target linkName="OnMessageStart1ToSetLogContextGET"/>
+                                    </bpws:targets>
+                                    <bpws:sources>
+                                    <bpws:source linkName="SetLogContextGETTogetRecordByIdRisorsa"/>
+                                    </bpws:sources>
+                                    <tibex:inputBindings>
+                                    <tibex:inputBinding coercion=""
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns3=&quot;http://it.linkem/common/core/lehf/AuditTypes/xsd&quot; xmlns:tib=&quot;http://www.tibco.com/bw/xslt/custom-functions&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;_processContext&quot;/>&lt;xsl:template name=&quot;SetLogContext-input&quot; match=&quot;/&quot;>&lt;tns3:LogContextElement>&lt;APPLICATION_NAME>&lt;xsl:value-of select=&quot;$_processContext/ApplicationName&quot;/>&lt;/APPLICATION_NAME>&lt;STARTTIMESTAMP>&lt;xsl:value-of select=&quot;current-dateTime()&quot;/>&lt;/STARTTIMESTAMP>&lt;TRACKINGID>&lt;xsl:value-of select=&quot;tib:uuid()&quot;/>&lt;/TRACKINGID>&lt;/tns3:LogContextElement>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                    </tibex:inputBindings>
+                                    <tibex:CallProcess
+                                    moduleRef="it.linkem.common.core.lehf.sh"
+                                    subProcessName="it.linkem.common.core.lehf.sh.SetLogContext" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
                                 </tibex:extActivity>
                             </bpws:extensionActivity>
                         </bpws:flow>
@@ -1994,13 +2209,15 @@
                         <bpws:flow name="flow3">
                             <bpws:links>
                                 <bpws:link
-                                    name="OnMessageStart2ToupdateRecord" tibex:linkType="SUCCESS"/>
+                                    name="OnMessageStart2ToSetLogContextPUT" tibex:linkType="SUCCESS"/>
                                 <bpws:link name="updateRecordToputOut" tibex:linkType="SUCCESS"/>
+                                <bpws:link
+                                    name="SetLogContextPUTToupdateRecord" tibex:linkType="SUCCESS"/>
                             </bpws:links>
                             <bpws:empty name="OnMessageStart2"
                                 tibex:constructor="onMessageStart" tibex:xpdlId="78c07d06-0a79-49e4-9aba-6c5e55beb1db">
                                 <bpws:sources>
-                                    <bpws:source linkName="OnMessageStart2ToupdateRecord"/>
+                                    <bpws:source linkName="OnMessageStart2ToSetLogContextPUT"/>
                                 </bpws:sources>
                             </bpws:empty>
                             <bpws:empty name="OnMessageEnd2"
@@ -2011,15 +2228,15 @@
                                 tibex:xpdlId="c9e7fb43-58ea-4104-b382-23bc6bd38ada" variable="putOut-input">
                                 <tibex:inputBindings>
                                     <tibex:partBinding
-                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://xmlns.example.com/20211109183849PLT&quot; xmlns:tns3=&quot;http://www.example.com/namespaces/tns/1636549133422&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;updateRecord&quot;/>&#xa;    &lt;xsl:template name=&quot;putOut-input&quot; match=&quot;/&quot;>&#xa;        &lt;item>&#xa;            &lt;xsl:value-of select=&quot;$updateRecord/tns3:msg&quot;/>&#xa;        &lt;/item>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://xmlns.example.com/20211109183849PLT&quot; xmlns:tns4=&quot;http://www.example.com/namespaces/tns/1636549133422&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;updateRecord&quot;/>&#xa;    &lt;xsl:template name=&quot;putOut-input&quot; match=&quot;/&quot;>&#xa;        &lt;item>&#xa;            &lt;xsl:value-of select=&quot;$updateRecord/tns4:msg&quot;/>&#xa;        &lt;/item>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                                 </tibex:inputBindings>
                                 <tibex:inputBinding expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:tns="http://xmlns.example.com/20211109183849PLT" xmlns:tns3="http://www.example.com/namespaces/tns/1636549133422" version="2.0"&gt;
+&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:tns="http://xmlns.example.com/20211109183849PLT" xmlns:tns4="http://www.example.com/namespaces/tns/1636549133422" version="2.0"&gt;
     &lt;xsl:param name="updateRecord"/&gt;
     &lt;xsl:template name="putOut-input" match="/"&gt;
         &lt;tns:putResponse&gt;
             &lt;item&gt;
-                &lt;xsl:value-of select="$updateRecord/tns3:msg"/&gt;
+                &lt;xsl:value-of select="$updateRecord/tns4:msg"/&gt;
             &lt;/item&gt;
         &lt;/tns:putResponse&gt;
     &lt;/xsl:template&gt;
@@ -2038,7 +2255,7 @@
                                     tibex:xpdlId="9d2645c6-e2f5-442e-b119-f680dca7868a"
                                     type="bw.generalactivities.callprocess" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                                     <bpws:targets>
-                                    <bpws:target linkName="OnMessageStart2ToupdateRecord"/>
+                                    <bpws:target linkName="SetLogContextPUTToupdateRecord"/>
                                     </bpws:targets>
                                     <bpws:sources>
                                     <bpws:source linkName="updateRecordToputOut"/>
@@ -2049,6 +2266,27 @@
                                     </tibex:inputBindings>
                                     <tibex:CallProcess
                                     subProcessName="dbMgmt.sub.updateRecord" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
+                                </tibex:extActivity>
+                            </bpws:extensionActivity>
+                            <bpws:extensionActivity>
+                                <tibex:extActivity
+                                    inputVariable="SetLogContextPUT-input"
+                                    name="SetLogContextPUT"
+                                    tibex:xpdlId="6b922d13-3962-4ac3-bad4-e697e847f23a"
+                                    type="bw.generalactivities.callprocess" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                                    <bpws:targets>
+                                    <bpws:target linkName="OnMessageStart2ToSetLogContextPUT"/>
+                                    </bpws:targets>
+                                    <bpws:sources>
+                                    <bpws:source linkName="SetLogContextPUTToupdateRecord"/>
+                                    </bpws:sources>
+                                    <tibex:inputBindings>
+                                    <tibex:inputBinding coercion=""
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns3=&quot;http://it.linkem/common/core/lehf/AuditTypes/xsd&quot; xmlns:tib=&quot;http://www.tibco.com/bw/xslt/custom-functions&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;_processContext&quot;/>&lt;xsl:template name=&quot;SetLogContextPUT-input&quot; match=&quot;/&quot;>&lt;tns3:LogContextElement>&lt;APPLICATION_NAME>&lt;xsl:value-of select=&quot;$_processContext/ApplicationName&quot;/>&lt;/APPLICATION_NAME>&lt;STARTTIMESTAMP>&lt;xsl:value-of select=&quot;current-dateTime()&quot;/>&lt;/STARTTIMESTAMP>&lt;TRACKINGID>&lt;xsl:value-of select=&quot;tib:uuid()&quot;/>&lt;/TRACKINGID>&lt;/tns3:LogContextElement>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                    </tibex:inputBindings>
+                                    <tibex:CallProcess
+                                    moduleRef="it.linkem.common.core.lehf.sh"
+                                    subProcessName="it.linkem.common.core.lehf.sh.SetLogContext" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
                                 </tibex:extActivity>
                             </bpws:extensionActivity>
                         </bpws:flow>
@@ -2062,14 +2300,16 @@
                         <bpws:flow name="flow4">
                             <bpws:links>
                                 <bpws:link
-                                    name="OnMessageStart3ToremoveRecordByIdRisorsa" tibex:linkType="SUCCESS"/>
+                                    name="OnMessageStart3ToSetLogContextDELETE" tibex:linkType="SUCCESS"/>
                                 <bpws:link
                                     name="removeRecordByIdRisorsaTodeleteOut" tibex:linkType="SUCCESS"/>
+                                <bpws:link
+                                    name="SetLogContextDELETEToremoveRecordByIdRisorsa" tibex:linkType="SUCCESS"/>
                             </bpws:links>
                             <bpws:empty name="OnMessageStart3"
                                 tibex:constructor="onMessageStart" tibex:xpdlId="eeda6481-8dff-4527-bd1e-3192123ce24d">
                                 <bpws:sources>
-                                    <bpws:source linkName="OnMessageStart3ToremoveRecordByIdRisorsa"/>
+                                    <bpws:source linkName="OnMessageStart3ToSetLogContextDELETE"/>
                                 </bpws:sources>
                             </bpws:empty>
                             <bpws:empty name="OnMessageEnd3"
@@ -2099,7 +2339,7 @@
                                     tibex:xpdlId="af9be4fa-d801-42d9-9570-fb6f4740c787"
                                     type="bw.generalactivities.callprocess" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                                     <bpws:targets>
-                                    <bpws:target linkName="OnMessageStart3ToremoveRecordByIdRisorsa"/>
+                                    <bpws:target linkName="SetLogContextDELETEToremoveRecordByIdRisorsa"/>
                                     </bpws:targets>
                                     <bpws:sources>
                                     <bpws:source linkName="removeRecordByIdRisorsaTodeleteOut"/>
@@ -2110,6 +2350,27 @@
                                     </tibex:inputBindings>
                                     <tibex:CallProcess
                                     subProcessName="dbMgmt.sub.removeRecordByIdRisorsa" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
+                                </tibex:extActivity>
+                            </bpws:extensionActivity>
+                            <bpws:extensionActivity>
+                                <tibex:extActivity
+                                    inputVariable="SetLogContextDELETE-input"
+                                    name="SetLogContextDELETE"
+                                    tibex:xpdlId="4b90ba15-870b-4c3e-b984-3a291636a627"
+                                    type="bw.generalactivities.callprocess" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                                    <bpws:targets>
+                                    <bpws:target linkName="OnMessageStart3ToSetLogContextDELETE"/>
+                                    </bpws:targets>
+                                    <bpws:sources>
+                                    <bpws:source linkName="SetLogContextDELETEToremoveRecordByIdRisorsa"/>
+                                    </bpws:sources>
+                                    <tibex:inputBindings>
+                                    <tibex:inputBinding coercion=""
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns3=&quot;http://it.linkem/common/core/lehf/AuditTypes/xsd&quot; xmlns:tib=&quot;http://www.tibco.com/bw/xslt/custom-functions&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;_processContext&quot;/>&lt;xsl:template name=&quot;SetLogContextDELETE-input&quot; match=&quot;/&quot;>&lt;tns3:LogContextElement>&lt;APPLICATION_NAME>&lt;xsl:value-of select=&quot;$_processContext/ApplicationName&quot;/>&lt;/APPLICATION_NAME>&lt;STARTTIMESTAMP>&lt;xsl:value-of select=&quot;current-dateTime()&quot;/>&lt;/STARTTIMESTAMP>&lt;TRACKINGID>&lt;xsl:value-of select=&quot;tib:uuid()&quot;/>&lt;/TRACKINGID>&lt;/tns3:LogContextElement>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                    </tibex:inputBindings>
+                                    <tibex:CallProcess
+                                    moduleRef="it.linkem.common.core.lehf.sh"
+                                    subProcessName="it.linkem.common.core.lehf.sh.SetLogContext" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
                                 </tibex:extActivity>
                             </bpws:extensionActivity>
                         </bpws:flow>

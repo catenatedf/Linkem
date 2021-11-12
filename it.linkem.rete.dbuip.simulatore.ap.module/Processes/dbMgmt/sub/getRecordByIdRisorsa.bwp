@@ -449,7 +449,7 @@
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.1"/>
-                                    <layoutConstraint x="462"
+                                    <layoutConstraint x="537"
                                     xsi:type="notation:Bounds" y="125"/>
                                     </children>
                                     <children type="4002">
@@ -488,7 +488,7 @@
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.2"/>
-                                    <layoutConstraint x="181"
+                                    <layoutConstraint x="242"
                                     xsi:type="notation:Bounds" y="125"/>
                                     </children>
                                     <children type="4002">
@@ -523,7 +523,7 @@
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.3"/>
-                                    <layoutConstraint x="35"
+                                    <layoutConstraint x="78"
                                     xsi:type="notation:Bounds" y="125"/>
                                     </children>
                                     <children type="4002">
@@ -558,7 +558,7 @@
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.4"/>
-                                    <layoutConstraint x="308"
+                                    <layoutConstraint x="391"
                                     xsi:type="notation:Bounds" y="125"/>
                                     </children>
                                     <styles xsi:type="notation:DrawerStyle"/>
