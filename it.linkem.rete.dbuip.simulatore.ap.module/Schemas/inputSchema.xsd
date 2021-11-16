@@ -45,8 +45,29 @@
     <xsd:element name="ipReservationInput">
     <xsd:complexType>
       <xsd:sequence>
-      	<xsd:element maxOccurs="1" minOccurs="1" name="btsName" type="xsd:string"/>
-        <xsd:element maxOccurs="1" minOccurs="1" name="tipoContratto" type="xsd:string"/>
+      	<xsd:element maxOccurs="1" minOccurs="1" name="btsname" type="xsd:string"/>
+        <xsd:element maxOccurs="1" minOccurs="1" name="tipocontratto" type="xsd:string"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+    <xsd:element name="simDbUpdate_Input">
+    <xsd:complexType>
+      <xsd:sequence>
+      	<xsd:element maxOccurs="1" minOccurs="1" name="idrisorsa" type="xsd:string"/>
+        <xsd:element maxOccurs="1" minOccurs="0" name="imsi" type="xsd:string"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="setSharedVariable_Input">
+    <xsd:complexType>
+      <xsd:sequence>
+      	<xsd:element maxOccurs="1" minOccurs="1" name="cod" type="xsd:int"/>
+        <xsd:element maxOccurs="1" minOccurs="1" name="descrizione" type="xsd:string"/>
+        <xsd:element maxOccurs="1" minOccurs="1" name="azione" type="xsd:string"/>
+        <xsd:element maxOccurs="1" minOccurs="0" name="imsi" type="xsd:string"/>
+        <xsd:element maxOccurs="1" minOccurs="0" name="ippubblico" type="xsd:string"/>
+        <xsd:element maxOccurs="1" minOccurs="0" name="mask" type="xsd:int"/>
+        <xsd:element maxOccurs="1" minOccurs="0" name="ipprivato" type="xsd:string"/>
       </xsd:sequence>
     </xsd:complexType>
   </xsd:element>
