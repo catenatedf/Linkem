@@ -23,6 +23,76 @@
     xmlns:sca-bpel="http://docs.oasis-open.org/ns/opencsa/sca-bpel/200801"
     xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"
     xmlns:tibprop="http://ns.tibco.com/bw/property" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <tibex:VariableDescriptor type="MemorySaving">
+        <task name="postOut">
+            <endingVariables>
+                <variable>postOut-input</variable>
+                <variable>addNewRecord</variable>
+            </endingVariables>
+        </task>
+        <task name="addNewRecord">
+            <endingVariables>
+                <variable>addNewRecord-input</variable>
+                <variable>post</variable>
+            </endingVariables>
+        </task>
+        <task name="SetLogContextPOST">
+            <endingVariables>
+                <variable>SetLogContextPOST-input</variable>
+            </endingVariables>
+        </task>
+        <task name="getOut">
+            <endingVariables>
+                <variable>getOut-input</variable>
+                <variable>getRecordByIdRisorsa</variable>
+            </endingVariables>
+        </task>
+        <task name="getRecordByIdRisorsa">
+            <endingVariables>
+                <variable>getRecordByIdRisorsa-input</variable>
+                <variable>get</variable>
+            </endingVariables>
+        </task>
+        <task name="SetLogContextGET">
+            <endingVariables>
+                <variable>SetLogContextGET-input</variable>
+            </endingVariables>
+        </task>
+        <task name="putOut">
+            <endingVariables>
+                <variable>putOut-input</variable>
+                <variable>updateRecord</variable>
+            </endingVariables>
+        </task>
+        <task name="updateRecord">
+            <endingVariables>
+                <variable>updateRecord-input</variable>
+                <variable>put</variable>
+            </endingVariables>
+        </task>
+        <task name="SetLogContextPUT">
+            <endingVariables>
+                <variable>SetLogContextPUT-input</variable>
+            </endingVariables>
+        </task>
+        <task name="deleteOut">
+            <endingVariables>
+                <variable>deleteOut-input</variable>
+            </endingVariables>
+        </task>
+        <task name="removeRecordByIdRisorsa">
+            <endingVariables>
+                <variable>removeRecordByIdRisorsa-input</variable>
+                <variable>removeRecordByIdRisorsa</variable>
+                <variable>delete</variable>
+            </endingVariables>
+        </task>
+        <task name="SetLogContextDELETE">
+            <endingVariables>
+                <variable>SetLogContextDELETE-input</variable>
+            </endingVariables>
+        </task>
+    </tibex:VariableDescriptor>
     <tibex:Types>
         <xs:schema attributeFormDefault="unqualified"
             elementFormDefault="qualified"

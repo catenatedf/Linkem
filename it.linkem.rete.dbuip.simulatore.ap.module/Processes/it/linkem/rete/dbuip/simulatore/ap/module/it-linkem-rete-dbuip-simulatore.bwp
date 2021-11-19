@@ -186,6 +186,10 @@
             <plnk:partnerLinkType name="partnerLinkType1">
                 <plnk:role name="use" portType="ptyp:SpringIfServicePortType"/>
             </plnk:partnerLinkType>
+            <plnk:partnerLinkType name="partnerLinkType">
+                <plnk:role name="use" portType="ptyp:SpringIfServicePortType"/>
+            </plnk:partnerLinkType>
+            <wsdl:import namespace="http://172.28.136.90/dbuip/ws/SpringIfService"/>
             <wsdl:import namespace="http://172.28.136.90/dbuip/ws/SpringIfService"/>
             <wsdl:import namespace="http://172.28.136.90/dbuip/ws/SpringIfService"/>
         </wsdl:definitions>
@@ -2620,7 +2624,7 @@
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.example.com/namespaces/tns/1636549133422"/>
     <bpws:partnerLinks>
         <bpws:partnerLink myRole="use" name="SpringIfServicePortType"
-            partnerLinkType="ns0:partnerLinkType1"
+            partnerLinkType="ns0:partnerLinkType"
             sca-bpel:ignore="false" sca-bpel:service="SpringIfServicePortType"/>
     </bpws:partnerLinks>
     <bpws:variables>

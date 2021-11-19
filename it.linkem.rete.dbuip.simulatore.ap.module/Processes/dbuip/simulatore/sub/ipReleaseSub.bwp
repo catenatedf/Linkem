@@ -15,6 +15,44 @@
     xmlns:sca-bpel="http://docs.oasis-open.org/ns/opencsa/sca-bpel/200801"
     xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"
     xmlns:tibprop="http://ns.tibco.com/bw/property" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <tibex:VariableDescriptor type="MemorySaving">
+        <task name="LogStart">
+            <endingVariables>
+                <variable>LogStart-input</variable>
+                <variable>LogStart</variable>
+            </endingVariables>
+        </task>
+        <task name="LogEnd">
+            <endingVariables>
+                <variable>LogEnd-input</variable>
+                <variable>LogEnd</variable>
+                <variable>DEBUG_Severity</variable>
+                <variable>Start</variable>
+            </endingVariables>
+        </task>
+        <task name="SetSharedVariable">
+            <endingVariables>
+                <variable>SetSharedVariable-input</variable>
+                <variable>SetSharedVariable</variable>
+            </endingVariables>
+        </task>
+        <task name="simDbUpdate">
+            <endingVariables>
+                <variable>simDbUpdate-input</variable>
+            </endingVariables>
+        </task>
+        <task name="End">
+            <endingVariables>
+                <variable>simDbUpdate</variable>
+            </endingVariables>
+        </task>
+        <task name="JDBCUpdate">
+            <endingVariables>
+                <variable>JDBCUpdate-input</variable>
+                <variable>JDBCUpdate</variable>
+            </endingVariables>
+        </task>
+    </tibex:VariableDescriptor>
     <tibex:Types>
         <xs:schema attributeFormDefault="unqualified"
             elementFormDefault="qualified"
@@ -902,7 +940,7 @@
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding coercion=""
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://www.example.com/namespaces/tns/1636477876810&quot; version=&quot;2.0&quot;>&lt;xsl:template name=&quot;SetSharedVariable-input&quot; match=&quot;/&quot;>&lt;tns:setSharedVariable_Input>&lt;tns:cod>&lt;xsl:value-of select=&quot;1&quot;/>&lt;/tns:cod>&lt;tns:descrizione>&lt;xsl:value-of select=&quot;&amp;quot;IPRelased&amp;quot;&quot;/>&lt;/tns:descrizione>&lt;tns:azione>&lt;xsl:value-of select=&quot;&amp;quot;IPRelease&amp;quot;&quot;/>&lt;/tns:azione>&lt;/tns:setSharedVariable_Input>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://www.example.com/namespaces/tns/1636477876810&quot; version=&quot;2.0&quot;>&lt;xsl:template name=&quot;SetSharedVariable-input&quot; match=&quot;/&quot;>&lt;tns:setSharedVariable_Input>&lt;tns:cod>&lt;xsl:value-of select=&quot;2&quot;/>&lt;/tns:cod>&lt;tns:descrizione>&lt;xsl:value-of select=&quot;&amp;quot;IPRelased&amp;quot;&quot;/>&lt;/tns:descrizione>&lt;tns:azione>&lt;xsl:value-of select=&quot;&amp;quot;IPRelease&amp;quot;&quot;/>&lt;/tns:azione>&lt;/tns:setSharedVariable_Input>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:SetSharedVariable
                         variableName="sharedVariables" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
