@@ -187,8 +187,6 @@
                     <sequence>
                         <element maxOccurs="1" minOccurs="1"
                             name="idrisorsa" nillable="true" type="string"/>
-                        <element maxOccurs="1" minOccurs="1" name="imsi"
-                            nillable="true" type="string"/>
                         <element maxOccurs="1" minOccurs="0"
                             name="ServerTimeZone" type="string"/>
                         <element maxOccurs="1" minOccurs="0"
@@ -527,8 +525,8 @@
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.0"/>
-                                    <layoutConstraint x="1"
-                                    xsi:type="notation:Bounds" y="67"/>
+                                    <layoutConstraint x="2"
+                                    xsi:type="notation:Bounds" y="85"/>
                                     </children>
                                     <children type="4002">
                                     <children type="4017">
@@ -562,8 +560,8 @@
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.1"/>
-                                    <layoutConstraint x="780"
-                                    xsi:type="notation:Bounds" y="67"/>
+                                    <layoutConstraint x="781"
+                                    xsi:type="notation:Bounds" y="85"/>
                                     </children>
                                     <children type="4002">
                                     <children type="4017">
@@ -602,8 +600,8 @@
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.2"/>
                                     <layoutConstraint
-                                    height="61" x="514"
-                                    xsi:type="notation:Bounds" y="67"/>
+                                    height="61" x="515"
+                                    xsi:type="notation:Bounds" y="85"/>
                                     </children>
                                     <children type="4002">
                                     <children type="4017">
@@ -637,8 +635,8 @@
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.3"/>
-                                    <layoutConstraint x="383"
-                                    xsi:type="notation:Bounds" y="67"/>
+                                    <layoutConstraint x="384"
+                                    xsi:type="notation:Bounds" y="85"/>
                                     </children>
                                     <children type="4002">
                                     <children type="4017">
@@ -672,8 +670,8 @@
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.4"/>
-                                    <layoutConstraint x="249"
-                                    xsi:type="notation:Bounds" y="67"/>
+                                    <layoutConstraint x="250"
+                                    xsi:type="notation:Bounds" y="85"/>
                                     </children>
                                     <children type="4002">
                                     <children type="4017">
@@ -707,8 +705,8 @@
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.5"/>
-                                    <layoutConstraint x="116"
-                                    xsi:type="notation:Bounds" y="67"/>
+                                    <layoutConstraint x="117"
+                                    xsi:type="notation:Bounds" y="85"/>
                                     </children>
                                     <children type="4002">
                                     <children type="4017">
@@ -742,8 +740,8 @@
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.6"/>
-                                    <layoutConstraint x="638"
-                                    xsi:type="notation:Bounds" y="67"/>
+                                    <layoutConstraint x="639"
+                                    xsi:type="notation:Bounds" y="85"/>
                                     </children>
                                     <styles xsi:type="notation:DrawerStyle"/>
                                     <styles xsi:type="notation:SortingStyle"/>
@@ -757,8 +755,8 @@
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <styles xsi:type="bwnotation:ResizingStyle"/>
                                     <element href="//0/@process/@activity/@activity"/>
-                                    <layoutConstraint height="235"
-                                    width="945" xsi:type="notation:Bounds"/>
+                                    <layoutConstraint height="293"
+                                    width="913" xsi:type="notation:Bounds"/>
                                 </children>
                                 <styles xsi:type="notation:SortingStyle"/>
                                 <styles xsi:type="notation:FilteringStyle"/>
@@ -767,8 +765,7 @@
                             <styles xsi:type="bwnotation:BackgroundStyle"/>
                             <styles xsi:type="bwnotation:ResizingStyle"/>
                             <element href="//0/@process/@activity"/>
-                            <layoutConstraint height="365" width="444"
-                                x="30" xsi:type="notation:Bounds" y="20"/>
+                            <layoutConstraint height="293" width="916" xsi:type="notation:Bounds"/>
                         </children>
                         <styles xsi:type="notation:SortingStyle"/>
                         <styles xsi:type="notation:FilteringStyle"/>
@@ -778,7 +775,8 @@
                     <styles xsi:type="bwnotation:BackgroundStyle"/>
                     <styles xsi:type="bwnotation:ResizingStyle"/>
                     <element href="//0/@process/@activity"/>
-                    <layoutConstraint height="409" width="519" xsi:type="notation:Bounds"/>
+                    <layoutConstraint height="317" width="916" x="1"
+                        xsi:type="notation:Bounds" y="1"/>
                 </children>
                 <styles xsi:type="notation:SortingStyle"/>
                 <styles xsi:type="notation:FilteringStyle"/>
@@ -786,7 +784,7 @@
             </children>
             <styles fontName="Segoe UI" lineColor="0" xsi:type="notation:ShapeStyle"/>
             <element href="//0/@process"/>
-            <layoutConstraint height="311" width="1239" xsi:type="notation:Bounds"/>
+            <layoutConstraint height="369" width="1258" xsi:type="notation:Bounds"/>
         </children>
         <styles xsi:type="notation:DiagramStyle"/>
         <element href="//0"/>
@@ -872,6 +870,10 @@
             namespace="http://www.tibco.com/bw/xpath/bw-custom-functions" prefix="bw"/>
         <tibex:namespaceItem
             namespace="http://it.linkem/common/core/lehf/AuditTypes/xsd" prefix="tns3"/>
+        <tibex:namespaceItem
+            namespace="http://www.w3.org/2001/XMLSchema" prefix="xsd"/>
+        <tibex:namespaceItem
+            namespace="http://www.tibco.com/bw/xslt/custom-functions" prefix="tib"/>
     </tibex:NamespaceRegistry>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.example.com/namespaces/tns/1636477876810"/>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.example.com/namespaces/tns/1636549133422"/>
@@ -951,7 +953,7 @@
                     </bpws:targets>
                     <tibex:inputBindings>
                         <tibex:inputBinding
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns1=&quot;http://www.example.com/namespaces/tns/1636549133422&quot; xmlns:tns=&quot;http://www.example.com/namespaces/tns/1636477876810&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;GetSharedVariable&quot;/>&lt;xsl:template name=&quot;End-input&quot; match=&quot;/&quot;>&lt;tns1:simulatoreOutput>&lt;tns1:cod>&lt;xsl:value-of select=&quot;$GetSharedVariable/tns:cod&quot;/>&lt;/tns1:cod>&lt;tns1:desc>&lt;xsl:value-of select=&quot;$GetSharedVariable/tns:descrizione&quot;/>&lt;/tns1:desc>&lt;tns1:idTransizione>&lt;xsl:value-of select=&quot;$GetSharedVariable/tns:azione&quot;/>&lt;/tns1:idTransizione>&lt;/tns1:simulatoreOutput>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns1=&quot;http://www.example.com/namespaces/tns/1636549133422&quot; xmlns:tns=&quot;http://www.example.com/namespaces/tns/1636477876810&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:tib=&quot;http://www.tibco.com/bw/xslt/custom-functions&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;GetSharedVariable&quot;/>&lt;xsl:param name=&quot;JDBCQuery&quot;/>&lt;xsl:template name=&quot;End-input&quot; match=&quot;/&quot;>&lt;tns1:simulatoreOutput>&lt;tns1:cod>&lt;xsl:value-of select=&quot;$GetSharedVariable/tns:cod&quot;/>&lt;/tns1:cod>&lt;tns1:desc>&lt;xsl:value-of select=&quot;$GetSharedVariable/tns:descrizione&quot;/>&lt;/tns1:desc>&lt;tns1:idTransizione>&lt;xsl:value-of select=&quot;xsd:ID($JDBCQuery/Record[1]/idtransizione)&quot;/>&lt;/tns1:idTransizione>&lt;/tns1:simulatoreOutput>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:config>
                         <bwext:BWActivity
@@ -981,7 +983,7 @@
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns5=&quot;http://www.tibco.com/namespaces/tnt/plugins/jdbc+fa79f2a6-1a22-43ed-8225-f1d4772a99c8+input&quot; xmlns:tns=&quot;http://www.example.com/namespaces/tns/1636477876810&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;Start&quot;/>&lt;xsl:template name=&quot;JDBCQuery-input&quot; match=&quot;/&quot;>&lt;tns5:jdbcQueryActivityInput>&lt;idrisorsa>&lt;xsl:value-of select=&quot;$Start/tns:idrisorsa&quot;/>&lt;/idrisorsa>&lt;imsi>&lt;xsl:choose>&lt;xsl:when test=&quot;exists($Start/tns:imsi)&quot;>&lt;xsl:value-of select=&quot;$Start/tns:imsi&quot;/>&lt;/xsl:when>&lt;xsl:otherwise>&lt;xsl:attribute name=&quot;xsi:nil&quot;>true&lt;/xsl:attribute>&lt;/xsl:otherwise>&lt;/xsl:choose>&lt;/imsi>&lt;/tns5:jdbcQueryActivityInput>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns5=&quot;http://www.tibco.com/namespaces/tnt/plugins/jdbc+fa79f2a6-1a22-43ed-8225-f1d4772a99c8+input&quot; xmlns:tns=&quot;http://www.example.com/namespaces/tns/1636477876810&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;Start&quot;/>&lt;xsl:template name=&quot;JDBCQuery-input&quot; match=&quot;/&quot;>&lt;tns5:jdbcQueryActivityInput>&lt;idrisorsa>&lt;xsl:value-of select=&quot;$Start/tns:idrisorsa&quot;/>&lt;/idrisorsa>&lt;/tns5:jdbcQueryActivityInput>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:config>
                         <bwext:BWActivity
@@ -994,14 +996,11 @@
                                     <type href="http://ns.tibco.com/bw/palette/jdbc#//JDBCQueryActivity"/>
                                     <value maxRows="100"
                                     sharedResourceProperty="jdbcProperty"
-                                    sqlStatement="SELECT * FROM dbuip&#xa;WHERE idrisorsa = ? and imsi = ?;"
+                                    sqlStatement="SELECT * FROM dbuip&#xa;WHERE idrisorsa = ?;"
                                     timeout="10" xsi:type="jdbcPalette:JDBCQueryActivity">
                                     <PreparedParameters
                                     DataType="12"
                                     DataTypeDisplayValue="VARCHAR" ParameterName="idrisorsa"/>
-                                    <PreparedParameters
-                                    DataType="12"
-                                    DataTypeDisplayValue="VARCHAR" ParameterName="imsi"/>
                                     <columnMetadata columnIndex="1"
                                     columnName="btsname"
                                     dataType="12"
@@ -1066,7 +1065,7 @@
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns2=&quot;http://www.tibco.com/namespaces/tnt/plugins/jdbc+0aa34bbe-4d10-45b2-9dc8-b8acd726ff9b+input&quot; xmlns:tns=&quot;http://www.example.com/namespaces/tns/1636477876810&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;GetSharedVariable&quot;/>&#xa;    &lt;xsl:param name=&quot;Start&quot;/>&#xa;    &lt;xsl:template name=&quot;JDBCUpdate-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns2:jdbcUpdateActivityInput>&#xa;            &lt;cod>&#xa;                &lt;xsl:value-of select=&quot;$GetSharedVariable/tns:cod&quot;/>&#xa;            &lt;/cod>&#xa;            &lt;descrizione>&#xa;                &lt;xsl:value-of select=&quot;$GetSharedVariable/tns:descrizione&quot;/>&#xa;            &lt;/descrizione>&#xa;            &lt;idtransizione>&#xa;                &lt;xsl:value-of select=&quot;string(current-dateTime())&quot;/>&#xa;            &lt;/idtransizione>&#xa;            &lt;azione>&#xa;                &lt;xsl:value-of select=&quot;$GetSharedVariable/tns:azione&quot;/>&#xa;            &lt;/azione>&#xa;            &lt;idrisorsa>&#xa;                &lt;xsl:value-of select=&quot;$Start/tns:idrisorsa&quot;/>&#xa;            &lt;/idrisorsa>&#xa;        &lt;/tns2:jdbcUpdateActivityInput>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns2=&quot;http://www.tibco.com/namespaces/tnt/plugins/jdbc+0aa34bbe-4d10-45b2-9dc8-b8acd726ff9b+input&quot; xmlns:tns=&quot;http://www.example.com/namespaces/tns/1636477876810&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:tib=&quot;http://www.tibco.com/bw/xslt/custom-functions&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;GetSharedVariable&quot;/>&lt;xsl:param name=&quot;Start&quot;/>&lt;xsl:template name=&quot;JDBCUpdate-input&quot; match=&quot;/&quot;>&lt;tns2:jdbcUpdateActivityInput>&lt;cod>&lt;xsl:value-of select=&quot;$GetSharedVariable/tns:cod&quot;/>&lt;/cod>&lt;descrizione>&lt;xsl:value-of select=&quot;$GetSharedVariable/tns:descrizione&quot;/>&lt;/descrizione>&lt;idtransizione>&lt;xsl:value-of select=&quot;concat(&amp;quot;a&amp;quot;,string(tib:timestamp()))&quot;/>&lt;/idtransizione>&lt;azione>&lt;xsl:value-of select=&quot;$GetSharedVariable/tns:azione&quot;/>&lt;/azione>&lt;idrisorsa>&lt;xsl:value-of select=&quot;$Start/tns:idrisorsa&quot;/>&lt;/idrisorsa>&lt;/tns2:jdbcUpdateActivityInput>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:config>
                         <bwext:BWActivity
