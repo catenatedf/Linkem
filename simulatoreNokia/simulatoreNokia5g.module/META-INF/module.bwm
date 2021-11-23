@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:parameters="http://xmlns.example.com/setAllImsIp/parameters" xmlns:property="http://ns.tibco.com/bw/property" xmlns:rest="http://xsd.tns.tibco.com/bw/models/binding/rest" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scact="http://xsd.tns.tibco.com/amf/models/sca/componentType" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_MMBMMCHsEeyZI5WvOfj_Rg" targetNamespace="http://tns.tibco.com/bw/composite/simulatoreNokia5g.module" name="simulatoreNokia5g.module" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:service xmi:id="_kQIsgCHsEeyZI5WvOfj_Rg" name="getimsifromip" promote="ComponentgetIMSIFromIp/getimsifromip">
+    <sca:interface.wsdl xmi:id="_kQTEkCHsEeyZI5WvOfj_Rg" interface="http://xmlns.example.com/20210930144726PLT#wsdl.interface(getimsifromip)" scaext:wsdlLocation="../Processes/simulatorenokia5g/module/pcrf/getIMSIFromIp.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_kQgf8CHsEeyZI5WvOfj_Rg" name="RestService" path="/getimsifromip" docBasePath="http://localhost:7777/simulatoreNokia5g.module" docResourcePath="getIMSIFromIp" basePath="/" connector="simulatorenokia5g.module.getIMSIFromIp" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/simulatorenokia5g.module.pcrf.getIMSIFromIp-getIMSIFromIp.json">
+      <operation xmi:id="_kQmmkCHsEeyZI5WvOfj_Rg" operationName="get" nickname="get-getimsifromip" httpMethod="GET" notes="getGetIMSIFromIp" responseStyle="element" outputPartName="IMSI">
+        <parameters xmi:id="_GXxgMCHtEeyZI5WvOfj_Rg">
+          <parameterMapping xmi:id="_GXxgMSHtEeyZI5WvOfj_Rg" parameterName="processParams" parameterType="Query" dataType="string" required="true"/>
+        </parameters>
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <parameters xmi:id="_kTW_oCHsEeyZI5WvOfj_Rg"/>
+      <advancedConfig xmi:id="_kQkKUCHsEeyZI5WvOfj_Rg" blockingQueueSize="2147483647"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_kQmmkSHsEeyZI5WvOfj_Rg" bindingName="RestService"/>
+  </sca:service>
+  <sca:service xmi:id="__4zx4CdAEey5nYx5DYFiig" name="imsip" promote="Componentimsip/imsip">
+    <sca:interface.wsdl xmi:id="__4870CdAEey5nYx5DYFiig" interface="http://xmlns.example.com/20211007093425PLT#wsdl.interface(imsip)" scaext:wsdlLocation="../Processes/simulatorenokia5g/module/pcrf/crud/imsip.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="__5B0UCdAEey5nYx5DYFiig" name="RestService1" path="/imsip" docBasePath="http://localhost:7777/simulatoreNokia5g.module" docResourcePath="imsip" basePath="/" connector="simulatorenokia5g.module.getIMSIFromIp" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/simulatorenokia5g.module.pcrf.crud.imsip-imsip.json">
+      <operation xmi:id="__5CbYCdAEey5nYx5DYFiig" operationName="post" nickname="post-imsip" httpMethod="POST" notes="postImsip" responseStyle="element" requestStyle="element" outputPartName="response_code">
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <operation xmi:id="__5CbYSdAEey5nYx5DYFiig" operationName="get" nickname="get-imsip" httpMethod="GET" notes="getImsip" responseStyle="element" outputPartName="Response">
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <operation xmi:id="__5CbYidAEey5nYx5DYFiig" operationName="put" nickname="put-imsip" httpMethod="PUT" notes="putImsip" responseStyle="element" requestStyle="element" outputPartName="Repsonse_code">
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <operation xmi:id="_Gq7WYCd3EeyOXMGiZG0Z7w" operationName="delete" nickname="delete-imsip" httpMethod="DELETE" notes="deleteImsip" responseStyle="element">
+        <parameters xmi:id="_O_w6YCd3EeyOXMGiZG0Z7w">
+          <parameterMapping xmi:id="_O_w6YSd3EeyOXMGiZG0Z7w" parameterName="ip" parameterType="Query" dataType="string" required="true"/>
+        </parameters>
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <parameters xmi:id="__5HT4CdAEey5nYx5DYFiig"/>
+      <advancedConfig xmi:id="__5B0USdAEey5nYx5DYFiig" blockingQueueSize="2147483647"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="__5CbYydAEey5nYx5DYFiig" bindingName="RestService1"/>
+  </sca:service>
+  <sca:service xmi:id="_O7JoECzFEeybsNnusrZhzQ" name="sim" promote="Componentsim/sim">
+    <sca:interface.wsdl xmi:id="_O7TZECzFEeybsNnusrZhzQ" interface="http://xmlns.example.com/20211014100335PLT#wsdl.interface(sim)" scaext:wsdlLocation="../Processes/simulatorenokia5g/module/udm/crud/sim.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_O7cjACzFEeybsNnusrZhzQ" name="RestService2" path="/sim" docBasePath="http://localhost:7777/simulatoreNokia5g.module" docResourcePath="sim" basePath="/" connector="simulatorenokia5g.module.getIMSIFromIp" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/simulatorenokia5g.module.udm.crud.sim-sim.json">
+      <operation xmi:id="_O7iCkCzFEeybsNnusrZhzQ" operationName="post" nickname="post-sim" httpMethod="POST" notes="postSim" responseStyle="element" outputPartName="udmResponse">
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <operation xmi:id="_O7iCkSzFEeybsNnusrZhzQ" operationName="get" nickname="get-sim" httpMethod="GET" notes="getSim" responseStyle="element" outputPartName="udmResponse">
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <operation xmi:id="_O7iCkizFEeybsNnusrZhzQ" operationName="put" nickname="put-sim" httpMethod="PUT" notes="putSim" responseStyle="element" outputPartName="udmResponse">
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <operation xmi:id="_O7iCkyzFEeybsNnusrZhzQ" operationName="delete" nickname="delete-sim" httpMethod="DELETE" notes="deleteSim" responseStyle="element" outputPartName="udmResponse">
+        <parameters xmi:id="_CQjNoCzZEey4nLsa78Vhkw">
+          <parameterMapping xmi:id="_CQjNoSzZEey4nLsa78Vhkw" parameterName="imsi" parameterType="Query" dataType="string" required="true"/>
+        </parameters>
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <parameters xmi:id="_O7pXUCzFEeybsNnusrZhzQ"/>
+      <advancedConfig xmi:id="_O7cjASzFEeybsNnusrZhzQ" blockingQueueSize="2147483647"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_O7iClCzFEeybsNnusrZhzQ" bindingName="RestService2"/>
+  </sca:service>
+  <sca:service xmi:id="_WFKEsC2WEeyOvYTautZvnQ" name="resetcontractsim" promote="ComponentresetContractSim/resetcontractsim">
+    <sca:interface.wsdl xmi:id="_WFRZcC2WEeyOvYTautZvnQ" interface="http://xmlns.example.com/20211015110028PLT#wsdl.interface(resetcontractsim)" scaext:wsdlLocation="../Processes/simulatorenokia5g/module/test/resetContractSim.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_WFZVQC2WEeyOvYTautZvnQ" name="RestService3" path="/resetcontractsim" docBasePath="http://localhost:7777/simulatoreNokia5g.module" docResourcePath="resetContractSim" basePath="/" connector="simulatorenokia5g.module.getIMSIFromIp" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/simulatorenokia5g.module.test.resetContractSim-resetContractSim.json">
+      <operation xmi:id="_WFdmsC2WEeyOvYTautZvnQ" operationName="post" nickname="post-resetcontractsim" httpMethod="POST" notes="postResetContractSim" responseStyle="element" requestStyle="element" outputPartName="testPostResetContractSimResponse">
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <parameters xmi:id="_WFgC8C2WEeyOvYTautZvnQ"/>
+      <advancedConfig xmi:id="_WFZVQS2WEeyOvYTautZvnQ" blockingQueueSize="2147483647"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_WFdmsS2WEeyOvYTautZvnQ" bindingName="RestService3"/>
+  </sca:service>
+  <sca:property xmi:id="_NQXlICHsEeyZI5WvOfj_Rg" name="BW.DEPLOYMENTUNIT.TYPE" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_NQmOoCHsEeyZI5WvOfj_Rg" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_NQ04ICHsEeyZI5WvOfj_Rg" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_NRJoQCHsEeyZI5WvOfj_Rg" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_NRauACHsEeyZI5WvOfj_Rg" name="BW.DOMAIN.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_NRhbsCHsEeyZI5WvOfj_Rg" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_NRowcCHsEeyZI5WvOfj_Rg" name="BW.APPSPACE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_NRto8CHsEeyZI5WvOfj_Rg" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_NRx6YCHsEeyZI5WvOfj_Rg" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_Fjrg8CX3Eeymjp-vGrIqxw" name="host" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_JAd38Cw5EeyvTYRNqq8OdQ" name="udmPort" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_LgQUICw5EeyvTYRNqq8OdQ" name="pcrfAndUIPort" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_HH42kCWzEeyZI5WvOfj_Rg" name="/simDB/user" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_KuGvUCWzEeyZI5WvOfj_Rg" name="/simDB/password" type="property:password" scaext:simpleValue="#!ds6YcLD3/2x/jn8mtGTFOg==" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_bKtSYCgpEeyOXMGiZG0Z7w" name="/simDB/connectionUrl" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_mUi28CqBEeygV7SevULJ2Q" name="/UDM-Responses/getUSer/part1" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_AddOoCqEEeygV7SevULJ2Q" name="/UDM-Responses/getUSer/part2" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_FJv-oCqEEeygV7SevULJ2Q" name="/UDM-Responses/getUSer/part3" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_01Oh8CwdEeyR9qbnDJscWQ" name="/UDM-Responses/changeProfile/part1" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_Bj0UcCweEeyR9qbnDJscWQ" name="/UDM-Responses/changeProfile/part2" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_MbmWUCweEeyR9qbnDJscWQ" name="/UDM-Responses/changeProfile/part3" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_KDziECwqEeyR9qbnDJscWQ" name="/UDM-Responses/suspend/part1" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_PcNxMCwqEeyR9qbnDJscWQ" name="/UDM-Responses/suspend/part2" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_SGsacCwqEeyR9qbnDJscWQ" name="/UDM-Responses/suspend/part3" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_G1cHUC2YEeyOvYTautZvnQ" name="/CRM/username" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_3Nz1sC2YEeyOvYTautZvnQ" name="/CRM/OrganizationService" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_7wBcoC2YEeyOvYTautZvnQ" name="/CRM/password" type="property:password" scaext:simpleValue="#!OaFnOVsoybLqcP7q/XZ1zw==" publicAccess="true" scalable="true"/>
+  <sca:component xmi:id="_kP404CHsEeyZI5WvOfj_Rg" name="ComponentgetIMSIFromIp" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_kP404SHsEeyZI5WvOfj_Rg" processName="simulatorenokia5g.module.pcrf.getIMSIFromIp"/>
+    <sca:service xmi:id="_kQDM8CHsEeyZI5WvOfj_Rg" name="getimsifromip">
+      <sca:interface.wsdl xmi:id="_kQEbECHsEeyZI5WvOfj_Rg" interface="http://xmlns.example.com/20210930144726PLT#wsdl.interface(getimsifromip)" scaext:wsdlLocation="../Processes/simulatorenokia5g/module/pcrf/getIMSIFromIp.bwp"/>
+    </sca:service>
+  </sca:component>
+  <sca:component xmi:id="__4oywCdAEey5nYx5DYFiig" name="Componentimsip" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="__4oywSdAEey5nYx5DYFiig" processName="simulatorenokia5g.module.pcrf.crud.imsip"/>
+    <sca:service xmi:id="__4uSUCdAEey5nYx5DYFiig" name="imsip">
+      <sca:interface.wsdl xmi:id="__4vgcCdAEey5nYx5DYFiig" interface="http://xmlns.example.com/20211007093425PLT#wsdl.interface(imsip)" scaext:wsdlLocation="../Processes/simulatorenokia5g/module/pcrf/crud/imsip.bwp"/>
+    </sca:service>
+  </sca:component>
+  <sca:component xmi:id="_9xrhsCp_EeygV7SevULJ2Q" name="ComponentgetUserUDM" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_9xrhsSp_EeygV7SevULJ2Q" processName="simulatorenokia5g.module.udm.receiveUDMrequest"/>
+  </sca:component>
+  <sca:component xmi:id="_O68MsCzFEeybsNnusrZhzQ" name="Componentsim" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_O68MsSzFEeybsNnusrZhzQ" processName="simulatorenokia5g.module.udm.crud.sim"/>
+    <sca:service xmi:id="_O7EvkCzFEeybsNnusrZhzQ" name="sim">
+      <sca:interface.wsdl xmi:id="_O7F9sCzFEeybsNnusrZhzQ" interface="http://xmlns.example.com/20211014100335PLT#wsdl.interface(sim)" scaext:wsdlLocation="../Processes/simulatorenokia5g/module/udm/crud/sim.bwp"/>
+    </sca:service>
+  </sca:component>
+  <sca:component xmi:id="_WE93cC2WEeyOvYTautZvnQ" name="ComponentresetContractSim" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_WE93cS2WEeyOvYTautZvnQ" processName="simulatorenokia5g.module.test.resetContractSim"/>
+    <sca:service xmi:id="_WFFzQC2WEeyOvYTautZvnQ" name="resetcontractsim">
+      <sca:interface.wsdl xmi:id="_WFGaUC2WEeyOvYTautZvnQ" interface="http://xmlns.example.com/20211015110028PLT#wsdl.interface(resetcontractsim)" scaext:wsdlLocation="../Processes/simulatorenokia5g/module/test/resetContractSim.bwp"/>
+    </sca:service>
+  </sca:component>
+</sca:composite>

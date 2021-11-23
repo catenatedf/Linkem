@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/resetContractSimOutput" xmlns:tns="http://www.example.org/resetContractSimOutput" elementFormDefault="qualified">
+  <complexType name="resetContractSim">
+      <sequence>
+	      <element maxOccurs="1" minOccurs="1" name="imsi" type="string"/>
+	      <element maxOccurs="1" minOccurs="0" name="testataContrattoId" type="string"/>
+	      <element maxOccurs="1" minOccurs="0" name="IdContratto" type="string"/>
+	      <element maxOccurs="1" minOccurs="0" name="IP" type="string"/>
+	      <element maxOccurs="1" minOccurs="0" name="CodiceSblocco" type="string"/>
+	      <element maxOccurs="1" minOccurs="0" name="PartitaIVA" type="string"/>
+	      <element maxOccurs="1" minOccurs="0" name="CodiceFiscale" type="string"/>
+   	  </sequence>  
+  </complexType>
+  <element name="resetContractSimOutputElement" type="tns:resetContractSim"/>  
+</schema>

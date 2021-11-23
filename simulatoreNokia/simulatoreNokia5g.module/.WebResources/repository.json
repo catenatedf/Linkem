@@ -1,0 +1,29 @@
+{
+    "records": [{
+        "name": "Cloud",
+        "items": [],
+        "url": "https://integration.cloud.tibco.com:443"
+    }],
+    "resources": [
+        {
+            "location": "Service Descriptors/simulatorenokia5g.module.pcrf.getIMSIFromIp-getIMSIFromIp.json",
+            "type": "generated"
+        },
+        {
+            "location": "Service Descriptors/simulatorenokia5g.module.pcrf.crud.setAllImsIp-setAllImsIp.json",
+            "type": "generated"
+        },
+        {
+            "location": "Service Descriptors/simulatorenokia5g.module.pcrf.crud.imsip-imsip.json",
+            "type": "generated"
+        },
+        {
+            "location": "Service Descriptors/simulatorenokia5g.module.udm.crud.sim-sim.json",
+            "type": "generated"
+        },
+        {
+            "location": "Service Descriptors/simulatorenokia5g.module.test.resetContractSim-resetContractSim.json",
+            "type": "generated"
+        }
+    ]
+}

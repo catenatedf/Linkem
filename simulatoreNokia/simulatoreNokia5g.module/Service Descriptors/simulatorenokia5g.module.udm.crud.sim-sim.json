@@ -1,0 +1,192 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0",
+    "title" : "sim",
+    "description" : "sim service"
+  },
+  "host" : "localhost:8080",
+  "basePath" : "/",
+  "schemes" : [ "http" ],
+  "paths" : {
+    "/sim" : {
+      "post" : {
+        "summary" : "postSim",
+        "description" : "postSim",
+        "operationId" : "post-sim",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "$ref" : "#/definitions/udmSetSIMInputElement"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      },
+      "get" : {
+        "summary" : "getSim",
+        "description" : "getSim",
+        "operationId" : "get-sim",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "a udmGetSimResponses to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/udmGetSimResponses"
+            }
+          }
+        }
+      },
+      "put" : {
+        "summary" : "putSim",
+        "description" : "putSim",
+        "operationId" : "put-sim",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "$ref" : "#/definitions/udmSetSIMInputElement"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      },
+      "delete" : {
+        "summary" : "deleteSim",
+        "description" : "deleteSim",
+        "operationId" : "delete-sim",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "imsi",
+          "in" : "query",
+          "description" : "",
+          "type" : "string",
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "udmGetSimResponseElement" : {
+      "type" : "object",
+      "required" : [ "eps_odbPOAccessEps", "eps_maxBanUp", "epsPdn_maxBanUp", "epsPdn_ChargeCharacteristic", "epsPdn_type", "imsi", "eps_maxBanDown", "epsPdn_qos", "epsPdn_apn", "epsPdn_contextId", "epsPdn_ipv4Address", "eps_defaultContext", "epsPdn_maxBanDown" ],
+      "properties" : {
+        "imsi" : {
+          "type" : "string"
+        },
+        "eps_defaultContext" : {
+          "type" : "string"
+        },
+        "eps_maxBanUp" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "eps_maxBanDown" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "eps_odbPOAccessEps" : {
+          "type" : "string"
+        },
+        "epsPdn_apn" : {
+          "type" : "string"
+        },
+        "epsPdn_contextId" : {
+          "type" : "string"
+        },
+        "epsPdn_type" : {
+          "type" : "string"
+        },
+        "epsPdn_ipv4Address" : {
+          "type" : "string"
+        },
+        "epsPdn_maxBanUp" : {
+          "type" : "string"
+        },
+        "epsPdn_maxBanDown" : {
+          "type" : "string"
+        },
+        "epsPdn_qos" : {
+          "type" : "string"
+        },
+        "epsPdn_ChargeCharacteristic" : {
+          "type" : "string"
+        }
+      }
+    },
+    "udmGetSimResponses" : {
+      "type" : "object",
+      "properties" : {
+        "udmGetSimResponseElement" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/udmGetSimResponseElement",
+            "uniqueItems" : false
+          }
+        }
+      }
+    },
+    "udmSetSIMInputElement" : {
+      "type" : "object",
+      "required" : [ "eps_odbPOAccessEps", "epsPdn_apn", "eps_maxBanUp", "epsPdn_maxBanUp", "imsi", "eps_maxBanDown", "epsPdn_maxBanDown" ],
+      "properties" : {
+        "imsi" : {
+          "type" : "string"
+        },
+        "eps_maxBanUp" : {
+          "type" : "string"
+        },
+        "eps_maxBanDown" : {
+          "type" : "string"
+        },
+        "eps_odbPOAccessEps" : {
+          "type" : "string"
+        },
+        "epsPdn_apn" : {
+          "type" : "string"
+        },
+        "epsPdn_ipv4Address" : {
+          "type" : "string"
+        },
+        "epsPdn_maxBanUp" : {
+          "type" : "string"
+        },
+        "epsPdn_maxBanDown" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}

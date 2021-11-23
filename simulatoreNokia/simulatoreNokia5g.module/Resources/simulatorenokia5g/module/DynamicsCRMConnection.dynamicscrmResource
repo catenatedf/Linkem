@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dynamicscrmconnection="http://ns.tibco.com/bw/palette/dynamicscrmconnection" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_KwWTIS2XEeyOvYTautZvnQ" name="simulatorenokia5g.module.DynamicsCRMConnection" type="dynamicscrmconnection:Dynamicscrm">
+  <jndi:configuration xsi:type="dynamicscrmconnection:DynamicsCRMConnection" xmi:id="_KwdA0C2XEeyOvYTautZvnQ" serverType="On-Premises" authType="NTLM" timeout="1800">
+    <substitutionBindings xmi:id="_ColP4C2ZEeyOvYTautZvnQ" template="username" propName="/CRM/username"/>
+    <substitutionBindings xmi:id="_EgCgwC2ZEeyOvYTautZvnQ" template="password" propName="/CRM/password"/>
+    <substitutionBindings xmi:id="_F0kDsC2ZEeyOvYTautZvnQ" template="organizationService" propName="/CRM/OrganizationService"/>
+  </jndi:configuration>
+</jndi:namedResource>

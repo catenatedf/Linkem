@@ -1,0 +1,27 @@
+{"records": [
+    {
+        "jsonSchemaLocation": "/simulatoreNokia5g.module/Service Descriptors/simulatorenokia5g.module.pcrf.crud.imsip-imsip.json",
+        "conversionType": "linked",
+        "xsdSchemaTargetNamespace": "http://www.example.org/imsip"
+    },
+    {
+        "jsonSchemaLocation": "/simulatoreNokia5g.module/Service Descriptors/simulatorenokia5g.module.pcrf.crud.imsip-imsip.json",
+        "conversionType": "linked",
+        "xsdSchemaTargetNamespace": "http://www.example.org/getIp-ImsiResponse"
+    },
+    {
+        "jsonSchemaLocation": "/simulatoreNokia5g.module/Service Descriptors/simulatorenokia5g.module.pcrf.getIMSIFromIp-getIMSIFromIp.json",
+        "conversionType": "linked",
+        "xsdSchemaTargetNamespace": "http://tns.tibco.com/bw/json/1633618915789"
+    },
+    {
+        "jsonSchemaLocation": "/simulatoreNokia5g.module/Service Descriptors/simulatorenokia5g.module.test.resetContractSim-resetContractSim.json",
+        "conversionType": "linked",
+        "xsdSchemaTargetNamespace": "http://www.example.org/resetContractSim"
+    },
+    {
+        "jsonSchemaLocation": "/simulatoreNokia5g.module/Service Descriptors/simulatorenokia5g.module.test.resetContractSim-resetContractSim.json",
+        "conversionType": "linked",
+        "xsdSchemaTargetNamespace": "http://www.example.org/resetContractSimOutput"
+    }
+]}
