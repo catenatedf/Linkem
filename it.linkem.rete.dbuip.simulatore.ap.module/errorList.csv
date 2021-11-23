@@ -1,0 +1,14 @@
+ErrorCode;ErrorMessage;ErrorType;HTTPStatusCode;APIname
+ESB.DBIP.000001;Generic/Unknown Error occurred during IpReservation process;System;500;
+ESB.DBIP.000002;Generic/Unknown Error occurred during IpActivation process;System;500;
+ESB.DBIP.000003;Generic/Unknown Error occurred during IpRelease process;System;500;
+ESB.DBIP.000004;Generic/Unknown Error occurred during ChangeDevice process;System;500;
+ESB.DBIP.000005;Generic/Unknown Error occurred during IpDeactivation process;System;500;
+ESB.DBIP.000006;Generic/Unknown Error occurred during simDbUpdate process;System;500;
+ESB.DBIP.000007;System Error occurred during simDbUpdate process;System;500;
+ESB.DBIP.000008;Business Error occurred on simDbUpdate process;Business;400;
+ESB.DBIP.000009;System Error occurred during IpRelease process;System;500;
+ESB.DBIP.000010;Business Error occurred on IpRelease process;Business;400;
+ESB.DBIP.000011;System Error occurred during ChangeDevice process;System;500;
+ESB.DBIP.000012;Business Error occurred on ChangeDevice process;Business;400;
+ESB.DBIP.000013;System Error occurred during IpReservation process;System;500;

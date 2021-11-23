@@ -19,38 +19,6 @@
     xmlns:sca-bpel="http://docs.oasis-open.org/ns/opencsa/sca-bpel/200801"
     xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"
     xmlns:tibprop="http://ns.tibco.com/bw/property" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-    <tibex:VariableDescriptor type="MemorySaving">
-        <task name="End">
-            <endingVariables>
-                <variable>simDbUpdate</variable>
-            </endingVariables>
-        </task>
-        <task name="LogStart">
-            <endingVariables>
-                <variable>LogStart-input</variable>
-                <variable>LogStart</variable>
-            </endingVariables>
-        </task>
-        <task name="LogEnd">
-            <endingVariables>
-                <variable>LogEnd-input</variable>
-                <variable>LogEnd</variable>
-                <variable>DEBUG_Severity</variable>
-                <variable>Start</variable>
-            </endingVariables>
-        </task>
-        <task name="simDbUpdate">
-            <endingVariables>
-                <variable>simDbUpdate-input</variable>
-            </endingVariables>
-        </task>
-        <task name="SetSharedVariable">
-            <endingVariables>
-                <variable>SetSharedVariable-input</variable>
-                <variable>SetSharedVariable</variable>
-            </endingVariables>
-        </task>
-    </tibex:VariableDescriptor>
     <tibex:Types>
         <xs:schema attributeFormDefault="unqualified"
             elementFormDefault="qualified"
@@ -477,7 +445,8 @@
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.5"/>
-                                    <layoutConstraint x="265"
+                                    <layoutConstraint
+                                    width="129" x="265"
                                     xsi:type="notation:Bounds" y="90"/>
                                     </children>
                                     <styles xsi:type="notation:DrawerStyle"/>
@@ -624,9 +593,9 @@
             name="simDbUpdate-input" sca-bpel:internal="true"/>
         <bpws:variable element="ns1:simulatoreOutput" name="simDbUpdate" sca-bpel:internal="true"/>
         <bpws:variable element="ns0:setSharedVariable_Input"
-            name="SetSharedVariable-input" sca-bpel:internal="true"/>
+            name="SetCodDescAzione-input" sca-bpel:internal="true"/>
         <bpws:variable element="ns0:setSharedVariable_Input"
-            name="SetSharedVariable" sca-bpel:internal="true"/>
+            name="SetCodDescAzione" sca-bpel:internal="true"/>
         <bpws:variable element="ns0:simDbUpdate_Input" name="Start"
             sca-bpel:internal="true" tibex:parameter="in"/>
     </bpws:variables>
@@ -748,9 +717,9 @@
             </bpws:extensionActivity>
             <bpws:extensionActivity>
                 <tibex:extActivity
-                    inputVariable="SetSharedVariable-input"
-                    name="SetSharedVariable"
-                    outputVariable="SetSharedVariable"
+                    inputVariable="SetCodDescAzione-input"
+                    name="SetCodDescAzione"
+                    outputVariable="SetCodDescAzione"
                     tibex:xpdlId="1bc68270-ac99-496a-8aa6-e9f6381b9c39"
                     type="bw.internal.setSharedVariable" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                     <bpws:targets>
