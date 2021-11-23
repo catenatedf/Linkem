@@ -40,7 +40,13 @@
         "operationId" : "get-staticipdbmgmt",
         "consumes" : [ "application/json" ],
         "produces" : [ "application/json" ],
-        "parameters" : [ ],
+        "parameters" : [ {
+          "name" : "idrisorsa",
+          "in" : "query",
+          "description" : "",
+          "type" : "string",
+          "required" : false
+        } ],
         "responses" : {
           "200" : {
             "description" : "a staticIpConfiguration to be returned",
@@ -61,7 +67,7 @@
           "in" : "body",
           "description" : "",
           "schema" : {
-            "$ref" : "#/definitions/staticIpConfiguration"
+            "$ref" : "#/definitions/updateInput"
           },
           "required" : true
         } ],
@@ -80,7 +86,13 @@
         "operationId" : "delete-staticipdbmgmt",
         "consumes" : [ "application/json" ],
         "produces" : [ "application/json" ],
-        "parameters" : [ ],
+        "parameters" : [ {
+          "name" : "idrisorsa",
+          "in" : "query",
+          "description" : "",
+          "type" : "string",
+          "required" : false
+        } ],
         "responses" : {
           "200" : {
             "description" : "a string to be returned",
@@ -110,7 +122,7 @@
           "type" : "string"
         },
         "cod" : {
-          "type" : "string"
+          "type" : "integer"
         },
         "descrizione" : {
           "type" : "string"
@@ -119,7 +131,46 @@
           "type" : "string"
         },
         "mask" : {
+          "type" : "integer"
+        },
+        "ipprivato" : {
           "type" : "string"
+        },
+        "idtransizione" : {
+          "type" : "string"
+        },
+        "azione" : {
+          "type" : "string"
+        }
+      }
+    },
+    "updateInput" : {
+      "type" : "object",
+      "required" : [ "idrisorsa" ],
+      "properties" : {
+        "btsname" : {
+          "type" : "string"
+        },
+        "tipocontratto" : {
+          "type" : "string"
+        },
+        "idrisorsa" : {
+          "type" : "string"
+        },
+        "imsi" : {
+          "type" : "string"
+        },
+        "cod" : {
+          "type" : "integer"
+        },
+        "descrizione" : {
+          "type" : "string"
+        },
+        "ippubblico" : {
+          "type" : "string"
+        },
+        "mask" : {
+          "type" : "integer"
         },
         "ipprivato" : {
           "type" : "string"

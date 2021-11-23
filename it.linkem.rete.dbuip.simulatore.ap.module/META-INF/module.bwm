@@ -3,7 +3,7 @@
   <sca:service xmi:id="_6r6JIkCwEeyvzZoE6k6wbg" name="SpringIfServicePortType" promote="ComponentProcess/SpringIfServicePortType">
     <sca:interface.wsdl xmi:id="_6r7XQECwEeyvzZoE6k6wbg" interface="http://172.28.136.90/dbuip/ws/SpringIfService#wsdl.interface(SpringIfServicePortType)" scaext:wsdlLocation="../Service%20Descriptors/dbuip.wsdl"/>
     <scaext:binding xsi:type="axis2:SOAPServiceBinding" xmi:id="_JW-PYECxEeyvzZoE6k6wbg" name="SOAPServiceBinding" targetNamespace="http://www.tibco.com/ddd445cac1d7487db2c19e4a48edd07d/SOAPServiceBinding" portTypeQName="SpringIfService:SpringIfServicePortType" transportBindingType="HTTP" attachmentStyle="SwA" modelVersion="1.2.0" portTypeWSDLLocation="platform:/resource/it.linkem.rete.dbuip.simulatore.ap.module/Service%20Descriptors/dbuip.wsdl">
-      <bindingType xmi:id="_JW-PYUCxEeyvzZoE6k6wbg"/>
+      <bindingType xmi:id="_JW-PYUCxEeyvzZoE6k6wbg" style="RPC"/>
       <inboundConfiguration xsi:type="axis2:HttpTransportConfiguration" xmi:id="_KcWjEECxEeyvzZoE6k6wbg" endpointURI="/SOAPServiceBinding/springIfServicePortType/" httpConnector="it.linkem.rete.dbuip.simulatore.ap.module.HTTPConnectionResource"/>
       <operationConfiguration xmi:id="_JW-PYkCxEeyvzZoE6k6wbg" operationName="IpReservation" action="IpReservation" actionNeeded="true">
         <bindingType xmi:id="_JW-PY0CxEeyvzZoE6k6wbg"/>
@@ -84,7 +84,9 @@
         </context>
       </operationConfiguration>
     </scaext:binding>
-    <scact:bindingAdjunct xmi:id="_JW-2fECxEeyvzZoE6k6wbg" bindingName="SOAPServiceBinding"/>
+    <scact:bindingAdjunct xmi:id="_JW-2fECxEeyvzZoE6k6wbg" bindingName="SOAPServiceBinding">
+      <sca:property xmi:id="_k77fEElKEeytmPlQlueNKQ" name="endpointURI" scaext:simpleValue="uri"/>
+    </scact:bindingAdjunct>
   </sca:service>
   <sca:service xmi:id="_7BRXQkGDEeytw7vUKPSDeQ" name="staticipdbmgmt" promote="ComponentstaticIpDbMgmt/staticipdbmgmt">
     <sca:interface.wsdl xmi:id="_7BRXRkGDEeytw7vUKPSDeQ" interface="http://xmlns.example.com/20211109183849PLT#wsdl.interface(staticipdbmgmt)" scaext:wsdlLocation="../Processes/it/linkem/rete/dbuip/simulatore/ap/module/staticIpDbMgmt.bwp"/>
@@ -105,6 +107,9 @@
         <clientRequestFormat>json</clientRequestFormat>
       </operation>
       <operation xmi:id="_7ELhUkGDEeytw7vUKPSDeQ" operationName="delete" nickname="delete-staticipdbmgmt" httpMethod="DELETE" notes="deleteStaticIpDbMgmt" responseStyle="element" outputPartName="msg">
+        <parameters xmi:id="_ZBztQEI1Eey95NKtC28LXQ">
+          <parameterMapping xmi:id="_egb5IEI1Eey95NKtC28LXQ" parameterName="idrisorsa" parameterType="Query" dataType="string"/>
+        </parameters>
         <clientFormat>json</clientFormat>
         <clientRequestFormat>json</clientRequestFormat>
       </operation>
@@ -122,6 +127,8 @@
   <sca:property xmi:id="_aOtmYECiEeylJtQmUecMog" name="BW.APPSPACE.NAME" type="XMLSchema:string" scalable="true"/>
   <sca:property xmi:id="_aOye4ECiEeylJtQmUecMog" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
   <sca:property xmi:id="_aO2wUECiEeylJtQmUecMog" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_krhrkElKEeytmPlQlueNKQ" name="uri" type="XMLSchema:string" scaext:simpleValue="" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_RjMTUElLEeytmPlQlueNKQ" name="host" type="XMLSchema:string" publicAccess="true" scalable="true"/>
   <sca:property xmi:id="_4-OicEF4Eeytw7vUKPSDeQ" name="/JDBCstatement/tipoContratto" type="XMLSchema:string" publicAccess="true" scalable="true"/>
   <sca:property xmi:id="_FNk0MEF5Eeytw7vUKPSDeQ" name="/JDBCstatement/idRisorse" type="XMLSchema:string" publicAccess="true" scalable="true"/>
   <sca:component xmi:id="_ZJ8OUECwEeyvzZoE6k6wbg" name="ComponentProcess" compositeext:version="1.0.0.qualifier">
@@ -135,8 +142,5 @@
     <sca:service xmi:id="_7BRXQEGDEeytw7vUKPSDeQ" name="staticipdbmgmt">
       <sca:interface.wsdl xmi:id="_7BRXQUGDEeytw7vUKPSDeQ" interface="http://xmlns.example.com/20211109183849PLT#wsdl.interface(staticipdbmgmt)" scaext:wsdlLocation="../Processes/it/linkem/rete/dbuip/simulatore/ap/module/staticIpDbMgmt.bwp"/>
     </sca:service>
-  </sca:component>
-  <sca:component xmi:id="_bFyjAEGMEeytw7vUKPSDeQ" name="Componenttest" compositeext:version="1.0.0.qualifier">
-    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_bFyjAUGMEeytw7vUKPSDeQ" processName="it.linkem.rete.dbuip.simulatore.ap.module.test"/>
   </sca:component>
 </sca:composite>
