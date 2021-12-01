@@ -44,7 +44,7 @@
   <sca:property xmi:id="_3Nz1sC2YEeyOvYTautZvnQ" name="/CRM/OrganizationService" type="XMLSchema:string" publicAccess="true" scalable="true"/>
   <sca:property xmi:id="_7wBcoC2YEeyOvYTautZvnQ" name="/CRM/password" type="property:password" scaext:simpleValue="#!OaFnOVsoybLqcP7q/XZ1zw==" publicAccess="true" scalable="true"/>
   <sca:component xmi:id="_kP404CHsEeyZI5WvOfj_Rg" name="ComponentgetIMSIFromIp" compositeext:version="1.0.0.qualifier">
-    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_kP404SHsEeyZI5WvOfj_Rg" processName="simulatorenokia5g.module.pcrf.getIMSIFromIp"/>
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_kP404SHsEeyZI5WvOfj_Rg" processName="it.linkem.stub.PCRF.getIMSIFromIp"/>
     <sca:service xmi:id="_kQDM8CHsEeyZI5WvOfj_Rg" name="getimsifromip">
       <sca:interface.wsdl xmi:id="_kQEbECHsEeyZI5WvOfj_Rg" interface="http://xmlns.example.com/20210930144726PLT#wsdl.interface(getimsifromip)" scaext:wsdlLocation="../Processes/simulatorenokia5g/module/pcrf/getIMSIFromIp.bwp"/>
     </sca:service>

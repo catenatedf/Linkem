@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <bpws:process exitOnStandardFault="no"
-    name="simulatorenokia5g.module.pcrf.getIMSIFromIp"
-    suppressJoinFailure="yes"
+    name="it.linkem.stub.PCRF.getIMSIFromIp" suppressJoinFailure="yes"
     targetNamespace="http://xmlns.example.com/20210930144726"
     xmlns:bpws="http://docs.oasis-open.org/wsbpel/2.0/process/executable"
     xmlns:info="http://www.tibco.com/bw/process/info"
@@ -446,7 +445,7 @@
             <wsdl:portType name="getimsifromip"
                 tibex:bw.rest.apipath="/getimsifromip"
                 tibex:bw.rest.basepath="getIMSIFromIp"
-                tibex:bw.rest.resource="Service Descriptors/simulatorenokia5g.module.pcrf.getIMSIFromIp-getIMSIFromIp.json"
+                tibex:bw.rest.resource="Service Descriptors/it.linkem.stub.PCRF.getIMSIFromIp-getIMSIFromIp.json"
                 tibex:bw.rest.resource.source="generated" tibex:source="bw.rest.service">
                 <wsdl:documentation>getIMSIFromIp service</wsdl:documentation>
                 <wsdl:operation name="get">
@@ -470,7 +469,9 @@
         xmlns:bwnotation="http://tns.tibco.com/bw/runtime/BWNotation"
         xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         <children type="2001">
-            <children type="5001"/>
+            <children type="5001">
+                <element href="//0/@process"/>
+            </children>
             <children type="3001">
                 <styles xsi:type="notation:SortingStyle"/>
                 <styles xsi:type="notation:FilteringStyle"/>
@@ -479,10 +480,12 @@
             <children type="3002">
                 <styles xsi:type="notation:SortingStyle"/>
                 <styles xsi:type="notation:FilteringStyle"/>
+                <element href="//0/@process"/>
             </children>
             <children type="3003">
                 <styles xsi:type="notation:SortingStyle"/>
                 <styles xsi:type="notation:FilteringStyle"/>
+                <element href="//0/@process"/>
             </children>
             <children type="3004">
                 <children type="4018">
@@ -492,13 +495,16 @@
                                 <children type="4005">
                                     <children type="3007">
                                     <children type="4010">
-                                    <children type="5002"/>
+                                    <children type="5002">
+                                    <element href="//0/@process/@activity/@activity/@activities.0"/>
+                                    </children>
                                     <children type="3010">
                                     <children type="4013">
                                     <children type="4017">
                                     <styles
                                     fontName=".AppleSystemUIFont"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.0"/>
 
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
@@ -506,6 +512,7 @@
                                     <styles
                                     fontName=".AppleSystemUIFont"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.0"/>
 
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
@@ -513,6 +520,7 @@
                                     <styles
                                     fontName=".AppleSystemUIFont"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.0"/>
 
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
@@ -520,6 +528,7 @@
                                     <styles
                                     fontName=".AppleSystemUIFont"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.0"/>
 
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
@@ -534,6 +543,7 @@
                                     </children>
                                     <styles xsi:type="notation:SortingStyle"/>
                                     <styles xsi:type="notation:FilteringStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.0"/>
                                     </children>
                                     <children type="3011">
                                     <children type="4011">
@@ -543,6 +553,7 @@
                                     <styles
                                     fontName=".AppleSystemUIFont"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@activity/@activities.0"/>
 
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
@@ -550,6 +561,7 @@
                                     <styles
                                     fontName=".AppleSystemUIFont"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@activity/@activities.0"/>
 
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
@@ -557,6 +569,7 @@
                                     <styles
                                     fontName=".AppleSystemUIFont"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@activity/@activities.0"/>
 
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
@@ -564,6 +577,7 @@
                                     <styles
                                     fontName=".AppleSystemUIFont"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@activity/@activities.0"/>
 
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
@@ -603,14 +617,7 @@
                                     fontName=".AppleSystemUIFont"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
 
-                                    <layoutConstraint xsi:type="notation:Bounds"/>
-                                    </children>
-
-                                    <children type="4017">
-
-                                    <styles
-                                    fontName=".AppleSystemUIFont"
-                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@activity/@activities.2"/>
 
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
@@ -621,6 +628,8 @@
                                     fontName=".AppleSystemUIFont"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
 
+                                    <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@activity/@activities.2"/>
+
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
 
@@ -629,6 +638,19 @@
                                     <styles
                                     fontName=".AppleSystemUIFont"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@activity/@activities.2"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName=".AppleSystemUIFont"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@activity/@activities.2"/>
 
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
@@ -657,14 +679,7 @@
                                     fontName=".AppleSystemUIFont"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
 
-                                    <layoutConstraint xsi:type="notation:Bounds"/>
-                                    </children>
-
-                                    <children type="4017">
-
-                                    <styles
-                                    fontName=".AppleSystemUIFont"
-                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@activity/@activities.3"/>
 
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
@@ -675,6 +690,8 @@
                                     fontName=".AppleSystemUIFont"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
 
+                                    <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@activity/@activities.3"/>
+
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
 
@@ -683,6 +700,19 @@
                                     <styles
                                     fontName=".AppleSystemUIFont"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@activity/@activities.3"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName=".AppleSystemUIFont"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@activity/@activities.3"/>
 
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
@@ -713,14 +743,7 @@
                                     fontName=".AppleSystemUIFont"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
 
-                                    <layoutConstraint xsi:type="notation:Bounds"/>
-                                    </children>
-
-                                    <children type="4017">
-
-                                    <styles
-                                    fontName=".AppleSystemUIFont"
-                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@activity/@activities.4"/>
 
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
@@ -731,6 +754,8 @@
                                     fontName=".AppleSystemUIFont"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
 
+                                    <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@activity/@activities.4"/>
+
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
 
@@ -739,6 +764,19 @@
                                     <styles
                                     fontName=".AppleSystemUIFont"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@activity/@activities.4"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName=".AppleSystemUIFont"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@activity/@activities.4"/>
 
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
@@ -769,14 +807,7 @@
                                     fontName=".AppleSystemUIFont"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
 
-                                    <layoutConstraint xsi:type="notation:Bounds"/>
-                                    </children>
-
-                                    <children type="4017">
-
-                                    <styles
-                                    fontName=".AppleSystemUIFont"
-                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@activity/@activities.5"/>
 
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
@@ -787,6 +818,8 @@
                                     fontName=".AppleSystemUIFont"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
 
+                                    <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@activity/@activities.5"/>
+
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
 
@@ -795,6 +828,19 @@
                                     <styles
                                     fontName=".AppleSystemUIFont"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@activity/@activities.5"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName=".AppleSystemUIFont"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@activity/@activities.5"/>
 
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
@@ -825,14 +871,7 @@
                                     fontName=".AppleSystemUIFont"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
 
-                                    <layoutConstraint xsi:type="notation:Bounds"/>
-                                    </children>
-
-                                    <children type="4017">
-
-                                    <styles
-                                    fontName=".AppleSystemUIFont"
-                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@activity/@activities.6"/>
 
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
@@ -843,6 +882,8 @@
                                     fontName=".AppleSystemUIFont"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
 
+                                    <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@activity/@activities.6"/>
+
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
 
@@ -851,6 +892,19 @@
                                     <styles
                                     fontName=".AppleSystemUIFont"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@activity/@activities.6"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName=".AppleSystemUIFont"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@activity/@activities.6"/>
 
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
@@ -903,6 +957,8 @@
                                     <styles xsi:type="notation:SortingStyle"/>
 
                                     <styles xsi:type="notation:FilteringStyle"/>
+
+                                    <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity"/>
                                     </children>
 
                                     <styles
@@ -944,6 +1000,7 @@
                                     <styles
                                     fontName=".AppleSystemUIFont"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@activity/@activities.1"/>
 
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
@@ -951,6 +1008,7 @@
                                     <styles
                                     fontName=".AppleSystemUIFont"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@activity/@activities.1"/>
 
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
@@ -958,6 +1016,7 @@
                                     <styles
                                     fontName=".AppleSystemUIFont"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@activity/@activities.1"/>
 
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
@@ -965,6 +1024,7 @@
                                     <styles
                                     fontName=".AppleSystemUIFont"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@activity/@activities.1"/>
 
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
@@ -1025,6 +1085,7 @@
                                 </children>
                                 <styles xsi:type="notation:SortingStyle"/>
                                 <styles xsi:type="notation:FilteringStyle"/>
+                                <element href="//0/@process/@activity"/>
                             </children>
                             <styles fontName=".AppleSystemUIFont"
                                 lineColor="0" xsi:type="notation:ShapeStyle"/>
@@ -1127,10 +1188,7 @@
         <tibex:namespaceItem
             namespace="http://www.tibco.com/pe/WriteToLogActivitySchema" prefix="tns5"/>
     </tibex:NamespaceRegistry>
-    <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://tns.tibco.com/bw/REST"/>
-    <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://xmlns.example.com/getIMSIFromIp/parameters"/>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://tns.tibco.com/bw/json/1633006584009"/>
-    <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://tns.tibco.com/bw/json/1633618915789"/>
     <bpws:partnerLinks>
         <bpws:partnerLink myRole="use" name="getimsifromip"
             partnerLinkType="ns:partnerLinkType" sca-bpel:ignore="false" sca-bpel:service="getimsifromip"/>
@@ -1266,7 +1324,7 @@
                                     jsonInputStyle="None"
                                     schemaType="Xsd" xsi:type="restjson:JsonParser">
 
-                                    <outputEditorElement href="platform:/resource/simulatoreNokia5g.module/Schemas/pcrfGetImsiFromIpRequestResource.xsd#//pcrfGetImsiFromIpRequestElement;XSDElementDeclaration"/>
+                                    <outputEditorElement href="platform:/resource/it.linkem.stub.PCRF.md/Schemas/pcrfGetImsiFromIpRequestResource.xsd#//pcrfGetImsiFromIpRequestElement;XSDElementDeclaration"/>
                                     </value>
                                     </properties>
                                     </activityConfig>

@@ -5,7 +5,7 @@
         "url": "https://integration.cloud.tibco.com:443"
     }],
     "resources": [{
-        "location": "Service Descriptors/simulatorenokia5g.module.pcrf.getIMSIFromIp-getIMSIFromIp.json",
+        "location": "Service Descriptors/it.linkem.stub.PCRF.getIMSIFromIp-getIMSIFromIp.json",
         "type": "generated"
     }]
 }
