@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:httpconnector="http://xsd.tns.tibco.com/bw/models/sharedresource/httpconnector" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_Y2rMgSqVEeyV3d1Y7eiZNw" name="it.linkem.stub.SDL.md.HTTPSDLConnection" type="httpconnector:HttpConnectorConfiguration">
+  <jndi:configuration xsi:type="httpconnector:HttpConnectorConfiguration" xmi:id="_Y2rzkCqVEeyV3d1Y7eiZNw" acceptQueueSize="-1" newAccessLogs="true">
+    <substitutionBindings xmi:id="_Y2rzkSqVEeyV3d1Y7eiZNw" template="host" propName="SDL_host"/>
+    <substitutionBindings xmi:id="_Ad6yoCw6EeyvTYRNqq8OdQ" template="port" propName="SDL_port"/>
+  </jndi:configuration>
+</jndi:namedResource>

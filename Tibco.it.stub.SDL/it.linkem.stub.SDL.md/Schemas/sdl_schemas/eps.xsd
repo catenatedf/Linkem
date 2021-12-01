@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/eps" xmlns:tns="http://www.example.org/eps" elementFormDefault="qualified">
+	<element name="eps" type="tns:epsType"/>
+		<complexType name="epsType">
+			<sequence>
+				<element type="byte" name="defaultPdnContextId"/>
+				<element type="int" name="maxBandwidthUp"/>
+				<element type="int" name="maxBandwidthDown"/>
+				<element minOccurs="0" type="string" name="odbPOAccessEps" nillable="true"/>
+			</sequence>
+		</complexType>
+</schema>

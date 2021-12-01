@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/getSIMResponse" xmlns:tns="http://www.example.org/getSIMResponse" elementFormDefault="qualified">
+  <complexType name="udmGetSimResponseElementType">
+      <sequence>
+  		  <element maxOccurs="1" minOccurs="1" name="imsi" type="string"/>
+	      <element maxOccurs="1" minOccurs="1" name="eps_defaultContext" type="string"/>
+	      <element maxOccurs="1" minOccurs="1" name="eps_maxBanUp" type="int"/>
+	      <element maxOccurs="1" minOccurs="1" name="eps_maxBanDown" type="int"/>
+	      <element maxOccurs="1" minOccurs="1" name="eps_odbPOAccessEps" type="string"/>
+	      <element maxOccurs="1" minOccurs="1" name="epsPdn_apn" type="string"/>
+	      <element maxOccurs="1" minOccurs="1" name="epsPdn_contextId" type="string"/>
+	      <element maxOccurs="1" minOccurs="1" name="epsPdn_type" type="string"/>
+	      <element maxOccurs="1" minOccurs="1" name="epsPdn_ipv4Address" type="string"/>
+	      <element maxOccurs="1" minOccurs="1" name="epsPdn_maxBanUp" type="string"/>
+	      <element maxOccurs="1" minOccurs="1" name="epsPdn_maxBanDown" type="string"/>
+	      <element maxOccurs="1" minOccurs="1" name="epsPdn_qos" type="string"/>
+	      <element maxOccurs="1" minOccurs="1" name="epsPdn_ChargeCharacteristic" type="string"/>
+   	  </sequence>  
+  </complexType>
+    <element name="udmGetSimResponseElement" type="tns:udmGetSimResponseElementType"/>
+    <element name="udmGetSimResponses">
+    	<complexType>
+    		<sequence>
+    			<element ref="tns:udmGetSimResponseElement" minOccurs="0" maxOccurs="unbounded">
+    			</element>
+    		</sequence>
+    	</complexType>
+    </element>
+</schema>

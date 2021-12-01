@@ -1,0 +1,83 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0",
+    "title" : "resetContractSim",
+    "description" : "resetContractSim service"
+  },
+  "host" : "localhost:8080",
+  "basePath" : "/",
+  "schemes" : [ "http" ],
+  "paths" : {
+    "/resetcontractsim" : {
+      "post" : {
+        "summary" : "postResetContractSim",
+        "description" : "postResetContractSim",
+        "operationId" : "post-resetcontractsim",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "$ref" : "#/definitions/resetContractSimInputElement"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a resetContractSimOutputElement to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/resetContractSimOutputElement"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "resetContractSimOutputElement" : {
+      "type" : "object",
+      "required" : [ "imsi" ],
+      "properties" : {
+        "imsi" : {
+          "type" : "string"
+        },
+        "testataContrattoId" : {
+          "type" : "string"
+        },
+        "IdContratto" : {
+          "type" : "string"
+        },
+        "IP" : {
+          "type" : "string"
+        },
+        "CodiceSblocco" : {
+          "type" : "string"
+        },
+        "PartitaIVA" : {
+          "type" : "string"
+        },
+        "CodiceFiscale" : {
+          "type" : "string"
+        }
+      }
+    },
+    "resetContractSimInputElement" : {
+      "type" : "object",
+      "required" : [ "testataContrattoId" ],
+      "properties" : {
+        "imsi" : {
+          "type" : "string"
+        },
+        "testataContrattoId" : {
+          "type" : "string"
+        },
+        "IdContratto" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}

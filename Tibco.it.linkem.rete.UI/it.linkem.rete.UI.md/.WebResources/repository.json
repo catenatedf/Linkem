@@ -1,0 +1,21 @@
+{
+    "records": [{
+        "name": "Cloud",
+        "items": [],
+        "url": "https://integration.cloud.tibco.com:443"
+    }],
+    "resources": [
+        {
+            "location": "Service Descriptors/it.linkem.rete.UI.pcrf.imsip-imsip.json",
+            "type": "generated"
+        },
+        {
+            "location": "Service Descriptors/it.linkem.rete.UI.sdl.sim-sim.json",
+            "type": "generated"
+        },
+        {
+            "location": "Service Descriptors/it.linkem.rete.UI.utilities.resetContractSim-resetContractSim.json",
+            "type": "generated"
+        }
+    ]
+}

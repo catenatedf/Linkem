@@ -1,0 +1,139 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0",
+    "title" : "imsip",
+    "description" : "imsip service"
+  },
+  "host" : "localhost:8080",
+  "basePath" : "/",
+  "schemes" : [ "http" ],
+  "paths" : {
+    "/imsip" : {
+      "post" : {
+        "summary" : "postImsip",
+        "description" : "postImsip",
+        "operationId" : "post-imsip",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "$ref" : "#/definitions/pcrfSetImsiIpInputElement"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      },
+      "get" : {
+        "summary" : "getImsip",
+        "description" : "getImsip",
+        "operationId" : "get-imsip",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "a pcrfGetImsiIpResponses to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/pcrfGetImsiIpResponses"
+            }
+          }
+        }
+      },
+      "put" : {
+        "summary" : "putImsip",
+        "description" : "putImsip",
+        "operationId" : "put-imsip",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "$ref" : "#/definitions/pcrfSetImsiIpInputElement"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      },
+      "delete" : {
+        "summary" : "deleteImsip",
+        "description" : "deleteImsip",
+        "operationId" : "delete-imsip",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "ip",
+          "in" : "query",
+          "description" : "",
+          "type" : "string",
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "pcrfSetImsiIpInputElement" : {
+      "type" : "object",
+      "required" : [ "ip", "imsi" ],
+      "properties" : {
+        "ip" : {
+          "type" : "string"
+        },
+        "imsi" : {
+          "type" : "string"
+        }
+      }
+    },
+    "pcrfGetImsiIpResponses" : {
+      "type" : "object",
+      "properties" : {
+        "pcrfGetImsiIpResponseElement" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/pcrfGetImsiIpResponseElement",
+            "uniqueItems" : false
+          }
+        }
+      }
+    },
+    "pcrfGetImsiIpResponseElement" : {
+      "type" : "object",
+      "required" : [ "ip", "imsi" ],
+      "properties" : {
+        "ip" : {
+          "type" : "string"
+        },
+        "imsi" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}

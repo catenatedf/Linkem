@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jdbc="http://xsd.tns.tibco.com/amf/models/sharedresource/jdbc" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmlns:subject="http://xsd.tns.tibco.com/trinity/models/identity/subject" xmi:id="_vRvmgSHxEeyZI5WvOfj_Rg" name="it.linkem.rete.UI.md.ReteDB-Connection" type="jdbc:JdbcDataSource">
+  <jndi:reference xmi:id="_vSDIgCHxEeyZI5WvOfj_Rg" key="subjectJndiName" type="subject:SubjectConfiguration" value=""/>
+  <jndi:configuration xsi:type="jdbc:JdbcDataSource" xmi:id="_vSDIgSHxEeyZI5WvOfj_Rg">
+    <substitutionBindings xmi:id="_rgMTECgpEeyOXMGiZG0Z7w" template="username" propName="/simDB/user"/>
+    <substitutionBindings xmi:id="_uBUzECgpEeyOXMGiZG0Z7w" template="password" propName="/simDB/password"/>
+    <connectionConfig xsi:type="jdbc:NonXaConnection" xmi:id="_vSFkwCHxEeyZI5WvOfj_Rg" jdbcDriver="tibcosoftwareinc.jdbc.postgresql.PostgreSQLDriver">
+      <substitutionBindings xmi:id="_hbQqcCgpEeyOXMGiZG0Z7w" template="dbURL" propName="/simDB/connectionUrl"/>
+    </connectionConfig>
+  </jndi:configuration>
+</jndi:namedResource>
