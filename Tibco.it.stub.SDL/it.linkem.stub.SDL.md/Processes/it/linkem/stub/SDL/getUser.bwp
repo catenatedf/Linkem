@@ -1361,11 +1361,9 @@
         <tibex:namespaceItem
             namespace="http://www.w3.org/2001/XMLSchema-instance" prefix="xsi"/>
     </tibex:NamespaceRegistry>
-    <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.example.org/udmInOut"/>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.example.org/auc"/>
+    <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.example.org/udmInOut"/>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.example.org/HLR"/>
-    <bpws:import importType="http://www.w3.org/2001/XMLSchema"
-        location="../../../../../Schemas/sdl_schemas/getUser-internal-testNonamespace.xsd" namespace=""/>
     <bpws:variables>
         <bpws:variable element="ns:ProcessContext"
             name="_processContext" sca-bpel:internal="true"/>
@@ -1834,7 +1832,7 @@
                                 <properties name="config" xsi:type="activityconfig:EMFProperty">
                                     <type href="http://ns.tibco.com/bw/palette/xmlpalette#//TransformXml"/>
                                     <value inputOutputStyle="text"
-                                    stylesheet="Schemas/udm_schemas/NamespacePrefixRemover.xslt"
+                                    stylesheet="Schemas/sdl_schemas/NamespacePrefixRemover.xslt"
                                     xsi:type="palettexml:TransformXml" xsltEngine="TIBCO GenXDM XSLT 2.0"/>
                                 </properties>
                             </activityConfig>
@@ -1898,7 +1896,7 @@
                                 <properties name="config" xsi:type="activityconfig:EMFProperty">
                                     <type href="http://ns.tibco.com/bw/palette/xmlpalette#//TransformXml"/>
                                     <value inputOutputStyle="text"
-                                    stylesheet="Schemas/udm_schemas/NamespacePrefixRemover.xslt"
+                                    stylesheet="Schemas/sdl_schemas/NamespacePrefixRemover.xslt"
                                     xsi:type="palettexml:TransformXml" xsltEngine="TIBCO GenXDM XSLT 2.0"/>
                                 </properties>
                             </activityConfig>

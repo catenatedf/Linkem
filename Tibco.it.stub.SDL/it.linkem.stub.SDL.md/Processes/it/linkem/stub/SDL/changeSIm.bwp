@@ -1460,7 +1460,7 @@
             </children>
             <styles fontName=".AppleSystemUIFont" lineColor="0" xsi:type="notation:ShapeStyle"/>
             <element href="//0/@process"/>
-            <layoutConstraint height="701" width="1727" xsi:type="notation:Bounds"/>
+            <layoutConstraint height="610" width="1727" xsi:type="notation:Bounds"/>
         </children>
         <styles xsi:type="notation:DiagramStyle"/>
         <element href="//0"/>
@@ -1696,11 +1696,11 @@
         <tibex:namespaceItem
             namespace="http://www.w3.org/2001/XMLSchema" prefix="xsd"/>
     </tibex:NamespaceRegistry>
+    <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.example.org/epsPdnContext"/>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.example.org/udmInOut"/>
+    <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.example.org/eps"/>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema"
         location="../../../../../Schemas/sdl_schemas/changeProfile-Request.xsd" namespace=""/>
-    <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.example.org/epsPdnContext"/>
-    <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.example.org/eps"/>
     <bpws:variables>
         <bpws:variable element="ns:ProcessContext"
             name="_processContext" sca-bpel:internal="true"/>
@@ -1779,6 +1779,10 @@
             tibex:propertySource="/SDL-Responses/suspend/part3" type="xsd:string"/>
         <bpws:variable name="response" type="xsd:string"/>
         <bpws:variable element="ns9:ActivityInput" name="Log1-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns2:ActivityErrorData"
+            name="_error_TransformXml" sca-bpel:internal="true"/>
+        <bpws:variable element="ns2:ActivityErrorData"
+            name="_error_Transformeps" sca-bpel:internal="true"/>
     </bpws:variables>
     <bpws:extensions>
         <bpws:extension mustUnderstand="no" namespace="http://www.eclipse.org/gmf/runtime/1.0.2/notation"/>
@@ -1878,7 +1882,7 @@
                                 <properties name="config" xsi:type="activityconfig:EMFProperty">
                                     <type href="http://ns.tibco.com/bw/palette/xmlpalette#//TransformXml"/>
                                     <value inputOutputStyle="text"
-                                    stylesheet="Schemas/udm_schemas/NamespacePrefixRemover.xslt"
+                                    stylesheet="Schemas/sdl_schemas/NamespacePrefixRemover.xslt"
                                     xsi:type="palettexml:TransformXml" xsltEngine="TIBCO GenXDM XSLT 2.0"/>
                                 </properties>
                             </activityConfig>
@@ -2128,7 +2132,7 @@
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns6=&quot;http://www.example.org/epsPdnContext&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;ParseXml&quot;/>&#xa;    &lt;xsl:template name=&quot;RenderXml-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns6:epsPdnContext>&#xa;            &lt;tns6:apn>&#xa;                &lt;xsl:value-of select=&quot;$ParseXml/modification/valueObject/epsPdnContext/apn&quot;/>&#xa;            &lt;/tns6:apn>&#xa;            &lt;xsl:if test=&quot;$ParseXml/modification/valueObject/epsPdnContext/contextId&quot;>&#xa;                &lt;tns6:contextId>&#xa;                    &lt;xsl:copy-of select=&quot;$ParseXml/modification/valueObject/epsPdnContext/contextId/@xsi:nil&quot;/>&#xa;                    &lt;xsl:value-of select=&quot;$ParseXml/modification/valueObject/epsPdnContext/contextId&quot;/>&#xa;                &lt;/tns6:contextId>&#xa;            &lt;/xsl:if>&#xa;            &lt;xsl:if test=&quot;$ParseXml/modification/valueObject/epsPdnContext/type&quot;>&#xa;                &lt;tns6:type>&#xa;                    &lt;xsl:copy-of select=&quot;$ParseXml/modification/valueObject/epsPdnContext/type/@xsi:nil&quot;/>&#xa;                    &lt;xsl:value-of select=&quot;$ParseXml/modification/valueObject/epsPdnContext/type&quot;/>&#xa;                &lt;/tns6:type>&#xa;            &lt;/xsl:if>&#xa;            &lt;xsl:if test=&quot;$ParseXml/modification/valueObject/epsPdnContext/ipv4Address&quot;>&#xa;                &lt;tns6:ipv4Address>&#xa;                    &lt;xsl:copy-of select=&quot;$ParseXml/modification/valueObject/epsPdnContext/ipv4Address/@xsi:nil&quot;/>&#xa;                    &lt;xsl:value-of select=&quot;$ParseXml/modification/valueObject/epsPdnContext/ipv4Address&quot;/>&#xa;                &lt;/tns6:ipv4Address>&#xa;            &lt;/xsl:if>&#xa;            &lt;xsl:if test=&quot;$ParseXml/modification/valueObject/epsPdnContext/pdnGwDynamicAllocation&quot;>&#xa;                &lt;tns6:pdnGwDynamicAllocation>&#xa;                    &lt;xsl:copy-of select=&quot;$ParseXml/modification/valueObject/epsPdnContext/pdnGwDynamicAllocation/@xsi:nil&quot;/>&#xa;                    &lt;xsl:value-of select=&quot;$ParseXml/modification/valueObject/epsPdnContext/pdnGwDynamicAllocation&quot;/>&#xa;                &lt;/tns6:pdnGwDynamicAllocation>&#xa;            &lt;/xsl:if>&#xa;            &lt;tns6:maxBandwidthUp>&#xa;                &lt;xsl:value-of select=&quot;$ParseXml/modification/valueObject/epsPdnContext/maxBandwidthUp&quot;/>&#xa;            &lt;/tns6:maxBandwidthUp>&#xa;            &lt;tns6:maxBandwidthDown>&#xa;                &lt;xsl:value-of select=&quot;$ParseXml/modification/valueObject/epsPdnContext/maxBandwidthDown&quot;/>&#xa;            &lt;/tns6:maxBandwidthDown>&#xa;            &lt;xsl:if test=&quot;$ParseXml/modification/valueObject/epsPdnContext/qos&quot;>&#xa;                &lt;tns6:qos>&#xa;                    &lt;xsl:copy-of select=&quot;$ParseXml/modification/valueObject/epsPdnContext/qos/@xsi:nil&quot;/>&#xa;                    &lt;xsl:value-of select=&quot;$ParseXml/modification/valueObject/epsPdnContext/qos&quot;/>&#xa;                &lt;/tns6:qos>&#xa;            &lt;/xsl:if>&#xa;            &lt;xsl:for-each select=&quot;$ParseXml/modification/valueObject/epsPdnContext/pdnChargingCharacteristics&quot;>&#xa;                &lt;tns6:pdnChargingCharacteristics>&#xa;                    &lt;tns6:chargingCharacteristics>&#xa;                        &lt;xsl:value-of select=&quot;chargingCharacteristics&quot;/>&#xa;                    &lt;/tns6:chargingCharacteristics>&#xa;                    &lt;xsl:if test=&quot;chargingCharacteristicsProfile&quot;>&#xa;                        &lt;tns6:chargingCharacteristicsProfile>&#xa;                            &lt;xsl:copy-of select=&quot;chargingCharacteristicsProfile/@xsi:nil&quot;/>&#xa;                            &lt;xsl:value-of select=&quot;chargingCharacteristicsProfile&quot;/>&#xa;                        &lt;/tns6:chargingCharacteristicsProfile>&#xa;                    &lt;/xsl:if>&#xa;                &lt;/tns6:pdnChargingCharacteristics>&#xa;            &lt;/xsl:for-each>&#xa;        &lt;/tns6:epsPdnContext>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns6=&quot;http://www.example.org/epsPdnContext&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;ParseXml&quot;/>&lt;xsl:template name=&quot;RenderepsPdnContext-input&quot; match=&quot;/&quot;>&lt;tns6:epsPdnContext>&lt;tns6:apn>&lt;xsl:value-of select=&quot;$ParseXml/modification/valueObject/epsPdnContext/apn&quot;/>&lt;/tns6:apn>&lt;xsl:if test=&quot;$ParseXml/modification/valueObject/epsPdnContext/contextId&quot;>&lt;tns6:contextId>&lt;xsl:copy-of select=&quot;$ParseXml/modification/valueObject/epsPdnContext/contextId/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseXml/modification/valueObject/epsPdnContext/contextId&quot;/>&lt;/tns6:contextId>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseXml/modification/valueObject/epsPdnContext/type&quot;>&lt;tns6:type>&lt;xsl:copy-of select=&quot;$ParseXml/modification/valueObject/epsPdnContext/type/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseXml/modification/valueObject/epsPdnContext/type&quot;/>&lt;/tns6:type>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseXml/modification/valueObject/epsPdnContext/ipv4Address&quot;>&lt;tns6:ipv4Address>&lt;xsl:copy-of select=&quot;$ParseXml/modification/valueObject/epsPdnContext/ipv4Address/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseXml/modification/valueObject/epsPdnContext/ipv4Address&quot;/>&lt;/tns6:ipv4Address>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseXml/modification/valueObject/epsPdnContext/pdnGwDynamicAllocation&quot;>&lt;tns6:pdnGwDynamicAllocation>&lt;xsl:copy-of select=&quot;$ParseXml/modification/valueObject/epsPdnContext/pdnGwDynamicAllocation/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseXml/modification/valueObject/epsPdnContext/pdnGwDynamicAllocation&quot;/>&lt;/tns6:pdnGwDynamicAllocation>&lt;/xsl:if>&lt;tns6:maxBandwidthUp>&lt;xsl:value-of select=&quot;$ParseXml/modification/valueObject/epsPdnContext/maxBandwidthUp&quot;/>&lt;/tns6:maxBandwidthUp>&lt;tns6:maxBandwidthDown>&lt;xsl:value-of select=&quot;$ParseXml/modification/valueObject/epsPdnContext/maxBandwidthDown&quot;/>&lt;/tns6:maxBandwidthDown>&lt;xsl:if test=&quot;$ParseXml/modification/valueObject/epsPdnContext/qos&quot;>&lt;tns6:qos>&lt;xsl:copy-of select=&quot;$ParseXml/modification/valueObject/epsPdnContext/qos/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseXml/modification/valueObject/epsPdnContext/qos&quot;/>&lt;/tns6:qos>&lt;/xsl:if>&lt;tns6:pdnChargingCharacteristics>&lt;tns6:chargingCharacteristics>&lt;xsl:value-of select=&quot;$ParseXml/modification/valueObject/epsPdnContext/pdnChargingCharacteristics/chargingCharacteristics&quot;/>&lt;/tns6:chargingCharacteristics>&lt;xsl:if test=&quot;$ParseXml/modification/valueObject/epsPdnContext/pdnChargingCharacteristics/chargingCharacteristicsProfile&quot;>&lt;tns6:chargingCharacteristicsProfile>&lt;xsl:copy-of select=&quot;$ParseXml/modification/valueObject/epsPdnContext/pdnChargingCharacteristics/chargingCharacteristicsProfile/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$ParseXml/modification/valueObject/epsPdnContext/pdnChargingCharacteristics/chargingCharacteristicsProfile&quot;/>&lt;/tns6:chargingCharacteristicsProfile>&lt;/xsl:if>&lt;/tns6:pdnChargingCharacteristics>&lt;/tns6:epsPdnContext>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:config>
                         <bwext:BWActivity
@@ -2178,7 +2182,7 @@
                                 <properties name="config" xsi:type="activityconfig:EMFProperty">
                                     <type href="http://ns.tibco.com/bw/palette/xmlpalette#//TransformXml"/>
                                     <value inputOutputStyle="text"
-                                    stylesheet="Schemas/udm_schemas/NamespacePrefixRemover.xslt"
+                                    stylesheet="Schemas/sdl_schemas/NamespacePrefixRemover.xslt"
                                     xsi:type="palettexml:TransformXml" xsltEngine="TIBCO GenXDM XSLT 2.0"/>
                                 </properties>
                             </activityConfig>
@@ -2308,7 +2312,7 @@
                                 <properties name="config" xsi:type="activityconfig:EMFProperty">
                                     <type href="http://ns.tibco.com/bw/palette/xmlpalette#//TransformXml"/>
                                     <value inputOutputStyle="text"
-                                    stylesheet="Schemas/udm_schemas/NamespacePrefixRemover.xslt"
+                                    stylesheet="Schemas/sdl_schemas/NamespacePrefixRemover.xslt"
                                     xsi:type="palettexml:TransformXml" xsltEngine="TIBCO GenXDM XSLT 2.0"/>
                                 </properties>
                             </activityConfig>

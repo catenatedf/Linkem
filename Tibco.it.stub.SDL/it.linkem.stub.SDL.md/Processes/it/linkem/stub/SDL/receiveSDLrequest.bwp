@@ -16,6 +16,26 @@
     xmlns:sca-bpel="http://docs.oasis-open.org/ns/opencsa/sca-bpel/200801"
     xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"
     xmlns:tibprop="http://ns.tibco.com/bw/property" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <tibex:VariableDescriptor type="MemorySaving">
+        <task name="SendHTTPResponse">
+            <endingVariables>
+                <variable>SendHTTPResponse-input</variable>
+                <variable>receiveRequest</variable>
+                <variable>changeSIm</variable>
+                <variable>getUser</variable>
+            </endingVariables>
+        </task>
+        <task name="getUser">
+            <endingVariables>
+                <variable>getUser-input</variable>
+            </endingVariables>
+        </task>
+        <task name="changeSIm">
+            <endingVariables>
+                <variable>changeSIm-input</variable>
+            </endingVariables>
+        </task>
+    </tibex:VariableDescriptor>
     <tibex:Types>
         <xs:schema attributeFormDefault="unqualified"
             elementFormDefault="qualified"
@@ -783,10 +803,6 @@
             namespace="http://tns.tibco.com/bw/activity/sendhttpresponse/xsd/input+915de57c-c346-4ca7-8623-a6f0b7e6ef74+ResponseActivityInput" prefix="tns"/>
         <tibex:namespaceItem namespace="http://www.example.org/udmInOut" prefix="tns1"/>
     </tibex:NamespaceRegistry>
-    <bpws:import importType="http://www.w3.org/2001/XMLSchema"
-        location="../../../../../Schemas/sdl_schemas/getUser-internal-testNonamespace.xsd" namespace=""/>
-    <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.example.org/auc"/>
-    <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.example.org/HLR"/>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.example.org/udmInOut"/>
     <bpws:variables>
         <bpws:variable element="ns:ProcessContext"
