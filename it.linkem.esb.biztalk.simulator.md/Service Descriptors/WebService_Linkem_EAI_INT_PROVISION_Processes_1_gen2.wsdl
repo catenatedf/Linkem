@@ -1,0 +1,743 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://Linkem.EAI/" xmlns:tns0="http://Linkem.EAI.INT_PROVISION.Messaging.SimCheck" xmlns:tns1="http://Linkem.EAI.INT_PROVISION.Messaging.ContractActivationWLte" xmlns:tns10="http://Linkem.EAI.INT_PROVISION.Messaging.Schemas.CertificationGetValues" xmlns:tns2="http://Linkem.EAI.INT_PROVISION.Messaging.ContractSwapWLte" xmlns:tns3="http://Linkem.EAI.INT_PROVISION.Messaging.ContractChange" xmlns:tns4="http://Linkem.EAI.INT_PROVISION.Messaging.ContractActivation" xmlns:tns5="http://Linkem.EAI.INT_PROVISION.Messaging.Schemas.Certificazione" xmlns:tns6="http://Linkem.EAI.INT_PROVISION.Messaging.ContractChangePlan" xmlns:tns7="http://Linkem.EAI.INT_PROVISION.Messaging.ContractSwapLWimax" xmlns:tns8="http://Linkem.EAI.INT_PROVISION.Messaging.ContractActivationNeutral" xmlns:tns9="http://Linkem.EAI.INT_PROVISION.Messaging.ProvisioningProcessStatus" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="WebService_Linkem_EAI_INT_PROVISION_ProcessesSoap" targetNamespace="http://Linkem.EAI/">
+  <wsdl:types>
+    <xsd:schema xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:s1="http://Linkem.EAI.INT_PROVISION.Messaging.ProvisioningProcessStatus" xmlns:s10="http://Linkem.EAI.INT_PROVISION.Messaging.ContractActivation" xmlns:s11="http://Linkem.EAI.INT_PROVISION.Messaging.ContractSwapLWimax" xmlns:s2="http://Linkem.EAI.INT_PROVISION.Messaging.ContractChange" xmlns:s3="http://Linkem.EAI.INT_PROVISION.Messaging.Schemas.Certificazione" xmlns:s4="http://Linkem.EAI.INT_PROVISION.Messaging.SimCheck" xmlns:s5="http://Linkem.EAI.INT_PROVISION.Messaging.ContractActivationNeutral" xmlns:s6="http://Linkem.EAI.INT_PROVISION.Messaging.ContractActivationWLte" xmlns:s7="http://Linkem.EAI.INT_PROVISION.Messaging.ContractSwapWLte" xmlns:s8="http://Linkem.EAI.INT_PROVISION.Messaging.Schemas.CertificationGetValues" xmlns:s9="http://Linkem.EAI.INT_PROVISION.Messaging.ContractChangePlan" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" elementFormDefault="qualified" targetNamespace="http://Linkem.EAI.INT_PROVISION.Messaging.SimCheck">
+      <xsd:element name="SimCheckRequest">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element form="unqualified" maxOccurs="1" minOccurs="0" name="CodiceFiscale" type="xsd:string"/>
+            <xsd:element form="unqualified" maxOccurs="1" minOccurs="0" name="PartitaIva" type="xsd:string"/>
+            <xsd:element form="unqualified" maxOccurs="1" minOccurs="0" name="CodiceSbloccoSms" type="xsd:string"/>
+            <xsd:element form="unqualified" maxOccurs="1" minOccurs="0" name="Ip" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="SimCheckResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element form="unqualified" maxOccurs="1" minOccurs="0" name="ResultInfo">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element form="unqualified" maxOccurs="1" minOccurs="0" name="ResultCode" type="xsd:string"/>
+                  <xsd:element form="unqualified" maxOccurs="1" minOccurs="0" name="ErrorMessage" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element form="unqualified" maxOccurs="1" minOccurs="0" name="ContractInfo">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element form="unqualified" maxOccurs="1" minOccurs="0" name="Nome" type="xsd:string"/>
+                  <xsd:element form="unqualified" maxOccurs="1" minOccurs="0" name="CodiceFiscale" type="xsd:string"/>
+                  <xsd:element form="unqualified" maxOccurs="1" minOccurs="0" name="PartitaIva" type="xsd:string"/>
+                  <xsd:element form="unqualified" maxOccurs="1" minOccurs="0" name="TipoCliente" type="xsd:string"/>
+                  <xsd:element form="unqualified" maxOccurs="1" minOccurs="0" name="Via" type="xsd:string"/>
+                  <xsd:element form="unqualified" maxOccurs="1" minOccurs="0" name="NumeroCivico" type="xsd:string"/>
+                  <xsd:element form="unqualified" maxOccurs="1" minOccurs="0" name="Citta" type="xsd:string"/>
+                  <xsd:element form="unqualified" maxOccurs="1" minOccurs="0" name="Provincia" type="xsd:string"/>
+                  <xsd:element form="unqualified" maxOccurs="1" minOccurs="0" name="Status" type="xsd:string"/>
+                  <xsd:element form="unqualified" maxOccurs="1" minOccurs="0" name="TecnologiaConnessione" type="xsd:string"/>
+                  <xsd:element form="unqualified" maxOccurs="1" minOccurs="0" name="TestataDelContrattoId" type="xsd:string"/>
+                  <xsd:element form="unqualified" maxOccurs="1" minOccurs="0" name="PrimoContrattoId" type="xsd:string"/>
+                  <xsd:element form="unqualified" maxOccurs="1" minOccurs="0" name="IdContratto" type="xsd:string"/>
+                  <xsd:element form="unqualified" maxOccurs="1" minOccurs="0" name="IccId" type="xsd:string"/>
+                  <xsd:element form="unqualified" maxOccurs="1" minOccurs="1" name="StatoSwap" type="xsd:int"/>
+                  <xsd:element form="unqualified" maxOccurs="1" minOccurs="1" name="VerificaDatiLte" type="xsd:boolean"/>
+                  <xsd:element form="unqualified" maxOccurs="1" minOccurs="1" name="RicezioneDocumentiLte" type="xsd:boolean"/>
+                  <xsd:element form="unqualified" maxOccurs="1" minOccurs="1" name="PagamentoEffettuato" type="xsd:boolean"/>
+                  <xsd:element form="unqualified" maxOccurs="1" minOccurs="0" name="IdentificativoOfferta" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+    <xsd:schema xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:s1="http://Linkem.EAI.INT_PROVISION.Messaging.ProvisioningProcessStatus" xmlns:s10="http://Linkem.EAI.INT_PROVISION.Messaging.ContractActivation" xmlns:s11="http://Linkem.EAI.INT_PROVISION.Messaging.ContractSwapLWimax" xmlns:s2="http://Linkem.EAI.INT_PROVISION.Messaging.ContractChange" xmlns:s3="http://Linkem.EAI.INT_PROVISION.Messaging.Schemas.Certificazione" xmlns:s4="http://Linkem.EAI.INT_PROVISION.Messaging.SimCheck" xmlns:s5="http://Linkem.EAI.INT_PROVISION.Messaging.ContractActivationNeutral" xmlns:s6="http://Linkem.EAI.INT_PROVISION.Messaging.ContractActivationWLte" xmlns:s7="http://Linkem.EAI.INT_PROVISION.Messaging.ContractSwapWLte" xmlns:s8="http://Linkem.EAI.INT_PROVISION.Messaging.Schemas.CertificationGetValues" xmlns:s9="http://Linkem.EAI.INT_PROVISION.Messaging.ContractChangePlan" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" elementFormDefault="qualified" targetNamespace="http://Linkem.EAI.INT_PROVISION.Messaging.ContractActivationWLte">
+      <xsd:element name="ContractActivationWLteRequest">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element form="unqualified" maxOccurs="1" minOccurs="0" name="IccId" type="xsd:string"/>
+            <xsd:element form="unqualified" maxOccurs="1" minOccurs="0" name="TestataDelContrattoId" type="xsd:string"/>
+            <xsd:element form="unqualified" maxOccurs="1" minOccurs="0" name="IdContratto" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ContractActivationWLteResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element form="unqualified" maxOccurs="1" minOccurs="0" name="ResultInfo">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element form="unqualified" maxOccurs="1" minOccurs="0" name="idTransaction" type="xsd:string"/>
+                  <xsd:element form="unqualified" maxOccurs="1" minOccurs="0" name="flowCode" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+    <xsd:schema xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:s1="http://Linkem.EAI.INT_PROVISION.Messaging.ProvisioningProcessStatus" xmlns:s10="http://Linkem.EAI.INT_PROVISION.Messaging.ContractActivation" xmlns:s11="http://Linkem.EAI.INT_PROVISION.Messaging.ContractSwapLWimax" xmlns:s2="http://Linkem.EAI.INT_PROVISION.Messaging.ContractChange" xmlns:s3="http://Linkem.EAI.INT_PROVISION.Messaging.Schemas.Certificazione" xmlns:s4="http://Linkem.EAI.INT_PROVISION.Messaging.SimCheck" xmlns:s5="http://Linkem.EAI.INT_PROVISION.Messaging.ContractActivationNeutral" xmlns:s6="http://Linkem.EAI.INT_PROVISION.Messaging.ContractActivationWLte" xmlns:s7="http://Linkem.EAI.INT_PROVISION.Messaging.ContractSwapWLte" xmlns:s8="http://Linkem.EAI.INT_PROVISION.Messaging.Schemas.CertificationGetValues" xmlns:s9="http://Linkem.EAI.INT_PROVISION.Messaging.ContractChangePlan" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" elementFormDefault="qualified" targetNamespace="http://Linkem.EAI.INT_PROVISION.Messaging.ContractSwapWLte">
+      <xsd:element name="ContractSwapWLteRequest">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element form="unqualified" maxOccurs="1" minOccurs="0" name="IccId" type="xsd:string"/>
+            <xsd:element form="unqualified" maxOccurs="1" minOccurs="0" name="TestataDelContrattoId" type="xsd:string"/>
+            <xsd:element form="unqualified" maxOccurs="1" minOccurs="0" name="IdContratto" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ContractSwapWLteResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element form="unqualified" maxOccurs="1" minOccurs="0" name="ResultInfo">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element form="unqualified" maxOccurs="1" minOccurs="0" name="idTransaction" type="xsd:string"/>
+                  <xsd:element form="unqualified" maxOccurs="1" minOccurs="0" name="flowCode" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+    <xsd:schema xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:s1="http://Linkem.EAI.INT_PROVISION.Messaging.ProvisioningProcessStatus" xmlns:s10="http://Linkem.EAI.INT_PROVISION.Messaging.ContractActivation" xmlns:s11="http://Linkem.EAI.INT_PROVISION.Messaging.ContractSwapLWimax" xmlns:s2="http://Linkem.EAI.INT_PROVISION.Messaging.ContractChange" xmlns:s3="http://Linkem.EAI.INT_PROVISION.Messaging.Schemas.Certificazione" xmlns:s4="http://Linkem.EAI.INT_PROVISION.Messaging.SimCheck" xmlns:s5="http://Linkem.EAI.INT_PROVISION.Messaging.ContractActivationNeutral" xmlns:s6="http://Linkem.EAI.INT_PROVISION.Messaging.ContractActivationWLte" xmlns:s7="http://Linkem.EAI.INT_PROVISION.Messaging.ContractSwapWLte" xmlns:s8="http://Linkem.EAI.INT_PROVISION.Messaging.Schemas.CertificationGetValues" xmlns:s9="http://Linkem.EAI.INT_PROVISION.Messaging.ContractChangePlan" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" elementFormDefault="qualified" targetNamespace="http://Linkem.EAI.INT_PROVISION.Messaging.ContractChange">
+      <xsd:element name="ContractChangeRequest">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element form="unqualified" maxOccurs="1" minOccurs="0" name="IdContratto" type="xsd:string"/>
+            <xsd:element form="unqualified" maxOccurs="1" minOccurs="0" name="TestataDelContrattoId" type="xsd:string"/>
+            <xsd:element form="unqualified" maxOccurs="1" minOccurs="0" name="Azione" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ContractChangeResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element form="unqualified" maxOccurs="1" minOccurs="0" name="PreviousStatus" type="xsd:string"/>
+            <xsd:element form="unqualified" maxOccurs="1" minOccurs="0" name="ResultCode" type="xsd:string"/>
+            <xsd:element form="unqualified" maxOccurs="1" minOccurs="0" name="ErrorDescription" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+    <xsd:schema xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:s1="http://Linkem.EAI.INT_PROVISION.Messaging.ProvisioningProcessStatus" xmlns:s10="http://Linkem.EAI.INT_PROVISION.Messaging.ContractActivation" xmlns:s11="http://Linkem.EAI.INT_PROVISION.Messaging.ContractSwapLWimax" xmlns:s2="http://Linkem.EAI.INT_PROVISION.Messaging.ContractChange" xmlns:s3="http://Linkem.EAI.INT_PROVISION.Messaging.Schemas.Certificazione" xmlns:s4="http://Linkem.EAI.INT_PROVISION.Messaging.SimCheck" xmlns:s5="http://Linkem.EAI.INT_PROVISION.Messaging.ContractActivationNeutral" xmlns:s6="http://Linkem.EAI.INT_PROVISION.Messaging.ContractActivationWLte" xmlns:s7="http://Linkem.EAI.INT_PROVISION.Messaging.ContractSwapWLte" xmlns:s8="http://Linkem.EAI.INT_PROVISION.Messaging.Schemas.CertificationGetValues" xmlns:s9="http://Linkem.EAI.INT_PROVISION.Messaging.ContractChangePlan" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" elementFormDefault="qualified" targetNamespace="http://Linkem.EAI.INT_PROVISION.Messaging.ContractActivation">
+      <xsd:element name="ContractActivationRequest">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element form="unqualified" maxOccurs="1" minOccurs="0" name="IccId" type="xsd:string"/>
+            <xsd:element form="unqualified" maxOccurs="1" minOccurs="0" name="TestataDelContrattoId" type="xsd:string"/>
+            <xsd:element form="unqualified" maxOccurs="1" minOccurs="0" name="IdContratto" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ContractActivationResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element form="unqualified" maxOccurs="1" minOccurs="0" name="ResultInfo">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element form="unqualified" maxOccurs="1" minOccurs="0" name="idTransaction" type="xsd:string"/>
+                  <xsd:element form="unqualified" maxOccurs="1" minOccurs="0" name="flowCode" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+    <xsd:schema xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:s1="http://Linkem.EAI.INT_PROVISION.Messaging.ProvisioningProcessStatus" xmlns:s10="http://Linkem.EAI.INT_PROVISION.Messaging.ContractActivation" xmlns:s11="http://Linkem.EAI.INT_PROVISION.Messaging.ContractSwapLWimax" xmlns:s2="http://Linkem.EAI.INT_PROVISION.Messaging.ContractChange" xmlns:s3="http://Linkem.EAI.INT_PROVISION.Messaging.Schemas.Certificazione" xmlns:s4="http://Linkem.EAI.INT_PROVISION.Messaging.SimCheck" xmlns:s5="http://Linkem.EAI.INT_PROVISION.Messaging.ContractActivationNeutral" xmlns:s6="http://Linkem.EAI.INT_PROVISION.Messaging.ContractActivationWLte" xmlns:s7="http://Linkem.EAI.INT_PROVISION.Messaging.ContractSwapWLte" xmlns:s8="http://Linkem.EAI.INT_PROVISION.Messaging.Schemas.CertificationGetValues" xmlns:s9="http://Linkem.EAI.INT_PROVISION.Messaging.ContractChangePlan" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" elementFormDefault="qualified" targetNamespace="http://Linkem.EAI.INT_PROVISION.Messaging.Schemas.Certificazione">
+      <xsd:element name="CertificateRequest">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element form="unqualified" maxOccurs="1" minOccurs="0" name="OrigineChiamata" type="xsd:string"/>
+            <xsd:element form="unqualified" maxOccurs="1" minOccurs="0" name="Ip" type="xsd:string"/>
+            <xsd:element form="unqualified" maxOccurs="1" minOccurs="0" name="CodiceInstallatore" type="xsd:string"/>
+            <xsd:element form="unqualified" maxOccurs="1" minOccurs="0" name="CodiceOdl" type="xsd:string"/>
+            <xsd:element form="unqualified" maxOccurs="1" minOccurs="0" name="EsitoCertificazione" type="xsd:string"/>
+            <xsd:element form="unqualified" maxOccurs="1" minOccurs="0" name="UserName" type="xsd:string"/>
+            <xsd:element form="unqualified" maxOccurs="1" minOccurs="0" name="ICCID" type="xsd:string"/>
+            <xsd:element form="unqualified" maxOccurs="unbounded" minOccurs="0" name="Misure">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element form="unqualified" maxOccurs="1" minOccurs="0" name="NomeMisura" type="xsd:string"/>
+                  <xsd:element form="unqualified" maxOccurs="1" minOccurs="0" name="EsitoMisura" type="xsd:string"/>
+                  <xsd:element form="unqualified" maxOccurs="1" minOccurs="0" name="ValoreMisura" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="CertificateResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element form="unqualified" maxOccurs="1" minOccurs="0" name="ResultCode" type="xsd:string"/>
+            <xsd:element form="unqualified" maxOccurs="1" minOccurs="0" name="ErrorDescription" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+    <xsd:schema xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:s1="http://Linkem.EAI.INT_PROVISION.Messaging.ProvisioningProcessStatus" xmlns:s10="http://Linkem.EAI.INT_PROVISION.Messaging.ContractActivation" xmlns:s11="http://Linkem.EAI.INT_PROVISION.Messaging.ContractSwapLWimax" xmlns:s2="http://Linkem.EAI.INT_PROVISION.Messaging.ContractChange" xmlns:s3="http://Linkem.EAI.INT_PROVISION.Messaging.Schemas.Certificazione" xmlns:s4="http://Linkem.EAI.INT_PROVISION.Messaging.SimCheck" xmlns:s5="http://Linkem.EAI.INT_PROVISION.Messaging.ContractActivationNeutral" xmlns:s6="http://Linkem.EAI.INT_PROVISION.Messaging.ContractActivationWLte" xmlns:s7="http://Linkem.EAI.INT_PROVISION.Messaging.ContractSwapWLte" xmlns:s8="http://Linkem.EAI.INT_PROVISION.Messaging.Schemas.CertificationGetValues" xmlns:s9="http://Linkem.EAI.INT_PROVISION.Messaging.ContractChangePlan" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" elementFormDefault="qualified" targetNamespace="http://Linkem.EAI.INT_PROVISION.Messaging.ContractChangePlan">
+      <xsd:element name="ContractChangePlanRequest">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element form="unqualified" maxOccurs="1" minOccurs="0" name="Iccid" type="xsd:string"/>
+            <xsd:element form="unqualified" maxOccurs="1" minOccurs="0" name="TestataDelContrattoId" type="xsd:string"/>
+            <xsd:element form="unqualified" maxOccurs="1" minOccurs="0" name="IdContratto" type="xsd:string"/>
+            <xsd:element form="unqualified" maxOccurs="1" minOccurs="0" name="PrimoContrattoId" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ContractChangePlanResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element form="unqualified" maxOccurs="1" minOccurs="0" name="ResultInfo">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element form="unqualified" maxOccurs="1" minOccurs="0" name="idTransaction" type="xsd:string"/>
+                  <xsd:element form="unqualified" maxOccurs="1" minOccurs="0" name="flowCode" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+    <xsd:schema xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:s1="http://Linkem.EAI.INT_PROVISION.Messaging.ProvisioningProcessStatus" xmlns:s10="http://Linkem.EAI.INT_PROVISION.Messaging.ContractActivation" xmlns:s11="http://Linkem.EAI.INT_PROVISION.Messaging.ContractSwapLWimax" xmlns:s2="http://Linkem.EAI.INT_PROVISION.Messaging.ContractChange" xmlns:s3="http://Linkem.EAI.INT_PROVISION.Messaging.Schemas.Certificazione" xmlns:s4="http://Linkem.EAI.INT_PROVISION.Messaging.SimCheck" xmlns:s5="http://Linkem.EAI.INT_PROVISION.Messaging.ContractActivationNeutral" xmlns:s6="http://Linkem.EAI.INT_PROVISION.Messaging.ContractActivationWLte" xmlns:s7="http://Linkem.EAI.INT_PROVISION.Messaging.ContractSwapWLte" xmlns:s8="http://Linkem.EAI.INT_PROVISION.Messaging.Schemas.CertificationGetValues" xmlns:s9="http://Linkem.EAI.INT_PROVISION.Messaging.ContractChangePlan" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" elementFormDefault="qualified" targetNamespace="http://Linkem.EAI.INT_PROVISION.Messaging.ContractSwapLWimax">
+      <xsd:element name="ContractSwapLWimaxRequest">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element form="unqualified" maxOccurs="1" minOccurs="0" name="IccId" type="xsd:string"/>
+            <xsd:element form="unqualified" maxOccurs="1" minOccurs="0" name="TestataDelContrattoId" type="xsd:string"/>
+            <xsd:element form="unqualified" maxOccurs="1" minOccurs="0" name="IdContratto" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ContractSwapLWimaxResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element form="unqualified" maxOccurs="1" minOccurs="0" name="ResultInfo">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element form="unqualified" maxOccurs="1" minOccurs="0" name="resultCode" type="xsd:string"/>
+                  <xsd:element form="unqualified" maxOccurs="1" minOccurs="0" name="errorMessage" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+    <xsd:schema xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:s1="http://Linkem.EAI.INT_PROVISION.Messaging.ProvisioningProcessStatus" xmlns:s10="http://Linkem.EAI.INT_PROVISION.Messaging.ContractActivation" xmlns:s11="http://Linkem.EAI.INT_PROVISION.Messaging.ContractSwapLWimax" xmlns:s2="http://Linkem.EAI.INT_PROVISION.Messaging.ContractChange" xmlns:s3="http://Linkem.EAI.INT_PROVISION.Messaging.Schemas.Certificazione" xmlns:s4="http://Linkem.EAI.INT_PROVISION.Messaging.SimCheck" xmlns:s5="http://Linkem.EAI.INT_PROVISION.Messaging.ContractActivationNeutral" xmlns:s6="http://Linkem.EAI.INT_PROVISION.Messaging.ContractActivationWLte" xmlns:s7="http://Linkem.EAI.INT_PROVISION.Messaging.ContractSwapWLte" xmlns:s8="http://Linkem.EAI.INT_PROVISION.Messaging.Schemas.CertificationGetValues" xmlns:s9="http://Linkem.EAI.INT_PROVISION.Messaging.ContractChangePlan" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" elementFormDefault="qualified" targetNamespace="http://Linkem.EAI.INT_PROVISION.Messaging.ContractActivationNeutral">
+      <xsd:element name="ContractActivationNeutralRequest">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element form="unqualified" maxOccurs="1" minOccurs="0" name="IccId" type="xsd:string"/>
+            <xsd:element form="unqualified" maxOccurs="1" minOccurs="0" name="TestataDelContrattoId" type="xsd:string"/>
+            <xsd:element form="unqualified" maxOccurs="1" minOccurs="0" name="IdContratto" type="xsd:string"/>
+            <xsd:element form="unqualified" maxOccurs="1" minOccurs="0" name="Ip" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ContractActivationNeutralResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element form="unqualified" maxOccurs="1" minOccurs="0" name="ResultInfo">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element form="unqualified" maxOccurs="1" minOccurs="0" name="idTransaction" type="xsd:string"/>
+                  <xsd:element form="unqualified" maxOccurs="1" minOccurs="0" name="flowCode" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+    <xsd:schema xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:s1="http://Linkem.EAI.INT_PROVISION.Messaging.ProvisioningProcessStatus" xmlns:s10="http://Linkem.EAI.INT_PROVISION.Messaging.ContractActivation" xmlns:s11="http://Linkem.EAI.INT_PROVISION.Messaging.ContractSwapLWimax" xmlns:s2="http://Linkem.EAI.INT_PROVISION.Messaging.ContractChange" xmlns:s3="http://Linkem.EAI.INT_PROVISION.Messaging.Schemas.Certificazione" xmlns:s4="http://Linkem.EAI.INT_PROVISION.Messaging.SimCheck" xmlns:s5="http://Linkem.EAI.INT_PROVISION.Messaging.ContractActivationNeutral" xmlns:s6="http://Linkem.EAI.INT_PROVISION.Messaging.ContractActivationWLte" xmlns:s7="http://Linkem.EAI.INT_PROVISION.Messaging.ContractSwapWLte" xmlns:s8="http://Linkem.EAI.INT_PROVISION.Messaging.Schemas.CertificationGetValues" xmlns:s9="http://Linkem.EAI.INT_PROVISION.Messaging.ContractChangePlan" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" elementFormDefault="qualified" targetNamespace="http://Linkem.EAI.INT_PROVISION.Messaging.ProvisioningProcessStatus">
+      <xsd:element name="ProvisioningProcessStatusRequest">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element form="unqualified" maxOccurs="1" minOccurs="0" name="idTransaction" type="xsd:string"/>
+            <xsd:element form="unqualified" maxOccurs="1" minOccurs="0" name="flowCode" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ProvisioningProcessStatusResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element form="unqualified" maxOccurs="1" minOccurs="0" name="ProcessStartDate" type="xsd:string"/>
+            <xsd:element form="unqualified" maxOccurs="1" minOccurs="0" name="ProcessEndDate" type="xsd:string"/>
+            <xsd:element form="unqualified" maxOccurs="1" minOccurs="0" name="StatusCode" type="xsd:string"/>
+            <xsd:element form="unqualified" maxOccurs="1" minOccurs="0" name="StatusDescription" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+    <xsd:schema xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:s1="http://Linkem.EAI.INT_PROVISION.Messaging.ProvisioningProcessStatus" xmlns:s10="http://Linkem.EAI.INT_PROVISION.Messaging.ContractActivation" xmlns:s11="http://Linkem.EAI.INT_PROVISION.Messaging.ContractSwapLWimax" xmlns:s2="http://Linkem.EAI.INT_PROVISION.Messaging.ContractChange" xmlns:s3="http://Linkem.EAI.INT_PROVISION.Messaging.Schemas.Certificazione" xmlns:s4="http://Linkem.EAI.INT_PROVISION.Messaging.SimCheck" xmlns:s5="http://Linkem.EAI.INT_PROVISION.Messaging.ContractActivationNeutral" xmlns:s6="http://Linkem.EAI.INT_PROVISION.Messaging.ContractActivationWLte" xmlns:s7="http://Linkem.EAI.INT_PROVISION.Messaging.ContractSwapWLte" xmlns:s8="http://Linkem.EAI.INT_PROVISION.Messaging.Schemas.CertificationGetValues" xmlns:s9="http://Linkem.EAI.INT_PROVISION.Messaging.ContractChangePlan" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" elementFormDefault="qualified" targetNamespace="http://Linkem.EAI/">
+      <xsd:import namespace="http://Linkem.EAI.INT_PROVISION.Messaging.ProvisioningProcessStatus"/>
+      <xsd:import namespace="http://Linkem.EAI.INT_PROVISION.Messaging.ContractChange"/>
+      <xsd:import namespace="http://Linkem.EAI.INT_PROVISION.Messaging.Schemas.Certificazione"/>
+      <xsd:import namespace="http://Linkem.EAI.INT_PROVISION.Messaging.SimCheck"/>
+      <xsd:import namespace="http://Linkem.EAI.INT_PROVISION.Messaging.ContractActivationNeutral"/>
+      <xsd:import namespace="http://Linkem.EAI.INT_PROVISION.Messaging.ContractActivationWLte"/>
+      <xsd:import namespace="http://Linkem.EAI.INT_PROVISION.Messaging.ContractSwapWLte"/>
+      <xsd:import namespace="http://Linkem.EAI.INT_PROVISION.Messaging.Schemas.CertificationGetValues"/>
+      <xsd:import namespace="http://Linkem.EAI.INT_PROVISION.Messaging.ContractChangePlan"/>
+      <xsd:import namespace="http://Linkem.EAI.INT_PROVISION.Messaging.ContractActivation"/>
+      <xsd:import namespace="http://Linkem.EAI.INT_PROVISION.Messaging.ContractSwapLWimax"/>
+      <xsd:element name="ProvisioningProcessStatus">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element maxOccurs="1" minOccurs="0" ref="s1:ProvisioningProcessStatusRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ProvisioningProcessStatusResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element maxOccurs="1" minOccurs="0" ref="s1:ProvisioningProcessStatusResponse"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ContractChangeProxy">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element maxOccurs="1" minOccurs="0" ref="s2:ContractChangeRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ContractChangeProxyResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element maxOccurs="1" minOccurs="0" ref="s2:ContractChangeResponse"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="Certificate">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element maxOccurs="1" minOccurs="0" ref="s3:CertificateRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="CertificateResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element maxOccurs="1" minOccurs="0" ref="s3:CertificateResponse"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="SimCheck">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element maxOccurs="1" minOccurs="0" ref="s4:SimCheckRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="SimCheckResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element maxOccurs="1" minOccurs="0" ref="s4:SimCheckResponse"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ContractActivationNeutralProxy">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element maxOccurs="1" minOccurs="0" ref="s5:ContractActivationNeutralRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ContractActivationNeutralProxyResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element maxOccurs="1" minOccurs="0" ref="s5:ContractActivationNeutralResponse"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ContractActivationWLte">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element maxOccurs="1" minOccurs="0" ref="s6:ContractActivationWLteRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ContractActivationWLteResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element maxOccurs="1" minOccurs="0" ref="s6:ContractActivationWLteResponse"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ContractSwapWLte">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element maxOccurs="1" minOccurs="0" ref="s7:ContractSwapWLteRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ContractSwapWLteResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element maxOccurs="1" minOccurs="0" ref="s7:ContractSwapWLteResponse"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="CertificationGetValues">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element maxOccurs="1" minOccurs="0" ref="s8:CertificationGetValuesRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="CertificationGetValuesResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element maxOccurs="1" minOccurs="0" ref="s8:CertificationGetValuesResponse"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ContractChangePlan">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element maxOccurs="1" minOccurs="0" ref="s9:ContractChangePlanRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ContractChangePlanResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element maxOccurs="1" minOccurs="0" ref="s9:ContractChangePlanResponse"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ContractActivation">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element maxOccurs="1" minOccurs="0" ref="s10:ContractActivationRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ContractActivationResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element maxOccurs="1" minOccurs="0" ref="s10:ContractActivationResponse"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ContractSwapLWimax">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element maxOccurs="1" minOccurs="0" ref="s11:ContractSwapLWimaxRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ContractSwapLWimaxResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element maxOccurs="1" minOccurs="0" ref="s11:ContractSwapLWimaxResponse"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="operationRequest">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="in" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="operation1Request">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="in" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="operationRequest1">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="in" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="operationResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="out" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+        </xsd:schema>
+    <xsd:schema xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:s1="http://Linkem.EAI.INT_PROVISION.Messaging.ProvisioningProcessStatus" xmlns:s10="http://Linkem.EAI.INT_PROVISION.Messaging.ContractActivation" xmlns:s11="http://Linkem.EAI.INT_PROVISION.Messaging.ContractSwapLWimax" xmlns:s2="http://Linkem.EAI.INT_PROVISION.Messaging.ContractChange" xmlns:s3="http://Linkem.EAI.INT_PROVISION.Messaging.Schemas.Certificazione" xmlns:s4="http://Linkem.EAI.INT_PROVISION.Messaging.SimCheck" xmlns:s5="http://Linkem.EAI.INT_PROVISION.Messaging.ContractActivationNeutral" xmlns:s6="http://Linkem.EAI.INT_PROVISION.Messaging.ContractActivationWLte" xmlns:s7="http://Linkem.EAI.INT_PROVISION.Messaging.ContractSwapWLte" xmlns:s8="http://Linkem.EAI.INT_PROVISION.Messaging.Schemas.CertificationGetValues" xmlns:s9="http://Linkem.EAI.INT_PROVISION.Messaging.ContractChangePlan" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" elementFormDefault="qualified" targetNamespace="http://Linkem.EAI.INT_PROVISION.Messaging.Schemas.CertificationGetValues">
+      <xsd:element name="CertificationGetValuesRequest">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element form="unqualified" maxOccurs="1" minOccurs="0" name="OrigineChiamata" type="xsd:string"/>
+            <xsd:element form="unqualified" maxOccurs="1" minOccurs="1" name="Ip" nillable="true" type="xsd:string"/>
+            <xsd:element form="unqualified" maxOccurs="1" minOccurs="1" name="CodiceInstallatore" nillable="true" type="xsd:string"/>
+            <xsd:element form="unqualified" maxOccurs="1" minOccurs="1" name="CodiceOdl" nillable="true" type="xsd:string"/>
+            <xsd:element form="unqualified" maxOccurs="1" minOccurs="1" name="ICCID" nillable="true" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="CertificationGetValuesResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element form="unqualified" maxOccurs="1" minOccurs="0" name="ResultInfo">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element form="unqualified" maxOccurs="1" minOccurs="0" name="ResultCode" type="xsd:string"/>
+                  <xsd:element form="unqualified" maxOccurs="1" minOccurs="0" name="ErrorMessage" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element form="unqualified" maxOccurs="1" minOccurs="0" name="CertValues">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element form="unqualified" maxOccurs="1" minOccurs="1" name="Ip" nillable="true" type="xsd:string"/>
+                  <xsd:element form="unqualified" maxOccurs="1" minOccurs="1" name="CodiceInstallatore" nillable="true" type="xsd:string"/>
+                  <xsd:element form="unqualified" maxOccurs="1" minOccurs="1" name="CodiceOdl" nillable="true" type="xsd:string"/>
+                  <xsd:element form="unqualified" maxOccurs="1" minOccurs="1" name="ICCID" nillable="true" type="xsd:string"/>
+                  <xsd:element form="unqualified" maxOccurs="unbounded" minOccurs="0" name="Values">
+                    <xsd:complexType>
+                      <xsd:sequence>
+                        <xsd:element form="unqualified" maxOccurs="1" minOccurs="0" name="NomeMisura" type="xsd:string"/>
+                        <xsd:element form="unqualified" maxOccurs="1" minOccurs="0" name="EsitoMisura" type="xsd:string"/>
+                        <xsd:element form="unqualified" maxOccurs="1" minOccurs="0" name="ValoreMisura" type="xsd:string"/>
+                        <xsd:element form="unqualified" maxOccurs="1" minOccurs="1" name="Priority" type="xsd:int"/>
+                        <xsd:element form="unqualified" maxOccurs="1" minOccurs="0" name="PrescriptionText" type="xsd:string"/>
+                        <xsd:element form="unqualified" maxOccurs="1" minOccurs="0" name="CustomAttribute" type="xsd:string"/>
+                      </xsd:sequence>
+                    </xsd:complexType>
+                  </xsd:element>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ProvisioningProcessStatusSoapIn">
+    <wsdl:part element="tns:ProvisioningProcessStatus" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="ProvisioningProcessStatusSoapOut">
+    <wsdl:part element="tns:ProvisioningProcessStatusResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="ContractChangeProxySoapIn">
+    <wsdl:part element="tns:ContractChangeProxy" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="ContractChangeProxySoapOut">
+    <wsdl:part element="tns:ContractChangeProxyResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="CertificateSoapIn">
+    <wsdl:part element="tns:Certificate" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="CertificateSoapOut">
+    <wsdl:part element="tns:CertificateResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="SimCheckSoapIn">
+    <wsdl:part element="tns:SimCheck" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="SimCheckSoapOut">
+    <wsdl:part element="tns:SimCheckResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="ContractActivationNeutralProxySoapIn">
+    <wsdl:part element="tns:ContractActivationNeutralProxy" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="ContractActivationNeutralProxySoapOut">
+    <wsdl:part element="tns:ContractActivationNeutralProxyResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="ContractActivationWLteSoapIn">
+    <wsdl:part element="tns:ContractActivationWLte" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="ContractActivationWLteSoapOut">
+    <wsdl:part element="tns:ContractActivationWLteResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="ContractSwapWLteSoapIn">
+    <wsdl:part element="tns:ContractSwapWLte" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="ContractSwapWLteSoapOut">
+    <wsdl:part element="tns:ContractSwapWLteResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="CertificationGetValuesSoapIn">
+    <wsdl:part element="tns:CertificationGetValues" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="CertificationGetValuesSoapOut">
+    <wsdl:part element="tns:CertificationGetValuesResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="ContractChangePlanSoapIn">
+    <wsdl:part element="tns:ContractChangePlan" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="ContractChangePlanSoapOut">
+    <wsdl:part element="tns:ContractChangePlanResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="ContractActivationSoapIn">
+    <wsdl:part element="tns:ContractActivation" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="ContractActivationSoapOut">
+    <wsdl:part element="tns:ContractActivationResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="ContractSwapLWimaxSoapIn">
+    <wsdl:part element="tns:ContractSwapLWimax" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="ContractSwapLWimaxSoapOut">
+    <wsdl:part element="tns:ContractSwapLWimaxResponse" name="parameters"/>
+  </wsdl:message>
+    <wsdl:portType name="WebService_Linkem_EAI_INT_PROVISION_ProcessesSoap">
+    <wsdl:operation name="ProvisioningProcessStatus">
+      <wsdl:input message="tns:ProvisioningProcessStatusSoapIn"/>
+      <wsdl:output message="tns:ProvisioningProcessStatusSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="ContractChangeProxy">
+      <wsdl:input message="tns:ContractChangeProxySoapIn"/>
+      <wsdl:output message="tns:ContractChangeProxySoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="Certificate">
+      <wsdl:input message="tns:CertificateSoapIn"/>
+      <wsdl:output message="tns:CertificateSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="SimCheck">
+      <wsdl:input message="tns:SimCheckSoapIn"/>
+      <wsdl:output message="tns:SimCheckSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="ContractActivationNeutralProxy">
+      <wsdl:input message="tns:ContractActivationNeutralProxySoapIn"/>
+      <wsdl:output message="tns:ContractActivationNeutralProxySoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="ContractActivationWLte">
+      <wsdl:input message="tns:ContractActivationWLteSoapIn"/>
+      <wsdl:output message="tns:ContractActivationWLteSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="ContractSwapWLte">
+      <wsdl:input message="tns:ContractSwapWLteSoapIn"/>
+      <wsdl:output message="tns:ContractSwapWLteSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="CertificationGetValues">
+      <wsdl:input message="tns:CertificationGetValuesSoapIn"/>
+      <wsdl:output message="tns:CertificationGetValuesSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="ContractChangePlan">
+      <wsdl:input message="tns:ContractChangePlanSoapIn"/>
+      <wsdl:output message="tns:ContractChangePlanSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="ContractActivation">
+      <wsdl:input message="tns:ContractActivationSoapIn"/>
+      <wsdl:output message="tns:ContractActivationSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="ContractSwapLWimax">
+      <wsdl:input message="tns:ContractSwapLWimaxSoapIn"/>
+      <wsdl:output message="tns:ContractSwapLWimaxSoapOut"/>
+    </wsdl:operation>
+    </wsdl:portType>
+  <wsdl:binding name="SOAPServiceBinding" type="tns:WebService_Linkem_EAI_INT_PROVISION_ProcessesSoap">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="ProvisioningProcessStatus">
+      <soap:operation soapAction="ProvisioningProcessStatus" style="document"/>
+      <wsdl:input>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ContractChangeProxy">
+      <soap:operation soapAction="ContractChangeProxy" style="document"/>
+      <wsdl:input>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Certificate">
+      <soap:operation soapAction="Certificate" style="document"/>
+      <wsdl:input>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SimCheck">
+      <soap:operation soapAction="SimCheck" style="document"/>
+      <wsdl:input>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ContractActivationNeutralProxy">
+      <soap:operation soapAction="ContractActivationNeutralProxy" style="document"/>
+      <wsdl:input>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ContractActivationWLte">
+      <soap:operation soapAction="ContractActivationWLte" style="document"/>
+      <wsdl:input>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ContractSwapWLte">
+      <soap:operation soapAction="ContractSwapWLte" style="document"/>
+      <wsdl:input>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CertificationGetValues">
+      <soap:operation soapAction="CertificationGetValues" style="document"/>
+      <wsdl:input>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ContractChangePlan">
+      <soap:operation soapAction="ContractChangePlan" style="document"/>
+      <wsdl:input>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ContractActivation">
+      <soap:operation soapAction="ContractActivation" style="document"/>
+      <wsdl:input>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ContractSwapLWimax">
+      <soap:operation soapAction="ContractSwapLWimax" style="document"/>
+      <wsdl:input>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    </wsdl:binding>
+  <wsdl:service name="WebService_Linkem_EAI_INT_PROVISION_ProcessesSoap">
+    <wsdl:port binding="tns:SOAPServiceBinding" name="WebService_Linkem_EAI_INT_PROVISION_ProcessesSoapSOAP">
+      <soap:address location="http://localhost:8899/Linkem.EAI/WebService_Linkem_EAI_INT_PROVISION_Processes.asmx"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,11 @@
+{
+    "records": [{
+        "name": "Cloud",
+        "items": [],
+        "url": "https://integration.cloud.tibco.com:443"
+    }],
+    "resources": [{
+        "location": "Service Descriptors/it.linkem.esb.biztalk.simulator.md.Resource-Resource.json",
+        "type": "generated"
+    }]
+}

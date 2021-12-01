@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:Linkem.EAI="http://Linkem.EAI/" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:axis2="http://xsd.tns.tibco.com/bw/models/binding/soap/axis2" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:rest="http://xsd.tns.tibco.com/bw/models/binding/rest" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scact="http://xsd.tns.tibco.com/amf/models/sca/componentType" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_Td0cIFKPEeyVR6pnnCfZbA" targetNamespace="http://tns.tibco.com/bw/composite/it.linkem.esb.biztalk.simulator.md" name="it.linkem.esb.biztalk.simulator.md" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:service xmi:id="_snHmYFKQEeyVR6pnnCfZbA" name="WebService_Linkem_EAI_INT_PROVISION_ProcessesSoap" promote="ComponentProcess/WebService_Linkem_EAI_INT_PROVISION_ProcessesSoap">
+    <sca:interface.wsdl xmi:id="_snQJQFKQEeyVR6pnnCfZbA" interface="http://Linkem.EAI/#wsdl.interface(WebService_Linkem_EAI_INT_PROVISION_ProcessesSoap)" scaext:wsdlLocation="../Service%20Descriptors/WebService_Linkem_EAI_INT_PROVISION_Processes_1_gen2.wsdl"/>
+    <scaext:binding xsi:type="axis2:SOAPServiceBinding" xmi:id="_u5KhgFKQEeyVR6pnnCfZbA" name="SOAPServiceBinding" targetNamespace="http://www.tibco.com/306d6cd6e6514b459e6256d2713bbaea/SOAPServiceBinding" portTypeQName="Linkem.EAI:WebService_Linkem_EAI_INT_PROVISION_ProcessesSoap" transportBindingType="HTTP" attachmentStyle="SwA" modelVersion="1.2.0" portTypeWSDLLocation="platform:/resource/it.linkem.esb.biztalk.simulator.md/Service%20Descriptors/WebService_Linkem_EAI_INT_PROVISION_Processes_1_gen2.wsdl">
+      <bindingType xmi:id="_u5jjEFKQEeyVR6pnnCfZbA" style="DOCUMENT"/>
+      <inboundConfiguration xsi:type="axis2:HttpTransportConfiguration" xmi:id="_yRmc8FKQEeyVR6pnnCfZbA" endpointURI="/SOAPServiceBinding/webService_Linkem_EAI_INT_PROVISION_ProcessesSoap/" httpConnector="it.linkem.esb.biztalk.simulator.md.HttpConnectorResource"/>
+      <operationConfiguration xmi:id="_u5kKIFKQEeyVR6pnnCfZbA" operationName="ProvisioningProcessStatus" action="ProvisioningProcessStatus" actionNeeded="true">
+        <bindingType xmi:id="_u5kxMFKQEeyVR6pnnCfZbA"/>
+        <messageConfiguration xmi:id="_u5kxMVKQEeyVR6pnnCfZbA" messageQName="Linkem.EAI:ProvisioningProcessStatusSoapIn" wsdlLocation="platform:/resource/it.linkem.esb.biztalk.simulator.md/Service%20Descriptors/WebService_Linkem_EAI_INT_PROVISION_Processes_1_gen2.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_u5kxMlKQEeyVR6pnnCfZbA" partName="parameters" partElementName="Linkem.EAI:ProvisioningProcessStatus"/>
+        </messageConfiguration>
+        <messageConfiguration xmi:id="_u5kxM1KQEeyVR6pnnCfZbA" messageQName="Linkem.EAI:ProvisioningProcessStatusSoapOut" messageDirection="OUTPUT" wsdlLocation="platform:/resource/it.linkem.esb.biztalk.simulator.md/Service%20Descriptors/WebService_Linkem_EAI_INT_PROVISION_Processes_1_gen2.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_u5kxNFKQEeyVR6pnnCfZbA" partName="parameters" partElementName="Linkem.EAI:ProvisioningProcessStatusResponse"/>
+        </messageConfiguration>
+        <context xmi:id="_u5lYXFKQEeyVR6pnnCfZbA">
+          <inputMapping xmi:id="_u5l_UFKQEeyVR6pnnCfZbA"/>
+          <outputMapping xmi:id="_u5l_UVKQEeyVR6pnnCfZbA" direction="OUTPUT"/>
+        </context>
+      </operationConfiguration>
+      <operationConfiguration xmi:id="_u5kxNVKQEeyVR6pnnCfZbA" operationName="ContractChangeProxy" action="ContractChangeProxy" actionNeeded="true">
+        <bindingType xmi:id="_u5kxNlKQEeyVR6pnnCfZbA"/>
+        <messageConfiguration xmi:id="_u5kxN1KQEeyVR6pnnCfZbA" messageQName="Linkem.EAI:ContractChangeProxySoapIn" wsdlLocation="platform:/resource/it.linkem.esb.biztalk.simulator.md/Service%20Descriptors/WebService_Linkem_EAI_INT_PROVISION_Processes_1_gen2.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_u5kxOFKQEeyVR6pnnCfZbA" partName="parameters" partElementName="Linkem.EAI:ContractChangeProxy"/>
+        </messageConfiguration>
+        <messageConfiguration xmi:id="_u5kxOVKQEeyVR6pnnCfZbA" messageQName="Linkem.EAI:ContractChangeProxySoapOut" messageDirection="OUTPUT" wsdlLocation="platform:/resource/it.linkem.esb.biztalk.simulator.md/Service%20Descriptors/WebService_Linkem_EAI_INT_PROVISION_Processes_1_gen2.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_u5kxOlKQEeyVR6pnnCfZbA" partName="parameters" partElementName="Linkem.EAI:ContractChangeProxyResponse"/>
+        </messageConfiguration>
+        <context xmi:id="_u5l_UlKQEeyVR6pnnCfZbA">
+          <inputMapping xmi:id="_u5l_U1KQEeyVR6pnnCfZbA"/>
+          <outputMapping xmi:id="_u5l_VFKQEeyVR6pnnCfZbA" direction="OUTPUT"/>
+        </context>
+      </operationConfiguration>
+      <operationConfiguration xmi:id="_u5kxO1KQEeyVR6pnnCfZbA" operationName="Certificate" action="Certificate" actionNeeded="true">
+        <bindingType xmi:id="_u5kxPFKQEeyVR6pnnCfZbA"/>
+        <messageConfiguration xmi:id="_u5kxPVKQEeyVR6pnnCfZbA" messageQName="Linkem.EAI:CertificateSoapIn" wsdlLocation="platform:/resource/it.linkem.esb.biztalk.simulator.md/Service%20Descriptors/WebService_Linkem_EAI_INT_PROVISION_Processes_1_gen2.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_u5kxPlKQEeyVR6pnnCfZbA" partName="parameters" partElementName="Linkem.EAI:Certificate"/>
+        </messageConfiguration>
+        <messageConfiguration xmi:id="_u5kxP1KQEeyVR6pnnCfZbA" messageQName="Linkem.EAI:CertificateSoapOut" messageDirection="OUTPUT" wsdlLocation="platform:/resource/it.linkem.esb.biztalk.simulator.md/Service%20Descriptors/WebService_Linkem_EAI_INT_PROVISION_Processes_1_gen2.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_u5kxQFKQEeyVR6pnnCfZbA" partName="parameters" partElementName="Linkem.EAI:CertificateResponse"/>
+        </messageConfiguration>
+        <context xmi:id="_u5l_VVKQEeyVR6pnnCfZbA">
+          <inputMapping xmi:id="_u5l_VlKQEeyVR6pnnCfZbA"/>
+          <outputMapping xmi:id="_u5mmYFKQEeyVR6pnnCfZbA" direction="OUTPUT"/>
+        </context>
+      </operationConfiguration>
+      <operationConfiguration xmi:id="_u5kxQVKQEeyVR6pnnCfZbA" operationName="SimCheck" action="SimCheck" actionNeeded="true">
+        <bindingType xmi:id="_u5kxQlKQEeyVR6pnnCfZbA"/>
+        <messageConfiguration xmi:id="_u5kxQ1KQEeyVR6pnnCfZbA" messageQName="Linkem.EAI:SimCheckSoapIn" wsdlLocation="platform:/resource/it.linkem.esb.biztalk.simulator.md/Service%20Descriptors/WebService_Linkem_EAI_INT_PROVISION_Processes_1_gen2.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_u5kxRFKQEeyVR6pnnCfZbA" partName="parameters" partElementName="Linkem.EAI:SimCheck"/>
+        </messageConfiguration>
+        <messageConfiguration xmi:id="_u5kxRVKQEeyVR6pnnCfZbA" messageQName="Linkem.EAI:SimCheckSoapOut" messageDirection="OUTPUT" wsdlLocation="platform:/resource/it.linkem.esb.biztalk.simulator.md/Service%20Descriptors/WebService_Linkem_EAI_INT_PROVISION_Processes_1_gen2.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_u5kxRlKQEeyVR6pnnCfZbA" partName="parameters" partElementName="Linkem.EAI:SimCheckResponse"/>
+        </messageConfiguration>
+        <context xmi:id="_u5mmYVKQEeyVR6pnnCfZbA">
+          <inputMapping xmi:id="_u5mmYlKQEeyVR6pnnCfZbA"/>
+          <outputMapping xmi:id="_u5mmY1KQEeyVR6pnnCfZbA" direction="OUTPUT"/>
+        </context>
+      </operationConfiguration>
+      <operationConfiguration xmi:id="_u5kxR1KQEeyVR6pnnCfZbA" operationName="ContractActivationNeutralProxy" action="ContractActivationNeutralProxy" actionNeeded="true">
+        <bindingType xmi:id="_u5kxSFKQEeyVR6pnnCfZbA"/>
+        <messageConfiguration xmi:id="_u5kxSVKQEeyVR6pnnCfZbA" messageQName="Linkem.EAI:ContractActivationNeutralProxySoapIn" wsdlLocation="platform:/resource/it.linkem.esb.biztalk.simulator.md/Service%20Descriptors/WebService_Linkem_EAI_INT_PROVISION_Processes_1_gen2.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_u5kxSlKQEeyVR6pnnCfZbA" partName="parameters" partElementName="Linkem.EAI:ContractActivationNeutralProxy"/>
+        </messageConfiguration>
+        <messageConfiguration xmi:id="_u5kxS1KQEeyVR6pnnCfZbA" messageQName="Linkem.EAI:ContractActivationNeutralProxySoapOut" messageDirection="OUTPUT" wsdlLocation="platform:/resource/it.linkem.esb.biztalk.simulator.md/Service%20Descriptors/WebService_Linkem_EAI_INT_PROVISION_Processes_1_gen2.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_u5kxTFKQEeyVR6pnnCfZbA" partName="parameters" partElementName="Linkem.EAI:ContractActivationNeutralProxyResponse"/>
+        </messageConfiguration>
+        <context xmi:id="_u5mmZFKQEeyVR6pnnCfZbA">
+          <inputMapping xmi:id="_u5mmZVKQEeyVR6pnnCfZbA"/>
+          <outputMapping xmi:id="_u5mmZlKQEeyVR6pnnCfZbA" direction="OUTPUT"/>
+        </context>
+      </operationConfiguration>
+      <operationConfiguration xmi:id="_u5kxTVKQEeyVR6pnnCfZbA" operationName="ContractActivationWLte" action="ContractActivationWLte" actionNeeded="true">
+        <bindingType xmi:id="_u5kxTlKQEeyVR6pnnCfZbA"/>
+        <messageConfiguration xmi:id="_u5kxT1KQEeyVR6pnnCfZbA" messageQName="Linkem.EAI:ContractActivationWLteSoapIn" wsdlLocation="platform:/resource/it.linkem.esb.biztalk.simulator.md/Service%20Descriptors/WebService_Linkem_EAI_INT_PROVISION_Processes_1_gen2.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_u5kxUFKQEeyVR6pnnCfZbA" partName="parameters" partElementName="Linkem.EAI:ContractActivationWLte"/>
+        </messageConfiguration>
+        <messageConfiguration xmi:id="_u5kxUVKQEeyVR6pnnCfZbA" messageQName="Linkem.EAI:ContractActivationWLteSoapOut" messageDirection="OUTPUT" wsdlLocation="platform:/resource/it.linkem.esb.biztalk.simulator.md/Service%20Descriptors/WebService_Linkem_EAI_INT_PROVISION_Processes_1_gen2.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_u5kxUlKQEeyVR6pnnCfZbA" partName="parameters" partElementName="Linkem.EAI:ContractActivationWLteResponse"/>
+        </messageConfiguration>
+        <context xmi:id="_u5mmZ1KQEeyVR6pnnCfZbA">
+          <inputMapping xmi:id="_u5mmaFKQEeyVR6pnnCfZbA"/>
+          <outputMapping xmi:id="_u5mmaVKQEeyVR6pnnCfZbA" direction="OUTPUT"/>
+        </context>
+      </operationConfiguration>
+      <operationConfiguration xmi:id="_u5kxU1KQEeyVR6pnnCfZbA" operationName="ContractSwapWLte" action="ContractSwapWLte" actionNeeded="true">
+        <bindingType xmi:id="_u5kxVFKQEeyVR6pnnCfZbA"/>
+        <messageConfiguration xmi:id="_u5lYQFKQEeyVR6pnnCfZbA" messageQName="Linkem.EAI:ContractSwapWLteSoapIn" wsdlLocation="platform:/resource/it.linkem.esb.biztalk.simulator.md/Service%20Descriptors/WebService_Linkem_EAI_INT_PROVISION_Processes_1_gen2.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_u5lYQVKQEeyVR6pnnCfZbA" partName="parameters" partElementName="Linkem.EAI:ContractSwapWLte"/>
+        </messageConfiguration>
+        <messageConfiguration xmi:id="_u5lYQlKQEeyVR6pnnCfZbA" messageQName="Linkem.EAI:ContractSwapWLteSoapOut" messageDirection="OUTPUT" wsdlLocation="platform:/resource/it.linkem.esb.biztalk.simulator.md/Service%20Descriptors/WebService_Linkem_EAI_INT_PROVISION_Processes_1_gen2.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_u5lYQ1KQEeyVR6pnnCfZbA" partName="parameters" partElementName="Linkem.EAI:ContractSwapWLteResponse"/>
+        </messageConfiguration>
+        <context xmi:id="_u5mmalKQEeyVR6pnnCfZbA">
+          <inputMapping xmi:id="_u5mma1KQEeyVR6pnnCfZbA"/>
+          <outputMapping xmi:id="_u5mmbFKQEeyVR6pnnCfZbA" direction="OUTPUT"/>
+        </context>
+      </operationConfiguration>
+      <operationConfiguration xmi:id="_u5lYRFKQEeyVR6pnnCfZbA" operationName="CertificationGetValues" action="CertificationGetValues" actionNeeded="true">
+        <bindingType xmi:id="_u5lYRVKQEeyVR6pnnCfZbA"/>
+        <messageConfiguration xmi:id="_u5lYRlKQEeyVR6pnnCfZbA" messageQName="Linkem.EAI:CertificationGetValuesSoapIn" wsdlLocation="platform:/resource/it.linkem.esb.biztalk.simulator.md/Service%20Descriptors/WebService_Linkem_EAI_INT_PROVISION_Processes_1_gen2.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_u5lYR1KQEeyVR6pnnCfZbA" partName="parameters" partElementName="Linkem.EAI:CertificationGetValues"/>
+        </messageConfiguration>
+        <messageConfiguration xmi:id="_u5lYSFKQEeyVR6pnnCfZbA" messageQName="Linkem.EAI:CertificationGetValuesSoapOut" messageDirection="OUTPUT" wsdlLocation="platform:/resource/it.linkem.esb.biztalk.simulator.md/Service%20Descriptors/WebService_Linkem_EAI_INT_PROVISION_Processes_1_gen2.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_u5lYSVKQEeyVR6pnnCfZbA" partName="parameters" partElementName="Linkem.EAI:CertificationGetValuesResponse"/>
+        </messageConfiguration>
+        <context xmi:id="_u5mmbVKQEeyVR6pnnCfZbA">
+          <inputMapping xmi:id="_u5mmblKQEeyVR6pnnCfZbA"/>
+          <outputMapping xmi:id="_u5mmb1KQEeyVR6pnnCfZbA" direction="OUTPUT"/>
+        </context>
+      </operationConfiguration>
+      <operationConfiguration xmi:id="_u5lYSlKQEeyVR6pnnCfZbA" operationName="ContractChangePlan" action="ContractChangePlan" actionNeeded="true">
+        <bindingType xmi:id="_u5lYS1KQEeyVR6pnnCfZbA"/>
+        <messageConfiguration xmi:id="_u5lYTFKQEeyVR6pnnCfZbA" messageQName="Linkem.EAI:ContractChangePlanSoapIn" wsdlLocation="platform:/resource/it.linkem.esb.biztalk.simulator.md/Service%20Descriptors/WebService_Linkem_EAI_INT_PROVISION_Processes_1_gen2.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_u5lYTVKQEeyVR6pnnCfZbA" partName="parameters" partElementName="Linkem.EAI:ContractChangePlan"/>
+        </messageConfiguration>
+        <messageConfiguration xmi:id="_u5lYTlKQEeyVR6pnnCfZbA" messageQName="Linkem.EAI:ContractChangePlanSoapOut" messageDirection="OUTPUT" wsdlLocation="platform:/resource/it.linkem.esb.biztalk.simulator.md/Service%20Descriptors/WebService_Linkem_EAI_INT_PROVISION_Processes_1_gen2.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_u5lYT1KQEeyVR6pnnCfZbA" partName="parameters" partElementName="Linkem.EAI:ContractChangePlanResponse"/>
+        </messageConfiguration>
+        <context xmi:id="_u5mmcFKQEeyVR6pnnCfZbA">
+          <inputMapping xmi:id="_u5mmcVKQEeyVR6pnnCfZbA"/>
+          <outputMapping xmi:id="_u5mmclKQEeyVR6pnnCfZbA" direction="OUTPUT"/>
+        </context>
+      </operationConfiguration>
+      <operationConfiguration xmi:id="_u5lYUFKQEeyVR6pnnCfZbA" operationName="ContractActivation" action="ContractActivation" actionNeeded="true">
+        <bindingType xmi:id="_u5lYUVKQEeyVR6pnnCfZbA"/>
+        <messageConfiguration xmi:id="_u5lYUlKQEeyVR6pnnCfZbA" messageQName="Linkem.EAI:ContractActivationSoapIn" wsdlLocation="platform:/resource/it.linkem.esb.biztalk.simulator.md/Service%20Descriptors/WebService_Linkem_EAI_INT_PROVISION_Processes_1_gen2.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_u5lYU1KQEeyVR6pnnCfZbA" partName="parameters" partElementName="Linkem.EAI:ContractActivation"/>
+        </messageConfiguration>
+        <messageConfiguration xmi:id="_u5lYVFKQEeyVR6pnnCfZbA" messageQName="Linkem.EAI:ContractActivationSoapOut" messageDirection="OUTPUT" wsdlLocation="platform:/resource/it.linkem.esb.biztalk.simulator.md/Service%20Descriptors/WebService_Linkem_EAI_INT_PROVISION_Processes_1_gen2.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_u5lYVVKQEeyVR6pnnCfZbA" partName="parameters" partElementName="Linkem.EAI:ContractActivationResponse"/>
+        </messageConfiguration>
+        <context xmi:id="_u5mmc1KQEeyVR6pnnCfZbA">
+          <inputMapping xmi:id="_u5mmdFKQEeyVR6pnnCfZbA"/>
+          <outputMapping xmi:id="_u5mmdVKQEeyVR6pnnCfZbA" direction="OUTPUT"/>
+        </context>
+      </operationConfiguration>
+      <operationConfiguration xmi:id="_u5lYVlKQEeyVR6pnnCfZbA" operationName="ContractSwapLWimax" action="ContractSwapLWimax" actionNeeded="true">
+        <bindingType xmi:id="_u5lYV1KQEeyVR6pnnCfZbA"/>
+        <messageConfiguration xmi:id="_u5lYWFKQEeyVR6pnnCfZbA" messageQName="Linkem.EAI:ContractSwapLWimaxSoapIn" wsdlLocation="platform:/resource/it.linkem.esb.biztalk.simulator.md/Service%20Descriptors/WebService_Linkem_EAI_INT_PROVISION_Processes_1_gen2.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_u5lYWVKQEeyVR6pnnCfZbA" partName="parameters" partElementName="Linkem.EAI:ContractSwapLWimax"/>
+        </messageConfiguration>
+        <messageConfiguration xmi:id="_u5lYWlKQEeyVR6pnnCfZbA" messageQName="Linkem.EAI:ContractSwapLWimaxSoapOut" messageDirection="OUTPUT" wsdlLocation="platform:/resource/it.linkem.esb.biztalk.simulator.md/Service%20Descriptors/WebService_Linkem_EAI_INT_PROVISION_Processes_1_gen2.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_u5lYW1KQEeyVR6pnnCfZbA" partName="parameters" partElementName="Linkem.EAI:ContractSwapLWimaxResponse"/>
+        </messageConfiguration>
+        <context xmi:id="_u5mmdlKQEeyVR6pnnCfZbA">
+          <inputMapping xmi:id="_u5nNcFKQEeyVR6pnnCfZbA"/>
+          <outputMapping xmi:id="_u5nNcVKQEeyVR6pnnCfZbA" direction="OUTPUT"/>
+        </context>
+      </operationConfiguration>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_u5nNclKQEeyVR6pnnCfZbA" bindingName="SOAPServiceBinding"/>
+  </sca:service>
+  <sca:property xmi:id="_T9wgcFKPEeyVR6pnnCfZbA" name="BW.DEPLOYMENTUNIT.TYPE" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_T98tsFKPEeyVR6pnnCfZbA" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_T-BmMFKPEeyVR6pnnCfZbA" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_T-Hs0FKPEeyVR6pnnCfZbA" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_T-NzcFKPEeyVR6pnnCfZbA" name="BW.DOMAIN.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_T-Sr8FKPEeyVR6pnnCfZbA" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_T-W9YFKPEeyVR6pnnCfZbA" name="BW.APPSPACE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_T-b14FKPEeyVR6pnnCfZbA" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_T-h8gFKPEeyVR6pnnCfZbA" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:component xmi:id="_Tzw28FKPEeyVR6pnnCfZbA" name="ComponentProcess" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_Tzw28VKPEeyVR6pnnCfZbA" processName="it.linkem.esb.biztalk.simulator.md.biztalkSimulator"/>
+    <sca:service xmi:id="_snARoFKQEeyVR6pnnCfZbA" name="WebService_Linkem_EAI_INT_PROVISION_ProcessesSoap">
+      <sca:interface.wsdl xmi:id="_snDU8FKQEeyVR6pnnCfZbA" interface="http://Linkem.EAI/#wsdl.interface(WebService_Linkem_EAI_INT_PROVISION_ProcessesSoap)"/>
+    </sca:service>
+  </sca:component>
+</sca:composite>
