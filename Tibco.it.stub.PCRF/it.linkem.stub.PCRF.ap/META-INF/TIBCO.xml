@@ -80,13 +80,6 @@
       <packaging:overrideValue>false</packaging:overrideValue>
     </packaging:property>
     <packaging:property>
-      <packaging:name>//it.linkem.stub.PCRF.md//host</packaging:name>
-      <packaging:type>xsd:string</packaging:type>
-      <packaging:visibility>public</packaging:visibility>
-      <packaging:scalable>true</packaging:scalable>
-      <packaging:overrideValue>false</packaging:overrideValue>
-    </packaging:property>
-    <packaging:property>
       <packaging:name>//it.linkem.stub.PCRF.md///simDB/connectionUrl</packaging:name>
       <packaging:type>xsd:string</packaging:type>
       <packaging:visibility>public</packaging:visibility>
@@ -94,106 +87,15 @@
       <packaging:overrideValue>false</packaging:overrideValue>
     </packaging:property>
     <packaging:property>
-      <packaging:name>//it.linkem.stub.PCRF.md///CRM/username</packaging:name>
-      <packaging:type>xsd:string</packaging:type>
-      <packaging:visibility>public</packaging:visibility>
-      <packaging:scalable>true</packaging:scalable>
-      <packaging:overrideValue>false</packaging:overrideValue>
-    </packaging:property>
-    <packaging:property>
-      <packaging:name>//it.linkem.stub.PCRF.md///CRM/OrganizationService</packaging:name>
-      <packaging:type>xsd:string</packaging:type>
-      <packaging:visibility>public</packaging:visibility>
-      <packaging:scalable>true</packaging:scalable>
-      <packaging:overrideValue>false</packaging:overrideValue>
-    </packaging:property>
-    <packaging:property>
-      <packaging:name>//it.linkem.stub.PCRF.md///CRM/password</packaging:name>
-      <packaging:type>property:password</packaging:type>
-      <packaging:visibility>public</packaging:visibility>
-      <packaging:scalable>true</packaging:scalable>
-      <packaging:overrideValue>false</packaging:overrideValue>
-    </packaging:property>
-    <packaging:property>
-      <packaging:name>//it.linkem.stub.PCRF.md///SDL-Responses/getUSer/part3</packaging:name>
-      <packaging:type>xsd:string</packaging:type>
-      <packaging:visibility>public</packaging:visibility>
-      <packaging:scalable>true</packaging:scalable>
-      <packaging:overrideValue>false</packaging:overrideValue>
-    </packaging:property>
-    <packaging:property>
-      <packaging:name>//it.linkem.stub.PCRF.md///SDL-Responses/getUSer/part2</packaging:name>
-      <packaging:type>xsd:string</packaging:type>
-      <packaging:visibility>public</packaging:visibility>
-      <packaging:scalable>true</packaging:scalable>
-      <packaging:overrideValue>false</packaging:overrideValue>
-    </packaging:property>
-    <packaging:property>
-      <packaging:name>//it.linkem.stub.PCRF.md///SDL-Responses/getUSer/part1</packaging:name>
-      <packaging:type>xsd:string</packaging:type>
-      <packaging:visibility>public</packaging:visibility>
-      <packaging:scalable>true</packaging:scalable>
-      <packaging:overrideValue>false</packaging:overrideValue>
-    </packaging:property>
-    <packaging:property>
-      <packaging:name>//it.linkem.stub.PCRF.md///SDL-Responses/changeProfile/part3</packaging:name>
-      <packaging:type>xsd:string</packaging:type>
-      <packaging:visibility>public</packaging:visibility>
-      <packaging:scalable>true</packaging:scalable>
-      <packaging:overrideValue>false</packaging:overrideValue>
-    </packaging:property>
-    <packaging:property>
-      <packaging:name>//it.linkem.stub.PCRF.md///SDL-Responses/changeProfile/part2</packaging:name>
-      <packaging:type>xsd:string</packaging:type>
-      <packaging:visibility>public</packaging:visibility>
-      <packaging:scalable>true</packaging:scalable>
-      <packaging:overrideValue>false</packaging:overrideValue>
-    </packaging:property>
-    <packaging:property>
-      <packaging:name>//it.linkem.stub.PCRF.md///SDL-Responses/changeProfile/part1</packaging:name>
-      <packaging:type>xsd:string</packaging:type>
-      <packaging:visibility>public</packaging:visibility>
-      <packaging:scalable>true</packaging:scalable>
-      <packaging:overrideValue>false</packaging:overrideValue>
-    </packaging:property>
-    <packaging:property>
-      <packaging:name>//it.linkem.stub.PCRF.md///SDL-Responses/suspend/part3</packaging:name>
-      <packaging:type>xsd:string</packaging:type>
-      <packaging:visibility>public</packaging:visibility>
-      <packaging:scalable>true</packaging:scalable>
-      <packaging:overrideValue>false</packaging:overrideValue>
-    </packaging:property>
-    <packaging:property>
-      <packaging:name>//it.linkem.stub.PCRF.md///SDL-Responses/suspend/part2</packaging:name>
-      <packaging:type>xsd:string</packaging:type>
-      <packaging:visibility>public</packaging:visibility>
-      <packaging:scalable>true</packaging:scalable>
-      <packaging:overrideValue>false</packaging:overrideValue>
-    </packaging:property>
-    <packaging:property>
-      <packaging:name>//it.linkem.stub.PCRF.md///SDL-Responses/suspend/part1</packaging:name>
-      <packaging:type>xsd:string</packaging:type>
-      <packaging:visibility>public</packaging:visibility>
-      <packaging:scalable>true</packaging:scalable>
-      <packaging:overrideValue>false</packaging:overrideValue>
-    </packaging:property>
-    <packaging:property>
-      <packaging:name>//it.linkem.stub.PCRF.md//sdlPort</packaging:name>
+      <packaging:name>//it.linkem.stub.PCRF.md//PCRF_port</packaging:name>
       <packaging:type>xsd:int</packaging:type>
       <packaging:visibility>public</packaging:visibility>
       <packaging:scalable>true</packaging:scalable>
       <packaging:overrideValue>false</packaging:overrideValue>
     </packaging:property>
     <packaging:property>
-      <packaging:name>//it.linkem.stub.PCRF.md//UIPort</packaging:name>
-      <packaging:type>xsd:int</packaging:type>
-      <packaging:visibility>public</packaging:visibility>
-      <packaging:scalable>true</packaging:scalable>
-      <packaging:overrideValue>false</packaging:overrideValue>
-    </packaging:property>
-    <packaging:property>
-      <packaging:name>//it.linkem.stub.PCRF.md//pcrfPort</packaging:name>
-      <packaging:type>xsd:int</packaging:type>
+      <packaging:name>//it.linkem.stub.PCRF.md//PCRF_host</packaging:name>
+      <packaging:type>xsd:string</packaging:type>
       <packaging:visibility>public</packaging:visibility>
       <packaging:scalable>true</packaging:scalable>
       <packaging:overrideValue>false</packaging:overrideValue>
@@ -203,7 +105,7 @@
     <packaging:module>
       <packaging:symbolicName>it.linkem.stub.PCRF.md</packaging:symbolicName>
       <packaging:technologyType>osgi-bundle,bw-appmodule</packaging:technologyType>
-      <packaging:technologyVersion>1.0.5.qualifier</packaging:technologyVersion>
+      <packaging:technologyVersion>1.0.0.qualifier</packaging:technologyVersion>
     </packaging:module>
   </packaging:modules>
 </packaging:packageUnit>

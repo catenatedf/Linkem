@@ -24,25 +24,11 @@
   <sca:property xmi:id="_NRowcCHsEeyZI5WvOfj_Rg" name="BW.APPSPACE.NAME" type="XMLSchema:string" scalable="true"/>
   <sca:property xmi:id="_NRto8CHsEeyZI5WvOfj_Rg" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
   <sca:property xmi:id="_NRx6YCHsEeyZI5WvOfj_Rg" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
-  <sca:property xmi:id="_Fjrg8CX3Eeymjp-vGrIqxw" name="host" type="XMLSchema:string" publicAccess="true" scalable="true"/>
-  <sca:property xmi:id="_JAd38Cw5EeyvTYRNqq8OdQ" name="sdlPort" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
-  <sca:property xmi:id="_LgQUICw5EeyvTYRNqq8OdQ" name="pcrfPort" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
-  <sca:property xmi:id="_0PODgFEMEeybTYetaQpLQQ" name="UIPort" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_Fjrg8CX3Eeymjp-vGrIqxw" name="PCRF_host" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_LgQUICw5EeyvTYRNqq8OdQ" name="PCRF_port" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
   <sca:property xmi:id="_HH42kCWzEeyZI5WvOfj_Rg" name="/simDB/user" type="XMLSchema:string" publicAccess="true" scalable="true"/>
   <sca:property xmi:id="_KuGvUCWzEeyZI5WvOfj_Rg" name="/simDB/password" type="property:password" scaext:simpleValue="#!ds6YcLD3/2x/jn8mtGTFOg==" publicAccess="true" scalable="true"/>
   <sca:property xmi:id="_bKtSYCgpEeyOXMGiZG0Z7w" name="/simDB/connectionUrl" type="XMLSchema:string" publicAccess="true" scalable="true"/>
-  <sca:property xmi:id="_mUi28CqBEeygV7SevULJ2Q" name="/SDL-Responses/getUSer/part1" type="XMLSchema:string" publicAccess="true" scalable="true"/>
-  <sca:property xmi:id="_AddOoCqEEeygV7SevULJ2Q" name="/SDL-Responses/getUSer/part2" type="XMLSchema:string" publicAccess="true" scalable="true"/>
-  <sca:property xmi:id="_FJv-oCqEEeygV7SevULJ2Q" name="/SDL-Responses/getUSer/part3" type="XMLSchema:string" publicAccess="true" scalable="true"/>
-  <sca:property xmi:id="_01Oh8CwdEeyR9qbnDJscWQ" name="/SDL-Responses/changeProfile/part1" type="XMLSchema:string" publicAccess="true" scalable="true"/>
-  <sca:property xmi:id="_Bj0UcCweEeyR9qbnDJscWQ" name="/SDL-Responses/changeProfile/part2" type="XMLSchema:string" publicAccess="true" scalable="true"/>
-  <sca:property xmi:id="_MbmWUCweEeyR9qbnDJscWQ" name="/SDL-Responses/changeProfile/part3" type="XMLSchema:string" publicAccess="true" scalable="true"/>
-  <sca:property xmi:id="_KDziECwqEeyR9qbnDJscWQ" name="/SDL-Responses/suspend/part1" type="XMLSchema:string" publicAccess="true" scalable="true"/>
-  <sca:property xmi:id="_PcNxMCwqEeyR9qbnDJscWQ" name="/SDL-Responses/suspend/part2" type="XMLSchema:string" publicAccess="true" scalable="true"/>
-  <sca:property xmi:id="_SGsacCwqEeyR9qbnDJscWQ" name="/SDL-Responses/suspend/part3" type="XMLSchema:string" publicAccess="true" scalable="true"/>
-  <sca:property xmi:id="_G1cHUC2YEeyOvYTautZvnQ" name="/CRM/username" type="XMLSchema:string" publicAccess="true" scalable="true"/>
-  <sca:property xmi:id="_3Nz1sC2YEeyOvYTautZvnQ" name="/CRM/OrganizationService" type="XMLSchema:string" publicAccess="true" scalable="true"/>
-  <sca:property xmi:id="_7wBcoC2YEeyOvYTautZvnQ" name="/CRM/password" type="property:password" scaext:simpleValue="#!OaFnOVsoybLqcP7q/XZ1zw==" publicAccess="true" scalable="true"/>
   <sca:component xmi:id="_kP404CHsEeyZI5WvOfj_Rg" name="ComponentgetIMSIFromIp" compositeext:version="1.0.0.qualifier">
     <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_kP404SHsEeyZI5WvOfj_Rg" processName="it.linkem.stub.PCRF.getIMSIFromIp"/>
     <sca:service xmi:id="_kQDM8CHsEeyZI5WvOfj_Rg" name="getimsifromip">

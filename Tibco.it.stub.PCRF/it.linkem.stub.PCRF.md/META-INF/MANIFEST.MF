@@ -1,8 +1,8 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: simulatoreReteSDL Module
+Bundle-Name: it linkem stub PCRF md
 Bundle-SymbolicName: it.linkem.stub.PCRF.md
-Bundle-Version: 1.0.5.qualifier
+Bundle-Version: 1.0.0.qualifier
 Bundle-Vendor: TIBCO Software Inc.
 TIBCO-BW-ModuleSharedVariables: META-INF/module.msv
 Require-Capability: com.tibco.bw.model; filter:="(name=bwext)",
