@@ -4,8 +4,18 @@
         "items": [],
         "url": "https://integration.cloud.tibco.com:443"
     }],
-    "resources": [{
-        "location": "Service Descriptors/it.linkem.stub.PCRF.getIMSIFromIp-getIMSIFromIp.json",
-        "type": "generated"
-    }]
+    "resources": [
+        {
+            "location": "Service Descriptors/it.linkem.stub.PCRF.getIMSIFromIp-getIMSIFromIp.json",
+            "type": "generated"
+        },
+        {
+            "location": "Service Descriptors/it.linkem.stub.PCRF.getIMSIFromIpWrong-getIMSIFromIp.json",
+            "type": "generated"
+        },
+        {
+            "location": "Service Descriptors/it.linkem.stub.PCRF.getIMSIdaIP-getIMSIdaIP.json",
+            "type": "generated"
+        }
+    ]
 }

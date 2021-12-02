@@ -2,8 +2,8 @@
   "swagger" : "2.0",
   "info" : {
     "version" : "1.0",
-    "title" : "getIMSIFromIp",
-    "description" : "getIMSIFromIp service"
+    "title" : "getIMSIdaIP",
+    "description" : "getIMSIdaIP service"
   },
   "host" : "localhost:8080",
   "basePath" : "/",
@@ -11,9 +11,9 @@
   "paths" : {
     "/services/ServiceManager/getRefData/Session" : {
       "get" : {
-        "summary" : "getGetIMSIFromIp",
-        "description" : "getGetIMSIFromIp",
-        "operationId" : "get-getimsifromip",
+        "summary" : "getGetIMSIdaIP",
+        "description" : "getGetIMSIdaIP",
+        "operationId" : "get-getimsidaip",
         "consumes" : [ "application/json" ],
         "produces" : [ "application/json" ],
         "parameters" : [ {
@@ -21,7 +21,7 @@
           "in" : "query",
           "description" : "",
           "type" : "string",
-          "required" : true
+          "required" : false
         } ],
         "responses" : {
           "200" : {
