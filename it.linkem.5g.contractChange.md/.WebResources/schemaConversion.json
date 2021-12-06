@@ -1,5 +1,0 @@
-{"records": [{
-    "jsonSchemaLocation": "/it.linkem.5g.contractChange.md/Service Descriptors/it.linkem.5g.contractchange.tlp.contract-change-contract-change.json",
-    "conversionType": "linked",
-    "xsdSchemaTargetNamespace": "http://it/linkem/5g/ContractChange/bsl/xsd"
-}]}
