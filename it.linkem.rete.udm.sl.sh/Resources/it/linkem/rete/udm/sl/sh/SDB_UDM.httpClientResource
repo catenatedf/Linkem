@@ -3,11 +3,11 @@
   <identitySet xmi:id="_G3hWkBbREeyqlrahRiL1zQ" appliesTo="namedResource" name="HttpClientIdentitySet" provides="confidentiality">
     <sca_ext:intentMap xmi:id="_G3hWkRbREeyqlrahRiL1zQ" provides="sca_ext:confidentiality">
       <sca_ext:qualifier xmi:id="_G3hWkhbREeyqlrahRiL1zQ" name="transport">
-        <id:IdentityReference xmi:id="_G3hWkxbREeyqlrahRiL1zQ" URI="it.linkem.rete.udm.sl.sh.SDB_SDL_SSLClientResource" type="sslclient:SSLClientConfiguration"/>
+        <id:IdentityReference xmi:id="_G3hWkxbREeyqlrahRiL1zQ" URI="" type="sslclient:SSLClientConfiguration"/>
       </sca_ext:qualifier>
     </sca_ext:intentMap>
   </identitySet>
-  <jndi:configuration xsi:type="http:HttpClientConfiguration" xmi:id="_xm5ZUA_EEeySlY7vVr8Zcw" useSSL="true" httpClientVersion="httpcomponents" cmdExecutionIsolationStrategy="THREAD" cmdExecutionIsolationTimeout="1000" cmdExecutionTimeoutEnabled="true" cmdExecutionIsolationInterruptOnTimeout="true" cmdExecutionIsolationSemaphoreMaxConcRequests="8" cmdCircuitBreakerRequestVolumeThreshold="20" cmdCircuitBreakerSleepWindow="5000" cmdCircuitBreakerErrorThresholdPercentage="50" cmdMetricsRollingStatsTime="10000" cmdMetricsRollingStatsNumBuckets="10" cmdMetricsHealthSnapshotInterval="500" cmdRequestLogEnabled="true" tpCoreSize="10" tpMaxQueueSize="-1" tpQueueSizeRejectionThreshold="5" tpKeepAliveTime="1">
+  <jndi:configuration xsi:type="http:HttpClientConfiguration" xmi:id="_xm5ZUA_EEeySlY7vVr8Zcw" httpClientVersion="httpcomponents" cmdExecutionIsolationStrategy="THREAD" cmdExecutionIsolationTimeout="1000" cmdExecutionTimeoutEnabled="true" cmdExecutionIsolationInterruptOnTimeout="true" cmdExecutionIsolationSemaphoreMaxConcRequests="8" cmdCircuitBreakerRequestVolumeThreshold="20" cmdCircuitBreakerSleepWindow="5000" cmdCircuitBreakerErrorThresholdPercentage="50" cmdMetricsRollingStatsTime="10000" cmdMetricsRollingStatsNumBuckets="10" cmdMetricsHealthSnapshotInterval="500" cmdRequestLogEnabled="true" tpCoreSize="10" tpMaxQueueSize="-1" tpQueueSizeRejectionThreshold="5" tpKeepAliveTime="1">
     <substitutionBindings xmi:id="_X3i-4A_HEeySlY7vVr8Zcw" template="useSingleThreadConnectionManager" propName="/it.linkem.rete.udm.sl.sh/UDM/Connections/HTTPClient/Common/DisableConnectionPolling"/>
     <substitutionBindings xmi:id="_booD0A_HEeySlY7vVr8Zcw" template="idleConnectionTimeout" propName="/it.linkem.rete.udm.sl.sh/UDM/Connections/HTTPClient/Common/IdleConnectionTimeout"/>
     <substitutionBindings xmi:id="_f0uQ0A_HEeySlY7vVr8Zcw" template="maxTotalConnections" propName="/it.linkem.rete.udm.sl.sh/UDM/Connections/HTTPClient/Common/MaximumTotalConnections"/>
@@ -17,6 +17,7 @@
     <substitutionBindings xmi:id="_otzxYA_HEeySlY7vVr8Zcw" template="logReqRespTime" propName="/it.linkem.rete.udm.sl.sh/UDM/Connections/HTTPClient/Common/LogRequest"/>
     <substitutionBindings xmi:id="_t_jX0A_HEeySlY7vVr8Zcw" template="retryCount" propName="/it.linkem.rete.udm.sl.sh/UDM/Connections/HTTPClient/Common/RetryCount"/>
     <substitutionBindings xmi:id="_CxQFIA_IEeySlY7vVr8Zcw" template="useNonPreemptiveAuth" propName="/it.linkem.rete.udm.sl.sh/UDM/Connections/HTTPClient/Common/UseNonPreemtiveAuth"/>
+    <substitutionBindings xmi:id="_bhdNIFwsEeyxTcj6-rUsCA" template="useDefaultSSL" propName="/it.linkem.rete.udm.sl.sh/UDM/Connections/HTTPClient/Common/DefaultConfidentiality"/>
     <tcpDetails xmi:id="_xm9DsA_EEeySlY7vVr8Zcw">
       <substitutionBindings xmi:id="_S4qqEA_HEeySlY7vVr8Zcw" template="host" propName="/it.linkem.rete.udm.sl.sh/UDM/Connections/HTTPClient/Common/Host"/>
       <substitutionBindings xmi:id="_VPxEUA_HEeySlY7vVr8Zcw" template="port" propName="/it.linkem.rete.udm.sl.sh/UDM/Connections/HTTPClient/Common/Port"/>

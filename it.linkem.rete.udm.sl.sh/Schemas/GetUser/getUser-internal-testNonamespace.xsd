@@ -22,7 +22,7 @@
 									</sequence>
 								</complexType>
 							</element>
-							<element minOccurs="0" maxOccurs="1"  name="hlr">
+							<element minOccurs="0" maxOccurs="1" name="hlr">
 								<complexType>
 									<sequence>
 										<element name="ntype" minOccurs="0" maxOccurs="1" type="string"/>
@@ -68,7 +68,6 @@
 													<element minOccurs="0" maxOccurs="1" name="maxBandwidthDown" type="int"/>
 													<element minOccurs="0" maxOccurs="1" name="mmeIdentity" type="string"/>
 													<element minOccurs="0" maxOccurs="1" name="msPurgedEps" type="boolean"/>
-													<element minOccurs="0" maxOccurs="1" name="odbPOAccessEps" type="string"/>													
 													<element minOccurs="0" maxOccurs="1" name="vplmnId" type="string"/>
 													<element minOccurs="0" maxOccurs="1" name="mmeSuppFeatures">
 														<complexType>
@@ -78,11 +77,12 @@
 															</sequence>
 														</complexType>
 													</element>
+													<element minOccurs="0" maxOccurs="1" name="odbPOAccessEps" type="string"/>	
 													<element minOccurs="0" maxOccurs="1" name="mmeRealm" type="string"/>
 												</sequence>
 											</complexType>
 										</element>
-										<element name="epsPdnContext">
+										<element name="epsPdnContext" minOccurs="0" maxOccurs="unbounded">
 											<complexType>
 												<sequence>
 													<element minOccurs="0" maxOccurs="1" name="apn" type="string"/>
@@ -92,6 +92,186 @@
 													<element minOccurs="0" maxOccurs="1" name="maxBandwidthUp" type="int"/>
 													<element minOccurs="0" maxOccurs="1" name="maxBandwidthDown" type="int"/>
 													<element minOccurs="0" maxOccurs="1" name="qos" type="string"/>
+													<element minOccurs="0" maxOccurs="1" name="eps5gInterworkIndicator" type="string"/>
+												</sequence>
+											</complexType>
+										</element>
+									</sequence>
+								</complexType>
+							</element>
+							<element name="udm5gData" minOccurs="0" maxOccurs="1">
+								<complexType>
+									<sequence>
+										<element name="udmImsi" minOccurs="0" maxOccurs="1" type="string"/>
+										<element name="authenticationData" minOccurs="0" maxOccurs="1">
+											<complexType>
+												<sequence>
+													<element name="authenticationMethod" minOccurs="0" maxOccurs="1" type="string"/>
+												</sequence>
+											</complexType>
+										</element>
+										<element name="contextData" minOccurs="0" maxOccurs="1">
+											<complexType>
+												<sequence>
+													<element name="amf3gppAccessRegistration" minOccurs="0" maxOccurs="1">
+														<complexType>
+															<sequence>
+																<element name="amfInstanceId" minOccurs="0" maxOccurs="1" type="string"/>
+																<element name="purgeFlag" minOccurs="0" maxOccurs="1" type="boolean"/>
+																<element name="imsVoPS" minOccurs="0" maxOccurs="1" type="string"/>
+																<element name="deregCallbackUri" minOccurs="0" maxOccurs="1" type="string"/>
+																<element name="pei" minOccurs="0" maxOccurs="1" type="string"/>
+																<element name="amfId" minOccurs="0" maxOccurs="1">
+																	<complexType>
+																		<sequence>
+																			<element name="amfIdValue" minOccurs="0" maxOccurs="1" type="string"/>
+																			<element name="plmnId" minOccurs="0" maxOccurs="1" type="string"/>
+																		</sequence>
+																	</complexType>
+																</element>
+																<element name="ratType" minOccurs="0" maxOccurs="1" type="string"/>
+																<element name="initialRegistrationInd" minOccurs="0" maxOccurs="1" type="boolean"/>
+															</sequence>
+														</complexType>
+													</element>
+													<element name="smfRegistrations" minOccurs="0" maxOccurs="1">
+														<complexType>
+															<sequence>
+																<element name="individualSmfRegistration" minOccurs="0" maxOccurs="unbounded">
+																	<complexType>
+																		<sequence>
+																			<element name="pduSessionId" minOccurs="0" maxOccurs="1" type="string"/>
+																		</sequence>
+																	</complexType>
+																</element>
+															</sequence>
+														</complexType>
+													</element>
+													<element name="sdmSubscriptions" minOccurs="0" maxOccurs="1">
+														<complexType>
+															<sequence>
+																<element name="individualSdmSubscription" minOccurs="0" maxOccurs="unbounded">
+																	<complexType>
+																		<sequence>
+																			<element name="subsId" minOccurs="0" maxOccurs="1" type="string"/>
+																			<element name="callbackReference" minOccurs="0" maxOccurs="1" type="string"/>
+																			<element name="monitoredResourceUris" minOccurs="0" maxOccurs="1" type="string"/>
+																			<element name="implicitUnsubscribe" minOccurs="0" maxOccurs="1" type="boolean"/>
+																			<element name="nfInstanceId" minOccurs="0" maxOccurs="1" type="string"/>
+																		</sequence>
+																	</complexType>
+																</element>
+															</sequence>
+														</complexType>
+													</element>
+												</sequence>
+											</complexType>
+										</element>
+										<element minOccurs="0" maxOccurs="1" name="servingPlmnId">
+											<complexType>
+												<sequence>
+													<element minOccurs="0" maxOccurs="1"  name="plmnId" type="string"/>
+													<element minOccurs="0" maxOccurs="1"  name="homePlmnIdIndication" type="boolean"/>
+													<element minOccurs="0" maxOccurs="1"  name="provisionedData">
+														<complexType>
+															<sequence>
+																<element minOccurs="0" maxOccurs="1"  name="accessAndMobilitySubscriptionData">
+																	<complexType>
+																		<sequence>
+																			<element minOccurs="0" maxOccurs="1"  name="nssai">
+																				<complexType>
+																					<sequence>
+																						<element minOccurs="0" maxOccurs="1"  name="defaultSingleNssais" type="string"/>
+																					</sequence>
+																				</complexType>
+																			</element>
+																			<element minOccurs="0" maxOccurs="unbounded"  name="subscribedDnnList" type="string"/>
+																			<element minOccurs="0" maxOccurs="1"  name="ueAmbr">
+																				<complexType>
+																					<sequence>
+																						<element minOccurs="0" maxOccurs="1"  name="ueAmbrUpLink" type="string"/>
+																						<element minOccurs="0" maxOccurs="1"  name="ueAmbrDownLink" type="string"/>
+																					</sequence>
+																				</complexType>
+																			</element>
+																		</sequence>
+																	</complexType>
+																</element>
+																<element minOccurs="0" maxOccurs="1" name="smfSelectionSubscriptionData">
+																	<complexType>
+																		<sequence>
+																			<element minOccurs="0" maxOccurs="1" name="sNssaiInfo">
+																				<complexType>
+																					<sequence>
+																						<element minOccurs="0" maxOccurs="1"  name="nssaiId" type="string"/>
+																						<element minOccurs="0" maxOccurs="unbounded" name="dnnInfo">
+																							<complexType>
+																								<sequence>
+																									<element minOccurs="0" maxOccurs="1"  name="dnnId" type="string"/>
+																									<element minOccurs="0" maxOccurs="1"  name="defaultIndication" type="boolean"/>
+																									<element minOccurs="0" maxOccurs="1"  name="interworkingEPSIndication" type="boolean"/>
+																									<element minOccurs="0" maxOccurs="1"  name="localBrkOutRoamingAllowed" type="boolean"/>
+																								</sequence>
+																							</complexType>
+																						</element>
+																					</sequence>
+																				</complexType>
+																			</element>
+																		</sequence>
+																	</complexType>
+																</element>
+																<element minOccurs="0" maxOccurs="1"  name="sessionManagementSubscriptionData">
+																	<complexType>
+																		<sequence>
+																			<element minOccurs="0" maxOccurs="1"  name="singleNssai" type="string"/>
+																			<element minOccurs="0" maxOccurs="unbounded" name="dnnConfiguration">
+																				<complexType>
+																					<sequence>
+																						<element minOccurs="0" maxOccurs="1"  name="dnnId" type="string"/>
+																						<element minOccurs="0" maxOccurs="1"  name="interworkingEPSIndication" type="boolean"/>
+																						<element minOccurs="0" maxOccurs="1"  name="sessionAmbr" type="string"/>
+																						<element minOccurs="0" maxOccurs="1"  name="staticIpAddress" type="string"/>
+																						<element minOccurs="0" maxOccurs="1"  name="udm5gQosProfile">
+																							<complexType>
+																								<sequence>
+																									<element minOccurs="0" maxOccurs="1"  name="udm5Qi" type="string"/>
+																									<element minOccurs="0" maxOccurs="1"  name="arp" type="string"/>
+																									<element minOccurs="0" maxOccurs="1"  name="priorityLevel" type="string"/>
+																								</sequence>
+																							</complexType>
+																						</element>
+																						<element minOccurs="0" maxOccurs="1"  name="pduSessionTypes">
+																							<complexType>
+																								<sequence>
+																									<element minOccurs="0" maxOccurs="1"  name="defaultSessionType" type="string"/>
+																									<element minOccurs="0" maxOccurs="1"  name="allowedSessionType" type="string"/>
+																								</sequence>
+																							</complexType>
+																						</element>
+																						<element minOccurs="0" maxOccurs="1"  name="sscModes">
+																							<complexType>
+																								<sequence>
+																									<element minOccurs="0" maxOccurs="1"  name="defaultSscMode" type="string"/>
+																									<element minOccurs="0" maxOccurs="1"  name="allowedSscMode" type="string"/>
+																								</sequence>
+																							</complexType>
+																						</element>
+																					</sequence>
+																				</complexType>
+																			</element>
+																		</sequence>
+																	</complexType>
+																</element>
+															</sequence>
+														</complexType>
+													</element>
+												</sequence>
+											</complexType>
+										</element>
+										<element minOccurs="0" maxOccurs="1"  name="operatorSpecificData">
+											<complexType>
+												<sequence>
+													<element minOccurs="0" maxOccurs="1" name="ODderegistration" type="boolean"/>
 												</sequence>
 											</complexType>
 										</element>

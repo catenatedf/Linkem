@@ -759,7 +759,7 @@
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.1"/>
-                                    <layoutConstraint x="1427"
+                                    <layoutConstraint x="1994"
                                     xsi:type="notation:Bounds" y="162"/>
                                     </children>
                                     <children type="4002 bw.generalactivities.bwassign">
@@ -800,7 +800,7 @@
                                     <element href="//0/@process/@activity/@activity/@activities.2"/>
                                     <layoutConstraint
                                     height="40" width="158"
-                                    x="293"
+                                    x="445"
                                     xsi:type="notation:Bounds" y="162"/>
                                     </children>
                                     <children type="4002 bw.generalactivities.bwassign">
@@ -841,8 +841,8 @@
                                     <element href="//0/@process/@activity/@activity/@activities.3"/>
                                     <layoutConstraint
                                     height="40" width="40"
-                                    x="179"
-                                    xsi:type="notation:Bounds" y="270"/>
+                                    x="326"
+                                    xsi:type="notation:Bounds" y="162"/>
                                     </children>
                                     <children type="4002 bw.generalactivities.bwassign">
                                     <children type="4017">
@@ -882,7 +882,7 @@
                                     <element href="//0/@process/@activity/@activity/@activities.4"/>
                                     <layoutConstraint
                                     height="40" width="146"
-                                    x="1071"
+                                    x="1452"
                                     xsi:type="notation:Bounds" y="162"/>
                                     </children>
                                     <children type="4002 bw.xml.transformxml">
@@ -923,7 +923,7 @@
                                     <element href="//0/@process/@activity/@activity/@activities.5"/>
                                     <layoutConstraint
                                     height="40" width="175"
-                                    x="870"
+                                    x="1251"
                                     xsi:type="notation:Bounds" y="162"/>
                                     </children>
                                     <children type="4002">
@@ -963,7 +963,7 @@
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.6"/>
                                     <layoutConstraint
-                                    width="178" x="1251"
+                                    width="178" x="1632"
                                     xsi:type="notation:Bounds" y="162"/>
                                     </children>
                                     <children type="4018">
@@ -1249,8 +1249,114 @@
                                     <element href="//0/@process/@activity/@activity/@activities.7"/>
                                     <layoutConstraint
                                     height="266" width="338"
-                                    x="489"
+                                    x="641"
                                     xsi:type="notation:Bounds" y="130"/>
+                                    </children>
+                                    <children type="4002">
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <styles fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.8"/>
+                                    <layoutConstraint x="123"
+                                    xsi:type="notation:Bounds" y="162"/>
+                                    </children>
+                                    <children type="4002">
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <styles fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.9"/>
+                                    <layoutConstraint
+                                    width="164" x="1046"
+                                    xsi:type="notation:Bounds" y="162"/>
+                                    </children>
+                                    <children type="4002">
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <styles fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.10"/>
+                                    <layoutConstraint x="1836"
+                                    xsi:type="notation:Bounds" y="162"/>
                                     </children>
                                     <styles xsi:type="notation:DrawerStyle"/>
                                     <styles xsi:type="notation:SortingStyle"/>
@@ -1264,8 +1370,8 @@
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <styles xsi:type="bwnotation:ResizingStyle"/>
                                     <element href="//0/@process/@activity/@activity"/>
-                                    <layoutConstraint height="484"
-                                    width="1560" xsi:type="notation:Bounds"/>
+                                    <layoutConstraint height="542"
+                                    width="2127" xsi:type="notation:Bounds"/>
                                 </children>
                                 <styles xsi:type="notation:SortingStyle"/>
                                 <styles xsi:type="notation:FilteringStyle"/>
@@ -1275,7 +1381,7 @@
                             <styles xsi:type="bwnotation:BackgroundStyle"/>
                             <styles xsi:type="bwnotation:ResizingStyle"/>
                             <element href="//0/@process/@activity"/>
-                            <layoutConstraint height="484" width="1563" xsi:type="notation:Bounds"/>
+                            <layoutConstraint height="542" width="2139" xsi:type="notation:Bounds"/>
                         </children>
                         <styles xsi:type="notation:SortingStyle"/>
                         <styles xsi:type="notation:FilteringStyle"/>
@@ -1285,7 +1391,7 @@
                     <styles xsi:type="bwnotation:BackgroundStyle"/>
                     <styles xsi:type="bwnotation:ResizingStyle"/>
                     <element href="//0/@process/@activity"/>
-                    <layoutConstraint height="566" width="1523" x="1"
+                    <layoutConstraint height="566" width="2139" x="1"
                         xsi:type="notation:Bounds" y="1"/>
                 </children>
                 <styles xsi:type="notation:SortingStyle"/>
@@ -1294,21 +1400,10 @@
             </children>
             <styles fontName="Segoe UI" lineColor="0" xsi:type="notation:ShapeStyle"/>
             <element href="//0/@process"/>
-            <layoutConstraint height="618" width="1865" xsi:type="notation:Bounds"/>
+            <layoutConstraint height="618" width="2472" xsi:type="notation:Bounds"/>
         </children>
         <styles xsi:type="notation:DiagramStyle"/>
         <element href="//0"/>
-        <edges
-            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0"
-            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.3" type="4006">
-            <children type="6002">
-                <layoutConstraint xsi:type="notation:Location" y="40"/>
-            </children>
-            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
-            <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
-            <element href="//0/@process/@activity/@activity/@links/@children.0"/>
-            <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
-        </edges>
         <edges
             source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2"
             target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.7" type="4006">
@@ -1317,32 +1412,9 @@
             </children>
             <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
             <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
-            <element href="//0/@process/@activity/@activity/@links/@children.1"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.0"/>
             <bendpoints
                 points="[42, 7, -86, -97]$[64, 7, -64, -97]$[64, 104, -64, 0]$[104, 104, -24, 0]" xsi:type="notation:RelativeBendpoints"/>
-        </edges>
-        <edges
-            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.3"
-            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2" type="4006">
-            <children type="6002">
-                <layoutConstraint xsi:type="notation:Location" y="40"/>
-            </children>
-            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
-            <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
-            <element href="//0/@process/@activity/@activity/@links/@children.2"/>
-            <bendpoints
-                points="[25, 0, -94, 119]$[59, 0, -60, 119]$[59, -107, -60, 12]$[77, -107, -42, 12]" xsi:type="notation:RelativeBendpoints"/>
-        </edges>
-        <edges
-            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.7"
-            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.5" type="4006">
-            <children type="6002">
-                <layoutConstraint xsi:type="notation:Location" y="40"/>
-            </children>
-            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
-            <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
-            <element href="//0/@process/@activity/@activity/@links/@children.3"/>
-            <bendpoints points="[45, -4, -170, 16]$[191, -18, -24, 2]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
         <edges
             source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.4"
@@ -1352,20 +1424,9 @@
             </children>
             <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
             <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
-            <element href="//0/@process/@activity/@activity/@links/@children.4"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.1"/>
             <bendpoints
                 points="[36, 20, -205, -116]$[217, 122, -24, -14]" xsi:type="notation:RelativeBendpoints"/>
-        </edges>
-        <edges
-            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.6"
-            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.1" type="4006">
-            <children type="6002">
-                <layoutConstraint xsi:type="notation:Location" y="40"/>
-            </children>
-            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
-            <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
-            <element href="//0/@process/@activity/@activity/@links/@children.5"/>
-            <bendpoints points="[25, 8, -233, 0]$[234, 0, -24, -8]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
         <edges
             source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.5"
@@ -1375,7 +1436,7 @@
             </children>
             <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
             <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
-            <element href="//0/@process/@activity/@activity/@links/@children.6"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.2"/>
             <bendpoints points="[51, 0, -138, 0]$[153, 0, -36, 0]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
         <edges
@@ -1422,6 +1483,83 @@
             <element href="//0/@process/@activity/@activity/@activities.7/@activity/@activity/@activity/@links/@children.3"/>
             <bendpoints points="[9, -24, -26, 73]$[26, -72, -9, 25]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
+        <edges
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.3"
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.3"/>
+            <bendpoints points="[19, 0, -135, 0]$[123, 0, -31, 0]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0"
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.8" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.4"/>
+            <bendpoints points="[18, 0, -73, 0]$[72, 0, -19, 0]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.8"
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.3" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.5"/>
+            <bendpoints points="[18, 0, -134, 0]$[134, 0, -18, 0]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.7"
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.9" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.6"/>
+            <bendpoints points="[114, -26, -114, 27]$[210, -48, -18, 5]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.9"
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.5" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.7"/>
+            <bendpoints points="[34, 0, -138, 0]$[135, 0, -37, 0]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.6"
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.10" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.8"/>
+            <bendpoints points="[39, 0, -93, 0]$[114, 0, -18, 0]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.10"
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.1" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.9"/>
+            <bendpoints points="[19, 0, -100, 0]$[101, 0, -18, 0]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
     </notation:Diagram>
     <tibex:NamespaceRegistry enabled="true">
         <tibex:namespaceItem
@@ -1446,17 +1584,18 @@
             namespace="http://it.linkem/common/core/lehf/AuditTypes/xsd" prefix="tns8"/>
         <tibex:namespaceItem
             namespace="http://xmlns.tibco.com/encodings/mime" prefix="tns9"/>
+        <tibex:namespaceItem
+            namespace="http://www.tibco.com/bw/xpath/bw-custom-functions" prefix="bw"/>
     </tibex:NamespaceRegistry>
-    <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://it.linkem/rete/udb/getUserByImsi/sl/xsd"/>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema"
         location="../../../../../../Schemas/GetUser/getUser-internal-testNonamespace.xsd" namespace=""/>
+    <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://it.linkem/common/core/lehf/AuditTypes/xsd"/>
+    <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://it.linkem/rete/udb/getUserByImsi/sl/xsd"/>
     <bpws:variables>
         <bpws:variable element="ns:ProcessContext"
             name="_processContext" sca-bpel:internal="true"/>
         <bpws:variable element="ns1:GetUserByImsi_SL_Input" name="Start"
             sca-bpel:internal="true" tibex:parameter="in"/>
-        <bpws:variable element="ns1:GetUserByImsi_SL_Output"
-            name="End-input" sca-bpel:internal="true" tibex:parameter="out"/>
         <bpws:variable name="httpClientResource"
             sca-bpel:hotUpdate="false" sca-bpel:privateProperty="true"
             sca-bpel:property="yes"
@@ -1517,6 +1656,19 @@
             sca-bpel:property="yes"
             tibex:propertySource="//it.linkem.common.core.lehf.sh///it.linkem.common.core.lehf.sh/Logging/Business_Exception" type="xsd:string"/>
         <bpws:variable name="RequestPayload1" type="xsd:string"/>
+        <bpws:variable element="ns15:LogAudit" name="LogStart-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns15:LogAuditOutput" name="LogStart" sca-bpel:internal="true"/>
+        <bpws:variable element="ns15:LogAudit"
+            name="LogGetUser_Output-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns15:LogAuditOutput"
+            name="LogGetUser_Output" sca-bpel:internal="true"/>
+        <bpws:variable name="SeverityDEBUG" sca-bpel:hotUpdate="false"
+            sca-bpel:privateProperty="true" sca-bpel:property="yes"
+            tibex:propertySource="//it.linkem.common.core.lehf.sh///it.linkem.common.core.lehf.sh/Logging/DEBUG_SEVERITY" type="xsd:string"/>
+        <bpws:variable element="ns15:LogAudit" name="LogEnd-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns15:LogAuditOutput" name="LogEnd" sca-bpel:internal="true"/>
+        <bpws:variable element="ns1:GetUserByImsi_SL_Output"
+            name="End-input" sca-bpel:internal="true" tibex:parameter="out"/>
     </bpws:variables>
     <bpws:extensions>
         <bpws:extension mustUnderstand="no" namespace="http://www.eclipse.org/gmf/runtime/1.0.2/notation"/>
@@ -1529,15 +1681,18 @@
     <bpws:scope name="scope">
         <bpws:flow name="flow">
             <bpws:links>
-                <bpws:link name="StartToSetIMSI" tibex:linkType="SUCCESS"/>
                 <bpws:link name="SetRequestPayloadToRepeatOnError" tibex:linkType="SUCCESS"/>
-                <bpws:link name="AssignToSetRequestPayload" tibex:linkType="SUCCESS"/>
-                <bpws:link
-                    name="RepeatOnErrorToRemoveNamespacesPrefixes" tibex:linkType="SUCCESS"/>
                 <bpws:link name="setResponsePayloadToParseXml" tibex:linkType="SUCCESS"/>
-                <bpws:link name="ParseXmlToEnd" tibex:linkType="SUCCESS"/>
                 <bpws:link
                     name="RemoveNamespacesPrefixesTosetResponsePayload" tibex:linkType="SUCCESS"/>
+                <bpws:link name="SetIMSIToSetRequestPayload" tibex:linkType="SUCCESS"/>
+                <bpws:link name="StartToLoggingWrapper" tibex:linkType="SUCCESS"/>
+                <bpws:link name="LoggingWrapperToSetIMSI" tibex:linkType="SUCCESS"/>
+                <bpws:link name="RepeatOnErrorToLogGetUser_Output" tibex:linkType="SUCCESS"/>
+                <bpws:link
+                    name="LogGetUser_OutputToRemoveNamespacesPrefixes" tibex:linkType="SUCCESS"/>
+                <bpws:link name="ParseGetUserResponseToLoggingWrapper" tibex:linkType="SUCCESS"/>
+                <bpws:link name="LoggingWrapperToEnd" tibex:linkType="SUCCESS"/>
             </bpws:links>
             <bpws:extensionActivity>
                 <tibex:receiveEvent createInstance="yes"
@@ -1545,7 +1700,7 @@
                     tibex:xpdlId="60395268-2051-47bf-b590-83dcef0c3e80"
                     variable="Start" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                     <bpws:sources>
-                        <bpws:source linkName="StartToSetIMSI"/>
+                        <bpws:source linkName="StartToLoggingWrapper"/>
                     </bpws:sources>
                     <tibex:eventSource>
                         <tibex:StartEvent xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
@@ -1557,11 +1712,11 @@
                     name="End"
                     tibex:xpdlId="7880b5fa-09be-4de6-a5f0-f324ca74dab5" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                     <bpws:targets>
-                        <bpws:target linkName="ParseXmlToEnd"/>
+                        <bpws:target linkName="LoggingWrapperToEnd"/>
                     </bpws:targets>
                     <tibex:inputBindings>
                         <tibex:inputBinding
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://it.linkem/rete/udb/getUserByImsi/sl/xsd&quot; xmlns:tib=&quot;http://www.tibco.com/bw/xslt/custom-functions&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;ParseGetUserResponse&quot;/>&lt;xsl:template name=&quot;End-input&quot; match=&quot;/&quot;>&lt;tns:GetUserByImsi_SL_Output>&lt;tns:GetUserByImsi_Response>&lt;xsl:if test=&quot;$ParseGetUserResponse/objects/@type&quot;>&lt;xsl:attribute name=&quot;type&quot;>&lt;xsl:value-of select=&quot;$ParseGetUserResponse/objects/@type&quot;/>&lt;/xsl:attribute>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseGetUserResponse/objects/identifier&quot;>&lt;tns:identifier>&lt;xsl:value-of select=&quot;$ParseGetUserResponse/objects/identifier&quot;/>&lt;/tns:identifier>&lt;/xsl:if>&lt;tns:auc>&lt;xsl:if test=&quot;$ParseGetUserResponse/objects/auc/imsi&quot;>&lt;tns:imsi>&lt;xsl:value-of select=&quot;$ParseGetUserResponse/objects/auc/imsi&quot;/>&lt;/tns:imsi>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseGetUserResponse/objects/auc/encKey&quot;>&lt;tns:encKey>&lt;xsl:value-of select=&quot;$ParseGetUserResponse/objects/auc/encKey&quot;/>&lt;/tns:encKey>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseGetUserResponse/objects/auc/iccId&quot;>&lt;tns:iccId>&lt;xsl:value-of select=&quot;$ParseGetUserResponse/objects/auc/iccId&quot;/>&lt;/tns:iccId>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseGetUserResponse/objects/auc/algoId&quot;>&lt;tns:algoId>&lt;xsl:value-of select=&quot;$ParseGetUserResponse/objects/auc/algoId&quot;/>&lt;/tns:algoId>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseGetUserResponse/objects/auc/kdbId&quot;>&lt;tns:kdbId>&lt;xsl:value-of select=&quot;$ParseGetUserResponse/objects/auc/kdbId&quot;/>&lt;/tns:kdbId>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseGetUserResponse/objects/auc/acsub&quot;>&lt;tns:acsub>&lt;xsl:value-of select=&quot;$ParseGetUserResponse/objects/auc/acsub&quot;/>&lt;/tns:acsub>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseGetUserResponse/objects/auc/amf&quot;>&lt;tns:amf>&lt;xsl:value-of select=&quot;$ParseGetUserResponse/objects/auc/amf&quot;/>&lt;/tns:amf>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseGetUserResponse/objects/auc/sqn&quot;>&lt;tns:sqn>&lt;xsl:value-of select=&quot;$ParseGetUserResponse/objects/auc/sqn&quot;/>&lt;/tns:sqn>&lt;/xsl:if>&lt;/tns:auc>&lt;tns:hlr>&lt;xsl:if test=&quot;$ParseGetUserResponse/objects/hlr/ntype&quot;>&lt;tns:ntype>&lt;xsl:value-of select=&quot;$ParseGetUserResponse/objects/hlr/ntype&quot;/>&lt;/tns:ntype>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseGetUserResponse/objects/hlr/imsiActive&quot;>&lt;tns:imsiActive>&lt;xsl:value-of select=&quot;$ParseGetUserResponse/objects/hlr/imsiActive&quot;/>&lt;/tns:imsiActive>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseGetUserResponse/objects/hlr/mobileSubscriberType&quot;>&lt;tns:mobileSubscriberType>&lt;xsl:value-of select=&quot;$ParseGetUserResponse/objects/hlr/mobileSubscriberType&quot;/>&lt;/tns:mobileSubscriberType>&lt;/xsl:if>&lt;tns:umtsSubscriber>&lt;xsl:if test=&quot;$ParseGetUserResponse/objects/hlr/umtsSubscriber/accTypeGSM&quot;>&lt;tns:accTypeGSM>&lt;xsl:value-of select=&quot;$ParseGetUserResponse/objects/hlr/umtsSubscriber/accTypeGSM&quot;/>&lt;/tns:accTypeGSM>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseGetUserResponse/objects/hlr/umtsSubscriber/accTypeGERAN&quot;>&lt;tns:accTypeGERAN>&lt;xsl:value-of select=&quot;$ParseGetUserResponse/objects/hlr/umtsSubscriber/accTypeGERAN&quot;/>&lt;/tns:accTypeGERAN>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseGetUserResponse/objects/hlr/umtsSubscriber/accTypeUTRAN&quot;>&lt;tns:accTypeUTRAN>&lt;xsl:value-of select=&quot;$ParseGetUserResponse/objects/hlr/umtsSubscriber/accTypeUTRAN&quot;/>&lt;/tns:accTypeUTRAN>&lt;/xsl:if>&lt;/tns:umtsSubscriber>&lt;xsl:if test=&quot;$ParseGetUserResponse/objects/hlr/wllSubscriber&quot;>&lt;tns:wllSubscriber>&lt;xsl:value-of select=&quot;$ParseGetUserResponse/objects/hlr/wllSubscriber&quot;/>&lt;/tns:wllSubscriber>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseGetUserResponse/objects/hlr/mscat&quot;>&lt;tns:mscat>&lt;xsl:value-of select=&quot;$ParseGetUserResponse/objects/hlr/mscat&quot;/>&lt;/tns:mscat>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseGetUserResponse/objects/hlr/odboc&quot;>&lt;tns:odboc>&lt;xsl:value-of select=&quot;$ParseGetUserResponse/objects/hlr/odboc&quot;/>&lt;/tns:odboc>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseGetUserResponse/objects/hlr/odbic&quot;>&lt;tns:odbic>&lt;xsl:value-of select=&quot;$ParseGetUserResponse/objects/hlr/odbic&quot;/>&lt;/tns:odbic>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseGetUserResponse/objects/hlr/odbr&quot;>&lt;tns:odbr>&lt;xsl:value-of select=&quot;$ParseGetUserResponse/objects/hlr/odbr&quot;/>&lt;/tns:odbr>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseGetUserResponse/objects/hlr/odboprc&quot;>&lt;tns:odboprc>&lt;xsl:value-of select=&quot;$ParseGetUserResponse/objects/hlr/odboprc&quot;/>&lt;/tns:odboprc>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseGetUserResponse/objects/hlr/odbssm&quot;>&lt;tns:odbssm>&lt;xsl:value-of select=&quot;$ParseGetUserResponse/objects/hlr/odbssm&quot;/>&lt;/tns:odbssm>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseGetUserResponse/objects/hlr/clipOverride&quot;>&lt;tns:clipOverride>&lt;xsl:value-of select=&quot;$ParseGetUserResponse/objects/hlr/clipOverride&quot;/>&lt;/tns:clipOverride>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseGetUserResponse/objects/hlr/colpOverride&quot;>&lt;tns:colpOverride>&lt;xsl:value-of select=&quot;$ParseGetUserResponse/objects/hlr/colpOverride&quot;/>&lt;/tns:colpOverride>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseGetUserResponse/objects/hlr/nwa&quot;>&lt;tns:nwa>&lt;xsl:value-of select=&quot;$ParseGetUserResponse/objects/hlr/nwa&quot;/>&lt;/tns:nwa>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseGetUserResponse/objects/hlr/sr&quot;>&lt;tns:sr>&lt;xsl:value-of select=&quot;$ParseGetUserResponse/objects/hlr/sr&quot;/>&lt;/tns:sr>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseGetUserResponse/objects/hlr/odbsci&quot;>&lt;tns:odbsci>&lt;xsl:value-of select=&quot;$ParseGetUserResponse/objects/hlr/odbsci&quot;/>&lt;/tns:odbsci>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseGetUserResponse/objects/hlr/obGprs&quot;>&lt;tns:obGprs>&lt;xsl:value-of select=&quot;$ParseGetUserResponse/objects/hlr/obGprs&quot;/>&lt;/tns:obGprs>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseGetUserResponse/objects/hlr/optimalRouting&quot;>&lt;tns:optimalRouting>&lt;xsl:value-of select=&quot;$ParseGetUserResponse/objects/hlr/optimalRouting&quot;/>&lt;/tns:optimalRouting>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseGetUserResponse/objects/hlr/ndcLac&quot;>&lt;tns:ndcLac>&lt;xsl:value-of select=&quot;$ParseGetUserResponse/objects/hlr/ndcLac&quot;/>&lt;/tns:ndcLac>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseGetUserResponse/objects/hlr/imeisv&quot;>&lt;tns:imeisv>&lt;xsl:value-of select=&quot;$ParseGetUserResponse/objects/hlr/imeisv&quot;/>&lt;/tns:imeisv>&lt;/xsl:if>&lt;tns:eps>&lt;xsl:if test=&quot;$ParseGetUserResponse/objects/hlr/eps/defaultPdnContextId&quot;>&lt;tns:defaultPdnContextId>&lt;xsl:value-of select=&quot;$ParseGetUserResponse/objects/hlr/eps/defaultPdnContextId&quot;/>&lt;/tns:defaultPdnContextId>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseGetUserResponse/objects/hlr/eps/maxBandwidthUp&quot;>&lt;tns:maxBandwidthUp>&lt;xsl:value-of select=&quot;$ParseGetUserResponse/objects/hlr/eps/maxBandwidthUp&quot;/>&lt;/tns:maxBandwidthUp>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseGetUserResponse/objects/hlr/eps/maxBandwidthDown&quot;>&lt;tns:maxBandwidthDown>&lt;xsl:value-of select=&quot;$ParseGetUserResponse/objects/hlr/eps/maxBandwidthDown&quot;/>&lt;/tns:maxBandwidthDown>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseGetUserResponse/objects/hlr/eps/mmeIdentity&quot;>&lt;tns:mmeIdentity>&lt;xsl:value-of select=&quot;$ParseGetUserResponse/objects/hlr/eps/mmeIdentity&quot;/>&lt;/tns:mmeIdentity>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseGetUserResponse/objects/hlr/eps/msPurgedEps&quot;>&lt;tns:msPurgedEps>&lt;xsl:value-of select=&quot;$ParseGetUserResponse/objects/hlr/eps/msPurgedEps&quot;/>&lt;/tns:msPurgedEps>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseGetUserResponse/objects/hlr/eps/odbPOAccessEps&quot;>&lt;tns:odbPOAccessEps>&lt;xsl:value-of select=&quot;$ParseGetUserResponse/objects/hlr/eps/odbPOAccessEps&quot;/>&lt;/tns:odbPOAccessEps>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseGetUserResponse/objects/hlr/eps/vplmnId&quot;>&lt;tns:vplmnId>&lt;xsl:value-of select=&quot;$ParseGetUserResponse/objects/hlr/eps/vplmnId&quot;/>&lt;/tns:vplmnId>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseGetUserResponse/objects/hlr/eps/mmeRealm&quot;>&lt;tns:mmeRealm>&lt;xsl:value-of select=&quot;$ParseGetUserResponse/objects/hlr/eps/mmeRealm&quot;/>&lt;/tns:mmeRealm>&lt;/xsl:if>&lt;/tns:eps>&lt;tns:epsPdnContext>&lt;xsl:if test=&quot;$ParseGetUserResponse/objects/hlr/epsPdnContext/apn&quot;>&lt;tns:apn>&lt;xsl:value-of select=&quot;$ParseGetUserResponse/objects/hlr/epsPdnContext/apn&quot;/>&lt;/tns:apn>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseGetUserResponse/objects/hlr/epsPdnContext/contextId&quot;>&lt;tns:contextId>&lt;xsl:value-of select=&quot;$ParseGetUserResponse/objects/hlr/epsPdnContext/contextId&quot;/>&lt;/tns:contextId>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseGetUserResponse/objects/hlr/epsPdnContext/type&quot;>&lt;tns:type>&lt;xsl:value-of select=&quot;$ParseGetUserResponse/objects/hlr/epsPdnContext/type&quot;/>&lt;/tns:type>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseGetUserResponse/objects/hlr/epsPdnContext/pdnGwDynamicAllocation&quot;>&lt;tns:pdnGwDynamicAllocation>&lt;xsl:value-of select=&quot;$ParseGetUserResponse/objects/hlr/epsPdnContext/pdnGwDynamicAllocation&quot;/>&lt;/tns:pdnGwDynamicAllocation>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseGetUserResponse/objects/hlr/epsPdnContext/maxBandwidthUp&quot;>&lt;tns:maxBandwidthUp>&lt;xsl:value-of select=&quot;$ParseGetUserResponse/objects/hlr/epsPdnContext/maxBandwidthUp&quot;/>&lt;/tns:maxBandwidthUp>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseGetUserResponse/objects/hlr/epsPdnContext/maxBandwidthDown&quot;>&lt;tns:maxBandwidthDown>&lt;xsl:value-of select=&quot;$ParseGetUserResponse/objects/hlr/epsPdnContext/maxBandwidthDown&quot;/>&lt;/tns:maxBandwidthDown>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseGetUserResponse/objects/hlr/epsPdnContext/qos&quot;>&lt;tns:qos>&lt;xsl:value-of select=&quot;$ParseGetUserResponse/objects/hlr/epsPdnContext/qos&quot;/>&lt;/tns:qos>&lt;/xsl:if>&lt;/tns:epsPdnContext>&lt;/tns:hlr>&lt;/tns:GetUserByImsi_Response>&lt;tns:ResponseCode>&lt;xsl:value-of select=&quot;''&quot;/>&lt;/tns:ResponseCode>&lt;/tns:GetUserByImsi_SL_Output>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://it.linkem/rete/udb/getUserByImsi/sl/xsd&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;ParseGetUserResponse&quot;/>&lt;xsl:template name=&quot;End-input&quot; match=&quot;/&quot;>&lt;tns:GetUserByImsi_SL_Output>&lt;tns:GetUserByImsi_Response>&lt;xsl:if test=&quot;$ParseGetUserResponse/objects/@type&quot;>&lt;xsl:attribute name=&quot;type&quot;>&lt;xsl:value-of select=&quot;$ParseGetUserResponse/objects/@type&quot;/>&lt;/xsl:attribute>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseGetUserResponse/objects/identifier&quot;>&lt;tns:identifier>&lt;xsl:value-of select=&quot;$ParseGetUserResponse/objects/identifier&quot;/>&lt;/tns:identifier>&lt;/xsl:if>&lt;tns:auc>&lt;xsl:if test=&quot;$ParseGetUserResponse/objects/auc/imsi&quot;>&lt;tns:imsi>&lt;xsl:value-of select=&quot;$ParseGetUserResponse/objects/auc/imsi&quot;/>&lt;/tns:imsi>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseGetUserResponse/objects/auc/encKey&quot;>&lt;tns:encKey>&lt;xsl:value-of select=&quot;$ParseGetUserResponse/objects/auc/encKey&quot;/>&lt;/tns:encKey>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseGetUserResponse/objects/auc/iccId&quot;>&lt;tns:iccId>&lt;xsl:value-of select=&quot;$ParseGetUserResponse/objects/auc/iccId&quot;/>&lt;/tns:iccId>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseGetUserResponse/objects/auc/algoId&quot;>&lt;tns:algoId>&lt;xsl:value-of select=&quot;$ParseGetUserResponse/objects/auc/algoId&quot;/>&lt;/tns:algoId>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseGetUserResponse/objects/auc/kdbId&quot;>&lt;tns:kdbId>&lt;xsl:value-of select=&quot;$ParseGetUserResponse/objects/auc/kdbId&quot;/>&lt;/tns:kdbId>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseGetUserResponse/objects/auc/acsub&quot;>&lt;tns:acsub>&lt;xsl:value-of select=&quot;$ParseGetUserResponse/objects/auc/acsub&quot;/>&lt;/tns:acsub>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseGetUserResponse/objects/auc/amf&quot;>&lt;tns:amf>&lt;xsl:value-of select=&quot;$ParseGetUserResponse/objects/auc/amf&quot;/>&lt;/tns:amf>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseGetUserResponse/objects/auc/sqn&quot;>&lt;tns:sqn>&lt;xsl:value-of select=&quot;$ParseGetUserResponse/objects/auc/sqn&quot;/>&lt;/tns:sqn>&lt;/xsl:if>&lt;/tns:auc>&lt;tns:hlr>&lt;xsl:if test=&quot;$ParseGetUserResponse/objects/hlr/ntype&quot;>&lt;tns:ntype>&lt;xsl:value-of select=&quot;$ParseGetUserResponse/objects/hlr/ntype&quot;/>&lt;/tns:ntype>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseGetUserResponse/objects/hlr/imsiActive&quot;>&lt;tns:imsiActive>&lt;xsl:value-of select=&quot;$ParseGetUserResponse/objects/hlr/imsiActive&quot;/>&lt;/tns:imsiActive>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseGetUserResponse/objects/hlr/mobileSubscriberType&quot;>&lt;tns:mobileSubscriberType>&lt;xsl:value-of select=&quot;$ParseGetUserResponse/objects/hlr/mobileSubscriberType&quot;/>&lt;/tns:mobileSubscriberType>&lt;/xsl:if>&lt;tns:umtsSubscriber>&lt;xsl:if test=&quot;$ParseGetUserResponse/objects/hlr/umtsSubscriber/accTypeGSM&quot;>&lt;tns:accTypeGSM>&lt;xsl:value-of select=&quot;$ParseGetUserResponse/objects/hlr/umtsSubscriber/accTypeGSM&quot;/>&lt;/tns:accTypeGSM>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseGetUserResponse/objects/hlr/umtsSubscriber/accTypeGERAN&quot;>&lt;tns:accTypeGERAN>&lt;xsl:value-of select=&quot;$ParseGetUserResponse/objects/hlr/umtsSubscriber/accTypeGERAN&quot;/>&lt;/tns:accTypeGERAN>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseGetUserResponse/objects/hlr/umtsSubscriber/accTypeUTRAN&quot;>&lt;tns:accTypeUTRAN>&lt;xsl:value-of select=&quot;$ParseGetUserResponse/objects/hlr/umtsSubscriber/accTypeUTRAN&quot;/>&lt;/tns:accTypeUTRAN>&lt;/xsl:if>&lt;/tns:umtsSubscriber>&lt;xsl:if test=&quot;$ParseGetUserResponse/objects/hlr/wllSubscriber&quot;>&lt;tns:wllSubscriber>&lt;xsl:value-of select=&quot;$ParseGetUserResponse/objects/hlr/wllSubscriber&quot;/>&lt;/tns:wllSubscriber>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseGetUserResponse/objects/hlr/mscat&quot;>&lt;tns:mscat>&lt;xsl:value-of select=&quot;$ParseGetUserResponse/objects/hlr/mscat&quot;/>&lt;/tns:mscat>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseGetUserResponse/objects/hlr/odboc&quot;>&lt;tns:odboc>&lt;xsl:value-of select=&quot;$ParseGetUserResponse/objects/hlr/odboc&quot;/>&lt;/tns:odboc>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseGetUserResponse/objects/hlr/odbic&quot;>&lt;tns:odbic>&lt;xsl:value-of select=&quot;$ParseGetUserResponse/objects/hlr/odbic&quot;/>&lt;/tns:odbic>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseGetUserResponse/objects/hlr/odbr&quot;>&lt;tns:odbr>&lt;xsl:value-of select=&quot;$ParseGetUserResponse/objects/hlr/odbr&quot;/>&lt;/tns:odbr>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseGetUserResponse/objects/hlr/odboprc&quot;>&lt;tns:odboprc>&lt;xsl:value-of select=&quot;$ParseGetUserResponse/objects/hlr/odboprc&quot;/>&lt;/tns:odboprc>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseGetUserResponse/objects/hlr/odbssm&quot;>&lt;tns:odbssm>&lt;xsl:value-of select=&quot;$ParseGetUserResponse/objects/hlr/odbssm&quot;/>&lt;/tns:odbssm>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseGetUserResponse/objects/hlr/clipOverride&quot;>&lt;tns:clipOverride>&lt;xsl:value-of select=&quot;$ParseGetUserResponse/objects/hlr/clipOverride&quot;/>&lt;/tns:clipOverride>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseGetUserResponse/objects/hlr/colpOverride&quot;>&lt;tns:colpOverride>&lt;xsl:value-of select=&quot;$ParseGetUserResponse/objects/hlr/colpOverride&quot;/>&lt;/tns:colpOverride>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseGetUserResponse/objects/hlr/nwa&quot;>&lt;tns:nwa>&lt;xsl:value-of select=&quot;$ParseGetUserResponse/objects/hlr/nwa&quot;/>&lt;/tns:nwa>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseGetUserResponse/objects/hlr/sr&quot;>&lt;tns:sr>&lt;xsl:value-of select=&quot;$ParseGetUserResponse/objects/hlr/sr&quot;/>&lt;/tns:sr>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseGetUserResponse/objects/hlr/odbsci&quot;>&lt;tns:odbsci>&lt;xsl:value-of select=&quot;$ParseGetUserResponse/objects/hlr/odbsci&quot;/>&lt;/tns:odbsci>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseGetUserResponse/objects/hlr/obGprs&quot;>&lt;tns:obGprs>&lt;xsl:value-of select=&quot;$ParseGetUserResponse/objects/hlr/obGprs&quot;/>&lt;/tns:obGprs>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseGetUserResponse/objects/hlr/optimalRouting&quot;>&lt;tns:optimalRouting>&lt;xsl:value-of select=&quot;$ParseGetUserResponse/objects/hlr/optimalRouting&quot;/>&lt;/tns:optimalRouting>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseGetUserResponse/objects/hlr/ndcLac&quot;>&lt;tns:ndcLac>&lt;xsl:value-of select=&quot;$ParseGetUserResponse/objects/hlr/ndcLac&quot;/>&lt;/tns:ndcLac>&lt;/xsl:if>&lt;tns:sgsnMobData>&lt;xsl:if test=&quot;$ParseGetUserResponse/objects/hlr/sgsnMobData/ueSrvccCapability&quot;>&lt;tns:ueSrvccCapability>&lt;xsl:value-of select=&quot;$ParseGetUserResponse/objects/hlr/sgsnMobData/ueSrvccCapability&quot;/>&lt;/tns:ueSrvccCapability>&lt;/xsl:if>&lt;/tns:sgsnMobData>&lt;xsl:if test=&quot;$ParseGetUserResponse/objects/hlr/imeisv&quot;>&lt;tns:imeisv>&lt;xsl:value-of select=&quot;$ParseGetUserResponse/objects/hlr/imeisv&quot;/>&lt;/tns:imeisv>&lt;/xsl:if>&lt;/tns:hlr>&lt;tns:udm5gData>&lt;xsl:if test=&quot;$ParseGetUserResponse/objects/udm5gData/udmImsi&quot;>&lt;tns:udmImsi>&lt;xsl:value-of select=&quot;$ParseGetUserResponse/objects/udm5gData/udmImsi&quot;/>&lt;/tns:udmImsi>&lt;/xsl:if>&lt;tns:authenticationData>&lt;xsl:if test=&quot;$ParseGetUserResponse/objects/udm5gData/authenticationData/authenticationMethod&quot;>&lt;tns:authenticationMethod>&lt;xsl:value-of select=&quot;$ParseGetUserResponse/objects/udm5gData/authenticationData/authenticationMethod&quot;/>&lt;/tns:authenticationMethod>&lt;/xsl:if>&lt;/tns:authenticationData>&lt;tns:contextData>&lt;tns:amf3gppAccessRegistration>&lt;xsl:if test=&quot;$ParseGetUserResponse/objects/udm5gData/contextData/amf3gppAccessRegistration/amfInstanceId&quot;>&lt;tns:amfInstanceId>&lt;xsl:value-of select=&quot;$ParseGetUserResponse/objects/udm5gData/contextData/amf3gppAccessRegistration/amfInstanceId&quot;/>&lt;/tns:amfInstanceId>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseGetUserResponse/objects/udm5gData/contextData/amf3gppAccessRegistration/purgeFlag&quot;>&lt;tns:purgeFlag>&lt;xsl:value-of select=&quot;$ParseGetUserResponse/objects/udm5gData/contextData/amf3gppAccessRegistration/purgeFlag&quot;/>&lt;/tns:purgeFlag>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseGetUserResponse/objects/udm5gData/contextData/amf3gppAccessRegistration/imsVoPS&quot;>&lt;tns:imsVoPS>&lt;xsl:value-of select=&quot;$ParseGetUserResponse/objects/udm5gData/contextData/amf3gppAccessRegistration/imsVoPS&quot;/>&lt;/tns:imsVoPS>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseGetUserResponse/objects/udm5gData/contextData/amf3gppAccessRegistration/deregCallbackUri&quot;>&lt;tns:deregCallbackUri>&lt;xsl:value-of select=&quot;$ParseGetUserResponse/objects/udm5gData/contextData/amf3gppAccessRegistration/deregCallbackUri&quot;/>&lt;/tns:deregCallbackUri>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseGetUserResponse/objects/udm5gData/contextData/amf3gppAccessRegistration/pei&quot;>&lt;tns:pei>&lt;xsl:value-of select=&quot;$ParseGetUserResponse/objects/udm5gData/contextData/amf3gppAccessRegistration/pei&quot;/>&lt;/tns:pei>&lt;/xsl:if>&lt;tns:amfId>&lt;xsl:if test=&quot;$ParseGetUserResponse/objects/udm5gData/contextData/amf3gppAccessRegistration/amfId/amfIdValue&quot;>&lt;tns:amfIdValue>&lt;xsl:value-of select=&quot;$ParseGetUserResponse/objects/udm5gData/contextData/amf3gppAccessRegistration/amfId/amfIdValue&quot;/>&lt;/tns:amfIdValue>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseGetUserResponse/objects/udm5gData/contextData/amf3gppAccessRegistration/amfId/plmnId&quot;>&lt;tns:plmnId>&lt;xsl:value-of select=&quot;$ParseGetUserResponse/objects/udm5gData/contextData/amf3gppAccessRegistration/amfId/plmnId&quot;/>&lt;/tns:plmnId>&lt;/xsl:if>&lt;/tns:amfId>&lt;xsl:if test=&quot;$ParseGetUserResponse/objects/udm5gData/contextData/amf3gppAccessRegistration/ratType&quot;>&lt;tns:ratType>&lt;xsl:value-of select=&quot;$ParseGetUserResponse/objects/udm5gData/contextData/amf3gppAccessRegistration/ratType&quot;/>&lt;/tns:ratType>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseGetUserResponse/objects/udm5gData/contextData/amf3gppAccessRegistration/initialRegistrationInd&quot;>&lt;tns:initialRegistrationInd>&lt;xsl:value-of select=&quot;$ParseGetUserResponse/objects/udm5gData/contextData/amf3gppAccessRegistration/initialRegistrationInd&quot;/>&lt;/tns:initialRegistrationInd>&lt;/xsl:if>&lt;/tns:amf3gppAccessRegistration>&lt;tns:smfRegistrations>&lt;xsl:for-each select=&quot;$ParseGetUserResponse/objects/udm5gData/contextData/smfRegistrations/individualSmfRegistration&quot;>&lt;tns:individualSmfRegistration>&lt;xsl:if test=&quot;pduSessionId&quot;>&lt;tns:pduSessionId>&lt;xsl:value-of select=&quot;pduSessionId&quot;/>&lt;/tns:pduSessionId>&lt;/xsl:if>&lt;/tns:individualSmfRegistration>&lt;/xsl:for-each>&lt;/tns:smfRegistrations>&lt;tns:sdmSubscriptions>&lt;xsl:for-each select=&quot;$ParseGetUserResponse/objects/udm5gData/contextData/sdmSubscriptions/individualSdmSubscription&quot;>&lt;tns:individualSdmSubscription>&lt;xsl:if test=&quot;subsId&quot;>&lt;tns:subsId>&lt;xsl:value-of select=&quot;subsId&quot;/>&lt;/tns:subsId>&lt;/xsl:if>&lt;xsl:if test=&quot;callbackReference&quot;>&lt;tns:callbackReference>&lt;xsl:value-of select=&quot;callbackReference&quot;/>&lt;/tns:callbackReference>&lt;/xsl:if>&lt;xsl:if test=&quot;monitoredResourceUris&quot;>&lt;tns:monitoredResourceUris>&lt;xsl:value-of select=&quot;monitoredResourceUris&quot;/>&lt;/tns:monitoredResourceUris>&lt;/xsl:if>&lt;xsl:if test=&quot;implicitUnsubscribe&quot;>&lt;tns:implicitUnsubscribe>&lt;xsl:value-of select=&quot;implicitUnsubscribe&quot;/>&lt;/tns:implicitUnsubscribe>&lt;/xsl:if>&lt;xsl:if test=&quot;nfInstanceId&quot;>&lt;tns:nfInstanceId>&lt;xsl:value-of select=&quot;nfInstanceId&quot;/>&lt;/tns:nfInstanceId>&lt;/xsl:if>&lt;/tns:individualSdmSubscription>&lt;/xsl:for-each>&lt;/tns:sdmSubscriptions>&lt;/tns:contextData>&lt;tns:servingPlmnId>&lt;xsl:if test=&quot;$ParseGetUserResponse/objects/udm5gData/servingPlmnId/plmnId&quot;>&lt;tns:plmnId>&lt;xsl:value-of select=&quot;$ParseGetUserResponse/objects/udm5gData/servingPlmnId/plmnId&quot;/>&lt;/tns:plmnId>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseGetUserResponse/objects/udm5gData/servingPlmnId/homePlmnIdIndication&quot;>&lt;tns:homePlmnIdIndication>&lt;xsl:value-of select=&quot;$ParseGetUserResponse/objects/udm5gData/servingPlmnId/homePlmnIdIndication&quot;/>&lt;/tns:homePlmnIdIndication>&lt;/xsl:if>&lt;tns:provisionedData>&lt;tns:accessAndMobilitySubscriptionData>&lt;tns:nssai>&lt;xsl:if test=&quot;$ParseGetUserResponse/objects/udm5gData/servingPlmnId/provisionedData/accessAndMobilitySubscriptionData/nssai/defaultSingleNssais&quot;>&lt;tns:defaultSingleNssais>&lt;xsl:value-of select=&quot;$ParseGetUserResponse/objects/udm5gData/servingPlmnId/provisionedData/accessAndMobilitySubscriptionData/nssai/defaultSingleNssais&quot;/>&lt;/tns:defaultSingleNssais>&lt;/xsl:if>&lt;/tns:nssai>&lt;xsl:for-each select=&quot;$ParseGetUserResponse/objects/udm5gData/servingPlmnId/provisionedData/accessAndMobilitySubscriptionData/subscribedDnnList&quot;>&lt;tns:subscribedDnnList>&lt;xsl:value-of select=&quot;.&quot;/>&lt;/tns:subscribedDnnList>&lt;/xsl:for-each>&lt;tns:ueAmbr>&lt;xsl:if test=&quot;$ParseGetUserResponse/objects/udm5gData/servingPlmnId/provisionedData/accessAndMobilitySubscriptionData/ueAmbr/ueAmbrUpLink&quot;>&lt;tns:ueAmbrUpLink>&lt;xsl:value-of select=&quot;$ParseGetUserResponse/objects/udm5gData/servingPlmnId/provisionedData/accessAndMobilitySubscriptionData/ueAmbr/ueAmbrUpLink&quot;/>&lt;/tns:ueAmbrUpLink>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseGetUserResponse/objects/udm5gData/servingPlmnId/provisionedData/accessAndMobilitySubscriptionData/ueAmbr/ueAmbrDownLink&quot;>&lt;tns:ueAmbrDownLink>&lt;xsl:value-of select=&quot;$ParseGetUserResponse/objects/udm5gData/servingPlmnId/provisionedData/accessAndMobilitySubscriptionData/ueAmbr/ueAmbrDownLink&quot;/>&lt;/tns:ueAmbrDownLink>&lt;/xsl:if>&lt;/tns:ueAmbr>&lt;/tns:accessAndMobilitySubscriptionData>&lt;tns:smfSelectionSubscriptionData>&lt;tns:sNssaiInfo>&lt;xsl:if test=&quot;$ParseGetUserResponse/objects/udm5gData/servingPlmnId/provisionedData/smfSelectionSubscriptionData/sNssaiInfo/nssaiId&quot;>&lt;tns:nssaiId>&lt;xsl:value-of select=&quot;$ParseGetUserResponse/objects/udm5gData/servingPlmnId/provisionedData/smfSelectionSubscriptionData/sNssaiInfo/nssaiId&quot;/>&lt;/tns:nssaiId>&lt;/xsl:if>&lt;xsl:for-each select=&quot;$ParseGetUserResponse/objects/udm5gData/servingPlmnId/provisionedData/smfSelectionSubscriptionData/sNssaiInfo/dnnInfo&quot;>&lt;tns:dnnInfo>&lt;xsl:if test=&quot;dnnId&quot;>&lt;tns:dnnId>&lt;xsl:value-of select=&quot;dnnId&quot;/>&lt;/tns:dnnId>&lt;/xsl:if>&lt;xsl:if test=&quot;defaultIndication&quot;>&lt;tns:defaultIndication>&lt;xsl:value-of select=&quot;defaultIndication&quot;/>&lt;/tns:defaultIndication>&lt;/xsl:if>&lt;xsl:if test=&quot;interworkingEPSIndication&quot;>&lt;tns:interworkingEPSIndication>&lt;xsl:value-of select=&quot;interworkingEPSIndication&quot;/>&lt;/tns:interworkingEPSIndication>&lt;/xsl:if>&lt;xsl:if test=&quot;localBrkOutRoamingAllowed&quot;>&lt;tns:localBrkOutRoamingAllowed>&lt;xsl:value-of select=&quot;localBrkOutRoamingAllowed&quot;/>&lt;/tns:localBrkOutRoamingAllowed>&lt;/xsl:if>&lt;/tns:dnnInfo>&lt;/xsl:for-each>&lt;/tns:sNssaiInfo>&lt;/tns:smfSelectionSubscriptionData>&lt;tns:sessionManagementSubscriptionData>&lt;xsl:if test=&quot;$ParseGetUserResponse/objects/udm5gData/servingPlmnId/provisionedData/sessionManagementSubscriptionData/singleNssai&quot;>&lt;tns:singleNssai>&lt;xsl:value-of select=&quot;$ParseGetUserResponse/objects/udm5gData/servingPlmnId/provisionedData/sessionManagementSubscriptionData/singleNssai&quot;/>&lt;/tns:singleNssai>&lt;/xsl:if>&lt;xsl:for-each select=&quot;$ParseGetUserResponse/objects/udm5gData/servingPlmnId/provisionedData/sessionManagementSubscriptionData/dnnConfiguration&quot;>&lt;tns:dnnConfiguration>&lt;xsl:if test=&quot;dnnId&quot;>&lt;tns:dnnId>&lt;xsl:value-of select=&quot;dnnId&quot;/>&lt;/tns:dnnId>&lt;/xsl:if>&lt;xsl:if test=&quot;interworkingEPSIndication&quot;>&lt;tns:interworkingEPSIndication>&lt;xsl:value-of select=&quot;interworkingEPSIndication&quot;/>&lt;/tns:interworkingEPSIndication>&lt;/xsl:if>&lt;xsl:if test=&quot;sessionAmbr&quot;>&lt;tns:sessionAmbr>&lt;xsl:value-of select=&quot;sessionAmbr&quot;/>&lt;/tns:sessionAmbr>&lt;/xsl:if>&lt;xsl:if test=&quot;staticIpAddress&quot;>&lt;tns:staticIpAddress>&lt;xsl:value-of select=&quot;staticIpAddress&quot;/>&lt;/tns:staticIpAddress>&lt;/xsl:if>&lt;tns:udm5gQosProfile>&lt;xsl:if test=&quot;udm5gQosProfile/udm5Qi&quot;>&lt;tns:udm5Qi>&lt;xsl:value-of select=&quot;udm5gQosProfile/udm5Qi&quot;/>&lt;/tns:udm5Qi>&lt;/xsl:if>&lt;xsl:if test=&quot;udm5gQosProfile/arp&quot;>&lt;tns:arp>&lt;xsl:value-of select=&quot;udm5gQosProfile/arp&quot;/>&lt;/tns:arp>&lt;/xsl:if>&lt;xsl:if test=&quot;udm5gQosProfile/priorityLevel&quot;>&lt;tns:priorityLevel>&lt;xsl:value-of select=&quot;udm5gQosProfile/priorityLevel&quot;/>&lt;/tns:priorityLevel>&lt;/xsl:if>&lt;/tns:udm5gQosProfile>&lt;tns:pduSessionTypes>&lt;xsl:if test=&quot;pduSessionTypes/defaultSessionType&quot;>&lt;tns:defaultSessionType>&lt;xsl:value-of select=&quot;pduSessionTypes/defaultSessionType&quot;/>&lt;/tns:defaultSessionType>&lt;/xsl:if>&lt;xsl:if test=&quot;pduSessionTypes/allowedSessionType&quot;>&lt;tns:allowedSessionType>&lt;xsl:value-of select=&quot;pduSessionTypes/allowedSessionType&quot;/>&lt;/tns:allowedSessionType>&lt;/xsl:if>&lt;/tns:pduSessionTypes>&lt;tns:sscModes>&lt;xsl:if test=&quot;sscModes/defaultSscMode&quot;>&lt;tns:defaultSscMode>&lt;xsl:value-of select=&quot;sscModes/defaultSscMode&quot;/>&lt;/tns:defaultSscMode>&lt;/xsl:if>&lt;xsl:if test=&quot;sscModes/allowedSscMode&quot;>&lt;tns:allowedSscMode>&lt;xsl:value-of select=&quot;sscModes/allowedSscMode&quot;/>&lt;/tns:allowedSscMode>&lt;/xsl:if>&lt;/tns:sscModes>&lt;/tns:dnnConfiguration>&lt;/xsl:for-each>&lt;/tns:sessionManagementSubscriptionData>&lt;/tns:provisionedData>&lt;/tns:servingPlmnId>&lt;tns:operatorSpecificData>&lt;xsl:if test=&quot;$ParseGetUserResponse/objects/udm5gData/operatorSpecificData/ODderegistration&quot;>&lt;tns:ODderegistration>&lt;xsl:value-of select=&quot;$ParseGetUserResponse/objects/udm5gData/operatorSpecificData/ODderegistration&quot;/>&lt;/tns:ODderegistration>&lt;/xsl:if>&lt;/tns:operatorSpecificData>&lt;/tns:udm5gData>&lt;/tns:GetUserByImsi_Response>&lt;tns:ResponseCode>&lt;xsl:value-of select=&quot;&amp;quot;&amp;quot;&quot;/>&lt;/tns:ResponseCode>&lt;/tns:GetUserByImsi_SL_Output>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:config>
                         <bwext:BWActivity
@@ -1585,7 +1740,7 @@
                     outputVariable="RequestPayload"
                     tibex:xpdlId="5136533c-e1f4-44ce-b1b8-deeac07edbe1" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                     <bpws:targets>
-                        <bpws:target linkName="AssignToSetRequestPayload"/>
+                        <bpws:target linkName="SetIMSIToSetRequestPayload"/>
                     </bpws:targets>
                     <bpws:sources>
                         <bpws:source linkName="SetRequestPayloadToRepeatOnError"/>
@@ -1616,10 +1771,10 @@
                     name="SetIMSI" outputVariable="IMSI"
                     tibex:xpdlId="3fdb4541-c75c-40e3-9350-3c577dfbd271" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                     <bpws:targets>
-                        <bpws:target linkName="StartToSetIMSI"/>
+                        <bpws:target linkName="LoggingWrapperToSetIMSI"/>
                     </bpws:targets>
                     <bpws:sources>
-                        <bpws:source linkName="AssignToSetRequestPayload"/>
+                        <bpws:source linkName="SetIMSIToSetRequestPayload"/>
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding expression="$Start/ns1:IMSI" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"/>
@@ -1680,7 +1835,7 @@
                     outputVariable="RemoveNamespacesPrefixes"
                     tibex:xpdlId="c7301a91-c0a8-45fe-9424-36c2dbd9f58c" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                     <bpws:targets>
-                        <bpws:target linkName="RepeatOnErrorToRemoveNamespacesPrefixes"/>
+                        <bpws:target linkName="LogGetUser_OutputToRemoveNamespacesPrefixes"/>
                     </bpws:targets>
                     <bpws:sources>
                         <bpws:source linkName="RemoveNamespacesPrefixesTosetResponsePayload"/>
@@ -1718,7 +1873,7 @@
                         <bpws:target linkName="setResponsePayloadToParseXml"/>
                     </bpws:targets>
                     <bpws:sources>
-                        <bpws:source linkName="ParseXmlToEnd"/>
+                        <bpws:source linkName="ParseGetUserResponseToLoggingWrapper"/>
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding
@@ -1748,7 +1903,7 @@
                     <bpws:target linkName="SetRequestPayloadToRepeatOnError"/>
                 </bpws:targets>
                 <bpws:sources>
-                    <bpws:source linkName="RepeatOnErrorToRemoveNamespacesPrefixes"/>
+                    <bpws:source linkName="RepeatOnErrorToLogGetUser_Output"/>
                 </bpws:sources>
                 <bpws:variables>
                     <bpws:variable name="index" sca-bpel:internal="true" type="xsd:int">
@@ -1769,9 +1924,7 @@
                             expression="boolean($repeatOnError_success_flag)" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"/>
                     </tibex:DesignExpression>
                     <bpws:scope name="innerScope">
-                        <bpws:faultHandlers>
-                            
-                        </bpws:faultHandlers>
+                        <bpws:faultHandlers/>
                         <bpws:flow name="flow1">
                             <bpws:links>
                                 <bpws:link
@@ -1890,6 +2043,68 @@
                     <bpws:condition expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"><![CDATA[boolean($repeatOnError_success_flag)]]></bpws:condition>
                 </bpws:repeatUntil>
             </bpws:scope>
+            <bpws:extensionActivity>
+                <tibex:extActivity inputVariable="LogStart-input"
+                    name="LogStart" outputVariable="LogStart"
+                    tibex:xpdlId="1f4acd13-aa8d-4c1c-958b-d6650cbe53a7"
+                    type="bw.generalactivities.callprocess" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                    <bpws:targets>
+                        <bpws:target linkName="StartToLoggingWrapper"/>
+                    </bpws:targets>
+                    <bpws:sources>
+                        <bpws:source linkName="LoggingWrapperToSetIMSI"/>
+                    </bpws:sources>
+                    <tibex:inputBindings>
+                        <tibex:inputBinding coercion=""
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns8=&quot;http://it.linkem/common/core/lehf/AuditTypes/xsd&quot; xmlns:bw=&quot;http://www.tibco.com/bw/xpath/bw-custom-functions&quot; xmlns:tib=&quot;http://www.tibco.com/bw/xslt/custom-functions&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;SeverityDEBUG&quot;/>&lt;xsl:param name=&quot;Start&quot;/>&lt;xsl:template name=&quot;LogStart-input&quot; match=&quot;/&quot;>&lt;tns8:LogAudit>&lt;auditElement>&lt;SEVERITY>&lt;xsl:value-of select=&quot;$SeverityDEBUG&quot;/>&lt;/SEVERITY>&lt;PROCESSSTACK>&lt;xsl:value-of select=&quot;bw:getModuleProperty(&amp;quot;BW.PROCESS.STACK&amp;quot;)&quot;/>&lt;/PROCESSSTACK>&lt;LOGMESSAGE>&lt;xsl:value-of select=&quot;concat(&amp;quot;LogStart UDM GetUserByIMSI: &amp;quot;, tib:render-xml($Start))&quot;/>&lt;/LOGMESSAGE>&lt;/auditElement>&lt;/tns8:LogAudit>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                    </tibex:inputBindings>
+                    <tibex:CallProcess
+                        moduleRef="it.linkem.common.core.lehf.sh"
+                        subProcessName="it.linkem.common.core.lehf.sh.LoggingWrapper" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
+                </tibex:extActivity>
+            </bpws:extensionActivity>
+            <bpws:extensionActivity>
+                <tibex:extActivity
+                    inputVariable="LogGetUser_Output-input"
+                    name="LogGetUser_Output"
+                    outputVariable="LogGetUser_Output"
+                    tibex:xpdlId="4ac72c3c-056f-4103-9182-93defc3f80aa"
+                    type="bw.generalactivities.callprocess" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                    <bpws:targets>
+                        <bpws:target linkName="RepeatOnErrorToLogGetUser_Output"/>
+                    </bpws:targets>
+                    <bpws:sources>
+                        <bpws:source linkName="LogGetUser_OutputToRemoveNamespacesPrefixes"/>
+                    </bpws:sources>
+                    <tibex:inputBindings>
+                        <tibex:inputBinding coercion=""
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns8=&quot;http://it.linkem/common/core/lehf/AuditTypes/xsd&quot; xmlns:bw=&quot;http://www.tibco.com/bw/xpath/bw-custom-functions&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;SeverityDEBUG&quot;/>&lt;xsl:template name=&quot;LogGetUser_Output-input&quot; match=&quot;/&quot;>&lt;tns8:LogAudit>&lt;auditElement>&lt;SEVERITY>&lt;xsl:value-of select=&quot;$SeverityDEBUG&quot;/>&lt;/SEVERITY>&lt;PROCESSSTACK>&lt;xsl:value-of select=&quot;bw:getModuleProperty(&amp;quot;BW.PROCESS.STACK&amp;quot;)&quot;/>&lt;/PROCESSSTACK>&lt;LOGMESSAGE>&lt;xsl:value-of select=&quot;concat(&amp;quot;callGetUser Output: &amp;quot;, $callGetUser/asciiContent)&quot;/>&lt;/LOGMESSAGE>&lt;/auditElement>&lt;/tns8:LogAudit>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                    </tibex:inputBindings>
+                    <tibex:CallProcess
+                        moduleRef="it.linkem.common.core.lehf.sh"
+                        subProcessName="it.linkem.common.core.lehf.sh.LoggingWrapper" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
+                </tibex:extActivity>
+            </bpws:extensionActivity>
+            <bpws:extensionActivity>
+                <tibex:extActivity inputVariable="LogEnd-input"
+                    name="LogEnd" outputVariable="LogEnd"
+                    tibex:xpdlId="940d85c8-2c2f-4dc9-b9f5-b2f3326f13eb"
+                    type="bw.generalactivities.callprocess" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                    <bpws:targets>
+                        <bpws:target linkName="ParseGetUserResponseToLoggingWrapper"/>
+                    </bpws:targets>
+                    <bpws:sources>
+                        <bpws:source linkName="LoggingWrapperToEnd"/>
+                    </bpws:sources>
+                    <tibex:inputBindings>
+                        <tibex:inputBinding coercion=""
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns8=&quot;http://it.linkem/common/core/lehf/AuditTypes/xsd&quot; xmlns:bw=&quot;http://www.tibco.com/bw/xpath/bw-custom-functions&quot; xmlns:tib=&quot;http://www.tibco.com/bw/xslt/custom-functions&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;SeverityDEBUG&quot;/>&lt;xsl:param name=&quot;ParseGetUserResponse&quot;/>&lt;xsl:template name=&quot;LogEnd-input&quot; match=&quot;/&quot;>&lt;tns8:LogAudit>&lt;auditElement>&lt;SEVERITY>&lt;xsl:value-of select=&quot;$SeverityDEBUG&quot;/>&lt;/SEVERITY>&lt;PROCESSSTACK>&lt;xsl:value-of select=&quot;bw:getModuleProperty(&amp;quot;BW.PROCESS.STACK&amp;quot;)&quot;/>&lt;/PROCESSSTACK>&lt;LOGMESSAGE>&lt;xsl:value-of select=&quot;concat(&amp;quot;LogEnd UDM GetUserByIMSI with the following Response: &amp;quot;, tib:render-xml($ParseGetUserResponse))&quot;/>&lt;/LOGMESSAGE>&lt;/auditElement>&lt;/tns8:LogAudit>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                    </tibex:inputBindings>
+                    <tibex:CallProcess
+                        moduleRef="it.linkem.common.core.lehf.sh"
+                        subProcessName="it.linkem.common.core.lehf.sh.LoggingWrapper" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
+                </tibex:extActivity>
+            </bpws:extensionActivity>
         </bpws:flow>
     </bpws:scope>
 </bpws:process>
